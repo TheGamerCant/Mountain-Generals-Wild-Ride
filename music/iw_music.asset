@@ -1,0 +1,34 @@
+music = {
+	name = "Oh_Motherland"
+	file = "Oh_Motherland.ogg"
+}
+
+music = {
+	name = "Rush_to_Russia"
+	file = "Rush_to_Russia.ogg"
+}
+
+music = {
+	name = "Hitchhiking_in_Moscow"
+	file = "Hitchhiking_in_Moscow.ogg"
+}
+
+music = {
+	name = "In_Saint_Petersburg"
+	file = "In_Saint_Petersburg.ogg"
+}
+
+music = {
+	name = "Red_Square_Meeting"
+	file = "Red_Square_Meeting.ogg"
+}
+
+music = {
+	name = "Fog_of_Moscow"
+	file = "Fog_of_Moscow.ogg"
+}
+
+music = {
+	name = "Moscow_Sidewalk"
+	file = "Moscow_Sidewalk.ogg"
+}

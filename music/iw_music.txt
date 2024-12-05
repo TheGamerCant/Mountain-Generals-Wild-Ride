@@ -1,0 +1,64 @@
+music_station = "Mountain_General_station"
+music = {
+	song = "Oh_Motherland"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "Rush_to_Russia"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "Hitchhiking_in_Moscow"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "In_Saint_Petersburg"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "Red_Square_Meeting"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "Fog_of_Moscow"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "Moscow_Sidewalk"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}
+	}
+}

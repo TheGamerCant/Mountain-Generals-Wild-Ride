@@ -1,0 +1,44 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+@experience_gain_low = 0.03
+@experience_gain_medium = 0.06
+@experience_gain_high = 0.08
+
+@chief_experience_gain_low = 0.20
+@chief_experience_gain_medium = 0.30
+@chief_experience_gain_high = 0.40
+
+###Todo remove commented advisor experience gains
+
+leader_traits = {
+
+	the_slovakian_napoleon = {
+		random = no
+		command_power_gain_mult = 0.2
+		army_attack_factor = 0.12
+		army_defence_factor = 0.12
+		army_speed_factor = 0.08
+		org_loss_when_moving = -0.1
+		land_doctrine_cost_factor = -0.1
+
+		custom_modifier_tooltip = the_slovakian_napoleon_desc
+	}
+	
+	the_man_behind_the_mask = {
+		random = no
+		stability_factor = -0.15
+		political_power_factor = -0.05
+
+		custom_modifier_tooltip = the_man_behind_the_mask_desc
+	}
+
+	mg_loyalist = {
+		sprite = 13
+		
+		random = no
+		political_power_factor = 0.1
+		party_popularity_stability_factor = 0.1
+	}
+}

@@ -1,0 +1,289 @@
+focus_tree = {
+	id = slovakian_focus_tree
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SLO
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 960 }
+
+	focus = {	
+		id = SLO_mobilise_bratislava
+		icon = GFX_goal_SLO_battle_of_bratislava
+		x = 2
+		y = 0
+		cost = 2
+		
+
+		available = {
+			has_war_with = CZE
+			NOT = { has_completed_focus = SLO_peace_with_the_czechs }
+		}
+		
+		bypass = {
+			NOT = { has_war_with = CZE }
+		}
+		
+
+		completion_reward = {
+			add_manpower = 10000
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			70 = {
+				create_unit = {
+					division = "name = \"Slovenská Milícia\" division_template = \"Milície\" start_experience_factor = 0.02 start_equipment_factor = 0.6 start_manpower_factor = 1" 
+					owner = SLO
+					prioritize_location = 9692
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_aid_from_the_germans
+		icon = GFX_focus_chi_mission_to_germany
+		x = -1
+		y = 1
+		relative_position_id = SLO_mobilise_bratislava
+		cost = 2
+		prerequisite = {
+			focus = SLO_mobilise_bratislava
+		}
+
+		available = {
+			has_war_with = CZE
+			NOT = { has_completed_focus = SLO_peace_with_the_czechs }
+		}
+		
+		bypass = {
+			NOT = { has_war_with = CZE }
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_1
+				amount = 1600
+				producer = GER
+			}
+			add_equipment_to_stockpile = { 
+				type = support_equipment
+				amount = 400
+				producer = GER
+			}
+			add_equipment_to_stockpile = { 
+				type = artillery_equipment_1
+				amount = 400
+				producer = GER
+			}
+			add_timed_idea={
+				idea = GRE_paying_off_debt_small
+				days = 120
+			}
+			add_popularity = {
+				ideology = fascism 
+				popularity = 0.02
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_arms_smuggling
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 2
+		y = 2
+		relative_position_id = SLO_mobilise_bratislava
+		cost = 2
+		prerequisite = {
+			focus = SLO_mobilise_bratislava
+		}
+
+		available = {
+			has_war_with = CZE
+			NOT = { has_completed_focus = SLO_peace_with_the_czechs }
+		}
+		
+		bypass = {
+			NOT = { has_war_with = CZE }
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_1
+				amount = 1350
+				producer = CZE
+			}
+			add_equipment_to_stockpile = { 
+				type = support_equipment
+				amount = 300
+				producer = CZE
+			}
+			add_equipment_to_stockpile = { 
+				type = artillery_equipment_1
+				amount = 300
+				producer = CZE
+			}
+			add_equipment_to_stockpile = { 
+				type = motorized_equipment_1
+				amount = 120
+				producer = CZE
+			}			
+		}
+	}
+	
+	focus = {
+		id = SLO_raise_militias
+		icon = GFX_focus_generic_support_the_left_right
+		x = -2
+		y = 2
+		relative_position_id = SLO_mobilise_bratislava
+		cost = 2
+		prerequisite = {
+			focus = SLO_mobilise_bratislava
+		}
+
+		available = {
+			has_war_with = CZE
+			NOT = { has_completed_focus = SLO_peace_with_the_czechs }
+		}
+		
+		bypass = {
+			NOT = { has_war_with = CZE }
+		}
+
+		completion_reward = {
+			70 = {
+				create_unit = {
+					division = "name = \"1. Slovenská Milícia\" division_template = \"Milície\" start_experience_factor = 0.02 start_equipment_factor = 0.4 start_manpower_factor = 1" 
+					owner = SLO
+				}
+				create_unit = {
+					division = "name = \"2. Slovenská Milícia\" division_template = \"Milície\" start_experience_factor = 0.02 start_equipment_factor = 0.4 start_manpower_factor = 1" 
+					owner = SLO
+				}
+				create_unit = {
+					division = "name = \"3. Slovenská Milícia\" division_template = \"Milície\" start_experience_factor = 0.02 start_equipment_factor = 0.4 start_manpower_factor = 1" 
+					owner = SLO
+				}
+			}
+		}
+	}
+	
+		
+	focus = {
+		id = SLO_the_battle_of_brno
+		icon = GFX_goal_generic_territory_or_war
+		x = 1
+		y = 1
+		relative_position_id = SLO_mobilise_bratislava
+		cost = 2
+		prerequisite = {
+			focus = SLO_mobilise_bratislava
+		}
+
+		available = {
+			has_war_with = CZE
+			OR={
+				NOT = {CZE = { has_full_control_of_state = 75 }}
+				NOT = {CZE = { has_full_control_of_state = 972 }}
+			}
+			NOT = {75 = { is_controlled_by = SLO }}
+			NOT = { has_completed_focus = SLO_peace_with_the_czechs }
+		}
+		
+		bypass={
+			OR={
+				75 = { is_controlled_by = SLO }
+				NOT = { has_war_with = CZE }
+			}
+		}
+		
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = SLO_battle_of_brno_idea
+				days = 30
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_radio_adress_to_the_nation
+		icon = GFX_goal_SLO_rally_the_nation
+		x = 0
+		y = 2
+		relative_position_id = SLO_mobilise_bratislava
+		cost = 2
+		prerequisite = {
+			focus = SLO_mobilise_bratislava
+		}
+		
+		bypass = {
+			NOT = { has_war_with = CZE }
+		}
+		
+		available = {
+			has_war_with = CZE
+			NOT = { has_completed_focus = SLO_peace_with_the_czechs }
+		}
+		
+
+		completion_reward = {
+			add_manpower = 20000
+			army_experience = 20
+			add_political_power = 75
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = SLO_peace_with_the_czechs
+		icon = GFX_goal_SLO_peace_with_the_czechs
+		x = 0
+		y = 2
+		relative_position_id = SLO_radio_adress_to_the_nation
+		cost = 1
+		prerequisite = {
+			focus = SLO_radio_adress_to_the_nation
+		}
+		
+		bypass = {
+			NOT = { has_war_with = CZE }
+		}
+
+		available = {
+			has_war_with = CZE
+			OR = {
+				date > 1936.7.1	#This one is in here cause I sent it to a friend and it took him THREE YEARS to beat the Czechs. It takes me around 3 months
+				count_triggers={
+					amount > 3
+					
+					controls_province = 3583
+					controls_province = 6573
+					controls_province = 3581
+					controls_province = 6562
+					controls_province = 3569
+					controls_province = 11539
+					controls_province = 557
+				}
+			}
+		}
+
+		completion_reward = {
+			CZE = { country_event = { id = slovakia.1 hours = 8 random_hours = 8 } }
+		}
+	}
+}

@@ -1,0 +1,83 @@
+@Portrait_container_x = 200
+@Portrait_container_y = 310
+
+guiTypes = {
+	containerWindowType = {
+		name = "SLO_portrait_picker_main"
+		position = { x = -4 y = -12 }
+		size = { width = 492 height = 350 }
+		horizontalScrollbar = "bottom_horizontal_slider"
+
+		background ={
+			name ="background"
+			#spriteType = "GFX_pink_bold_selection_frame"
+			spriteType = "GFX_tiled_window_transparent"
+		}
+
+		gridBoxType = {
+			name = "portraits_grid_box"
+			position = { x = 0 y = 0}
+
+			Orientation = upper_left
+			slotsize = {width=@Portrait_container_x height=@Portrait_container_y }
+			format = "UPPER_LEFT"
+			max_slots_vertical = 1
+		}
+	}
+	
+	containerWindowType = {
+		name = "SLO_portrait_entry"
+		position = { x = 0 y = 0 }
+		size = { width = @Portrait_container_x height = @Portrait_container_y }
+
+		background ={
+			name ="background"
+			#spriteType = "GFX_pink_bold_selection_frame"
+			spriteType = "GFX_tiled_window_transparent"
+		}
+		
+		iconType = {
+			name = "portrait"
+			position = {x = 8 y = 12 }
+			spriteType = ""
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "leader_frame"
+			spriteType = "GFX_pol_leader_frame"
+			position = { x = 0 y = 0 }		
+			alwaystransparent = yes
+		}
+		
+		instantTextboxType = {
+			name = "leader_name"
+			position = { x = 6 y = 212 }
+			font = "hoi_18mbs"
+			text = "[?SLO.portrait_NAME_array^i.GetTokenLocalizedKey]"
+			maxWidth = 160
+			maxHeight = 48
+			format = center
+			vertical_alignment = center
+		}
+		
+		buttonType = {
+			name = "select_portrait_button_normal"
+			position = {x=26 y=266}
+			spriteType = "GFX_button_123x34"
+			buttonFont = "hoi_20b"
+			clicksound = click_default
+			buttonText = "select_portrait_button_text"
+		}
+		
+		buttonType = {
+			name = "select_portrait_button_hentai"
+			position = {x=26 y=266}
+			spriteType = "GFX_button_123x34"
+			buttonFont = "hoi_20b"
+			clicksound = click_default
+			buttonText = "select_portrait_button_text"
+			PDX_tooltip = "MG_HENTAI_TT"
+		}
+	}
+}

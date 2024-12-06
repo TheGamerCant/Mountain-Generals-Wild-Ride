@@ -1,0 +1,62 @@
+add_namespace = slovakia
+
+#For Czechoslovakia - MG demands peace!
+country_event = {
+	id = slovakia.1
+	title = slovakia.1.title
+	desc = slovakia.1.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_bul_troops_dobrudja
+
+	option = { 
+		name = slovakia.1.a
+		ai_chance = {
+			base = 10
+		}
+		
+		SLO = { country_event = { id = slovakia.2 hours = 2 random_hours = 6 } }
+	}
+}
+
+country_event = {
+	id = slovakia.2
+	title = slovakia.2.title
+	desc = slovakia.2.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	option = { 
+		name = slovakia.2.a
+		ai_chance = {
+			base = 10
+		}
+		if = {
+			limit = { has_idea = SLO_bratislavan_uprising_idea }
+			remove_ideas = SLO_bratislavan_uprising_idea
+		}
+		if = {
+			limit = { has_idea = SLO_battle_of_brno_idea }
+			remove_ideas = SLO_battle_of_brno_idea
+		}
+		ROOT = {
+			white_peace = CZE
+			transfer_state = 70
+			transfer_state = 71
+			transfer_state = 664
+			transfer_state = 73 
+		}
+		CZE = { 
+			remove_state_core = 70
+			remove_state_core = 71
+			remove_state_core = 664
+			remove_state_core = 73
+		}
+		
+		set_division_template_lock = {
+			division_template = "Milície"
+			is_locked = no
+		}
+		
+		hidden_effect = { news_event = { id = slovakia_news.1 hours = 6 random_hours = 4 } }
+	}
+}

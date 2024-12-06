@@ -1,0 +1,30 @@
+ideas ={
+	country = {
+		SLO_GFX_portrait_mg_normal_idea = {}
+		SLO_GFX_portrait_mg_anime_idea = {}
+		SLO_GFX_portrait_mg_confederate_idea = {}
+		SLO_GFX_portrait_mg_wojak_idea = {}
+		SLO_GFX_portrait_mg_history_matters_idea = {}
+		SLO_GFX_portrait_mg_gone_idea = {}
+		SLO_GFX_portrait_mg_with_n_word_idea = {}
+		SLO_GFX_portrait_mg_cat_idea = {}
+		SLO_GFX_portrait_mg_anime_2_idea = {}
+		SLO_GFX_portrait_mg_hentai_idea = {}
+		SLO_GFX_portrait_mg_tno_idea = {}
+		SLO_GFX_portrait_mg_animated_idea = {}
+		
+		
+		SLO_NAME_portrait_mg_normal_idea = {}
+		SLO_NAME_portrait_mg_anime_idea = {}
+		SLO_NAME_portrait_mg_confederate_idea = {}
+		SLO_NAME_portrait_mg_wojak_idea = {}
+		SLO_NAME_portrait_mg_history_matters_idea = {}
+		SLO_NAME_portrait_mg_gone_idea = {}
+		SLO_NAME_portrait_mg_with_n_word_idea = {}
+		SLO_NAME_portrait_mg_cat_idea = {}
+		SLO_NAME_portrait_mg_anime_2_idea = {}
+		SLO_NAME_portrait_mg_hentai_idea = {}
+		SLO_NAME_portrait_mg_tno_idea = {}
+		SLO_NAME_portrait_mg_animated_idea = {}
+	}
+}

@@ -1,0 +1,58 @@
+ideas = {
+	country = {
+		SLO_bratislavan_uprising_idea = {
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+				
+			available = {
+				has_war_with = CZE
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				war_support_factor = 0.1
+				war_stability_factor = 0.20
+				conscription = 0.03
+				army_org_factor = 0.04
+				land_reinforce_rate = 0.03
+			}
+			targeted_modifier = {
+				tag = CZE
+				attack_bonus_against = 0.12
+				defense_bonus_against = 0.12
+				breakthrough_bonus_against = 0.15
+			}
+		}	
+		
+		SLO_battle_of_brno_idea = {
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+				
+			available = {
+				has_war_with = CZE
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				coordination_bonus = 0.05
+				army_org_factor = 0.05
+				land_reinforce_rate = 0.02
+				
+				#Do better on non-core territory
+				custom_modifier_tooltip = SLO_battle_of_brno_idea_tt
+				hidden_modifier={
+					army_attack_factor = 0.22			#1.22 * 0.9 = 1.098, which is about what we want
+					army_core_attack_factor = -0.10
+				}
+			}
+		}	
+	}
+}

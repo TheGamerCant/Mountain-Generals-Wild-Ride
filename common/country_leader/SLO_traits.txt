@@ -18,10 +18,11 @@ leader_traits = {
 		random = no
 		command_power_gain_mult = 0.2
 		army_attack_factor = 0.12
-		army_defence_factor = 0.12
+		army_defence_factor = 0.1
 		army_speed_factor = 0.08
 		org_loss_when_moving = -0.1
 		land_doctrine_cost_factor = -0.1
+		war_stability_factor = 0.1
 
 		custom_modifier_tooltip = the_slovakian_napoleon_desc
 	}

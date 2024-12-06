@@ -13,7 +13,6 @@ characters = {
 			desc = "mountain_general_leader_desc"
 			ideology=despotism
 			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
-			expire="1965.1.1.1"
 			id=-1
 		}
 		
@@ -24,11 +23,12 @@ characters = {
 				media_personality
 				harsh_leader
 				trait_mountaineer
+				trickster
 			}
 			skill = 5
-			attack_skill = 6
+			attack_skill = 5
 			defense_skill = 2
-			planning_skill = 4
+			planning_skill = 3
 			logistics_skill = 3
 		}
 		

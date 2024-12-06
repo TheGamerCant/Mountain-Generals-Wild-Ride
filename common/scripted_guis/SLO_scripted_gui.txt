@@ -1,0 +1,59 @@
+scripted_gui = {
+	SLO_portrait_picker_main = {
+		context_type = decision_category
+		window_name = "SLO_portrait_picker_main"
+		ai_enabled = {
+			always = no
+		}
+
+		dynamic_lists={
+			portraits_grid_box = {
+				array = SLO.portrait_GFX_array
+				change_scope = no
+				entry_container = "SLO_portrait_entry"
+			}
+		}
+		
+		effects={
+			select_portrait_button_normal_click={
+				meta_effect = {
+					text = {
+						set_portraits = {
+							character = SLO_mountain_general
+							army = { large ="[PORTRAIT_GFX]" }
+							civilian = { large ="[PORTRAIT_GFX]" }
+						}
+					}
+					PORTRAIT_GFX = "[?SLO.portrait_GFX_array^i.GetTokenLocalizedKey]"
+				}
+			}
+			select_portrait_button_hentai_click={
+				meta_effect = {
+					text = {
+						set_portraits = {
+							character = SLO_mountain_general
+							army = { large ="[PORTRAIT_GFX]" }
+							civilian = { large ="[PORTRAIT_GFX]" }
+						}
+					}
+					PORTRAIT_GFX = "[?SLO.portrait_GFX_array^i.GetTokenLocalizedKey]"
+				}
+			}
+		}
+		
+		triggers={
+			select_portrait_button_normal_visible={
+				NOT = { check_variable = { i = 9 } }
+			}
+			select_portrait_button_hentai_visible={
+				check_variable = { i = 9 }
+			}
+		}
+		
+		properties = {
+			portrait = {
+				image = "[?SLO.portrait_GFX_array^i.GetTokenLocalizedKey]"
+			}
+		}
+	}
+}

@@ -56,7 +56,7 @@ spriteTypes = {
 	}
 
 	frameAnimatedSpriteType = {
-		name = "GFX_Portrait_Mountain_General_animated"
+		name = "GFX_portrait_mg_animated"
 		texturefile = "gfx/leaders/SLO/mg_anim.png"
 		noOfFrames = 60
 		animation_rate_fps = 16
@@ -69,108 +69,108 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_idea_SLO_jozef_tiso"
-		texturefile = "gfx/interface/ideas/slo/advisors/idea_SLO_jozef_tiso.dds"
+		texturefile = "gfx/leaders/SLO/advisors/idea_SLO_jozef_tiso.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_SLO_ferdinand_catlos"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_ferdinand_catlos.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_ferdinand_catlos.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_ferdinand_catlos2"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_ferdinand_catlos2.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_ferdinand_catlos2.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_jan_golian"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_jan_golian.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_jan_golian.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_viliam_talsky"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_viliam_talsky.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_viliam_talsky.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_vojtech_tuka"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_vojtech_tuka.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_vojtech_tuka.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_augustin_malar"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_augustin_malar.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_augustin_malar.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_jozef_turanec"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_jozef_turanec.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_jozef_turanec.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_karol_sidor"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_karol_sidor.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_karol_sidor.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_alexander_mach"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_alexander_mach.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_alexander_mach.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_vavro_srobar"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_vavro_srobar.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_vavro_srobar.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_jozef_lettrich"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_jozef_lettrich.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_jozef_lettrich.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_jozef_lettrich_2"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_jozef_lettrich.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_jozef_lettrich.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_jan_osoha"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_jan_osoha.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_jan_osoha.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_ludovit_benada"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_ludovit_benada.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_ludovit_benada.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_karol_smidke"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_karol_smidke.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_karol_smidke.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_frano_kral"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_frano_kral.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_frano_kral.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_ferdinand_durcansky"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_ferdinand_durcansky.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_ferdinand_durcansky.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_rudolf_viest"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_rudolf_viest.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_rudolf_viest.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_mikulas_markus"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_mikulas_markus.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_mikulas_markus.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_juraj_puskar"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_juraj_puskar.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_juraj_puskar.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_julius_trnka"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_julius_trnka.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_julius_trnka.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_rudolf_pilfousek"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_rudolf_pilfousek.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_rudolf_pilfousek.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_anton_pulanich"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_anton_pulanich.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_anton_pulanich.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_alexander_cunderlik"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_alexander_cunderlik.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_alexander_cunderlik.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SLO_ivan_derer"
-		texturefile = "gfx/interface/ideas/slo/advisors/r56_idea_SLO_advisor_ivan_derer.dds"
+		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_ivan_derer.dds"
 	}
 
 }

@@ -1,0 +1,34 @@
+﻿add_namespace = slovakia_news
+
+news_event = {
+	id = slovakia_news.1
+	title = slovakia_news.1.title
+	desc = slovakia_news.1.desc
+	picture = GFX_news_event_009
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = slovakia_news.1.a
+		trigger = {
+			NOT = {
+				tag = SLO
+				tag = CZE
+			}
+		}
+	}
+	option = {
+		name = slovakia_news.1.b
+		trigger = {
+			tag = SLO
+		}
+	}
+	option = {
+		name = slovakia_news.1.b
+		trigger = {
+			tag = CZE
+		}
+	}
+}

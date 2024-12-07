@@ -211,6 +211,9 @@ if = {
 	}
 }
 
+#Defections from Czechoslovakia
+country_event = { id = slovakia.3 days = 20 random_days = 20 }
+
 add_manpower = 12800
 
 add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_normal_idea }

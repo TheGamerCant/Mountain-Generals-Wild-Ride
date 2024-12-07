@@ -60,3 +60,52 @@ country_event = {
 		hidden_effect = { news_event = { id = slovakia_news.1 hours = 6 random_hours = 4 } }
 	}
 }
+
+
+#Czechoslovak units defect to our cause!
+country_event = {
+	id = slovakia.3
+	title = slovakia.3.title
+	desc = slovakia.3.desc
+	is_triggered_only = yes
+
+	picture = GFX_report_event_czech_soldiers_02
+
+	option = { 
+		name = slovakia.3.a
+		ai_chance = {
+			base = 10
+		}
+		CZE = {
+			transfer_units_fraction= {
+				target = SLO
+				target_organization = 1
+				source_organization = 0.9
+				size = 0
+				stockpile_ratio = 0.06
+				army_ratio = 0.15
+				navy_ratio = 0
+				air_ratio = 0.14
+				keep_unit_leaders_trigger = {
+					always = yes 
+				}
+			}
+		}
+		add_manpower = 20000
+		add_equipment_to_stockpile = { 
+			type = infantry_equipment_1
+			amount = 2000
+			producer = CZE
+		}
+		add_equipment_to_stockpile = { 
+			type = support_equipment
+			amount = 500
+			producer = CZE
+		}
+		add_equipment_to_stockpile = { 
+			type = artillery_equipment_1
+			amount = 200
+			producer = CZE
+		}
+	}
+}

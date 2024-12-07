@@ -4,13 +4,15 @@
  slovakia.1.a:0 "We have no choice..."
  
  slovakia.2.title:0 "Prague Agrees to our Demands"
- slovakia.2.desc:0 "Shock. Disbelief. Anger.\n\nThese were but some of the feelings felt by those in Prague today, as one mysterious man undid the nation-building project they had been working on for decades. They begrudgingly agreed to every. single. one of Mountain General's demands. Czhechsolvakia was to be no more, and there was nothing they could do about it.\n\nAcross the table, a masked man with yellow teeth grinned, and thought to himself..."
- slovakia.2.a:0 "Now the fun begins"
+ slovakia.2.desc:0 "Shock. Disbelief. Anger.\n\nThese were but some of the feelings felt by those in Prague today, as one mysterious man undid the nation-building project they had been working on for decades. They begrudgingly agreed to every, single, one of Mountain General's demands. Czhechsolvakia was to be no more, and there was nothing they could do about it.\n\nAcross the table, a masked man with yellow teeth grinned, and thought to himself..."
+ slovakia.2.a:0 "This is where the fun begins"
  
+ slovakia.3.title:0 "Slovak Soldiers Defect to our Cause"
+ slovakia.3.desc:0 "In face of our overwhelming victories and [SLO.GetLeader]'s brilliant genius, thousands of our Slovak bretheren have refused their orders from Prague and have mutinied to our cause!"
+ slovakia.3.a:0 "Our victory is inevitable."
  
- 
- slovakia_news.1:0 "The Slovak Rebellion Succeeds!"
- slovakia_news.1.title:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to diktat terms of surrender to the once proud Prague government. Slovkia is to be an independent state, though it future, and perhaps the future of Europe and the world at large, is known only to one man..."
+ slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
+ slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to diktat terms of surrender to the once proud Prague government. For the first time ever, Slovkia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."
  slovakia_news.1.a:0 "What the?!!?"
  slovakia_news.1.b:0 "Sláva Horskému Generálovi!"
  slovakia_news.1.c:0 "One day, we will get it back"

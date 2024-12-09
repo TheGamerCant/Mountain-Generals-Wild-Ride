@@ -1,0 +1,15 @@
+﻿l_english:
+ SLO_GFX_propaganda_death_to_fascist_bastards_idea:0 "GFX_propaganda_SLO_death_to_fascist_bastards"
+ SLO_GFX_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea:0 "GFX_propaganda_SLO_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people"
+ SLO_GFX_propaganda_mgs_kindness_illuminates_the_future_of_our_children_idea:0 "GFX_propaganda_SLO_mgs_kindness_illuminates_the_future_of_our_children"
+		
+ SLO_NAME_propaganda_death_to_fascist_bastards_idea:0 "Death to Fascist Bastards!"
+ SLO_NAME_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea:0 "Mountain General is the Red Sun in the Hearts of Revolutionary People"
+ SLO_NAME_propaganda_mgs_kindness_illuminates_the_future_of_our_children_idea:0 "Mountian General's Kindness Illuminates the Future of our Children"
+ 
+ SLO_propaganda_campaign_0:0 "[?SLO.propaganda_NAME_array^0.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_0_desc:0 ""
+ SLO_propaganda_campaign_1:0 "[?SLO.propaganda_NAME_array^1.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_1_desc:0 ""
+ SLO_propaganda_campaign_2:0 "[?SLO.propaganda_NAME_array^2.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_2_desc:0 ""

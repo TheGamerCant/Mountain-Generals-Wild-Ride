@@ -120,6 +120,7 @@ country_event = {
 
 add_namespace = slovakia_propaganda
 
+#Update gfxs
 country_event = {
 	id = slovakia_propaganda.1
 	hidden = yes
@@ -127,7 +128,40 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = { 
-		UKR = { make_borders_look_nice = yes }
+		#Each entry of this loop is when the propaganda campaign was set, or -1 if not set
+		for_each_loop = {
+			array = SLO.propaganda_campaign_dates
+			value = v
+			index = i
+			break = break
+			
+			if = {
+				limit = { NOT = { check_variable = { v = -1 } } }
+				
+				#Set 'days' to be the days since this campaign was set
+				set_variable = { days = global.num_days }
+				subtract_from_variable = { days = v }
+				
+				if = {
+					limit = {
+						check_variable = { var = days value = SLO.propaganda_days_until_first_change compare = less_than_or_equals }
+					}
+					set_variable = { SLO.propaganda_slot_frame_array^i = 3 }
+				}
+				else_if = {
+					limit = {
+						check_variable = { var = days value = SLO.propaganda_days_until_first_change compare = greater_than }
+						check_variable = { var = days value = SLO.propaganda_days_until_second_change compare = less_than_or_equals }
+					}
+					set_variable = { SLO.propaganda_slot_frame_array^i = 4 }
+				}
+				else_if = {
+					set_variable = { SLO.propaganda_slot_frame_array^i = 5 }
+				}
+				
+				clear_variable = days
+			}
+		}
 	}
 	
 }

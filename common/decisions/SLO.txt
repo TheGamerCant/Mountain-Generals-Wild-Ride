@@ -1,0 +1,118 @@
+SLO_propaganda_decision_category = {
+	SLO_propaganda_campaign_0 = { 
+
+		icon = eng_trade_unions_support
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^0
+
+		modifier = {
+			political_power_factor = 0.1
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 0 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 0 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_1 = { 
+
+		icon = eng_trade_unions_support
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^1
+
+		modifier = {
+			political_power_factor = 0.1
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 1 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 1 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_2 = { 
+
+		icon = eng_trade_unions_support
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^2
+
+		modifier = {
+			political_power_factor = 0.1
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 2 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 2 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+}

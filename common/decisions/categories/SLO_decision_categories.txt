@@ -6,8 +6,14 @@ SLO_portrait_picker_decision_category = {
 }
 
 SLO_propaganda_decision_category = {
-	priority = 9999
+	priority = 999
 	
 	scripted_gui = SLO_propaganda_campaigns_gui
+	
+	visible = {
+		#Only show if a propaganda slot is available
+		check_variable = { SLO.unlocked_slots > 0 }
+	}
+	
 	visible_when_empty = yes
 }

@@ -1,0 +1,69 @@
+SLO_unlock_new_propaganda_slot = {
+	set_variable = { propaganda_slots = SLO.propaganda_slot_frame_array^num }
+	clamp_variable = { var = SLO.unlocked_slots min = 0 max = propaganda_slots } 
+
+	#If we have a slot left, initialise it
+	if = {
+		limit = { check_variable = { SLO.unlocked_slots < propaganda_slots } }
+		
+		set_variable = { SLO.propaganda_slot_frame_array^SLO.unlocked_slots = 2 }
+		
+		add_to_variable = { SLO.unlocked_slots = 1 }
+	}
+	
+	clear_variable = propaganda_slots
+}
+
+SLO_start_propaganda_campaign = {
+	#Define variable SLO.propaganda_campaign_to_start before this
+	
+	#Only initiate the function if SLO.propaganda_campaign_to_start is valid
+	if = {
+		limit = {
+			check_variable = { SLO.propaganda_campaign_to_start > -1 }
+			check_variable = { SLO.propaganda_campaign_to_start < SLO.propaganda_slot_frame_array^num }
+		}
+	
+		#Go over array, find available slot
+		for_each_loop = {
+			array = SLO.propaganda_slot_frame_array
+			value = v
+			index = i
+			break = break
+			
+			if = {
+				limit = { check_variable = { v = 2 } }		#If v = 2 then this slot is free
+				
+				set_variable = { SLO.propaganda_slot_campaign_array^i = SLO.propaganda_campaign_to_start }
+				set_variable = { SLO.propaganda_slot_frame_array^i = 3 }
+				set_variable = { SLO.propaganda_campaign_dates^i = global.num_days }
+				
+				country_event = { id = slovakia_propaganda.1 days = var:SLO.propaganda_days_until_first_change }
+				country_event = { id = slovakia_propaganda.1 days = var:SLO.propaganda_days_until_second_change }
+				
+				set_temp_variable = { break = 1 }		#End the loop
+			}
+		}
+	}
+	
+	clear_variable = SLO.propaganda_campaign_to_start
+}
+
+SLO_end_propaganda_campaign = {
+	#Define variable SLO.propaganda_campaign_to_end before this
+	if = {
+		limit = {
+			check_variable = { SLO.propaganda_campaign_to_start > -1 }
+			check_variable = { SLO.propaganda_campaign_to_start < SLO.propaganda_slot_frame_array^num }
+		}
+		#Cleaner code
+		set_variable = { i = SLO.propaganda_campaign_to_end }
+		
+		set_varible = { SLO.propaganda_slot_frame_array^i = 2 }
+		set_varible = { SLO.propaganda_campaign_dates^i = -1 }
+		multiply_variable = { SLO.propaganda_PP_COST_array^i = 2 }
+		
+		clear_variable = i
+	}
+	clear_variable = SLO.propaganda_campaign_to_end
+}

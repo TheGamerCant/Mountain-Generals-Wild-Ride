@@ -63,16 +63,19 @@ scripted_gui = {
 		ai_enabled = {
 			always = no
 		}
+		
+		dynamic_lists={
+			propaganda_slots_grid_box = {
+				array = SLO.propaganda_GFX_array
+				change_scope = no
+				entry_container = "SLO_propaganda_slot_entry"
+			}
+		}
 
 		properties = {
-			propaganda_poster_left = {
-				image = "[SLO.GetPropagandaPosterLeftImage]"
-			}
-			propaganda_poster_center = {
-				image = "[SLO.GetPropagandaPosterCenterImage]"
-			}
-			propaganda_poster_right = {
-				image = "[SLO.GetPropagandaPosterRightImage]"
+			propaganda_poster_icon = {
+				image = "[?SLO.propaganda_GFX_array^i.GetTokenLocalizedKey]"
+				frame = SLO.propaganda_slot_frame_array^i
 			}
 		}
 	}

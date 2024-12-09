@@ -50,6 +50,12 @@ country_event = {
 			remove_state_core = 71
 			remove_state_core = 664
 			remove_state_core = 73
+			
+			if = {
+				limit = { has_idea = CZE_divided_nation }
+				remove_ideas = CZE_divided_nation
+			}
+			set_cosmetic_tag = CZE_ONLY
 		}
 		
 		set_division_template_lock = {
@@ -108,4 +114,20 @@ country_event = {
 			producer = CZE
 		}
 	}
+}
+
+
+
+add_namespace = slovakia_propaganda
+
+country_event = {
+	id = slovakia_propaganda.1
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		UKR = { make_borders_look_nice = yes }
+	}
+	
 }

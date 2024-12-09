@@ -56,4 +56,24 @@ scripted_gui = {
 			}
 		}
 	}
+	
+	SLO_propaganda_campaigns_gui = {
+		context_type = decision_category
+		window_name = "SLO_propaganda_campaigns_gui"
+		ai_enabled = {
+			always = no
+		}
+
+		properties = {
+			propaganda_poster_left = {
+				image = "[SLO.GetPropagandaPosterLeftImage]"
+			}
+			propaganda_poster_center = {
+				image = "[SLO.GetPropagandaPosterCenterImage]"
+			}
+			propaganda_poster_right = {
+				image = "[SLO.GetPropagandaPosterRightImage]"
+			}
+		}
+	}
 }

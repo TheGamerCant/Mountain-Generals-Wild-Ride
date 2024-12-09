@@ -26,5 +26,13 @@ ideas ={
 		SLO_NAME_portrait_mg_hentai_idea = {}
 		SLO_NAME_portrait_mg_tno_idea = {}
 		SLO_NAME_portrait_mg_animated_idea = {}
+		
+		SLO_GFX_propaganda_death_to_fascist_bastards_idea = {}
+		SLO_GFX_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea = {}
+		SLO_GFX_propaganda_mgs_kindness_illuminates_the_future_of_our_children_idea = {}
+		
+		SLO_NAME_propaganda_death_to_fascist_bastards_idea = {}
+		SLO_NAME_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea = {}
+		SLO_NAME_propaganda_mgs_kindness_illuminates_the_future_of_our_children_idea = {}
 	}
 }

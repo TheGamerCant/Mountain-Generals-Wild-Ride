@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_propaganda_SLO_death_to_fascist_bastards"
+		texturefile = "gfx/interface/propaganda/SLO_death_to_fascist_bastards.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people"
+		texturefile = "gfx/interface/propaganda/SLO_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_mgs_kindness_illuminates_the_future_of_our_children"
+		texturefile = "gfx/interface/propaganda/SLO_mgs_kindness_illuminates_the_future_of_our_children.dds"
+		noOfFrames = 5
+	}
+}

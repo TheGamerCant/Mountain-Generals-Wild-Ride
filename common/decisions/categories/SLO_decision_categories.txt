@@ -1,12 +1,20 @@
 SLO_portrait_picker_decision_category = {
 	priority = 1000
 	
+	allowed = {
+		original_tag = SLO
+	}
+	
 	scripted_gui = SLO_portrait_picker_main
 	visible_when_empty = yes
 }
 
 SLO_propaganda_decision_category = {
 	priority = 999
+	
+	allowed = {
+		original_tag = SLO
+	}
 	
 	scripted_gui = SLO_propaganda_campaigns_gui
 	

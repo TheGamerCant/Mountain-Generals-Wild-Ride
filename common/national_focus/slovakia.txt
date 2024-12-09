@@ -286,4 +286,38 @@ focus_tree = {
 			CZE = { country_event = { id = slovakia.1 hours = 8 random_hours = 8 } }
 		}
 	}
+	
+	
+	focus = {	
+		id = SLO_matters_of_state
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 1
+		cost = 10
+		cancelable = no
+		relative_position_id = SLO_peace_with_the_czechs
+		prerequisite = {
+			focus = SLO_peace_with_the_czechs
+		}
+		
+		select_effect = {
+			hidden_effect = {
+				country_event = { id = slovakia.4 days = 3 }
+			}
+		}
+		
+		
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = SLO_matters_of_state_tt
+			add_political_power = 50
+		}
+	}
 }

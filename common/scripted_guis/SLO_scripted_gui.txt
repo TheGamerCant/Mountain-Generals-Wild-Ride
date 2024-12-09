@@ -74,7 +74,7 @@ scripted_gui = {
 
 		properties = {
 			propaganda_poster_icon = {
-				image = "[?SLO.propaganda_GFX_array^i.GetTokenLocalizedKey]"
+				image = "[?SLO.propaganda_GFX_array^SLO.propaganda_slot_campaign_array^i.GetTokenLocalizedKey]"
 				frame = SLO.propaganda_slot_frame_array^i
 			}
 		}

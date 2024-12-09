@@ -11,6 +11,20 @@
  slovakia.3.desc:0 "In face of our overwhelming victories and [SLO.GetLeader]'s brilliant genius, thousands of our Slovak bretheren have refused their orders from Prague and have mutinied to our cause!"
  slovakia.3.a:0 "Our victory is inevitable."
  
+ slovakia.4.t:0 "What IS Mountain Generalism?"
+ slovakia.4.desc:0 "Mountain General was approached in his Bratislava office by Josef Tiso.\n\n'My leader, you have taken all of Slovakia to never before seen heights, but there is one pressing matter - ideology.'\n\nMountain General snapped back - 'What about ideology!'\n\n'So far all you've said in terms of your ideological standing is repeatedly calling Hungary 'gay' and 'cringe', and while undoubtedly true, one cannot lead a state on just these beliefs alone.'\n\nMountain General cooled down and responded to Tiso - 'Perhaps is is time to hammer out this whole ideology thing. We have already made great progress at attaining statehood, we now need a vision to guide us.'"
+ slovakia.4.a:0 "Send out invitations to Slovakia's top minds at once"
+ 
+ slovakia.5.t:0 "The Conference Begins"
+ slovakia.5.desc:0 "At the request of Mountain General, many of Slovakia's top minds have assembled in a hall in Bratislava. Scientists, old Czechoslovak polititians and military officials have all assembled for this night of most importance"
+ slovakia.5.a:0 "We must make Slovakia great by destroying our Hungarian enemies!"
+ slovakia.5.b:0 Slovakia is to be a shining city upon a hill, for all of Europe to see!"
+ 
+ slovakia.6.t:0 "Bratislava nights"
+ slovakia.6.desc:0 "Josef Tiso couldn't sleep. He had been lying awake for hours, trying to force himself to go to sleep, but Mountain General's irratic caused him great distress.\n\n'It's fine,' he thought to himself, 'He knows more than we ever could.'Unable to get to sleep, he took himself for a walk.\n\nWhile walking the streets of Bratislava, Tiso came across Mountain General, intoxicated and pissing in the river.\n\n'What are you doing,' he enquired.\n\n'Pissing in the Danube so it flows down to Budapest,' Mountain General responded.\n\n'Genius - but anyways, why are you also up?'\n\n'You see, I forgot to take my crazy pills yesterday, and as such I have been beside myself and extremely energetic.'"
+ slovakia.6.a:0 "'Perhaps I should take them.'"
+ slovakia.6.b:0 "And I like it!"
+ 
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to diktat terms of surrender to the once proud Prague government. For the first time ever, Slovkia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."
  slovakia_news.1.a:0 "What the?!!?"

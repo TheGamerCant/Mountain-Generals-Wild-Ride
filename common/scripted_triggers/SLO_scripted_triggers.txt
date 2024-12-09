@@ -1,0 +1,7 @@
+SLO_available_propaganda_slot = {
+	custom_trigger_tooltip = {
+		tooltip = SLO_available_propaganda_slot_tt
+		
+		check_variable = { var = SLO.ongoing_propaganda_campaigns value = SLO.unlocked_slots compare = less_than }
+	}
+}

@@ -35,7 +35,7 @@ guiTypes = {
 		iconType = {
 			name ="propaganda_poster_icon"
 			position = { x=0 y=0 }
-#			pdx_tooltip = SOV_PROPAGANDA_CAMPAIGN_TT_LEFT
+			pdx_tooltip = SLO_GET_PROPAGANDA_POSTER_NAME
 		}
 	}
 }

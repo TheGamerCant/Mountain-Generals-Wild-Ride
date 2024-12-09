@@ -116,7 +116,71 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = slovakia.4
+	title = slovakia.4.title
+	desc = slovakia.4.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_military_planning
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { slovakia.5 days = 7 }
+			country_event = { slovakia.6 days = 28 }
+		}
+	}
 
+	option = { 
+		name = slovakia.4.a
+		ai_chance = {
+			base = 10
+		}
+		
+	}
+}
+
+country_event = {
+	id = slovakia.5
+	title = slovakia.5.title
+	desc = slovakia.5.desc
+	is_triggered_only = yes
+	picture = report_event_gre_megali_conference_signing
+
+	option = { 
+		name = slovakia.5.a
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.10
+		}
+	}
+}
+
+country_event = {
+	id = slovakia.6
+	title = slovakia.6.title
+	desc = slovakia.6.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_SLO_mg_pills
+
+	option = { 
+		name = slovakia.6.a
+		ai_chance = {
+			base = 10
+		}
+		
+	}
+	option = { 
+		name = slovakia.6.a
+		ai_chance = {
+			base = 10
+		}
+		
+	}
+}
 
 add_namespace = slovakia_propaganda
 
@@ -144,14 +208,14 @@ country_event = {
 				
 				if = {
 					limit = {
-						check_variable = { var = days value = SLO.propaganda_days_until_first_change compare = less_than_or_equals }
+						check_variable = { var = days value = SLO.propaganda_days_until_first_change compare = less_than }
 					}
 					set_variable = { SLO.propaganda_slot_frame_array^i = 3 }
 				}
 				else_if = {
 					limit = {
-						check_variable = { var = days value = SLO.propaganda_days_until_first_change compare = greater_than }
-						check_variable = { var = days value = SLO.propaganda_days_until_second_change compare = less_than_or_equals }
+						check_variable = { var = days value = SLO.propaganda_days_until_first_change compare = greater_than_or_equals }
+						check_variable = { var = days value = SLO.propaganda_days_until_second_change compare = less_than }
 					}
 					set_variable = { SLO.propaganda_slot_frame_array^i = 4 }
 				}

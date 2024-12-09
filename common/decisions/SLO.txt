@@ -1,7 +1,7 @@
 SLO_propaganda_decision_category = {
 	SLO_propaganda_campaign_0 = { 
 
-		icon = eng_trade_unions_support
+		icon = eng_propaganda_campaigns
 
 		ai_will_do = {
 			base = 1
@@ -12,7 +12,19 @@ SLO_propaganda_decision_category = {
 		}
 		
 		available = {
-
+			SLO_available_propaganda_slot = yes
+			
+			any_enemy_country={
+				is_major = yes
+				has_government = fascism
+			}
+		}
+		
+		visible = { 
+			OR={
+				is_debug = yes
+				NOT = { has_government = fascism } 
+			}
 		}
 
 
@@ -24,7 +36,11 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^0
 
 		modifier = {
-			political_power_factor = 0.1
+			fascism_drift = -0.03
+			fascism_acceptance = -60
+			
+			army_attack_against_major_factor = 0.15
+			army_org_regain = 0.1
 		}
 		
 		complete_effect = {
@@ -40,7 +56,7 @@ SLO_propaganda_decision_category = {
 	
 	SLO_propaganda_campaign_1 = { 
 
-		icon = eng_trade_unions_support
+		icon = eng_propaganda_campaigns
 
 		ai_will_do = {
 			base = 1
@@ -51,9 +67,15 @@ SLO_propaganda_decision_category = {
 		}
 		
 		available = {
-
+			SLO_available_propaganda_slot = yes
 		}
 
+		visible = {
+			OR={
+				is_debug = yes
+				has_government = communism
+			}
+		}
 
 		days_remove = var:SLO.propaganda_campaign_days
 		days_re_enable = var:SLO.propaganda_campaign_days
@@ -63,7 +85,10 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^1
 
 		modifier = {
-			political_power_factor = 0.1
+			political_power_factor = 0.08
+			foreign_subversive_activites = -0.3
+			subversive_activites_upkeep = -0.3
+			communism_drift = 0.03
 		}
 		
 		complete_effect = {
@@ -79,7 +104,7 @@ SLO_propaganda_decision_category = {
 	
 	SLO_propaganda_campaign_2 = { 
 
-		icon = eng_trade_unions_support
+		icon = eng_propaganda_campaigns
 
 		ai_will_do = {
 			base = 1
@@ -90,7 +115,14 @@ SLO_propaganda_decision_category = {
 		}
 		
 		available = {
-
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+			OR={
+				is_debug = yes
+				has_government = communism
+			}
 		}
 
 
@@ -102,7 +134,10 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^2
 
 		modifier = {
-			political_power_factor = 0.1
+			monthly_population  = 0.2
+			communism_drift = 0.05
+			political_power_cost = -0.04
+			stability_weekly = 0.001
 		}
 		
 		complete_effect = {
@@ -112,6 +147,55 @@ SLO_propaganda_decision_category = {
 
 		remove_effect = {
 			set_variable = { SLO.propaganda_campaign_to_end = 2 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_3 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+			has_war = yes
+		}
+		
+		visible = {
+			OR={
+				is_debug = yes
+				has_government = fascism
+			}
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^3
+
+		modifier = {
+			fascism_drift = 0.10
+			war_support = 0.15
+			political_power_gain = 0.10
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 3 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 3 }
 			SLO_end_propaganda_campaign = yes
 		}
 	}

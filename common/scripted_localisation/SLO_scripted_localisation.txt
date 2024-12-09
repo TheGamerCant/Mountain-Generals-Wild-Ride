@@ -1,15 +1,25 @@
-#defined_text = {
-#	name = GetPropagandaPosterImage
-#	text = {
-#		trigger = {
-#			check_variable = { var = SLO.unlocked_slots value = 1 compare = less_than }
-#		}
-#		localization_key = GER_KAISER_WAGEN_NAME
-#	}
-#	text = {
-#		trigger = {
-#			check_variable = { SLO.propaganda_slot_left = -1 }
-#		}
-#		localization_key = GER_KAISER_WAGEN_NAME
-#	}
-#}
+defined_text = {
+	name = GetPropagandaCategoryName
+	text = {
+		trigger = {
+			has_government = communism
+		}
+		localization_key = SLO_minitru
+	}
+	text = {
+		localization_key = SLO_ministry_of_public_enlightenment
+	}
+}
+
+defined_text = {
+	name = GetPropagandaPosterName
+	text = {
+		trigger = {
+			check_variable = { SLO.propaganda_slot_frame_array^i < 3 }	#Either 1 (not unlocked) or 2 (available, not taken)
+		}
+		localization_key = ""
+	}
+	text = {
+		localization_key = SLO_name_of_active_campaign
+	}
+}

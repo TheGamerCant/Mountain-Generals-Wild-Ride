@@ -44,6 +44,8 @@ SLO_start_propaganda_campaign = {
 				set_temp_variable = { break = 1 }		#End the loop
 			}
 		}
+		
+		add_to_variable = { SLO.ongoing_propaganda_campaigns = 1 }
 	}
 	
 	clear_variable = SLO.propaganda_campaign_to_start
@@ -57,13 +59,27 @@ SLO_end_propaganda_campaign = {
 			check_variable = { SLO.propaganda_campaign_to_start < SLO.propaganda_slot_frame_array^num }
 		}
 		#Cleaner code
-		set_variable = { i = SLO.propaganda_campaign_to_end }
-		
-		set_varible = { SLO.propaganda_slot_frame_array^i = 2 }
-		set_varible = { SLO.propaganda_campaign_dates^i = -1 }
-		multiply_variable = { SLO.propaganda_PP_COST_array^i = 2 }
-		
-		clear_variable = i
+
+		for_each_loop = {
+			array = SLO.propaganda_slot_campaign_array
+			value = v
+			index = i
+			break = break
+			
+			if = {
+				limit = { check_variable = { v = SLO.propaganda_campaign_to_end } }		#Current one is the one we want to end
+				
+				set_variable = { SLO.propaganda_slot_frame_array^i = 2 }
+				set_variable = { SLO.propaganda_campaign_dates^i = -1 }
+				multiply_variable = { SLO.propaganda_PP_COST_array^SLO.propaganda_campaign_to_end = 2 }
+				
+				
+				subtract_from_variable = { SLO.ongoing_propaganda_campaigns = 1 }
+				
+				set_temp_variable = { break = 1 }		#End the loop
+			}
+		}
 	}
+	
 	clear_variable = SLO.propaganda_campaign_to_end
 }

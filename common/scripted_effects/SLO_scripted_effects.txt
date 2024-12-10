@@ -1,17 +1,14 @@
 SLO_unlock_new_propaganda_slot = {
-	set_variable = { propaganda_slots = SLO.propaganda_slot_frame_array^num }
-	clamp_variable = { var = SLO.unlocked_slots min = 0 max = propaganda_slots } 
+	clamp_variable = { var = SLO.unlocked_slots min = 0 max = SLO.propaganda_slots_max } 
 
 	#If we have a slot left, initialise it
 	if = {
-		limit = { check_variable = { SLO.unlocked_slots < propaganda_slots } }
+		limit = { check_variable = { SLO.unlocked_slots < SLO.propaganda_slots_max } }
 		
 		set_variable = { SLO.propaganda_slot_frame_array^SLO.unlocked_slots = 2 }
 		
 		add_to_variable = { SLO.unlocked_slots = 1 }
 	}
-	
-	clear_variable = propaganda_slots
 }
 
 SLO_start_propaganda_campaign = {
@@ -21,7 +18,7 @@ SLO_start_propaganda_campaign = {
 	if = {
 		limit = {
 			check_variable = { SLO.propaganda_campaign_to_start > -1 }
-			check_variable = { SLO.propaganda_campaign_to_start < SLO.propaganda_slot_frame_array^num }
+			check_variable = { SLO.propaganda_campaign_to_start < SLO.propaganda_GFX_array^num }
 		}
 	
 		#Go over array, find available slot
@@ -56,7 +53,7 @@ SLO_end_propaganda_campaign = {
 	if = {
 		limit = {
 			check_variable = { SLO.propaganda_campaign_to_start > -1 }
-			check_variable = { SLO.propaganda_campaign_to_start < SLO.propaganda_slot_frame_array^num }
+			check_variable = { SLO.propaganda_campaign_to_start < SLO.propaganda_GFX_array^num }
 		}
 		#Cleaner code
 

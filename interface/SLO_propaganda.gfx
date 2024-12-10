@@ -19,4 +19,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/propaganda/SLO_who_is_to_blame_for_the_war.dds"
 		noOfFrames = 5
 	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_telling_a_friend_may_mean_telling_the_enemy"
+		texturefile = "gfx/interface/propaganda/SLO_telling_a_friend_may_mean_telling_the_enemy.dds"
+		noOfFrames = 5
+	}
 }

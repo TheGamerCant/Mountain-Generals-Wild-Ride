@@ -125,8 +125,9 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			country_event = { slovakia.5 days = 7 }
-			country_event = { slovakia.6 days = 28 }
+			country_event = { id = slovakia.5 days = 7 random_days = 2 }	#Initial conference event
+			country_event = { id = slovakia.6 days = 20 random_days = 10 }	#Crazy pills
+			country_event = { id = slovakia.7 days = 12 random_days = 30 }	#Foreign Policy
 		}
 	}
 
@@ -144,7 +145,7 @@ country_event = {
 	title = slovakia.5.title
 	desc = slovakia.5.desc
 	is_triggered_only = yes
-	picture = report_event_gre_megali_conference_signing
+	picture = GFX_report_event_gre_megali_conference_signing
 
 	option = { 
 		name = slovakia.5.a
@@ -156,6 +157,50 @@ country_event = {
 			ideology = fascism
 			popularity = 0.10
 		}
+		
+		add_to_variable = { SLO.mg_fascist_leaning = 10 }
+	}
+	
+	option = { 
+		name = slovakia.5.b
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.10
+		}
+		
+		add_to_variable = { SLO.mg_democratic_leaning = 10 }
+	}
+	
+	option = { 
+		name = slovakia.5.c
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.10
+		}
+		
+		add_to_variable = { SLO.mg_neutrality_leaning = 10 }
+	}
+	
+	option = { 
+		name = slovakia.5.d
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.10
+		}
+		
+		add_to_variable = { SLO.mg_communism_leaning = 10 }
 	}
 }
 
@@ -171,15 +216,65 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		
+		add_stability = -0.05
 	}
 	option = { 
-		name = slovakia.6.a
+		name = slovakia.6.b
+		ai_chance = {
+			base = 10
+		}
+		add_stability = -0.05
+		
+		add_to_variable = { SLO.mg_crazyness = 1 }
+	}
+}
+
+country_event = {
+	id = slovakia.7
+	title = slovakia.7.title
+	desc = slovakia.7.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	option = { 
+		name = slovakia.7.a
 		ai_chance = {
 			base = 10
 		}
 		
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_war_support = 0.05
+
+		add_to_variable = { SLO.mg_fascist_leaning = 5 }
+		add_to_variable = { SLO.mg_neutrality_leaning = 5 }
 	}
+	
+	option = { 
+		name = slovakia.7.b
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		
+		add_to_variable = { SLO.mg_democratic_leaning = 5 }
+		add_to_variable = { SLO.mg_communism_leaning = 5 }
+	}
+	
 }
 
 add_namespace = slovakia_propaganda

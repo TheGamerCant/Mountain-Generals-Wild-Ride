@@ -212,7 +212,7 @@ if = {
 }
 
 #Defections from Czechoslovakia
-country_event = { id = slovakia.3 days = 20 random_days = 20 }
+country_event = { id = slovakia.3 days = 28 random_days = 18 }
 
 add_manpower = 12800
 
@@ -222,7 +222,17 @@ add_ideas = {
 	SLO_bratislavan_uprising_idea
 }
 
-#Arrays
+#Arrays and shit
+
+#Crazyness and ideology
+#Don't forget to delete these when we pick our ideology
+
+set_variable = { SLO.mg_fascist_leaning = 0 }
+set_variable = { SLO.mg_democratic_leaning = 0 }
+set_variable = { SLO.mg_neutrality_leaning = 0 }
+set_variable = { SLO.mg_communism_leaning = 0 }
+
+set_variable = { SLO.mg_crazyness = 0 }
 
 #Portraits
 add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_normal_idea }
@@ -257,21 +267,24 @@ add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_animated_i
 #Propaganda
 set_variable = { SLO.unlocked_slots = 0 }
 set_variable = { SLO.ongoing_propaganda_campaigns = 0 }
+set_variable = { SLO.propaganda_slots_max = 3 }
 
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_death_to_fascist_bastards_idea }
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea }
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_mgs_kindness_illuminates_the_future_of_our_children_idea }
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_who_is_to_blame_for_the_war_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_telling_a_friend_may_mean_telling_the_enemy_idea }
 		
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_death_to_fascist_bastards_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mgs_kindness_illuminates_the_future_of_our_children_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_who_is_to_blame_for_the_war_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_telling_a_friend_may_mean_telling_the_enemy_idea }
 
 resize_array = { array = SLO.propaganda_PP_COST_array size = SLO.propaganda_GFX_array^num value = 15 }
-resize_array = { array = SLO.propaganda_slot_campaign_array size = SLO.propaganda_GFX_array^num value = 0 }
-resize_array = { array = SLO.propaganda_slot_frame_array size = SLO.propaganda_GFX_array^num value = 1 }
-resize_array = { array = SLO.propaganda_campaign_dates size = SLO.propaganda_GFX_array^num value = -1 }
+resize_array = { array = SLO.propaganda_slot_campaign_array size = SLO.propaganda_slots_max value = 0 }
+resize_array = { array = SLO.propaganda_slot_frame_array size = SLO.propaganda_slots_max value = 1 }
+resize_array = { array = SLO.propaganda_campaign_dates size = SLO.propaganda_slots_max value = -1 }
 
 #Have them take 120 days
 set_variable = { SLO.propaganda_campaign_days = 120 }

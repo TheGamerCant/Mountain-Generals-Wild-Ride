@@ -4,26 +4,33 @@
  slovakia.1.a:0 "We have no choice..."
  
  slovakia.2.title:0 "Prague Agrees to our Demands"
- slovakia.2.desc:0 "Shock. Disbelief. Anger.\n\nThese were but some of the feelings felt by those in Prague today, as one mysterious man undid the nation-building project they had been working on for decades. They begrudgingly agreed to every, single, one of Mountain General's demands. Czhechsolvakia was to be no more, and there was nothing they could do about it.\n\nAcross the table, a masked man with yellow teeth grinned, and thought to himself..."
+ slovakia.2.desc:0 "Shock. Disbelief. Anger.\n\nThese were but some of the feelings felt by those in Prague today, as one mysterious man undid the nation-building project they had been working on for decades. They begrudgingly agreed to every, single, one of Mountain General's demands. Czechoslovakia was to be no more, and there was nothing they could do about it.\n\nAcross the table, a masked man with yellow teeth grinned, and thought to himself..."
  slovakia.2.a:0 "This is where the fun begins"
  
  slovakia.3.title:0 "Slovak Soldiers Defect to our Cause"
- slovakia.3.desc:0 "In face of our overwhelming victories and [SLO.GetLeader]'s brilliant genius, thousands of our Slovak bretheren have refused their orders from Prague and have mutinied to our cause!"
+ slovakia.3.desc:0 "In face of our overwhelming victories and [SLO.GetLeader]'s brilliant genius, thousands of our Slovak brethren have refused their orders from Prague and have mutinied to our cause!"
  slovakia.3.a:0 "Our victory is inevitable."
  
- slovakia.4.t:0 "What IS Mountain Generalism?"
+ slovakia.4.title:0 "What IS Mountain Generalism?"
  slovakia.4.desc:0 "Mountain General was approached in his Bratislava office by Josef Tiso.\n\n'My leader, you have taken all of Slovakia to never before seen heights, but there is one pressing matter - ideology.'\n\nMountain General snapped back - 'What about ideology!'\n\n'So far all you've said in terms of your ideological standing is repeatedly calling Hungary 'gay' and 'cringe', and while undoubtedly true, one cannot lead a state on just these beliefs alone.'\n\nMountain General cooled down and responded to Tiso - 'Perhaps is is time to hammer out this whole ideology thing. We have already made great progress at attaining statehood, we now need a vision to guide us.'"
  slovakia.4.a:0 "Send out invitations to Slovakia's top minds at once"
  
- slovakia.5.t:0 "The Conference Begins"
- slovakia.5.desc:0 "At the request of Mountain General, many of Slovakia's top minds have assembled in a hall in Bratislava. Scientists, old Czechoslovak polititians and military officials have all assembled for this night of most importance"
+ slovakia.5.title:0 "The Conference Begins"
+ slovakia.5.desc:0 "At the request of Mountain General, many of Slovakia's top minds have assembled in a hall in Bratislava. Scientists, old Czechoslovak politicians and military officials have all assembled for this night of most importance.\n\nKicking off the event with a rousing speech, Mountain General laid forth his plans for Slovakia."
  slovakia.5.a:0 "We must make Slovakia great by destroying our Hungarian enemies!"
- slovakia.5.b:0 Slovakia is to be a shining city upon a hill, for all of Europe to see!"
+ slovakia.5.b:0 "Slovakia is to be a shining city upon a hill, for all of Europe to see!"
+ slovakia.5.c:0 "Stability and security must come first"
+ slovakia.5.d:0 "The working people of Slovakia and Europe have suffered too much!"
  
- slovakia.6.t:0 "Bratislava nights"
- slovakia.6.desc:0 "Josef Tiso couldn't sleep. He had been lying awake for hours, trying to force himself to go to sleep, but Mountain General's irratic caused him great distress.\n\n'It's fine,' he thought to himself, 'He knows more than we ever could.'Unable to get to sleep, he took himself for a walk.\n\nWhile walking the streets of Bratislava, Tiso came across Mountain General, intoxicated and pissing in the river.\n\n'What are you doing,' he enquired.\n\n'Pissing in the Danube so it flows down to Budapest,' Mountain General responded.\n\n'Genius - but anyways, why are you also up?'\n\n'You see, I forgot to take my crazy pills yesterday, and as such I have been beside myself and extremely energetic.'"
+ slovakia.6.title:0 "Bratislava nights"
+ slovakia.6.desc:0 "Josef Tiso couldn't sleep. He had been lying awake for hours, trying to force himself to go to sleep, but Mountain General's recent erratic behaviour caused him great distress.\n\n'It's fine,' he thought to himself, 'He knows more than we ever could'. Unable to get to sleep, he took himself for a walk.\n\nWhile walking the streets of Bratislava, Tiso came across Mountain General, intoxicated and pissing in the river.\n\n'What are you doing,' he enquired.\n\n'Pissing in the Danube so it flows down to Budapest,' Mountain General responded.\n\n'Genius - but anyways, why are you also up?'\n\n'You see, I forgot to take my crazy pills yesterday, and as such I have been beside myself and extremely energetic.'"
  slovakia.6.a:0 "'Perhaps I should take them.'"
- slovakia.6.b:0 "And I like it!"
+ slovakia.6.b:0 "'And I like it!'"
+ 
+ slovakia.7.title:0 "Matters of Foreign Policy"
+ slovakia.7.desc:0 "Another day at the conference, another day of heated debate. Today's debate primarily focused on foreign policy and Slovakia's place in the world.\n\nOne camp believes that with our great leader Mountain General at the helm, we will be undefeatable. Our enemies will tremble before the forces of the Slovak Napoleon!\n\nThe other camp, however, believes that diplomacy is key to success - that Slovakia can position herself into a key role in this new Europe, as a beacon for all peoples, and as the leader of a new world order.\n\nAs per usual, the decision ultimately falls into Mountain General's hands..."
+ slovakia.7.a:0 "Slovakia will forge her own path in the world, lesser nations be damned!"
+ slovakia.7.b:0 "Friendship with other peoples benefits all of us"
  
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to diktat terms of surrender to the once proud Prague government. For the first time ever, Slovkia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."

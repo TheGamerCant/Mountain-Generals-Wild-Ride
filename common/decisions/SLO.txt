@@ -86,9 +86,10 @@ SLO_propaganda_decision_category = {
 
 		modifier = {
 			political_power_factor = 0.08
-			foreign_subversive_activites = -0.3
-			subversive_activites_upkeep = -0.3
+			foreign_subversive_activites = -0.1
+			subversive_activites_upkeep = -0.1
 			communism_drift = 0.03
+			justify_war_goal_time = -0.15
 		}
 		
 		complete_effect = {
@@ -185,17 +186,80 @@ SLO_propaganda_decision_category = {
 
 		modifier = {
 			fascism_drift = 0.10
-			war_support = 0.15
+			war_support_factor = 0.15
+			stability_factor = -0.05
 			political_power_gain = 0.10
 		}
 		
 		complete_effect = {
 			set_variable = { SLO.propaganda_campaign_to_start = 3 }
 			SLO_start_propaganda_campaign = yes
+			
+			every_country = {
+				limit = { 
+					43 = { is_core_of = PREV }
+					owns_state = 43
+					NOT = { original_tag = SLO }
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SLO_anti_hungarian_campaigns
+				}
+			}
 		}
 
 		remove_effect = {
 			set_variable = { SLO.propaganda_campaign_to_end = 3 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_4 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+			has_war = yes
+		}
+		
+		visible = {
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^4
+
+		modifier = {
+			civilian_intel_to_others = -0.1
+			army_intel_to_others = -0.1
+			airforce_intel_to_others = -0.1
+			navy_intel_to_others = -0.1
+			
+			foreign_subversive_activites = -0.5
+			subversive_activites_upkeep = -0.5
+			drift_defence_factor = 0.5
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 4 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 4 }
 			SLO_end_propaganda_campaign = yes
 		}
 	}

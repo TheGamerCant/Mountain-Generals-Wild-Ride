@@ -302,7 +302,7 @@ focus_tree = {
 		
 		select_effect = {
 			hidden_effect = {
-				country_event = { id = slovakia.4 days = 3 }
+				country_event = { id = slovakia.4 days = 5 }
 			}
 		}
 		

@@ -227,7 +227,7 @@ add_ideas = {
 #Crazyness and ideology
 #Don't forget to delete these when we pick our ideology
 
-set_variable = { SLO.mg_fascist_leaning = 0 }
+set_variable = { SLO.mg_fascism_leaning = 0 }
 set_variable = { SLO.mg_democratic_leaning = 0 }
 set_variable = { SLO.mg_neutrality_leaning = 0 }
 set_variable = { SLO.mg_communism_leaning = 0 }

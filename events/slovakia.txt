@@ -128,6 +128,8 @@ country_event = {
 			country_event = { id = slovakia.5 days = 7 random_days = 2 }	#Initial conference event
 			country_event = { id = slovakia.6 days = 20 random_days = 10 }	#Crazy pills
 			country_event = { id = slovakia.7 days = 12 random_days = 30 }	#Foreign Policy
+			country_event = { id = slovakia.8 days = 12 random_days = 30 }	#Powers of government
+			country_event = { id = slovakia.9 days = 12 random_days = 30 }	#Economic Policy
 		}
 	}
 
@@ -158,7 +160,7 @@ country_event = {
 			popularity = 0.10
 		}
 		
-		add_to_variable = { SLO.mg_fascist_leaning = 10 }
+		add_to_variable = { SLO.mg_fascism_leaning = 10 }
 	}
 	
 	option = { 
@@ -216,7 +218,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		add_stability = -0.05
 	}
 	option = { 
 		name = slovakia.6.b
@@ -250,9 +251,9 @@ country_event = {
 			ideology = neutrality
 			popularity = 0.05
 		}
-		add_war_support = 0.05
+		add_war_support = 0.02
 
-		add_to_variable = { SLO.mg_fascist_leaning = 5 }
+		add_to_variable = { SLO.mg_fascism_leaning = 5 }
 		add_to_variable = { SLO.mg_neutrality_leaning = 5 }
 	}
 	
@@ -271,10 +272,144 @@ country_event = {
 			popularity = 0.05
 		}
 		
+		add_stability = 0.02
+		
 		add_to_variable = { SLO.mg_democratic_leaning = 5 }
 		add_to_variable = { SLO.mg_communism_leaning = 5 }
+	}	
+}
+
+country_event = {
+	id = slovakia.8
+	title = slovakia.8.title
+	desc = slovakia.8.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	option = { 
+		name = slovakia.8.a
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.025
+		}
+		add_stability = 0.02
+
+		add_to_variable = { SLO.mg_democratic_leaning = 5 }
+		add_to_variable = { SLO.mg_communism_leaning = 2.50 }
+	}
+
+	option = { 
+		name = slovakia.8.b
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.025
+		}
+		add_political_power = 20
+
+		add_to_variable = { SLO.mg_neutrality_leaning = 5 }
+		add_to_variable = { SLO.mg_communism_leaning = 2.50 }
+	}
+
+	option = { 
+		name = slovakia.8.a
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.08
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}
+		add_stability = -0.05
+		add_political_power = 60
+
+		add_to_variable = { SLO.mg_fascism_leaning = 8 }
+		subtract_from_variable = { SLO.mg_democratic_leaning = 5 }
+	}
+}
+
+country_event = {
+	id = slovakia.9
+	title = slovakia.9.title
+	desc = slovakia.9.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	option = { 
+		name = slovakia.9.a
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.075
+		}
+
+		add_to_variable = { SLO.mg_democratic_leaning = 7.50 }
 	}
 	
+	option = { 
+		name = slovakia.9.b
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.075
+		}
+
+		add_to_variable = { SLO.mg_neutrality_leaning = 7.50 }
+	}
+	
+	option = { 
+		name = slovakia.9.c
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.075
+		}
+
+		add_to_variable = { SLO.mg_fascism_leaning = 7.50 }
+	}
+	
+	option = { 
+		name = slovakia.9.d
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.075
+		}
+
+		add_to_variable = { SLO.mg_communism_leaning = 7.50 }
+	}
 }
 
 add_namespace = slovakia_propaganda
@@ -309,7 +444,7 @@ country_event = {
 				}
 				else_if = {
 					limit = {
-						check_variable = { var = days value = SLO.propaganda_days_until_first_change compare = greater_than_or_equals }
+						check_variable = { var = days value = SLO.propaganda_days_until_first_change compare = greater_than_or_equals }		#We don't NEED this but it makes it easier to understand
 						check_variable = { var = days value = SLO.propaganda_days_until_second_change compare = less_than }
 					}
 					set_variable = { SLO.propaganda_slot_frame_array^i = 4 }

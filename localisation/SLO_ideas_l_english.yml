@@ -4,3 +4,17 @@
  SLO_battle_of_brno_idea:0 "The Battle of Brno"
  SLO_battle_of_brno_idea_desc:0 "The key city of Brno is in sight, and Mountain General has ordered the diversion of Slovakia's greatest forces towards it."
  SLO_battle_of_brno_idea_tt:0 "Army Attack on non-core territory: §G+10.0%§!"
+ 
+ SLO_initial_economy_dynamic_modifier:0 "The Slovak Economy"
+ SLO_initial_economy_dynamic_modifier_desc:0 "With the sudden separation of Slovakia form Czechia, our economy is in turmoil, and will take time to get on it's feet."
+ SLO_army_dynamic_modifier:0 "Pozemné sily Slovenskej Republiky"
+ SLO_army_dynamic_modifier_desc:0 "The Slovak ground forces are currently in a state of disarray, being formed so quickly after the breakup of Czechoslovakia. But with Mountain General at the helm, there is no problem we cannot overcome!"  
+ SLO_air_force_dynamic_modifier:0 "Slovenské Vzdušné Zbrane"
+ SLO_air_force_dynamic_modifier_desc:0 ""
+ 
+ SLO_DUMMY_economy_idea:0 "$SLO_initial_economy_dynamic_modifier$"
+ SLO_DUMMY_economy_idea_desc:0 "$SLO_initial_economy_dynamic_modifier_desc$"
+ SLO_DUMMY_army_idea:0 "$SLO_army_dynamic_modifier$"
+ SLO_DUMMY_army_idea_desc:0 "$SLO_army_dynamic_modifier_desc$"
+ SLO_DUMMY_air_force_idea:0 "$SLO_air_force_dynamic_modifier$"
+ SLO_DUMMY_air_force_idea_desc:0 "$SLO_air_force_dynamic_modifier$"

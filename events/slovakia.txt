@@ -44,6 +44,8 @@ country_event = {
 			transfer_state = 71
 			transfer_state = 664
 			transfer_state = 73 
+			
+			remove_state_core = 73
 		}
 		CZE = { 
 			remove_state_core = 70
@@ -127,9 +129,9 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = slovakia.5 days = 7 random_days = 2 }	#Initial conference event
 			country_event = { id = slovakia.6 days = 20 random_days = 10 }	#Crazy pills
-			country_event = { id = slovakia.7 days = 12 random_days = 30 }	#Foreign Policy
-			country_event = { id = slovakia.8 days = 12 random_days = 30 }	#Powers of government
-			country_event = { id = slovakia.9 days = 12 random_days = 30 }	#Economic Policy
+			country_event = { id = slovakia.7 days = 12 random_days = 45 }	#Foreign Policy
+			country_event = { id = slovakia.8 days = 8 random_days = 47 }	#Powers of government
+			country_event = { id = slovakia.9 days = 8 random_days = 42 }	#Economic Policy
 		}
 	}
 
@@ -227,6 +229,7 @@ country_event = {
 		add_stability = -0.05
 		
 		add_to_variable = { SLO.mg_crazyness = 1 }
+		custom_effect_tooltip = SLO_mg_goes_crazy_tt
 	}
 }
 
@@ -327,7 +330,7 @@ country_event = {
 	}
 
 	option = { 
-		name = slovakia.8.a
+		name = slovakia.8.c
 		ai_chance = {
 			base = 10
 		}
@@ -345,6 +348,9 @@ country_event = {
 
 		add_to_variable = { SLO.mg_fascism_leaning = 8 }
 		subtract_from_variable = { SLO.mg_democratic_leaning = 5 }
+		
+		add_to_variable = { SLO.mg_crazyness = 1 }
+		custom_effect_tooltip = SLO_mg_goes_crazy_tt
 	}
 }
 

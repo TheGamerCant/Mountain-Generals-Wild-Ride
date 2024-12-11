@@ -1,2 +1,14 @@
 spriteTypes = {
+	SpriteType = {
+		name = "GFX_idea_SLO_generic_air_force"
+		texturefile = "gfx/interface/ideas/SLO_generic_air_force.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SLO_generic_army"
+		texturefile = "gfx/interface/ideas/SLO_generic_army.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SLO_generic_navy"
+		texturefile = "gfx/interface/ideas/SLO_generic_navy.dds"
+	}
 }

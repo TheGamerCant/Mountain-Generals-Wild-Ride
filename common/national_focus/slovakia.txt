@@ -320,4 +320,44 @@ focus_tree = {
 			add_political_power = 50
 		}
 	}
+	
+	focus = {	
+		id = SLO_keynesian_economics
+		icon = GFX_SLO_keynesian_economics
+		x = 12
+		y = 8
+		cost = 5
+		
+		mutually_exclusive = { focus = SLO_the_austrian_school_of_economics }
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	
+		id = SLO_the_austrian_school_of_economics
+		icon = GFX_SLO_the_austrian_school_of_economics
+		x = 18
+		y = 8
+		cost = 5
+		
+		mutually_exclusive = { focus = SLO_keynesian_economics }
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		completion_reward = {
+		}
+	}
 }

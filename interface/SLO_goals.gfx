@@ -108,6 +108,42 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
+		name = "GFX_goal_SLO_cut_bureaucratic_red_tape"
+		texturefile = "gfx/interface/goals/goal_SLO_cut_bureaucratic_red_tape.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SLO_cut_bureaucratic_red_tape_shine"
+		texturefile = "gfx/interface/goals/goal_SLO_cut_bureaucratic_red_tape.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_cut_bureaucratic_red_tape.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_cut_bureaucratic_red_tape.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
 		name = "GFX_goal_SLO_declare_greater_slovakia"
 		texturefile = "gfx/interface/goals/goal_SLO_declare_greater_slovakia.dds"
 	}

@@ -68,109 +68,43 @@ spriteTypes = {
 
 
 	spriteType = {
-		name = "GFX_idea_SLO_jozef_tiso"
-		texturefile = "gfx/leaders/SLO/advisors/idea_SLO_jozef_tiso.dds"
+		name = "GFX_advisor_SLO_jozef_tiso"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_jozef_tiso.dds"
 	}
-
+	
 	spriteType = {
-		name = "GFX_idea_SLO_ferdinand_catlos"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_ferdinand_catlos.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_ferdinand_catlos2"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_ferdinand_catlos2.dds"
+		name = "GFX_portrait_SLO_ferdinand_catlos"
+		texturefile = "gfx/leaders/SLO/SLO_ferdinand_catlos.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_SLO_jan_golian"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_jan_golian.dds"
+		name = "GFX_advisor_SLO_ferdinand_catlos"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_ferdinand_catlos.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_SLO_jozef_turanec"
+		texturefile = "gfx/leaders/SLO/SLO_jozef_turanec.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_SLO_viliam_talsky"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_viliam_talsky.dds"
+		name = "GFX_advisor_SLO_jozef_turanec"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_jozef_turanec.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_SLO_augustin_malar"
+		texturefile = "gfx/leaders/SLO/SLO_augustin_malar.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_SLO_vojtech_tuka"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_vojtech_tuka.dds"
+		name = "GFX_advisor_SLO_augustin_malar"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_augustin_malar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_SLO_anton_pulanich"
+		texturefile = "gfx/leaders/SLO/SLO_anton_pulanich.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_SLO_augustin_malar"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_augustin_malar.dds"
+		name = "GFX_advisor_SLO_anton_pulanich"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_anton_pulanich.dds"
 	}
-	spriteType = {
-		name = "GFX_idea_SLO_jozef_turanec"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_jozef_turanec.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_karol_sidor"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_karol_sidor.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_alexander_mach"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_alexander_mach.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_vavro_srobar"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_vavro_srobar.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_jozef_lettrich"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_jozef_lettrich.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_jozef_lettrich_2"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_jozef_lettrich.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_jan_osoha"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_jan_osoha.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_ludovit_benada"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_ludovit_benada.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_karol_smidke"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_karol_smidke.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_frano_kral"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_frano_kral.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_ferdinand_durcansky"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_ferdinand_durcansky.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_rudolf_viest"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_rudolf_viest.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_mikulas_markus"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_mikulas_markus.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_juraj_puskar"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_juraj_puskar.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_julius_trnka"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_julius_trnka.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_rudolf_pilfousek"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_rudolf_pilfousek.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_anton_pulanich"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_anton_pulanich.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_alexander_cunderlik"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_alexander_cunderlik.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_SLO_ivan_derer"
-		texturefile = "gfx/leaders/SLO/advisors/r56_idea_SLO_advisor_ivan_derer.dds"
-	}
-
 }

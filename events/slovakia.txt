@@ -34,10 +34,12 @@ country_event = {
 			limit = { has_idea = SLO_bratislavan_uprising_idea }
 			remove_ideas = SLO_bratislavan_uprising_idea
 		}
-		if = {
-			limit = { has_idea = SLO_battle_of_brno_idea }
-			remove_ideas = SLO_battle_of_brno_idea
-		}
+		
+		#Timed idea, no need to remove
+#		if = {
+#			limit = { has_idea = SLO_battle_of_brno_idea }
+#			remove_ideas = SLO_battle_of_brno_idea
+#		}
 		ROOT = {
 			white_peace = CZE
 			transfer_state = 70
@@ -65,7 +67,13 @@ country_event = {
 			is_locked = no
 		}
 		
-		hidden_effect = { news_event = { id = slovakia_news.1 hours = 6 random_hours = 4 } }
+		hidden_effect = { 
+			#News about our success!
+			news_event = { id = slovakia_news.1 hours = 6 random_hours = 4 } 
+			
+			#Econony :(
+			country_event = { id = slovakia.20 days = 6 random_days = 15 }
+		}
 	}
 }
 
@@ -417,6 +425,277 @@ country_event = {
 		add_to_variable = { SLO.mg_communism_leaning = 7.50 }
 	}
 }
+
+country_event = {
+	id = slovakia.10
+	title = slovakia.10.title
+	desc = slovakia.10.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+
+	option = { 
+		name = slovakia.10.a
+		ai_chance = {
+			base = 10
+		}
+		
+		hidden_effect = {
+			#Fascism
+			if = {
+				limit = {
+					check_variable = { var = SLO.mg_fascism_leaning value = SLO.mg_democratic_leaning compare = greater_than_or_equals }
+					check_variable = { var = SLO.mg_fascism_leaning value = SLO.mg_communism_leaning compare = greater_than_or_equals }
+					check_variable = { var = SLO.mg_fascism_leaning value = SLO.mg_neutrality_leaning compare = greater_than_or_equals }
+				}
+				
+				if = { 
+					limit = { check_variable = { SLO.mg_crazyness = 2 } }
+					country_event = slovakia.11
+				}
+				else = { country_event = slovakia.12 }
+			}
+			#Neutrality
+			else_if = {
+				limit = {
+					check_variable = { var = SLO.mg_neutrality_leaning value = SLO.mg_democratic_leaning compare = greater_than_or_equals }
+					check_variable = { var = SLO.mg_neutrality_leaning value = SLO.mg_communism_leaning compare = greater_than_or_equals }
+				}
+				country_event = slovakia.13
+			}
+			#Democracy
+			else_if = {
+				limit = {
+					check_variable = { var = SLO.mg_democratic_leaning value = SLO.mg_communism_leaning compare = greater_than_or_equals }
+				}
+				country_event = slovakia.14
+			}
+			#Communism
+			else = {
+				if = { 
+					limit = { check_variable = { SLO.mg_crazyness = 2 } }
+					country_event = slovakia.15
+				}
+				else_if = { 
+					limit = { check_variable = { SLO.mg_crazyness = 1 } }
+					country_event = slovakia.16
+				}
+				else = { country_event = slovakia.17 }
+			}
+		}
+		
+		clear_variable = SLO.mg_fascism_leaning
+		clear_variable = SLO.mg_democratic_leaning
+		clear_variable = SLO.mg_neutrality_leaning
+		clear_variable = SLO.mg_communism_leaning
+		clear_variable = SLO.mg_crazyness
+
+	}
+}
+
+#Fascism crazy
+country_event = {
+	id = slovakia.11
+	title = slovakia.11.title
+	desc = slovakia.11.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_gre_political_march
+
+	option = { 
+		name = slovakia.11.a
+		ai_chance = {
+			base = 10
+		}
+		
+		complete_national_focus = SLO_a_based_slovakia
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+#Fascism "normal"
+country_event = {
+	id = slovakia.12
+	title = slovakia.12.title
+	desc = slovakia.12.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_lithuania_army
+
+	option = { 
+		name = slovakia.12.a
+		ai_chance = {
+			base = 10
+		}
+		
+		complete_national_focus = SLO_strong_leader_strong_slovakia
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+#Despotism
+country_event = {
+	id = slovakia.13
+	title = slovakia.13.title
+	desc = slovakia.13.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_hol_cabinet_gerbrandy
+
+	option = { 
+		name = slovakia.13.a
+		ai_chance = {
+			base = 10
+		}
+		
+		complete_national_focus = SLO_a_democracy_if_you_can_keep_it
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+#Democracy
+country_event = {
+	id = slovakia.14
+	title = slovakia.14.title
+	desc = slovakia.14.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_sanation_left_victory
+
+	option = { 
+		name = slovakia.14.a
+		ai_chance = {
+			base = 10
+		}
+		
+		complete_national_focus = SLO_a_shining_city_for_all_to_see
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+#Stalinism
+country_event = {
+	id = slovakia.15
+	title = slovakia.15.title
+	desc = slovakia.15.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_soviet_purge_trial
+
+	option = { 
+		name = slovakia.15.a
+		ai_chance = {
+			base = 10
+		}
+		
+		complete_national_focus = SLO_socialism_above_all
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+#Anarchism
+country_event = {
+	id = slovakia.16
+	title = slovakia.16.title
+	desc = slovakia.16.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_tur_kurdish_guerillas
+
+	option = { 
+		name = slovakia.16.a
+		ai_chance = {
+			base = 10
+		}
+		
+		complete_national_focus = SLO_the_black_spot_of_europe
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+#Socialism
+country_event = {
+	id = slovakia.17
+	title = slovakia.17.title
+	desc = slovakia.17.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+
+	option = { 
+		name = slovakia.17.a
+		ai_chance = {
+			base = 10
+		}
+		
+		complete_national_focus = SLO_the_workers_paradise
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+
+#Denounce Hungary Fascist
+country_event = {
+	id = slovakia.18
+	title = slovakia.18.title
+	desc = slovakia.18.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_communist_leader
+
+	option = { 
+		name = slovakia.18.a
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_political_power = 50
+		HUN = { add_opinion_modifier = { target = ROOT modifier = hostile_status } }
+	}
+}
+
+#Denounce Germany Fascist
+country_event = {
+	id = slovakia.19
+	title = slovakia.19.title
+	desc = slovakia.19.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_communist_leader
+
+	option = { 
+		name = slovakia.19.a
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_political_power = 50
+		GER = { add_opinion_modifier = { target = ROOT modifier = hostile_status } }
+	}
+}
+
+
+#Economic Turmoil
+country_event = {
+	id = slovakia.20
+	title = slovakia.20.title
+	desc = slovakia.20.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_communist_leader
+
+	option = { 
+		name = slovakia.20.a
+		ai_chance = {
+			base = 10
+		}
+		
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_political_power = 50
+		GER = { add_opinion_modifier = { target = ROOT modifier = hostile_status } }
+	}
+}
+
 
 add_namespace = slovakia_propaganda
 

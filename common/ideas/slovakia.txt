@@ -52,7 +52,7 @@ ideas = {
 			modifier = {
 				war_support_factor = 0.1
 				war_stability_factor = 0.30
-				conscription = 0.03
+				conscription = 0.025
 				army_org_factor = 0.04
 				land_reinforce_rate = 0.03
 			}
@@ -88,6 +88,23 @@ ideas = {
 					army_attack_factor = 0.22			#1.22 * 0.9 = 1.098, which is about what we want
 					army_core_attack_factor = -0.10
 				}
+			}
+		}
+		
+		SLO_privatisation_of_government_assets_idea = {
+			removal_cost = -1
+
+			picture = tur_balkan_central_bank_wealthy_greece
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.25
 			}
 		}	
 	}

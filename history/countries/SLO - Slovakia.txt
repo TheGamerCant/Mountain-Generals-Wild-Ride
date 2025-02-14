@@ -153,33 +153,10 @@ if = {
 recruit_character = SLO_mountain_general
 
 recruit_character = SLO_jozef_tiso
-recruit_character = SLO_josef_nemisla
+recruit_character = SLO_ferdinand_catlos
 recruit_character = SLO_jozef_turanec
 recruit_character = SLO_augustin_malar
-recruit_character = SLO_ferdinand_catlos
-recruit_character = SLO_anton_pulanich
-recruit_character = SLO_rudolf_viest
-recruit_character = SLO_julius_trnka
-recruit_character = SLO_generic_slovak_admiral
-recruit_character = SLO_mikulas_markus
-recruit_character = SLO_juraj_puskar
-recruit_character = SLO_cyril_kuchta
-recruit_character = SLO_viliam_talsky
-recruit_character = SLO_rudolf_pilfousek
-recruit_character = SLO_jan_golian
-recruit_character = SLO_jozef_lettrich
-recruit_character = SLO_karol_smidke
-recruit_character = SLO_alexander_mach
-recruit_character = SLO_vavro_srobar
-recruit_character = SLO_ivan_derer
-recruit_character = SLO_jan_osoha
-recruit_character = SLO_ludovit_benada
-recruit_character = SLO_frano_kral
-recruit_character = SLO_karol_sidor
-recruit_character = SLO_vojtech_tuka
-recruit_character = SLO_fritz_gejza
-recruit_character = SLO_ferdinand_durcansky
-recruit_character = SLO_jozef_sivak
+
 
 set_research_slots = 3
 
@@ -304,9 +281,21 @@ round_variable = SLO.propaganda_days_until_second_change
 #Economy
 add_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
 set_variable = { SLO_economy_dm_stability_factor = -0.10 }
+set_variable = { SLO_economy_dm_political_power_cost = 0.25 }
 set_variable = { SLO_economy_dm_consumer_goods_factor = 0.20 }
 set_variable = { SLO_economy_dm_production_speed_buildings_factor = -0.12 }
 set_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = -0.15 }
+
+set_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0 }
+set_variable = { SLO_economy_dm_economy_cost_factor = 0 }
+set_variable = { SLO_economy_dm_trade_laws_cost_factor = 0 }
+set_variable = { SLO_economy_dm_resource_trade_cost_bonus_per_factory = 0 }
+set_variable = { SLO_economy_dm_democratic_drift = 0 }
+set_variable = { SLO_economy_dm_trade_opinion_factor = 0 }
+set_variable = { SLO_economy_dm_industrial_capacity_factory = 0 }
+set_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0 }
+set_variable = { SLO_economy_dm_min_export = 0 }
+set_variable = { SLO_economy_dm_stability_weekly = 0 }
 
 
 

@@ -31,8 +31,154 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 3
 		}
-		
 	}
+	
+	SLO_jozef_tiso = { 
+		name= SLO_jozef_tiso
+		portraits={
+			army={
+				small="GFX_idea_SLO_jozef_tiso"
+				large="GFX_portrait_Jozef_Tiso"
+			}
+			civilian={
+				small="GFX_idea_SLO_jozef_tiso"
+				large="GFX_portrait_Jozef_Tiso"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_jozef_tiso
+			allowed  = {
+				original_tag = SLO
+			}			
+			traits  = {
+				mg_loyalist
+			}
+		}		
+	}
+	
+	SLO_ferdinand_catlos={	
+		name=SLO_ferdinand_catlos
+		portraits={
+			army ={
+				large="GFX_portrait_SLO_ferdinand_catlos"
+				small="GFX_advisor_SLO_ferdinand_catlos"
+			}
+			civilian ={
+				large="GFX_portrait_SLO_ferdinand_catlos"
+				small="GFX_advisor_SLO_ferdinand_catlos"
+			}			
+		}	
+		advisor={
+			slot = army_chief
+			idea_token = SLO_ferdinand_catlos_army_chief
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				army_chief_morale_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_ferdinand_catlos_advisor
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				quartermaster_general
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal = {
+			traits = { politically_connected infantry_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 3
+		}	
+	}
+	SLO_jozef_turanec={
+		name=SLO_jozef_turanec
+		portraits={
+			army ={
+				large="GFX_portrait_SLO_jozef_turanec"
+				small="GFX_advisor_SLO_jozef_turanec"
+			}
+			civilian ={
+				large="GFX_portrait_SLO_jozef_turanec"
+				small="GFX_advisor_SLO_jozef_turanec"
+			}
+		}
+		corps_commander = {
+			traits = { hill_fighter trait_mountaineer trickster }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+		}		
+	}	
+	
+	SLO_augustin_malar={
+		name=SLO_augustin_malar
+		portraits={
+			army ={
+				large="GFX_portrait_SLO_augustin_malar"
+				small="GFX_advisor_SLO_augustin_malar"
+			}
+			civilian ={
+				large="GFX_portrait_SLO_augustin_malar"
+				small="GFX_advisor_SLO_augustin_malar"
+			}	
+		}
+		advisor={
+			slot = army_chief
+			idea_token = SLO_augustin_malar_army_chief
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = SLO_augustin_malar_high_command
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+		}		
+	}
+	
 	
 	SLO_josef_nemisla={
 		name="Josef Nemisla"
@@ -50,92 +196,7 @@ characters = {
 			logistics_skill = 2
 		}		
 	}	
-	SLO_jozef_turanec={
-		name="Jozef Turanec"
-		portraits={
-			army ={
-				large ="gfx/leaders/SLO/r56_portrait_SLO_Jozef_Turanec.dds"
-			}
-		}
-		corps_commander = {
-			traits = { hill_fighter trait_mountaineer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 1	
-		}		
-	}	
-	SLO_augustin_malar={
-		name="Augustin Malár"
-		portraits={
-			army ={
-				large ="gfx/leaders/SLO/r56_portrait_SLO_Augustin_Malar.dds"
-				small="GFX_idea_SLO_augustin_malar"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = SLO_augustin_malar
-			allowed = {
-					original_tag = SLO
-				}
-				traits = {
-					army_chief_maneuver_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		corps_commander = {
-			traits = { trickster harsh_leader}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 2	
-		}		
-	}
-	SLO_ferdinand_catlos={	
-		name="Ferdinand Čatloš"
-		portraits={
-			army ={
-				small="GFX_idea_SLO_ferdinand_catlos"
-			}
-			civilian ={
-				small="GFX_idea_SLO_ferdinand_catlos2"
-			}			
-		}	
-		advisor={
-			slot = army_chief
-			idea_token = SLO_ferdinand_catlos
-			allowed = {
-				original_tag = SLO
-			}
-			traits = {
-				army_chief_morale_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SLO_ferdinand_catlos2
-			allowed = {
-				original_tag = SLO
-			}
-			traits = {
-				quartermaster_general
-			}
-			cost = 150
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
+
 	SLO_anton_pulanich={	
 		name="Anton Pulanich"
 		portraits={
@@ -681,24 +742,7 @@ characters = {
 			}
 		}		
 	}	
-	SLO_jozef_tiso = { 
-		name= "Jozef Tiso" 
-		portraits={
-			army={
-				small="GFX_idea_SLO_jozef_tiso"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SLO_jozef_tiso
-			allowed  = {
-				original_tag = SLO
-			}			
-			traits  = {
-				mg_loyalist
-			}
-		}		
-	}
+
 	SLO_vojtech_tuka = { 
 		name= "Vojtech Tuka" 
 		portraits={

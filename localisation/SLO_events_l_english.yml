@@ -34,7 +34,7 @@
  slovakia.7.b:0 "Friendship with other peoples benefits all of us."
  
  slovakia.8.title:0 "The Powers of Government"
- slovakia.8.desc:0 "With the conference carrying on in full swing, questions have arisen about the powers of our government, and what the best system is for guarenteeing Slovakia's continued independence and prosperity.\n\nThere were of course the usual debates about democracy against a stronger style of governance, but a new unusual faction has emerged. Calling themselves the "Make Slovakia Great Again" movement, they advocate for total powers to Mountain General, worship of Mountain General in schools, as well as building a wall and making Hungary pay for it."
+ slovakia.8.desc:0 "With the conference carrying on in full swing, questions have arisen about the powers of our government, and what the best system is for guaranteeing Slovakia's continued independence and prosperity.\n\nThere were of course the usual debates about democracy against a stronger style of governance, but a new unusual faction has emerged. Calling themselves the "Make Slovakia Great Again" movement, they advocate for total powers to Mountain General, worship of Mountain General in schools, as well as building a wall and making Hungary pay for it."
  slovakia.8.a:0 "True power comes from the people."
  slovakia.8.b:0 "We need a strong and powerful government to steer this ship."
  slovakia.8.c:0 "Fuck everyone else! Mountain General is a God among men!"
@@ -50,14 +50,52 @@
  slovakia.10.desc:0 "On the final day of the Slovak national congress, all attendees gathered in Bratislava to await Mountain General's announcements. The past weeks had been devoted to determining the best policies and path to go down to lead our country in these trying times.\n\nMountain General took the stage to announce his decision."
  slovakia.10.a:0 "Slovakia holds it's breath..."
  
+ slovakia.11.title:0 "The Triumph of Mountain Generalism"
+ slovakia.11.desc:0 "Shock and horror reverberated across the room. The attendants fell silent, to the point you could hear a pin drop. This silence, however, wasn't to last.\n\nSoldiers began to storm the room, selecting people seemingly at random to drag from their chairs and out of the room. One by one, the other attendees rose to their feet and started chanting, at the top of their lungs:"
+ slovakia.11.a:0 "Sláva Horskému Generálovi!"
+ 
+ slovakia.12.title:0 "The Triumph of Fascism"
+ slovakia.12.desc:0 "After many weeks of debating, our path forward is obvious. For Slovakia to truly prosper in the tumultuous times, we need complete national unity and strength. We must expand our borders, enforce traditional values and instil patriotism into all of our citizens, lest Slovakia be relegated to the dustbins of history alongside lesser nations."
+ slovakia.12.a:0 "We will make Slovakia great!"
+ 
+ slovakia.13.title:0 "The Triumph of Managed Democracy"
+ slovakia.13.desc:0 "It was unsurprising, really. With such a great leader, and with such trying times, how could we pick anyone else, let alone risk the smelly poors from picking someone else?\n\nFor now, Mountain General is to watch over Slovakia, while making token liberalising reforms to keep the people, who had grown accustomed to Czechoslovak democracy happy."
+ slovakia.13.a:0 "We will make Slovakia great!"
+ 
+ slovakia.14.title:0 "The Triumph of Democracy"
+ slovakia.14.desc:0 "With the conference coming to an end, there was no speculation as to what came next. Mountain General took the stand and began to announce a long list of democratic reforms and ideals to live up to. His speech was broadcast for all of Slovakia and the world, for Slovakia was to succeed where other nations failed, and truly be a shining city upon a hill."
+ slovakia.14.a:0 "I love democracy."
+ 
+ slovakia.15.title:0 "The Triumph of Stalinism"
+ slovakia.15.desc:0 "As Mountain General took the stands to announce his intention for the workers' state, few could have predicted what came next"
+ slovakia.15.a:0 "There will be no quarter for the reactionaries!"
+ 
+ slovakia.16.title:0 "The Triumph of Anarchism"
+ slovakia.16.desc:0 ""
+ slovakia.16.a:0 "Anarchia mama, za nas!"
+ 
+ slovakia.17.title:0 "The Triumph of Socialism"
+ slovakia.17.desc:0 ""
+ slovakia.17.a:0 "Been spendin' most their lives, livin' in a workers' paradise"
  
  slovakia.18.title:0 "Mountain General denounces Hungary"
  slovakia.18.desc:0 "'...and we must root out the Hungarian sympathisers among us. Those who claim that we should treat the southern curs with empathy either do not understand the true gravity of the situation, or are outright aiding the enemy! They speak of their so called 'human rights', but how can one reasonably argue that those inbred, Mongolian heathens, even qualify as such! We must deal to the Hungarian race a killing blow, so that...'\n\nMountain General rambled on for hours. His words captivated many Slovaks, but needless to say, the Hungarians didn't much like them."
  slovakia.18.a:0 "Glory to Slovakia! Glory to Mountain General! Death to Hungary!"
 
  slovakia.19.title:0 "Mountain General denounces Germany"
- slovakia.19.desc:0 "'...They claim to be 'aryans', and yet thier people hold no resemblence to the true Aryans. The true Aryans migrated a millenia ago from the European steppes, and are today known as the Slavs! Never forget this my fellow Slovaks, that it is we, the descendents of the first peoples, who are the true Aryans!'"
+ slovakia.19.desc:0 "'...They claim to be 'Aryans', and yet their people hold no resemblance to the true Aryans. The true Aryans migrated a millennia ago from the European steppes, and are today known as the Slavs! Never forget this my fellow Slovaks, that it is we, the descendents of the first peoples, who are the true Aryans!'"
  slovakia.19.a:0 "Glory to Slovakia! Glory to Mountain General! Death to the false Aryans!"
+ 
+ slovakia.20.title:0 "Economic Downturn"
+ slovakia.20.desc:0 "Following our rapid victory in our war of independence, we now have the massive task of establishing a functioning Slovak state with a competent and efficient bureaucracy.\n\nWe have taken over many former Czechoslovak ministries, construction sites and army barracks, but transforming and stabilising the country will take time. Time that we might not have..."
+ slovakia.20.a:0 "We should fix this at once!"
+ slovakia.20.tt:0 "$SLO_modify_the_slovak_economy_by$$MODIFIER_POLITICAL_POWER_COST$: §R+0.25§!\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y+20.0%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-15.00%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-15.00%§!\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §R-10.00%§!"
+ 
+ slovakia.21.title:0 "The Death of Andrej Hlinka"
+ slovakia.21.desc:0 "Co-founder and chairman of the far-right Slovak People's Party, Andrej Hlinka has died at the age of 78.\n\nA priest his whole life, he devoted his time to service to God and Slovakia, and was a committed nationalist and supporter of Slovak independence form both Hungary and Czechoslovakia. He leaves behind a complicated legacy as leader of such a controversial but influential party, and it seems that for as many who come out to mourn him, there are just as many who come out to celebrate."
+ slovakia.21.a:0 "We will carry on his legacy."
+ slovakia.21.b:0 "Rest in Piss, Fascist."
+ 
  
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to diktat terms of surrender to the once proud Prague government. For the first time ever, Slovakia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."

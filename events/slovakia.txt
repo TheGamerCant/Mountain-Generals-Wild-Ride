@@ -60,6 +60,14 @@ country_event = {
 				remove_ideas = CZE_divided_nation
 			}
 			set_cosmetic_tag = CZE_ONLY
+			
+			hidden_effect = {
+				retire_character = CZE_rudolf_viest
+				retire_character = CZE_jan_golian
+				retire_character = CZE_vojtech_tuka
+				retire_character = CZE_ferdinand_catlos
+				retire_character = CZE_jozef_tiso
+			}
 		}
 		
 		set_division_template_lock = {
@@ -508,6 +516,13 @@ country_event = {
 		
 		complete_national_focus = SLO_a_based_slovakia
 		mark_focus_tree_layout_dirty = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		if = { 
+			limit = { has_idea = SLO_unclear_ideology_idea }
+			remove_ideas = SLO_unclear_ideology_idea
+		}
 	}
 }
 
@@ -527,6 +542,13 @@ country_event = {
 		
 		complete_national_focus = SLO_strong_leader_strong_slovakia
 		mark_focus_tree_layout_dirty = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		if = { 
+			limit = { has_idea = SLO_unclear_ideology_idea }
+			remove_ideas = SLO_unclear_ideology_idea
+		}
 	}
 }
 
@@ -546,6 +568,13 @@ country_event = {
 		
 		complete_national_focus = SLO_a_democracy_if_you_can_keep_it
 		mark_focus_tree_layout_dirty = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		if = { 
+			limit = { has_idea = SLO_unclear_ideology_idea }
+			remove_ideas = SLO_unclear_ideology_idea
+		}
 	}
 }
 
@@ -565,6 +594,13 @@ country_event = {
 		
 		complete_national_focus = SLO_a_shining_city_for_all_to_see
 		mark_focus_tree_layout_dirty = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		if = { 
+			limit = { has_idea = SLO_unclear_ideology_idea }
+			remove_ideas = SLO_unclear_ideology_idea
+		}
 	}
 }
 
@@ -584,6 +620,13 @@ country_event = {
 		
 		complete_national_focus = SLO_socialism_above_all
 		mark_focus_tree_layout_dirty = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		if = { 
+			limit = { has_idea = SLO_unclear_ideology_idea }
+			remove_ideas = SLO_unclear_ideology_idea
+		}
 	}
 }
 
@@ -603,6 +646,13 @@ country_event = {
 		
 		complete_national_focus = SLO_the_black_spot_of_europe
 		mark_focus_tree_layout_dirty = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		if = { 
+			limit = { has_idea = SLO_unclear_ideology_idea }
+			remove_ideas = SLO_unclear_ideology_idea
+		}
 	}
 }
 
@@ -622,6 +672,13 @@ country_event = {
 		
 		complete_national_focus = SLO_the_workers_paradise
 		mark_focus_tree_layout_dirty = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		if = { 
+			limit = { has_idea = SLO_unclear_ideology_idea }
+			remove_ideas = SLO_unclear_ideology_idea
+		}
 	}
 }
 
@@ -672,14 +729,13 @@ country_event = {
 	}
 }
 
-
 #Economic Turmoil
 country_event = {
 	id = slovakia.20
 	title = slovakia.20.title
 	desc = slovakia.20.desc
 	is_triggered_only = yes
-	picture = GFX_report_event_communist_leader
+	picture = GFX_report_event_generic_construction_site
 
 	option = { 
 		name = slovakia.20.a
@@ -687,12 +743,76 @@ country_event = {
 			base = 10
 		}
 		
+		add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.20 }
+		add_to_variable = { SLO_economy_dm_political_power_cost = 0.25 }
+		add_to_variable = { SLO_economy_dm_industrial_capacity_factory = -0.15 }
+		add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = -0.15 }
+		add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = -0.10 }
+		
+		custom_effect_tooltip = slovakia.20.tt
+	}
+}
+
+#Andrej Hlinka dies
+country_event = {
+	id = slovakia.21
+	title = slovakia.21.title
+	desc = slovakia.21.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_funeral
+
+	option = { 
+		name = slovakia.21.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = {
+				has_government = communism
+			}
+		}
+		
+		if = {
+			limit = { has_idea = SLO_andrej_hlinka }
+			remove_ideas = SLO_andrej_hlinka
+		}
+		
+		retire_character = SLO_andrej_hlinka
+		
 		add_popularity = {
 			ideology = fascism
 			popularity = 0.05
 		}
-		add_political_power = 50
-		GER = { add_opinion_modifier = { target = ROOT modifier = hostile_status } }
+		
+		add_war_support = 0.02
+	}
+	
+	option = { 
+		name = slovakia.21.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+		
+		if = {
+			limit = { has_idea = SLO_andrej_hlinka }
+			remove_ideas = SLO_andrej_hlinka
+		}
+		
+		retire_character = SLO_andrej_hlinka
+		
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		}
+		
+		add_stability = 0.02
 	}
 }
 

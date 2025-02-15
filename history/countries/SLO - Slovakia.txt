@@ -156,6 +156,20 @@ recruit_character = SLO_jozef_tiso
 recruit_character = SLO_ferdinand_catlos
 recruit_character = SLO_jozef_turanec
 recruit_character = SLO_augustin_malar
+recruit_character = SLO_rudolf_pilfousek
+recruit_character = SLO_anton_pulanich
+recruit_character = SLO_rudolf_viest
+recruit_character = SLO_julius_trnka
+recruit_character = SLO_mikulas_markus
+recruit_character = SLO_juraj_puskar
+recruit_character = SLO_jan_golian
+recruit_character = SLO_viliam_talsky
+recruit_character = SLO_julius_nosko
+recruit_character = SLO_jozef_lettrich
+recruit_character = SLO_andrej_hlinka
+recruit_character = SLO_karol_sidor
+recruit_character = SLO_alexander_mach
+recruit_character = SLO_vojtech_tuka
 
 
 set_research_slots = 3
@@ -191,12 +205,16 @@ if = {
 #Defections from Czechoslovakia
 country_event = { id = slovakia.3 days = 28 random_days = 18 }
 
+#Andrej Hlinka dies
+country_event = { id = slovakia.21 days = 940 random_days = 30 }
+
 add_manpower = 12800
 
 add_ideas = {
 	low_economic_mobilisation
 	SLO_jozef_tiso
 	SLO_bratislavan_uprising_idea
+	SLO_unclear_ideology_idea
 }
 
 #Arrays and shit
@@ -281,7 +299,7 @@ round_variable = SLO.propaganda_days_until_second_change
 #Economy
 add_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
 set_variable = { SLO_economy_dm_stability_factor = -0.10 }
-set_variable = { SLO_economy_dm_political_power_cost = 0.25 }
+set_variable = { SLO_economy_dm_political_power_cost = 0.15 }
 set_variable = { SLO_economy_dm_consumer_goods_factor = 0.20 }
 set_variable = { SLO_economy_dm_production_speed_buildings_factor = -0.12 }
 set_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = -0.15 }
@@ -315,6 +333,9 @@ set_variable = { SLO_army_dm_minimum_training_level = -0.08 }
 add_dynamic_modifier = { modifier = SLO_air_force_dynamic_modifier }
 set_variable = { SLO_air_force_dm_air_accidents_factor = 0.40 }
 set_variable = { SLO_air_force_dm_air_ace_generation_chance_factor = 0.20 }
+set_variable = { SLO_air_force_dm_air_manpower_requirement_factor = -0.1 }
+set_variable = { SLO_air_force_dm_air_range_factor = -0.16 }
+
 
 add_ideas = {
 	SLO_DUMMY_economy_idea

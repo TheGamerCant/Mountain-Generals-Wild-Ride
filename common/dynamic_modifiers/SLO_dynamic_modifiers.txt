@@ -7,6 +7,9 @@ SLO_initial_economy_dynamic_modifier = {
 	consumer_goods_factor = SLO_economy_dm_consumer_goods_factor
 	production_speed_buildings_factor = SLO_economy_dm_production_speed_buildings_factor
 	production_factory_efficiency_gain_factor = SLO_economy_dm_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = SLO_economy_dm_production_factory_max_efficiency_factor
+	industrial_capacity_factory = SLO_economy_dm_industrial_capacity_factory
+	industrial_capacity_dockyard = SLO_economy_dm_industrial_capacity_dockyard
 }
 
 SLO_keynsian_economy_dynamic_modifier = {
@@ -18,6 +21,7 @@ SLO_keynsian_economy_dynamic_modifier = {
 	consumer_goods_factor = SLO_economy_dm_consumer_goods_factor
 	production_speed_buildings_factor = SLO_economy_dm_production_speed_buildings_factor
 	production_factory_efficiency_gain_factor = SLO_economy_dm_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = SLO_economy_dm_production_factory_max_efficiency_factor
 	democratic_drift = SLO_economy_dm_democratic_drift
 	industrial_capacity_factory = SLO_economy_dm_industrial_capacity_factory
 	industrial_capacity_dockyard = SLO_economy_dm_industrial_capacity_dockyard
@@ -60,3 +64,6 @@ SLO_air_force_dynamic_modifier = {
 	
 	air_accidents_factor  = SLO_air_force_dm_air_accidents_factor
 	air_ace_generation_chance_factor  = SLO_air_force_dm_air_ace_generation_chance_factor
+	air_manpower_requirement_factor = SLO_air_force_dm_air_manpower_requirement_factor
+	air_range_factor = SLO_air_force_dm_air_range_factor
+}

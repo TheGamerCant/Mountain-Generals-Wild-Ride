@@ -18,16 +18,11 @@ SLO_propaganda_decision_category = {
 				is_major = yes
 				has_government = fascism
 			}
-			
-			if = {
-				limit = { is_debug = yes }
-				NOT = { has_government = fascism } 
-			}
 		}
 		
 		visible = { 
 			OR={
-				is_debug = yes
+				has_country_flag = SLO_all_propaganda_available_flag
 				NOT = { has_government = fascism } 
 			}
 		}
@@ -73,16 +68,11 @@ SLO_propaganda_decision_category = {
 		
 		available = {
 			SLO_available_propaganda_slot = yes
-			
-			if = {
-				limit = { is_debug = yes }
-				has_government = communism
-			}
 		}
 
 		visible = {
 			OR={
-				is_debug = yes
+				has_country_flag = SLO_all_propaganda_available_flag
 				has_government = communism
 			}
 		}
@@ -127,16 +117,11 @@ SLO_propaganda_decision_category = {
 		
 		available = {
 			SLO_available_propaganda_slot = yes
-			
-			if = {
-				limit = { is_debug = yes }
-				has_government = communism
-			}
 		}
 		
 		visible = {
 			OR={
-				is_debug = yes
+				has_country_flag = SLO_all_propaganda_available_flag
 				has_government = communism
 			}
 		}
@@ -182,16 +167,11 @@ SLO_propaganda_decision_category = {
 		available = {
 			SLO_available_propaganda_slot = yes
 			has_war = yes
-			
-			if = {
-				limit = { is_debug = yes }
-				has_government = fascism
-			}
 		}
 		
 		visible = {
 			OR={
-				is_debug = yes
+				has_country_flag = SLO_all_propaganda_available_flag
 				has_government = fascism
 			}
 		}

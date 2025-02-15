@@ -14,3 +14,14 @@
  SLO:0 "Slovakia"
  SLO_DEF:0 "Slovakia"
  SLO_ADJ:0 "Slovakian"
+ 
+ SLO_fascism_party:0 "Verní HG"
+ SLO_fascism_party_long:0  "Verní horskí generáli"
+ SLO_communism_party:0 "Verní HG"
+ SLO_communism_party_long:0  "Verní horskí generáli"
+ SLO_democratic_party:0 "Verní HG"
+ SLO_democratic_party_long:0  "Verní horskí generáli"
+ SLO_neutrality_party:0 "Verní HG"
+ SLO_neutrality_party_long:0 "Verní horskí generáli"
+
+ SLO_ferdinand_catlos:0 "Ferdinand Čatloš"

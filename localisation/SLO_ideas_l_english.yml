@@ -6,7 +6,7 @@
  SLO_battle_of_brno_idea_tt:0 "Army Attack on non-core territory: §G+10.0%§!"
  
  SLO_initial_economy_dynamic_modifier:0 "The Slovak Economy"
- SLO_initial_economy_dynamic_modifier_desc:0 "With the sudden separation of Slovakia form Czechia, our economy is in turmoil, and will take time to get on it's feet."
+ SLO_initial_economy_dynamic_modifier_desc:0 "With the sudden separation of Slovakia from Czechoslovakia, our economy is in turmoil. It will take time to get on it's feet."
  SLO_keynsian_economy_dynamic_modifier:0 "The Slovak Economy"
  SLO_keynsian_economy_dynamic_modifier_desc:0 "What is an economy if not the transfer of goods between people? Our economy should be orientated first-and-foremost around the prosperity of the lower man, so that anyone can escape poverty and live a comfortable life, not orientated around a dictator's genocidal desires of conquest.\n\nWe must achieve these lofty goals through Keynsian Economics, investing our nation's wealth wisely into the pockets of future generations.
  SLO_austrian_economy_dynamic_modifier:0 "The Slovak Economy"
@@ -14,7 +14,7 @@
  SLO_army_dynamic_modifier:0 "Pozemné sily Slovenskej Republiky"
  SLO_army_dynamic_modifier_desc:0 "The Slovak ground forces are currently in a state of disarray, being formed so quickly after the breakup of Czechoslovakia. But with Mountain General at the helm, there is no problem we cannot overcome!"  
  SLO_air_force_dynamic_modifier:0 "Slovenské Vzdušné Zbrane"
- SLO_air_force_dynamic_modifier_desc:0 ""
+ SLO_air_force_dynamic_modifier_desc:0 "Our airforce is small and untested, serious reforms will be needed if we want to rival the great powers of Europe in the skies."
  
  SLO_DUMMY_economy_idea:0 "$SLO_initial_economy_dynamic_modifier$"
  SLO_DUMMY_economy_idea_desc:0 "$SLO_initial_economy_dynamic_modifier_desc$"
@@ -25,3 +25,6 @@
  
  SLO_privatisation_of_government_assets_idea:0 "$SLO_privatisation_of_government_assets$"       #From the focus
  SLO_privatisation_of_government_assets_idea_desc:0 "$SLO_privatisation_of_government_assets_desc$"
+ 
+ SLO_unclear_ideology_idea:0 "Unclear Ideology"
+ SLO_unclear_ideology_idea_desc:0 "Despite his genius, Mountain General has been obfuscative on specific ideological tenants so far. For now he does this to maintain a broad tent of support among the populous, but we will have to figure out our nation's path at some point."

@@ -1,6 +1,6 @@
 characters = {
 	SLO_mountain_general={	#Game start leader
-		name="Mountain General"
+		name=SLO_mountain_general
 		portraits={
 			civilian={
 				large="GFX_portrait_mg_normal"
@@ -11,10 +11,47 @@ characters = {
 		}
 		country_leader={
 			desc = "mountain_general_leader_desc"
+			ideology=stalinism
+			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
+			id=-1
+		}
+		country_leader={
+			desc = "mountain_general_leader_desc"
+			ideology=conservatism
+			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
+			id=-1
+		}
+		country_leader={
+			desc = "mountain_general_leader_desc"
+			ideology=fascism_ideology
+			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
+			id=-1
+		}
+		country_leader={
+			desc = "mountain_general_leader_desc"
 			ideology=despotism
 			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
 			id=-1
 		}
+		
+#		country_leader={
+#			desc = "mountain_general_leader_desc"
+#			ideology=anarchism
+#			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
+#			id=-1
+#		}
+#		country_leader={
+#			desc = "mountain_general_leader_desc"
+#			ideology=nazism
+#			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
+#			id=-1
+#		}
+#		country_leader={
+#			desc = "mountain_general_leader_desc"
+#			ideology=anti_revisionism
+#			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
+#			id=-1
+#		}
 		
 		field_marshal = {
 			traits = {
@@ -75,6 +112,19 @@ characters = {
 			allowed = {
 				original_tag = SLO
 			}
+#			visible = {
+#				OR = {
+#					has_government = neutrality
+#					has_government = fascism
+#				}
+#			}
+			available = {
+				NOT = { has_idea = SLO_ferdinand_catlos_political_advisor }
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
 			traits = {
 				army_chief_morale_2
 			}
@@ -85,12 +135,25 @@ characters = {
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = SLO_ferdinand_catlos_advisor
+			idea_token = SLO_ferdinand_catlos_political_advisor
 			allowed = {
 				original_tag = SLO
 			}
+#			visible = {
+#				OR = {
+#					has_government = neutrality
+#					has_government = fascism
+#				}
+#			}
+			available = {
+				NOT = { has_idea = SLO_ferdinand_catlos_army_chief }
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
 			traits = {
-				quartermaster_general
+				SLO_minister_of_defence
 			}
 			cost = 150
 			ai_will_do = {
@@ -100,6 +163,12 @@ characters = {
 
 		field_marshal = {
 			traits = { politically_connected infantry_leader }
+			visible = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
@@ -144,6 +213,7 @@ characters = {
 		advisor={
 			slot = army_chief
 			idea_token = SLO_augustin_malar_army_chief
+			available = { NOT = { has_idea = SLO_augustin_malar_high_command } }
 			allowed = {
 				original_tag = SLO
 			}
@@ -158,6 +228,7 @@ characters = {
 		advisor={
 			slot = high_command
 			idea_token = SLO_augustin_malar_high_command
+			available = { NOT = { has_idea = SLO_augustin_malar_army_chief } }
 			allowed = {
 				original_tag = SLO
 			}
@@ -179,41 +250,25 @@ characters = {
 		}		
 	}
 	
-	
-	SLO_josef_nemisla={
-		name="Josef Nemisla"
-		portraits={
-			army ={
-				large ="gfx/leaders/SLO/Portrait_Josef_Nemisla.dds"
-			}
-		}
-		corps_commander = {
-			traits = { skirmisher }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 2
-		}		
-	}	
-
 	SLO_anton_pulanich={	
-		name="Anton Pulanich"
+		name=SLO_anton_pulanich
 		portraits={
 			army ={
-				small="GFX_idea_SLO_anton_pulanich"
-				large ="gfx/leaders/SLO/Anton_Pulanish_Portrait.dds"
+				large="GFX_portrait_SLO_anton_pulanich"
+				small="GFX_advisor_SLO_anton_pulanich"
+			}	
+			civilian ={
+				large="GFX_portrait_SLO_anton_pulanich"
+				small="GFX_advisor_SLO_anton_pulanich"
 			}		
 		}	
 		advisor={
 			slot = army_chief
-			idea_token = SLO_anton_pulanich
+			idea_token = SLO_anton_pulanich_army_chief
+			available = { NOT = { has_idea = SLO_anton_pulanich_air_chief } }
 			allowed = {
 				original_tag = SLO
-			}
-			available = {
-				NOT = {has_idea = SLO_anton_pulanich2}	
-			}			
+			}		
 			traits = {
 				army_chief_defensive_1
 			}
@@ -224,13 +279,11 @@ characters = {
 		}
 		advisor={
 			slot = air_chief
-			idea_token = SLO_anton_pulanich2
+			idea_token = SLO_anton_pulanich_air_chief
+			available = { NOT = { has_idea = SLO_anton_pulanich_army_chief } }
 			allowed = {
 				original_tag = SLO
-			}
-			available = {
-				NOT = {has_idea = SLO_anton_pulanich}	
-			}				
+			}			
 			traits = {
 				air_chief_all_weather_2
 			}
@@ -239,8 +292,8 @@ characters = {
 				factor = 1.000
 			}
 		}		
-		field_marshal = {
-			traits = { air_force_ties defensive_doctrine }
+		corps_commander = {
+			traits = { infantry_leader }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -248,16 +301,113 @@ characters = {
 			logistics_skill = 3
 		}		
 	}	
-	SLO_rudolf_viest={
+	
+	SLO_rudolf_pilfousek={	
+		name=SLO_rudolf_pilfousek
+		portraits={
+			army ={
+				large="GFX_portrait_SLO_rudolf_pilfousek"
+				small="GFX_advisor_SLO_rudolf_pilfousek"
+			}
+			civilian ={
+				large="GFX_portrait_SLO_rudolf_pilfousek"
+				small="GFX_advisor_SLO_rudolf_pilfousek"
+			}
+		}	
+
 		advisor={
-			slot = army_chief
-			idea_token = SLO_rudolf_viest
+			slot = high_command
+			idea_token = SLO_rudolf_pilfousek
+#			visible = {
+#				OR = {
+#					has_government = neutrality
+#					has_government = fascism
+#				}
+#			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}			
+			
 			allowed = {
 				original_tag = SLO
 			}
-			available = {
+			traits = {
+				army_concealment_1
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		corps_commander = {
+			traits = { harsh_leader }
+			visible = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}	
+	}
 	
-			}			
+	SLO_rudolf_viest={
+		name=SLO_rudolf_viest
+		portraits={
+			army ={
+				large="GFX_portrait_SLO_rudolf_viest"
+				small="GFX_advisor_SLO_rudolf_viest"
+			}
+			civilian ={
+				large="GFX_portrait_SLO_rudolf_viest"
+				small="GFX_advisor_SLO_rudolf_viest"
+			}
+		}	
+		
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_rudolf_viest_political_advisor
+			allowed = {
+				original_tag = SLO
+			}
+#			visible = {
+#				NOT = { has_government = fascism }
+#			}
+			available = {
+				NOT = { has_idea = SLO_rudolf_viest_army_chief }
+				NOT = { has_government = fascism }
+			}
+			
+			traits = {
+				SLO_anti_fascist_officer
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+		advisor={
+			slot = army_chief
+			idea_token = SLO_rudolf_viest_army_chief
+			allowed = {
+				original_tag = SLO
+			}
+#			visible = {
+#				NOT = { has_government = fascism }
+#			}
+			available = {
+				NOT = { has_idea = SLO_rudolf_viest_political_advisor }
+				NOT = { has_government = fascism }
+			}		
 			traits = {
 				army_chief_offensive_3
 			}
@@ -268,33 +418,30 @@ characters = {
 		}
 	
 		field_marshal = {
+			traits = { organizer logistics_wizard infantry_officer }
 			visible = {
-				NOT = {
-					has_government = fascism
-				}					
+				NOT = { has_government = fascism }
 			}
-			traits = { harsh_leader infantry_officer }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 2
-		}		
-		name=SLO_rudolf_viest
-		portraits={
-			army ={
-				small="GFX_idea_SLO_rudolf_viest"
-				large ="gfx/leaders/SLO/Portrait_Rudolf_Viest.dds"
-			}		
-		}		
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 4
+		}			
 	}	
+	
 	SLO_julius_trnka={	
-		name="Július Trnka"
+		name=SLO_julius_trnka
 		portraits={
 			army ={
-				small="GFX_idea_SLO_julius_trnka"
-			}		
-		}
+#				large="GFX_portrait_SLO_julius_trnka"
+				small="GFX_advisor_SLO_julius_trnka"
+			}
+			civilian ={
+#				large="GFX_portrait_SLO_julius_trnka"
+				small="GFX_advisor_SLO_julius_trnka"
+			}
+		}	
 		advisor={
 			slot = air_chief
 			idea_token = SLO_julius_trnka
@@ -313,36 +460,18 @@ characters = {
 			}
 		}			
 	}
-	SLO_generic_slovak_admiral={
-		advisor={
-			slot = navy_chief
-			idea_token = SLO_generic_slovak_admiral
-			allowed = {
-				original_tag = SLO
-			}
-			available = {
+	
 
-			}			
-			traits = {
-				navy_chief_maneuver_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-		name="Chief of the Navy"
+	SLO_mikulas_markus = {
+		name=SLO_mikulas_markus
 		portraits={
 			army ={
-				small="GFX_idea_generic_navy_europe_3"
-			}		
-		}		
-	}	
-	SLO_mikulas_markus = { #Mikuláš Markus: teached in military school for a while, later participated in the slovak revolt
-		name="Mikuláš Markus"
-		portraits={
-			army={
-				small="GFX_idea_SLO_mikulas_markus"
+				large="GFX_portrait_SLO_mikulas_markus"
+				small="GFX_advisor_SLO_mikulas_markus"
+			}
+			civilian ={
+				large="GFX_portrait_SLO_mikulas_markus"
+				small="GFX_advisor_SLO_mikulas_markus"
 			}
 		}
 		advisor={
@@ -351,6 +480,14 @@ characters = {
 			slot = theorist
 			idea_token = SLO_mikulas_markus
 			ledger = army
+			
+#			visible = {
+#				NOT = { has_government = fascism }
+#			}
+			available = {
+				NOT = { has_government = fascism }
+			}
+			
 			allowed = {
 				original_tag = SLO
 			}
@@ -359,19 +496,35 @@ characters = {
 				military_theorist
 			}
 		}
+		
+		corps_commander = {
+			traits = { ranger cavalry_officer }
+			visible = {
+				NOT = { has_government = fascism }
+			}
+			skill = 2 
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
 	}
 	SLO_juraj_puskar={	
-		name="Juraj Puškár"
+		name=SLO_juraj_puskar
 		portraits={
 			army={
-				small="GFX_idea_SLO_juraj_puskar"
+				small="GFX_advisor_SLO_juraj_puskar"
+			}
+			civilian={
+				small="GFX_advisor_SLO_juraj_puskar"
 			}
 		}
 		advisor={
 			cost = 100
 			
 			slot = theorist
-			idea_token = SLO_juraj_puskar
+			idea_token = SLO_juraj_puskar_theorist
+			available = { NOT = { has_idea = SLO_juraj_puskar_high_command } }
 			ledger = air
 			allowed = {
 				original_tag = SLO
@@ -383,51 +536,79 @@ characters = {
 		}
 		advisor={
 			slot = high_command
-			idea_token = SLO_juraj_puskar2
+			idea_token = SLO_juraj_puskar_high_command
 			ledger = air
+			available = { NOT = { has_idea = SLO_juraj_puskar_theorist } }
 			allowed = {
 				original_tag = SLO
 			}
 			traits = {
-				air_bomber_interception_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}	
-	}		
-	SLO_cyril_kuchta={
-		advisor={
-			slot = high_command
-			idea_token = SLO_cyril_kuchta
-			ledger = army
-			allowed = {
-				original_tag = SLO
-			}
-			available = {
-				has_government = communism
-			}			
-			traits = {
-				army_regrouping_1
+				air_bomber_interception_1
 			}
 			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
-		}		
-		name=SLO_cyril_kuchta
+		}	
+	}	
+
+	SLO_jan_golian={		
+		name=SLO_jan_golian
 		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_4"
+			army ={
+				large="GFX_portrait_SLO_jan_golian"
+				small="GFX_advisor_SLO_jan_golian"
+			}
+			civilian ={
+				large="GFX_portrait_SLO_jan_golian"
+				small="GFX_advisor_SLO_jan_golian"
 			}
 		}
-	}
+		advisor={
+			slot = high_command
+			idea_token = SLO_jan_golian
+			ledger = army
+			allowed = {
+				original_tag = SLO
+			}
+#			visible = {
+#				NOT = { has_government = fascism }
+#			}
+			available = {
+				NOT = { has_government = fascism }
+			}		
+			traits = {
+				army_artillery_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+		corps_commander = {
+			traits = { organizer trait_mountaineer }
+			visible = {
+				NOT = { has_government = fascism }
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}	
+
 	SLO_viliam_talsky={	
-		name="Viliam Talský"
+		name=SLO_viliam_talsky
 		portraits={
-			army={
-				small="GFX_idea_SLO_viliam_talsky"
+			army ={
+				large="GFX_portrait_SLO_viliam_talsky"
+				small="GFX_advisor_SLO_viliam_talsky"
+			}
+			civilian ={
+				large="GFX_portrait_SLO_viliam_talsky"
+				small="GFX_advisor_SLO_viliam_talsky"
 			}
 		}
 		advisor={
@@ -438,106 +619,209 @@ characters = {
 				original_tag = SLO
 			}
 			available = {
-				NOT = {
-					has_government = communism
-				}
 			}			
 			traits = {
-				army_infantry_2
+				army_infantry_1
 			}
-			cost = 100
+			cost = 50
 			ai_will_do = {
-				factor = 4.000
+				factor = 1.000
 			}
 		}	
+		
+		corps_commander = {
+			traits = { trait_engineer }
+
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
 	}
-	SLO_rudolf_pilfousek={
-		name="Rudolf Pilfousek"
+
+	SLO_julius_nosko={	
+		name=SLO_julius_nosko
 		portraits={
-			army={
-				small="GFX_idea_SLO_rudolf_pilfousek"
+			army ={
+				large="GFX_portrait_SLO_julius_nosko"
+				small="GFX_advisor_SLO_julius_nosko"
+			}
+			civilian ={
+				large="GFX_portrait_SLO_julius_nosko"
+				small="GFX_advisor_SLO_julius_nosko"
 			}
 		}
 		advisor={
 			slot = high_command
-			idea_token = SLO_rudolf_pilfousek
+			idea_token = SLO_julius_nosko
 			ledger = army
 			allowed = {
 				original_tag = SLO
 			}
 			available = {
-
 			}			
 			traits = {
-				army_cavalry_2
+				army_regrouping_3
 			}
-			cost = 100
+			cost = 200
 			ai_will_do = {
 				factor = 1.000
 			}
-		}		
-	}	
-	SLO_jan_golian={		
-		name="Jan Golian"
-		portraits={
-			army={
-				small="GFX_idea_SLO_jan_golian"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = SLO_jan_golian
-			ledger = army
-			allowed = {
-				original_tag = SLO
-			}
-			available = {
+		}	
+		
+		corps_commander = {
+			traits = { trait_mountaineer cavalry_officer commando paratrooper }
 
-			}			
-			traits = {
-				army_entrenchment_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+			skill =3
+			attack_skill = 2
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 3
 		}
 	}
 	
 	SLO_jozef_lettrich={
-		name="Jozef Lettrich"
+		name=SLO_jozef_lettrich
 		portraits={
+			civilian={
+				small="GFX_advisor_SLO_jozef_lettrich"
+			}
 			army={
-				small="GFX_idea_SLO_jozef_lettrich"
+				small="GFX_advisor_SLO_jozef_lettrich"
 			}
 		}
 		advisor={
 			slot = political_advisor
 			idea_token = SLO_jozef_lettrich
 			allowed  = {
-				original_tag  = SLO
+				original_tag = SLO
 			}
 			available  = {
-				has_government = democratic
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					not  = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}					
+				has_government = democratic		
 			}
 			traits  = {
-				democratic_reformer 
+				SLO_democratic_writer 
 			}
 
-			#get better AI if change focus tree
-			ai_will_do  = {
-				factor  = 0
+			ai_will_do = {
+				factor = 1.000
 			}
 		}		
 	}
+	
+	
+	SLO_andrej_hlinka={
+		name=SLO_andrej_hlinka
+		portraits={
+			civilian={
+				small="GFX_advisor_SLO_andrej_hlinka"
+			}
+			army={
+				small="GFX_advisor_SLO_andrej_hlinka"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_andrej_hlinka
+			allowed  = {
+				original_tag = SLO
+			}
+			available  = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}					
+			}
+			traits  = {
+				SLO_nationalist_priest
+			}
+
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+	
+	SLO_karol_sidor = {
+		name=SLO_karol_sidor
+		portraits={
+			civilian={
+				small="GFX_advisor_SLO_karol_sidor"
+			}
+			army={
+				small="GFX_advisor_SLO_karol_sidor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_karol_sidor
+			allowed  = {
+				original_tag = SLO
+			}
+			available = { 
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}	
+			}				
+			traits  = {
+				SLO_nationalist_editor 
+			}
+		}		
+	}
+	
+	SLO_alexander_mach = {
+		name=SLO_alexander_mach
+		portraits={
+			civilian={
+				small="GFX_advisor_SLO_alexander_mach"
+			}
+			army={
+				small="GFX_advisor_SLO_alexander_mach"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_alexander_mach
+			allowed  = {
+				original_tag = SLO
+			}
+			available = { 
+				has_government = fascism	
+			}				
+			traits  = {
+				SLO_fascist_paramilitarist
+			}
+		}		
+	}	
+	
+	SLO_vojtech_tuka = {
+		name=SLO_vojtech_tuka
+		portraits={
+			civilian={
+				small="GFX_idea_CZE_vojtech_tuka"
+			}
+			army={
+				small="GFX_idea_CZE_vojtech_tuka"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_vojtech_tuka
+			allowed  = {
+				original_tag = SLO
+			}
+			available = { 
+				has_government = fascism	
+			}				
+			traits  = {
+				SLO_prince_of_terror
+			}
+		}		
+	}	
+	
+	
 	SLO_karol_smidke={
 		name="Karol Smidke"
 		portraits={
@@ -570,40 +854,7 @@ characters = {
 			}
 		}
 	}
-	SLO_alexander_mach={
-		name="Alexander Mach"
-		portraits={
-			army={
-				small="GFX_idea_SLO_alexander_mach"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SLO_alexander_mach
-			allowed  = {
-				original_tag  = SLO
-			}
-			available  = {
-				has_government = fascism
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					not  = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-									
-			}
-			traits  = {
-				fascist_demagogue 
-			}
-			
-			ai_will_do  = {
-				factor  = 0
-			}
-		}
-	}
+
 	SLO_vavro_srobar={
 		name="Vavro Šrobár"
 		portraits={
@@ -721,49 +972,7 @@ characters = {
 			}
 		}		
 	}	
-	SLO_karol_sidor = {
-		name=SLO_karol_sidor
-		portraits={
-			army={
-				small="GFX_idea_SLO_karol_sidor"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SLO_karol_sidor
-			allowed  = {
-				original_tag = SLO
-			}
-			available = { 
-				has_government = neutrality
-			}				
-			traits  = {
-				backroom_backstabber 
-			}
-		}		
-	}	
 
-	SLO_vojtech_tuka = { 
-		name= "Vojtech Tuka" 
-		portraits={
-			army={
-				small="GFX_idea_SLO_vojtech_tuka"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SLO_vojtech_tuka
-			allowed  = {
-				original_tag = SLO
-			}
-			available = { 
-				has_government = fascism
-			}				
-			traits  = {
-				prince_of_terror 
-			}
-		}		
-	}	
 	SLO_fritz_gejza = { # Minister of justice of slovakia..move above?
 		name=SLO_fritz_gejza
 		portraits={

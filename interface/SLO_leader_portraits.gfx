@@ -107,4 +107,89 @@ spriteTypes = {
 		name = "GFX_advisor_SLO_anton_pulanich"
 		texturefile = "gfx/leaders/SLO/advisors/SLO_anton_pulanich.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_portrait_SLO_rudolf_pilfousek"
+		texturefile = "gfx/leaders/SLO/SLO_rudolf_pilfousek.dds"
+	}
+	spriteType = {
+		name = "GFX_advisor_SLO_rudolf_pilfousek"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_rudolf_pilfousek.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_SLO_rudolf_viest"
+		texturefile = "gfx/leaders/SLO/SLO_rudolf_viest.dds"
+	}
+	spriteType = {
+		name = "GFX_advisor_SLO_rudolf_viest"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_rudolf_viest.dds"
+	}
+	
+
+	spriteType = {
+		name = "GFX_advisor_SLO_julius_trnka"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_julius_trnka.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_SLO_mikulas_markus"
+		texturefile = "gfx/leaders/SLO/SLO_mikulas_markus.dds"
+	}
+	spriteType = {
+		name = "GFX_advisor_SLO_mikulas_markus"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_mikulas_markus.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_SLO_jan_golian"
+		texturefile = "gfx/leaders/SLO/SLO_jan_golian.dds"
+	}
+	spriteType = {
+		name = "GFX_advisor_SLO_jan_golian"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_jan_golian.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_advisor_SLO_juraj_puskar"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_juraj_puskar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_SLO_viliam_talsky"
+		texturefile = "gfx/leaders/SLO/SLO_viliam_talsky.dds"
+	}
+	spriteType = {
+		name = "GFX_advisor_SLO_viliam_talsky"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_viliam_talsky.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_SLO_julius_nosko"
+		texturefile = "gfx/leaders/SLO/SLO_julius_nosko.dds"
+	}
+	spriteType = {
+		name = "GFX_advisor_SLO_julius_nosko"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_julius_nosko.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_advisor_SLO_jozef_lettrich"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_jozef_lettrich.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_advisor_SLO_andrej_hlinka"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_andrej_hlinka.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_advisor_SLO_karol_sidor"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_karol_sidor.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_advisor_SLO_alexander_mach"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_alexander_mach.dds"
+	}
 }

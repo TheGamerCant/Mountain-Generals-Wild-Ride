@@ -10,6 +10,7 @@ ideas = {
 				consumer_goods_factor = 0.20
 				production_speed_buildings_factor = -0.12
 				production_factory_efficiency_gain_factor = -0.15
+				political_power_cost = 0.15
 			}
 		}
 		SLO_DUMMY_army_idea = {
@@ -32,6 +33,8 @@ ideas = {
 			modifier = {
 				air_accidents_factor = 0.40
 				air_ace_generation_chance_factor = 0.20
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
 			}
 		}
 		
@@ -52,7 +55,7 @@ ideas = {
 			modifier = {
 				war_support_factor = 0.1
 				war_stability_factor = 0.30
-				conscription = 0.025
+				conscription = 0.02
 				army_org_factor = 0.04
 				land_reinforce_rate = 0.03
 			}
@@ -105,6 +108,29 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.25
+			}
+		}	
+		
+		SLO_unclear_ideology_idea = {
+			removal_cost = -1
+
+			picture = SLO_unclear_ideology
+				
+			available = {
+				has_country_leader = {
+					character = SLO_mountain_general
+					ruling_only = yes
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				neutrality_drift = -0.01
+				political_power_cost = 0.14
+				stability_factor = -0.05
 			}
 		}	
 	}

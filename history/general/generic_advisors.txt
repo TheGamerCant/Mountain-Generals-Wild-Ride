@@ -1,3 +1,90 @@
+
+#Slovakia
+every_possible_country = {
+	limit = {
+		original_tag = SLO
+	}
+	
+	# generic navy chiefs
+	generate_character = {
+		token_base = generic_navy_chief_decisive_bat # token will be TAG_token_base
+		advisor = {
+			slot = navy_chief
+			traits = { navy_chief_decisive_battle_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_navy_chief_decisive_bat }
+		}
+	}
+	generate_character = {
+		token_base = generic_navy_anti_submarine # token will be TAG_token_base
+		advisor = {
+			slot = navy_chief
+			traits = { navy_anti_submarine_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_navy_anti_submarine }
+		}
+	}
+
+	generate_character = {
+		token_base = generic_navy_fleet_log # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { navy_fleet_logistics_1 }
+			ledger = navy
+			cost = 50
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_navy_fleet_log }
+		}
+	}
+	generate_character = {
+		token_base = generic_navy_chief_manuever # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { navy_chief_maneuver_1  }
+			ledger = air
+			cost = 50
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_naval_theorist }
+		}
+	}
+	# generic theorists
+	generate_character = {
+		token_base = generic_military_theorist # token will be TAG_token_base
+		advisor = {
+			slot = theorist
+			traits = { grand_battle_plan_expert }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_military_theorist }
+		}
+	}
+	generate_character = {
+		token_base = generic_naval_theorist # token will be TAG_token_base
+		advisor = {
+			slot = theorist
+			traits = { naval_theorist }
+			ledger = navy
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_naval_theorist }
+		}
+	}
+	
+	###
+	#	Illusive Gentleman generated elsewhere
+	###
+}
+
+
 # For minor countries where advisors are not defined
 # Generate them from a generic template
 
@@ -186,7 +273,6 @@ every_possible_country = {
 		# Germany as Wilhelm Canaris
 		NOT = { original_tag = GER }
 		NOT = { is_chinese_warlord = yes }
-		NOT = { tag = SLO }
 		IF = {
 			limit = {
 				has_dlc = "Battle for the Bosporus"

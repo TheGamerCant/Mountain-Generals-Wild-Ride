@@ -600,6 +600,9 @@ focus_tree = {
 					elections_allowed = no
 				}
 			}
+			
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SLO_jan_osoha
 		}
 	}
 	

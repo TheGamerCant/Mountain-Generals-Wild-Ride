@@ -170,6 +170,12 @@ recruit_character = SLO_andrej_hlinka
 recruit_character = SLO_karol_sidor
 recruit_character = SLO_alexander_mach
 recruit_character = SLO_vojtech_tuka
+recruit_character = SLO_karol_smidke
+recruit_character = SLO_vavro_srobar
+recruit_character = SLO_ivan_derer
+recruit_character = SLO_jan_osoha
+recruit_character = SLO_stefan_tiso
+recruit_character = SLO_jozef_sivak
 
 
 set_research_slots = 3

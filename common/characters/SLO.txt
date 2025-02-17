@@ -821,12 +821,14 @@ characters = {
 		}		
 	}	
 	
-	
 	SLO_karol_smidke={
-		name="Karol Smidke"
+		name=SLO_karol_smidke
 		portraits={
+			civilian={
+				small="GFX_advisor_SLO_karol_smidke"
+			}
 			army={
-				small="GFX_idea_SLO_karol_smidke"
+				small="GFX_advisor_SLO_karol_smidke"
 			}
 		}
 		advisor={
@@ -836,18 +838,13 @@ characters = {
 				original_tag  = SLO
 			}
 			available  = {
-				has_government = communism
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					not  = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}					
+				OR = {
+					has_government = communism	
+					has_defensive_war = yes
+				}
 			}
 			traits  = {
-				communist_revolutionary 
+				SLO_communist_agitator 
 			}
 			ai_will_do  = {
 				factor  = 0
@@ -856,10 +853,13 @@ characters = {
 	}
 
 	SLO_vavro_srobar={
-		name="Vavro Šrobár"
+		name=SLO_vavro_srobar
 		portraits={
+			civilian={
+				small="GFX_advisor_SLO_vavro_srobar"
+			}
 			army={
-				small="GFX_idea_SLO_vavro_srobar"
+				small="GFX_advisor_SLO_vavro_srobar"
 			}
 		}
 		advisor={
@@ -872,6 +872,7 @@ characters = {
 				OR = {
 					has_government = democratic
 					has_government = neutrality
+					has_completed_focus = SLO_the_workers_paradise
 				}	
 			}				
 			traits  = {
@@ -885,14 +886,18 @@ characters = {
 			}
 		}	
 	}
+	
 	SLO_ivan_derer={
-		name="Ivan Dérer"
+		name=SLO_ivan_derer
 		portraits={
+			civilian={
+				small="GFX_advisor_SLO_ivan_derer"
+			}
 			army={
-				small="GFX_idea_SLO_ivan_derer"
+				small="GFX_advisor_SLO_ivan_derer"
 			}
 		}
-		advisor={ #soc dem
+		advisor={
 			slot = political_advisor
 			idea_token = SLO_ivan_derer
 			allowed  = {
@@ -902,6 +907,7 @@ characters = {
 				OR = {
 					has_government = democratic
 					has_government = neutrality
+					has_completed_focus = SLO_the_workers_paradise
 				}	
 			}				
 			traits  = {
@@ -909,11 +915,15 @@ characters = {
 			}
 		}		
 	}	
-	SLO_jan_osoha = { #among leaders in 1939 strong partisan of moscow
-		name="Ján Osoha"
+	
+	SLO_jan_osoha = {
+		name=SLO_jan_osoha
 		portraits={
+			civilian={
+				small="GFX_advisor_SLO_jan_osoha"
+			}
 			army={
-				small="GFX_idea_SLO_jan_osoha"
+				small="GFX_advisor_SLO_jan_osoha"
 			}
 		}
 		advisor={
@@ -923,66 +933,27 @@ characters = {
 				original_tag = SLO
 			}
 			available = { 
-					has_government = communism	
+				has_completed_focus = SLO_socialism_above_all
 			}				
 			traits  = {
-				ideological_crusader 
+				SLO_stalins_man_in_bratislava 
 			}
 		}		
-	}	
-	SLO_ludovit_benada = { #member of ruling troika
-		name="Ľudovít Benada"
+	}
+	
+	SLO_stefan_tiso = {
+		name=SLO_stefan_tiso
 		portraits={
+			civilian={
+				small="GFX_advisor_SLO_stefan_tiso"
+			}
 			army={
-				small="GFX_idea_SLO_ludovit_benada"
+				small="GFX_advisor_SLO_stefan_tiso"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = SLO_ludovit_benada
-			allowed  = {
-				original_tag = SLO
-			}
-			available = { 
-					has_government = communism	
-			}				
-			traits  = {
-				backroom_backstabber 
-			}
-		}		
-	}	
-	SLO_frano_kral = { #communist writer
-		name="Fraňo Kráľ"
-		portraits={
-			army={
-				small="GFX_idea_SLO_frano_kral"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SLO_frano_kral
-			allowed  = {
-				original_tag = SLO
-			}
-			available = { 
-					has_government = communism	
-			}				
-			traits  = {
-				revolutionary_poet 
-			}
-		}		
-	}	
-
-	SLO_fritz_gejza = { # Minister of justice of slovakia..move above?
-		name=SLO_fritz_gejza
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_2"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SLO_fritz_gejza
+			idea_token = SLO_stefan_tiso
 			allowed  = {
 				original_tag = SLO
 			}
@@ -990,37 +961,20 @@ characters = {
 				has_government = fascism
 			}				
 			traits  = {
-				backroom_backstabber 
-			}
-		}		
-	}	
-	SLO_ferdinand_durcansky = { #foreign affairs, nazi lover
-		name="Ferdinand Ďurčanský"
-		portraits={
-			army={
-				small="GFX_idea_SLO_ferdinand_durcansky"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SLO_ferdinand_durcansky
-			allowed  = {
-				original_tag = SLO
-			}
-			available = { 
-					has_government = fascism	
-			}				
-			traits  = {
-				ideological_crusader 
+				SLO_fascist_judge 
 			}
 		}		
 	}
+	
 	SLO_jozef_sivak = { 
-		name = "Jozef Sivák"
+		name = SLO_jozef_sivak
 
 		portraits={
+			civilian={
+				small="GFX_advisor_SLO_jozef_sivak"
+			}
 			army={
-				small="GFX_idea_generic_political_advisor_europe_5"
+				small="GFX_advisor_SLO_jozef_sivak"
 			}
 		}
 		advisor={
@@ -1030,13 +984,16 @@ characters = {
 				original_tag = SLO
 			}
 			available = {
-
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}	
 			}
 			traits = {
-				technocrat
+				SLO_nationalist_technocrat
 			}
 			ai_will_do = {
-				factor = 1.5
+				factor = 1.0
 			}	
 		}	
 	}

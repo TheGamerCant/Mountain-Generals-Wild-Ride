@@ -36,10 +36,11 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^0
 
 		modifier = {
-			fascism_drift = -0.03
+			fascism_drift = -0.04
 			fascism_acceptance = -60
 			
 			army_attack_against_major_factor = 0.15
+			army_defence_against_major_factor = 0.10
 			army_org_regain = 0.1
 		}
 		
@@ -187,7 +188,7 @@ SLO_propaganda_decision_category = {
 		modifier = {
 			fascism_drift = 0.10
 			war_support_factor = 0.15
-			stability_factor = -0.05
+			stability_weekly = -0.002
 			political_power_gain = 0.10
 		}
 		
@@ -260,6 +261,50 @@ SLO_propaganda_decision_category = {
 
 		remove_effect = {
 			set_variable = { SLO.propaganda_campaign_to_end = 4 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_5 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+#			has_war = yes
+		}
+		
+		visible = {
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^5
+
+		modifier = {
+			war_support_weekly = 0.002
+			consumer_goods_factor = -0.30
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 5 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 5 }
 			SLO_end_propaganda_campaign = yes
 		}
 	}

@@ -24,4 +24,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/propaganda/SLO_telling_a_friend_may_mean_telling_the_enemy.dds"
 		noOfFrames = 5
 	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_you_dont_want_this_buy_war_bonds"
+		texturefile = "gfx/interface/propaganda/SLO_you_dont_want_this_buy_war_bonds.dds"
+		noOfFrames = 5
+	}
 }

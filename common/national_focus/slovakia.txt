@@ -616,8 +616,6 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = SLO_great_statesman
-		}
-		prerequisite = {
 			focus = SLO_fearless_commander
 		}
 		mutually_exclusive = { focus = SLO_impeccable_philosopher }
@@ -673,8 +671,6 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = SLO_great_statesman
-		}
-		prerequisite = {
 			focus = SLO_fearless_commander
 		}
 		mutually_exclusive = { focus = SLO_brilliant_genius }

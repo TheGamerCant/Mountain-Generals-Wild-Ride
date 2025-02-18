@@ -816,6 +816,42 @@ country_event = {
 	}
 }
 
+#I look mountaineer as fuck
+country_event = {
+	id = slovakia.22
+	title = slovakia.22.t
+	desc = slovakia.22.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_SOV_young_builders_of_communism
+
+	option = { 
+		name = slovakia.22.a
+		ai_chance = {
+			base = 10
+		}
+		hidden_effect={
+			country_event = { id = slovakia.23 days = 12 }
+		}
+	}
+}
+
+#Kill those who dissent
+country_event = {
+	id = slovakia.23
+	title = slovakia.23.t
+	desc = slovakia.23.desc
+	is_triggered_only = yes
+
+	option = { 
+		name = slovakia.23.a
+		ai_chance = {
+			base = 10
+		}
+		70={ add_manpower = -2 }
+	}
+}
+
 
 add_namespace = slovakia_propaganda
 

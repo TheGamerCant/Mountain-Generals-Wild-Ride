@@ -137,7 +137,7 @@ SLO_propaganda_decision_category = {
 
 		modifier = {
 			monthly_population  = 0.2
-			communism_drift = 0.05
+			#communism_drift = 0.05
 			political_power_cost = -0.04
 			stability_weekly = 0.001
 		}

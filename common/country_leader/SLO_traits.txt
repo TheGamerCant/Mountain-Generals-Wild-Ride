@@ -18,7 +18,7 @@ leader_traits = {
 		random = no
 		command_power_gain_mult = 0.2
 		army_attack_factor = 0.12
-		army_defence_factor = 0.1
+		army_defence_factor = 0.08
 		army_speed_factor = 0.08
 		org_loss_when_moving = -0.1
 		land_doctrine_cost_factor = -0.1
@@ -30,9 +30,128 @@ leader_traits = {
 	the_man_behind_the_mask = {
 		random = no
 		stability_factor = -0.15
-		political_power_factor = -0.05
+		political_power_factor = -0.15
 
 		custom_modifier_tooltip = the_man_behind_the_mask_desc
+	}
+	
+	mgs_cult_of_personality_1 = {
+		random = no
+		
+		political_power_gain = 0.05
+		war_stability_factor = 0.05
+		fascism_drift = 0.05
+	}
+	
+	mgs_cult_of_personality_2_left = {		#Mountain Generalism
+		random = no
+		
+		political_power_gain = 0.05
+		war_stability_factor = 0.05
+		fascism_drift = 0.05
+		conscription_factor = 0.07
+		war_support_factor = 0.05
+	}
+	
+	mgs_cult_of_personality_2_right = {		#A portrait on every wall
+		random = no
+		
+		political_power_gain = 0.10
+		war_stability_factor = 0.05
+		fascism_drift = 0.10
+		war_support_factor = 0.05
+	}
+	
+	mgs_cult_of_personality_2 = {		#Both
+		random = no
+		
+		political_power_gain = 0.10
+		war_stability_factor = 0.05
+		fascism_drift = 0.10
+		war_support_factor = 0.10
+		conscription_factor = 0.07
+	}
+	
+	mgs_cult_of_personality_3_left = {
+		random = no
+		
+		political_power_gain = 0.10
+		war_stability_factor = 0.05
+		fascism_drift = 0.10
+		war_support_factor = 0.15
+		conscription_factor = 0.12
+		experience_gain_army_factor = 0.10
+		army_morale_factor = 0.10
+		max_planning = 0.08
+	}
+	
+	mgs_cult_of_personality_3_right = {
+		random = no
+		
+		political_power_gain = 0.10
+		war_stability_factor = 0.20
+		fascism_drift = 0.10
+		war_support_factor = 0.10
+		conscription_factor = 0.07
+		annex_cost_factor = -0.33
+		puppet_cost_factor = -0.33
+		starting_compliance = 0.20
+	}
+	
+	mgs_cult_of_personality_4_left_left = {
+		random = no
+		
+		political_power_gain = 0.30
+		war_stability_factor = 0.05
+		fascism_drift = 0.20
+		war_support_factor = 0.15
+		conscription_factor = 0.12
+		experience_gain_army_factor = 0.10
+		army_morale_factor = 0.10
+		max_planning = 0.08
+		stability_factor = 0.10
+	}
+	
+	mgs_cult_of_personality_4_right_left = {
+		random = no
+		
+		political_power_gain = 0.30
+		war_stability_factor = 0.20
+		fascism_drift = 0.20
+		war_support_factor = 0.10
+		conscription_factor = 0.07	
+		annex_cost_factor = -0.33
+		puppet_cost_factor = -0.33
+		starting_compliance = 0.20
+		stability_factor = 0.10
+	}
+	
+	mgs_cult_of_personality_4_left_right = {
+		random = no
+		
+		political_power_gain = 0.10
+		war_stability_factor = 0.05
+		fascism_drift = 0.10
+		war_support_factor = 0.15
+		conscription_factor = 0.12
+		experience_gain_army_factor = 0.10
+		army_morale_factor = 0.10
+		max_planning = 0.08	
+		research_speed_factor = 0.05
+	}
+	
+	mgs_cult_of_personality_4_right_right = {
+		random = no
+		
+		political_power_gain = 0.10
+		war_stability_factor = 0.20
+		fascism_drift = 0.10
+		war_support_factor = 0.10
+		conscription_factor = 0.07
+		annex_cost_factor = -0.33
+		puppet_cost_factor = -0.33
+		starting_compliance = 0.20	
+		research_speed_factor = 0.05
 	}
 
 	mg_loyalist = {

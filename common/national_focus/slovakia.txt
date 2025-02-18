@@ -418,6 +418,292 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = SLO_trust_in_mountain_general
+		icon = GFX_goal_SLO_mountain_generals_cult_of_personality
+		x = 6
+		y = 1
+		relative_position_id = SLO_a_based_slovakia
+		cost = 5
+		prerequisite = {
+			focus = SLO_a_based_slovakia
+		}
+
+		available = {
+			has_country_leader = {
+				character = SLO_mountain_general
+				ruling_only = yes
+			}
+		}
+		
+
+		completion_reward = {
+			add_country_leader_trait = mgs_cult_of_personality_1
+		}
+	}
+	
+	focus = {
+		id = SLO_the_teachnings_of_mountain_general
+		icon = GFX_goal_SLO_indoctrination
+		x = -2
+		y = 1
+		relative_position_id = SLO_trust_in_mountain_general
+		cost = 5
+		prerequisite = {
+			focus = SLO_trust_in_mountain_general
+		}
+
+		available = {
+			has_country_leader = {
+				character = SLO_mountain_general
+				ruling_only = yes
+			}
+		}
+		
+
+		completion_reward = {			
+			if = {
+				limit = { has_country_leader_with_trait = mgs_cult_of_personality_1 }
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_1
+					add = mgs_cult_of_personality_2_left
+				}
+			}
+			else = {
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_2_right
+					add = mgs_cult_of_personality_2
+				}
+			}
+			hidden_effect = {
+				country_event = { id = slovakia.22 days = 25 random_days = 25 }
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_a_portrait_on_every_wall
+		icon = GFX_goal_SLO_a_portrait_on_every_wall
+		x = 0
+		y = 1
+		relative_position_id = SLO_trust_in_mountain_general
+		cost = 5
+		prerequisite = {
+			focus = SLO_trust_in_mountain_general
+		}
+
+		available = {
+			has_country_leader = {
+				character = SLO_mountain_general
+				ruling_only = yes
+			}
+		}
+		
+
+		completion_reward = {
+			if = {
+				limit = { has_country_leader_with_trait = mgs_cult_of_personality_1 }
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_1
+					add = mgs_cult_of_personality_2_right
+				}
+			}
+			else= {
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_2_left
+					add = mgs_cult_of_personality_2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_the_ministry_of_public_enlightenment
+		icon = GFX_goal_SLO_propaganda
+		x = 2
+		y = 1
+		relative_position_id = SLO_trust_in_mountain_general
+		cost = 5
+		prerequisite = {
+			focus = SLO_trust_in_mountain_general
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			SLO_unlock_new_propaganda_slot = yes
+			
+			unlock_decision_category_tooltip = SLO_propaganda_decision_category
+		}
+	}
+	
+	focus = {
+		id = SLO_fearless_commander
+		icon = GFX_
+		x = -2
+		y = 1
+		relative_position_id = SLO_a_portrait_on_every_wall
+		cost = 10
+		prerequisite = {
+			focus = SLO_a_portrait_on_every_wall
+		}
+		prerequisite = {
+			focus = SLO_the_teachnings_of_mountain_general
+		}
+		mutually_exclusive = { focus = SLO_great_statesman }
+
+		available = {
+			has_country_leader = {
+				character = SLO_mountain_general
+				ruling_only = yes
+			}
+		}
+		
+
+		completion_reward = {
+			SLO_mountain_general = {
+				add_planning = 1
+				add_logistics = 1
+				gain_xp = 500
+			}
+			
+			swap_ruler_traits = {
+				remove = mgs_cult_of_personality_2
+				add = mgs_cult_of_personality_3_left
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_great_statesman
+		icon = GFX_goal_SLO_declare_greater_slovakia
+		x = 0
+		y = 1
+		relative_position_id = SLO_a_portrait_on_every_wall
+		cost = 10
+		prerequisite = {
+			focus = SLO_a_portrait_on_every_wall
+		}
+		prerequisite = {
+			focus = SLO_the_teachnings_of_mountain_general
+		}
+		mutually_exclusive = { focus = SLO_fearless_commander }
+
+		available = {
+			has_country_leader = {
+				character = SLO_mountain_general
+				ruling_only = yes
+			}
+		}
+		
+
+		completion_reward = {
+			swap_ruler_traits = {
+				remove = mgs_cult_of_personality_2
+				add = mgs_cult_of_personality_3_right
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_brilliant_genius
+		icon = GFX_
+		x = 0
+		y = 1
+		relative_position_id = SLO_great_statesman
+		cost = 10
+		prerequisite = {
+			focus = SLO_great_statesman
+		}
+		prerequisite = {
+			focus = SLO_fearless_commander
+		}
+		mutually_exclusive = { focus = SLO_impeccable_philosopher }
+
+		available = {
+			has_country_leader = {
+				character = SLO_mountain_general
+				ruling_only = yes
+			}
+		}
+		
+
+		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.20
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.20
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.20
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.20
+			}
+			
+			if = {
+				limit = { has_country_leader_with_trait = mgs_cult_of_personality_3_left }
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_3_left
+					add = mgs_cult_of_personality_4_left_right
+				}
+			}
+			else= {
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_3_right
+					add = mgs_cult_of_personality_4_right_right
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_impeccable_philosopher
+		icon = GFX_SLO_impeccable_philosopher
+		x = -2
+		y = 1
+		relative_position_id = SLO_great_statesman
+		cost = 10
+		prerequisite = {
+			focus = SLO_great_statesman
+		}
+		prerequisite = {
+			focus = SLO_fearless_commander
+		}
+		mutually_exclusive = { focus = SLO_brilliant_genius }
+
+		available = {
+			has_country_leader = {
+				character = SLO_mountain_general
+				ruling_only = yes
+			}
+		}
+		
+
+		completion_reward = {
+			if = {
+				limit = { has_country_leader_with_trait = mgs_cult_of_personality_3_left }
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_3_left
+					add = mgs_cult_of_personality_4_left_left
+				}
+			}
+			else= {
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_3_right
+					add = mgs_cult_of_personality_4_right_left
+				}
+			}
+		}
+	}
+	
 	focus = {	
 		id = SLO_strong_leader_strong_slovakia
 		icon = GFX_

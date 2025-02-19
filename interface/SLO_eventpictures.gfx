@@ -1,5 +1,9 @@
 spriteTypes = {
 	SpriteType = {
+		name = "GFX_report_event_military_education"
+		texturefile = "gfx/event_pictures/report_event_military_education.dds"
+	}
+	SpriteType = {
 		name = "GFX_report_event_SLO_little_red_book"
 		texturefile = "gfx/event_pictures/report_event_SLO_little_red_book.dds"
 	}
@@ -14,5 +18,17 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_report_event_SLO_mg_pills"
 		texturefile = "gfx/event_pictures/report_event_SLO_mg_pills.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_SLO_military_ceremony"
+		texturefile = "gfx/event_pictures/report_event_SLO_military_ceremony.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_SLO_military_service"
+		texturefile = "gfx/event_pictures/report_event_SLO_military_service.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_SLO_tank_training"
+		texturefile = "gfx/event_pictures/report_event_SLO_tank_training.dds"
 	}
 }

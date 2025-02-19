@@ -102,10 +102,10 @@ leader_traits = {
 		random = no
 		
 		political_power_gain = 0.30
-		war_stability_factor = 0.05
+		war_stability_factor = 0.10
 		fascism_drift = 0.20
 		war_support_factor = 0.15
-		conscription_factor = 0.12
+		conscription_factor = 0.20
 		experience_gain_army_factor = 0.10
 		army_morale_factor = 0.10
 		max_planning = 0.08
@@ -116,10 +116,10 @@ leader_traits = {
 		random = no
 		
 		political_power_gain = 0.30
-		war_stability_factor = 0.20
+		war_stability_factor = 0.25
 		fascism_drift = 0.20
 		war_support_factor = 0.10
-		conscription_factor = 0.07	
+		conscription_factor = 0.15	
 		annex_cost_factor = -0.33
 		puppet_cost_factor = -0.33
 		starting_compliance = 0.20
@@ -138,6 +138,12 @@ leader_traits = {
 		army_morale_factor = 0.10
 		max_planning = 0.08	
 		research_speed_factor = 0.05
+		
+		specialization_land_speed_factor = 0.1
+		specialization_air_speed_factor = 0.1
+		specialization_naval_speed_factor = 0.1
+		specialization_nuclear_speed_factor = 0.1
+		special_project_facility_supply_consumption_factor = -0.15
 	}
 	
 	mgs_cult_of_personality_4_right_right = {
@@ -152,6 +158,12 @@ leader_traits = {
 		puppet_cost_factor = -0.33
 		starting_compliance = 0.20	
 		research_speed_factor = 0.05
+		
+		specialization_land_speed_factor = 0.1
+		specialization_air_speed_factor = 0.1
+		specialization_naval_speed_factor = 0.1
+		specialization_nuclear_speed_factor = 0.1
+		special_project_facility_supply_consumption_factor = -0.15
 	}
 
 	mg_loyalist = {

@@ -80,7 +80,7 @@
  
  slovakia.18.title:0 "Mountain General denounces Hungary"
  slovakia.18.desc:0 "'...and we must root out the Hungarian sympathisers among us. Those who claim that we should treat the southern curs with empathy either do not understand the true gravity of the situation, or are outright aiding the enemy! They speak of their so called 'human rights', but how can one reasonably argue that those inbred, Mongolian heathens, even qualify as such! We must deal to the Hungarian race a killing blow, so that...'\n\nMountain General rambled on for hours. His words captivated many Slovaks, but needless to say, the Hungarians didn't much like them."
- slovakia.18.a:0 "Glory to Slovakia! Glory to Mountain General! Death to Hungary!"
+ slovakia.18.a:0 "Glory to Slovakia! Glory  to Mountain General! Death to Hungary!"
 
  slovakia.19.title:0 "Mountain General denounces Germany"
  slovakia.19.desc:0 "'...They claim to be 'Aryans', and yet their people hold no resemblance to the true Aryans. The true Aryans migrated a millennia ago from the European steppes, and are today known as the Slavs! Never forget this my fellow Slovaks, that it is we, the descendents of the first peoples, who are the true Aryans!'"
@@ -96,13 +96,17 @@
  slovakia.21.a:0 "We will carry on his legacy."
  slovakia.21.b:0 "Rest in Piss, Fascist."
  
- slovakia.22.t:0 "Dinner Time"
+ slovakia.22.title:0 "Dinner Time"
  slovakia.22.desc:0 "It was a normal Bratislava night for the Holičes. They were eating dinner together in the dining room, when all of a sudden, their son, Tomáš, had something to announce.\n\n'Mama, Papa, look what we learnt in school today'. Tomáš pulled a Balaclava out of his pocket, before donning it at the table. 'Death to the Hungarians, glory to Mountain General! Don't I look Mountaineer as fuck? I got that Slovak-Záhorie ethnicity in me.'\n'That's great sweetie' Helena responded, refraining from looking up from her plate. Her husband, Petr, was not so reserved.\n\n'Take that fucking mask off NOW!' he bellowed. Tomáš was taken back. 'NOW!' His fist slammed the table in rage. Tomáš took off the Balaclava, whimpering like a scared dog.\n'You can play dictator at school all you like, but in this household, I will NOT tolerate that bastard!'"
  slovakia.22.a:0 "The only thing you could hear after that was the chewing of food."
 
- slovakia.23.t:0 "3AM"
+ slovakia.23.title:0 "3AM"
  slovakia.23.desc:0 "It was another sleepless night for Helena. Although the incident was over a week ago, you always had to show a little bit of caution, which was something Petr had not done.\n'It's fine', she thought to herself, 'no-one cares.'\n\nKNOCK KNOCK\n\nShe woke up Petr, and together they ventured down the stairs, before opening the door. It was a man from the Mountain General Guards.\n'Mr and Mrs Holič, you are under arrest for anti-[SLO.GetLeader] behaviour.'\n\nPetr was drunk as usual. He didn't seem to mind, let alone know, about the gravity of the situation. Helena was the opposite. She knew full well what was to happen, yet know there was nothing she could do about it. Then, down the stairs, came Tomáš.\n'Oh Tomáš, please go back upstairs' Helena pleaded, but it was no use. Tomáš walked to the door and looked down Helena in the eyes.\n\n'Death to the Hungarians, glory to Mountain General!'"
  slovakia.23.a:0 "Knowing he was no longer her son, she accepted whatever came next."
+ 
+ slovakia.24.title:0 "The Slovak Army"
+ slovakia.24.desc:0 "The Slovak army is in a bit of a sorry state. As the lesser of two supposed equals, we were always second in line, but no more! Under Mountain General, our army will be modernised, expanded, and we will become one of the most feared armies in Europe!"
+ slovakia.24.a:0 "Let's get to work"
  
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to diktat terms of surrender to the once proud Prague government. For the first time ever, Slovakia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."

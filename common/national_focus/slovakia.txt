@@ -326,9 +326,305 @@ focus_tree = {
 	}
 	
 	focus = {	
+		id = SLO_the_slovak_armed_forces
+		icon = GFX_goal_SLO_the_slovak_army
+		x = 23
+		y = 0
+		cost = 1
+		
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			country_event = { id = slovakia.24 hours = 4 }
+		}
+	}
+	
+	focus = {	
+		id = SLO_an_army_of_scale
+		icon = GFX_goal_SLO_large_army
+		x = -10
+		y = 1
+		cost = 5
+		relative_position_id = SLO_the_slovak_armed_forces
+		
+		mutually_exclusive = { focus = SLO_spartan_professionalism focus = SLO_a_war_of_intellect }
+		
+		prerequisite = { focus = SLO_the_slovak_armed_forces }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	
+		id = SLO_spartan_professionalism
+		icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = SLO_the_slovak_armed_forces
+		
+		mutually_exclusive = { focus = SLO_an_army_of_scale focus = SLO_a_war_of_intellect }
+		
+		prerequisite = { focus = SLO_the_slovak_armed_forces }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	
+		id = SLO_a_war_of_intellect
+		icon = GFX_focus_generic_university_3
+		x = 10
+		y = 1
+		cost = 5
+		relative_position_id = SLO_the_slovak_armed_forces
+		
+		mutually_exclusive = { focus = SLO_an_army_of_scale focus = SLO_spartan_professionalism }
+		
+		prerequisite = { focus = SLO_the_slovak_armed_forces }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	
+		id = SLO_the_slovak_air_force
+		icon = GFX_goal_SLO_air_force2
+		x = 16
+		y = 1
+		cost = 5
+		relative_position_id = SLO_the_slovak_armed_forces
+		
+		prerequisite = { focus = SLO_the_slovak_armed_forces }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+	
+	focus = {	
+		id = SLO_cutting_edge_designs
+		icon = GFX_focus_generic_air_research_boost
+		x = 4
+		y = 1
+		cost = 10
+		relative_position_id = SLO_the_slovak_air_force
+		
+		prerequisite = { focus = SLO_the_slovak_air_force }
+		
+		mutually_exclusive = { focus = SLO_the_cult_of_the_ace }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			if = {
+				limit = {
+					71 = {
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+				}
+				71 = {
+					add_building_construction = {
+						type = air_facility
+						level = 1
+						instant_build = yes
+						province = 3581
+					}
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					ahead_reduction = 2.0
+					uses = 1
+					category = air_equipment
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_air_force_dm_air_manpower_requirement_factor = 0.20 }
+			
+			custom_effect_tooltip = SLO_cutting_edge_designs_tt
+				
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_the_cult_of_the_ace
+		icon = GFX_focus_SOV_flying_clubs
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = SLO_the_slovak_air_force
+		
+		prerequisite = { focus = SLO_the_slovak_air_force }
+		
+		mutually_exclusive = { focus = SLO_cutting_edge_designs }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_air_force_dm_air_ace_generation_chance_factor = 0.25 }
+			add_to_variable = { SLO_air_force_dm_ace_effectiveness_factor = 0.30 }
+			add_to_variable = { SLO_air_force_dm_air_agility_factor = 0.08 }
+			
+			custom_effect_tooltip = SLO_the_cult_of_the_ace_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			air_experience = 50
+		}
+	}
+	
+	focus = {	
+		id = SLO_tough_training_programs
+		icon = GFX_
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = SLO_the_cult_of_the_ace
+		
+		prerequisite = { focus = SLO_the_cult_of_the_ace }
+		
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_air_force_dm_air_attack_factor = 0.08 }
+			add_to_variable = { SLO_air_force_dm_air_agility_factor = 0.08 }
+			add_to_variable = { SLO_air_force_dm_air_defence_factor_factor = 0.08 }
+			add_to_variable = { SLO_air_force_dm_air_accidents_factor = -0.25 }
+			
+			custom_effect_tooltip = SLO_tough_training_programs_tt
+		}
+	}
+	
+	focus = {	
+		id = SLO_air_parity
+		icon = GFX_
+		x = 0
+		y = 1
+		cost = 6
+		relative_position_id = SLO_the_slovak_air_force
+		
+		prerequisite = { focus = SLO_the_slovak_air_force }
+		
+		mutually_exclusive = { focus = SLO_aerial_dominance }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_air_force_dm_air_intercept_efficiency = 0.10 }
+			add_to_variable = { SLO_air_force_dm_air_attack_factor = 0.10 }
+			
+			custom_effect_tooltip = SLO_air_parity_tt
+			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = cat_anti_air
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_aerial_dominance
+		icon = GFX_
+		x = -2
+		y = 1
+		cost = 6
+		relative_position_id = SLO_the_slovak_air_force
+		
+		prerequisite = { focus = SLO_the_slovak_air_force }
+		
+		mutually_exclusive = { focus = SLO_air_parity }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_air_force_dm_air_defence_factor = 0.15 }
+			
+			custom_effect_tooltip = SLO_aerial_dominance_tt
+			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = air_equipment
+			}
+		}
+	}
+	
+	focus = {	
 		id = SLO_a_based_slovakia
 		icon = GFX_goal_support_fascism
-		x = 20
+		x = 70
 		y = 0
 		cost = 2
 		
@@ -364,7 +660,7 @@ focus_tree = {
 	
 	focus = {
 		id = SLO_slovak_autarky
-		icon = GFX_
+		icon = GER_autarky_efforts
 		x = -7
 		y = 1
 		relative_position_id = SLO_a_based_slovakia
@@ -382,7 +678,7 @@ focus_tree = {
 				remove_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
 				add_dynamic_modifier = { modifier = SLO_autarkic_economy_dyanamic_modifier }
 			}
-			add_political_power = 50
+			add_political_power = 25
 			add_to_variable = { SLO_economy_dm_political_power_cost = -0.10 }
 			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.10 }
 			custom_effect_tooltip = SLO_slovak_autarky_tt
@@ -888,6 +1184,8 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_political_power = 25
+			
 			add_country_leader_trait = mgs_cult_of_personality_1
 		}
 	}
@@ -1096,6 +1394,8 @@ focus_tree = {
 				value = 0.20
 			}
 			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			if = {
 				limit = { has_country_leader_with_trait = mgs_cult_of_personality_3_left }
 				swap_ruler_traits = {
@@ -1114,7 +1414,7 @@ focus_tree = {
 	
 	focus = {
 		id = SLO_impeccable_philosopher
-		icon = GFX_SLO_impeccable_philosopher
+		icon = GFX_goal_SLO_impeccable_philosopher
 		x = -2
 		y = 1
 		relative_position_id = SLO_great_statesman
@@ -1153,7 +1453,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_strong_leader_strong_slovakia
 		icon = GFX_
-		x = 30
+		x = 80
 		y = 0
 		cost = 2
 		
@@ -1181,7 +1481,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_a_democracy_if_you_can_keep_it
 		icon = GFX_
-		x = 40
+		x = 90
 		y = 0
 		cost = 2
 		
@@ -1204,7 +1504,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_a_shining_city_for_all_to_see
 		icon = GFX_
-		x = 50
+		x = 100
 		y = 0
 		cost = 2
 		
@@ -1233,7 +1533,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_the_workers_paradise
 		icon = GFX_
-		x = 60
+		x = 110
 		y = 0
 		cost = 2
 		
@@ -1271,7 +1571,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_the_black_spot_of_europe
 		icon = GFX_
-		x = 70
+		x = 120
 		y = 0
 		cost = 2
 		
@@ -1308,7 +1608,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_socialism_above_all
 		icon = GFX_
-		x = 80
+		x = 130
 		y = 0
 		cost = 2
 		
@@ -1345,8 +1645,8 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_keynesian_economics
-		icon = GFX_SLO_keynesian_economics
-		x = 12
+		icon = GFX_goal_SLO_keynesian_economics
+		x = 82
 		y = 8
 		cost = 5
 		
@@ -1372,8 +1672,8 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_the_austrian_school_of_economics
-		icon = GFX_SLO_the_austrian_school_of_economics
-		x = 18
+		icon = GFX_goal_SLO_the_austrian_school_of_economics
+		x = 88
 		y = 8
 		cost = 5
 		

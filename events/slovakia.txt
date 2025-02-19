@@ -70,9 +70,14 @@ country_event = {
 			}
 		}
 		
-		set_division_template_lock = {
+#		set_division_template_lock = {
+#			division_template = "Milície"
+#			is_locked = no
+#		}
+
+		delete_units = {
 			division_template = "Milície"
-			is_locked = no
+			disband = no	#We don't get their manpower of equipment
 		}
 		
 		hidden_effect = { 
@@ -819,7 +824,7 @@ country_event = {
 #I look mountaineer as fuck
 country_event = {
 	id = slovakia.22
-	title = slovakia.22.t
+	title = slovakia.22.title
 	desc = slovakia.22.desc
 	is_triggered_only = yes
 	
@@ -839,7 +844,7 @@ country_event = {
 #Kill those who dissent
 country_event = {
 	id = slovakia.23
-	title = slovakia.23.t
+	title = slovakia.23.title
 	desc = slovakia.23.desc
 	is_triggered_only = yes
 
@@ -852,12 +857,31 @@ country_event = {
 	}
 }
 
+#Slovak Army intro event
+country_event = {
+	id = slovakia.24
+	title = slovakia.24.title
+	desc = slovakia.24.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_SLO_military_service
 
-add_namespace = slovakia_propaganda
+	option = { 
+		name = slovakia.24.a
+		ai_chance = {
+			base = 10
+		}
+		
+		add_political_power = 25
+	}
+}
+
+
+add_namespace = slovakia_hidden
 
 #Update gfxs
 country_event = {
-	id = slovakia_propaganda.1
+	id = slovakia_hidden.1
 	hidden = yes
 	
 	is_triggered_only = yes

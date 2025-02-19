@@ -58,7 +58,7 @@ ideas = {
 				conscription = 0.02
 				army_org_factor = 0.04
 				land_reinforce_rate = 0.03
-				political_power_gain = 0.15
+				political_power_gain = 0.20
 			}
 			targeted_modifier = {
 				tag = CZE
@@ -85,13 +85,9 @@ ideas = {
 				coordination_bonus = 0.05
 				army_org_factor = 0.05
 				land_reinforce_rate = 0.02
-				
-				#Do better on non-core territory
-				custom_modifier_tooltip = SLO_battle_of_brno_idea_tt
-				hidden_modifier={
-					army_attack_factor = 0.22			#1.22 * 0.9 = 1.098, which is about what we want
-					army_core_attack_factor = -0.10
-				}
+				army_armor_attack_factor = 0.10
+				army_armor_defence_factor = 0.05
+				army_attack_factor = 0.06
 			}
 		}
 		
@@ -129,7 +125,7 @@ ideas = {
 			}
 			
 			modifier = {
-				neutrality_drift = -0.01
+				neutrality_drift = -0.03
 				political_power_cost = 0.14
 				stability_factor = -0.05
 			}

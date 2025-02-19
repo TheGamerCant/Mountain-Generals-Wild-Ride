@@ -130,6 +130,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.37
 		efficiency = 100
+		industrial_manufacturer = mio:SLO_zbrojovka_brno_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -139,6 +140,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.69
 		efficiency = 100
+		industrial_manufacturer = mio:SLO_dynamit_nobel_bratislava
 	}
 	add_equipment_production = {
 		equipment = {

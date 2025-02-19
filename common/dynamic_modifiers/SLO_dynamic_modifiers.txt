@@ -87,4 +87,10 @@ SLO_air_force_dynamic_modifier = {
 	air_ace_generation_chance_factor  = SLO_air_force_dm_air_ace_generation_chance_factor
 	air_manpower_requirement_factor = SLO_air_force_dm_air_manpower_requirement_factor
 	air_range_factor = SLO_air_force_dm_air_range_factor
+	ace_effectiveness_factor = SLO_air_force_dm_ace_effectiveness_factor
+	air_agility_factor = SLO_air_force_dm_air_agility_factor
+	air_intercept_efficiency = SLO_air_force_dm_air_intercept_efficiency 
+	air_attack_factor = SLO_air_force_dm_air_attack_factor
+	air_doctrine_cost_factor = SLO_air_force_dm_air_doctrine_cost_factor
+	air_defence_factor = SLO_air_force_dm_air_defence_factor
 }

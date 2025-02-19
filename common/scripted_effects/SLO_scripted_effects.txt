@@ -35,8 +35,8 @@ SLO_start_propaganda_campaign = {
 				set_variable = { SLO.propaganda_slot_frame_array^i = 3 }
 				set_variable = { SLO.propaganda_campaign_dates^i = global.num_days }
 				
-				country_event = { id = slovakia_propaganda.1 days = var:SLO.propaganda_days_until_first_change }
-				country_event = { id = slovakia_propaganda.1 days = var:SLO.propaganda_days_until_second_change }
+				country_event = { id = slovakia_hidden.1 days = var:SLO.propaganda_days_until_first_change }
+				country_event = { id = slovakia_hidden.1 days = var:SLO.propaganda_days_until_second_change }
 				
 				set_temp_variable = { break = 1 }		#End the loop
 			}

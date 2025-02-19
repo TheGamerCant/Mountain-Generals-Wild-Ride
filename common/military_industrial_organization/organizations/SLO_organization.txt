@@ -1,0 +1,74 @@
+SLO_zbrojovka_brno_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_CZE_zbrojovka_brno
+	allowed = { 
+		tag = SLO
+	}
+}
+
+SLO_skoda_artillery_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_CZE_skoda_artillery
+	allowed = { 
+		tag = SLO
+	}
+}
+
+SLO_skoda_shipyards_organization = {
+	include = generic_escort_ship_organization
+	icon = GFX_idea_CZE_skoda_shipyards
+	allowed = { 
+		tag = SLO
+	}
+}
+
+SLO_dynamit_nobel_bratislava = {
+	include = generic_support_equipment_organization
+	icon = GFX_idea_SLO_dynamit_nobel_bratislava
+	allowed = {	
+		original_tag = SLO 
+	}
+}
+
+SLO_tatra_organization = {
+	include = generic_medium_tank_organization
+	icon = GFX_idea_CZE_tatra
+	allowed = { 
+		tag = SLO
+	}
+}
+
+SLO_skoda_armor_organization = {
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_CZE_skoda_armor
+	
+	allowed = {	
+		tag = SLO
+	}
+}
+
+SLO_letecke_opravovne_trenchin = {
+	include = generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_SLO_letecke_opravovne_trenchin
+	
+	allowed = {	
+		original_tag = SLO
+	}
+}
+
+SLO_letov_organization = {
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_CZE_letov
+	allowed = { 
+		tag = SLO
+	}
+}
+
+SLO_avia_organization = {
+name = CZE_avia
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_CZE_avia
+	allowed = { 
+		original_tag = SLO
+	}
+}

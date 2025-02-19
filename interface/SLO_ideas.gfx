@@ -1,5 +1,9 @@
 spriteTypes = {
 	SpriteType = {
+		name = "GFX_idea_SLO_dynamit_nobel_bratislava"
+		texturefile = "gfx/interface/ideas/SLO_dynamit_nobel_bratislava.dds"
+	}
+	SpriteType = {
 		name = "GFX_idea_SLO_generic_air_force"
 		texturefile = "gfx/interface/ideas/SLO_generic_air_force.dds"
 	}
@@ -14,6 +18,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_SLO_hlinkla_guard"
 		texturefile = "gfx/interface/ideas/SLO_hlinkla_guard.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SLO_letecke_opravovne_trenchin"
+		texturefile = "gfx/interface/ideas/SLO_letecke_opravovne_trenchin.dds"
 	}
 	SpriteType = {
 		name = "GFX_idea_SLO_unclear_ideology_idea"

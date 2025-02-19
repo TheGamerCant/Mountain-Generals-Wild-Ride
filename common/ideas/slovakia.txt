@@ -54,10 +54,11 @@ ideas = {
 			
 			modifier = {
 				war_support_factor = 0.1
-				war_stability_factor = 0.30
+				war_stability_factor = 0.35
 				conscription = 0.02
 				army_org_factor = 0.04
 				land_reinforce_rate = 0.03
+				political_power_gain = 0.15
 			}
 			targeted_modifier = {
 				tag = CZE

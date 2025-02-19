@@ -363,6 +363,456 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = SLO_slovak_autarky
+		icon = GFX_
+		x = -7
+		y = 1
+		relative_position_id = SLO_a_based_slovakia
+		cost = 6
+		prerequisite = {
+			focus = SLO_a_based_slovakia
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			hidden_effect = { 
+				remove_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
+				add_dynamic_modifier = { modifier = SLO_autarkic_economy_dyanamic_modifier }
+			}
+			add_political_power = 50
+			add_to_variable = { SLO_economy_dm_political_power_cost = -0.10 }
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.10 }
+			custom_effect_tooltip = SLO_slovak_autarky_tt
+		}
+	}
+	
+	focus = {
+		id = SLO_blood_and_iron
+		icon = GFX_
+		x = -4
+		y = 1
+		relative_position_id = SLO_slovak_autarky
+		cost = 10
+		prerequisite = {
+			focus = SLO_slovak_autarky
+		}
+		mutually_exclusive = { focus = SLO_guns_and_butter focus = SLO_bread_and_circuses }
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_new_procurement_contracts
+		icon = GFX_goal_SLO_new_procurement_contracts
+		x = -2
+		y = 1
+		relative_position_id = SLO_blood_and_iron
+		cost = 10
+		prerequisite = {
+			focus = SLO_blood_and_iron
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_production_speed_industrial_complex_factor = -0.05 }
+			add_to_variable = { SLO_economy_dm_production_speed_arms_factory_factor = 0.15 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.10 }
+			
+			custom_effect_tooltip = SLO_new_procurement_contracts_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			if = {
+				limit = { has_aat = yes }
+				
+				mio:SLO_zbrojovka_brno_organization = {
+					add_mio_size = 1
+				}
+				mio:SLO_dynamit_nobel_bratislava = {
+					add_mio_size = 1
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_tech_bonus = {
+					bonus = 0.75
+					uses = 1
+					category = infantry_weapons
+				}
+				add_tech_bonus = {
+					bonus = 0.75
+					uses = 1
+					category = support_tech
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+				}
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = support_tech
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_funding_to_skoda
+		icon = GFX_goal_SLO_funding_to_skoda
+		x = 0
+		y = 1
+		relative_position_id = SLO_blood_and_iron
+		cost = 10
+		prerequisite = {
+			focus = SLO_blood_and_iron
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_to_variable = { production_factory_efficiency_gain_factor = 0.15 }
+			add_to_variable = { production_factory_max_efficiency_factor = 0.10 }
+			add_to_variable = { SLO_economy_dm_production_speed_arms_factory_factor = 0.10 }
+			
+			custom_effect_tooltip = SLO_funding_to_skoda_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			if = {
+				limit = { has_aat = yes }
+				
+				mio:SLO_skoda_artillery_organization = {
+					add_mio_size = 1
+				}
+				mio:SLO_skoda_shipyards_organization = {
+					add_mio_size = 1
+				}
+				mio:SLO_skoda_armor_organization = {
+					add_mio_size = 1
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_tech_bonus = {
+					bonus = 0.75
+					uses = 1
+					category = artillery
+				}
+				add_tech_bonus = {
+					bonus = 0.75
+					uses = 1
+					category = armor
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = artillery
+				}
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = armor
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_military_r_and_d
+		icon = GFX_focus_research
+		x = 1
+		y = 2
+		relative_position_id = SLO_blood_and_iron
+		cost = 10
+		prerequisite = {
+			focus = SLO_blood_and_iron
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = SLO_focus_on_military_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = SLO_new_procurement_contracts
+		cost = 8
+		prerequisite = {
+			focus = SLO_new_procurement_contracts
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					infrastructure < 4
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				random_select_amount = 2
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_production_speed_infrastructure_factor = 0.1 }
+			add_to_variable = { SLO_economy_dm_production_speed_supply_node_factor = 0.25 }
+			add_to_variable = { SLO_economy_dm_production_speed_rail_way_factor = 0.25 }
+			
+			add_to_variable = { SLO_army_dm_army_speed_factor = 0.05 }
+			
+			custom_effect_tooltip = SLO_focus_on_military_infrastructure_tt
+		}
+	}
+	
+	focus = {
+		id = SLO_guns_and_butter
+		icon = GFX_
+		x = 0
+		y = 1
+		relative_position_id = SLO_slovak_autarky
+		cost = 10
+		prerequisite = {
+			focus = SLO_slovak_autarky
+		}
+		
+		mutually_exclusive = { focus = SLO_blood_and_iron focus = SLO_bread_and_circuses }
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			if = {
+				limit = { check_variable = { num_owned_states > 1 } }
+				every_core_state = {
+					limit = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					random_select_amount = 2
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				every_core_state = {
+					limit = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					random_select_amount = 1
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				every_core_state = {
+					limit = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					random_select_amount = 1
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_bread_and_circuses
+		icon = GFX_
+		x = 4
+		y = 1
+		relative_position_id = SLO_slovak_autarky
+		cost = 10
+		prerequisite = {
+			focus = SLO_slovak_autarky
+		}
+
+		available = {
+		}
+		
+		mutually_exclusive = { focus = SLO_guns_and_butter focus = SLO_blood_and_iron }
+		
+
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
 		id = SLO_denounce_hungary
 		icon = GFX_goal_generic_propaganda
 		x = 1
@@ -609,7 +1059,7 @@ focus_tree = {
 	
 	focus = {
 		id = SLO_brilliant_genius
-		icon = GFX_
+		icon = GFX_focus_generic_university_3
 		x = 0
 		y = 1
 		relative_position_id = SLO_great_statesman

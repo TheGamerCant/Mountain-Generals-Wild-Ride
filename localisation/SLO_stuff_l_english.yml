@@ -1,2 +1,14 @@
 ﻿l_english:
+#Opinion Modifiers
  SLO_anti_hungarian_campaigns:0 "Anti Hungarian Campaigns"
+ 
+#MIOs
+ SLO_zbrojovka_brno_organization:0 "$CZE_zbrojovka_brno_organization$"
+ SLO_skoda_artillery_organization:0 "$CZE_skoda_artillery_organization$"
+ SLO_skoda_shipyards_organization:0 "$CZE_skoda_shipyards_organization$"
+ SLO_tatra_organization:0 "$CZE_tatra_organization$"
+ SLO_skoda_armor_organization:0 "$CZE_skoda_armor_organization$"
+ SLO_letov_organization:0 "$CZE_letov_organization$"
+ SLO_avia_organization:0 "$CZE_avia_organization$"
+ SLO_letecke_opravovne_trenchin:0 "Letecké Opravovne Trenčín"
+ SLO_dynamit_nobel_bratislava:0 "Dynamit Nobel Bratislava"

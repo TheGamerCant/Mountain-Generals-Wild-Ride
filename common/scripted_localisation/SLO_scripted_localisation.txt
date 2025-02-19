@@ -23,3 +23,23 @@ defined_text = {
 		localization_key = SLO_name_of_active_campaign
 	}
 }
+
+defined_text = {
+	name = GetEconomyDMName
+	text = {
+		trigger = {
+			OR = {
+				has_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
+				has_dynamic_modifier = { modifier = SLO_keynsian_economy_dynamic_modifier }
+				has_dynamic_modifier = { modifier = SLO_austrian_economy_dynamic_modifier }
+			}
+		}
+		localization_key = "SLO_initial_economy_dynamic_modifier"
+	}
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = SLO_autarkic_economy_dyanamic_modifier }
+		}
+		localization_key = "SLO_autarkic_economy_dyanamic_modifier"
+	}
+}

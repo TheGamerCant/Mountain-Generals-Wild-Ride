@@ -519,6 +519,10 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = { add_ideas = SLO_rigorous_testing_idea }
+			
+			add_to_variable = { SLO_air_force_dm_air_defence_factor_factor = 0.12 }
+			add_to_variable = { SLO_air_force_dm_air_accidents_factor = -0.30 }
+			
 			custom_effect_tooltip = SLO_rigorous_testing_tt
 		}
 	}

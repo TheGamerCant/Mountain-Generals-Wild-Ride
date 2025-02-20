@@ -439,7 +439,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_cutting_edge_designs
 		icon = GFX_focus_generic_air_research_boost
-		x = 4
+		x = 3
 		y = 1
 		cost = 10
 		relative_position_id = SLO_the_slovak_air_force
@@ -476,6 +476,7 @@ focus_tree = {
 			}
 			else = {
 				add_tech_bonus = {
+					name = SLO_cutting_edge_designs
 					ahead_reduction = 2.0
 					uses = 1
 					category = air_equipment
@@ -489,6 +490,7 @@ focus_tree = {
 			custom_effect_tooltip = SLO_cutting_edge_designs_tt
 				
 			add_tech_bonus = {
+				name = SLO_cutting_edge_designs
 				bonus = 0.5
 				uses = 2
 				category = air_equipment
@@ -497,9 +499,34 @@ focus_tree = {
 	}
 	
 	focus = {	
+		id = SLO_rigorous_testing
+		icon = GFX_
+		x = 0
+		y = 4
+		cost = 10
+		relative_position_id = SLO_cutting_edge_designs
+		
+		prerequisite = { focus = SLO_cutting_edge_designs }
+		
+		mutually_exclusive = { focus = SLO_quantity_as_a_quality_of_its_own focus = SLO_strategic_bombing }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			hidden_effect = { add_ideas = SLO_rigorous_testing_idea }
+			custom_effect_tooltip = SLO_rigorous_testing_tt
+		}
+	}
+	
+	focus = {	
 		id = SLO_the_cult_of_the_ace
 		icon = GFX_focus_SOV_flying_clubs
-		x = 2
+		x = 1
 		y = 1
 		cost = 10
 		relative_position_id = SLO_the_slovak_air_force
@@ -532,7 +559,7 @@ focus_tree = {
 		id = SLO_tough_training_programs
 		icon = GFX_
 		x = 0
-		y = 1
+		y = 2
 		cost = 10
 		relative_position_id = SLO_the_cult_of_the_ace
 		
@@ -551,6 +578,7 @@ focus_tree = {
 			add_to_variable = { SLO_air_force_dm_air_agility_factor = 0.08 }
 			add_to_variable = { SLO_air_force_dm_air_defence_factor_factor = 0.08 }
 			add_to_variable = { SLO_air_force_dm_air_accidents_factor = -0.25 }
+			add_to_variable = { SLO_air_force_dm_air_mission_xp_gain_factor = 0.15 }
 			
 			custom_effect_tooltip = SLO_tough_training_programs_tt
 		}
@@ -559,9 +587,9 @@ focus_tree = {
 	focus = {	
 		id = SLO_air_parity
 		icon = GFX_
-		x = 0
+		x = -1
 		y = 1
-		cost = 6
+		cost = 5
 		relative_position_id = SLO_the_slovak_air_force
 		
 		prerequisite = { focus = SLO_the_slovak_air_force }
@@ -578,10 +606,12 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SLO_air_force_dm_air_intercept_efficiency = 0.10 }
 			add_to_variable = { SLO_air_force_dm_air_attack_factor = 0.10 }
+			add_to_variable = { SLO_air_force_dm_static_anti_air_hit_chance_factor = 0.10 }
 			
 			custom_effect_tooltip = SLO_air_parity_tt
 			
 			add_tech_bonus = {
+				name = SLO_air_parity
 				bonus = 1.0
 				uses = 1
 				category = cat_anti_air
@@ -590,11 +620,77 @@ focus_tree = {
 	}
 	
 	focus = {	
+		id = SLO_mobile_anti_air
+		icon = GFX_
+		x = 0
+		y = 2
+		cost = 5
+		relative_position_id = SLO_air_parity
+		
+		prerequisite = { focus = SLO_air_parity }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			hidden_effect = { add_ideas = SLO_mobile_anti_air_idea }
+			custom_effect_tooltip = SLO_mobile_anti_air_tt
+			
+			if = {
+				limit = { has_tech = antiair2 }
+				add_tech_bonus = {
+					name = SLO_mobile_anti_air
+					ahead_reduction = 2.0
+					uses = 1
+					technology = antiair5
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = SLO_mobile_anti_air
+					ahead_reduction = 2.0
+					uses = 1
+					technology = antiair2
+				}
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_quantity_as_a_quality_of_its_own
+		icon = GFX_
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = SLO_mobile_anti_air
+		
+		mutually_exclusive = { focus = SLO_rigorous_testing focus = SLO_strategic_bombing }
+		
+		prerequisite = { focus = SLO_mobile_anti_air }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			hidden_effect = { add_ideas = SLO_quantity_as_a_quality_of_its_own_idea }
+			custom_effect_tooltip = SLO_quantity_as_a_quality_of_its_own_tt
+		}
+	}
+	
+	focus = {	
 		id = SLO_aerial_dominance
 		icon = GFX_
-		x = -2
+		x = -3
 		y = 1
-		cost = 6
+		cost = 10
 		relative_position_id = SLO_the_slovak_air_force
 		
 		prerequisite = { focus = SLO_the_slovak_air_force }
@@ -614,9 +710,75 @@ focus_tree = {
 			custom_effect_tooltip = SLO_aerial_dominance_tt
 			
 			add_tech_bonus = {
+				name = SLO_aerial_dominance
 				bonus = 1.0
 				uses = 1
 				category = air_equipment
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_long_range_missions
+		icon = GFX_
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = SLO_aerial_dominance
+		
+		prerequisite = { focus = SLO_aerial_dominance }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_air_force_dm_air_escort_efficiency = 0.15 }
+			add_to_variable = { SLO_air_force_dm_air_range_factor = 0.20 }
+			
+			custom_effect_tooltip = SLO_long_range_missions_tt
+		}
+	}
+	
+	focus = {	
+		id = SLO_strategic_bombing
+		icon = GFX_
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = SLO_long_range_missions
+		
+		prerequisite = { focus = SLO_long_range_missions }
+		
+		mutually_exclusive = { focus = SLO_rigorous_testing focus = SLO_quantity_as_a_quality_of_its_own }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.50
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_air_force_dm_air_strategic_bomber_bombing_factor = 0.18 }
+			
+			custom_effect_tooltip = SLO_strategic_bombing_tt
+			
+			add_tech_bonus = {
+				name = SLO_strategic_bombing
+				bonus = 2
+				uses = 1
+				category = cat_strategic_bomber
 			}
 		}
 	}
@@ -796,11 +958,13 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				
 				add_tech_bonus = {
+					name = SLO_new_procurement_contracts
 					bonus = 0.75
 					uses = 1
 					category = infantry_weapons
 				}
 				add_tech_bonus = {
+					name = SLO_new_procurement_contracts
 					bonus = 0.75
 					uses = 1
 					category = support_tech
@@ -808,11 +972,13 @@ focus_tree = {
 			}
 			else = {
 				add_tech_bonus = {
+					name = SLO_new_procurement_contracts
 					bonus = 1.0
 					uses = 1
 					category = infantry_weapons
 				}
 				add_tech_bonus = {
+					name = SLO_new_procurement_contracts
 					bonus = 1.0
 					uses = 1
 					category = support_tech
@@ -881,11 +1047,13 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				
 				add_tech_bonus = {
+					name = GFX_goal_SLO_funding_to_skoda
 					bonus = 0.75
 					uses = 1
 					category = artillery
 				}
 				add_tech_bonus = {
+					name = GFX_goal_SLO_funding_to_skoda
 					bonus = 0.75
 					uses = 1
 					category = armor
@@ -893,11 +1061,13 @@ focus_tree = {
 			}
 			else = {
 				add_tech_bonus = {
+					name = GFX_goal_SLO_funding_to_skoda
 					bonus = 1.0
 					uses = 1
 					category = artillery
 				}
 				add_tech_bonus = {
+					name = GFX_goal_SLO_funding_to_skoda
 					bonus = 1.0
 					uses = 1
 					category = armor

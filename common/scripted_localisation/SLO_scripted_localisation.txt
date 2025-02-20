@@ -43,3 +43,42 @@ defined_text = {
 		localization_key = "SLO_autarkic_economy_dyanamic_modifier"
 	}
 }
+
+defined_text = {
+	name = GetAirDynamicModifierTT
+	text = {
+		trigger = {
+			has_completed_focus = SLO_mobile_anti_air
+			NOT = { has_completed_focus = SLO_quantity_as_a_quality_of_its_own }
+			NOT = { has_completed_focus = SLO_rigorous_testing }
+		}
+		localization_key = "SLO_slovak_airforce_custom_tt_1"
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SLO_mobile_anti_air
+			has_completed_focus = SLO_quantity_as_a_quality_of_its_own
+			NOT = { has_completed_focus = SLO_rigorous_testing }
+		}
+		localization_key = "SLO_slovak_airforce_custom_tt_2"
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SLO_mobile_anti_air
+			NOT = { has_completed_focus = SLO_quantity_as_a_quality_of_its_own }
+			has_completed_focus = SLO_rigorous_testing
+		}
+		localization_key = "SLO_slovak_airforce_custom_tt_3"
+	}
+	text = {
+		trigger = {
+			NOT = { has_completed_focus = SLO_mobile_anti_air }
+			NOT = { has_completed_focus = SLO_quantity_as_a_quality_of_its_own }
+			has_completed_focus = SLO_rigorous_testing
+		}
+		localization_key = "SLO_slovak_airforce_custom_tt_4"
+	}
+	text = {
+		localization_key = ""
+	}
+}

@@ -17,6 +17,11 @@
  SLO_army_dynamic_modifier_desc:0 "The Slovak ground forces are currently in a state of disarray, being formed so quickly after the breakup of Czechoslovakia. But with Mountain General at the helm, there is no problem we cannot overcome!"  
  SLO_air_force_dynamic_modifier:0 "Slovenské Vzdušné Zbrane"
  SLO_air_force_dynamic_modifier_desc:0 "Our airforce is small and untested, serious reforms will be needed if we want to rival the great powers of Europe in the skies."
+ SLO_air_force_dynamic_modifier_tooltip:0 "[SLO.GetAirDynamicModifierTT]"
+ SLO_slovak_airforce_custom_tt_1:0 "§YTowed Anti-Air§!:\n    - £GFX_production_cost Production Cost: §G-10.00%§!\n\n"
+ SLO_slovak_airforce_custom_tt_2:0 "§YTowed Anti-Air§!:\n    - £GFX_production_cost Production Cost: §G-10.00%§!\n§YAll Aircraft Equipment§!:\n    - £GFX_production_cost Production Cost: §G-10.00%§!\n\n"
+ SLO_slovak_airforce_custom_tt_3:0 "§YTowed Anti-Air§!:\n    - £GFX_production_cost Production Cost: §G-10.00%§!\n§YAll Aircraft Equipment§!:\n    - £GFX_production_cost Production Cost: §R+5.00%§!\n    - Reliability: §G+15%§!\n\n"
+ SLO_slovak_airforce_custom_tt_4:0 "§YAll Aircraft Equipment§!:\n    - £GFX_production_cost Production Cost: §R+5.00%§!\n    - Reliability: §G+15%§!\n\n"
  
  SLO_DUMMY_economy_idea:0 "$SLO_initial_economy_dynamic_modifier$"
  SLO_DUMMY_economy_idea_desc:0 "$SLO_initial_economy_dynamic_modifier_desc$"

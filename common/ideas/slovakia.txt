@@ -1,4 +1,171 @@
 ideas = {
+	hidden_ideas = {
+		SLO_quantity_as_a_quality_of_its_own_idea = {
+			name = SLO_air_force_dynamic_modifier #Just in case it shows up anywhere
+			removal_cost = -1
+
+			picture = GFX_idea_SLO_generic_air_force
+				
+			allowed = {
+				original_tag = SLO
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+					
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_scout_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				large_plane_maritime_patrol_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		SLO_rigorous_testing_idea = {
+			name = SLO_air_force_dynamic_modifier #Just in case it shows up anywhere
+			removal_cost = -1
+
+			picture = GFX_idea_SLO_generic_air_force
+				
+			allowed = {
+				original_tag = SLO
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+					
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				medium_plane_scout_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				large_plane_maritime_patrol_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+			}
+		}
+		
+		SLO_mobile_anti_air_idea = {
+			name = SLO_air_force_dynamic_modifier #Just in case it shows up anywhere
+			removal_cost = -1
+
+			picture = GFX_idea_SLO_generic_air_force
+				
+			allowed = {
+				original_tag = SLO
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+					
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+	}
+	
 	country = {
 		SLO_DUMMY_economy_idea = {
 			removal_cost = -1

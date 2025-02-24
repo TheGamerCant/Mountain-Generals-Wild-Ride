@@ -355,6 +355,8 @@ set_variable = { SLO_air_force_dm_air_defence_factor = 0 }
 set_variable = { SLO_air_force_dm_air_mission_xp_gain_factor = 0 }
 set_variable = { SLO_air_force_dm_air_escort_efficiency = 0 }
 set_variable = { SLO_air_force_dm_static_anti_air_hit_chance_factor = 0 }
+set_variable = { SLO_air_force_dm_cas_damage_reduction = 0 }
+set_variable = { SLO_air_force_dm_conscription = 0 }
 
 
 add_ideas = {

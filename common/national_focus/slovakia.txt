@@ -499,16 +499,85 @@ focus_tree = {
 	}
 	
 	focus = {	
-		id = SLO_rigorous_testing
-		icon = GFX_
+		id = SLO_strengthen_the_aeronautical_industry
+		icon = GFX_goal_SLO_airforce
 		x = 0
-		y = 4
+		y = 2
 		cost = 10
 		relative_position_id = SLO_cutting_edge_designs
 		
 		prerequisite = { focus = SLO_cutting_edge_designs }
+
+		available = {
+		}
 		
-		mutually_exclusive = { focus = SLO_quantity_as_a_quality_of_its_own focus = SLO_strategic_bombing }
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			if = {
+				limit = { has_aat = yes }
+				mio:SLO_letecke_opravovne_trenchin = {
+					add_mio_size = 1
+					add_mio_research_bonus = 0.05
+					add_mio_industrial_manufacturer_assign_cost = -0.1
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				mio:SLO_letov_organization = {
+					add_mio_size = 1
+					add_mio_research_bonus = 0.05
+					add_mio_industrial_manufacturer_assign_cost = -0.1
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				mio:SLO_avia_organization = {
+					add_mio_size = 1
+					add_mio_research_bonus = 0.05
+					add_mio_industrial_manufacturer_assign_cost = -0.1
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_tech_bonus = {
+					name = SLO_strengthen_the_aeronautical_industry
+					bonus = 0.5
+					uses = 1
+					category = air_equipment
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = SLO_strengthen_the_aeronautical_industry
+					bonus = 2.0
+					uses = 2
+					category = air_equipment
+				}
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_rigorous_testing
+		icon = GFX_
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = SLO_strengthen_the_aeronautical_industry
+		
+		prerequisite = { focus = SLO_strengthen_the_aeronautical_industry }
+		
+		mutually_exclusive = { focus = SLO_quantity_as_a_quality_of_its_own focus = SLO_strategic_bombing focus = SLO_kamikaze_pilots }
 
 		available = {
 		}
@@ -589,6 +658,45 @@ focus_tree = {
 	}
 	
 	focus = {	
+		id = SLO_kamikaze_pilots
+		icon = GFX_
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = SLO_tough_training_programs
+		
+		prerequisite = { focus = SLO_tough_training_programs }
+		
+		mutually_exclusive = { focus = SLO_quantity_as_a_quality_of_its_own focus = SLO_strategic_bombing focus = SLO_rigorous_testing }
+
+		available = {
+			OR = {
+				has_completed_focus = SLO_a_based_slovakia
+				has_completed_focus = SLO_the_black_spot_of_europe
+				has_completed_focus = SLO_socialism_above_all
+			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_war_support = 0.10
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			hidden_effect = {
+				set_rule = { can_use_kamikaze_pilots = yes }
+			}
+			custom_effect_tooltip = kamikaze_focus_tooltip
+			
+			add_to_variable = { SLO_air_force_dm_conscription = 0.005 }
+			custom_effect_tooltip = SLO_kamikaze_pilots_tt
+		}
+	}
+	
+	focus = {	
 		id = SLO_air_parity
 		icon = GFX_
 		x = -1
@@ -611,6 +719,7 @@ focus_tree = {
 			add_to_variable = { SLO_air_force_dm_air_intercept_efficiency = 0.10 }
 			add_to_variable = { SLO_air_force_dm_air_attack_factor = 0.10 }
 			add_to_variable = { SLO_air_force_dm_static_anti_air_hit_chance_factor = 0.10 }
+			add_to_variable = { SLO_air_force_dm_cas_damage_reduction = 0.05 }
 			
 			custom_effect_tooltip = SLO_air_parity_tt
 			
@@ -625,7 +734,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_mobile_anti_air
-		icon = GFX_
+		icon = GFX_focus_generic_air_defense
 		x = 0
 		y = 2
 		cost = 5
@@ -672,7 +781,7 @@ focus_tree = {
 		cost = 10
 		relative_position_id = SLO_mobile_anti_air
 		
-		mutually_exclusive = { focus = SLO_rigorous_testing focus = SLO_strategic_bombing }
+		mutually_exclusive = { focus = SLO_rigorous_testing focus = SLO_strategic_bombing focus = SLO_kamikaze_pilots }
 		
 		prerequisite = { focus = SLO_mobile_anti_air }
 
@@ -757,7 +866,7 @@ focus_tree = {
 		
 		prerequisite = { focus = SLO_long_range_missions }
 		
-		mutually_exclusive = { focus = SLO_rigorous_testing focus = SLO_quantity_as_a_quality_of_its_own }
+		mutually_exclusive = { focus = SLO_rigorous_testing focus = SLO_quantity_as_a_quality_of_its_own focus = SLO_kamikaze_pilots }
 
 		available = {
 		}
@@ -783,6 +892,45 @@ focus_tree = {
 				bonus = 2
 				uses = 1
 				category = cat_strategic_bomber
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_aircraft_factories
+		icon = GFX_focus_generic_aircraft_production
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = SLO_the_slovak_air_force
+		
+		prerequisite = { focus = SLO_air_parity focus = SLO_aerial_dominance }
+		prerequisite = { focus = SLO_the_cult_of_the_ace focus = SLO_cutting_edge_designs }
+
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}

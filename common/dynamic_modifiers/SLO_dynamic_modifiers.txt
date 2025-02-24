@@ -91,12 +91,14 @@ SLO_air_force_dynamic_modifier = {
 	air_agility_factor = SLO_air_force_dm_air_agility_factor
 	air_intercept_efficiency = SLO_air_force_dm_air_intercept_efficiency 
 	air_attack_factor = SLO_air_force_dm_air_attack_factor
-	air_doctrine_cost_factor = SLO_air_force_dm_air_doctrine_cost_factor
+#	air_doctrine_cost_factor = SLO_air_force_dm_air_doctrine_cost_factor
 	air_defence_factor = SLO_air_force_dm_air_defence_factor
 	air_mission_xp_gain_factor = SLO_air_force_dm_air_mission_xp_gain_factor
 	air_escort_efficiency = SLO_air_force_dm_air_escort_efficiency
 	air_strategic_bomber_bombing_factor = SLO_air_force_dm_air_strategic_bomber_bombing_factor
 	static_anti_air_hit_chance_factor = SLO_air_force_dm_static_anti_air_hit_chance_factor
+	cas_damage_reduction = SLO_air_force_dm_cas_damage_reduction
+	conscription = SLO_air_force_dm_conscription
 	
 	custom_modifier_tooltip = SLO_air_force_dynamic_modifier_tooltip
 }

@@ -16,6 +16,15 @@
  
  SLO_NAME_propaganda_you_dont_want_this_buy_war_bonds_idea:0 "You don't want this - buy war bonds!"
  SLO_GFX_propaganda_you_dont_want_this_buy_war_bonds_idea:0 "GFX_propaganda_SLO_you_dont_want_this_buy_war_bonds"
+ 
+ SLO_NAME_propaganda_these_are_the_actions_of_czechobolshevism_idea:0 "These are the actions of Czechobolshevism!"
+ SLO_GFX_propaganda_these_are_the_actions_of_czechobolshevism_idea:0 "GFX_propaganda_SLO_these_are_the_actions_of_czechobolshevism"
+ 
+ SLO_NAME_propaganda_we_build_our_home_with_our_own_strengh_idea:0 "We build our own home with our own strength"
+ SLO_GFX_propaganda_we_build_our_home_with_our_own_strengh_idea:0 "GFX_propaganda_SLO_we_build_our_home_with_our_own_strengh"
+ 
+ SLO_NAME_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea:0 "Real work and struggle for a greater slice of bread"
+ SLO_GFX_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea:0 "GFX_propaganda_SLO_real_work_and_struggle_for_a_greater_slice_of_bread"
 		
  
  
@@ -41,3 +50,9 @@
  SLO_propaganda_campaign_4_desc:0 ""
  SLO_propaganda_campaign_5:0 "[?SLO.propaganda_NAME_array^5.GetTokenLocalizedKey]"
  SLO_propaganda_campaign_5_desc:0 ""
+ SLO_propaganda_campaign_6:0 "[?SLO.propaganda_NAME_array^6.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_6_desc:0 ""
+ SLO_propaganda_campaign_7:0 "[?SLO.propaganda_NAME_array^7.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_7_desc:0 ""
+ SLO_propaganda_campaign_8:0 "[?SLO.propaganda_NAME_array^8.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_8_desc:0 ""

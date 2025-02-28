@@ -528,7 +528,6 @@ focus_tree = {
 				mio:SLO_letecke_opravovne_trenchin = {
 					add_mio_size = 1
 					add_mio_research_bonus = 0.05
-					add_mio_industrial_manufacturer_assign_cost = -0.1
 				}
 				
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -536,7 +535,6 @@ focus_tree = {
 				mio:SLO_letov_organization = {
 					add_mio_size = 1
 					add_mio_research_bonus = 0.05
-					add_mio_industrial_manufacturer_assign_cost = -0.1
 				}
 				
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -544,7 +542,6 @@ focus_tree = {
 				mio:SLO_avia_organization = {
 					add_mio_size = 1
 					add_mio_research_bonus = 0.05
-					add_mio_industrial_manufacturer_assign_cost = -0.1
 				}
 				
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -576,6 +573,7 @@ focus_tree = {
 		relative_position_id = SLO_strengthen_the_aeronautical_industry
 		
 		prerequisite = { focus = SLO_strengthen_the_aeronautical_industry }
+		prerequisite = { focus = SLO_death_from_above }
 		
 		mutually_exclusive = { focus = SLO_quantity_as_a_quality_of_its_own focus = SLO_strategic_bombing focus = SLO_kamikaze_pilots }
 
@@ -666,6 +664,7 @@ focus_tree = {
 		relative_position_id = SLO_tough_training_programs
 		
 		prerequisite = { focus = SLO_tough_training_programs }
+		prerequisite = { focus = SLO_death_from_above }
 		
 		mutually_exclusive = { focus = SLO_quantity_as_a_quality_of_its_own focus = SLO_strategic_bombing focus = SLO_rigorous_testing }
 
@@ -784,6 +783,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SLO_rigorous_testing focus = SLO_strategic_bombing focus = SLO_kamikaze_pilots }
 		
 		prerequisite = { focus = SLO_mobile_anti_air }
+		prerequisite = { focus = SLO_death_from_above }
 
 		available = {
 		}
@@ -865,6 +865,7 @@ focus_tree = {
 		relative_position_id = SLO_long_range_missions
 		
 		prerequisite = { focus = SLO_long_range_missions }
+		prerequisite = { focus = SLO_death_from_above }
 		
 		mutually_exclusive = { focus = SLO_rigorous_testing focus = SLO_quantity_as_a_quality_of_its_own focus = SLO_kamikaze_pilots }
 
@@ -932,9 +933,111 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			air_experience = 15
 		}
 	}
 	
+	focus = {	
+		id = SLO_open_new_pilot_schools
+		icon = GFX_
+		x = 2
+		y = 2
+		cost = 10
+		relative_position_id = SLO_the_slovak_air_force
+		
+		prerequisite = { focus = SLO_air_parity focus = SLO_aerial_dominance }
+		prerequisite = { focus = SLO_the_cult_of_the_ace focus = SLO_cutting_edge_designs }
+
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_air_force_dm_air_accidents_factor = -0.25 }
+			add_to_variable = { SLO_air_force_dm_air_mission_xp_gain_factor = 0.15 }
+		
+			custom_effect_tooltip = SLO_open_new_pilot_schools_tt
+		
+			air_experience = 75
+		}
+	}
+	
+	focus = {	
+		id = SLO_doctrinal_innovation
+		icon = GFX_
+		x = -2
+		y = 2
+		cost = 10
+		relative_position_id = SLO_the_slovak_air_force
+		
+		prerequisite = { focus = SLO_air_parity focus = SLO_aerial_dominance }
+		prerequisite = { focus = SLO_the_cult_of_the_ace focus = SLO_cutting_edge_designs }
+
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			air_experience = 25
+
+			add_doctrine_cost_reduction = {
+				name = SLO_doctrinal_innovation
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_death_from_above
+		icon = GFX_
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = SLO_aircraft_factories
+		
+		prerequisite = { focus = SLO_long_range_missions focus = SLO_mobile_anti_air }
+		prerequisite = { focus = SLO_tough_training_programs focus = SLO_strengthen_the_aeronautical_industry }
+		prerequisite = { focus = SLO_doctrinal_innovation }
+		prerequisite = { focus = SLO_aircraft_factories }
+		prerequisite = { focus = SLO_open_new_pilot_schools }
+
+
+		available = {
+			has_tech = improved_radio
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_air_force_dm_ground_attack_factor = 0.15 }
+			add_to_variable = { SLO_air_force_dm_air_range_factor = 0.03 }
+			
+			custom_effect_tooltip = SLO_death_from_above_tt
+			
+			add_doctrine_cost_reduction = {
+				name = SLO_death_from_above
+				cost_reduction = 0.40
+				uses = 1
+				category = battlefield_support_tree
+			}
+		}
+	}
+
 	focus = {	
 		id = SLO_a_based_slovakia
 		icon = GFX_goal_support_fascism
@@ -1433,7 +1536,7 @@ focus_tree = {
 	focus = {
 		id = SLO_denounce_hungary
 		icon = GFX_goal_generic_propaganda
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = SLO_a_based_slovakia
 		cost = 4
@@ -1454,6 +1557,120 @@ focus_tree = {
 				}
 				add_political_power = 50
 				HUN = { add_opinion_modifier = { target = ROOT modifier = hostile_status } }
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_deport_hungarians
+		icon = GFX_goal_SLO_deport_hungarians
+		x = 1
+		y = 1
+		relative_position_id = SLO_denounce_hungary
+		cost = 5
+		prerequisite = {
+			focus = SLO_denounce_hungary
+		}
+
+		bypass = {
+			NOT = {
+				AND = {
+					country_exists = HUN
+					any_state = { is_owned_and_controlled_by = HUN is_core_of = HUN }
+					OR = {
+						controls_state = 664
+						controls_state = 73
+					}
+				}
+			}
+		}
+
+		available = {
+			country_exists = HUN
+			any_state = { is_owned_and_controlled_by = HUN is_core_of = HUN }
+			OR = {
+				controls_state = 664
+				controls_state = 73
+			}
+		}
+		
+
+		completion_reward = {
+			if = {
+				limit = { controls_state = 664 }
+				664 = { add_manpower = -130781 }
+				
+				random_state = {
+					limit = { is_owned_and_controlled_by = HUN is_core_of = HUN }
+					add_manpower = 120491
+				}
+			}
+			if = {
+				limit = { controls_state = 73 }
+				73 = { add_manpower = -76543 }
+				
+				random_state = {
+					limit = { is_owned_and_controlled_by = HUN is_core_of = HUN }
+					add_manpower = 68125
+				}
+			}
+			
+			country_event = { id = slovakia.26 days = 2 random_days = 4 }
+		}
+	}
+	
+	focus = {
+		id = SLO_anti_hungarian_racial_laws
+		icon = GFX_
+		x = -1
+		y = 1
+		relative_position_id = SLO_denounce_hungary
+		cost = 5
+		prerequisite = {
+			focus = SLO_denounce_hungary
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			hidden_effect = { country_event = { id = slovakia.25 days = 12 random_days = 12 } }
+			
+			add_political_power = 60
+		}
+	}
+	
+	focus = {
+		id = SLO_slovak_tanks_in_budapest
+		icon = GFX_goal_SLO_slovak_tanks_in_budapest
+		x = 1
+		y = 1
+		relative_position_id = SLO_anti_hungarian_racial_laws
+		cost = 2
+		prerequisite = {
+			focus = SLO_anti_hungarian_racial_laws
+		}
+		prerequisite = {
+			focus = SLO_deport_hungarians
+		}
+
+		available = {
+			any_country = {
+				OR = {
+					tag = ROOT
+					is_puppet_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				is_neighbor_of = HUN
+			}
+		}
+		
+
+		completion_reward = {
+			declare_war_on = {
+				target = HUN
+				type = annex_everything
 			}
 		}
 	}
@@ -1489,7 +1706,7 @@ focus_tree = {
 	focus = {
 		id = SLO_trust_in_mountain_general
 		icon = GFX_goal_SLO_mountain_generals_cult_of_personality
-		x = 6
+		x = 8
 		y = 1
 		relative_position_id = SLO_a_based_slovakia
 		cost = 5

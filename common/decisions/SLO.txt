@@ -14,17 +14,17 @@ SLO_propaganda_decision_category = {
 		available = {
 			SLO_available_propaganda_slot = yes
 			
-#			any_enemy_country={
-#				is_major = yes
-#				has_government = fascism
-#			}
+			any_enemy_country={
+				is_major = yes
+				has_government = fascism
+			}
 		}
 		
 		visible = { 
-#			OR={
-#				has_country_flag = SLO_all_propaganda_available_flag
-#				NOT = { has_government = fascism } 
-#			}
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				NOT = { has_government = fascism } 
+			}
 		}
 
 
@@ -72,10 +72,10 @@ SLO_propaganda_decision_category = {
 		}
 
 		visible = {
-#			OR={
-#				has_country_flag = SLO_all_propaganda_available_flag
-#				has_government = communism
-#			}
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_government = communism
+			}
 		}
 
 		days_remove = var:SLO.propaganda_campaign_days
@@ -121,10 +121,10 @@ SLO_propaganda_decision_category = {
 		}
 		
 		visible = {
-#			OR={
-#				has_country_flag = SLO_all_propaganda_available_flag
-#				has_government = communism
-#			}
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_government = communism
+			}
 		}
 
 
@@ -167,14 +167,14 @@ SLO_propaganda_decision_category = {
 		
 		available = {
 			SLO_available_propaganda_slot = yes
-#			has_war = yes
+			has_war = yes
 		}
 		
 		visible = {
-#			OR={
-#				has_country_flag = SLO_all_propaganda_available_flag
-#				has_government = fascism
-#			}
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_government = fascism
+			}
 		}
 
 
@@ -229,7 +229,7 @@ SLO_propaganda_decision_category = {
 		
 		available = {
 			SLO_available_propaganda_slot = yes
-#			has_war = yes
+			has_war = yes
 		}
 		
 		visible = {
@@ -279,10 +279,14 @@ SLO_propaganda_decision_category = {
 		
 		available = {
 			SLO_available_propaganda_slot = yes
-#			has_war = yes
+			has_war = yes
 		}
 		
 		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_government = fascism
+			}
 		}
 
 
@@ -305,6 +309,148 @@ SLO_propaganda_decision_category = {
 
 		remove_effect = {
 			set_variable = { SLO.propaganda_campaign_to_end = 5 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_6 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+			any_enemy_country = { has_government = communism }
+		}
+		
+		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^6
+
+		modifier = {
+			weekly_manpower = 650
+			army_defence_factor = 0.08
+			political_power_factor = 0.05
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 6 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 6 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_7 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^7
+
+		modifier = {
+			production_speed_buildings_factor = 0.10
+			consumer_goods_factor = -0.15
+			production_speed_industrial_complex_factor = 0.15
+			production_speed_infrastructure_factor = 0.15
+			production_speed_rail_way_factor = 0.15
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 7 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 7 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_8 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+			has_war = yes
+		}
+		
+		visible = {
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^8
+
+		modifier = {
+			weekly_casualties_war_support = 0.002
+			weekly_bombing_war_support = 0.002
+			industrial_capacity_factory = 0.10
+			industrial_capacity_dockyard = 0.10
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 8 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 8 }
 			SLO_end_propaganda_campaign = yes
 		}
 	}

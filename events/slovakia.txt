@@ -876,6 +876,68 @@ country_event = {
 	}
 }
 
+#Anti Hungarian racial laws
+country_event = {
+	id = slovakia.25
+	title = slovakia.25.title
+	desc = slovakia.25.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_dead_soldiers
+
+	option = { 
+		name = slovakia.25.a
+		ai_chance = {
+			base = 10
+		}
+		add_stability = -0.02
+		if = {
+			limit = { controls_state = 664 }
+			664={
+				add_manpower = -835
+			}
+		}
+	}
+}
+
+#Hungarians Deported
+country_event = {
+	id = slovakia.26
+	title = slovakia.26.title
+	desc = slovakia.26.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_factory
+
+	option = { 
+		name = slovakia.26.a
+		ai_chance = {
+			base = 10
+		}
+		
+		random_owned_controlled_state = {
+			prioritize = { 664 73 }
+			limit = {
+				is_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.03 }
+		custom_effect_tooltip = slovakia.26.tt
+	}
+}
+
 
 add_namespace = slovakia_hidden
 

@@ -99,6 +99,7 @@ SLO_air_force_dynamic_modifier = {
 	static_anti_air_hit_chance_factor = SLO_air_force_dm_static_anti_air_hit_chance_factor
 	cas_damage_reduction = SLO_air_force_dm_cas_damage_reduction
 	conscription = SLO_air_force_dm_conscription
+	ground_attack_factor = SLO_air_force_dm_ground_attack_factor
 	
 	custom_modifier_tooltip = SLO_air_force_dynamic_modifier_tooltip
 }

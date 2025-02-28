@@ -33,6 +33,9 @@ ideas ={
 		SLO_GFX_propaganda_who_is_to_blame_for_the_war_idea = {}
 		SLO_GFX_propaganda_telling_a_friend_may_mean_telling_the_enemy_idea = {}
 		SLO_GFX_propaganda_you_dont_want_this_buy_war_bonds_idea = {}
+		SLO_GFX_propaganda_these_are_the_actions_of_czechobolshevism_idea = {}
+		SLO_GFX_propaganda_we_build_our_home_with_our_own_strengh_idea = {}
+		SLO_GFX_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea = {}
 		
 		SLO_NAME_propaganda_death_to_fascist_bastards_idea = {}
 		SLO_NAME_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea = {}
@@ -40,5 +43,8 @@ ideas ={
 		SLO_NAME_propaganda_who_is_to_blame_for_the_war_idea = {}
 		SLO_NAME_propaganda_telling_a_friend_may_mean_telling_the_enemy_idea = {}
 		SLO_NAME_propaganda_you_dont_want_this_buy_war_bonds_idea = {}
+		SLO_NAME_propaganda_these_are_the_actions_of_czechobolshevism_idea = {}
+		SLO_NAME_propaganda_we_build_our_home_with_our_own_strengh_idea = {}
+		SLO_NAME_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea = {}
 	}
 }

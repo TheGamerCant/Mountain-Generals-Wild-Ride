@@ -276,6 +276,9 @@ add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_mgs_kindnes
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_who_is_to_blame_for_the_war_idea }
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_telling_a_friend_may_mean_telling_the_enemy_idea }
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_you_dont_want_this_buy_war_bonds_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_these_are_the_actions_of_czechobolshevism_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_we_build_our_home_with_our_own_strengh_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea }
 		
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_death_to_fascist_bastards_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea }
@@ -283,6 +286,9 @@ add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mgs_kindn
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_who_is_to_blame_for_the_war_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_telling_a_friend_may_mean_telling_the_enemy_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_you_dont_want_this_buy_war_bonds_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_these_are_the_actions_of_czechobolshevism_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_we_build_our_home_with_our_own_strengh_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea }
 
 resize_array = { array = SLO.propaganda_PP_COST_array size = SLO.propaganda_GFX_array^num value = 15 }
 resize_array = { array = SLO.propaganda_slot_campaign_array size = SLO.propaganda_slots_max value = 0 }
@@ -357,6 +363,7 @@ set_variable = { SLO_air_force_dm_air_escort_efficiency = 0 }
 set_variable = { SLO_air_force_dm_static_anti_air_hit_chance_factor = 0 }
 set_variable = { SLO_air_force_dm_cas_damage_reduction = 0 }
 set_variable = { SLO_air_force_dm_conscription = 0 }
+set_variable = { SLO_air_force_dm_ground_attack_factor = 0 }
 
 
 add_ideas = {

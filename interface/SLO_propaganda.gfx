@@ -29,4 +29,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/propaganda/SLO_you_dont_want_this_buy_war_bonds.dds"
 		noOfFrames = 5
 	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_these_are_the_actions_of_czechobolshevism"
+		texturefile = "gfx/interface/propaganda/SLO_these_are_the_actions_of_czechobolshevism.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_we_build_our_home_with_our_own_strengh"
+		texturefile = "gfx/interface/propaganda/SLO_we_build_our_home_with_our_own_strengh.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_real_work_and_struggle_for_a_greater_slice_of_bread"
+		texturefile = "gfx/interface/propaganda/SLO_real_work_and_struggle_for_a_greater_slice_of_bread.dds"
+		noOfFrames = 5
+	}
 }

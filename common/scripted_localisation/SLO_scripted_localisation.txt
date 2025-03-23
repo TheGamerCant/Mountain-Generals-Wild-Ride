@@ -45,6 +45,27 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetNavalDMName
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = SLO_river_fleet_dynamic_modifier }
+		}
+		localization_key = "SLO_river_fleet_dynamic_modifier"
+	}
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = SLO_navy_dynamic_modifier }
+		}
+		localization_key = "SLO_navy_dynamic_modifier"
+	}
+	
+	#If we don't have it, default to this
+	text = {
+		localization_key = "SLO_river_fleet_dynamic_modifier"
+	}
+}
+
+defined_text = {
 	name = GetAirDynamicModifierTT
 	text = {
 		trigger = {

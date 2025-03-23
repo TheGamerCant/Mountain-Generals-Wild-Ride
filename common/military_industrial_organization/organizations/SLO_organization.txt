@@ -51,6 +51,19 @@ SLO_letecke_opravovne_trenchin = {
 	include = generic_high_agility_fighter_aircraft_organization
 	icon = GFX_idea_SLO_letecke_opravovne_trenchin
 	
+	initial_trait = {
+		name = generic_mio_initial_trait_high_agility_fighters_designer
+
+		equipment_bonus = {
+			air_agility = 0.10
+			air_range = -0.10
+		}
+		
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+	
 	allowed = {	
 		original_tag = SLO
 	}
@@ -70,5 +83,39 @@ name = CZE_avia
 	icon = GFX_idea_CZE_avia
 	allowed = { 
 		original_tag = SLO
+	}
+	
+	initial_trait = {
+		name = generic_mio_initial_trait_light_aircraft_designer
+
+		equipment_bonus = {
+			air_agility = 0.05
+			maximum_speed = 0.05
+			air_attack = 0.05
+		}
+		
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+}
+
+SLO_slovenska_plavba_a_ristavy_organization = {
+	include = generic_refurbishment_repair_organization
+	icon = GFX_idea_SLO_slovenska_plavba_a_ristavy
+	allowed = { 
+		original_tag = SLO
+	}
+	
+	initial_trait = {
+		name = generic_mio_refurbishment_repair_organization
+		limit_to_equipment_type = { capital_ship screen_ship ship_hull_submarine }
+		equipment_bonus = {
+			max_strength = 0.03
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
 	}
 }

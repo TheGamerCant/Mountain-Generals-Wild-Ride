@@ -23,6 +23,11 @@
  SLO_slovak_airforce_custom_tt_3:0 "§YTowed Anti-Air§!:\n    - £GFX_production_cost Production Cost: §G-10.00%§!\n§YAll Aircraft Equipment§!:\n    - £GFX_production_cost Production Cost: §R+5.00%§!\n    - Reliability: §G+15%§!\n\n"
  SLO_slovak_airforce_custom_tt_4:0 "§YAll Aircraft Equipment§!:\n    - £GFX_production_cost Production Cost: §R+5.00%§!\n    - Reliability: §G+15%§!\n\n"
  
+ SLO_river_fleet_dynamic_modifier:0 "Slovenská Riečna Flotila"
+ SLO_river_fleet_dynamic_modifier_desc:0 "It might not be much, but our river fleet is essential for securing Slovakia's interests in the Danube. At least, that's what we tell the international community.\n\nWith Mountain General's plans for future conquest, the cultivation of seamen and experience now will go a long way in the future."
+ SLO_navy_dynamic_modifier:0 "Slovenské Námorníctvo"
+ SLO_navy_dynamic_modifier_desc:0 ""
+ 
  SLO_DUMMY_economy_idea:0 "$SLO_initial_economy_dynamic_modifier$"
  SLO_DUMMY_economy_idea_desc:0 "$SLO_initial_economy_dynamic_modifier_desc$"
  SLO_DUMMY_army_idea:0 "$SLO_army_dynamic_modifier$"

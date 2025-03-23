@@ -25,3 +25,17 @@ SLO_propaganda_decision_category = {
 	
 	visible_when_empty = yes
 }
+
+SLO_deportations_to_mongolia_decision_category = {
+	priority = 998
+	
+	picture = GFX_decision_category_saf_anti_colonialist_crusade
+	
+	allowed = {
+		original_tag = SLO
+	}
+	
+	visible = {
+		has_completed_focus = SLO_deport_them_to_mongolia
+	}
+}

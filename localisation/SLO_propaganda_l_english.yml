@@ -5,7 +5,7 @@
  SLO_NAME_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea:0 "Mountain General is the red sun in the hearts of revolutionary people!"
  SLO_GFX_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea:0 "GFX_propaganda_SLO_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people"
  
- SLO_NAME_propaganda_mgs_kindness_illuminates_the_future_of_our_children_idea:0 "Mountian General's kindness illuminates the future of our children!"
+ SLO_NAME_propaganda_mgs_kindness_illuminates_the_future_of_our_children_idea:0 "Mountain General's kindness illuminates the future of our children!"
  SLO_GFX_propaganda_mgs_kindness_illuminates_the_future_of_our_children_idea:0 "GFX_propaganda_SLO_mgs_kindness_illuminates_the_future_of_our_children"
  
  SLO_NAME_propaganda_who_is_to_blame_for_the_war_idea:0 "Who is to blame for the war!"
@@ -25,9 +25,22 @@
  
  SLO_NAME_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea:0 "Real work and struggle for a greater slice of bread"
  SLO_GFX_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea:0 "GFX_propaganda_SLO_real_work_and_struggle_for_a_greater_slice_of_bread"
+ 
+ SLO_NAME_propaganda_mother_slovakia_calls_to_arms_idea:0 "Our mother Slovakia calls to arms!"
+ SLO_GFX_propaganda_mother_slovakia_calls_to_arms_idea:0 "GFX_propaganda_SLO_mother_slovakia_calls_to_arms"
+ 
+ SLO_NAME_propaganda_germany_will_be_conquered_idea:0 "Germany will be conquered in the shortest possible time!"
+ SLO_GFX_propaganda_germany_will_be_conquered_idea:0 "GFX_propaganda_SLO_germany_will_be_conquered"
+ 
+ SLO_NAME_propaganda_we_are_united_idea:0 "We are united! Our goal: A new Slovakia!"
+ SLO_GFX_propaganda_we_are_united_idea:0 "GFX_propaganda_SLO_we_are_united"
+ 
+ SLO_NAME_propaganda_a_better_future_in_free_slovakia_idea:0 "A better future in free Slovakia!"
+ SLO_GFX_propaganda_a_better_future_in_free_slovakia_idea:0 "GFX_propaganda_SLO_a_better_future_in_free_slovakia"
 		
  
- 
+
+
 
  
  SLO_propaganda_decision_category:0 "[SLO.GetPropagandaCategoryName]"
@@ -56,3 +69,11 @@
  SLO_propaganda_campaign_7_desc:0 ""
  SLO_propaganda_campaign_8:0 "[?SLO.propaganda_NAME_array^8.GetTokenLocalizedKey]"
  SLO_propaganda_campaign_8_desc:0 ""
+ SLO_propaganda_campaign_9:0 "[?SLO.propaganda_NAME_array^9.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_9_desc:0 ""
+ SLO_propaganda_campaign_10:0 "[?SLO.propaganda_NAME_array^10.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_10_desc:0 ""
+ SLO_propaganda_campaign_11:0 "[?SLO.propaganda_NAME_array^11.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_11_desc:0 ""
+ SLO_propaganda_campaign_12:0 "[?SLO.propaganda_NAME_array^12.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_12_desc:0 ""

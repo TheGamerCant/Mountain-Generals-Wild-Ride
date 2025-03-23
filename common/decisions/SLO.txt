@@ -454,4 +454,327 @@ SLO_propaganda_decision_category = {
 			SLO_end_propaganda_campaign = yes
 		}
 	}
+	
+	SLO_propaganda_campaign_9 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+			has_war_with = GER
+			GER = { has_government = fascism }
+		}
+		
+		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				NOT = { has_government = fascism }
+			}
+		}
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^9
+
+		modifier = {
+			fascism_drift = -0.03
+			war_support_factor = 0.10
+			max_dig_in_factor = 0.30
+			army_org_factor = 0.04
+		}
+
+		targeted_modifier = {
+			tag = GER
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.15
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 9 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 9 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_10 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+			has_war_with = GER
+			GER = { has_government = fascism }
+		}
+		
+		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				NOT = { has_government = fascism }
+			}
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^10
+
+		modifier = {
+			fascism_drift = -0.03
+			war_support_factor = 0.10
+			army_speed_factor = 0.10
+		}
+
+		targeted_modifier = {
+			tag = GER
+			attack_bonus_against = 0.15
+			breakthrough_bonus_against = 0.15
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 10 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 10 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_11 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^11
+
+		modifier = {
+			monthly_population = 0.25
+			political_power_gain = 0.30
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 11 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 11 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_12 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^12
+
+		modifier = {
+			production_speed_buildings_factor = 0.05
+			industrial_capacity_dockyard = 0.05
+			industrial_capacity_factory = 0.05
+			resistance_activity = -0.15
+			stability_weekly = 0.001
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 12 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 12 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+}
+
+SLO_deportations_to_mongolia_decision_category = {
+	SLO_deportations_to_mongolia = { 
+
+		icon = decision_eng_blackshirt_march
+		
+		target_trigger = {
+			FROM = { 
+				OR = {
+					state = 43
+					state = 154
+					state = 973
+					state = 974
+					state = 155
+					state = 76
+					state = 45
+					state = 155
+				}
+			}
+		}
+
+		state_target = yes
+		on_map_mode = map_only
+
+		allowed = {
+			original_tag = SLO
+		}
+		
+		ai_will_do = {
+			base = 50
+		}
+
+		available = {
+			FROM = {
+				is_owned_by = SLO
+				is_fully_controlled_by = SLO
+			}
+			HUN = {
+				exists = yes
+				any_owned_state = {
+					is_core_of = HUN
+					is_on_continent = asia
+				}
+			}
+		}
+
+		visible = {
+			FROM = {
+				is_owned_by = SLO
+			}
+		}
+		
+		days_remove = 60
+		
+		
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		modifier = {
+			political_power_cost = 0.25
+		}
+
+		complete_effect = {	
+			FROM = {
+				set_variable = { THIS.state_population_k_hold = THIS.state_population_k }
+				
+				set_variable_to_random = {
+					var = THIS.random_num
+					min = 0.83
+					max = 0.98
+				}
+				
+				multiply_variable = { THIS.state_population_k_hold = THIS.random_num }
+				multiply_variable = { THIS.state_population_k_hold = -10 }
+				
+				round_variable = THIS.state_population_k_hold
+			}
+		}
+		
+		remove_effect={
+			FROM = {
+				for_loop_effect = {
+					end = 100
+					value = temp
+					
+					add_manpower = var:THIS.state_population_k_hold
+				}
+				
+				random_state = {
+					limit = {
+						is_owned_by = HUN
+						is_core_of = HUN
+						is_on_continent = asia
+					}
+					
+					#Some of you may die, but that is a sacrifice I am willing to make
+					multiply_variable = { PREV.state_population_k_hold = -0.98 }
+					
+					for_loop_effect = {
+						end = 100
+						value = temp
+						
+						add_manpower = var:PREV.state_population_k_hold
+					}
+				}
+				
+				clear_variable = PREV.random_num
+				clear_variable = PREV.state_population_k_hold
+			}
+		}
+	}
 }

@@ -36,6 +36,10 @@ ideas ={
 		SLO_GFX_propaganda_these_are_the_actions_of_czechobolshevism_idea = {}
 		SLO_GFX_propaganda_we_build_our_home_with_our_own_strengh_idea = {}
 		SLO_GFX_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea = {}
+		SLO_GFX_propaganda_mother_slovakia_calls_to_arms_idea = {}
+		SLO_GFX_propaganda_germany_will_be_conquered_idea = {}
+		SLO_GFX_propaganda_we_are_united_idea = {}
+		SLO_GFX_propaganda_a_better_future_in_free_slovakia_idea = {}
 		
 		SLO_NAME_propaganda_death_to_fascist_bastards_idea = {}
 		SLO_NAME_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea = {}
@@ -46,5 +50,9 @@ ideas ={
 		SLO_NAME_propaganda_these_are_the_actions_of_czechobolshevism_idea = {}
 		SLO_NAME_propaganda_we_build_our_home_with_our_own_strengh_idea = {}
 		SLO_NAME_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea = {}
+		SLO_NAME_propaganda_mother_slovakia_calls_to_arms_idea = {}
+		SLO_NAME_propaganda_germany_will_be_conquered_idea = {}
+		SLO_NAME_propaganda_we_are_united_idea = {}
+		SLO_NAME_propaganda_a_better_future_in_free_slovakia_idea = {}
 	}
 }

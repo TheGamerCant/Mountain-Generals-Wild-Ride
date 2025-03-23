@@ -44,4 +44,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/propaganda/SLO_real_work_and_struggle_for_a_greater_slice_of_bread.dds"
 		noOfFrames = 5
 	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_mother_slovakia_calls_to_arms"
+		texturefile = "gfx/interface/propaganda/SLO_mother_slovakia_calls_to_arms.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_germany_will_be_conquered"
+		texturefile = "gfx/interface/propaganda/SLO_germany_will_be_conquered.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_we_are_united"
+		texturefile = "gfx/interface/propaganda/SLO_we_are_united.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_a_better_future_in_free_slovakia"
+		texturefile = "gfx/interface/propaganda/SLO_a_better_future_in_free_slovakia.dds"
+		noOfFrames = 5
+	}
 }

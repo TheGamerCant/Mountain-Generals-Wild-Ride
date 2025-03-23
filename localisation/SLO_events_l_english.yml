@@ -113,7 +113,7 @@
  slovakia.25.a:0 "I fail to see why this is a bad thing..."
  
  slovakia.26.title:0 "Hungarian Assets Seized"
- slovakia.26.desc:0 "Following our "
+ slovakia.26.desc:0 "Following our expulsion of Hungarians from Southern Slovakia and Ruthenia, we seized their assets as compensation for the HUNDREDS of years of injustice they have done to us. We will put these assets to good use."
  slovakia.26.a:0 "The first step of many in dealing with the Hungolian menace"
  slovakia.26.tt:0 "$SLO_modify_the_slovak_economy_by$$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y-3.0%§!"
  
@@ -122,3 +122,8 @@
  slovakia_news.1.a:0 "What the?!!?"
  slovakia_news.1.b:0 "Sláva Horskému Generálovi!"
  slovakia_news.1.c:0 "One day, we will get it back."
+
+ slovakia_news.2.title:0 "Mountain General destroys Hungary!"
+ slovakia_news.2.desc:0 "In an incoherent and likely intoxicated state, Mountain General has announced the total destruction of the Hungarian state by nuclear hellfire! It would seem that over the past few years, the hermit state has been acquiring ultra-advanced nuclear capabilities, and has finally achieved them.\n\nThe world looks on with horror, as there is no telling what the madman will do next..."
+ slovakia_news.2.a:0 "Oh God..."
+ slovakia_news.2.b:0 "Based"

@@ -279,6 +279,10 @@ add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_you_dont_wa
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_these_are_the_actions_of_czechobolshevism_idea }
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_we_build_our_home_with_our_own_strengh_idea }
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_mother_slovakia_calls_to_arms_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_germany_will_be_conquered_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_we_are_united_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_a_better_future_in_free_slovakia_idea }
 		
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_death_to_fascist_bastards_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea }
@@ -289,6 +293,10 @@ add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_you_dont_
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_these_are_the_actions_of_czechobolshevism_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_we_build_our_home_with_our_own_strengh_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mother_slovakia_calls_to_arms_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_germany_will_be_conquered_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_we_are_united_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_a_better_future_in_free_slovakia_idea }
 
 resize_array = { array = SLO.propaganda_PP_COST_array size = SLO.propaganda_GFX_array^num value = 15 }
 resize_array = { array = SLO.propaganda_slot_campaign_array size = SLO.propaganda_slots_max value = 0 }
@@ -305,9 +313,6 @@ multiply_variable = { SLO.propaganda_days_until_second_change = 2 }
 
 round_variable = SLO.propaganda_days_until_first_change
 round_variable = SLO.propaganda_days_until_second_change
-
-
-
 
 
 #Economy
@@ -364,6 +369,16 @@ set_variable = { SLO_air_force_dm_static_anti_air_hit_chance_factor = 0 }
 set_variable = { SLO_air_force_dm_cas_damage_reduction = 0 }
 set_variable = { SLO_air_force_dm_conscription = 0 }
 set_variable = { SLO_air_force_dm_ground_attack_factor = 0 }
+
+#Navy
+set_variable = { SLO_navy_dm_experience_gain_navy = 0.10 }
+set_variable = { SLO_navy_dm_industrial_capacity_dockyard = -0.20 }
+set_variable = { SLO_navy_dm_naval_retreat_chance = 0.25 }
+set_variable = { SLO_navy_dm_navy_max_range_factor = -0.16 }
+set_variable = { SLO_navy_dm_naval_torpedo_enemy_critical_chance_factor = 0.20 }
+set_variable = { SLO_navy_dm_navy_leader_start_maneuvering_level = 0 }
+set_variable = { SLO_navy_dm_navy_leader_start_coordination_level = 0 }
+set_variable = { SLO_navy_dm_experience_gain_navy_unit_factor = 0 }
 
 
 add_ideas = {

@@ -328,7 +328,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_the_slovak_armed_forces
 		icon = GFX_goal_SLO_the_slovak_army
-		x = 23
+		x = 25
 		y = 0
 		cost = 1
 		
@@ -342,6 +342,224 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = slovakia.24 hours = 4 }
+		}
+	}
+	
+	focus = {	
+		id = SLO_the_slovak_river_fleet
+		icon = GFX_focus_generic_naval_discipline
+		x = -16
+		y = 1
+		cost = 5
+		relative_position_id = SLO_the_slovak_armed_forces
+		
+		prerequisite = { focus = SLO_the_slovak_armed_forces }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			navy_experience = 25
+			
+			add_dynamic_modifier = { modifier = SLO_river_fleet_dynamic_modifier }
+		}
+	}
+	
+	focus = {	
+		id = SLO_danubian_trade
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = SLO_the_slovak_river_fleet
+		
+		prerequisite = { focus = SLO_the_slovak_river_fleet }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_equipment_to_stockpile = { 
+				type = convoy_1
+				amount = 75
+				producer = THIS
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_offsite_building = { type = dockyard level = 1 }
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_navy_dm_industrial_capacity_dockyard = 0.075 }
+			
+			custom_effect_tooltip = SLO_danubian_trade_tt
+		}
+	}
+	
+	focus = {	
+		id = SLO_strengthen_the_naval_industry
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 2
+		y = 1
+		cost = 5
+		relative_position_id = SLO_the_slovak_river_fleet
+		
+		prerequisite = { focus = SLO_the_slovak_river_fleet }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			if = {
+				limit = { has_aat = yes }
+				
+				mio:SLO_slovenska_plavba_a_ristavy_organization = {
+					add_mio_size = 1
+					add_mio_research_bonus = 0.05
+				}
+				mio:SLO_skoda_shipyards_organization = {
+					add_mio_size = 1
+					add_mio_research_bonus = 0.05
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			else = {
+				add_tech_bonus = {
+					name = SLO_strengthen_the_naval_industry
+					bonus = 1.0
+					uses = 3
+					category = naval_equipment
+				}
+			}
+			
+			add_to_variable = { SLO_navy_dm_industrial_capacity_dockyard = 0.075 }
+			
+			custom_effect_tooltip = SLO_danubian_trade_tt
+		}
+	}
+	
+	focus = {	
+		id = SLO_bratislava_naval_academy
+		icon = GFX_goal_SLO_naval_academy
+		x = -2
+		y = 1
+		cost = 5
+		relative_position_id = SLO_the_slovak_river_fleet
+		
+		prerequisite = { focus = SLO_the_slovak_river_fleet }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {	
+			add_to_variable = { SLO_navy_dm_experience_gain_navy = 0.05 }
+			add_to_variable = { SLO_navy_dm_navy_leader_start_maneuvering_level = 1 }
+			add_to_variable = { SLO_navy_dm_navy_leader_start_coordination_level = 1 }
+			
+			custom_effect_tooltip = SLO_bratislava_naval_academy_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_navy_leader = { 
+				add_coordination = 1
+				add_maneuver = 1
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_access_to_the_sea
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SLO_danubian_trade
+		
+		prerequisite = { focus = SLO_danubian_trade }
+		prerequisite = { focus = SLO_strengthen_the_naval_industry }
+		prerequisite = { focus = SLO_bratislava_naval_academy }
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			if = {			
+				limit = { any_state = { is_core_of = ROOT is_owned_and_controlled_by = ROOT is_coastal = yes } }
+				
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						is_core_of = ROOT
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			
+			hidden_effect = {
+				remove_dynamic_modifier = { modifier = SLO_river_fleet_dynamic_modifier }
+				add_dynamic_modifier = { modifier = SLO_navy_dynamic_modifier }
+			}
+			
+			add_to_variable = { SLO_navy_dm_experience_gain_navy = 0.06 }
+			add_to_variable = { SLO_navy_dm_experience_gain_navy_unit_factor = 0.10 }
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = SLO_access_to_the_sea_tt
 		}
 	}
 	
@@ -1567,7 +1785,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SLO_denounce_hungary
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SLO_denounce_hungary
 		}
@@ -1625,7 +1843,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SLO_denounce_hungary
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SLO_denounce_hungary
 		}
@@ -1641,6 +1859,89 @@ focus_tree = {
 		}
 	}
 	
+#	focus = {
+#		id = SLO_annihilate_hungary
+#		icon = GFX_goal_SLO_nuke_hungary
+#		x = 2
+#		y = 1
+#		relative_position_id = SLO_anti_hungarian_racial_laws
+#		cost = 5
+#		prerequisite = {
+#			focus = SLO_anti_hungarian_racial_laws
+#		}
+#		prerequisite = {
+#			focus = SLO_deport_hungarians
+#		}
+#		
+#		mutually_exclusive = { focus = SLO_slovak_tanks_in_budapest }
+#
+#		available = {
+#			country_exists = HUN
+#			OR = {
+#				43 = { is_owned_and_controlled_by = HUN }
+#				155 = { is_owned_and_controlled_by = HUN }
+#				974 = { is_owned_and_controlled_by = HUN }
+#				973 = { is_owned_and_controlled_by = HUN }
+#				154 = { is_owned_and_controlled_by = HUN }
+#				
+#			}
+#		}
+#		
+#
+#		completion_reward = {
+#			hidden_effect = {
+#				if = {
+#					limit = { HUN = { controls_state = 43 } }
+#					launch_nuke = {
+#						state = 43
+#						controller = HUN
+#						use_nuke = yes
+#						nuke_type = thermonuclear_bomb 
+#					}
+#				}
+#				if = {
+#					limit = { HUN = { controls_state = 155 } }
+#					launch_nuke = {
+#						state = 155
+#						controller = HUN
+#						use_nuke = yes
+#						nuke_type = thermonuclear_bomb 
+#					}
+#				}
+#				if = {
+#					limit = { HUN = { controls_state = 974 } }
+#					launch_nuke = {
+#						state = 974
+#						controller = HUN
+#						use_nuke = yes
+#						nuke_type = thermonuclear_bomb 
+#					}
+#				}
+#				if = {
+#					limit = { HUN = { controls_state = 973 } }
+#					launch_nuke = {
+#						state = 973
+#						controller = HUN
+#						use_nuke = yes
+#						nuke_type = thermonuclear_bomb 
+#					}
+#				}
+#				if = {
+#					limit = { HUN = { controls_state = 154 } }
+#					launch_nuke = {
+#						state = 154
+#						controller = HUN
+#						use_nuke = yes
+#						nuke_type = thermonuclear_bomb 
+#					}
+#				}
+#				
+#				news_event = { id= slovakia_news.2 hours = 4 }
+#			}
+#			custom_effect_tooltip = SLO_annihilate_hungary_tt
+#		}
+#	}
+	
 	focus = {
 		id = SLO_slovak_tanks_in_budapest
 		icon = GFX_goal_SLO_slovak_tanks_in_budapest
@@ -1654,6 +1955,8 @@ focus_tree = {
 		prerequisite = {
 			focus = SLO_deport_hungarians
 		}
+		
+#		mutually_exclusive = { focus = SLO_annihilate_hungary }
 
 		available = {
 			any_country = {
@@ -1672,6 +1975,50 @@ focus_tree = {
 				target = HUN
 				type = annex_everything
 			}
+		}
+	}
+
+	focus = {
+		id = SLO_deport_them_to_mongolia
+		icon = GFX_goal_SLO_deport_them_to_mongolia
+		x = 0
+		y = 1
+		relative_position_id = SLO_slovak_tanks_in_budapest
+		cost = 5
+		prerequisite = {
+			focus = SLO_slovak_tanks_in_budapest
+		}
+
+		available = {
+			NOT = { country_exists = HUN }
+			custom_trigger_tooltip = {
+				tooltip = SLO_deport_them_to_mongolia_trigger_tt
+				
+				all_state = {
+					OR = {
+						is_owned_and_controlled_by = SLO
+						NOT = { is_core_of = MON }
+					}
+				}
+			}
+		}
+		
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = SLO
+					is_core_of = MON
+				}
+				add_core_of = HUN
+				transfer_state_to = HUN
+			}
+			
+			puppet = HUN
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			unlock_decision_category_tooltip = SLO_deportations_to_mongolia_decision_category
 		}
 	}
 	

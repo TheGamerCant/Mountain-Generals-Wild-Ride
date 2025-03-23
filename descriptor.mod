@@ -6,4 +6,4 @@ tags={
 }
 name="Mountain General's Wild Ride"
 replace_path="common/bookmarks"
-supported_version="1.15.*"
+supported_version="1.16.*"

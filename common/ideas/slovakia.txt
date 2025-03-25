@@ -221,7 +221,7 @@ ideas = {
 			
 			modifier = {
 				war_support_factor = 0.1
-				war_stability_factor = 0.35
+				war_stability_factor = 0.50
 				conscription = 0.02
 				army_org_factor = 0.04
 				land_reinforce_rate = 0.03
@@ -294,6 +294,28 @@ ideas = {
 			modifier = {
 				neutrality_drift = -0.03
 				political_power_cost = 0.14
+				stability_factor = -0.10
+			}
+		}	
+		
+		SLO_unstable_regime_idea = {
+			removal_cost = -1
+
+			picture = SLO_unclear_ideology
+				
+			available = {
+				has_country_leader = {
+					character = SLO_mountain_general
+					ruling_only = yes
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_cost = 0.06
 				stability_factor = -0.05
 			}
 		}	

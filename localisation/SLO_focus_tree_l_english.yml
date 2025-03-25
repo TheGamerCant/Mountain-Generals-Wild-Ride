@@ -65,7 +65,7 @@
  SLO_strengthen_the_aeronautical_industry:0 "Fund the Aeronautical Industry"
  SLO_strengthen_the_aeronautical_industry_desc:0 "You can't build planes without companies, and Slovakia is fortunate to have many great minds and companies with experience of plane construction as part of Czechoslovakia."
  SLO_kamikaze_pilots:0 "Kamikaze Pilots"
- SLO_kamikaze_pilots_desc:0 "Our nation is in peril, but our citizens are loyal. A final display of their loyalty will strike fear into the hearts of our enemies"
+ SLO_kamikaze_pilots_desc:0 "Our nation is in peril, but our citizens are loyal. A final display of their loyalty will strike fear into the hearts of our homeland's enemies!"
  SLO_kamikaze_pilots_tt:0 "\n$SLO_modify_the_slovak_airforce_by$$MODIFIER_CONSCRIPTION_FACTOR$: §Y+0.50%§!"
  SLO_aircraft_factories:0 "Aircraft Factories"
  SLO_aircraft_factories_desc:0 ""

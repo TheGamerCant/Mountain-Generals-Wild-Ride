@@ -526,7 +526,10 @@ country_event = {
 		
 		if = { 
 			limit = { has_idea = SLO_unclear_ideology_idea }
-			remove_ideas = SLO_unclear_ideology_idea
+			swap_ideas = {
+				remove_idea = SLO_unclear_ideology_idea
+				add_idea = SLO_unstable_regime_idea
+			}
 		}
 	}
 }
@@ -552,7 +555,10 @@ country_event = {
 		
 		if = { 
 			limit = { has_idea = SLO_unclear_ideology_idea }
-			remove_ideas = SLO_unclear_ideology_idea
+			swap_ideas = {
+				remove_idea = SLO_unclear_ideology_idea
+				add_idea = SLO_unstable_regime_idea
+			}
 		}
 	}
 }
@@ -578,7 +584,10 @@ country_event = {
 		
 		if = { 
 			limit = { has_idea = SLO_unclear_ideology_idea }
-			remove_ideas = SLO_unclear_ideology_idea
+			swap_ideas = {
+				remove_idea = SLO_unclear_ideology_idea
+				add_idea = SLO_unstable_regime_idea
+			}
 		}
 	}
 }
@@ -630,7 +639,10 @@ country_event = {
 		
 		if = { 
 			limit = { has_idea = SLO_unclear_ideology_idea }
-			remove_ideas = SLO_unclear_ideology_idea
+			swap_ideas = {
+				remove_idea = SLO_unclear_ideology_idea
+				add_idea = SLO_unstable_regime_idea
+			}
 		}
 	}
 }
@@ -656,7 +668,10 @@ country_event = {
 		
 		if = { 
 			limit = { has_idea = SLO_unclear_ideology_idea }
-			remove_ideas = SLO_unclear_ideology_idea
+			swap_ideas = {
+				remove_idea = SLO_unclear_ideology_idea
+				add_idea = SLO_unstable_regime_idea
+			}
 		}
 	}
 }
@@ -682,7 +697,10 @@ country_event = {
 		
 		if = { 
 			limit = { has_idea = SLO_unclear_ideology_idea }
-			remove_ideas = SLO_unclear_ideology_idea
+			swap_ideas = {
+				remove_idea = SLO_unclear_ideology_idea
+				add_idea = SLO_unstable_regime_idea
+			}
 		}
 	}
 }

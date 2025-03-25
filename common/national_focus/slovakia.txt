@@ -372,7 +372,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_danubian_trade
 		icon = GFX_focus_POL_develop_polish_shipbuilding
-		x = 0
+		x = -2
 		y = 1
 		cost = 5
 		relative_position_id = SLO_the_slovak_river_fleet
@@ -455,9 +455,9 @@ focus_tree = {
 	focus = {	
 		id = SLO_bratislava_naval_academy
 		icon = GFX_goal_SLO_naval_academy
-		x = -2
+		x = 0
 		y = 1
-		cost = 5
+		cost = 10
 		relative_position_id = SLO_the_slovak_river_fleet
 		
 		prerequisite = { focus = SLO_the_slovak_river_fleet }
@@ -478,6 +478,15 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
+			add_doctrine_cost_reduction = {
+				name = SLO_bratislava_naval_academy
+				cost_reduction = 0.4
+				uses = 2
+				category = naval_doctrine
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			every_navy_leader = { 
 				add_coordination = 1
 				add_maneuver = 1
@@ -491,7 +500,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = SLO_danubian_trade
+		relative_position_id = SLO_bratislava_naval_academy
 		
 		prerequisite = { focus = SLO_danubian_trade }
 		prerequisite = { focus = SLO_strengthen_the_naval_industry }
@@ -784,7 +793,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_rigorous_testing
-		icon = GFX_
+		icon = GFX_goal_generic_CAS
 		x = 0
 		y = 2
 		cost = 10
@@ -846,7 +855,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_tough_training_programs
-		icon = GFX_
+		icon = GFX_focus_generic_air_bases
 		x = 0
 		y = 2
 		cost = 10
@@ -875,7 +884,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_kamikaze_pilots
-		icon = GFX_
+		icon = GFX_goal_SLO_kamikaze_pilots
 		x = 0
 		y = 2
 		cost = 10
@@ -915,7 +924,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_air_parity
-		icon = GFX_
+		icon = GFX_goal_generic_air_fighter2
 		x = -1
 		y = 1
 		cost = 5
@@ -992,7 +1001,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_quantity_as_a_quality_of_its_own
-		icon = GFX_
+		icon = GFX_goal_SLO_quantity_as_a_quality_of_its_own
 		x = 0
 		y = 2
 		cost = 10
@@ -1018,7 +1027,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_aerial_dominance
-		icon = GFX_
+		icon = GFX_goal_generic_CAS
 		x = -3
 		y = 1
 		cost = 10
@@ -1051,7 +1060,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_long_range_missions
-		icon = GFX_
+		icon = GFX_goal_SLO_long_range_missions
 		x = 0
 		y = 2
 		cost = 10
@@ -1076,7 +1085,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_strategic_bombing
-		icon = GFX_
+		icon = GFX_goal_generic_air_bomber
 		x = 0
 		y = 2
 		cost = 10
@@ -1160,7 +1169,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_open_new_pilot_schools
-		icon = GFX_
+		icon = GFX_focus_SOV_flying_clubs
 		x = 2
 		y = 2
 		cost = 10
@@ -1189,7 +1198,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_doctrinal_innovation
-		icon = GFX_
+		icon = GFX_goal_generic_air_doctrine
 		x = -2
 		y = 2
 		cost = 10
@@ -1220,7 +1229,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_death_from_above
-		icon = GFX_
+		icon = GFX_focus_generic_cas_aircraft
 		x = 0
 		y = 2
 		cost = 10
@@ -1295,8 +1304,7 @@ focus_tree = {
 	
 	focus = {
 		id = SLO_slovak_autarky
-		icon = GER_autarky_efforts
-		x = -7
+		icon = GE10
 		y = 1
 		relative_position_id = SLO_a_based_slovakia
 		cost = 6
@@ -1575,7 +1583,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SLO_new_procurement_contracts
-		cost = 8
+		cost = 5
 		prerequisite = {
 			focus = SLO_new_procurement_contracts
 		}
@@ -1839,7 +1847,7 @@ focus_tree = {
 	
 	focus = {
 		id = SLO_anti_hungarian_racial_laws
-		icon = GFX_
+		icon = GFX_goal_generic_forceful_treaty
 		x = -1
 		y = 1
 		relative_position_id = SLO_denounce_hungary
@@ -1855,7 +1863,7 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = { country_event = { id = slovakia.25 days = 12 random_days = 12 } }
 			
-			add_political_power = 60
+			add_political_power = 50
 		}
 	}
 	
@@ -2051,6 +2059,32 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = SLO_catholic_paramilitarism
+		icon = GFX_goal_SLO_christian_fascism
+		x = 0
+		y = 1
+		relative_position_id = SLO_denounce_germany
+		cost = 5
+		prerequisite = {
+			focus = SLO_denounce_germany
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			add_manpower = 75000
+
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_1
+				amount = 2000
+				producer = SLO
+			}			
+		}
+	}
+	
+	focus = {
 		id = SLO_trust_in_mountain_general
 		icon = GFX_goal_SLO_mountain_generals_cult_of_personality
 		x = 8
@@ -2175,7 +2209,7 @@ focus_tree = {
 	
 	focus = {
 		id = SLO_fearless_commander
-		icon = GFX_
+		icon = GFX_goal_SLO_slovak_tanks_in_budapest
 		x = -2
 		y = 1
 		relative_position_id = SLO_a_portrait_on_every_wall

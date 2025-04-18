@@ -40,6 +40,7 @@ ideas ={
 		SLO_GFX_propaganda_germany_will_be_conquered_idea = {}
 		SLO_GFX_propaganda_we_are_united_idea = {}
 		SLO_GFX_propaganda_a_better_future_in_free_slovakia_idea = {}
+		SLO_GFX_propaganda_the_youth_serve_their_leader_idea = {}
 		
 		SLO_NAME_propaganda_death_to_fascist_bastards_idea = {}
 		SLO_NAME_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea = {}
@@ -54,5 +55,6 @@ ideas ={
 		SLO_NAME_propaganda_germany_will_be_conquered_idea = {}
 		SLO_NAME_propaganda_we_are_united_idea = {}
 		SLO_NAME_propaganda_a_better_future_in_free_slovakia_idea = {}
+		SLO_NAME_propaganda_the_youth_serve_their_leader_idea = {}
 	}
 }

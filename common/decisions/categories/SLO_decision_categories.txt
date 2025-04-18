@@ -36,6 +36,46 @@ SLO_deportations_to_mongolia_decision_category = {
 	}
 	
 	visible = {
-		has_completed_focus = SLO_deport_them_to_mongolia
+#		has_completed_focus = SLO_deport_them_to_mongolia
+		always = no
+	}
+}
+
+SLO_the_slovak_occupation_authority = {
+	priority = 998
+	
+	icon = decision_category_generic_fascism
+	
+	picture = GFX_decision_cat_picture_SLO_occupation_authority
+	
+	allowed = {
+		original_tag = SLO
+	}
+	
+	visible = {
+		has_completed_focus = SLO_creation_of_the_slovak_occupation_authority
+	}
+}
+
+SLO_stabilising_the_regime_category = {
+	priority = 997
+	
+	icon = decision_category_generic_fascism
+	
+	picture = GFX_decision_cat_picture_operational_planning
+	
+	allowed = {
+		original_tag = SLO
+	}
+	
+	visible_when_empty = yes
+	
+	visible = {
+		has_country_flag = SLO_partisan_uprising_flag
+		
+		has_country_leader = {
+			character = SLO_mountain_general
+			ruling_only = yes
+		}
 	}
 }

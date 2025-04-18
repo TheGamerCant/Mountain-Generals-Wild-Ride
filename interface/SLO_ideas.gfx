@@ -24,11 +24,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/SLO_letecke_opravovne_trenchin.dds"
 	}
 	SpriteType = {
+		name = "GFX_idea_SLO_slovak_fanaticism"
+		texturefile = "gfx/interface/ideas/SLO_slovak_fanaticism.dds"
+	}
+	SpriteType = {
 		name = "GFX_idea_SLO_slovenska_plavba_a_ristavy"
 		texturefile = "gfx/interface/ideas/SLO_slovenska_plavba_a_ristavy.dds"
 	}
 	SpriteType = {
 		name = "GFX_idea_SLO_unclear_ideology_idea"
 		texturefile = "gfx/interface/ideas/SLO_unclear_ideology_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SLO_unstable_regime"
+		texturefile = "gfx/interface/ideas/SLO_unstable_regime.dds"
 	}
 }

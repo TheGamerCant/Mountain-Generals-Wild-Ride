@@ -1,0 +1,6 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_decision_cat_picture_SLO_occupation_authority"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_SLO_occupation_authority.dds"
+	}
+}

@@ -180,7 +180,7 @@ recruit_character = SLO_jozef_sivak
 
 set_research_slots = 3
 
-set_stability = 0.45
+set_stability = 0.44
 set_war_support = 0.38
 
 set_politics = {
@@ -217,6 +217,7 @@ country_event = { id = slovakia.21 days = 940 random_days = 30 }
 add_manpower = 12800
 
 add_ideas = {
+	limited_conscription
 	low_economic_mobilisation
 	SLO_jozef_tiso
 	SLO_bratislavan_uprising_idea
@@ -283,6 +284,7 @@ add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_mother_slov
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_germany_will_be_conquered_idea }
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_we_are_united_idea }
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_a_better_future_in_free_slovakia_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_the_youth_serve_their_leader_idea }
 		
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_death_to_fascist_bastards_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea }
@@ -297,6 +299,7 @@ add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mother_sl
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_germany_will_be_conquered_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_we_are_united_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_a_better_future_in_free_slovakia_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_the_youth_serve_their_leader_idea }
 
 resize_array = { array = SLO.propaganda_PP_COST_array size = SLO.propaganda_GFX_array^num value = 15 }
 resize_array = { array = SLO.propaganda_slot_campaign_array size = SLO.propaganda_slots_max value = 0 }
@@ -316,12 +319,12 @@ round_variable = SLO.propaganda_days_until_second_change
 
 
 #Economy
-add_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
 set_variable = { SLO_economy_dm_stability_factor = -0.10 }
 set_variable = { SLO_economy_dm_political_power_cost = 0.15 }
 set_variable = { SLO_economy_dm_consumer_goods_factor = 0.20 }
 set_variable = { SLO_economy_dm_production_speed_buildings_factor = -0.12 }
 set_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = -0.15 }
+set_variable = { SLO_economy_dm_research_speed_factor = -0.07 }
 
 set_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0 }
 set_variable = { SLO_economy_dm_economy_cost_factor = 0 }
@@ -338,21 +341,34 @@ set_variable = { SLO_economy_dm_production_speed_industrial_complex_factor = 0 }
 set_variable = { SLO_economy_dm_production_speed_infrastructure_factor = 0 }
 set_variable = { SLO_economy_dm_production_speed_supply_node_factor = 0 }
 set_variable = { SLO_economy_dm_production_speed_rail_way_factor = 0 }
+set_variable = { SLO_economy_dm_production_speed_synthetic_refinery_factor = 0 }
+set_variable = { SLO_economy_dm_local_resources_factor = 0 }
+set_variable = { SLO_economy_dm_global_building_slots = 0 }
+
+add_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
 
 
 
 #Army
-add_dynamic_modifier = { modifier = SLO_army_dynamic_modifier }
-set_variable = { SLO_army_dm_experience_gain_army_factor = -0.10 }
+set_variable = { SLO_army_dm_experience_gain_army_factor = -0.15 }
 set_variable = { SLO_army_dm_army_org_factor = -0.15 }
 set_variable = { SLO_army_dm_training_time_army_factor = 0.25 }
 set_variable = { SLO_army_dm_minimum_training_level = -0.08 }
 set_variable = { SLO_army_dm_army_speed_factor = 0 }
+set_variable = { SLO_army_dm_coordination_bonus = 0 }
+set_variable = { SLO_army_dm_mobilization_speed = 0 }
+set_variable = { SLO_army_dm_conscription = 0 }
+set_variable = { SLO_army_dm_conscription_factor = 0 }
+set_variable = { SLO_army_dm_army_strength_factor = 0 }
+set_variable = { SLO_army_dm_max_command_power = 0 }
+set_variable = { SLO_army_dm_max_planning_factor = 0 }
+set_variable = { SLO_army_dm_supply_factor = 0 }
+set_variable = { SLO_army_dm_army_fuel_consumption_factor = 0 }
 
+add_dynamic_modifier = { modifier = SLO_army_dynamic_modifier }
 
 
 #Air Force
-add_dynamic_modifier = { modifier = SLO_air_force_dynamic_modifier }
 set_variable = { SLO_air_force_dm_air_accidents_factor = 0.40 }
 set_variable = { SLO_air_force_dm_air_ace_generation_chance_factor = 0.10 }
 set_variable = { SLO_air_force_dm_air_manpower_requirement_factor = -0.1 }
@@ -370,8 +386,10 @@ set_variable = { SLO_air_force_dm_cas_damage_reduction = 0 }
 set_variable = { SLO_air_force_dm_conscription = 0 }
 set_variable = { SLO_air_force_dm_ground_attack_factor = 0 }
 
+add_dynamic_modifier = { modifier = SLO_air_force_dynamic_modifier }
+
 #Navy
-set_variable = { SLO_navy_dm_experience_gain_navy = 0.10 }
+set_variable = { SLO_navy_dm_experience_gain_navy = 0 }
 set_variable = { SLO_navy_dm_industrial_capacity_dockyard = -0.20 }
 set_variable = { SLO_navy_dm_naval_retreat_chance = 0.25 }
 set_variable = { SLO_navy_dm_navy_max_range_factor = -0.16 }
@@ -379,6 +397,8 @@ set_variable = { SLO_navy_dm_naval_torpedo_enemy_critical_chance_factor = 0.20 }
 set_variable = { SLO_navy_dm_navy_leader_start_maneuvering_level = 0 }
 set_variable = { SLO_navy_dm_navy_leader_start_coordination_level = 0 }
 set_variable = { SLO_navy_dm_experience_gain_navy_unit_factor = 0 }
+
+add_dynamic_modifier = { modifier = SLO_river_fleet_dynamic_modifier }
 
 
 add_ideas = {

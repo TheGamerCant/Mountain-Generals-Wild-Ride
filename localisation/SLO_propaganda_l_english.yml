@@ -38,6 +38,8 @@
  SLO_NAME_propaganda_a_better_future_in_free_slovakia_idea:0 "A better future in free Slovakia!"
  SLO_GFX_propaganda_a_better_future_in_free_slovakia_idea:0 "GFX_propaganda_SLO_a_better_future_in_free_slovakia"
 		
+ SLO_NAME_propaganda_the_youth_serve_their_leader_idea:0 "The youth serve their leader"
+ SLO_GFX_propaganda_the_youth_serve_their_leader_idea:0 "GFX_propaganda_SLO_the_youth_serve_their_leader"
  
 
 
@@ -77,3 +79,5 @@
  SLO_propaganda_campaign_11_desc:0 ""
  SLO_propaganda_campaign_12:0 "[?SLO.propaganda_NAME_array^12.GetTokenLocalizedKey]"
  SLO_propaganda_campaign_12_desc:0 ""
+ SLO_propaganda_campaign_13:0 "[?SLO.propaganda_NAME_array^13.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_13_desc:0 ""

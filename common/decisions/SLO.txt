@@ -188,7 +188,7 @@ SLO_propaganda_decision_category = {
 		modifier = {
 			fascism_drift = 0.10
 			war_support_factor = 0.15
-			stability_weekly = -0.002
+			stability_factor = -0.05
 			political_power_gain = 0.10
 		}
 		
@@ -327,7 +327,7 @@ SLO_propaganda_decision_category = {
 		
 		available = {
 			SLO_available_propaganda_slot = yes
-			any_enemy_country = { has_government = communism }
+			any_enemy_country = { OR = { has_government = communism original_tag = CZE } }
 		}
 		
 		visible = {
@@ -391,7 +391,7 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^7
 
 		modifier = {
-			production_speed_buildings_factor = 0.10
+			production_speed_buildings_factor = 0.06
 			consumer_goods_factor = -0.15
 			production_speed_industrial_complex_factor = 0.15
 			production_speed_infrastructure_factor = 0.15
@@ -660,6 +660,390 @@ SLO_propaganda_decision_category = {
 			SLO_end_propaganda_campaign = yes
 		}
 	}
+	
+	SLO_propaganda_campaign_13 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				AND = {
+					has_completed_focus = SLO_the_teachings_of_mountain_general
+					has_government = fascism
+				}
+			}
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^13
+
+		modifier = {
+			war_support_factor = 0.05
+			fascism_drift = 0.10
+			political_power_gain = 0.20
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 13 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 13 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+}
+
+SLO_stabilising_the_regime_category = {
+	SLO_deal_with_partisans_in_western_slovakia = { 
+
+		icon = generic_civil_support
+
+		ai_will_do = {
+			base = 100
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			has_country_flag = SLO_partisan_uprising_flag
+		}
+		
+		visible = {
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 70
+			} 
+		}
+		
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+			command_power > 24
+			
+		}
+		custom_cost_text = decision_cost_ie_500_MP_500_CP_25
+
+		days_remove = 60
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment
+					amount = -500
+				}
+				add_manpower = -1000
+				add_command_power = -25
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = { SLO_days_between_partisan_activity = 5 }
+			
+			if = { 
+				limit = { has_active_mission = SLO_partisan_activity }
+				add_days_mission_timeout = {
+					mission = SLO_partisan_activity
+					days = 5
+				}
+			}
+		}
+	}
+	
+	SLO_deal_with_partisans_in_eastern_slovakia = { 
+
+		icon = generic_civil_support
+
+		ai_will_do = {
+			base = 100
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			has_country_flag = SLO_partisan_uprising_flag
+		}
+		
+		visible = {
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 71
+			} 
+		}
+		
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+			command_power > 24
+			
+		}
+		custom_cost_text = decision_cost_ie_500_MP_500_CP_25
+
+		days_remove = 60
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment
+					amount = -500
+				}
+				add_manpower = -1000
+				add_command_power = -25
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = { SLO_days_between_partisan_activity = 5 }
+			
+			if = { 
+				limit = { has_active_mission = SLO_partisan_activity }
+				add_days_mission_timeout = {
+					mission = SLO_partisan_activity
+					days = 5
+				}
+			}
+		}
+	}
+	
+	SLO_deal_with_partisans_in_southern_slovakia = { 
+
+		icon = generic_civil_support
+
+		ai_will_do = {
+			base = 100
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			has_country_flag = SLO_partisan_uprising_flag
+		}
+		
+		visible = {
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 664
+			} 
+		}
+		
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+			command_power > 24
+			
+		}
+		custom_cost_text = decision_cost_ie_500_MP_500_CP_25
+
+		days_remove = 90
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment
+					amount = -500
+				}
+				add_manpower = -1000
+				add_command_power = -25
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = { SLO_days_between_partisan_activity = 5 }
+			
+			if = { 
+				limit = { has_active_mission = SLO_partisan_activity }
+				add_days_mission_timeout = {
+					mission = SLO_partisan_activity
+					days = 5
+				}
+			}
+			
+			add_state_core = 664
+			
+			set_country_flag = SLO_has_dealt_with_partisans_in_south_slovakia
+		}
+	}
+	
+	SLO_deal_with_partisans_in_carpathian_ruthenia = { 
+
+		icon = generic_civil_support
+
+		ai_will_do = {
+			base = 100
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			has_country_flag = SLO_partisan_uprising_flag
+		}
+		
+		visible = {
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 73
+			} 
+		}
+		
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+			command_power > 24
+			
+		}
+		custom_cost_text = decision_cost_ie_500_MP_500_CP_25
+
+		days_remove = 90
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment
+					amount = -500
+				}
+				add_manpower = -1000
+				add_command_power = -25
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = { SLO_days_between_partisan_activity = 5 }
+			
+			if = { 
+				limit = { has_active_mission = SLO_partisan_activity }
+				add_days_mission_timeout = {
+					mission = SLO_partisan_activity
+					days = 5
+				}
+			}
+			
+			add_state_core = 73
+		}
+	}
+	
+	SLO_partisan_activity = {
+
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_country_flag = SLO_partisan_uprising_flag
+			}
+		}
+
+		days_mission_timeout = var:SLO_days_between_partisan_activity
+
+		activation = {
+			has_country_flag = SLO_partisan_uprising_flag
+		
+			has_country_leader = {
+				character = SLO_mountain_general
+				ruling_only = yes
+			}
+		}
+
+		visible = {
+			
+		}		
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = no
+
+		timeout_effect = {
+			random_list = {
+				33 = {
+					random_owned_state = {
+						limit = {
+							is_fully_controlled_by = ROOT
+							arms_factory > 0
+						}
+						damage_building = {
+							type = arms_factory
+							damage = 0.5
+						}
+					}
+				}
+				33 = {
+					random_owned_state = {
+						limit = {
+							is_fully_controlled_by = ROOT
+							arms_factory > 0
+						}
+						damage_building = {
+							type = industrial_complex
+							damage = 0.5
+						}
+					}
+				}
+				33 = {
+					random_owned_state = {
+						limit = {
+							is_fully_controlled_by = ROOT
+							infrastructure > 0
+						}
+						damage_building = {
+							type = infrastructure
+							damage = 0.75
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 SLO_deportations_to_mongolia_decision_category = {
@@ -775,6 +1159,316 @@ SLO_deportations_to_mongolia_decision_category = {
 				clear_variable = PREV.random_num
 				clear_variable = PREV.state_population_k_hold
 			}
+		}
+	}
+}
+
+SLO_the_slovak_occupation_authority = {
+	SLO_SOA_release_hungary = { 
+
+		icon = decision_eng_trade_unions_support
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			43 = {	
+				OWNER = {
+					OR = {
+						tag = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+			}
+			154 = {	
+				OWNER = {
+					OR = {
+						tag = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+			}
+			155 = {	
+				OWNER = {
+					OR = {
+						tag = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+			}
+			973 = {	
+				OWNER = {
+					OR = {
+						tag = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+			}
+			974 = {	
+				OWNER = {
+					OR = {
+						tag = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+			}
+		}
+		
+		visible = { 
+			any_state = {
+				is_owned_by = ROOT
+				is_core_of = HUN
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = { is_core_of = HUN }
+					add_core_of = SLH
+				}
+				
+				SLH = { inherit_technology = HUN set_cosmetic_tag = SLH_Schizo_Fascism }
+			}
+			
+			release_autonomy = {
+				target = SLH
+				autonomy_state = autonomy_reichskommissariat
+				freedom_level = 0.5
+			}
+			
+			set_country_flag = SLO_integrating_hungary_flag
+		}
+
+		remove_effect = {
+		}
+	}
+	
+	SLO_integrate_hungary = { 
+
+		icon = decision_generic_confiscation
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLH = { 
+				exists = yes
+				is_puppet_of = ROOT
+				
+				controls_state = 43
+				controls_state = 155
+				controls_state = 974
+				controls_state = 973
+				controls_state = 154
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = SLO_can_annex_hungary_tt
+				check_variable = { SLO.hungary_integration_progress > 4 }		#At least 5
+			}
+		}
+		
+		visible = { 
+			has_country_flag = SLO_integrating_hungary_flag
+		}
+		
+		fire_only_once = yes
+
+		days_remove = 30
+
+		cost = 100
+
+		modifier = {
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			clr_country_flag = SLO_integrating_hungary_flag
+			clear_variable = SLO.hungary_integration_progress
+			every_state = {
+				limit = { is_core_of = SLH }
+				remove_core_of = HUN
+				remove_core_of = SLH
+				add_core_of = SLO
+			}		
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			annex_country = {
+				target = SLH
+				transfer_troops = yes
+			}
+		}
+	}
+	
+	SLO_rename_hungarian_cities = { 
+
+#		icon = decision_eng_trade_unions_support
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLH = { 
+				exists = yes
+				is_puppet_of = ROOT
+				
+				controls_state = 43
+				controls_state = 155
+				controls_state = 974
+				controls_state = 973
+				controls_state = 154
+			}
+		}
+		
+		visible = { 
+			has_country_flag = SLO_integrating_hungary_flag
+		}
+		
+		fire_only_once = yes
+
+		days_remove = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_cost = 0.10
+		}
+		
+		complete_effect = {
+			43 = { set_state_name = SLO_mountain_general_kraje }
+			set_province_name = { id = 9660 name = SLO_mountain_general_city }
+			set_province_name = { id = 6720 name = SLO_heroes_of_slovakia }
+			set_province_name = { id = 686 name = SLO_sopron }
+			set_province_name = { id = 11659 name = SLO_debrecin }
+			set_province_name = { id = 6700 name = SLO_segedin }
+		}
+
+		remove_effect = {
+			SLO_increase_hungarian_integration = yes
+		}
+	}
+	
+	SLO_slovakian_education_in_hungary = { 
+
+#		icon = decision_eng_trade_unions_support
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLH = { 
+				exists = yes
+				is_puppet_of = ROOT
+				
+				controls_state = 43
+				controls_state = 155
+				controls_state = 974
+				controls_state = 973
+				controls_state = 154
+			}
+			
+			has_completed_focus = SLO_the_teachings_of_mountain_general
+		}
+		
+		visible = { 
+			has_country_flag = SLO_integrating_hungary_flag
+		}
+		
+		fire_only_once = yes
+
+		days_remove = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_cost = 0.10
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			SLO_increase_hungarian_integration = yes
+		}
+	}
+	
+	SLO_purge_the_hungarian_elite = { 
+
+		icon = decision_oppression
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLH = { 
+				exists = yes
+				is_puppet_of = ROOT
+				
+				controls_state = 43
+				controls_state = 155
+				controls_state = 974
+				controls_state = 973
+				controls_state = 154
+			}
+		}
+		
+		visible = { 
+			has_country_flag = SLO_integrating_hungary_flag
+		}
+		
+		fire_only_once = yes
+
+		days_remove = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_cost = 0.10
+		}
+		
+		complete_effect = {
+			43 = { add_manpower = -2078 add_resistance = 5 }
+			155 = { add_manpower = -973 add_resistance = 5 }
+		}
+
+		remove_effect = {
+			SLO_increase_hungarian_integration = yes
 		}
 	}
 }

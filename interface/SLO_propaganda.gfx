@@ -64,4 +64,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/propaganda/SLO_a_better_future_in_free_slovakia.dds"
 		noOfFrames = 5
 	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_the_youth_serve_their_leader"
+		texturefile = "gfx/interface/propaganda/SLO_the_youth_serve_their_leader.dds"
+		noOfFrames = 5
+	}
 }

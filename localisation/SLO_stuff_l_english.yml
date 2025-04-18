@@ -1,8 +1,12 @@
 ﻿l_english:
-#Opinion Modifiers
+ # Opinion Modifiers
  SLO_anti_hungarian_campaigns:0 "Anti Hungarian Campaigns"
  
-#MIOs
+ # Country Flags
+ SLO_partisan_uprising_flag:0 "Partisan activity is ongoing"
+ SLO_has_dealt_with_partisans_in_south_slovakia:0 "Has dealt with Partisan activity in [664.GetName]"
+ 
+ # MIOs
  SLO_zbrojovka_brno_organization:0 "$CZE_zbrojovka_brno_organization$"
  SLO_skoda_artillery_organization:0 "$CZE_skoda_artillery_organization$"
  SLO_skoda_shipyards_organization:0 "$CZE_skoda_shipyards_organization$"
@@ -13,3 +17,12 @@
  SLO_letecke_opravovne_trenchin:0 "Letecké Opravovne Trenčín"
  SLO_dynamit_nobel_bratislava:0 "Dynamit Nobel Bratislava"
  SLO_slovenska_plavba_a_ristavy_organization:0 "Slovenská plavba a prístavy"
+ 
+ # New names
+ SLO_mountain_general_city:0 "Mountain General Mesto"
+ SLO_mountain_general_kraje:0 "Mountain General Kraje"
+ SLO_stafanikgrad:0 "Štefánikgrad"
+ SLO_sopron:0 "Šoproň"
+ SLO_debrecin:0 "Debrecín"
+ SLO_segedin:0 "Segedín"
+ SLO_heroes_of_slovakia:0 "Hrdinovia Slovenska"

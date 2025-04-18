@@ -1,6 +1,8 @@
 ﻿l_english:
  SLO_bratislavan_uprising_idea:0 "The Bratislavan Uprising"
  SLO_bratislavan_uprising_idea_desc:0 "With the call to arms from Mountain General, many Slovaks around the Bratislava area have joined his cause against the Czechoslovak government."
+ SLO_bratislavan_uprising_idea_2:0 "The Bratislavan Uprising"
+ SLO_bratislavan_uprising_idea_2_desc:0 "With the call to arms from Mountain General, many Slovaks around the Bratislava area have joined his cause against the Czechoslovak government."
  SLO_battle_of_brno_idea:0 "The Battle of Brno"
  SLO_battle_of_brno_idea_desc:0 "The key city of Brno is in sight, and Mountain General has ordered the diversion of Slovakia's greatest forces towards it."
  SLO_battle_of_brno_idea_tt:0 "Army Attack on non-core territory: §G+10.0%§!"
@@ -41,5 +43,14 @@
  SLO_unclear_ideology_idea:0 "Unclear Ideology"
  SLO_unclear_ideology_idea_desc:0 "Despite his genius, Mountain General has been obfuscative on specific ideological tenants so far. For now he does this to maintain a broad tent of support among the populous, but we will have to figure out our nation's path at some point."
  
- SLO_unstable_regime_idea:0 "Unstable Regime"
- SLO_unstable_regime_idea_desc:0 "Mountain General's rapid departure from the previous Czechoslovak norm has not gone unnoticed, many steps will need to be taken to stabilise the current regime."
+ SLO_unstable_regime_idea_1:0 "Unstable Regime"
+ SLO_unstable_regime_idea_1_desc:0 "Mountain General's rapid departure from the previous Czechoslovak norm has not gone unnoticed, many steps will need to be taken to stabilise and centralise the current regime and bring the people in line with Mountain Generalism."
+ SLO_unstable_regime_idea_2:0 "Unstable Regime"
+ SLO_unstable_regime_idea_2_desc:0 "$SLO_unstable_regime_idea_1_desc$"
+ SLO_unstable_regime_idea_3:0 "Unstable Regime"
+ SLO_unstable_regime_idea_3_desc:0 "$SLO_unstable_regime_idea_1_desc$"
+ SLO_unstable_regime_idea_4:0 "Unstable Regime"
+ SLO_unstable_regime_idea_4_desc:0 "$SLO_unstable_regime_idea_1_desc$"
+ 
+ SLO_slovak_fanaticism_idea_1:0 "Slovak Fanaticism"
+ SLO_slovak_fanaticism_idea_1_desc:0 "$SLO_only_one_master_race_desc$"

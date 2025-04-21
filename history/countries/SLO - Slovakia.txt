@@ -181,7 +181,7 @@ recruit_character = SLO_jozef_sivak
 set_research_slots = 3
 
 set_stability = 0.44
-set_war_support = 0.38
+set_war_support = 0.31
 
 set_politics = {
 	ruling_party = neutrality
@@ -285,6 +285,10 @@ add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_germany_wil
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_we_are_united_idea }
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_a_better_future_in_free_slovakia_idea }
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_the_youth_serve_their_leader_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_such_a_nation_will_not_perish_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_god_blesses_your_harvest_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_the_nation_is_crying_for_help_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_slovakia_at_the_turning_point_idea }
 		
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_death_to_fascist_bastards_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea }
@@ -300,6 +304,10 @@ add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_germany_w
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_we_are_united_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_a_better_future_in_free_slovakia_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_the_youth_serve_their_leader_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_such_a_nation_will_not_perish_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_god_blesses_your_harvest_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_the_nation_is_crying_for_help_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_slovakia_at_the_turning_point_idea }
 
 resize_array = { array = SLO.propaganda_PP_COST_array size = SLO.propaganda_GFX_array^num value = 15 }
 resize_array = { array = SLO.propaganda_slot_campaign_array size = SLO.propaganda_slots_max value = 0 }
@@ -364,6 +372,22 @@ set_variable = { SLO_army_dm_max_command_power = 0 }
 set_variable = { SLO_army_dm_max_planning_factor = 0 }
 set_variable = { SLO_army_dm_supply_factor = 0 }
 set_variable = { SLO_army_dm_army_fuel_consumption_factor = 0 }
+set_variable = { SLO_army_dm_army_defence_factor = 0 }
+set_variable = { SLO_army_dm_army_attack_factor = 0 }
+set_variable = { SLO_army_dm_army_morale_factor = 0 }
+set_variable = { SLO_army_dm_resistance_growth = 0 }
+set_variable = { SLO_army_dm_army_artillery_attack_factor = 0 }
+set_variable = { SLO_army_dm_army_armor_attack_factor = 0 }
+set_variable = { SLO_army_dm_army_armor_defence_factor = 0 }
+set_variable = { SLO_army_dm_mechanized_defence_factor = 0 }
+set_variable = { SLO_army_dm_land_reinforce_rate = 0 }
+set_variable = { SLO_army_dm_female_random_army_leader_chance = 0 }
+set_variable = { SLO_army_dm_female_random_admiral_chance = 0 }
+set_variable = { SLO_army_dm_female_divisional_commander_chance = 0 }
+set_variable = { SLO_army_dm_operative_slot = 0 }
+set_variable = { SLO_army_dm_enemy_operative_capture_chance_factor = 0 }
+set_variable = { SLO_army_dm_recon_factor = 0 }
+set_variable = { SLO_army_dm_intel_from_combat_factor = 0 }
 
 add_dynamic_modifier = { modifier = SLO_army_dynamic_modifier }
 

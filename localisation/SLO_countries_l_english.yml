@@ -6,3 +6,12 @@
  SLH_Schizo_Fascism:0 "Slovenský Komisariát Maďarsko"
  SLH_Schizo_Fascism_DEF:0 "the Slovakian Commissariat of Hungary"
  SLH_Schizo_Fascism_ADJ:0 "Hungarian"
+ 
+ 
+ SLC:0 "Slovakian Czechia"
+ SLC_DEF:0 "the Slovak Occupation Authority of Czechia"
+ SLC_ADJ:0 "Hungarian"
+ 
+ SLC_Schizo_Fascism:0 "Slovenský Komisariát Českej"
+ SLC_Schizo_Fascism_DEF:0 "the Slovakian Commissariat of Czechia"
+ SLC_Schizo_Fascism_ADJ:0 "Czech"

@@ -298,7 +298,7 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^5
 
 		modifier = {
-			war_support_weekly = 0.002
+			war_support_weekly = 0.001
 			consumer_goods_factor = -0.30
 		}
 		
@@ -391,7 +391,7 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^7
 
 		modifier = {
-			production_speed_buildings_factor = 0.06
+			production_speed_buildings_factor = 0.10
 			consumer_goods_factor = -0.15
 			production_speed_industrial_complex_factor = 0.15
 			production_speed_infrastructure_factor = 0.15
@@ -600,8 +600,9 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^11
 
 		modifier = {
-			monthly_population = 0.25
+			weekly_manpower = 500
 			political_power_gain = 0.30
+			stability_factor = 0.05
 		}
 		
 		complete_effect = {
@@ -708,6 +709,189 @@ SLO_propaganda_decision_category = {
 
 		remove_effect = {
 			set_variable = { SLO.propaganda_campaign_to_end = 13 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_14 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^14
+
+		modifier = {
+			monthly_population = 0.40
+			war_support_weekly = 0.001
+			political_power_factor = 0.08
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 14 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 14 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_15 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^15
+
+		modifier = {
+			stability_weekly = 0.001
+			consumer_goods_factor = -0.10
+			production_factory_efficiency_gain_factor = 0.10
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 15 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 15 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_16 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^16
+
+		modifier = {
+			consumer_goods_factor = -0.25
+			war_support_weekly = 0.001
+			min_export = -0.1
+			political_power_gain = 0.15
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 16 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 16 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	SLO_propaganda_campaign_17 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^17
+
+		modifier = {
+			army_attack_factor = 0.05
+			army_org_regain = 0.05
+			breakthrough_factor = 0.12
+			org_loss_at_low_org_factor = -0.3
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 17 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 17 }
 			SLO_end_propaganda_campaign = yes
 		}
 	}
@@ -1220,9 +1404,15 @@ SLO_the_slovak_occupation_authority = {
 		}
 		
 		visible = { 
-			any_state = {
-				is_owned_by = ROOT
-				is_core_of = HUN
+			NOT = { has_country_flag = SLO_integrated_hungary_flag }
+			OR = {
+				HUN = { is_puppet_of = ROOT }
+				any_state = {
+					AND = {
+						is_owned_by = ROOT
+						is_core_of = HUN
+					}
+				}
 			}
 		}
 		
@@ -1240,15 +1430,44 @@ SLO_the_slovak_occupation_authority = {
 					add_core_of = SLH
 				}
 				
-				SLH = { inherit_technology = HUN set_cosmetic_tag = SLH_Schizo_Fascism }
+				SLH = { 
+					inherit_technology = HUN 
+					set_cosmetic_tag = SLH_Schizo_Fascism 
+					
+					if = {
+						limit = { country_exists = HUN }
+						annex_country = {
+							target = HUN
+							transfer_troops = yes
+						}
+					}	
+				}
+				
+				if = {
+					limit = { country_exists = HUN }
+					set_autonomy = {
+						target = SLH
+						autonomous_state = autonomy_reichskommissariat
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+				else = {
+					release_autonomy = {
+						target = SLH
+						autonomy_state = autonomy_reichskommissariat
+						freedom_level = 0.5
+					}
+				}
 			}
 			
-			release_autonomy = {
-				target = SLH
-				autonomy_state = autonomy_reichskommissariat
-				freedom_level = 0.5
+			effect_tooltip = {
+				release_autonomy = {
+					target = SLH
+					autonomy_state = autonomy_reichskommissariat
+					freedom_level = 0.5
+				}
 			}
-			
 			set_country_flag = SLO_integrating_hungary_flag
 		}
 
@@ -1282,7 +1501,7 @@ SLO_the_slovak_occupation_authority = {
 			
 			custom_trigger_tooltip = {
 				tooltip = SLO_can_annex_hungary_tt
-				check_variable = { SLO.hungary_integration_progress > 4 }		#At least 5
+				check_variable = { SLO.hungary_integration_progress > 2 }
 			}
 		}
 		
@@ -1305,6 +1524,8 @@ SLO_the_slovak_occupation_authority = {
 		remove_effect = {
 			clr_country_flag = SLO_integrating_hungary_flag
 			clear_variable = SLO.hungary_integration_progress
+			set_country_flag = SLO_integrated_hungary_flag
+			
 			every_state = {
 				limit = { is_core_of = SLH }
 				remove_core_of = HUN
@@ -1469,6 +1690,270 @@ SLO_the_slovak_occupation_authority = {
 
 		remove_effect = {
 			SLO_increase_hungarian_integration = yes
+		}
+	}
+	
+	SLO_SOA_release_czechia = { 
+
+		icon = decision_eng_trade_unions_support
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			NOT = { country_exists = CZE }
+			9 = {	
+				OWNER = {
+					OR = {
+						tag = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+			}
+			75 = {	
+				OWNER = {
+					OR = {
+						tag = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+			}
+		}
+		
+		visible = { 
+			NOT = { has_country_flag = SLO_integrated_czechia_flag }
+			OR = {
+				CZE = { is_puppet_of = ROOT }
+				any_state = {
+					AND = {
+						is_owned_by = ROOT
+						is_core_of = CZE
+					}
+				}
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = { is_core_of = CZE }
+					add_core_of = SLC
+				}
+				
+				SLC = { 
+					inherit_technology = CZE 
+					set_cosmetic_tag = SLC_Schizo_Fascism 
+					
+					if = {
+						limit = { country_exists = CZE }
+						annex_country = {
+							target = CZE
+							transfer_troops = yes
+						}
+					}	
+				}
+				
+				if = {
+					limit = { country_exists = CZE }
+					set_autonomy = {
+						target = SLC
+						autonomous_state = autonomy_reichskommissariat
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+				else = {
+					release_autonomy = {
+						target = SLC
+						autonomy_state = autonomy_reichskommissariat
+						freedom_level = 0.5
+					}
+				}
+			}
+			
+			effect_tooltip = {
+				release_autonomy = {
+					target = SLC
+					autonomy_state = autonomy_reichskommissariat
+					freedom_level = 0.5
+				}
+			}
+			set_country_flag = SLO_integrating_czechia_flag
+		}
+
+		remove_effect = {
+		}
+	}
+	
+	SLO_integrate_czechia = { 
+
+		icon = decision_generic_confiscation
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLC = { 
+				exists = yes
+				is_puppet_of = ROOT
+				
+				controls_state = 9
+				controls_state = 75
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = SLO_can_annex_czechia_tt
+				check_variable = { SLO.czechia_integration_progress > 1 }
+			}
+		}
+		
+		visible = { 
+			has_country_flag = SLO_integrating_czechia_flag
+		}
+		
+		fire_only_once = yes
+
+		days_remove = 30
+
+		cost = 100
+
+		modifier = {
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			clr_country_flag = SLO_integrating_czechia_flag
+			clear_variable = SLO.czechia_integration_progress
+			set_country_flag = SLO_integrated_czechia_flag
+			
+			every_state = {
+				limit = { is_core_of = SLC }
+				remove_core_of = CZE
+				remove_core_of = SLC
+				add_core_of = SLO
+			}		
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			annex_country = {
+				target = SLC
+				transfer_troops = yes
+			}
+		}
+	}
+	
+	SLO_the_ties_that_bind = { 
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLC = { 
+				exists = yes
+				is_puppet_of = ROOT
+				
+				controls_state = 9
+				controls_state = 75
+			}
+		}
+		
+		visible = { 
+			has_country_flag = SLO_integrating_czechia_flag
+		}
+		
+		fire_only_once = yes
+
+		days_remove = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_cost = 0.10
+		}
+		
+		complete_effect = {
+			set_province_name = { id = 3569 name = SLO_stafanikgrad }
+			SLC = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.10
+				}
+			}
+		}
+
+		remove_effect = {
+			SLO_increase_czech_integration = yes
+		}
+	}
+	
+	SLO_unity_under_the_man_in_the_mask = { 
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			has_completed_focus = SLO_a_portrait_on_every_wall
+			SLC = { 
+				exists = yes
+				is_puppet_of = ROOT
+				
+				controls_state = 9
+				controls_state = 75
+			}
+		}
+		
+		visible = { 
+			has_country_flag = SLO_integrating_czechia_flag
+		}
+		
+		fire_only_once = yes
+
+		days_remove = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_cost = 0.10
+		}
+		
+		complete_effect = {
+			swap_ruler_traits = {
+				remove = the_man_behind_the_mask
+				add = the_man_behind_the_mask_less_resistance
+			}
+		}
+
+		remove_effect = {
+			SLO_increase_czech_integration = yes
 		}
 	}
 }

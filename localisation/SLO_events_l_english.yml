@@ -118,9 +118,22 @@
  slovakia.26.tt:0 "$SLO_modify_the_slovak_economy_by$$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y-3.0%§!"
  
  slovakia.27.title:0 "Partisan Uprisings"
- slovakia.27.desc:0 "Foolishly opposing our new regime, partisans loyal to 'democracy' and 'freedom' have taken it upon themselves to resist our new governments efforts to make Slovakia great. Their methods, though crude and insufficent to topple our government, are still a headache that must be dealt with at once before we can focus on more important matters."
+ slovakia.27.desc:0 "Foolishly opposing our new regime, partisans loyal to 'democracy' and 'freedom' have taken it upon themselves to resist our new government's efforts to make Slovakia great. Their methods, though crude and insufficent to topple our government, are still a headache that must be dealt with at once before we can focus on more important matters."
  slovakia.27.a:0 "Surely they cannot think they will beat Mountain General?"
  slovakia.27.tt:0 "Completing the focus §Y$SLO_trust_in_mountain_general$§! will prevent any more partisan uprisings."
+ 
+ slovakia.28.title:0 "[SLO.GetLeader] Demands Our Subjugation!"
+ slovakia.28.desc:0 "Apparently dissatisfied with humiliating us only once, [SLO.GetLeader] has now demanded our subjugation at threat of war."
+ slovakia.28.a:0 "We have no choice but to give in..."
+ slovakia.28.b:0 "We will fight that madman here and now!"
+ 
+ slovakia.29.title:0 "[CZE.GetName] Yields"
+ slovakia.29.desc:0 "Cowering before our might, Prague has yielded to our demands. Yet another incredible victory for [SLO.GetLeader], he quickly took to the radio to announce the news to the world as Slovak soldiers crossed the border that once stood between our two nations."
+ slovakia.29.a:0 "Welcome home brothers!"
+
+ slovakia.30.title:0 "[CZE.GetName] Refuses"
+ slovakia.30.desc:0 "Blinded by delusions of their strength and underestimating [SLO.GetLeader]'s brilliance, those pesky Czechs have refused our peaceful attempts at annexing and subjugating them! [SLO.GetLeader] has ordered [SLO.GetLeader.GetHerHis] armies to march to the Czech border and prepare for an assault."
+ slovakia.30.a:0 "So be it"
  
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to dictate terms of surrender to the once proud Czechoslovak government in Prague. For the first time ever, Slovakia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."

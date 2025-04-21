@@ -40,6 +40,18 @@
 		
  SLO_NAME_propaganda_the_youth_serve_their_leader_idea:0 "The youth serve their leader"
  SLO_GFX_propaganda_the_youth_serve_their_leader_idea:0 "GFX_propaganda_SLO_the_youth_serve_their_leader"
+		
+ SLO_NAME_propaganda_such_a_nation_will_not_perish_idea:0 "Such a nation will not perish"
+ SLO_GFX_propaganda_such_a_nation_will_not_perish_idea:0 "GFX_propaganda_SLO_such_a_nation_will_not_perish"
+		
+ SLO_NAME_propaganda_god_blesses_your_harvest_idea:0 "God blesses your harvest"
+ SLO_GFX_propaganda_god_blesses_your_harvest_idea:0 "GFX_propaganda_SLO_god_blesses_your_harvest"
+		
+ SLO_NAME_propaganda_the_nation_is_crying_for_help_idea:0 "The nation is crying for help"
+ SLO_GFX_propaganda_the_nation_is_crying_for_help_idea:0 "GFX_propaganda_SLO_the_nation_is_crying_for_help"
+		
+ SLO_NAME_propaganda_slovakia_at_the_turning_point_idea:0 "Slovakia at the turning point"
+ SLO_GFX_propaganda_slovakia_at_the_turning_point_idea:0 "GFX_propaganda_SLO_slovakia_at_the_turning_point"
  
 
 
@@ -81,3 +93,11 @@
  SLO_propaganda_campaign_12_desc:0 ""
  SLO_propaganda_campaign_13:0 "[?SLO.propaganda_NAME_array^13.GetTokenLocalizedKey]"
  SLO_propaganda_campaign_13_desc:0 ""
+ SLO_propaganda_campaign_14:0 "[?SLO.propaganda_NAME_array^14.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_14_desc:0 ""
+ SLO_propaganda_campaign_15:0 "[?SLO.propaganda_NAME_array^15.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_15_desc:0 ""
+ SLO_propaganda_campaign_16:0 "[?SLO.propaganda_NAME_array^16.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_16_desc:0 ""
+ SLO_propaganda_campaign_17:0 "[?SLO.propaganda_NAME_array^17.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_17_desc:0 ""

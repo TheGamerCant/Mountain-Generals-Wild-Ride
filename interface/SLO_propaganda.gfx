@@ -69,4 +69,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/propaganda/SLO_the_youth_serve_their_leader.dds"
 		noOfFrames = 5
 	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_such_a_nation_will_not_perish"
+		texturefile = "gfx/interface/propaganda/SLO_such_a_nation_will_not_perish.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_god_blesses_your_harvest"
+		texturefile = "gfx/interface/propaganda/SLO_god_blesses_your_harvest.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_the_nation_is_crying_for_help"
+		texturefile = "gfx/interface/propaganda/SLO_the_nation_is_crying_for_help.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_slovakia_at_the_turning_point"
+		texturefile = "gfx/interface/propaganda/SLO_slovakia_at_the_turning_point.dds"
+		noOfFrames = 5
+	}
 }

@@ -1,1 +1,2 @@
 SLH	= "countries/Slovakian Hungary.txt"
+SLC	= "countries/Slovakian Czechia.txt"

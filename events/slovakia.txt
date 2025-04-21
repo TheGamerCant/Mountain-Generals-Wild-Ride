@@ -730,7 +730,7 @@ country_event = {
 			ideology = fascism
 			popularity = 0.05
 		}
-		add_political_power = 50
+		add_political_power = 40
 		HUN = { add_opinion_modifier = { target = ROOT modifier = hostile_status } }
 	}
 }
@@ -753,7 +753,7 @@ country_event = {
 			ideology = fascism
 			popularity = 0.05
 		}
-		add_political_power = 50
+		add_political_power = 40
 		GER = { add_opinion_modifier = { target = ROOT modifier = hostile_status } }
 	}
 }
@@ -896,7 +896,8 @@ country_event = {
 			base = 10
 		}
 		
-		add_political_power = 25
+		add_political_power = 20
+		army_experience = 5
 	}
 }
 
@@ -1004,6 +1005,122 @@ country_event = {
 	}
 }
 
+#Ultimatum for Czechia
+country_event = {
+	id = slovakia.28
+	title = slovakia.28.title
+	desc = slovakia.28.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_czech_soldiers_02
+
+	#We have no choice but to give in
+	option = { 
+		name = slovakia.28.a
+		ai_chance = {
+			base = 50
+		}
+		
+		SLO = { country_event = { id = slovakia.29 random_hours = 4 } }
+	}
+
+	#Tell them to go fuck themselves
+	option = { 
+		name = slovakia.28.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = -10
+				
+				has_opinion = {
+					target = SLO
+					value > 40
+				}
+			}
+			modifier = {
+				add = -20
+				
+				SLO = { has_army_manpower = { size > 99999 } }
+			}
+			modifier = {
+				add = -20
+				
+				43 = {
+					OWNER = {
+						OR = {
+							is_puppet_of = SLO
+							original_tag = SLO
+						}
+					}
+				}
+			}
+		}
+		
+		SLO = { country_event = { id = slovakia.30 random_hours = 4 } }
+	}
+}
+
+#Czechia gives in
+country_event = {
+	id = slovakia.29
+	title = slovakia.29.title
+	desc = slovakia.29.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_czech_soldiers_01
+
+	option = { 
+		name = slovakia.29.a
+		ai_chance = {
+			base = 10
+		}
+		
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = CZE }
+				add_core_of = SLC
+			}
+			
+			set_country_flag = SLO_integrating_czechia_flag
+			
+			SLC = { 
+				inherit_technology = CZE 
+			 
+				annex_country = {
+					target = CZE
+					transfer_troops = yes
+				}
+			 
+				set_cosmetic_tag = SLC_Schizo_Fascism
+			}
+			
+			puppet = SLC
+		}
+		
+		effect_tooltip = {
+			puppet = CZE
+		}
+	}
+}
+
+#Czechia refuses!
+country_event = {
+	id = slovakia.30
+	title = slovakia.30.title
+	desc = slovakia.30.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_czech_soldiers_02
+
+	option = { 
+		name = slovakia.30.a
+		ai_chance = {
+			base = 10
+		}
+		
+		declare_war_on = {
+			target = CZE
+			type = annex_everything
+		}
+	}
+}
 
 add_namespace = slovakia_hidden
 

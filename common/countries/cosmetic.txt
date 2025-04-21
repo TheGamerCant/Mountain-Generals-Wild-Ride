@@ -2,6 +2,10 @@ SLH_Schizo_Fascism = {
 	color = rgb { 158  161  188 }
 	color_ui = rgb { 255 255 255 }
 }
+SLC_Schizo_Fascism = {
+	color = rgb { 158  161  188 }
+	color_ui = rgb { 255 255 255 }
+}
 
 
 

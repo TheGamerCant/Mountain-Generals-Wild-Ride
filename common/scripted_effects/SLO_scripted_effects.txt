@@ -5,6 +5,14 @@ SLO_unlock_new_propaganda_slot = {
 	if = {
 		limit = { check_variable = { SLO.unlocked_slots < SLO.propaganda_slots_max } }
 		
+		if = { 
+			limit = { check_variable = { SLO.unlocked_slots = 0 } }
+			unlock_decision_category_tooltip = SLO_propaganda_decision_category
+		}
+		else = {  
+			custom_effect_tooltip = unlock_propaganda_campaign_slot_tt
+		}
+		
 		set_variable = { SLO.propaganda_slot_frame_array^SLO.unlocked_slots = 2 }
 		
 		add_to_variable = { SLO.unlocked_slots = 1 }
@@ -124,4 +132,8 @@ SLO_stabilise_regime = {
 SLO_increase_hungarian_integration = {
 	add_to_variable = { SLO.hungary_integration_progress = 1 }
 	custom_effect_tooltip = SLO_increase_hungarian_integration_tt
+}
+SLO_increase_czech_integration = {
+	add_to_variable = { SLO.czechia_integration_progress = 1 }
+	custom_effect_tooltip = SLO_increase_czech_integration_tt
 }

@@ -1,4 +1,5 @@
 SLO_propaganda_decision_category = {
+	# Death to Fascist Bastards!
 	SLO_propaganda_campaign_0 = { 
 
 		icon = eng_propaganda_campaigns
@@ -55,6 +56,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# Mountain General is the red sun in the hearts of revolutionary people!
 	SLO_propaganda_campaign_1 = { 
 
 		icon = eng_propaganda_campaigns
@@ -104,6 +106,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# Mountain General's kindness illuminates the future of our children!
 	SLO_propaganda_campaign_2 = { 
 
 		icon = eng_propaganda_campaigns
@@ -153,6 +156,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# Who is to blame for the war!
 	SLO_propaganda_campaign_3 = { 
 
 		icon = eng_propaganda_campaigns
@@ -200,7 +204,12 @@ SLO_propaganda_decision_category = {
 				limit = { 
 					43 = { is_core_of = PREV }
 					owns_state = 43
-					NOT = { original_tag = SLO }
+					NOT = { 
+						OR = {
+							is_puppet_of = SLO
+							original_tag = SLO 
+						}
+					}
 				}
 				add_opinion_modifier = {
 					target = ROOT
@@ -215,6 +224,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# Telling a friend may mean telling the enemy
 	SLO_propaganda_campaign_4 = { 
 
 		icon = eng_propaganda_campaigns
@@ -265,6 +275,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# You don't want this - buy war bonds!
 	SLO_propaganda_campaign_5 = { 
 
 		icon = eng_propaganda_campaigns
@@ -313,6 +324,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# These are the actions of Czechobolshevism!
 	SLO_propaganda_campaign_6 = { 
 
 		icon = eng_propaganda_campaigns
@@ -363,6 +375,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# We build our own home with our own strength
 	SLO_propaganda_campaign_7 = { 
 
 		icon = eng_propaganda_campaigns
@@ -409,6 +422,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# Real work and struggle for a greater slice of bread
 	SLO_propaganda_campaign_8 = { 
 
 		icon = eng_propaganda_campaigns
@@ -455,6 +469,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# Our mother Slovakia calls to arms!
 	SLO_propaganda_campaign_9 = { 
 
 		icon = eng_propaganda_campaigns
@@ -474,10 +489,10 @@ SLO_propaganda_decision_category = {
 		}
 		
 		visible = {
-			OR={
-				has_country_flag = SLO_all_propaganda_available_flag
-				NOT = { has_government = fascism }
-			}
+#			OR={
+#				has_country_flag = SLO_all_propaganda_available_flag
+#				NOT = { has_government = fascism }
+#			}
 		}
 
 		days_remove = var:SLO.propaganda_campaign_days
@@ -511,6 +526,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# Germany will be conquered in the shortest possible time!
 	SLO_propaganda_campaign_10 = { 
 
 		icon = eng_propaganda_campaigns
@@ -530,10 +546,10 @@ SLO_propaganda_decision_category = {
 		}
 		
 		visible = {
-			OR={
-				has_country_flag = SLO_all_propaganda_available_flag
-				NOT = { has_government = fascism }
-			}
+#			OR={
+#				has_country_flag = SLO_all_propaganda_available_flag
+#				NOT = { has_government = fascism }
+#			}
 		}
 
 
@@ -567,6 +583,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# We are united! Our goal: A new Slovakia!
 	SLO_propaganda_campaign_11 = { 
 
 		icon = eng_propaganda_campaigns
@@ -616,6 +633,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# A better future in free Slovakia!
 	SLO_propaganda_campaign_12 = { 
 
 		icon = eng_propaganda_campaigns
@@ -662,6 +680,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# The youth serve their leader
 	SLO_propaganda_campaign_13 = { 
 
 		icon = eng_propaganda_campaigns
@@ -713,6 +732,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# Such a nation will not perish
 	SLO_propaganda_campaign_14 = { 
 
 		icon = eng_propaganda_campaigns
@@ -762,6 +782,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# God blesses your harvest
 	SLO_propaganda_campaign_15 = { 
 
 		icon = eng_propaganda_campaigns
@@ -806,6 +827,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# The nation is crying for help
 	SLO_propaganda_campaign_16 = { 
 
 		icon = eng_propaganda_campaigns
@@ -851,6 +873,7 @@ SLO_propaganda_decision_category = {
 		}
 	}
 	
+	# Slovakia at the turning point
 	SLO_propaganda_campaign_17 = { 
 
 		icon = eng_propaganda_campaigns
@@ -865,6 +888,7 @@ SLO_propaganda_decision_category = {
 		
 		available = {
 			SLO_available_propaganda_slot = yes
+			has_war = yes
 		}
 		
 		visible = {
@@ -892,6 +916,56 @@ SLO_propaganda_decision_category = {
 
 		remove_effect = {
 			set_variable = { SLO.propaganda_campaign_to_end = 17 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	# Salute the founder of the Empire
+	SLO_propaganda_campaign_18 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_completed_focus = SLO_news_of_our_victories
+			}
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^18
+
+		modifier = {
+			army_attack_factor = 0.05
+			army_org_regain = 0.05
+			breakthrough_factor = 0.12
+			org_loss_at_low_org_factor = -0.3
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 18 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 18 }
 			SLO_end_propaganda_campaign = yes
 		}
 	}

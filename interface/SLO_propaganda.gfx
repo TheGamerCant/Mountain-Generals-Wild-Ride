@@ -89,4 +89,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/propaganda/SLO_slovakia_at_the_turning_point.dds"
 		noOfFrames = 5
 	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_salute_the_founder_of_the_empire"
+		texturefile = "gfx/interface/propaganda/SLO_salute_the_founder_of_the_empire.dds"
+		noOfFrames = 5
+	}
 }

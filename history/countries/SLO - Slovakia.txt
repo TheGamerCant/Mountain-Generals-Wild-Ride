@@ -289,6 +289,7 @@ add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_such_a_nati
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_god_blesses_your_harvest_idea }
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_the_nation_is_crying_for_help_idea }
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_slovakia_at_the_turning_point_idea }
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_salute_the_founder_of_the_empire_idea }
 		
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_death_to_fascist_bastards_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea }
@@ -308,6 +309,7 @@ add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_such_a_na
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_god_blesses_your_harvest_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_the_nation_is_crying_for_help_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_slovakia_at_the_turning_point_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_salute_the_founder_of_the_empire_idea }
 
 resize_array = { array = SLO.propaganda_PP_COST_array size = SLO.propaganda_GFX_array^num value = 15 }
 resize_array = { array = SLO.propaganda_slot_campaign_array size = SLO.propaganda_slots_max value = 0 }

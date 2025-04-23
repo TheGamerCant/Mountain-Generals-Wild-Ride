@@ -651,6 +651,10 @@ SLO_propaganda_decision_category = {
 		}
 		
 		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_completed_focus = SLO_news_of_our_victories
+			}
 		}
 
 
@@ -752,8 +756,7 @@ SLO_propaganda_decision_category = {
 		visible = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
-				has_government = fascism
-				has_government = neutrality
+				has_completed_focus = SLO_news_of_our_victories
 			}
 		}
 

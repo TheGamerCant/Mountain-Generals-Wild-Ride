@@ -637,6 +637,7 @@ focus_tree = {
 		prerequisite = { focus = SLO_the_slovak_armed_forces }
 
 		available = {
+			NOT = { has_government = democratic       }
 		}
 		
 		bypass = {
@@ -757,7 +758,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_women_in_the_army
-		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		icon = GFX_goal_SLO_women_in_the_army
 		x = 2
 		y = 1
 		cost = 8
@@ -802,7 +803,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_frontline_officers
 		icon = GFX_focus_generic_full_social_mobilization
-		x = 2
+		x = 0
 		y = 1
 		cost = 8
 		relative_position_id = SLO_expand_the_draft
@@ -831,6 +832,67 @@ focus_tree = {
 				uses = 1
 				category = military_police_tech
 			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_child_soldiers
+		icon = GFX_goal_SLO_child_soldiers
+		x = 2
+		y = 1
+		cost = 5
+		relative_position_id = SLO_expand_the_draft
+		
+		prerequisite = { focus = SLO_expand_the_draft }
+		prerequisite = { focus = SLO_women_in_industry focus = SLO_women_in_the_army  }
+		
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_army_dm_conscription_factor = 0.15 }
+			custom_effect_tooltip = SLO_child_soldiers_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_stability = -0.10
+			
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.10
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_mass_mobilisation
+		icon = GFX_goal_SLO_slovak_patriotism
+		x = 4
+		y = 1
+		cost = 8
+		relative_position_id = SLO_expand_the_draft
+		
+		prerequisite = { focus = SLO_expand_the_draft }
+		prerequisite = { focus = SLO_women_in_industry focus = SLO_women_in_the_army  }
+		
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_army_dm_mobilization_speed = 0.50 }
+			add_to_variable = { SLO_army_dm_army_morale_factor = 0.08 }
+			
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.12 }
+			custom_effect_tooltip = SLO_mass_mobilisation_tt
+			
 		}
 	}
 	
@@ -915,7 +977,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_spartan_professionalism
-		icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
+		icon = GFX_goal_SLO_spartan_professionalism
 		x = 0
 		y = 1
 		cost = 5
@@ -1057,6 +1119,88 @@ focus_tree = {
 			add_to_variable = { SLO_army_dm_army_speed_factor = 0.08 }
 			
 			custom_effect_tooltip = SLO_logistical_focus_tt
+		}
+	}
+	
+	focus = {	
+		id = SLO_the_finest_weapons
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = SLO_logistical_focus
+		
+		prerequisite = { focus = SLO_logistical_focus }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {			
+			add_tech_bonus = {
+				name = SLO_the_finest_weapons
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_special_operations
+		icon = GFX_focus_GER_gebirgsjager
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = SLO_logistical_focus
+		
+		prerequisite = { focus = SLO_logistical_focus }
+		prerequisite = { focus = SLO_expanded_officer_corps }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {			
+			add_to_variable = { SLO_army_dm_operative_slot = 1 }
+			add_to_variable = { SLO_army_dm_recon_factor = 0.35 }
+			add_to_variable = { SLO_army_dm_special_forces_no_supply_grace = 168 }
+			add_to_variable = { SLO_army_dm_special_forces_cap = 0.20 }
+			add_to_variable = { SLO_army_dm_special_forces_attack_factor = 0.15 }
+			custom_effect_tooltip = SLO_special_operations_tt
+		}
+	}
+	
+	focus = {	
+		id = SLO_every_soldier_a_warrior
+		icon = GFX_
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = SLO_special_operations
+		
+		prerequisite = { focus = SLO_special_operations }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {			
+			add_to_variable = { SLO_army_dm_max_dig_in_factor = 0.30 }
+			add_to_variable = { SLO_army_dm_army_org_factor = 0.12 }
+			add_to_variable = { SLO_army_dm_army_strength_factor = 0.06 }
+			add_to_variable = { SLO_army_dm_land_reinforce_rate = 0.03 }
+			add_to_variable = { SLO_army_dm_army_attack_factor = 0.07 }
+			custom_effect_tooltip = SLO_every_soldier_a_warrior_tt
 		}
 	}
 	
@@ -3851,6 +3995,8 @@ focus_tree = {
 			SLO_unlock_new_propaganda_slot = yes
 			
 			custom_effect_tooltip = unlock_propaganda_campaign_tt
+			unlock_decision_tooltip = SLO_propaganda_campaign_12
+			unlock_decision_tooltip = SLO_propaganda_campaign_14
 			unlock_decision_tooltip = SLO_propaganda_campaign_18
 		}
 	}

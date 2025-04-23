@@ -111,6 +111,10 @@ SLO_army_dynamic_modifier = {
 	enemy_operative_capture_chance_factor = SLO_army_dm_enemy_operative_capture_chance_factor
 	recon_factor = SLO_army_dm_recon_factor
 	intel_from_combat_factor = SLO_army_dm_intel_from_combat_factor
+	special_forces_no_supply_grace = SLO_army_dm_special_forces_no_supply_grace
+	special_forces_cap = SLO_army_dm_special_forces_cap
+	special_forces_attack_factor = SLO_army_dm_special_forces_attack_factor
+	max_dig_in_factor = SLO_army_dm_max_dig_in_factor
 }
 
 SLO_air_force_dynamic_modifier = {

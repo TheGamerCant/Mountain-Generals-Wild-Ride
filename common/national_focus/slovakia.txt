@@ -390,7 +390,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_the_slovak_river_fleet
 		icon = GFX_focus_generic_naval_discipline
-		x = -18
+		x = -16
 		y = 1
 		cost = 5
 		relative_position_id = SLO_the_slovak_armed_forces
@@ -627,7 +627,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_an_army_of_scale
 		icon = GFX_goal_SLO_large_army
-		x = -10
+		x = -8
 		y = 1
 		cost = 5
 		relative_position_id = SLO_the_slovak_armed_forces
@@ -804,12 +804,12 @@ focus_tree = {
 		id = SLO_frontline_officers
 		icon = GFX_focus_generic_full_social_mobilization
 		x = 0
-		y = 1
+		y = 2
 		cost = 8
 		relative_position_id = SLO_expand_the_draft
 		
 		prerequisite = { focus = SLO_expand_the_draft }
-		prerequisite = { focus = SLO_women_in_industry focus = SLO_women_in_the_army  }
+		prerequisite = { focus = SLO_women_in_industry focus = SLO_women_in_the_army }
 
 		available = {
 		}
@@ -844,7 +844,7 @@ focus_tree = {
 		relative_position_id = SLO_expand_the_draft
 		
 		prerequisite = { focus = SLO_expand_the_draft }
-		prerequisite = { focus = SLO_women_in_industry focus = SLO_women_in_the_army  }
+		prerequisite = { focus = SLO_women_in_industry focus = SLO_women_in_the_army }
 		
 		available = {
 		}
@@ -872,12 +872,12 @@ focus_tree = {
 		id = SLO_mass_mobilisation
 		icon = GFX_goal_SLO_slovak_patriotism
 		x = 4
-		y = 1
+		y = 2
 		cost = 8
 		relative_position_id = SLO_expand_the_draft
 		
 		prerequisite = { focus = SLO_expand_the_draft }
-		prerequisite = { focus = SLO_women_in_industry focus = SLO_women_in_the_army  }
+		prerequisite = { focus = SLO_women_in_industry focus = SLO_women_in_the_army }
 		
 		available = {
 		}
@@ -897,15 +897,17 @@ focus_tree = {
 	}
 	
 	focus = {	
-		id = SLO_mobilisation_timetables
-		icon = GFX_
-		x = 5
-		y = 1
-		cost = 5
-		relative_position_id = SLO_an_army_of_scale
+		id = SLO_fire_of_our_industries
+		icon = GFX_goal_SLO_fire_of_our_industries
+		x = -1
+		y = 2
+		cost = 10
+		relative_position_id = SLO_child_soldiers
 		
-		prerequisite = { focus = SLO_an_army_of_scale focus = SLO_spartan_professionalism focus = SLO_a_war_of_intellect }
-
+		prerequisite = { focus = SLO_child_soldiers }
+		prerequisite = { focus = SLO_mass_mobilisation }
+		prerequisite = { focus = SLO_frontline_officers }
+		
 		available = {
 		}
 		
@@ -914,52 +916,46 @@ focus_tree = {
 		
 
 		completion_reward = {
-			if = {
-				limit = { has_completed_focus = SLO_an_army_of_scale }		
-				add_to_variable = { SLO_army_dm_mobilization_speed = 0.30 }
-				add_to_variable = { SLO_army_dm_training_time_army_factor = -0.10 }
-				add_to_variable = { SLO_army_dm_minimum_training_level = -0.04 }
-				
-				custom_effect_tooltip = SLO_mobilisation_timetables_tt_1
-			}
-			else_if = {
-				limit = { has_completed_focus = SLO_spartan_professionalism }
-				add_to_variable = { SLO_army_dm_mobilization_speed = 0.50 }
-				add_to_variable = { SLO_army_dm_training_time_army_factor = -0.10 }
-				
-				custom_effect_tooltip = SLO_mobilisation_timetables_tt_2
-			}
-			else_if = {
-				limit = { has_completed_focus = SLO_a_war_of_intellect }
-				add_to_variable = { SLO_army_dm_mobilization_speed = 0.30 }
-				add_to_variable = { SLO_army_dm_training_time_army_factor = -0.15 }
-				add_to_variable = { SLO_army_dm_minimum_training_level = -0.02 }
-				
-				custom_effect_tooltip = SLO_mobilisation_timetables_tt_3
-			}
-			else = {
-				custom_effect_tooltip = SLO_mobilisation_timetables_tt_4
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.10 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.10 }
+			add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.06 }
+			
+			custom_effect_tooltip = SLO_fire_of_our_industries_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			random_core_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
 	
 	focus = {	
-		id = SLO_military_intelligence
-		icon = GFX_
-		x = 0
-		y = 1
-		cost = 5
-		relative_position_id = SLO_mobilisation_timetables
+		id = SLO_duty_in_death
+		icon = GFX_goal_SLO_kamikaze_pilots
+		x = 1
+		y = 2
+		cost = 10
+		relative_position_id = SLO_child_soldiers
 		
-		prerequisite = { focus = SLO_mobilisation_timetables }
-
+		prerequisite = { focus = SLO_child_soldiers }
+		prerequisite = { focus = SLO_mass_mobilisation }
+		prerequisite = { focus = SLO_frontline_officers }
+		
 		available = {
-			if = { 
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				has_intelligence_agency = yes
-			}
 		}
 		
 		bypass = {
@@ -967,11 +963,23 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_to_variable = { SLO_army_dm_recon_factor = 0.20 }
-			add_to_variable = { SLO_army_dm_operative_slot = 1 }
-			add_to_variable = { SLO_army_dm_enemy_operative_capture_chance_factor = 0.10 }
-			add_to_variable = { SLO_army_dm_intel_from_combat_factor = 0.3 }
-			custom_effect_tooltip = SLO_military_intelligence_tt
+			add_to_variable = { SLO_army_dm_army_strength_factor = 0.05 }
+			add_to_variable = { SLO_army_dm_army_org_factor = 0.05 }
+			add_to_variable = { SLO_army_dm_max_dig_in_factor = 0.15 }
+			
+			custom_effect_tooltip = SLO_duty_in_death_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			if = { 
+				limit = { has_dlc = "Waking the Tiger" }
+				
+				custom_effect_tooltip = cost_reduced_last_stand 
+			}
+			else = {
+				add_war_support = 0.05
+				add_political_power = 50
+			}
 		}
 	}
 	
@@ -1173,6 +1181,7 @@ focus_tree = {
 			add_to_variable = { SLO_army_dm_special_forces_no_supply_grace = 168 }
 			add_to_variable = { SLO_army_dm_special_forces_cap = 0.20 }
 			add_to_variable = { SLO_army_dm_special_forces_attack_factor = 0.15 }
+			add_to_variable = { SLO_army_dm_experience_gain_army_factor = 0.05 }
 			custom_effect_tooltip = SLO_special_operations_tt
 		}
 	}
@@ -1195,7 +1204,7 @@ focus_tree = {
 		
 
 		completion_reward = {			
-			add_to_variable = { SLO_army_dm_max_dig_in_factor = 0.30 }
+			add_to_variable = { SLO_army_dm_max_dig_in_factor = 0.20 }
 			add_to_variable = { SLO_army_dm_army_org_factor = 0.12 }
 			add_to_variable = { SLO_army_dm_army_strength_factor = 0.06 }
 			add_to_variable = { SLO_army_dm_land_reinforce_rate = 0.03 }
@@ -1205,9 +1214,153 @@ focus_tree = {
 	}
 	
 	focus = {	
+		id = SLO_mobilisation_timetables
+		icon = GFX_
+		x = -4
+		y = 1
+		cost = 5
+		relative_position_id = SLO_spartan_professionalism
+		
+		prerequisite = { focus = SLO_an_army_of_scale focus = SLO_spartan_professionalism focus = SLO_a_war_of_intellect }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			if = {
+				limit = { has_completed_focus = SLO_an_army_of_scale }		
+				add_to_variable = { SLO_army_dm_mobilization_speed = 0.30 }
+				add_to_variable = { SLO_army_dm_training_time_army_factor = -0.10 }
+				add_to_variable = { SLO_army_dm_minimum_training_level = -0.04 }
+				
+				custom_effect_tooltip = SLO_mobilisation_timetables_tt_1
+			}
+			else_if = {
+				limit = { has_completed_focus = SLO_spartan_professionalism }
+				add_to_variable = { SLO_army_dm_mobilization_speed = 0.50 }
+				add_to_variable = { SLO_army_dm_training_time_army_factor = -0.10 }
+				
+				custom_effect_tooltip = SLO_mobilisation_timetables_tt_2
+			}
+			else_if = {
+				limit = { has_completed_focus = SLO_a_war_of_intellect }
+				add_to_variable = { SLO_army_dm_mobilization_speed = 0.30 }
+				add_to_variable = { SLO_army_dm_training_time_army_factor = -0.15 }
+				add_to_variable = { SLO_army_dm_minimum_training_level = -0.02 }
+				
+				custom_effect_tooltip = SLO_mobilisation_timetables_tt_3
+			}
+			else = {
+				custom_effect_tooltip = SLO_mobilisation_timetables_tt_4
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_military_intelligence
+		icon = GFX_
+		x = 0
+		y = 2
+		cost = 5
+		relative_position_id = SLO_mobilisation_timetables
+		
+		prerequisite = { focus = SLO_mobilisation_timetables }
+
+		available = {
+			if = { 
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				has_intelligence_agency = yes
+			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_army_dm_recon_factor = 0.20 }
+			add_to_variable = { SLO_army_dm_operative_slot = 1 }
+			add_to_variable = { SLO_army_dm_enemy_operative_capture_chance_factor = 0.10 }
+			add_to_variable = { SLO_army_dm_intel_from_combat_factor = 0.3 }
+			custom_effect_tooltip = SLO_military_intelligence_tt
+		}
+	}
+	
+	focus = {	
+		id = SLO_military_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 2
+		cost = 5
+		relative_position_id = SLO_military_intelligence
+		
+		prerequisite = { focus = SLO_military_intelligence }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			if = {
+				limit = { has_completed_focus = SLO_an_army_of_scale }		
+				add_to_variable = { SLO_economy_dm_production_speed_arms_factory_factor = 0.10 }
+				add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.02 }
+				add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.02 }
+				
+				custom_effect_tooltip = SLO_military_industry_tt_1
+			}
+			else_if = {
+				limit = { has_completed_focus = SLO_spartan_professionalism }
+				add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.05 }
+				add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = 0.07 }
+				
+				custom_effect_tooltip = SLO_military_industry_tt_2
+			}
+			else_if = {
+				limit = { has_completed_focus = SLO_a_war_of_intellect }
+				add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.05 }
+				add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.05 }
+				
+				custom_effect_tooltip = SLO_military_industry_tt_3
+			}
+			else = {
+				custom_effect_tooltip = SLO_military_industry_tt_4
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			random_core_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {	
 		id = SLO_adaptive_strategy
 		icon = GFX_goal_generic_army_doctrines
-		x = 5
+		x = 4
 		y = 1
 		cost = 10
 		relative_position_id = SLO_spartan_professionalism
@@ -1236,8 +1389,8 @@ focus_tree = {
 	focus = {	
 		id = SLO_mission_command
 		icon = GFX_
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		cost = 10
 		relative_position_id = SLO_adaptive_strategy
 		
@@ -1253,15 +1406,42 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SLO_army_dm_army_org_factor = 0.10 }
 			add_to_variable = { SLO_army_dm_coordination_bonus = 0.04 }
-			add_to_variable = { SLO_army_dm_army_defence_factor = 0.04 }
+			add_to_variable = { SLO_army_dm_army_defence_factor = 0.05 }
+			add_to_variable = { SLO_army_dm_experience_gain_army_factor = 0.04 }
 			custom_effect_tooltip = SLO_mission_command_tt
+		}
+	}
+	
+	focus = {	
+		id = SLO_localised_counter_attacks
+		icon = GFX_
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = SLO_mission_command
+		
+		prerequisite = { focus = SLO_mission_command }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_army_dm_army_attack_factor = 0.05 }
+			add_to_variable = { SLO_army_dm_army_speed_factor = 0.06 }
+			add_to_variable = { SLO_army_dm_breakthrough_factor = 0.10 }
+			add_to_variable = { SLO_army_dm_experience_gain_army_factor = 0.04 }
+			custom_effect_tooltip = SLO_localised_counter_attacks_tt
 		}
 	}
 	
 	focus = {	
 		id = SLO_a_war_of_intellect
 		icon = GFX_focus_generic_university_3
-		x = 10
+		x = 8
 		y = 1
 		cost = 5
 		relative_position_id = SLO_the_slovak_armed_forces
@@ -1469,10 +1649,170 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = SLO_improve_production_bottlenecks
+		icon = GFX_focus_generic_military_industry
+		x = 0
+		y = 1
+		relative_position_id = SLO_new_tank_factories
+		cost = 10
+		prerequisite = {
+			focus = SLO_new_tank_factories
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.05 }
+			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = 0.15 }
+			add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.10 }
+			
+			custom_effect_tooltip = SLO_improve_production_bottlenecks_tt
+		}
+	}
+	
+	focus = {
+		id = SLO_slovak_military_academy
+		icon = GFX_
+		x = -1
+		y = 2
+		relative_position_id = SLO_new_tank_factories
+		cost = 10
+		prerequisite = {
+			focus = SLO_new_tank_factories
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SLO_adaptive_strategy
+				cost_reduction = 0.60
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_military_radio_integration
+		icon = GFX_goal_SLO_civilian_radios
+		x = 1
+		y = 2
+		relative_position_id = SLO_new_tank_factories
+		cost = 10
+		prerequisite = {
+			focus = SLO_new_tank_factories
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SLO_military_radio_integration
+				bonus = 1.0
+				uses = 1
+				category = electronics
+			}
+			add_tech_bonus = {
+				name = SLO_military_radio_integration
+				bonus = 1.0
+				uses = 1
+				category = signal_company_tech
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_army_dm_coordination_bonus = 0.03 }
+			add_to_variable = { SLO_army_dm_army_org_factor = 0.08 }
+			
+			add_to_variable = { SLO_air_force_dm_ground_attack_factor = 0.05 }
+			
+			custom_effect_tooltip = SLO_military_radio_integration_tt
+		}
+	}
+	
+	focus = {
+		id = SLO_mechanised_warfare
+		icon = GFX_focus_generic_mechanized
+		x = 0
+		y = 2
+		relative_position_id = SLO_improve_production_bottlenecks
+		cost = 10
+		prerequisite = { focus = SLO_improve_production_bottlenecks }
+		prerequisite = { focus = SLO_military_radio_integration }
+		prerequisite = { focus = SLO_slovak_military_academy }
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SLO_mechanised_warfare
+				ahead_reduction = 1.5
+				uses = 2
+				category = armor
+				category = cat_mechanized_equipment
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			hidden_effect = { add_ideas = SLO_mechanised_warfare_idea }
+			custom_effect_tooltip = SLO_mechanised_warfare_tt
+		}
+	}
+	
+	focus = {
+		id = SLO_shovels_only
+		icon = GFX_goal_SLO_shovels_only
+		x = 0
+		y = 1
+		relative_position_id = SLO_every_soldier_a_warrior
+		cost = 10
+		prerequisite = { focus = SLO_military_industry focus = SLO_localised_counter_attacks }
+		prerequisite = { focus = SLO_fire_of_our_industries focus = SLO_every_soldier_a_warrior focus = SLO_mechanised_warfare }
+		prerequisite = { focus = SLO_duty_in_death focus = SLO_every_soldier_a_warrior focus = SLO_mechanised_warfare }
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SLO_shovels_only
+				bonus = 1.5
+				uses = 2
+				category = engineers_tech
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_equipment_to_stockpile = { 
+				type = support_equipment
+				amount = 800
+				producer = SLO
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+		
+			add_to_variable = { SLO_army_dm_max_dig_in_factor = 0.50 }
+			add_to_variable = { SLO_army_dm_army_org_factor = 0.10 }
+			add_to_variable = { SLO_army_dm_army_defence_factor = 0.10 }
+			custom_effect_tooltip = SLO_shovels_only_tt
+		}
+	}
+	
 	focus = {	
 		id = SLO_the_slovak_air_force
 		icon = GFX_goal_SLO_air_force2
-		x = 18
+		x = 16
 		y = 1
 		cost = 5
 		relative_position_id = SLO_the_slovak_armed_forces
@@ -2495,7 +2835,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SLO_funding_to_skoda
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = SLO_funding_to_skoda
 		}
@@ -3403,8 +3743,8 @@ focus_tree = {
 
 		completion_reward = {
 			SLO_mountain_general = {
+				add_attack = 1
 				add_planning = 1
-				add_logistics = 1
 				gain_xp = 500
 			}
 			
@@ -3472,19 +3812,19 @@ focus_tree = {
 		completion_reward = {
 			add_breakthrough_progress = {
 				specialization = specialization_land
-				value = 0.20
+				value = 0.40
 			}
 			add_breakthrough_progress = {
 				specialization = specialization_air
-				value = 0.20
+				value = 0.40
 			}
 			add_breakthrough_progress = {
 				specialization = specialization_naval
-				value = 0.20
+				value = 0.40
 			}
 			add_breakthrough_progress = {
 				specialization = specialization_nuclear
-				value = 0.20
+				value = 0.40
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -3852,6 +4192,14 @@ focus_tree = {
 		
 		will_lead_to_war_with = HUN
 		
+		bypass = {
+			OR = {
+				is_in_faction_with = HUN
+				HUN = { is_puppet_of = ROOT }
+				NOT = { country_exists = HUN }
+			}
+		}
+		
 #		mutually_exclusive = { focus = SLO_annihilate_hungary }
 
 		available = {
@@ -3941,6 +4289,14 @@ focus_tree = {
 					is_in_faction_with = ROOT
 				}
 				is_neighbor_of = CZE
+			}
+		}
+		
+		bypass = {
+			OR = {
+				is_in_faction_with = CZE
+				CZE = { is_puppet_of = ROOT }
+				NOT = { country_exists = CZE }
 			}
 		}
 		
@@ -4041,18 +4397,206 @@ focus_tree = {
 			every_owned_state = {
 				limit = { NOT = { OR = { state = 70 state = 71 state = 73 state = 664 } } }
 				
-				random_select_amount = 4
+				random_select_amount = 6
 				
 				set_variable_to_random = {
-					var = rand
-					min = -3897
-					max = 845
+					var = THIS.random_pop_to_remove
+					min = -4000
+					max = -800
 					integer = yes
 				}
 		
-				add_manpower = rand
-				
-				clear_variable = rand
+				hidden_effect = { add_manpower = THIS.random_pop_to_remove }
+				custom_effect_tooltip = SLO_consolidation_of_the_regime_tt
+
+				clear_variable = THIS.random_pop_to_remove
+			}
+		}
+	}
+
+	focus = {
+		id = SLO_slovakia_victorious_on_all_fronts
+		icon = GFX_
+		x = 0
+		y = 2
+		relative_position_id = SLO_finish_the_job
+		cost = 4
+		prerequisite = { focus = SLO_consolidation_of_the_regime }
+		prerequisite = { focus = SLO_finish_the_job }
+		prerequisite = { focus = SLO_news_of_our_victories }
+
+		available = {
+			AND = {
+				9 = {
+					OWNER = {
+						OR = {
+							original_tag = ROOT
+							is_puppet_of = ROOT
+						}
+					}
+				}
+				43 = {
+					OWNER = {
+						OR = {
+							original_tag = ROOT
+							is_puppet_of = ROOT
+						}
+					}
+				}
+			}
+		}
+		
+
+		completion_reward = {
+			set_cosmetic_tag = SLO_greater_slovakia
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			swap_ideas = {
+				remove_idea = SLO_slovak_fanaticism_idea_1
+				add_idea = SLO_slovak_fanaticism_idea_2
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_march_to_the_sea
+		icon = GFX_
+		x = 0
+		y = 1
+		relative_position_id = SLO_slovakia_victorious_on_all_fronts
+		cost = 4
+		prerequisite = { focus = SLO_slovakia_victorious_on_all_fronts }
+
+		available = {
+
+		}
+		
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SLO_slovak_fanaticism_idea_2
+				add_idea = SLO_slovak_fanaticism_idea_3
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_eyes_to_the_south
+		icon = GFX_focus_generic_attack_yugoslavia
+		x = 0
+		y = 2
+		relative_position_id = SLO_march_to_the_sea
+		cost = 5
+		prerequisite = { focus = SLO_march_to_the_sea }
+
+		will_lead_to_war_with = YUG
+
+		available = {
+			any_country = {
+				OR = {
+					tag = ROOT
+					is_puppet_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				is_neighbor_of = YUG
+			}
+		}
+		
+		bypass = {
+			OR = {
+				is_in_faction_with = YUG
+				YUG = { is_puppet_of = ROOT }
+				NOT = { country_exists = YUG }
+			}
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = YUG
+				expire = 0
+				generator = { 103 }
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_eyes_to_the_north
+		icon = GFX_focus_generic_attack_poland
+		x = -1
+		y = 1
+		relative_position_id = SLO_march_to_the_sea
+		cost = 5
+		prerequisite = { focus = SLO_march_to_the_sea }
+
+		will_lead_to_war_with = POL
+
+		available = {
+			any_country = {
+				OR = {
+					tag = ROOT
+					is_puppet_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				is_neighbor_of = POL
+			}
+		}
+		
+		bypass = {
+			OR = {
+				is_in_faction_with = POL
+				POL = { is_puppet_of = ROOT }
+				NOT = { country_exists = POL }
+			}
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = POL
+				expire = 0
+				generator = { 807 }
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_eyes_to_the_east
+		icon = GFX_focus_generic_attack_romania
+		x = 1
+		y = 1
+		relative_position_id = SLO_march_to_the_sea
+		cost = 5
+		prerequisite = { focus = SLO_march_to_the_sea }
+
+		will_lead_to_war_with = ROM
+
+		available = {
+			any_country = {
+				OR = {
+					tag = ROOT
+					is_puppet_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				is_neighbor_of = ROM
+			}
+		}
+		
+		bypass = {
+			OR = {
+				is_in_faction_with = ROM
+				ROM = { is_puppet_of = ROOT }
+				NOT = { country_exists = ROM }
+			}
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ROM
+				expire = 0
+				generator = { 971 }
 			}
 		}
 	}

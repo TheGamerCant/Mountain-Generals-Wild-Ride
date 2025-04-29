@@ -394,6 +394,7 @@ set_variable = { SLO_army_dm_special_forces_no_supply_grace = 0 }
 set_variable = { SLO_army_dm_special_forces_cap = 0 }
 set_variable = { SLO_army_dm_special_forces_attack_factor = 0 }
 set_variable = { SLO_army_dm_max_dig_in_factor = 0 }
+set_variable = { SLO_army_dm_breakthrough_factor = 0 }
 
 add_dynamic_modifier = { modifier = SLO_army_dynamic_modifier }
 

@@ -164,6 +164,36 @@ ideas = {
 				}
 			}
 		}
+		
+		SLO_mechanised_warfare_idea = {
+			name = SLO_army_dynamic_modifier #Just in case it shows up anywhere
+			removal_cost = -1
+
+			picture = GFX_idea_SLO_generic_army
+				
+			allowed = {
+				original_tag = SLO
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+					
+			equipment_bonus = {
+				mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.08
+				}
+				armor = {
+					instant = yes
+					build_cost_ic = -0.08
+				}
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.08
+				}
+			}
+		}
 	}
 	
 	country = {
@@ -416,10 +446,57 @@ ideas = {
 			}
 			
 			modifier = {
-				fascism_drift = 0.10
+				fascism_drift = 0.05
 				justify_war_goal_time = -0.10
 				resistance_damage_to_garrison_on_our_occupied_states = 0.15
-				compliance_growth = -0.03
+				compliance_growth = -0.05
+			}
+		}
+		
+		SLO_slovak_fanaticism_idea_2 = {
+			removal_cost = -1
+
+			picture = SLO_slovak_fanaticism
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = 0.05
+				fascism_drift = 0.10
+				justify_war_goal_time = -0.10
+				resistance_damage_to_garrison_on_our_occupied_states = 0.25
+				compliance_growth = -0.02
+				resistance_growth = -0.10
+				war_support_factor = 0.05
+			}
+		}	
+		
+		SLO_slovak_fanaticism_idea_3 = {
+			removal_cost = -1
+
+			picture = SLO_slovak_fanaticism
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = 0.10
+				fascism_drift = 0.10
+				justify_war_goal_time = -0.50
+				resistance_damage_to_garrison_on_our_occupied_states = 0.25
+				compliance_growth = -0.02
+				resistance_growth = -0.10
+				war_support_factor = 0.10
+				war_stability_factor = 0.15
 			}
 		}	
 	}

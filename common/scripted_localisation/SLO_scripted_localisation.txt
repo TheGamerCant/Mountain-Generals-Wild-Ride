@@ -103,3 +103,17 @@ defined_text = {
 		localization_key = ""
 	}
 }
+
+defined_text = {
+	name = GetArmyDynamicModifierTT
+	text = {
+		trigger = {
+			has_completed_focus = SLO_mechanised_warfare
+
+		}
+		localization_key = "SLO_slovak_army_custom_tt_1"
+	}
+	text = {
+		localization_key = ""
+	}
+}

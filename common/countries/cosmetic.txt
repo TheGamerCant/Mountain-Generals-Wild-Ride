@@ -6,6 +6,10 @@ SLC_Schizo_Fascism = {
 	color = rgb { 158  161  188 }
 	color_ui = rgb { 255 255 255 }
 }
+SLO_greater_slovakia = {
+	color = rgb { 125  127  144 }
+	color_ui = rgb { 255 255 255 }
+}
 
 
 

@@ -91,7 +91,7 @@ leader_traits = {
 		conscription_factor = 0.12
 		experience_gain_army_factor = 0.10
 		army_morale_factor = 0.10
-		max_planning = 0.08
+		max_planning = 0.15
 	}
 	
 	mgs_cult_of_personality_3_right = {
@@ -104,7 +104,7 @@ leader_traits = {
 		conscription_factor = 0.07
 		annex_cost_factor = -0.33
 		puppet_cost_factor = -0.33
-		starting_compliance = 0.20
+		starting_compliance = 0.16
 	}
 	
 	mgs_cult_of_personality_4_left_left = {
@@ -117,7 +117,7 @@ leader_traits = {
 		conscription_factor = 0.20
 		experience_gain_army_factor = 0.10
 		army_morale_factor = 0.10
-		max_planning = 0.08
+		max_planning = 0.15
 		stability_factor = 0.10
 	}
 	
@@ -131,7 +131,7 @@ leader_traits = {
 		conscription_factor = 0.15	
 		annex_cost_factor = -0.33
 		puppet_cost_factor = -0.33
-		starting_compliance = 0.20
+		starting_compliance = 0.16
 		stability_factor = 0.10
 	}
 	
@@ -145,7 +145,7 @@ leader_traits = {
 		conscription_factor = 0.12
 		experience_gain_army_factor = 0.10
 		army_morale_factor = 0.10
-		max_planning = 0.08	
+		max_planning = 0.15	
 		research_speed_factor = 0.10
 		specialization_land_speed_factor = 0.1
 		specialization_air_speed_factor = 0.1
@@ -165,7 +165,7 @@ leader_traits = {
 		conscription_factor = 0.07
 		annex_cost_factor = -0.33
 		puppet_cost_factor = -0.33
-		starting_compliance = 0.20	
+		starting_compliance = 0.16	
 		research_speed_factor = 0.10
 		specialization_land_speed_factor = 0.1
 		specialization_air_speed_factor = 0.1

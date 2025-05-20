@@ -249,6 +249,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt 
 			
+			add_to_variable = { SLO_army_dm_training_time_army_factor = -0.15 }
 			add_to_variable = { SLO_army_dm_experience_gain_army_factor = 0.07 }
 			
 			custom_effect_tooltip = SLO_formation_of_high_command_tt
@@ -637,7 +638,7 @@ focus_tree = {
 		prerequisite = { focus = SLO_the_slovak_armed_forces }
 
 		available = {
-			NOT = { has_government = democratic       }
+			NOT = { has_government = democratic }
 		}
 		
 		bypass = {
@@ -652,7 +653,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			
-			add_to_variable = { SLO_army_dm_conscription = 0.50 }
+			add_to_variable = { SLO_army_dm_conscription = 0.005 }
 			custom_effect_tooltip = SLO_an_army_of_scale_tt
 		}
 	}
@@ -1032,7 +1033,8 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_to_variable = { SLO_army_dm_training_time_army_factor = 0.30 }
+			add_to_variable = { SLO_army_dm_training_time_army_factor = 0.25 }
+			add_to_variable = { SLO_army_dm_minimum_training_level = 0.10 }
 			add_to_variable = { SLO_army_dm_army_defence_factor = 0.08 }
 			add_to_variable = { SLO_army_dm_army_attack_factor = 0.05 }
 			add_to_variable = { SLO_army_dm_army_morale_factor = 0.05 }
@@ -4426,24 +4428,8 @@ focus_tree = {
 		prerequisite = { focus = SLO_news_of_our_victories }
 
 		available = {
-			AND = {
-				9 = {
-					OWNER = {
-						OR = {
-							original_tag = ROOT
-							is_puppet_of = ROOT
-						}
-					}
-				}
-				43 = {
-					OWNER = {
-						OR = {
-							original_tag = ROOT
-							is_puppet_of = ROOT
-						}
-					}
-				}
-			}
+			has_country_flag = SLO_integrated_hungary_flag
+			has_country_flag = SLO_integrated_czechia_flag
 		}
 		
 
@@ -4684,7 +4670,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_the_workers_paradise
 		icon = GFX_
-		x = 110
+		x = 130
 		y = 0
 		cost = 2
 		
@@ -4722,7 +4708,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_the_black_spot_of_europe
 		icon = GFX_
-		x = 120
+		x = 140
 		y = 0
 		cost = 2
 		
@@ -4759,7 +4745,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_socialism_above_all
 		icon = GFX_
-		x = 130
+		x = 150
 		y = 0
 		cost = 2
 		
@@ -4797,11 +4783,12 @@ focus_tree = {
 	focus = {	
 		id = SLO_keynesian_economics
 		icon = GFX_goal_SLO_keynesian_economics
-		x = 102
-		y = 8
+		x = 118
+		y = 1
 		cost = 5
 		
 		mutually_exclusive = { focus = SLO_the_austrian_school_of_economics }
+		prerequisite = { focus = SLO_a_shining_city_for_all_to_see focus = SLO_the_workers_paradise }
 
 		available = {
 		}
@@ -4824,11 +4811,12 @@ focus_tree = {
 	focus = {	
 		id = SLO_the_austrian_school_of_economics
 		icon = GFX_goal_SLO_the_austrian_school_of_economics
-		x = 108
-		y = 8
+		x = 112
+		y = 1
 		cost = 5
 		
 		mutually_exclusive = { focus = SLO_keynesian_economics }
+		prerequisite = { focus = SLO_a_shining_city_for_all_to_see }
 
 		available = {
 		}
@@ -4851,14 +4839,12 @@ focus_tree = {
 	focus = {	
 		id = SLO_government_controlled_central_bank
 		icon = GFX_
-		x = 2
+		x = -2
 		y = 3
 		cost = 5
 		
 		relative_position_id = SLO_keynesian_economics
-		prerequisite = {
-			focus = SLO_keynesian_economics
-		}
+		prerequisite = { focus = SLO_keynesian_economics focus = SLO_the_austrian_school_of_economics }
 
 		mutually_exclusive = {
 			focus = SLO_an_independent_central_bank
@@ -4878,7 +4864,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_an_independent_central_bank
 		icon = GFX_
-		x = 4
+		x = -4
 		y = 3
 		cost = 5
 		
@@ -4906,7 +4892,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_cut_bureaucratic_red_tape
 		icon = GFX_goal_SLO_cut_bureaucratic_red_tape
-		x = 3
+		x = -3
 		y = 2
 		cost = 10
 		
@@ -4935,7 +4921,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_strategc_resource_reserves
 		icon = GFX_
-		x = 1
+		x = -1
 		y = 1
 		cost = 5
 		
@@ -4962,7 +4948,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_prioritise_domestic_arms_needs
 		icon = GFX_
-		x = -1
+		x = 1
 		y = 1
 		cost = 5
 		
@@ -4988,7 +4974,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_foreign_contracts
 		icon = GFX_
-		x = 1
+		x = -1
 		y = 1
 		cost = 5
 		
@@ -5014,7 +5000,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_carpathian_tourism
 		icon = GFX_focus_SMB_a_land_of_mountains
-		x = 5
+		x = -5
 		y = 2
 		cost = 5
 		
@@ -5041,7 +5027,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_expand_the_university_of_bratislava
 		icon = GFX_focus_research
-		x = 1
+		x = -1
 		y = 2
 		cost = 10
 		
@@ -5089,7 +5075,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_mining_subsides
 		icon = GFX_
-		x = -2
+		x = 2
 		y = 1
 		cost = 5
 		
@@ -5139,7 +5125,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_acquiring_investments
 		icon = GFX_
-		x = -3
+		x = 3
 		y = 2
 		cost = 5
 		
@@ -5162,7 +5148,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_prioritisation_of_infrastructure
 		icon = GFX_
-		x = 1
+		x = -1
 		y = 1
 		cost = 5
 		
@@ -5211,7 +5197,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_prioritisation_of_industry
 		icon = GFX_
-		x = -1
+		x = 1
 		y = 1
 		cost = 5
 		
@@ -5288,7 +5274,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_privatisation_of_government_assets
 		icon = GFX_focus_mex_privatisation
-		x = 4
+		x = -4
 		y = 1
 		cost = 10
 		
@@ -5339,7 +5325,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_promote_union_activities
 		icon = GFX_focus_generic_full_employment
-		x = 3
+		x = -3
 		y = 2
 		cost = 5
 		
@@ -5369,7 +5355,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_union_busting
 		icon = GFX_focus_CZE_german_puppet
-		x = 1
+		x = -1
 		y = 1
 		cost = 5
 		
@@ -5435,7 +5421,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_reduce_tariffs
 		icon = GFX_focus_generic_treaty
-		x = 1
+		x = -1
 		y = 1
 		cost = 5
 		
@@ -5463,7 +5449,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_deregulation_of_the_markets
 		icon = GFX_focus_generic_improve_the_administration
-		x = 2
+		x = -2
 		y = 1
 		cost = 10
 		
@@ -5546,7 +5532,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_reduce_taxes
 		icon = GFX_
-		x = 2
+		x = -2
 		y = 1
 		cost = 5
 		

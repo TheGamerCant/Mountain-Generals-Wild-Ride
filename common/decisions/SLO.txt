@@ -859,10 +859,9 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^16
 
 		modifier = {
-			consumer_goods_factor = -0.25
 			war_support_weekly = 0.001
 			min_export = -0.1
-			political_power_gain = 0.15
+			political_power_gain = 0.12
 		}
 		
 		complete_effect = {
@@ -956,10 +955,11 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^18
 
 		modifier = {
-			army_attack_factor = 0.05
-			army_org_regain = 0.05
-			breakthrough_factor = 0.12
-			org_loss_at_low_org_factor = -0.3
+			fascism_drift = 0.10
+			political_power_factor = 0.10
+			industrial_capacity_dockyard = 0.04
+			industrial_capacity_factory = 0.04
+			production_factory_efficiency_gain_factor = 0.15
 		}
 		
 		complete_effect = {

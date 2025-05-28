@@ -10,3 +10,14 @@ SLH = {
 		surnames = { "Nemcová" "Horváthová" "Majerová" "Kocianová" "Chalupová" "Ferková" "Horňáková" }
 	}
 }
+
+SLC = {
+	male = {
+		names = { "Karol" "Jozef" "Slavomír" "Jaroslav" "Ján" "Vladimír" "Alojz" "Matúš" "Vojtech" }
+		surnames = { "Nemec" "Horváth" "Majer" "Kocian" "Chalupa" "Ferko" "Horňák" }
+	}
+	female = {
+		names = { "Maria" "Anna" "Hana" "Božena" "Alžbeta" "Marta" }
+		surnames = { "Nemcová" "Horváthová" "Majerová" "Kocianová" "Chalupová" "Ferková" "Horňáková" }
+	}
+}

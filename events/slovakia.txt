@@ -728,10 +728,10 @@ country_event = {
 		
 		add_popularity = {
 			ideology = fascism
-			popularity = 0.05
+			popularity = 0.03
 		}
-		add_political_power = 40
-		HUN = { add_opinion_modifier = { target = ROOT modifier = hostile_status } }
+		add_political_power = 30
+		HUN = { add_opinion_modifier = { target = ROOT modifier = SLO_denounced_by_mountain_general } }
 	}
 }
 
@@ -751,10 +751,10 @@ country_event = {
 		
 		add_popularity = {
 			ideology = fascism
-			popularity = 0.05
+			popularity = 0.03
 		}
-		add_political_power = 40
-		GER = { add_opinion_modifier = { target = ROOT modifier = hostile_status } }
+		add_political_power = 30
+		GER = { add_opinion_modifier = { target = ROOT modifier = SLO_denounced_by_mountain_general } }
 	}
 }
 

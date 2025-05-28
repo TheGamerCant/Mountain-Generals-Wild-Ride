@@ -1,0 +1,91 @@
+guiTypes = {
+	containerWindowType = {
+        name = "SLO_parliament_gui_container"
+        position = { x = 0 y = 0 }
+		size = { width = 500 height = 550 }
+
+		instantTextBoxType = {
+			name = "SLO_parliament_government_header_text_box"
+			position = { x = 21 y = -8 }
+			font = "hoi_24header"
+			text = "SLO_parliament_government_header_text"
+			maxWidth = 450
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "SLO_parliament_opposition_header_text_box"
+			position = { x = 21 y = 302 }
+			font = "hoi_24header"
+			text = "SLO_parliament_opposition_header_text"
+			maxWidth = 450
+			maxHeight = 24
+			format = center
+		}
+
+		containerWindowType = {
+			name = "parliament_container"
+			position = { x = 0 y = 22 }
+			size = { width = 492 height = 276 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_thin_border2"
+			}
+
+			gridboxtype = {
+				name = "parliament_gridbox"
+				position = { x = 8 y = 12 }
+				size = { width = 468 height = 100%% }		#476 wide
+				slotsize = { width = 100%% height = 0 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+		
+		instantTextBoxType = {
+			name = "SLO_parliament_majority_status_text_box"
+			position = { x = 21 y = 340 }
+			font = "hoi_18mbs"
+			text = "SLO_parliament_majority_status_text"
+			maxWidth = 450
+			maxHeight = 24
+			format = center
+		}
+		
+		instantTextBoxType = {
+			name = "SLO_parliament_government_status_text_box"
+			position = { x = 2 y = 400 }
+			font = "hoi_18mbs"
+			text = "SLO_parliament_government_status_text"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "SLO_parliament_opposition_status_text_box"
+			position = { x = 290 y = 400 }
+			font = "hoi_18mbs"
+			text = "SLO_parliament_opposition_status_text"
+			maxWidth = 200
+			maxHeight = 24
+			format = right
+		}
+    }
+
+	containerWindowType = {
+        name = "SLO_parliament_member_entry"
+        position = { x = 0 y = 0 }
+		size = { width = 200 height = 18 }
+
+		iconType = {
+			name = "parliament_member_icon"
+			spriteType = "GFX_SLO_parliament_party_icon"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "SLO_parliament_member_icon_tt"
+			pdx_tooltip_delayed = "SLO_parliament_member_icon_tt_delayed"
+		}
+    }
+}

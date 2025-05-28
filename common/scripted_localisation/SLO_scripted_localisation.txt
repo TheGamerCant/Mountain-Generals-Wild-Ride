@@ -45,6 +45,21 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetArmyDMName
+	text = {
+		trigger = {
+			OR = {
+				has_dynamic_modifier = { modifier = SLO_army_dynamic_modifier }
+				has_dynamic_modifier = { modifier = SLO_army_an_army_of_scale_dynamic_modifier }
+				has_dynamic_modifier = { modifier = SLO_army_spartan_professionalism_dynamic_modifier }
+				has_dynamic_modifier = { modifier = SLO_army_a_war_of_intellect_dynamic_modifier }
+			}
+		}
+		localization_key = "SLO_army_dynamic_modifier"
+	}
+}
+
+defined_text = {
 	name = GetNavalDMName
 	text = {
 		trigger = {

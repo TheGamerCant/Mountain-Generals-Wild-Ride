@@ -10,6 +10,10 @@ SLO_greater_slovakia = {
 	color = rgb { 125  127  144 }
 	color_ui = rgb { 255 255 255 }
 }
+SLO_hyperborea = {
+	color = rgb { 230  240  255 }
+	color_ui = rgb { 255 255 255 }
+}
 
 
 

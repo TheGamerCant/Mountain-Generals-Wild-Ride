@@ -86,39 +86,115 @@ SLO_army_dynamic_modifier = {
 	army_org_factor = SLO_army_dm_army_org_factor
 	training_time_army_factor = SLO_army_dm_training_time_army_factor
 	minimum_training_level = SLO_army_dm_minimum_training_level
+	mobilization_speed = SLO_army_dm_mobilization_speed
 	army_speed_factor = SLO_army_dm_army_speed_factor
 	coordination_bonus = SLO_army_dm_coordination_bonus
-	mobilization_speed = SLO_army_dm_mobilization_speed
-	conscription = SLO_army_dm_conscription
-	conscription_factor = SLO_army_dm_conscription_factor
-	army_strength_factor = SLO_army_dm_army_strength_factor 
-	max_command_power = SLO_army_dm_max_command_power
-	max_planning_factor = SLO_army_dm_max_planning_factor
-	supply_factor = SLO_army_dm_supply_factor
-	army_fuel_consumption_factor = SLO_army_dm_army_fuel_consumption_factor
-	production_speed_supply_node_factor = SLO_army_dm_production_speed_supply_node_factor
-	production_speed_rail_way_factor = SLO_army_dm_production_speed_rail_way_factor
-	army_defence_factor = SLO_army_dm_army_defence_factor
-	army_attack_factor = SLO_army_dm_army_attack_factor
-	army_morale_factor = SLO_army_dm_army_morale_factor
-	resistance_growth = SLO_army_dm_resistance_growth
-	army_artillery_attack_factor = SLO_army_dm_army_artillery_attack_factor
-	army_armor_attack_factor = SLO_army_dm_army_armor_attack_factor
-	army_armor_defence_factor = SLO_army_dm_army_armor_defence_factor
-	mechanized_defence_factor = SLO_army_dm_mechanized_defence_factor
-	land_reinforce_rate = SLO_army_dm_land_reinforce_rate
-	female_random_army_leader_chance = SLO_army_dm_female_random_army_leader_chance
-	female_random_admiral_chance = SLO_army_dm_female_random_admiral_chance
-	female_divisional_commander_chance = SLO_army_dm_female_divisional_commander_chance
 	operative_slot = SLO_army_dm_operative_slot
 	enemy_operative_capture_chance_factor = SLO_army_dm_enemy_operative_capture_chance_factor
 	recon_factor = SLO_army_dm_recon_factor
 	intel_from_combat_factor = SLO_army_dm_intel_from_combat_factor
+	army_defence_factor = SLO_army_dm_army_defence_factor
+	army_attack_factor = SLO_army_dm_army_attack_factor
+	max_dig_in_factor = SLO_army_dm_max_dig_in_factor
+	breakthrough_factor = SLO_army_dm_breakthrough_factor
+	
+	
+	custom_modifier_tooltip = SLO_army_dynamic_modifier_tooltip
+}
+
+SLO_army_an_army_of_scale_dynamic_modifier = {
+	icon = GFX_idea_SLO_generic_army
+	enable = { always = yes }
+	
+	experience_gain_army_factor = SLO_army_dm_experience_gain_army_factor
+	army_org_factor = SLO_army_dm_army_org_factor
+	training_time_army_factor = SLO_army_dm_training_time_army_factor
+	minimum_training_level = SLO_army_dm_minimum_training_level
+	mobilization_speed = SLO_army_dm_mobilization_speed
+	army_speed_factor = SLO_army_dm_army_speed_factor
+	coordination_bonus = SLO_army_dm_coordination_bonus
+	operative_slot = SLO_army_dm_operative_slot
+	enemy_operative_capture_chance_factor = SLO_army_dm_enemy_operative_capture_chance_factor
+	recon_factor = SLO_army_dm_recon_factor
+	intel_from_combat_factor = SLO_army_dm_intel_from_combat_factor
+	army_defence_factor = SLO_army_dm_army_defence_factor
+	army_attack_factor = SLO_army_dm_army_attack_factor
+	max_dig_in_factor = SLO_army_dm_max_dig_in_factor
+	breakthrough_factor = SLO_army_dm_breakthrough_factor
+	
+	conscription = SLO_army_dm_conscription
+	conscription_factor = SLO_army_dm_conscription_factor
+	female_random_army_leader_chance = SLO_army_dm_female_random_army_leader_chance
+	female_random_admiral_chance = SLO_army_dm_female_random_admiral_chance
+	female_divisional_commander_chance = SLO_army_dm_female_divisional_commander_chance
+	land_reinforce_rate = SLO_army_dm_land_reinforce_rate
+	army_morale_factor = SLO_army_dm_army_morale_factor
+	army_strength_factor = SLO_army_dm_army_strength_factor
+	
+	
+	custom_modifier_tooltip = SLO_army_dynamic_modifier_tooltip
+}
+
+SLO_army_spartan_professionalism_dynamic_modifier = {
+	icon = GFX_idea_SLO_generic_army
+	enable = { always = yes }
+	
+	experience_gain_army_factor = SLO_army_dm_experience_gain_army_factor
+	army_org_factor = SLO_army_dm_army_org_factor
+	training_time_army_factor = SLO_army_dm_training_time_army_factor
+	minimum_training_level = SLO_army_dm_minimum_training_level
+	mobilization_speed = SLO_army_dm_mobilization_speed
+	army_speed_factor = SLO_army_dm_army_speed_factor
+	coordination_bonus = SLO_army_dm_coordination_bonus
+	operative_slot = SLO_army_dm_operative_slot
+	enemy_operative_capture_chance_factor = SLO_army_dm_enemy_operative_capture_chance_factor
+	recon_factor = SLO_army_dm_recon_factor
+	intel_from_combat_factor = SLO_army_dm_intel_from_combat_factor
+	army_defence_factor = SLO_army_dm_army_defence_factor
+	army_attack_factor = SLO_army_dm_army_attack_factor
+	max_dig_in_factor = SLO_army_dm_max_dig_in_factor
+	breakthrough_factor = SLO_army_dm_breakthrough_factor
+	
+	army_strength_factor = SLO_army_dm_army_strength_factor
+	army_morale_factor = SLO_army_dm_army_morale_factor
+	resistance_growth = SLO_army_dm_resistance_growth
+	conscription_factor = SLO_army_dm_conscription_factor
+	supply_factor = SLO_army_dm_supply_factor
+	army_fuel_consumption_factor = SLO_army_dm_army_fuel_consumption_factor
+	production_speed_supply_node_factor = SLO_army_dm_production_speed_supply_node_factor
+	production_speed_rail_way_factor = SLO_army_dm_production_speed_rail_way_factor
 	special_forces_no_supply_grace = SLO_army_dm_special_forces_no_supply_grace
 	special_forces_cap = SLO_army_dm_special_forces_cap
 	special_forces_attack_factor = SLO_army_dm_special_forces_attack_factor
+	
+	custom_modifier_tooltip = SLO_army_dynamic_modifier_tooltip
+}
+
+SLO_army_a_war_of_intellect_dynamic_modifier = {
+	icon = GFX_idea_SLO_generic_army
+	enable = { always = yes }
+	
+	experience_gain_army_factor = SLO_army_dm_experience_gain_army_factor
+	army_org_factor = SLO_army_dm_army_org_factor
+	training_time_army_factor = SLO_army_dm_training_time_army_factor
+	minimum_training_level = SLO_army_dm_minimum_training_level
+	mobilization_speed = SLO_army_dm_mobilization_speed
+	army_speed_factor = SLO_army_dm_army_speed_factor
+	coordination_bonus = SLO_army_dm_coordination_bonus
+	operative_slot = SLO_army_dm_operative_slot
+	enemy_operative_capture_chance_factor = SLO_army_dm_enemy_operative_capture_chance_factor
+	recon_factor = SLO_army_dm_recon_factor
+	intel_from_combat_factor = SLO_army_dm_intel_from_combat_factor
+	army_defence_factor = SLO_army_dm_army_defence_factor
+	army_attack_factor = SLO_army_dm_army_attack_factor
 	max_dig_in_factor = SLO_army_dm_max_dig_in_factor
 	breakthrough_factor = SLO_army_dm_breakthrough_factor
+	
+	army_artillery_attack_factor = SLO_army_dm_army_artillery_attack_factor
+	army_armor_attack_factor = SLO_army_dm_army_armor_attack_factor
+	army_armor_defence_factor = SLO_army_dm_army_armor_defence_factor
+	mechanized_defence_factor = SLO_army_dm_mechanized_defence_factor
+	
 	
 	custom_modifier_tooltip = SLO_army_dynamic_modifier_tooltip
 }

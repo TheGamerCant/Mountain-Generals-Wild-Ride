@@ -72,6 +72,42 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
+		name = "GFX_goal_SLO_and_the_lion_rapes"
+		texturefile = "gfx/interface/goals/goal_SLO_and_the_lion_rapes.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SLO_and_the_lion_rapes_shine"
+		texturefile = "gfx/interface/goals/goal_SLO_and_the_lion_rapes.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_and_the_lion_rapes.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_and_the_lion_rapes.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
 		name = "GFX_goal_SLO_arms_smuggling"
 		texturefile = "gfx/interface/goals/goal_SLO_arms_smuggling.dds"
 	}
@@ -792,6 +828,42 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
+		name = "GFX_goal_SLO_hunt_the_bear"
+		texturefile = "gfx/interface/goals/goal_SLO_hunt_the_bear.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SLO_hunt_the_bear_shine"
+		texturefile = "gfx/interface/goals/goal_SLO_hunt_the_bear.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_hunt_the_bear.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_hunt_the_bear.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
 		name = "GFX_goal_SLO_impeccable_philosopher"
 		texturefile = "gfx/interface/goals/goal_SLO_impeccable_philosopher.dds"
 	}
@@ -1476,6 +1548,78 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
+		name = "GFX_goal_SLO_skewer_the_eagle"
+		texturefile = "gfx/interface/goals/goal_SLO_skewer_the_eagle.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SLO_skewer_the_eagle_shine"
+		texturefile = "gfx/interface/goals/goal_SLO_skewer_the_eagle.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_skewer_the_eagle.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_skewer_the_eagle.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_SLO_slovakia_victorious_on_all_fronts"
+		texturefile = "gfx/interface/goals/goal_SLO_slovakia_victorious_on_all_fronts.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SLO_slovakia_victorious_on_all_fronts_shine"
+		texturefile = "gfx/interface/goals/goal_SLO_slovakia_victorious_on_all_fronts.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_slovakia_victorious_on_all_fronts.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_slovakia_victorious_on_all_fronts.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
 		name = "GFX_goal_SLO_slovak_patriotism"
 		texturefile = "gfx/interface/goals/goal_SLO_slovak_patriotism.dds"
 	}
@@ -1656,6 +1800,42 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
+		name = "GFX_goal_SLO_the_dogs_bark"
+		texturefile = "gfx/interface/goals/goal_SLO_the_dogs_bark.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SLO_the_dogs_bark_shine"
+		texturefile = "gfx/interface/goals/goal_SLO_the_dogs_bark.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_the_dogs_bark.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_the_dogs_bark.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
 		name = "GFX_goal_SLO_the_five_year_plan"
 		texturefile = "gfx/interface/goals/goal_SLO_the_five_year_plan.dds"
 	}
@@ -1679,6 +1859,42 @@ spriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/goal_SLO_the_five_year_plan.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_SLO_the_indominatable_slovak_hyberborean_spirit"
+		texturefile = "gfx/interface/goals/goal_SLO_the_indominatable_slovak_hyberborean_spirit.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SLO_the_indominatable_slovak_hyberborean_spirit_shine"
+		texturefile = "gfx/interface/goals/goal_SLO_the_indominatable_slovak_hyberborean_spirit.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_the_indominatable_slovak_hyberborean_spirit.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_SLO_the_indominatable_slovak_hyberborean_spirit.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no

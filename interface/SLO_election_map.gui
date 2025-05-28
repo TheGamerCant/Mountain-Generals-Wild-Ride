@@ -1,0 +1,24 @@
+guiTypes = {
+	containerWindowType = {
+		name = "SLO_election_map_gui"
+		size = { width = 1200 height = 750 }
+		position = { x = 540 y = 150 }
+		moveable = yes
+		background = {
+			name = "Background"	
+			spriteType ="GFX_tiled_bg"
+		}
+		
+		
+		buttonType = {
+			name = "close_button"
+			position = { x = -45 y = 14 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_24header"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+	}
+}

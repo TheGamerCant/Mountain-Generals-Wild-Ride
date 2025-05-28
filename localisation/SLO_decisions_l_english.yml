@@ -37,3 +37,10 @@
  SLO_the_ties_that_bind_desc:0 "We have much in common with the Czechs, hell we shared the same country! It's just that, well, it was very Czech dominated. This time however, it will be us Slovaks who dominate those ungrateful Czechs. We should rename Brno, the second largest city in Czechia to remind them of this new reality."
  SLO_unity_under_the_man_in_the_mask:0 "Unity Under The Man In The Mask"
  SLO_unity_under_the_man_in_the_mask_desc:0 "All are equal under the man in the mask, soon the Czechs will learn to accept this."
+ 
+ SLO_crush_anti_mountain_general_sentiment:0 "Crush Anti-Mountain General Sentiment in [FROM.GetName]"
+ SLO_crush_anti_mountain_general_sentiment_desc:0 ""
+ SLO_hyperborean_propaganda:0 "Hyperborean Propaganda in [FROM.GetName]"
+ SLO_hyperborean_propaganda_desc:0 ""
+ SLO_integrate_state_hyperborea:0 "Integrate §Y[FROM.GetName]§!"
+ SLO_integrate_state_hyperborea_desc:0 "The good people of [FROM.GetName] has finally come around to Mountain General's vision for the world. It is time to welcome them into our country with open arms."

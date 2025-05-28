@@ -193,7 +193,7 @@ SLO_propaganda_decision_category = {
 			fascism_drift = 0.10
 			war_support_factor = 0.15
 			stability_factor = -0.05
-			political_power_gain = 0.10
+			political_power_gain = 0.30
 		}
 		
 		complete_effect = {
@@ -406,7 +406,7 @@ SLO_propaganda_decision_category = {
 		modifier = {
 			production_speed_buildings_factor = 0.10
 			consumer_goods_factor = -0.15
-			production_speed_industrial_complex_factor = 0.15
+			production_speed_industrial_complex_factor = 0.05
 			production_speed_infrastructure_factor = 0.15
 			production_speed_rail_way_factor = 0.15
 		}
@@ -454,8 +454,8 @@ SLO_propaganda_decision_category = {
 		modifier = {
 			weekly_casualties_war_support = 0.002
 			weekly_bombing_war_support = 0.002
-			industrial_capacity_factory = 0.10
-			industrial_capacity_dockyard = 0.10
+			industrial_capacity_factory = 0.12
+			industrial_capacity_dockyard = 0.12
 		}
 		
 		complete_effect = {
@@ -489,10 +489,10 @@ SLO_propaganda_decision_category = {
 		}
 		
 		visible = {
-#			OR={
-#				has_country_flag = SLO_all_propaganda_available_flag
-#				NOT = { has_government = fascism }
-#			}
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_completed_focus = SLO_consolidation_of_the_regime
+			}
 		}
 
 		days_remove = var:SLO.propaganda_campaign_days
@@ -546,10 +546,10 @@ SLO_propaganda_decision_category = {
 		}
 		
 		visible = {
-#			OR={
-#				has_country_flag = SLO_all_propaganda_available_flag
-#				NOT = { has_government = fascism }
-#			}
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_completed_focus = SLO_consolidation_of_the_regime
+			}
 		}
 
 
@@ -617,9 +617,8 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^11
 
 		modifier = {
-			weekly_manpower = 500
-			political_power_gain = 0.30
-			stability_factor = 0.05
+			compliance_growth = 0.15
+			stability_weekly = 0.002
 		}
 		
 		complete_effect = {
@@ -666,11 +665,11 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^12
 
 		modifier = {
-			production_speed_buildings_factor = 0.05
-			industrial_capacity_dockyard = 0.05
-			industrial_capacity_factory = 0.05
-			resistance_activity = -0.15
+			industry_free_repair_factor = 0.25
+			compliance_growth = 0.10
+			resistance_activity = -0.10
 			stability_weekly = 0.001
+			political_power_cost = -0.05
 		}
 		
 		complete_effect = {
@@ -722,7 +721,9 @@ SLO_propaganda_decision_category = {
 		modifier = {
 			war_support_factor = 0.05
 			fascism_drift = 0.10
-			political_power_gain = 0.20
+			political_power_gain = 0.25
+			army_core_defence_factor = 0.06
+			army_core_attack_factor = 0.03
 		}
 		
 		complete_effect = {
@@ -770,8 +771,8 @@ SLO_propaganda_decision_category = {
 
 		modifier = {
 			monthly_population = 0.40
-			war_support_weekly = 0.001
-			political_power_factor = 0.08
+			war_support_weekly = 0.002
+			political_power_factor = 0.16
 		}
 		
 		complete_effect = {
@@ -816,6 +817,7 @@ SLO_propaganda_decision_category = {
 		modifier = {
 			stability_weekly = 0.001
 			consumer_goods_factor = -0.10
+			production_speed_buildings_factor = 0.05
 			production_factory_efficiency_gain_factor = 0.10
 		}
 		
@@ -860,8 +862,9 @@ SLO_propaganda_decision_category = {
 
 		modifier = {
 			war_support_weekly = 0.001
-			min_export = -0.1
-			political_power_gain = 0.12
+			weekly_manpower = 750
+			min_export = -0.15
+			political_power_gain = 0.15
 		}
 		
 		complete_effect = {
@@ -1935,6 +1938,12 @@ SLO_the_slovak_occupation_authority = {
 				target = SLC
 				transfer_troops = yes
 			}
+			
+			hidden_effect = {
+				CZE = {
+					every_character = { set_nationality = SLO }
+				}
+			}
 		}
 	}
 	
@@ -2031,6 +2040,165 @@ SLO_the_slovak_occupation_authority = {
 
 		remove_effect = {
 			SLO_increase_czech_integration = yes
+		}
+	}
+	
+#	SLO_crush_anti_mountain_general_sentiment = { 
+#
+#		icon = SWI_consolidate_council_power
+#		
+#		target_trigger = {
+#			FROM = { 
+#				NOT = { is_core_of = SLO }
+#				is_claimed_by = SLO
+#				is_owned_by = SLO
+#				is_fully_controlled_by = SLO
+#			}
+#		}
+#		state_target = yes
+#		on_map_mode = map_only
+#
+#		allowed = {
+#			original_tag = SLO
+#		}
+#		
+#		ai_will_do = {
+#			base = 20
+#		}
+#
+#		available = {
+#		}
+#
+#		visible = {
+#			has_completed_focus = SLO_the_indominatable_slovak_hyberborean_spirit
+#			FROM = { NOT = { has_state_flag = SLO_is_integrating_state_flag } }
+#		}
+#		
+#		days_remove = 45
+#		days_re_enable = 45
+#		
+#		fire_only_once = no
+#
+#		custom_cost_trigger = {
+#			has_political_power > 14
+#			has_army_experience > 9
+#		}
+#		custom_cost_text = decision_cost_pp_15_ArmXP_10
+#
+#		complete_effect = {	
+#			
+#		}
+#		
+#		remove_effect={
+#			FROM = {
+#				add_compliance = -5
+#				add_resistance = -15
+#			}
+#		}
+#	}
+#	
+#	
+#	SLO_hyperborean_propaganda = { 
+#
+#		icon = eng_propaganda_campaigns
+#		
+#		target_trigger = {
+#			FROM = { 
+#				NOT = { is_core_of = SLO }
+#				is_claimed_by = SLO
+#				is_owned_by = SLO
+#				is_fully_controlled_by = SLO
+#			}
+#		}
+#		state_target = yes
+#		on_map_mode = map_only
+#
+#		allowed = {
+#			original_tag = SLO
+#		}
+#		
+#		ai_will_do = {
+#			base = 20
+#		}
+#
+#		available = {
+#		}
+#
+#		visible = {
+#			has_completed_focus = SLO_the_indominatable_slovak_hyberborean_spirit
+#			FROM = { NOT = { has_state_flag = SLO_is_integrating_state_flag } }
+#		}
+#		
+#		days_remove = 45
+#		days_re_enable = 45
+#		
+#		fire_only_once = no
+#
+#		cost = 50
+#
+#		complete_effect = {	
+#			
+#		}
+#		
+#		remove_effect={
+#			FROM = {
+#				add_compliance = 10
+#				add_resistance = 5
+#			}
+#		}
+#	}
+	
+	SLO_integrate_state_hyperborea = { 
+
+		icon = eng_trade_unions_demand
+		
+		target_trigger = {
+			FROM = { 
+				NOT = { is_core_of = SLO }
+				is_claimed_by = SLO
+				is_owned_by = SLO
+				is_fully_controlled_by = SLO
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+
+		allowed = {
+			original_tag = SLO
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+
+		available = {
+			FROM = {
+				compliance > 40
+				resistance < 20
+			}
+		}
+
+		visible = {
+			has_completed_focus = SLO_the_indominatable_slovak_hyberborean_spirit
+		}
+		
+		days_remove = 90
+		
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {	
+			FROM = {
+				set_state_flag = SLO_is_integrating_state_flag
+			}
+		}
+		
+		remove_effect={
+			FROM = {
+				add_core_of = SLO
+				clr_state_flag  = SLO_is_integrating_state_flag
+			}
 		}
 	}
 }

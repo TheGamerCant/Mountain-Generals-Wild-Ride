@@ -20,6 +20,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/SLO_hlinkla_guard.dds"
 	}
 	SpriteType = {
+		name = "GFX_idea_SLO_hunt_the_bear"
+		texturefile = "gfx/interface/ideas/SLO_hunt_the_bear.dds"
+	}
+	SpriteType = {
 		name = "GFX_idea_SLO_letecke_opravovne_trenchin"
 		texturefile = "gfx/interface/ideas/SLO_letecke_opravovne_trenchin.dds"
 	}
@@ -30,6 +34,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_SLO_slovenska_plavba_a_ristavy"
 		texturefile = "gfx/interface/ideas/SLO_slovenska_plavba_a_ristavy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SLO_surveillance_state"
+		texturefile = "gfx/interface/ideas/SLO_surveillance_state.dds"
 	}
 	SpriteType = {
 		name = "GFX_idea_SLO_unclear_ideology_idea"

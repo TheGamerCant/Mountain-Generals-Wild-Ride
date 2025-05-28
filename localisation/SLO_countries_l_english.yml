@@ -7,7 +7,6 @@
  SLH_Schizo_Fascism_DEF:0 "the Slovakian Commissariat of Hungary"
  SLH_Schizo_Fascism_ADJ:0 "Hungarian"
  
- 
  SLC:0 "Slovakian Czechia"
  SLC_DEF:0 "the Slovak Occupation Authority of Czechia"
  SLC_ADJ:0 "Hungarian"
@@ -19,3 +18,7 @@
  SLO_greater_slovakia:0 "Veľké Slovensko"
  SLO_greater_slovakia_DEF:0 "Greater Slovakia"
  SLO_greater_slovakia_ADJ:0 "Slovak"
+ 
+ SLO_hyperborea:0 "Hyperborea"
+ SLO_hyperborea_DEF:0 "the Esoteric Realm of his Greatness Mountain General"
+ SLO_hyperborea_ADJ:0 "Hyperborean"

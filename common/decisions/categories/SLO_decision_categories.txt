@@ -79,3 +79,18 @@ SLO_stabilising_the_regime_category = {
 		}
 	}
 }
+
+SLO_parliament_decision_category = {
+	priority = 998
+	
+	allowed = {
+		original_tag = SLO
+	}
+	
+	visible = {
+		has_country_flag = SLO_parliament_is_active_flag
+	}
+	
+	scripted_gui = SLO_parliament_gui
+	visible_when_empty = yes
+}

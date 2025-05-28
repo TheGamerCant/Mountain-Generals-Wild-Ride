@@ -1,0 +1,8 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_SLO_parliament_party_icon"
+		texturefile = "gfx/interface/SLO_parliament/SLO_parliament_parties.dds"
+		noOfFrames = 6
+#		transparencecheck = yes
+	}
+}

@@ -1,0 +1,46 @@
+scripted_gui = {
+	SLO_parliament_gui = {
+		context_type = decision_category
+		window_name = "SLO_parliament_gui_container"
+
+		dynamic_lists = {
+			parliament_gridbox = {
+				array = SLO.parliament_frame_array
+				
+				value = v
+				index = i
+				change_scope = no
+				
+				entry_container = SLO_parliament_member_entry
+			}
+
+		}
+
+		effects = {
+
+		}
+
+		properties = {
+			parliament_member_icon = {
+				frame = v
+				x = SLO.parliament_x_pos_array^i
+				y = SLO.parliament_y_pos_array^i
+			}
+		}
+	}
+	
+	SLO_election_map_gui = {
+		context_type = player_context
+		window_name = "SLO_election_map_gui"
+
+		visible = {
+			has_country_flag = SLO_election_map_is_open_flag
+		}
+
+		effects = {
+			close_button_click = {
+				clr_country_flag = SLO_election_map_is_open_flag
+			}
+		}
+	}
+}

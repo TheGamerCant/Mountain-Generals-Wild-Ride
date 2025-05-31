@@ -1,0 +1,248 @@
+﻿l_english:
+ SLO_GFX_elections_slovakia_70_idea:0 "GFX_slovakia_70"
+ SLO_NAME_elections_slovakia_70_idea:0 "Západné Slovensko"
+ 
+ SLO_GFX_elections_slovakia_71_idea:0 "GFX_slovakia_71"
+ SLO_NAME_elections_slovakia_71_idea:0 "Východné Slovensko"
+ 
+ SLO_GFX_elections_slovakia_73_idea:0 "GFX_slovakia_73"
+ SLO_NAME_elections_slovakia_73_idea:0 "Podkarpatská Rus"
+ 
+ SLO_GFX_elections_slovakia_664_idea:0 "GFX_slovakia_664"
+ SLO_NAME_elections_slovakia_664_idea:0 "Južné Slovensko"
+ 
+ 
+ 
+ SLO_GFX_elections_europe_100_idea:0 "GFX_europe_100"
+ SLO_NAME_elections_europe_100_idea:0 "Severný Atlantik"
+ 
+ SLO_GFX_elections_europe_178_idea:0 "GFX_europe_178"
+ SLO_NAME_elections_europe_178_idea:0 "Stredný Atlantik"
+ 
+ SLO_GFX_elections_europe_121_idea:0 "GFX_europe_121"
+ SLO_NAME_elections_europe_121_idea:0 "Škótsko"
+ 
+ SLO_GFX_elections_europe_113_idea:0 "GFX_europe_113"
+ SLO_NAME_elections_europe_113_idea:0 "Írsko"
+ 
+ SLO_GFX_elections_europe_132_idea:0 "GFX_europe_132"
+ SLO_NAME_elections_europe_132_idea:0 "Severné Anglicko"
+ 
+ SLO_GFX_elections_europe_128_idea:0 "GFX_europe_128"
+ SLO_NAME_elections_europe_128_idea:0 "Wales - Midlands"
+ 
+ SLO_GFX_elections_europe_126_idea:0 "GFX_europe_126"
+ SLO_NAME_elections_europe_126_idea:0 "Južné Anglicko"
+ 
+ SLO_GFX_elections_europe_37_idea:0 "GFX_europe_37"
+ SLO_NAME_elections_europe_37_idea:0 "Dánsko"
+ 
+ SLO_GFX_elections_europe_7_idea:0 "GFX_europe_7"
+ SLO_NAME_elections_europe_7_idea:0 "Holandsko - Flámsko"
+ 
+ SLO_GFX_elections_europe_112_idea:0 "GFX_europe_112"
+ SLO_NAME_elections_europe_112_idea:0 "Portugalsko"
+ 
+ SLO_GFX_elections_europe_118_idea:0 "GFX_europe_118"
+ SLO_NAME_elections_europe_118_idea:0 "Gibraltár – Južné Španielsko"
+ 
+ SLO_GFX_elections_europe_165_idea:0 "GFX_europe_165"
+ SLO_NAME_elections_europe_165_idea:0 "Východné Španielsko"
+ 
+ SLO_GFX_elections_europe_41_idea:0 "GFX_europe_41"
+ SLO_NAME_elections_europe_41_idea:0 "Stredné Španielsko"
+ 
+ SLO_GFX_elections_europe_171_idea:0 "GFX_europe_171"
+ SLO_NAME_elections_europe_171_idea:0 "Severné Španielsko"
+ 
+ SLO_GFX_elections_europe_792_idea:0 "GFX_europe_792"
+ SLO_NAME_elections_europe_792_idea:0 "Baskicko"
+ 
+ SLO_GFX_elections_europe_19_idea:0 "GFX_europe_19"
+ SLO_NAME_elections_europe_19_idea:0 "Atlantické Francúzsko"
+ 
+ SLO_GFX_elections_europe_16_idea:0 "GFX_europe_16"
+ SLO_NAME_elections_europe_16_idea:0 "Severné Francúzsko"
+ 
+ SLO_GFX_elections_europe_28_idea:0 "GFX_europe_28"
+ SLO_NAME_elections_europe_28_idea:0 "Grand-Est - Burgundsko - Valónsko"
+ 
+ SLO_GFX_elections_europe_31_idea:0 "GFX_europe_31"
+ SLO_NAME_elections_europe_31_idea:0 "Occitanie"
+ 
+ SLO_GFX_elections_europe_20_idea:0 "GFX_europe_20"
+ SLO_NAME_elections_europe_20_idea:0 "Provensálsko - Alpy - Rhôna - Korzika"
+ 
+ SLO_GFX_elections_europe_51_idea:0 "GFX_europe_51"
+ SLO_NAME_elections_europe_51_idea:0 "Porýnie"
+ 
+ SLO_GFX_elections_europe_50_idea:0 "GFX_europe_50"
+ SLO_NAME_elections_europe_50_idea:0 "Bádensko – Württembersko"
+ 
+ SLO_GFX_elections_europe_52_idea:0 "GFX_europe_52"
+ SLO_NAME_elections_europe_52_idea:0 "Bavorsko"
+ 
+ SLO_GFX_elections_europe_58_idea:0 "GFX_europe_58"
+ SLO_NAME_elections_europe_58_idea:0 "Severozápadné Nemecko"
+ 
+ SLO_GFX_elections_europe_64_idea:0 "GFX_europe_64"
+ SLO_NAME_elections_europe_64_idea:0 "Brandenbursko"
+ 
+ SLO_GFX_elections_europe_63_idea:0 "GFX_europe_63"
+ SLO_NAME_elections_europe_63_idea:0 "Pomoransko"
+ 
+ SLO_GFX_elections_europe_66_idea:0 "GFX_europe_66"
+ SLO_NAME_elections_europe_66_idea:0 "Sliezsko"
+ 
+ SLO_GFX_elections_europe_9_idea:0 "GFX_europe_9"
+ SLO_NAME_elections_europe_9_idea:0 "Česko"
+ 
+ SLO_GFX_elections_europe_69_idea:0 "GFX_europe_69"
+ SLO_NAME_elections_europe_69_idea:0 "Sudety"
+ 
+ SLO_GFX_elections_europe_70_idea:0 "GFX_europe_70"
+ SLO_NAME_elections_europe_70_idea:0 "Slovensko"
+ 
+ SLO_GFX_elections_europe_3_idea:0 "GFX_europe_3"
+ SLO_NAME_elections_europe_3_idea:0 "Švajčiarsko"
+ 
+ SLO_GFX_elections_europe_4_idea:0 "GFX_europe_4"
+ SLO_NAME_elections_europe_4_idea:0 "Rakúsko"
+ 
+ SLO_GFX_elections_europe_159_idea:0 "GFX_europe_159"
+ SLO_NAME_elections_europe_159_idea:0 "Pádska Dolina"
+ 
+ SLO_GFX_elections_europe_2_idea:0 "GFX_europe_2"
+ SLO_NAME_elections_europe_2_idea:0 "Stredné Taliansko"
+ 
+ SLO_GFX_elections_europe_117_idea:0 "GFX_europe_117"
+ SLO_NAME_elections_europe_117_idea:0 "Južné Taliansko"
+ 
+ SLO_GFX_elections_europe_43_idea:0 "GFX_europe_43"
+ SLO_NAME_elections_europe_43_idea:0 "Maďarsko"
+ 
+ SLO_GFX_elections_europe_102_idea:0 "GFX_europe_102"
+ SLO_NAME_elections_europe_102_idea:0 "Slovinsko"
+ 
+ SLO_GFX_elections_europe_10_idea:0 "GFX_europe_10"
+ SLO_NAME_elections_europe_10_idea:0 "Poľsko"
+ 
+ SLO_GFX_elections_europe_88_idea:0 "GFX_europe_88"
+ SLO_NAME_elections_europe_88_idea:0 "Halič"
+ 
+ SLO_GFX_elections_europe_763_idea:0 "GFX_europe_763"
+ SLO_NAME_elections_europe_763_idea:0 "Východné Prusko"
+ 
+ SLO_GFX_elections_europe_784_idea:0 "GFX_europe_784"
+ SLO_NAME_elections_europe_784_idea:0 "Litva"
+ 
+ SLO_GFX_elections_europe_808_idea:0 "GFX_europe_808"
+ SLO_NAME_elections_europe_808_idea:0 "Lotyšsko"
+ 
+ SLO_GFX_elections_europe_812_idea:0 "GFX_europe_812"
+ SLO_NAME_elections_europe_812_idea:0 "Estónsko"
+ 
+ SLO_GFX_elections_europe_109_idea:0 "GFX_europe_109"
+ SLO_NAME_elections_europe_109_idea:0 "Chorvátsko"
+ 
+ SLO_GFX_elections_europe_104_idea:0 "GFX_europe_104"
+ SLO_NAME_elections_europe_104_idea:0 "Bosna"
+ 
+ SLO_GFX_elections_europe_107_idea:0 "GFX_europe_107"
+ SLO_NAME_elections_europe_107_idea:0 "Srbsko"
+ 
+ SLO_GFX_elections_europe_44_idea:0 "GFX_europe_44"
+ SLO_NAME_elections_europe_44_idea:0 "Albánsko"
+ 
+ SLO_GFX_elections_europe_731_idea:0 "GFX_europe_731"
+ SLO_NAME_elections_europe_731_idea:0 "Macedónsko"
+ 
+ SLO_GFX_elections_europe_47_idea:0 "GFX_europe_47"
+ SLO_NAME_elections_europe_47_idea:0 "Grécko"
+ 
+ SLO_GFX_elections_europe_48_idea:0 "GFX_europe_48"
+ SLO_NAME_elections_europe_48_idea:0 "Bulharsko"
+ 
+ SLO_GFX_elections_europe_46_idea:0 "GFX_europe_46"
+ SLO_NAME_elections_europe_46_idea:0 "Valašsko"
+ 
+ SLO_GFX_elections_europe_971_idea:0 "GFX_europe_971"
+ SLO_NAME_elections_europe_971_idea:0 "Dobrudža"
+ 
+ SLO_GFX_elections_europe_76_idea:0 "GFX_europe_76"
+ SLO_NAME_elections_europe_76_idea:0 "Transylvánia"
+ 
+ SLO_GFX_elections_europe_79_idea:0 "GFX_europe_79"
+ SLO_NAME_elections_europe_79_idea:0 "Moldavsko"
+ 
+ SLO_GFX_elections_europe_110_idea:0 "GFX_europe_110"
+ SLO_NAME_elections_europe_110_idea:0 "Nórsko"
+ 
+ SLO_GFX_elections_europe_141_idea:0 "GFX_europe_141"
+ SLO_NAME_elections_europe_141_idea:0 "Švédsko"
+ 
+ SLO_GFX_elections_europe_38_idea:0 "GFX_europe_38"
+ SLO_NAME_elections_europe_38_idea:0 "Norrland"
+ 
+ SLO_GFX_elections_europe_111_idea:0 "GFX_europe_111"
+ SLO_NAME_elections_europe_111_idea:0 "Fínsko"
+ 
+ SLO_GFX_elections_europe_666_idea:0 "GFX_europe_666"
+ SLO_NAME_elections_europe_666_idea:0 "Saami"
+ 
+ SLO_GFX_elections_europe_797_idea:0 "GFX_europe_797"
+ SLO_NAME_elections_europe_797_idea:0 "Bospor"
+ 
+ SLO_GFX_elections_europe_344_idea:0 "GFX_europe_344"
+ SLO_NAME_elections_europe_344_idea:0 "Južná Anatólia"
+ 
+ SLO_GFX_elections_europe_49_idea:0 "GFX_europe_49"
+ SLO_NAME_elections_europe_49_idea:0 "Severná Anatólia"
+ 
+ SLO_GFX_elections_europe_800_idea:0 "GFX_europe_800"
+ SLO_NAME_elections_europe_800_idea:0 "Kurdistan"
+ 
+ SLO_GFX_elections_europe_206_idea:0 "GFX_europe_206"
+ SLO_NAME_elections_europe_206_idea:0 "Bielorusko "
+ 
+ SLO_GFX_elections_europe_202_idea:0 "GFX_europe_202"
+ SLO_NAME_elections_europe_202_idea:0 "Západná Ukrajina"
+ 
+ SLO_GFX_elections_europe_221_idea:0 "GFX_europe_221"
+ SLO_NAME_elections_europe_221_idea:0 "Dneper-Don"
+ 
+ SLO_GFX_elections_europe_137_idea:0 "GFX_europe_137"
+ SLO_NAME_elections_europe_137_idea:0 "Tavriya"
+ 
+ SLO_GFX_elections_europe_192_idea:0 "GFX_europe_192"
+ SLO_NAME_elections_europe_192_idea:0 "Prychornomoria - Budzhak"
+ 
+ SLO_GFX_elections_europe_213_idea:0 "GFX_europe_2213"
+ SLO_NAME_elections_europe_213_idea:0 "Karélia"
+ 
+ SLO_GFX_elections_europe_195_idea:0 "GFX_europe_195"
+ SLO_NAME_elections_europe_195_idea:0 "Novgorod"
+ 
+ SLO_GFX_elections_europe_219_idea:0 "GFX_europe_219"
+ SLO_NAME_elections_europe_219_idea:0 "Stredné Rusko"
+ 
+ SLO_GFX_elections_europe_218_idea:0 "GFX_europe_218"
+ SLO_NAME_elections_europe_218_idea:0 "Donská Kotlina"
+ 
+ SLO_GFX_elections_europe_229_idea:0 "GFX_europe_229"
+ SLO_NAME_elections_europe_229_idea:0 "Južný Kaukaz"
+ 
+ SLO_GFX_elections_europe_232_idea:0 "GFX_europe_232"
+ SLO_NAME_elections_europe_232_idea:0 "Severné Kaukazy"
+ 
+ SLO_GFX_elections_europe_217_idea:0 "GFX_europe_217"
+ SLO_NAME_elections_europe_217_idea:0 "Povodie Volgy"
+ 
+ SLO_GFX_elections_europe_252_idea:0 "GFX_europe_252"
+ SLO_NAME_elections_europe_252_idea:0 "Volga"
+ 
+ SLO_GFX_elections_europe_651_idea:0 "GFX_europe_651"
+ SLO_NAME_elections_europe_651_idea:0 "Ural"
+ 
+ SLO_GFX_elections_europe_214_idea:0 "GFX_europe_214"
+ SLO_NAME_elections_europe_214_idea:0 "Barents"

@@ -273,36 +273,3 @@ SLO_remove_skewer_the_eagle_modifier = {
 		remove_ideas = SLO_skewer_the_eagle_idea_1
 	}
 }
-
-SLO_debug_load_democracy = {
-	SLO = {
-#		annex_country = {
-#			target = CZE
-#			transfer_troops = yes
-#		}
-#		every_state = {
-#			limit = { is_core_of = CZE }
-#			add_core_of = SLO
-#		}
-		
-		set_politics = {
-			ruling_party = democratic
-			elections_allowed = yes
-			election_frequency = 48
-		}
-		
-		set_country_flag = SLO_parliament_is_active_flag
-	}
-}
-
-SLO_initialise_parliament = {
-	set_variable = { SLO.parliament_seat_total = 300 }
-	
-	#Party 0 -> Communist
-	#Party 1 -> Social Democratic
-	#Party 2 -> Liberal
-	#Party 3 -> Agrarian / Conservative
-	#Party 4 -> Nationalist
-	#Party 5 -> Fascist
-	
-}

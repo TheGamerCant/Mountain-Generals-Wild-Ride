@@ -2,7 +2,421 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_SLO_parliament_party_icon"
 		texturefile = "gfx/interface/SLO_parliament/SLO_parliament_parties.dds"
-		noOfFrames = 6
+		noOfFrames = 7
 #		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_slovakia_70"
+		texturefile = "gfx/interface/SLO_parliament/states/slovakia_70.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_slovakia_71"
+		texturefile = "gfx/interface/SLO_parliament/states/slovakia_71.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_slovakia_73"
+		texturefile = "gfx/interface/SLO_parliament/states/slovakia_73.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_slovakia_664"
+		texturefile = "gfx/interface/SLO_parliament/states/slovakia_664.dds"
+		transparencecheck = yes
+	}
+	
+	
+	
+	spriteType = {
+		name = "GFX_europe_100"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_100.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_178"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_178.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_121"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_121.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_113"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_113.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_132"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_132.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_128"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_128.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_126"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_126.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_37"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_37.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_7"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_7.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_112"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_112.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_118"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_118.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_165"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_165.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_41"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_41.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_171"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_171.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_792"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_792.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_19"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_19.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_16"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_16.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_28"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_28.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_31"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_31.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_20"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_20.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_51"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_51.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_50"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_50.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_52"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_52.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_58"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_58.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_64"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_64.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_63"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_63.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_66"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_66.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_9"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_9.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_69"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_69.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_70"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_70.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_3"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_3.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_4"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_4.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_159"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_159.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_2"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_2.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_117"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_117.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_43"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_43.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_102"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_102.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_10"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_10.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_88"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_88.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_763"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_763.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_784"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_784.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_808"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_808.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_812"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_812.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_109"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_109.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_104"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_104.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_107"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_107.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_44"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_44.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_731"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_731.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_47"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_47.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_48"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_48.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_46"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_46.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_971"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_971.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_76"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_76.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_79"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_79.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_110"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_110.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_141"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_141.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_38"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_38.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_111"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_111.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_666"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_666.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_797"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_797.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_344"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_344.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_49"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_49.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_800"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_800.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_206"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_206.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_202"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_202.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_221"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_221.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_137"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_137.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_192"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_192.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_213"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_213.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_195"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_195.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_219"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_219.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_218"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_218.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_229"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_229.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_232"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_232.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_217"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_217.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_252"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_252.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_651"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_651.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_europe_214"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_214.dds"
+		transparencecheck = yes
 	}
 }

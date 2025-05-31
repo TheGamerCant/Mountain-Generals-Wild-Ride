@@ -9,6 +9,26 @@ guiTypes = {
 			spriteType ="GFX_tiled_bg"
 		}
 		
+		containerWindowType = {
+			name = "SLO_election_map_bg_window"
+			size = { width = 856 height = 463 }
+			position = { x = 0 y = 0 }
+			background = {
+				name = "Background"	
+				spriteType ="GFX_tiled_bg"
+			}
+		}
+		
+		containerWindowType = {
+			name = "SLO_election_map"
+			size = { width = 828 height = 435 }
+			position = { x = 14 y = 14 }
+			background = {
+				name = "Background"	
+				spriteType ="GFX_pink_bold_selection_frame"
+			}
+		}
+		
 		
 		buttonType = {
 			name = "close_button"

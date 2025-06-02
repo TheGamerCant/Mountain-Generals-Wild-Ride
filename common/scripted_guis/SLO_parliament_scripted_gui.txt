@@ -37,7 +37,48 @@ scripted_gui = {
 			has_country_flag = SLO_election_map_is_open_flag
 		}
 
-		effects = {
+		dynamic_lists={
+			state_button_gridbox={
+				array = SLO.election_states
+				change_scope = yes
+				entry_container = state_button_entry
+			}
+#			
+#			party_national_state_results_gridbox={
+#				array = POL.POL_electoral_map_selected_state:parties_in_order
+#				change_scope = no
+#				entry_container = party_national_state_results_entry
+#			}
+		}
+		
+		properties={
+			state_button_entry_progressbar={
+				image = "[?THIS.progressbar_token.GetTokenLocalizedKey]"
+				frame = THIS.previous_election_victor_popularity
+				x = THIS.x_pos
+				y = THIS.y_pos
+			}
+			state_button_entry_button={
+				image = "[?THIS.overlay_token.GetTokenLocalizedKey]"
+				x = THIS.x_pos
+				y = THIS.y_pos
+			}
+#			RIGHT_BANNER={
+#				image = "[POL.GetRightBannerImg]"
+#			}
+		}
+		
+		effects={
+			state_button_entry_button_click={
+				if={
+					limit = { check_variable = { POL.POL_electoral_map_selected_state = v } }
+					set_variable = { POL.POL_electoral_map_selected_state = POL }
+				}
+				else={
+					set_variable = { POL.POL_electoral_map_selected_state = v }
+				}
+			}
+			
 			close_button_click = {
 				clr_country_flag = SLO_election_map_is_open_flag
 			}

@@ -1,248 +1,324 @@
 ﻿l_english:
- SLO_GFX_elections_slovakia_70_idea:0 "GFX_slovakia_70"
+ SLO_GFX_elections_slovakia_70_OVERLAY_idea:0 "GFX_slovakia_70_OVERLAY"
+ SLO_GFX_elections_slovakia_70_PROGESSBAR_idea:0 "GFX_slovakia_70_PROGRESSBAR"
  SLO_NAME_elections_slovakia_70_idea:0 "Západné Slovensko"
  
- SLO_GFX_elections_slovakia_71_idea:0 "GFX_slovakia_71"
+ SLO_GFX_elections_slovakia_71_OVERLAY_idea:0 "GFX_slovakia_71_OVERLAY"
+ SLO_GFX_elections_slovakia_71_PROGESSBAR_idea:0 "GFX_slovakia_71_PROGRESSBAR"
  SLO_NAME_elections_slovakia_71_idea:0 "Východné Slovensko"
  
- SLO_GFX_elections_slovakia_73_idea:0 "GFX_slovakia_73"
+ SLO_GFX_elections_slovakia_73_OVERLAY_idea:0 "GFX_slovakia_73_OVERLAY"
+ SLO_GFX_elections_slovakia_73_PROGESSBAR_idea:0 "GFX_slovakia_73_PROGRESSBAR"
  SLO_NAME_elections_slovakia_73_idea:0 "Podkarpatská Rus"
  
- SLO_GFX_elections_slovakia_664_idea:0 "GFX_slovakia_664"
+ SLO_GFX_elections_slovakia_664_OVERLAY_idea:0 "GFX_slovakia_664_OVERLAY"
+ SLO_GFX_elections_slovakia_664_PROGESSBAR_idea:0 "GFX_slovakia_664_PROGRESSBAR"
  SLO_NAME_elections_slovakia_664_idea:0 "Južné Slovensko"
  
  
  
- SLO_GFX_elections_europe_100_idea:0 "GFX_europe_100"
+ SLO_GFX_elections_europe_100_OVERLAY_idea:0 "GFX_europe_100_OVERLAY"
+ SLO_GFX_elections_europe_100_PROGESSBAR_idea:0 "GFX_europe_100_PROGRESSBAR"
  SLO_NAME_elections_europe_100_idea:0 "Severný Atlantik"
  
- SLO_GFX_elections_europe_178_idea:0 "GFX_europe_178"
+ SLO_GFX_elections_europe_178_OVERLAY_idea:0 "GFX_europe_178_OVERLAY"
+ SLO_GFX_elections_europe_178_PROGESSBAR_idea:0 "GFX_europe_178_PROGRESSBAR"
  SLO_NAME_elections_europe_178_idea:0 "Stredný Atlantik"
  
- SLO_GFX_elections_europe_121_idea:0 "GFX_europe_121"
+ SLO_GFX_elections_europe_121_OVERLAY_idea:0 "GFX_europe_121_OVERLAY"
+ SLO_GFX_elections_europe_121_PROGESSBAR_idea:0 "GFX_europe_121_PROGRESSBAR"
  SLO_NAME_elections_europe_121_idea:0 "Škótsko"
  
- SLO_GFX_elections_europe_113_idea:0 "GFX_europe_113"
+ SLO_GFX_elections_europe_113_OVERLAY_idea:0 "GFX_europe_113_OVERLAY"
+ SLO_GFX_elections_europe_113_PROGESSBAR_idea:0 "GFX_europe_113_PROGRESSBAR"
  SLO_NAME_elections_europe_113_idea:0 "Írsko"
  
- SLO_GFX_elections_europe_132_idea:0 "GFX_europe_132"
+ SLO_GFX_elections_europe_132_OVERLAY_idea:0 "GFX_europe_132_OVERLAY"
+ SLO_GFX_elections_europe_132_PROGESSBAR_idea:0 "GFX_europe_132_PROGRESSBAR"
  SLO_NAME_elections_europe_132_idea:0 "Severné Anglicko"
  
- SLO_GFX_elections_europe_128_idea:0 "GFX_europe_128"
+ SLO_GFX_elections_europe_128_OVERLAY_idea:0 "GFX_europe_128_OVERLAY"
+ SLO_GFX_elections_europe_128_PROGESSBAR_idea:0 "GFX_europe_128_PROGRESSBAR"
  SLO_NAME_elections_europe_128_idea:0 "Wales - Midlands"
  
- SLO_GFX_elections_europe_126_idea:0 "GFX_europe_126"
+ SLO_GFX_elections_europe_126_OVERLAY_idea:0 "GFX_europe_126_OVERLAY"
+ SLO_GFX_elections_europe_126_PROGESSBAR_idea:0 "GFX_europe_126_PROGRESSBAR"
  SLO_NAME_elections_europe_126_idea:0 "Južné Anglicko"
  
- SLO_GFX_elections_europe_37_idea:0 "GFX_europe_37"
+ SLO_GFX_elections_europe_37_OVERLAY_idea:0 "GFX_europe_37_OVERLAY"
+ SLO_GFX_elections_europe_37_PROGESSBAR_idea:0 "GFX_europe_37_PROGRESSBAR"
  SLO_NAME_elections_europe_37_idea:0 "Dánsko"
  
- SLO_GFX_elections_europe_7_idea:0 "GFX_europe_7"
+ SLO_GFX_elections_europe_7_OVERLAY_idea:0 "GFX_europe_7_OVERLAY"
+ SLO_GFX_elections_europe_7_PROGESSBAR_idea:0 "GFX_europe_7_PROGRESSBAR"
  SLO_NAME_elections_europe_7_idea:0 "Holandsko - Flámsko"
  
- SLO_GFX_elections_europe_112_idea:0 "GFX_europe_112"
+ SLO_GFX_elections_europe_112_OVERLAY_idea:0 "GFX_europe_112_OVERLAY"
+ SLO_GFX_elections_europe_112_PROGESSBAR_idea:0 "GFX_europe_112_PROGRESSBAR"
  SLO_NAME_elections_europe_112_idea:0 "Portugalsko"
  
- SLO_GFX_elections_europe_118_idea:0 "GFX_europe_118"
+ SLO_GFX_elections_europe_118_OVERLAY_idea:0 "GFX_europe_118_OVERLAY"
+ SLO_GFX_elections_europe_118_PROGESSBAR_idea:0 "GFX_europe_118_PROGRESSBAR"
  SLO_NAME_elections_europe_118_idea:0 "Gibraltár – Južné Španielsko"
  
- SLO_GFX_elections_europe_165_idea:0 "GFX_europe_165"
+ SLO_GFX_elections_europe_165_OVERLAY_idea:0 "GFX_europe_165_OVERLAY"
+ SLO_GFX_elections_europe_165_PROGESSBAR_idea:0 "GFX_europe_165_PROGRESSBAR"
  SLO_NAME_elections_europe_165_idea:0 "Východné Španielsko"
  
- SLO_GFX_elections_europe_41_idea:0 "GFX_europe_41"
+ SLO_GFX_elections_europe_41_OVERLAY_idea:0 "GFX_europe_41_OVERLAY"
+ SLO_GFX_elections_europe_41_PROGESSBAR_idea:0 "GFX_europe_41_PROGRESSBAR"
  SLO_NAME_elections_europe_41_idea:0 "Stredné Španielsko"
  
- SLO_GFX_elections_europe_171_idea:0 "GFX_europe_171"
+ SLO_GFX_elections_europe_171_OVERLAY_idea:0 "GFX_europe_171_OVERLAY"
+ SLO_GFX_elections_europe_171_PROGESSBAR_idea:0 "GFX_europe_171_PROGRESSBAR"
  SLO_NAME_elections_europe_171_idea:0 "Severné Španielsko"
  
- SLO_GFX_elections_europe_792_idea:0 "GFX_europe_792"
+ SLO_GFX_elections_europe_792_OVERLAY_idea:0 "GFX_europe_792_OVERLAY"
+ SLO_GFX_elections_europe_792_PROGESSBAR_idea:0 "GFX_europe_792_PROGRESSBAR"
  SLO_NAME_elections_europe_792_idea:0 "Baskicko"
  
- SLO_GFX_elections_europe_19_idea:0 "GFX_europe_19"
+ SLO_GFX_elections_europe_19_OVERLAY_idea:0 "GFX_europe_19_OVERLAY"
+ SLO_GFX_elections_europe_19_PROGESSBAR_idea:0 "GFX_europe_19_PROGRESSBAR"
  SLO_NAME_elections_europe_19_idea:0 "Atlantické Francúzsko"
  
- SLO_GFX_elections_europe_16_idea:0 "GFX_europe_16"
+ SLO_GFX_elections_europe_16_OVERLAY_idea:0 "GFX_europe_16_OVERLAY"
+ SLO_GFX_elections_europe_16_PROGESSBAR_idea:0 "GFX_europe_16_PROGRESSBAR"
  SLO_NAME_elections_europe_16_idea:0 "Severné Francúzsko"
  
- SLO_GFX_elections_europe_28_idea:0 "GFX_europe_28"
+ SLO_GFX_elections_europe_28_OVERLAY_idea:0 "GFX_europe_28_OVERLAY"
+ SLO_GFX_elections_europe_28_PROGESSBAR_idea:0 "GFX_europe_28_PROGRESSBAR"
  SLO_NAME_elections_europe_28_idea:0 "Grand-Est - Burgundsko - Valónsko"
  
- SLO_GFX_elections_europe_31_idea:0 "GFX_europe_31"
+ SLO_GFX_elections_europe_31_OVERLAY_idea:0 "GFX_europe_31_OVERLAY"
+ SLO_GFX_elections_europe_31_PROGESSBAR_idea:0 "GFX_europe_31_PROGRESSBAR"
  SLO_NAME_elections_europe_31_idea:0 "Occitanie"
  
- SLO_GFX_elections_europe_20_idea:0 "GFX_europe_20"
+ SLO_GFX_elections_europe_20_OVERLAY_idea:0 "GFX_europe_20_OVERLAY"
+ SLO_GFX_elections_europe_20_PROGESSBAR_idea:0 "GFX_europe_20_PROGRESSBAR"
  SLO_NAME_elections_europe_20_idea:0 "Provensálsko - Alpy - Rhôna - Korzika"
  
- SLO_GFX_elections_europe_51_idea:0 "GFX_europe_51"
+ SLO_GFX_elections_europe_51_OVERLAY_idea:0 "GFX_europe_51_OVERLAY"
+ SLO_GFX_elections_europe_51_PROGESSBAR_idea:0 "GFX_europe_51_PROGRESSBAR"
  SLO_NAME_elections_europe_51_idea:0 "Porýnie"
  
- SLO_GFX_elections_europe_50_idea:0 "GFX_europe_50"
+ SLO_GFX_elections_europe_50_OVERLAY_idea:0 "GFX_europe_50_OVERLAY"
+ SLO_GFX_elections_europe_50_PROGESSBAR_idea:0 "GFX_europe_50_PROGRESSBAR"
  SLO_NAME_elections_europe_50_idea:0 "Bádensko – Württembersko"
  
- SLO_GFX_elections_europe_52_idea:0 "GFX_europe_52"
+ SLO_GFX_elections_europe_52_OVERLAY_idea:0 "GFX_europe_52_OVERLAY"
+ SLO_GFX_elections_europe_52_PROGESSBAR_idea:0 "GFX_europe_52_PROGRESSBAR"
  SLO_NAME_elections_europe_52_idea:0 "Bavorsko"
  
- SLO_GFX_elections_europe_58_idea:0 "GFX_europe_58"
+ SLO_GFX_elections_europe_58_OVERLAY_idea:0 "GFX_europe_58_OVERLAY"
+ SLO_GFX_elections_europe_58_PROGESSBAR_idea:0 "GFX_europe_58_OVERLAY"
  SLO_NAME_elections_europe_58_idea:0 "Severozápadné Nemecko"
  
- SLO_GFX_elections_europe_64_idea:0 "GFX_europe_64"
+ SLO_GFX_elections_europe_64_OVERLAY_idea:0 "GFX_europe_64_OVERLAY"
+ SLO_GFX_elections_europe_64_PROGESSBAR_idea:0 "GFX_europe_64_PROGRESSBAR"
  SLO_NAME_elections_europe_64_idea:0 "Brandenbursko"
  
- SLO_GFX_elections_europe_63_idea:0 "GFX_europe_63"
+ SLO_GFX_elections_europe_63_OVERLAY_idea:0 "GFX_europe_63_OVERLAY"
+ SLO_GFX_elections_europe_63_PROGESSBAR_idea:0 "GFX_europe_63_PROGRESSBAR"
  SLO_NAME_elections_europe_63_idea:0 "Pomoransko"
  
- SLO_GFX_elections_europe_66_idea:0 "GFX_europe_66"
+ SLO_GFX_elections_europe_66_OVERLAY_idea:0 "GFX_europe_66_OVERLAY"
+ SLO_GFX_elections_europe_66_PROGESSBAR_idea:0 "GFX_europe_66_PROGRESSBAR"
  SLO_NAME_elections_europe_66_idea:0 "Sliezsko"
  
- SLO_GFX_elections_europe_9_idea:0 "GFX_europe_9"
+ SLO_GFX_elections_europe_9_OVERLAY_idea:0 "GFX_europe_9_OVERLAY"
+ SLO_GFX_elections_europe_9_PROGESSBAR_idea:0 "GFX_europe_9_PROGRESSBAR"
  SLO_NAME_elections_europe_9_idea:0 "Česko"
  
- SLO_GFX_elections_europe_69_idea:0 "GFX_europe_69"
+ SLO_GFX_elections_europe_69_OVERLAY_idea:0 "GFX_europe_69_OVERLAY"
+ SLO_GFX_elections_europe_69_PROGESSBAR_idea:0 "GFX_europe_69_PROGRESSBAR"
  SLO_NAME_elections_europe_69_idea:0 "Sudety"
  
- SLO_GFX_elections_europe_70_idea:0 "GFX_europe_70"
+ SLO_GFX_elections_europe_70_OVERLAY_idea:0 "GFX_europe_70_OVERLAY"
+ SLO_GFX_elections_europe_70_PROGESSBAR_idea:0 "GFX_europe_70_PROGRESSBAR"
  SLO_NAME_elections_europe_70_idea:0 "Slovensko"
  
- SLO_GFX_elections_europe_3_idea:0 "GFX_europe_3"
+ SLO_GFX_elections_europe_3_OVERLAY_idea:0 "GFX_europe_3_OVERLAY"
+ SLO_GFX_elections_europe_3_PROGESSBAR_idea:0 "GFX_europe_3_PROGRESSBAR"
  SLO_NAME_elections_europe_3_idea:0 "Švajčiarsko"
  
- SLO_GFX_elections_europe_4_idea:0 "GFX_europe_4"
+ SLO_GFX_elections_europe_4_OVERLAY_idea:0 "GFX_europe_4_OVERLAY"
+ SLO_GFX_elections_europe_4_PROGESSBAR_idea:0 "GFX_europe_4_PROGRESSBAR"
  SLO_NAME_elections_europe_4_idea:0 "Rakúsko"
  
- SLO_GFX_elections_europe_159_idea:0 "GFX_europe_159"
+ SLO_GFX_elections_europe_159_OVERLAY_idea:0 "GFX_europe_159_OVERLAY"
+ SLO_GFX_elections_europe_159_PROGESSBAR_idea:0 "GFX_europe_159_PROGRESSBAR"
  SLO_NAME_elections_europe_159_idea:0 "Pádska Dolina"
  
- SLO_GFX_elections_europe_2_idea:0 "GFX_europe_2"
+ SLO_GFX_elections_europe_2_OVERLAY_idea:0 "GFX_europe_2_OVERLAY"
+ SLO_GFX_elections_europe_2_PROGESSBAR_idea:0 "GFX_europe_2_PROGRESSBAR"
  SLO_NAME_elections_europe_2_idea:0 "Stredné Taliansko"
  
- SLO_GFX_elections_europe_117_idea:0 "GFX_europe_117"
+ SLO_GFX_elections_europe_117_OVERLAY_idea:0 "GFX_europe_117_OVERLAY"
+ SLO_GFX_elections_europe_117_PROGESSBAR_idea:0 "GFX_europe_117_PROGRESSBAR"
  SLO_NAME_elections_europe_117_idea:0 "Južné Taliansko"
  
- SLO_GFX_elections_europe_43_idea:0 "GFX_europe_43"
+ SLO_GFX_elections_europe_43_OVERLAY_idea:0 "GFX_europe_43_OVERLAY"
+ SLO_GFX_elections_europe_43_PROGESSBAR_idea:0 "GFX_europe_43_PROGRESSBAR"
  SLO_NAME_elections_europe_43_idea:0 "Maďarsko"
  
- SLO_GFX_elections_europe_102_idea:0 "GFX_europe_102"
+ SLO_GFX_elections_europe_102_OVERLAY_idea:0 "GFX_europe_102_OVERLAY"
+ SLO_GFX_elections_europe_102_PROGESSBAR_idea:0 "GFX_europe_102_PROGRESSBAR"
  SLO_NAME_elections_europe_102_idea:0 "Slovinsko"
  
- SLO_GFX_elections_europe_10_idea:0 "GFX_europe_10"
+ SLO_GFX_elections_europe_10_OVERLAY_idea:0 "GFX_europe_10_OVERLAY"
+ SLO_GFX_elections_europe_10_PROGESSBAR_idea:0 "GFX_europe_10_PROGRESSBAR"
  SLO_NAME_elections_europe_10_idea:0 "Poľsko"
  
- SLO_GFX_elections_europe_88_idea:0 "GFX_europe_88"
+ SLO_GFX_elections_europe_88_OVERLAY_idea:0 "GFX_europe_88_OVERLAY"
+ SLO_GFX_elections_europe_88_PROGESSBAR_idea:0 "GFX_europe_88_PROGRESSBAR"
  SLO_NAME_elections_europe_88_idea:0 "Halič"
  
- SLO_GFX_elections_europe_763_idea:0 "GFX_europe_763"
+ SLO_GFX_elections_europe_763_OVERLAY_idea:0 "GFX_europe_763_OVERLAY"
+ SLO_GFX_elections_europe_763_PROGESSBAR_idea:0 "GFX_europe_763_PROGRESSBAR"
  SLO_NAME_elections_europe_763_idea:0 "Východné Prusko"
  
- SLO_GFX_elections_europe_784_idea:0 "GFX_europe_784"
+ SLO_GFX_elections_europe_784_OVERLAY_idea:0 "GFX_europe_784_OVERLAY"
+ SLO_GFX_elections_europe_784_PROGESSBAR_idea:0 "GFX_europe_784_PROGRESSBAR"
  SLO_NAME_elections_europe_784_idea:0 "Litva"
  
- SLO_GFX_elections_europe_808_idea:0 "GFX_europe_808"
+ SLO_GFX_elections_europe_808_OVERLAY_idea:0 "GFX_europe_808_OVERLAY"
+ SLO_GFX_elections_europe_808_PROGESSBAR_idea:0 "GFX_europe_808_PROGRESSBAR"
  SLO_NAME_elections_europe_808_idea:0 "Lotyšsko"
  
- SLO_GFX_elections_europe_812_idea:0 "GFX_europe_812"
+ SLO_GFX_elections_europe_812_OVERLAY_idea:0 "GFX_europe_812_OVERLAY"
+ SLO_GFX_elections_europe_812_PROGESSBAR_idea:0 "GFX_europe_812_PROGRESSBAR"
  SLO_NAME_elections_europe_812_idea:0 "Estónsko"
  
- SLO_GFX_elections_europe_109_idea:0 "GFX_europe_109"
+ SLO_GFX_elections_europe_109_OVERLAY_idea:0 "GFX_europe_109_OVERLAY"
+ SLO_GFX_elections_europe_109_PROGESSBAR_idea:0 "GFX_europe_109_PROGRESSBAR"
  SLO_NAME_elections_europe_109_idea:0 "Chorvátsko"
  
- SLO_GFX_elections_europe_104_idea:0 "GFX_europe_104"
+ SLO_GFX_elections_europe_104_OVERLAY_idea:0 "GFX_europe_104_OVERLAY"
+ SLO_GFX_elections_europe_104_PROGESSBAR_idea:0 "GFX_europe_104_PROGRESSBAR"
  SLO_NAME_elections_europe_104_idea:0 "Bosna"
  
- SLO_GFX_elections_europe_107_idea:0 "GFX_europe_107"
+ SLO_GFX_elections_europe_107_OVERLAY_idea:0 "GFX_europe_107_OVERLAY"
+ SLO_GFX_elections_europe_107_PROGESSBAR_idea:0 "GFX_europe_107_PROGRESSBAR"
  SLO_NAME_elections_europe_107_idea:0 "Srbsko"
  
- SLO_GFX_elections_europe_44_idea:0 "GFX_europe_44"
+ SLO_GFX_elections_europe_44_OVERLAY_idea:0 "GFX_europe_44_OVERLAY"
+ SLO_GFX_elections_europe_44_PROGESSBAR_idea:0 "GFX_europe_44_PROGRESSBAR"
  SLO_NAME_elections_europe_44_idea:0 "Albánsko"
  
- SLO_GFX_elections_europe_731_idea:0 "GFX_europe_731"
+ SLO_GFX_elections_europe_731_OVERLAY_idea:0 "GFX_europe_731_OVERLAY"
+ SLO_GFX_elections_europe_731_PROGESSBAR_idea:0 "GFX_europe_731_PROGRESSBAR"
  SLO_NAME_elections_europe_731_idea:0 "Macedónsko"
  
- SLO_GFX_elections_europe_47_idea:0 "GFX_europe_47"
+ SLO_GFX_elections_europe_47_OVERLAY_idea:0 "GFX_europe_47_OVERLAY"
+ SLO_GFX_elections_europe_47_PROGESSBAR_idea:0 "GFX_europe_47_PROGRESSBAR"
  SLO_NAME_elections_europe_47_idea:0 "Grécko"
  
- SLO_GFX_elections_europe_48_idea:0 "GFX_europe_48"
+ SLO_GFX_elections_europe_48_OVERLAY_idea:0 "GFX_europe_48_OVERLAY"
+ SLO_GFX_elections_europe_48_PROGESSBAR_idea:0 "GFX_europe_48_PROGRESSBAR"
  SLO_NAME_elections_europe_48_idea:0 "Bulharsko"
  
- SLO_GFX_elections_europe_46_idea:0 "GFX_europe_46"
+ SLO_GFX_elections_europe_46_OVERLAY_idea:0 "GFX_europe_46_OVERLAY"
+ SLO_GFX_elections_europe_46_PROGESSBAR_idea:0 "GFX_europe_46_PROGRESSBAR"
  SLO_NAME_elections_europe_46_idea:0 "Valašsko"
  
- SLO_GFX_elections_europe_971_idea:0 "GFX_europe_971"
+ SLO_GFX_elections_europe_971_OVERLAY_idea:0 "GFX_europe_971_OVERLAY"
+ SLO_GFX_elections_europe_971_PROGESSBAR_idea:0 "GFX_europe_971_PROGRESSBAR"
  SLO_NAME_elections_europe_971_idea:0 "Dobrudža"
  
- SLO_GFX_elections_europe_76_idea:0 "GFX_europe_76"
+ SLO_GFX_elections_europe_76_OVERLAY_idea:0 "GFX_europe_76_OVERLAY"
+ SLO_GFX_elections_europe_76_PROGESSBAR_idea:0 "GFX_europe_76_PROGRESSBAR"
  SLO_NAME_elections_europe_76_idea:0 "Transylvánia"
  
- SLO_GFX_elections_europe_79_idea:0 "GFX_europe_79"
+ SLO_GFX_elections_europe_79_OVERLAY_idea:0 "GFX_europe_79_OVERLAY"
+ SLO_GFX_elections_europe_79_PROGESSBAR_idea:0 "GFX_europe_79_PROGRESSBAR"
  SLO_NAME_elections_europe_79_idea:0 "Moldavsko"
  
- SLO_GFX_elections_europe_110_idea:0 "GFX_europe_110"
+ SLO_GFX_elections_europe_110_OVERLAY_idea:0 "GFX_europe_110_OVERLAY"
+ SLO_GFX_elections_europe_110_PROGESSBAR_idea:0 "GFX_europe_110_PROGRESSBAR"
  SLO_NAME_elections_europe_110_idea:0 "Nórsko"
  
- SLO_GFX_elections_europe_141_idea:0 "GFX_europe_141"
+ SLO_GFX_elections_europe_141_OVERLAY_idea:0 "GFX_europe_141_PROGRESSBAR"
  SLO_NAME_elections_europe_141_idea:0 "Švédsko"
  
- SLO_GFX_elections_europe_38_idea:0 "GFX_europe_38"
+ SLO_GFX_elections_europe_38_PROGESSBAR_idea:0 "GFX_europe_38_PROGRESSBAR"
  SLO_NAME_elections_europe_38_idea:0 "Norrland"
  
- SLO_GFX_elections_europe_111_idea:0 "GFX_europe_111"
+ SLO_GFX_elections_europe_111_OVERLAY_idea:0 "GFX_europe_111_PROGRESSBAR"
  SLO_NAME_elections_europe_111_idea:0 "Fínsko"
  
- SLO_GFX_elections_europe_666_idea:0 "GFX_europe_666"
+ SLO_GFX_elections_europe_666_PROGESSBAR_idea:0 "GFX_europe_666_PROGRESSBAR"
  SLO_NAME_elections_europe_666_idea:0 "Saami"
  
- SLO_GFX_elections_europe_797_idea:0 "GFX_europe_797"
+ SLO_GFX_elections_europe_797_OVERLAY_idea:0 "GFX_europe_797_PROGRESSBAR"
  SLO_NAME_elections_europe_797_idea:0 "Bospor"
  
- SLO_GFX_elections_europe_344_idea:0 "GFX_europe_344"
+ SLO_GFX_elections_europe_344_PROGESSBAR_idea:0 "GFX_europe_344_PROGRESSBAR"
  SLO_NAME_elections_europe_344_idea:0 "Južná Anatólia"
  
- SLO_GFX_elections_europe_49_idea:0 "GFX_europe_49"
+ SLO_GFX_elections_europe_49_OVERLAY_idea:0 "GFX_europe_49_OVERLAY"
+ SLO_GFX_elections_europe_49_PROGESSBAR_idea:0 "GFX_europe_49_PROGRESSBAR"
  SLO_NAME_elections_europe_49_idea:0 "Severná Anatólia"
  
- SLO_GFX_elections_europe_800_idea:0 "GFX_europe_800"
+ SLO_GFX_elections_europe_800_OVERLAY_idea:0 "GFX_europe_800_OVERLAY"
+ SLO_GFX_elections_europe_800_PROGESSBAR_idea:0 "GFX_europe_800_PROGRESSBAR"
  SLO_NAME_elections_europe_800_idea:0 "Kurdistan"
  
- SLO_GFX_elections_europe_206_idea:0 "GFX_europe_206"
+ SLO_GFX_elections_europe_206_OVERLAY_idea:0 "GFX_europe_206_OVERLAY"
+ SLO_GFX_elections_europe_206_PROGESSBAR_idea:0 "GFX_europe_206_PROGRESSBAR"
  SLO_NAME_elections_europe_206_idea:0 "Bielorusko "
  
- SLO_GFX_elections_europe_202_idea:0 "GFX_europe_202"
+ SLO_GFX_elections_europe_202_OVERLAY_idea:0 "GFX_europe_202_OVERLAY"
+ SLO_GFX_elections_europe_202_PROGESSBAR_idea:0 "GFX_europe_202_PROGRESSBAR"
  SLO_NAME_elections_europe_202_idea:0 "Západná Ukrajina"
  
- SLO_GFX_elections_europe_221_idea:0 "GFX_europe_221"
+ SLO_GFX_elections_europe_221_OVERLAY_idea:0 "GFX_europe_221_OVERLAY"
+ SLO_GFX_elections_europe_221_PROGESSBAR_idea:0 "GFX_europe_221_PROGRESSBAR"
  SLO_NAME_elections_europe_221_idea:0 "Dneper-Don"
  
- SLO_GFX_elections_europe_137_idea:0 "GFX_europe_137"
+ SLO_GFX_elections_europe_137_OVERLAY_idea:0 "GFX_europe_137_OVERLAY"
+ SLO_GFX_elections_europe_137_PROGESSBAR_idea:0 "GFX_europe_137_PROGRESSBAR"
  SLO_NAME_elections_europe_137_idea:0 "Tavriya"
  
- SLO_GFX_elections_europe_192_idea:0 "GFX_europe_192"
+ SLO_GFX_elections_europe_192_OVERLAY_idea:0 "GFX_europe_192_OVERLAY"
+ SLO_GFX_elections_europe_192_PROGESSBAR_idea:0 "GFX_europe_192_PROGRESSBAR"
  SLO_NAME_elections_europe_192_idea:0 "Prychornomoria - Budzhak"
  
- SLO_GFX_elections_europe_213_idea:0 "GFX_europe_2213"
+ SLO_GFX_elections_europe_213_OVERLAY_idea:0 "GFX_europe_213_OVERLAY"
+ SLO_GFX_elections_europe_213_PROGESSBAR_idea:0 "GFX_europe_213_PROGRESSBAR"
  SLO_NAME_elections_europe_213_idea:0 "Karélia"
  
- SLO_GFX_elections_europe_195_idea:0 "GFX_europe_195"
+ SLO_GFX_elections_europe_195_OVERLAY_idea:0 "GFX_europe_195_OVERLAY"
+ SLO_GFX_elections_europe_195_PROGESSBAR_idea:0 "GFX_europe_195_PROGRESSBAR"
  SLO_NAME_elections_europe_195_idea:0 "Novgorod"
  
- SLO_GFX_elections_europe_219_idea:0 "GFX_europe_219"
+ SLO_GFX_elections_europe_219_OVERLAY_idea:0 "GFX_europe_219_OVERLAY"
+ SLO_GFX_elections_europe_219_PROGESSBAR_idea:0 "GFX_europe_219_PROGRESSBAR"
  SLO_NAME_elections_europe_219_idea:0 "Stredné Rusko"
  
- SLO_GFX_elections_europe_218_idea:0 "GFX_europe_218"
+ SLO_GFX_elections_europe_218_OVERLAY_idea:0 "GFX_europe_218_OVERLAY"
+ SLO_GFX_elections_europe_218_PROGESSBAR_idea:0 "GFX_europe_218_PROGRESSBAR"
  SLO_NAME_elections_europe_218_idea:0 "Donská Kotlina"
  
- SLO_GFX_elections_europe_229_idea:0 "GFX_europe_229"
+ SLO_GFX_elections_europe_229_OVERLAY_idea:0 "GFX_europe_229_OVERLAY"
+ SLO_GFX_elections_europe_229_PROGESSBAR_idea:0 "GFX_europe_229_PROGRESSBAR"
  SLO_NAME_elections_europe_229_idea:0 "Južný Kaukaz"
  
- SLO_GFX_elections_europe_232_idea:0 "GFX_europe_232"
+ SLO_GFX_elections_europe_232_OVERLAY_idea:0 "GFX_europe_232_OVERLAY"
+ SLO_GFX_elections_europe_232_PROGESSBAR_idea:0 "GFX_europe_232_PROGRESSBAR"
  SLO_NAME_elections_europe_232_idea:0 "Severné Kaukazy"
  
- SLO_GFX_elections_europe_217_idea:0 "GFX_europe_217"
+ SLO_GFX_elections_europe_217_OVERLAY_idea:0 "GFX_europe_217_OVERLAY"
+ SLO_GFX_elections_europe_217_PROGESSBAR_idea:0 "GFX_europe_217_PROGRESSBAR"
  SLO_NAME_elections_europe_217_idea:0 "Povodie Volgy"
  
- SLO_GFX_elections_europe_252_idea:0 "GFX_europe_252"
+ SLO_GFX_elections_europe_252_OVERLAY_idea:0 "GFX_europe_252_OVERLAY"
+ SLO_GFX_elections_europe_252_PROGESSBAR_idea:0 "GFX_europe_252_PROGRESSBAR"
  SLO_NAME_elections_europe_252_idea:0 "Volga"
  
- SLO_GFX_elections_europe_651_idea:0 "GFX_europe_651"
+ SLO_GFX_elections_europe_651_OVERLAY_idea:0 "GFX_europe_651_OVERLAY"
+ SLO_GFX_elections_europe_651_PROGESSBAR_idea:0 "GFX_europe_651_PROGRESSBAR"
  SLO_NAME_elections_europe_651_idea:0 "Ural"
  
- SLO_GFX_elections_europe_214_idea:0 "GFX_europe_214"
+ SLO_GFX_elections_europe_214_OVERLAY_idea:0 "GFX_europe_214_OVERLAY"
+ SLO_GFX_elections_europe_214_PROGESSBAR_idea:0 "GFX_europe_214_PROGRESSBAR"
  SLO_NAME_elections_europe_214_idea:0 "Barents"

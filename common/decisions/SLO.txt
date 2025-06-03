@@ -2202,3 +2202,46 @@ SLO_the_slovak_occupation_authority = {
 		}
 	}
 }
+
+SLO_parliament_decision_category = { 
+	SLO_toggle_election_map = { 
+
+		icon = decision_eng_trade_unions_support
+
+		ai_will_do = {
+			base = 0
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			
+		}
+		
+		visible = { 
+			
+		}
+		
+		fire_only_once = no
+
+		cost = 0
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = SLO_election_map_is_open_flag }
+				clr_country_flag = SLO_election_map_is_open_flag
+			}
+			else = {
+				set_country_flag = SLO_election_map_is_open_flag
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+}

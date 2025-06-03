@@ -36,6 +36,10 @@ scripted_gui = {
 		visible = {
 			has_country_flag = SLO_election_map_is_open_flag
 		}
+		
+		ai_enabled = {
+			always = no
+		}
 
 		dynamic_lists={
 			state_progressbar_gridbox={
@@ -48,7 +52,7 @@ scripted_gui = {
 				change_scope = yes
 				entry_container = state_overlay_entry
 			}
-#			
+			
 #			party_national_state_results_gridbox={
 #				array = POL.POL_electoral_map_selected_state:parties_in_order
 #				change_scope = no

@@ -2,22 +2,27 @@ guiTypes = {
 	containerWindowType = {
 		name = "SLO_election_map_gui"
 		size = { width = 1200 height = 750 }
-		position = { x = 540 y = 150 }
+		position = { x = -1000 y = 78 }
+		show_position = { x= 540 y = 78 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 500
 		moveable = yes
+		
 		background = {
 			name = "Background"	
 			spriteType ="GFX_tiled_bg"
 		}
 		
-		containerWindowType = {
-			name = "SLO_election_map_bg_window"
-			size = { width = 856 height = 463 }
-			position = { x = 0 y = 0 }
-			background = {
-				name = "Background"	
-				spriteType ="GFX_tiled_bg"
-			}
-		}
+#		containerWindowType = {
+#			name = "SLO_election_map_bg_window"
+#			size = { width = 856 height = 463 }
+#			position = { x = 0 y = 0 }
+#			background = {
+#				name = "Background"	
+#				spriteType ="GFX_tiled_bg"
+#			}
+#		}
 		
 #		containerWindowType = {
 #			name = "SLO_election_map"
@@ -32,7 +37,7 @@ guiTypes = {
 		gridboxtype = {
 			name = "state_progressbar_gridbox"
 			position = { x = 14 y = 14 }
-			size = { width = 828 height = 435 }
+			size = { width = 100% height = 100% }
 			slotsize = { width = 100% height = 0 }
 			max_slots_horizontal = 1
 			add_horizontal = no
@@ -41,13 +46,12 @@ guiTypes = {
 		gridboxtype = {
 			name = "state_overlay_gridbox"
 			position = { x = 14 y = 14 }
-			size = { width = 828 height = 435 }
+			size = { width = 100% height = 100% }
 			slotsize = { width = 100% height = 0 }
 			max_slots_horizontal = 1
 			add_horizontal = no
 		}
-		
-		
+				
 		buttonType = {
 			name = "close_button"
 			position = { x = -45 y = 14 }
@@ -79,7 +83,7 @@ guiTypes = {
 		buttonType = {
 			position = { x = 0 y = 0 }
 			name = "state_overlay_entry_button"
-			spriteType = "GFX_slovakia_70_OVERLAY"
+			quadTextureSprite = "GFX_slovakia_70_OVERLAY"
 			pdx_tooltip  = "state_overlay_entry_button_tt"
 #			pdx_tooltip_delayed  = "state_button_entry_button_tt"
 		}

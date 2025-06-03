@@ -20,9 +20,10 @@ SLO_debug_load_democracy = {
 }
 
 SLO_initialise_parliament = {
-	set_variable = { SLO.parliament_seat_total = 150 }		#150 seats in total
-	set_variable = { SLO.parliament_level = 0 }				#0 is Slovakia, 1 is Europe
-	set_variable = { SLO.parliament_threshold = 0 }			#Threshold needed for entry
+	set_variable = { SLO.parliament_seat_total = 150 }				#150 seats in total
+	set_variable = { SLO.parliament_level = 0 }						#0 is Slovakia, 1 is Europe
+	set_variable = { SLO.parliament_threshold = 0 }					#Threshold needed for entry
+	set_variable = { SLO.SLO_electoral_map_selected_state = SLO }	#What state / country are we looking at in the GUI?
 	
 	clear_array = SLO.election_states
 	add_to_array = { SLO.election_states = 70 }
@@ -285,12 +286,15 @@ STATE_get_ordered_results = {
 	clear_array = THIS.previous_election_position_party
 	
 	#Boilerplate code for quicksort
+	clear_array = arr
+	resize_array = { array = arr size = THIS.previous_election_results^num value = 0 }
+	
 	for_each_loop = {
 		array = THIS.previous_election_results
 		value = v
 		index = i
 		
-		add_to_array = { arr = v }
+		set_variable = { arr^i = v }
 	}
 
 	set_variable = { high = arr^num }
@@ -300,11 +304,7 @@ STATE_get_ordered_results = {
 	quicksort = yes
 	
 	#Make a descending array
-	resize_array = {
-		array = THIS.previous_election_results_ordered
-		value = 0
-		size = arr^num
-	}
+	resize_array = { array = THIS.previous_election_results_ordered value = 0 size = arr^num }
 	
 	for_each_loop = {
 		array = arr
@@ -325,12 +325,7 @@ STATE_get_ordered_results = {
 	
 	
 	#Get party positions, use binary search on the ordered array
-	
-	resize_array = {
-		array = THIS.previous_election_party_position
-		value = 0
-		size = THIS.previous_election_results^num
-	}
+	resize_array = { array = THIS.previous_election_party_position value = 0 size = THIS.previous_election_results^num }
 	
 	for_each_loop = {
 		array = THIS.previous_election_results
@@ -493,6 +488,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 100.subdivision_states = 101 }
 	add_to_array = { 100.subdivision_states = 914 }
 	add_to_array = { 100.subdivision_states = 337 }
+	clear_array = 100.party_popularity
+	resize_array = { array = 100.party_popularity value = 0 size = 7 }
+	set_variable = { 100.party_popularity^0 = 1.5 }
+	set_variable = { 100.party_popularity^1 = 50 }
+	set_variable = { 100.party_popularity^2 = 12 }
+	set_variable = { 100.party_popularity^3 = 29.5 }
+	set_variable = { 100.party_popularity^4 = 2.5 }
+	set_variable = { 100.party_popularity^5 = 1.5 }
+	set_variable = { 100.party_popularity^6 = 3 }
 	
 	#Mid-Atlantic
 	add_to_array = { SLO.subdivision_states = 178 }
@@ -500,6 +504,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 178.subdivision_states = 178 }
 	add_to_array = { 178.subdivision_states = 697 }
 	add_to_array = { 178.subdivision_states = 698 }
+	clear_array = 178.party_popularity
+	resize_array = { array = 178.party_popularity value = 0 size = 7 }
+	set_variable = { 178.party_popularity^0 = 2 }
+	set_variable = { 178.party_popularity^1 = 38 }
+	set_variable = { 178.party_popularity^2 = 12 }
+	set_variable = { 178.party_popularity^3 = 27  }
+	set_variable = { 178.party_popularity^4 = 12 }
+	set_variable = { 178.party_popularity^5 = 3 }
+	set_variable = { 178.party_popularity^6 = 6 }
 
 	#Scotland
 	add_to_array = { SLO.subdivision_states = 121 }
@@ -510,13 +523,14 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 121.subdivision_states = 120 }
 	add_to_array = { 121.subdivision_states = 933 }
 	clear_array = 121.party_popularity
-	add_to_array = { 121.party_popularity = 1 }
-	add_to_array = { 121.party_popularity = 34 }
-	add_to_array = { 121.party_popularity = 12 }
-	add_to_array = { 121.party_popularity = 46 }
-	add_to_array = { 121.party_popularity = 4 }
-	add_to_array = { 121.party_popularity = 1 }
-	add_to_array = { 121.party_popularity = 2 }
+	resize_array = { array = 121.party_popularity value = 0 size = 7 }
+	set_variable = { 121.party_popularity^0 = 1 }
+	set_variable = { 121.party_popularity^1 = 34 }
+	set_variable = { 121.party_popularity^2 = 12 }
+	set_variable = { 121.party_popularity^3 = 46 }
+	set_variable = { 121.party_popularity^4 = 4 }
+	set_variable = { 121.party_popularity^5 = 1 }
+	set_variable = { 121.party_popularity^6 = 2 }
 	
 	#Ireland
 	add_to_array = { SLO.subdivision_states = 113 }
@@ -526,13 +540,14 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 113.subdivision_states = 135 }
 	add_to_array = { 113.subdivision_states = 134 }
 	clear_array = 113.party_popularity
-	add_to_array = { 113.party_popularity = 6 }
-	add_to_array = { 113.party_popularity = 11 }
-	add_to_array = { 113.party_popularity = 6 }
-	add_to_array = { 113.party_popularity = 47 }
-	add_to_array = { 113.party_popularity = 10 }
-	add_to_array = { 113.party_popularity = 3 }
-	add_to_array = { 113.party_popularity = 17 }
+	resize_array = { array = 113.party_popularity value = 0 size = 7 }
+	set_variable = { 113.party_popularity^0 = 6 }
+	set_variable = { 113.party_popularity^1 = 11 }
+	set_variable = { 113.party_popularity^2 = 6 }
+	set_variable = { 113.party_popularity^3 = 47 }
+	set_variable = { 113.party_popularity^4 = 10 }
+	set_variable = { 113.party_popularity^5 = 3 }
+	set_variable = { 113.party_popularity^6 = 17 }
 	
 	#Northern England
 	add_to_array = { SLO.subdivision_states = 132 }
@@ -543,13 +558,14 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 132.subdivision_states = 931 }
 	add_to_array = { 132.subdivision_states = 932 }
 	clear_array = 132.party_popularity
-	add_to_array = { 132.party_popularity = 2 }
-	add_to_array = { 132.party_popularity = 48 }
-	add_to_array = { 132.party_popularity = 5 }
-	add_to_array = { 132.party_popularity = 40 }
-	add_to_array = { 132.party_popularity = 2 }
-	add_to_array = { 132.party_popularity = 1 }
-	add_to_array = { 132.party_popularity = 2 }
+	resize_array = { array = 132.party_popularity value = 0 size = 7 }
+	set_variable = { 132.party_popularity^0 = 2 }
+	set_variable = { 132.party_popularity^1 = 48 }
+	set_variable = { 132.party_popularity^2 = 5 }
+	set_variable = { 132.party_popularity^3 = 40 }
+	set_variable = { 132.party_popularity^4 = 2 }
+	set_variable = { 132.party_popularity^5 = 1 }
+	set_variable = { 132.party_popularity^6 = 2 }
 	
 	#Midlands and Wales
 	add_to_array = { SLO.subdivision_states = 128 }
@@ -558,13 +574,14 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 128.subdivision_states = 122 }
 	add_to_array = { 128.subdivision_states = 129 }
 	clear_array = 128.party_popularity
-	add_to_array = { 128.party_popularity = 1 }
-	add_to_array = { 128.party_popularity = 40 }
-	add_to_array = { 128.party_popularity = 7 }
-	add_to_array = { 128.party_popularity = 47 }
-	add_to_array = { 128.party_popularity = 2 }
-	add_to_array = { 128.party_popularity = 1 }
-	add_to_array = { 128.party_popularity = 2 }
+	resize_array = { array = 128.party_popularity value = 0 size = 7 }
+	set_variable = { 128.party_popularity^0 = 1 }
+	set_variable = { 128.party_popularity^1 = 40 }
+	set_variable = { 128.party_popularity^2 = 7 }
+	set_variable = { 128.party_popularity^3 = 47 }
+	set_variable = { 128.party_popularity^4 = 2 }
+	set_variable = { 128.party_popularity^5 = 1 }
+	set_variable = { 128.party_popularity^6 = 2 }
 	
 	#Southern England
 	add_to_array = { SLO.subdivision_states = 126 }
@@ -575,13 +592,14 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 126.subdivision_states = 338 }
 	add_to_array = { 126.subdivision_states = 123 }
 	clear_array = 126.party_popularity
-	add_to_array = { 126.party_popularity = 1 }
-	add_to_array = { 126.party_popularity = 23 }
-	add_to_array = { 126.party_popularity = 9 }
-	add_to_array = { 126.party_popularity = 62 }
-	add_to_array = { 126.party_popularity = 2.5 }
-	add_to_array = { 126.party_popularity = 1.5 }
-	add_to_array = { 126.party_popularity = 1 }
+	resize_array = { array = 126.party_popularity value = 0 size = 7 }
+	set_variable = { 126.party_popularity^0 = 1 }
+	set_variable = { 126.party_popularity^1 = 23 }
+	set_variable = { 126.party_popularity^2 = 9 }
+	set_variable = { 126.party_popularity^3 = 62 }
+	set_variable = { 126.party_popularity^4 = 2.5 }
+	set_variable = { 126.party_popularity^5 = 1.5 }
+	set_variable = { 126.party_popularity^6 = 1 }
 	
 	#Denmark
 	add_to_array = { SLO.subdivision_states = 37 }
@@ -592,13 +610,14 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 37.subdivision_states = 912 }
 	add_to_array = { 37.subdivision_states = 99 }
 	clear_array = 37.party_popularity
-	add_to_array = { 37.party_popularity = 1.5 }
-	add_to_array = { 37.party_popularity = 50 }
-	add_to_array = { 37.party_popularity = 12 }
-	add_to_array = { 37.party_popularity = 29.5 }
-	add_to_array = { 37.party_popularity = 2.5 }
-	add_to_array = { 37.party_popularity = 1.5 }
-	add_to_array = { 37.party_popularity = 3 }
+	resize_array = { array = 37.party_popularity value = 0 size = 7 }
+	set_variable = { 37.party_popularity^0 = 1.5 }
+	set_variable = { 37.party_popularity^1 = 50 }
+	set_variable = { 37.party_popularity^2 = 12 }
+	set_variable = { 37.party_popularity^3 = 29.5 }
+	set_variable = { 37.party_popularity^4 = 2.5 }
+	set_variable = { 37.party_popularity^5 = 1.5 }
+	set_variable = { 37.party_popularity^6 = 3 }
 	
 	#Netherlands-Flanders
 	add_to_array = { SLO.subdivision_states = 7 }
@@ -608,6 +627,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 7.subdivision_states = 35 }
 	add_to_array = { 7.subdivision_states = 977 }
 	add_to_array = { 7.subdivision_states = 6 }
+	clear_array = 7.party_popularity
+	resize_array = { array = 7.party_popularity value = 0 size = 7 }
+	set_variable = { 7.party_popularity^0 = 0 }
+	set_variable = { 7.party_popularity^1 = 0 }
+	set_variable = { 7.party_popularity^2 = 0 }
+	set_variable = { 7.party_popularity^3 = 0 }
+	set_variable = { 7.party_popularity^4 = 0 }
+	set_variable = { 7.party_popularity^5 = 0 }
+	set_variable = { 7.party_popularity^6 = 0 }
 	
 	#Portugal
 	add_to_array = { SLO.subdivision_states = 112 }
@@ -617,6 +645,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 112.subdivision_states = 795 }
 	add_to_array = { 112.subdivision_states = 181 }
 	add_to_array = { 112.subdivision_states = 180 }
+	clear_array = 112.party_popularity
+	resize_array = { array = 112.party_popularity value = 0 size = 7 }
+	set_variable = { 112.party_popularity^0 = 3 }
+	set_variable = { 112.party_popularity^1 = 38 }
+	set_variable = { 112.party_popularity^2 = 5 }
+	set_variable = { 112.party_popularity^3 = 27 }
+	set_variable = { 112.party_popularity^4 = 20 }
+	set_variable = { 112.party_popularity^5 = 5 }
+	set_variable = { 112.party_popularity^6 = 2 }
 	
 	#Gibraltar - Costa del Sol
 	add_to_array = { SLO.subdivision_states = 118 }
@@ -626,6 +663,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 118.subdivision_states = 173 }
 	add_to_array = { 118.subdivision_states = 789 }
 	add_to_array = { 118.subdivision_states = 168 }
+	clear_array = 118.party_popularity
+	resize_array = { array = 118.party_popularity value = 0 size = 7 }
+	set_variable = { 118.party_popularity^0 = 3 }
+	set_variable = { 118.party_popularity^1 = 50.5 }
+	set_variable = { 118.party_popularity^2 = 9 }
+	set_variable = { 118.party_popularity^3 = 20.5 }
+	set_variable = { 118.party_popularity^4 = 11 }
+	set_variable = { 118.party_popularity^5 = 4 }
+	set_variable = { 118.party_popularity^6 = 2 }
 	
 	#Eastern Spain
 	add_to_array = { SLO.subdivision_states = 165 }
@@ -634,6 +680,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 165.subdivision_states = 167 }
 	add_to_array = { 165.subdivision_states = 794 }
 	add_to_array = { 165.subdivision_states = 166 }
+	clear_array = 165.party_popularity
+	resize_array = { array = 165.party_popularity value = 0 size = 7 }
+	set_variable = { 165.party_popularity^0 = 17 }
+	set_variable = { 165.party_popularity^1 = 36 }
+	set_variable = { 165.party_popularity^2 = 5 }
+	set_variable = { 165.party_popularity^3 = 20 }
+	set_variable = { 165.party_popularity^4 = 11 }
+	set_variable = { 165.party_popularity^5 = 6 }
+	set_variable = { 165.party_popularity^6 = 5 }
 	
 	#Central Spain
 	add_to_array = { SLO.subdivision_states = 41 }
@@ -643,6 +698,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 41.subdivision_states = 175 }
 	add_to_array = { 41.subdivision_states = 170 }
 	add_to_array = { 41.subdivision_states = 788 }
+	clear_array = 41.party_popularity
+	resize_array = { array = 41.party_popularity value = 0 size = 7 }
+	set_variable = { 41.party_popularity^0 = 10 }
+	set_variable = { 41.party_popularity^1 = 32 }
+	set_variable = { 41.party_popularity^2 = 6 }
+	set_variable = { 41.party_popularity^3 = 26 }
+	set_variable = { 41.party_popularity^4 = 20 }
+	set_variable = { 41.party_popularity^5 = 5 }
+	set_variable = { 41.party_popularity^6 = 1 }
 	
 	#Northern Spain
 	add_to_array = { SLO.subdivision_states = 171 }
@@ -652,6 +716,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 171.subdivision_states = 791 }
 	add_to_array = { 171.subdivision_states = 176 }
 	add_to_array = { 171.subdivision_states = 790 }
+	clear_array = 171.party_popularity
+	resize_array = { array = 171.party_popularity value = 0 size = 7 }
+	set_variable = { 171.party_popularity^0 = 0 }
+	set_variable = { 171.party_popularity^1 = 0 }
+	set_variable = { 171.party_popularity^2 = 0 }
+	set_variable = { 171.party_popularity^3 = 0 }
+	set_variable = { 171.party_popularity^4 = 0 }
+	set_variable = { 171.party_popularity^5 = 0 }
+	set_variable = { 171.party_popularity^6 = 0 }
 	
 	#Basque Region
 	add_to_array = { SLO.subdivision_states = 792 }
@@ -659,6 +732,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 792.subdivision_states = 792 }
 	add_to_array = { 792.subdivision_states = 172 }
 	add_to_array = { 792.subdivision_states = 806 }
+	clear_array = 792.party_popularity
+	resize_array = { array = 792.party_popularity value = 0 size = 7 }
+	set_variable = { 792.party_popularity^0 = 0 }
+	set_variable = { 792.party_popularity^1 = 0 }
+	set_variable = { 792.party_popularity^2 = 0 }
+	set_variable = { 792.party_popularity^3 = 0 }
+	set_variable = { 792.party_popularity^4 = 0 }
+	set_variable = { 792.party_popularity^5 = 0 }
+	set_variable = { 792.party_popularity^6 = 0 }
 	
 	#Atlantic France
 	add_to_array = { SLO.subdivision_states = 19 }
@@ -667,6 +749,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 19.subdivision_states = 23 }
 	add_to_array = { 19.subdivision_states = 30 }
 	add_to_array = { 19.subdivision_states = 14 }
+	clear_array = 19.party_popularity
+	resize_array = { array = 19.party_popularity value = 0 size = 7 }
+	set_variable = { 19.party_popularity^0 = 0 }
+	set_variable = { 19.party_popularity^1 = 0 }
+	set_variable = { 19.party_popularity^2 = 0 }
+	set_variable = { 19.party_popularity^3 = 0 }
+	set_variable = { 19.party_popularity^4 = 0 }
+	set_variable = { 19.party_popularity^5 = 0 }
+	set_variable = { 19.party_popularity^6 = 0 }
 	
 	#Northern France
 	add_to_array = { SLO.subdivision_states = 16 }
@@ -677,6 +768,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 16.subdivision_states = 29 }
 	add_to_array = { 16.subdivision_states = 24 }
 	add_to_array = { 16.subdivision_states = 33 }
+	clear_array = 16.party_popularity
+	resize_array = { array = 16.party_popularity value = 0 size = 7 }
+	set_variable = { 16.party_popularity^0 = 0 }
+	set_variable = { 16.party_popularity^1 = 0 }
+	set_variable = { 16.party_popularity^2 = 0 }
+	set_variable = { 16.party_popularity^3 = 0 }
+	set_variable = { 16.party_popularity^4 = 0 }
+	set_variable = { 16.party_popularity^5 = 0 }
+	set_variable = { 16.party_popularity^6 = 0 }
 	
 	#Grand-Est - Bourgogne - Wallonia
 	add_to_array = { SLO.subdivision_states = 28 }
@@ -687,6 +787,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 28.subdivision_states = 980 }
 	add_to_array = { 28.subdivision_states = 34 }
 	add_to_array = { 28.subdivision_states = 27 }
+	clear_array = 28.party_popularity
+	resize_array = { array = 28.party_popularity value = 0 size = 7 }
+	set_variable = { 28.party_popularity^0 = 0 }
+	set_variable = { 28.party_popularity^1 = 0 }
+	set_variable = { 28.party_popularity^2 = 0 }
+	set_variable = { 28.party_popularity^3 = 0 }
+	set_variable = { 28.party_popularity^4 = 0 }
+	set_variable = { 28.party_popularity^5 = 0 }
+	set_variable = { 28.party_popularity^6 = 0 }
 	
 	#Occitanie
 	add_to_array = { SLO.subdivision_states = 31 }
@@ -695,6 +804,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 31.subdivision_states = 25 }
 	add_to_array = { 31.subdivision_states = 26 }
 	add_to_array = { 31.subdivision_states = 22 }
+	clear_array = 31.party_popularity
+	resize_array = { array = 31.party_popularity value = 0 size = 7 }
+	set_variable = { 31.party_popularity^0 = 0 }
+	set_variable = { 31.party_popularity^1 = 0 }
+	set_variable = { 31.party_popularity^2 = 0 }
+	set_variable = { 31.party_popularity^3 = 0 }
+	set_variable = { 31.party_popularity^4 = 0 }
+	set_variable = { 31.party_popularity^5 = 0 }
+	set_variable = { 31.party_popularity^6 = 0 }
 	
 	#Provence - Alpes - Rhône - Corsica
 	add_to_array = { SLO.subdivision_states = 20 }
@@ -705,6 +823,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 20.subdivision_states = 735 }
 	add_to_array = { 20.subdivision_states = 32 }
 	add_to_array = { 20.subdivision_states = 21 }
+	clear_array = 20.party_popularity
+	resize_array = { array = 20.party_popularity value = 0 size = 7 }
+	set_variable = { 20.party_popularity^0 = 0 }
+	set_variable = { 20.party_popularity^1 = 0 }
+	set_variable = { 20.party_popularity^2 = 0 }
+	set_variable = { 20.party_popularity^3 = 0 }
+	set_variable = { 20.party_popularity^4 = 0 }
+	set_variable = { 20.party_popularity^5 = 0 }
+	set_variable = { 20.party_popularity^6 = 0 }
 
 	#Rhineland
 	add_to_array = { SLO.subdivision_states = 51 }
@@ -714,12 +841,30 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 51.subdivision_states = 55 }
 	add_to_array = { 51.subdivision_states = 42 }
 	add_to_array = { 51.subdivision_states = 8 }
+	clear_array = 51.party_popularity
+	resize_array = { array = 51.party_popularity value = 0 size = 7 }
+	set_variable = { 51.party_popularity^0 = 0 }
+	set_variable = { 51.party_popularity^1 = 0 }
+	set_variable = { 51.party_popularity^2 = 0 }
+	set_variable = { 51.party_popularity^3 = 0 }
+	set_variable = { 51.party_popularity^4 = 0 }
+	set_variable = { 51.party_popularity^5 = 0 }
+	set_variable = { 51.party_popularity^6 = 0 }
 
 	#Baden - Wurttemberg
 	add_to_array = { SLO.subdivision_states = 50 }
 	clear_array = 50.subdivision_states
 	add_to_array = { 50.subdivision_states = 50 }
 	add_to_array = { 50.subdivision_states = 978 }
+	clear_array = 50.party_popularity
+	resize_array = { array = 50.party_popularity value = 0 size = 7 }
+	set_variable = { 50.party_popularity^0 = 0 }
+	set_variable = { 50.party_popularity^1 = 0 }
+	set_variable = { 50.party_popularity^2 = 0 }
+	set_variable = { 50.party_popularity^3 = 0 }
+	set_variable = { 50.party_popularity^4 = 0 }
+	set_variable = { 50.party_popularity^5 = 0 }
+	set_variable = { 50.party_popularity^6 = 0 }
 
 	#Bavaria
 	add_to_array = { SLO.subdivision_states = 52 }
@@ -727,6 +872,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 52.subdivision_states = 52 }
 	add_to_array = { 52.subdivision_states = 54 }
 	add_to_array = { 52.subdivision_states = 53 }
+	clear_array = 52.party_popularity
+	resize_array = { array = 52.party_popularity value = 0 size = 7 }
+	set_variable = { 52.party_popularity^0 = 0 }
+	set_variable = { 52.party_popularity^1 = 0 }
+	set_variable = { 52.party_popularity^2 = 0 }
+	set_variable = { 52.party_popularity^3 = 0 }
+	set_variable = { 52.party_popularity^4 = 0 }
+	set_variable = { 52.party_popularity^5 = 0 }
+	set_variable = { 52.party_popularity^6 = 0 }
 
 	#North-West Germany
 	add_to_array = { SLO.subdivision_states = 58 }
@@ -735,6 +889,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 58.subdivision_states = 56 }
 	add_to_array = { 58.subdivision_states = 59 }
 	add_to_array = { 58.subdivision_states = 909 }
+	clear_array = 58.party_popularity
+	resize_array = { array = 58.party_popularity value = 0 size = 7 }
+	set_variable = { 58.party_popularity^0 = 0 }
+	set_variable = { 58.party_popularity^1 = 0 }
+	set_variable = { 58.party_popularity^2 = 0 }
+	set_variable = { 58.party_popularity^3 = 0 }
+	set_variable = { 58.party_popularity^4 = 0 }
+	set_variable = { 58.party_popularity^5 = 0 }
+	set_variable = { 58.party_popularity^6 = 0 }
 
 	#Brandenburg
 	add_to_array = { SLO.subdivision_states = 64 }
@@ -743,6 +906,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 64.subdivision_states = 65 }
 	add_to_array = { 64.subdivision_states = 60 }
 	add_to_array = { 64.subdivision_states = 61 }
+	clear_array = 64.party_popularity
+	resize_array = { array = 64.party_popularity value = 0 size = 7 }
+	set_variable = { 64.party_popularity^0 = 0 }
+	set_variable = { 64.party_popularity^1 = 0 }
+	set_variable = { 64.party_popularity^2 = 0 }
+	set_variable = { 64.party_popularity^3 = 0 }
+	set_variable = { 64.party_popularity^4 = 0 }
+	set_variable = { 64.party_popularity^5 = 0 }
+	set_variable = { 64.party_popularity^6 = 0 }
 
 	#Pomerania
 	add_to_array = { SLO.subdivision_states = 63 }
@@ -751,6 +923,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 63.subdivision_states = 68 }
 	add_to_array = { 63.subdivision_states = 62 }
 	add_to_array = { 63.subdivision_states = 61 }
+	clear_array = 63.party_popularity
+	resize_array = { array = 63.party_popularity value = 0 size = 7 }
+	set_variable = { 63.party_popularity^0 = 0 }
+	set_variable = { 63.party_popularity^1 = 0 }
+	set_variable = { 63.party_popularity^2 = 0 }
+	set_variable = { 63.party_popularity^3 = 0 }
+	set_variable = { 63.party_popularity^4 = 0 }
+	set_variable = { 63.party_popularity^5 = 0 }
+	set_variable = { 63.party_popularity^6 = 0 }
 
 	#Silesia
 	add_to_array = { SLO.subdivision_states = 66 }
@@ -759,18 +940,45 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 66.subdivision_states = 74 }
 	add_to_array = { 66.subdivision_states = 67 }
 	add_to_array = { 66.subdivision_states = 762 }
+	clear_array = 66.party_popularity
+	resize_array = { array = 66.party_popularity value = 0 size = 7 }
+	set_variable = { 66.party_popularity^0 = 0 }
+	set_variable = { 66.party_popularity^1 = 0 }
+	set_variable = { 66.party_popularity^2 = 0 }
+	set_variable = { 66.party_popularity^3 = 0 }
+	set_variable = { 66.party_popularity^4 = 0 }
+	set_variable = { 66.party_popularity^5 = 0 }
+	set_variable = { 66.party_popularity^6 = 0 }
 
 	#Czechia
 	add_to_array = { SLO.subdivision_states = 9 }
 	clear_array = 9.subdivision_states
 	add_to_array = { 9.subdivision_states = 9 }
 	add_to_array = { 9.subdivision_states = 75 }
+	clear_array = 9.party_popularity
+	resize_array = { array = 9.party_popularity value = 0 size = 7 }
+	set_variable = { 9.party_popularity^0 = 0 }
+	set_variable = { 9.party_popularity^1 = 0 }
+	set_variable = { 9.party_popularity^2 = 0 }
+	set_variable = { 9.party_popularity^3 = 0 }
+	set_variable = { 9.party_popularity^4 = 0 }
+	set_variable = { 9.party_popularity^5 = 0 }
+	set_variable = { 9.party_popularity^6 = 0 }
 
 	#Sudetenland
 	add_to_array = { SLO.subdivision_states = 69 }
 	clear_array = 69.subdivision_states
 	add_to_array = { 69.subdivision_states = 69 }
 	add_to_array = { 69.subdivision_states = 972 }
+	clear_array = 69.party_popularity
+	resize_array = { array = 69.party_popularity value = 0 size = 7 }
+	set_variable = { 69.party_popularity^0 = 0 }
+	set_variable = { 69.party_popularity^1 = 0 }
+	set_variable = { 69.party_popularity^2 = 0 }
+	set_variable = { 69.party_popularity^3 = 0 }
+	set_variable = { 69.party_popularity^4 = 0 }
+	set_variable = { 69.party_popularity^5 = 0 }
+	set_variable = { 69.party_popularity^6 = 0 }
 
 	#Slovakia
 	add_to_array = { SLO.subdivision_states = 70 }
@@ -779,6 +987,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 70.subdivision_states = 71 }
 	add_to_array = { 70.subdivision_states = 664 }
 	add_to_array = { 70.subdivision_states = 73 }
+	clear_array = 70.party_popularity
+	resize_array = { array = 70.party_popularity value = 0 size = 7 }
+	set_variable = { 70.party_popularity^0 = 0 }
+	set_variable = { 70.party_popularity^1 = 0 }
+	set_variable = { 70.party_popularity^2 = 0 }
+	set_variable = { 70.party_popularity^3 = 0 }
+	set_variable = { 70.party_popularity^4 = 0 }
+	set_variable = { 70.party_popularity^5 = 0 }
+	set_variable = { 70.party_popularity^6 = 0 }
 
 	#Switzerland
 	add_to_array = { SLO.subdivision_states = 3 }
@@ -788,16 +1005,34 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 3.subdivision_states = 847 }
 	add_to_array = { 3.subdivision_states = 846 }
 	add_to_array = { 3.subdivision_states = 151 }
+	clear_array = 3.party_popularity
+	resize_array = { array = 3.party_popularity value = 0 size = 7 }
+	set_variable = { 3.party_popularity^0 = 0 }
+	set_variable = { 3.party_popularity^1 = 0 }
+	set_variable = { 3.party_popularity^2 = 0 }
+	set_variable = { 3.party_popularity^3 = 0 }
+	set_variable = { 3.party_popularity^4 = 0 }
+	set_variable = { 3.party_popularity^5 = 0 }
+	set_variable = { 3.party_popularity^6 = 0 }
 
 	#Austria
 	add_to_array = { SLO.subdivision_states = 4 }
-	clear_array = 3.subdivision_states
+	clear_array = 4.subdivision_states
 	add_to_array = { 4.subdivision_states = 4 }
 	add_to_array = { 4.subdivision_states = 976 }
 	add_to_array = { 4.subdivision_states = 152 }
 	add_to_array = { 4.subdivision_states = 153 }
 	add_to_array = { 4.subdivision_states = 848 }
 	add_to_array = { 4.subdivision_states = 39 }
+	clear_array = 4.party_popularity
+	resize_array = { array = 4.party_popularity value = 0 size = 7 }
+	set_variable = { 4.party_popularity^0 = 0 }
+	set_variable = { 4.party_popularity^1 = 0 }
+	set_variable = { 4.party_popularity^2 = 0 }
+	set_variable = { 4.party_popularity^3 = 0 }
+	set_variable = { 4.party_popularity^4 = 0 }
+	set_variable = { 4.party_popularity^5 = 0 }
+	set_variable = { 4.party_popularity^6 = 0 }
 
 	#Po Region
 	add_to_array = { SLO.subdivision_states = 159 }
@@ -808,6 +1043,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 159.subdivision_states = 160 }
 	add_to_array = { 159.subdivision_states = 736 }
 	add_to_array = { 159.subdivision_states = 161 }
+	clear_array = 159.party_popularity
+	resize_array = { array = 159.party_popularity value = 0 size = 7 }
+	set_variable = { 159.party_popularity^0 = 0 }
+	set_variable = { 159.party_popularity^1 = 0 }
+	set_variable = { 159.party_popularity^2 = 0 }
+	set_variable = { 159.party_popularity^3 = 0 }
+	set_variable = { 159.party_popularity^4 = 0 }
+	set_variable = { 159.party_popularity^5 = 0 }
+	set_variable = { 159.party_popularity^6 = 0 }
 
 	#Central Italy
 	add_to_array = { SLO.subdivision_states = 2 }
@@ -815,6 +1059,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 2.subdivision_states = 2 }
 	add_to_array = { 2.subdivision_states = 162 }
 	add_to_array = { 2.subdivision_states = 157 }
+	clear_array = 2.party_popularity
+	resize_array = { array = 2.party_popularity value = 0 size = 7 }
+	set_variable = { 2.party_popularity^0 = 0 }
+	set_variable = { 2.party_popularity^1 = 0 }
+	set_variable = { 2.party_popularity^2 = 0 }
+	set_variable = { 2.party_popularity^3 = 0 }
+	set_variable = { 2.party_popularity^4 = 0 }
+	set_variable = { 2.party_popularity^5 = 0 }
+	set_variable = { 2.party_popularity^6 = 0 }
 
 	#Southern Italy
 	add_to_array = { SLO.subdivision_states = 117 }
@@ -825,6 +1078,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 117.subdivision_states = 115 }
 	add_to_array = { 117.subdivision_states = 114 }
 	add_to_array = { 117.subdivision_states = 116 }
+	clear_array = 117.party_popularity
+	resize_array = { array = 117.party_popularity value = 0 size = 7 }
+	set_variable = { 117.party_popularity^0 = 0 }
+	set_variable = { 117.party_popularity^1 = 0 }
+	set_variable = { 117.party_popularity^2 = 0 }
+	set_variable = { 117.party_popularity^3 = 0 }
+	set_variable = { 117.party_popularity^4 = 0 }
+	set_variable = { 117.party_popularity^5 = 0 }
+	set_variable = { 117.party_popularity^6 = 0 }
 
 	#Hungary
 	add_to_array = { SLO.subdivision_states = 43 }
@@ -835,12 +1097,30 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 43.subdivision_states = 974 }
 	add_to_array = { 43.subdivision_states = 973 }
 	add_to_array = { 43.subdivision_states = 154 }
+	clear_array = 43.party_popularity
+	resize_array = { array = 43.party_popularity value = 0 size = 7 }
+	set_variable = { 43.party_popularity^0 = 0 }
+	set_variable = { 43.party_popularity^1 = 0 }
+	set_variable = { 43.party_popularity^2 = 0 }
+	set_variable = { 43.party_popularity^3 = 0 }
+	set_variable = { 43.party_popularity^4 = 0 }
+	set_variable = { 43.party_popularity^5 = 0 }
+	set_variable = { 43.party_popularity^6 = 0 }
 	
 	#Slovenia
 	add_to_array = { SLO.subdivision_states = 102 }
 	clear_array = 102.subdivision_states
 	add_to_array = { 102.subdivision_states = 102 }
 	add_to_array = { 102.subdivision_states = 853 }
+	clear_array = 102.party_popularity
+	resize_array = { array = 102.party_popularity value = 0 size = 7 }
+	set_variable = { 102.party_popularity^0 = 0 }
+	set_variable = { 102.party_popularity^1 = 0 }
+	set_variable = { 102.party_popularity^2 = 0 }
+	set_variable = { 102.party_popularity^3 = 0 }
+	set_variable = { 102.party_popularity^4 = 0 }
+	set_variable = { 102.party_popularity^5 = 0 }
+	set_variable = { 102.party_popularity^6 = 0 }
 	
 	#Poland
 	add_to_array = { SLO.subdivision_states = 10 }
@@ -853,6 +1133,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 10.subdivision_states = 87 }
 	add_to_array = { 10.subdivision_states = 86 }
 	add_to_array = { 10.subdivision_states = 807 }
+	clear_array = 10.party_popularity
+	resize_array = { array = 10.party_popularity value = 0 size = 7 }
+	set_variable = { 10.party_popularity^0 = 0 }
+	set_variable = { 10.party_popularity^1 = 0 }
+	set_variable = { 10.party_popularity^2 = 0 }
+	set_variable = { 10.party_popularity^3 = 0 }
+	set_variable = { 10.party_popularity^4 = 0 }
+	set_variable = { 10.party_popularity^5 = 0 }
+	set_variable = { 10.party_popularity^6 = 0 }
 	
 	#Galicia
 	add_to_array = { SLO.subdivision_states = 88 }
@@ -861,6 +1150,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 88.subdivision_states = 72 }
 	add_to_array = { 88.subdivision_states = 91 }
 	add_to_array = { 88.subdivision_states = 89 }
+	clear_array = 88.party_popularity
+	resize_array = { array = 88.party_popularity value = 0 size = 7 }
+	set_variable = { 88.party_popularity^0 = 0 }
+	set_variable = { 88.party_popularity^1 = 0 }
+	set_variable = { 88.party_popularity^2 = 0 }
+	set_variable = { 88.party_popularity^3 = 0 }
+	set_variable = { 88.party_popularity^4 = 0 }
+	set_variable = { 88.party_popularity^5 = 0 }
+	set_variable = { 88.party_popularity^6 = 0 }
 	
 	#East Prussia
 	add_to_array = { SLO.subdivision_states = 763 }
@@ -868,6 +1166,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 763.subdivision_states = 763 }
 	add_to_array = { 763.subdivision_states = 5 }
 	add_to_array = { 763.subdivision_states = 85 }
+	clear_array = 763.party_popularity
+	resize_array = { array = 763.party_popularity value = 0 size = 7 }
+	set_variable = { 763.party_popularity^0 = 0 }
+	set_variable = { 763.party_popularity^1 = 0 }
+	set_variable = { 763.party_popularity^2 = 0 }
+	set_variable = { 763.party_popularity^3 = 0 }
+	set_variable = { 763.party_popularity^4 = 0 }
+	set_variable = { 763.party_popularity^5 = 0 }
+	set_variable = { 763.party_popularity^6 = 0 }
 	
 	#Lithuania
 	add_to_array = { SLO.subdivision_states = 784 }
@@ -878,6 +1185,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 784.subdivision_states = 815 }
 	add_to_array = { 784.subdivision_states = 189 }
 	add_to_array = { 784.subdivision_states = 188 }
+	clear_array = 784.party_popularity
+	resize_array = { array = 784.party_popularity value = 0 size = 7 }
+	set_variable = { 784.party_popularity^0 = 0 }
+	set_variable = { 784.party_popularity^1 = 0 }
+	set_variable = { 784.party_popularity^2 = 0 }
+	set_variable = { 784.party_popularity^3 = 0 }
+	set_variable = { 784.party_popularity^4 = 0 }
+	set_variable = { 784.party_popularity^5 = 0 }
+	set_variable = { 784.party_popularity^6 = 0 }
 	
 	#Latvia
 	add_to_array = { SLO.subdivision_states = 808 }
@@ -887,6 +1203,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 808.subdivision_states = 809 }
 	add_to_array = { 808.subdivision_states = 12 }
 	add_to_array = { 808.subdivision_states = 810 }
+	clear_array = 808.party_popularity
+	resize_array = { array = 808.party_popularity value = 0 size = 7 }
+	set_variable = { 808.party_popularity^0 = 0 }
+	set_variable = { 808.party_popularity^1 = 0 }
+	set_variable = { 808.party_popularity^2 = 0 }
+	set_variable = { 808.party_popularity^3 = 0 }
+	set_variable = { 808.party_popularity^4 = 0 }
+	set_variable = { 808.party_popularity^5 = 0 }
+	set_variable = { 808.party_popularity^6 = 0 }
 	
 	#Estonia
 	add_to_array = { SLO.subdivision_states = 812 }
@@ -896,6 +1221,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 812.subdivision_states = 811 }
 	add_to_array = { 812.subdivision_states = 191 }
 	add_to_array = { 812.subdivision_states = 813 }
+	clear_array = 812.party_popularity
+	resize_array = { array = 812.party_popularity value = 0 size = 7 }
+	set_variable = { 812.party_popularity^0 = 0 }
+	set_variable = { 812.party_popularity^1 = 0 }
+	set_variable = { 812.party_popularity^2 = 0 }
+	set_variable = { 812.party_popularity^3 = 0 }
+	set_variable = { 812.party_popularity^4 = 0 }
+	set_variable = { 812.party_popularity^5 = 0 }
+	set_variable = { 812.party_popularity^6 = 0 }
 	
 	#Croatia
 	add_to_array = { SLO.subdivision_states = 109 }
@@ -904,12 +1238,30 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 109.subdivision_states = 103 }
 	add_to_array = { 109.subdivision_states = 852 }
 	add_to_array = { 109.subdivision_states = 163 }
+	clear_array = 109.party_popularity
+	resize_array = { array = 109.party_popularity value = 0 size = 7 }
+	set_variable = { 109.party_popularity^0 = 0 }
+	set_variable = { 109.party_popularity^1 = 0 }
+	set_variable = { 109.party_popularity^2 = 0 }
+	set_variable = { 109.party_popularity^3 = 0 }
+	set_variable = { 109.party_popularity^4 = 0 }
+	set_variable = { 109.party_popularity^5 = 0 }
+	set_variable = { 109.party_popularity^6 = 0 }
 	
 	#Bosnia
 	add_to_array = { SLO.subdivision_states = 104 }
 	clear_array = 104.subdivision_states
 	add_to_array = { 104.subdivision_states = 104 }
 	add_to_array = { 104.subdivision_states = 804 }
+	clear_array = 104.party_popularity
+	resize_array = { array = 104.party_popularity value = 0 size = 7 }
+	set_variable = { 104.party_popularity^0 = 0 }
+	set_variable = { 104.party_popularity^1 = 0 }
+	set_variable = { 104.party_popularity^2 = 0 }
+	set_variable = { 104.party_popularity^3 = 0 }
+	set_variable = { 104.party_popularity^4 = 0 }
+	set_variable = { 104.party_popularity^5 = 0 }
+	set_variable = { 104.party_popularity^6 = 0 }
 	
 	#Serbia
 	add_to_array = { SLO.subdivision_states = 107 }
@@ -920,6 +1272,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 107.subdivision_states = 108 }
 	add_to_array = { 107.subdivision_states = 803 }
 	add_to_array = { 107.subdivision_states = 105 }
+	clear_array = 107.party_popularity
+	resize_array = { array = 107.party_popularity value = 0 size = 7 }
+	set_variable = { 107.party_popularity^0 = 0 }
+	set_variable = { 107.party_popularity^1 = 0 }
+	set_variable = { 107.party_popularity^2 = 0 }
+	set_variable = { 107.party_popularity^3 = 0 }
+	set_variable = { 107.party_popularity^4 = 0 }
+	set_variable = { 107.party_popularity^5 = 0 }
+	set_variable = { 107.party_popularity^6 = 0 }
 	
 	#Albania
 	add_to_array = { SLO.subdivision_states = 44 }
@@ -929,6 +1290,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 44.subdivision_states = 764 }
 	add_to_array = { 44.subdivision_states = 934 }
 	add_to_array = { 44.subdivision_states = 802 }
+	clear_array = 44.party_popularity
+	resize_array = { array = 44.party_popularity value = 0 size = 7 }
+	set_variable = { 44.party_popularity^0 = 0 }
+	set_variable = { 44.party_popularity^1 = 0 }
+	set_variable = { 44.party_popularity^2 = 0 }
+	set_variable = { 44.party_popularity^3 = 0 }
+	set_variable = { 44.party_popularity^4 = 0 }
+	set_variable = { 44.party_popularity^5 = 0 }
+	set_variable = { 44.party_popularity^6 = 0 }
 	
 	#Macedonia
 	add_to_array = { SLO.subdivision_states = 731 }
@@ -937,6 +1307,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 731.subdivision_states = 106 }
 	add_to_array = { 731.subdivision_states = 970 }
 	add_to_array = { 731.subdivision_states = 184 }
+	clear_array = 731.party_popularity
+	resize_array = { array = 731.party_popularity value = 0 size = 7 }
+	set_variable = { 731.party_popularity^0 = 0 }
+	set_variable = { 731.party_popularity^1 = 0 }
+	set_variable = { 731.party_popularity^2 = 0 }
+	set_variable = { 731.party_popularity^3 = 0 }
+	set_variable = { 731.party_popularity^4 = 0 }
+	set_variable = { 731.party_popularity^5 = 0 }
+	set_variable = { 731.party_popularity^6 = 0 }
 	
 	#Greece
 	add_to_array = { SLO.subdivision_states = 47 }
@@ -948,6 +1327,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 47.subdivision_states = 182 }
 	add_to_array = { 47.subdivision_states = 164 }
 	add_to_array = { 47.subdivision_states = 183 }
+	clear_array = 47.party_popularity
+	resize_array = { array = 47.party_popularity value = 0 size = 7 }
+	set_variable = { 47.party_popularity^0 = 0 }
+	set_variable = { 47.party_popularity^1 = 0 }
+	set_variable = { 47.party_popularity^2 = 0 }
+	set_variable = { 47.party_popularity^3 = 0 }
+	set_variable = { 47.party_popularity^4 = 0 }
+	set_variable = { 47.party_popularity^5 = 0 }
+	set_variable = { 47.party_popularity^6 = 0 }
 	
 	#Bulgaria
 	add_to_array = { SLO.subdivision_states = 48 }
@@ -957,18 +1345,45 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 48.subdivision_states = 186 }
 	add_to_array = { 48.subdivision_states = 211 }
 	add_to_array = { 48.subdivision_states = 212 }
+	clear_array = 48.party_popularity
+	resize_array = { array = 48.party_popularity value = 0 size = 7 }
+	set_variable = { 48.party_popularity^0 = 0 }
+	set_variable = { 48.party_popularity^1 = 0 }
+	set_variable = { 48.party_popularity^2 = 0 }
+	set_variable = { 48.party_popularity^3 = 0 }
+	set_variable = { 48.party_popularity^4 = 0 }
+	set_variable = { 48.party_popularity^5 = 0 }
+	set_variable = { 48.party_popularity^6 = 0 }
 	
 	#Wallachia
 	add_to_array = { SLO.subdivision_states = 46 }
 	clear_array = 46.subdivision_states
 	add_to_array = { 46.subdivision_states = 46 }
 	add_to_array = { 46.subdivision_states = 81 }
+	clear_array = 46.party_popularity
+	resize_array = { array = 46.party_popularity value = 0 size = 7 }
+	set_variable = { 46.party_popularity^0 = 0 }
+	set_variable = { 46.party_popularity^1 = 0 }
+	set_variable = { 46.party_popularity^2 = 0 }
+	set_variable = { 46.party_popularity^3 = 0 }
+	set_variable = { 46.party_popularity^4 = 0 }
+	set_variable = { 46.party_popularity^5 = 0 }
+	set_variable = { 46.party_popularity^6 = 0 }
 	
 	#Dobruja
 	add_to_array = { SLO.subdivision_states = 971 }
 	clear_array = 971.subdivision_states
 	add_to_array = { 971.subdivision_states = 971 }
 	add_to_array = { 971.subdivision_states = 77 }
+	clear_array = 971.party_popularity
+	resize_array = { array = 971.party_popularity value = 0 size = 7 }
+	set_variable = { 971.party_popularity^0 = 0 }
+	set_variable = { 971.party_popularity^1 = 0 }
+	set_variable = { 971.party_popularity^2 = 0 }
+	set_variable = { 971.party_popularity^3 = 0 }
+	set_variable = { 971.party_popularity^4 = 0 }
+	set_variable = { 971.party_popularity^5 = 0 }
+	set_variable = { 971.party_popularity^6 = 0 }
 	
 	#Transylvania
 	add_to_array = { SLO.subdivision_states = 76 }
@@ -977,6 +1392,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 76.subdivision_states = 83 }
 	add_to_array = { 76.subdivision_states = 84 }
 	add_to_array = { 76.subdivision_states = 82 }
+	clear_array = 76.party_popularity
+	resize_array = { array = 76.party_popularity value = 0 size = 7 }
+	set_variable = { 76.party_popularity^0 = 0 }
+	set_variable = { 76.party_popularity^1 = 0 }
+	set_variable = { 76.party_popularity^2 = 0 }
+	set_variable = { 76.party_popularity^3 = 0 }
+	set_variable = { 76.party_popularity^4 = 0 }
+	set_variable = { 76.party_popularity^5 = 0 }
+	set_variable = { 76.party_popularity^6 = 0 }
 	
 	#Moldavia
 	add_to_array = { SLO.subdivision_states = 79 }
@@ -984,6 +1408,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 79.subdivision_states = 79 }
 	add_to_array = { 79.subdivision_states = 78 }
 	add_to_array = { 79.subdivision_states = 80 }
+	clear_array = 79.party_popularity
+	resize_array = { array = 79.party_popularity value = 0 size = 7 }
+	set_variable = { 79.party_popularity^0 = 0 }
+	set_variable = { 79.party_popularity^1 = 0 }
+	set_variable = { 79.party_popularity^2 = 0 }
+	set_variable = { 79.party_popularity^3 = 0 }
+	set_variable = { 79.party_popularity^4 = 0 }
+	set_variable = { 79.party_popularity^5 = 0 }
+	set_variable = { 79.party_popularity^6 = 0 }
 	
 	#Norway
 	add_to_array = { SLO.subdivision_states = 110 }
@@ -995,6 +1428,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 110.subdivision_states = 920 }
 	add_to_array = { 110.subdivision_states = 143 }
 	add_to_array = { 110.subdivision_states = 923 }
+	clear_array = 110.party_popularity
+	resize_array = { array = 110.party_popularity value = 0 size = 7 }
+	set_variable = { 110.party_popularity^0 = 0 }
+	set_variable = { 110.party_popularity^1 = 0 }
+	set_variable = { 110.party_popularity^2 = 0 }
+	set_variable = { 110.party_popularity^3 = 0 }
+	set_variable = { 110.party_popularity^4 = 0 }
+	set_variable = { 110.party_popularity^5 = 0 }
+	set_variable = { 110.party_popularity^6 = 0 }
 	
 	#Sweden
 	add_to_array = { SLO.subdivision_states = 141 }
@@ -1007,6 +1449,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 141.subdivision_states = 139 }
 	add_to_array = { 141.subdivision_states = 124 }
 	add_to_array = { 141.subdivision_states = 138 }
+	clear_array = 141.party_popularity
+	resize_array = { array = 141.party_popularity value = 0 size = 7 }
+	set_variable = { 141.party_popularity^0 = 0 }
+	set_variable = { 141.party_popularity^1 = 0 }
+	set_variable = { 141.party_popularity^2 = 0 }
+	set_variable = { 141.party_popularity^3 = 0 }
+	set_variable = { 141.party_popularity^4 = 0 }
+	set_variable = { 141.party_popularity^5 = 0 }
+	set_variable = { 141.party_popularity^6 = 0 }
 	
 	#Norrland
 	add_to_array = { SLO.subdivision_states = 38 }
@@ -1015,6 +1466,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 38.subdivision_states = 917 }
 	add_to_array = { 38.subdivision_states = 916 }
 	add_to_array = { 38.subdivision_states = 918 }
+	clear_array = 38.party_popularity
+	resize_array = { array = 38.party_popularity value = 0 size = 7 }
+	set_variable = { 38.party_popularity^0 = 0 }
+	set_variable = { 38.party_popularity^1 = 0 }
+	set_variable = { 38.party_popularity^2 = 0 }
+	set_variable = { 38.party_popularity^3 = 0 }
+	set_variable = { 38.party_popularity^4 = 0 }
+	set_variable = { 38.party_popularity^5 = 0 }
+	set_variable = { 38.party_popularity^6 = 0 }
 	
 	#Finland
 	add_to_array = { SLO.subdivision_states = 111 }
@@ -1029,6 +1489,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 111.subdivision_states = 149 }
 	add_to_array = { 111.subdivision_states = 150 }
 	add_to_array = { 111.subdivision_states = 929 }
+	clear_array = 111.party_popularity
+	resize_array = { array = 111.party_popularity value = 0 size = 7 }
+	set_variable = { 111.party_popularity^0 = 0 }
+	set_variable = { 111.party_popularity^1 = 0 }
+	set_variable = { 111.party_popularity^2 = 0 }
+	set_variable = { 111.party_popularity^3 = 0 }
+	set_variable = { 111.party_popularity^4 = 0 }
+	set_variable = { 111.party_popularity^5 = 0 }
+	set_variable = { 111.party_popularity^6 = 0 }
 	
 	#Saami Region
 	add_to_array = { SLO.subdivision_states = 666 }
@@ -1038,6 +1507,16 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 666.subdivision_states = 148 }
 	add_to_array = { 666.subdivision_states = 924 }
 	add_to_array = { 666.subdivision_states = 144 }
+	clear_array = 666.party_popularity
+	resize_array = { array = 666.party_popularity value = 0 size = 7 }
+	set_variable = { 666.party_popularity^0 = 0 }
+	set_variable = { 666.party_popularity^1 = 0 }
+	set_variable = { 666.party_popularity^2 = 0 }
+	set_variable = { 666.party_popularity^3 = 0 }
+	set_variable = { 666.party_popularity^4 = 0 }
+	set_variable = { 666.party_popularity^5 = 0 }
+	set_variable = { 666.party_popularity^6 = 0 }
+	
 	
 	#Bosphorus Region
 	add_to_array = { SLO.subdivision_states = 797 }
@@ -1049,6 +1528,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 797.subdivision_states = 339 }
 	add_to_array = { 797.subdivision_states = 343 }
 	add_to_array = { 797.subdivision_states = 342 }
+	clear_array = 797.party_popularity
+	resize_array = { array = 797.party_popularity value = 0 size = 7 }
+	set_variable = { 797.party_popularity^0 = 0 }
+	set_variable = { 797.party_popularity^1 = 0 }
+	set_variable = { 797.party_popularity^2 = 0 }
+	set_variable = { 797.party_popularity^3 = 0 }
+	set_variable = { 797.party_popularity^4 = 0 }
+	set_variable = { 797.party_popularity^5 = 0 }
+	set_variable = { 797.party_popularity^6 = 0 }
 	
 	#Southern Anatolia
 	add_to_array = { SLO.subdivision_states = 344 }
@@ -1058,6 +1546,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 344.subdivision_states = 348 }
 	add_to_array = { 344.subdivision_states = 345 }
 	add_to_array = { 344.subdivision_states = 346 }
+	clear_array = 344.party_popularity
+	resize_array = { array = 344.party_popularity value = 0 size = 7 }
+	set_variable = { 344.party_popularity^0 = 0 }
+	set_variable = { 344.party_popularity^1 = 0 }
+	set_variable = { 344.party_popularity^2 = 0 }
+	set_variable = { 344.party_popularity^3 = 0 }
+	set_variable = { 344.party_popularity^4 = 0 }
+	set_variable = { 344.party_popularity^5 = 0 }
+	set_variable = { 344.party_popularity^6 = 0 }
 	
 	#Northern Anatolia
 	add_to_array = { SLO.subdivision_states = 49 }
@@ -1068,6 +1565,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 49.subdivision_states = 349 }
 	add_to_array = { 49.subdivision_states = 355 }
 	add_to_array = { 49.subdivision_states = 354 }
+	clear_array = 49.party_popularity
+	resize_array = { array = 49.party_popularity value = 0 size = 7 }
+	set_variable = { 49.party_popularity^0 = 0 }
+	set_variable = { 49.party_popularity^1 = 0 }
+	set_variable = { 49.party_popularity^2 = 0 }
+	set_variable = { 49.party_popularity^3 = 0 }
+	set_variable = { 49.party_popularity^4 = 0 }
+	set_variable = { 49.party_popularity^5 = 0 }
+	set_variable = { 49.party_popularity^6 = 0 }
 	
 	#Kurdistan
 	add_to_array = { SLO.subdivision_states = 800 }
@@ -1076,6 +1582,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 800.subdivision_states = 353 }
 	add_to_array = { 800.subdivision_states = 350 }
 	add_to_array = { 800.subdivision_states = 352 }
+	clear_array = 800.party_popularity
+	resize_array = { array = 800.party_popularity value = 0 size = 7 }
+	set_variable = { 800.party_popularity^0 = 0 }
+	set_variable = { 800.party_popularity^1 = 0 }
+	set_variable = { 800.party_popularity^2 = 0 }
+	set_variable = { 800.party_popularity^3 = 0 }
+	set_variable = { 800.party_popularity^4 = 0 }
+	set_variable = { 800.party_popularity^5 = 0 }
+	set_variable = { 800.party_popularity^6 = 0 }
 	
 	#Belarus
 	add_to_array = { SLO.subdivision_states = 206 }
@@ -1088,6 +1603,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 206.subdivision_states = 194 }
 	add_to_array = { 206.subdivision_states = 241 }
 	add_to_array = { 206.subdivision_states = 207 }
+	clear_array = 206.party_popularity
+	resize_array = { array = 206.party_popularity value = 0 size = 7 }
+	set_variable = { 206.party_popularity^0 = 0 }
+	set_variable = { 206.party_popularity^1 = 0 }
+	set_variable = { 206.party_popularity^2 = 0 }
+	set_variable = { 206.party_popularity^3 = 0 }
+	set_variable = { 206.party_popularity^4 = 0 }
+	set_variable = { 206.party_popularity^5 = 0 }
+	set_variable = { 206.party_popularity^6 = 0 }
 	
 	#Western Ukraine
 	add_to_array = { SLO.subdivision_states = 202 }
@@ -1097,6 +1621,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 202.subdivision_states = 198 }
 	add_to_array = { 202.subdivision_states = 199 }
 	add_to_array = { 202.subdivision_states = 93 }
+	clear_array = 202.party_popularity
+	resize_array = { array = 202.party_popularity value = 0 size = 7 }
+	set_variable = { 202.party_popularity^0 = 0 }
+	set_variable = { 202.party_popularity^1 = 0 }
+	set_variable = { 202.party_popularity^2 = 0 }
+	set_variable = { 202.party_popularity^3 = 0 }
+	set_variable = { 202.party_popularity^4 = 0 }
+	set_variable = { 202.party_popularity^5 = 0 }
+	set_variable = { 202.party_popularity^6 = 0 }
 	
 	#Dniepr - Don Region
 	add_to_array = { SLO.subdivision_states = 221 }
@@ -1107,6 +1640,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 221.subdivision_states = 259 }
 	add_to_array = { 221.subdivision_states = 225 }
 	add_to_array = { 221.subdivision_states = 193 }
+	clear_array = 221.party_popularity
+	resize_array = { array = 221.party_popularity value = 0 size = 7 }
+	set_variable = { 221.party_popularity^0 = 0 }
+	set_variable = { 221.party_popularity^1 = 0 }
+	set_variable = { 221.party_popularity^2 = 0 }
+	set_variable = { 221.party_popularity^3 = 0 }
+	set_variable = { 221.party_popularity^4 = 0 }
+	set_variable = { 221.party_popularity^5 = 0 }
+	set_variable = { 221.party_popularity^6 = 0 }
 	
 	#Tavriya
 	add_to_array = { SLO.subdivision_states = 137 }
@@ -1114,6 +1656,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 137.subdivision_states = 137 }
 	add_to_array = { 137.subdivision_states = 196 }
 	add_to_array = { 137.subdivision_states = 200 }
+	clear_array = 137.party_popularity
+	resize_array = { array = 137.party_popularity value = 0 size = 7 }
+	set_variable = { 137.party_popularity^0 = 0 }
+	set_variable = { 137.party_popularity^1 = 0 }
+	set_variable = { 137.party_popularity^2 = 0 }
+	set_variable = { 137.party_popularity^3 = 0 }
+	set_variable = { 137.party_popularity^4 = 0 }
+	set_variable = { 137.party_popularity^5 = 0 }
+	set_variable = { 137.party_popularity^6 = 0 }
 	
 	#Prychornomoria - Budzhak
 	add_to_array = { SLO.subdivision_states = 192 }
@@ -1122,6 +1673,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 192.subdivision_states = 834 }
 	add_to_array = { 192.subdivision_states = 197 }
 	add_to_array = { 192.subdivision_states = 766 }
+	clear_array = 192.party_popularity
+	resize_array = { array = 192.party_popularity value = 0 size = 7 }
+	set_variable = { 192.party_popularity^0 = 0 }
+	set_variable = { 192.party_popularity^1 = 0 }
+	set_variable = { 192.party_popularity^2 = 0 }
+	set_variable = { 192.party_popularity^3 = 0 }
+	set_variable = { 192.party_popularity^4 = 0 }
+	set_variable = { 192.party_popularity^5 = 0 }
+	set_variable = { 192.party_popularity^6 = 0 }
 	
 	#Karelia
 	add_to_array = { SLO.subdivision_states = 213 }
@@ -1130,6 +1690,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 213.subdivision_states = 722 }
 	add_to_array = { 213.subdivision_states = 147 }
 	add_to_array = { 213.subdivision_states = 215 }
+	clear_array = 213.party_popularity
+	resize_array = { array = 213.party_popularity value = 0 size = 7 }
+	set_variable = { 213.party_popularity^0 = 0 }
+	set_variable = { 213.party_popularity^1 = 0 }
+	set_variable = { 213.party_popularity^2 = 0 }
+	set_variable = { 213.party_popularity^3 = 0 }
+	set_variable = { 213.party_popularity^4 = 0 }
+	set_variable = { 213.party_popularity^5 = 0 }
+	set_variable = { 213.party_popularity^6 = 0 }
 	
 	#Novgorod
 	add_to_array = { SLO.subdivision_states = 195 }
@@ -1143,6 +1712,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 195.subdivision_states = 210 }
 	add_to_array = { 195.subdivision_states = 246 }
 	add_to_array = { 195.subdivision_states = 247 }
+	clear_array = 195.party_popularity
+	resize_array = { array = 195.party_popularity value = 0 size = 7 }
+	set_variable = { 195.party_popularity^0 = 0 }
+	set_variable = { 195.party_popularity^1 = 0 }
+	set_variable = { 195.party_popularity^2 = 0 }
+	set_variable = { 195.party_popularity^3 = 0 }
+	set_variable = { 195.party_popularity^4 = 0 }
+	set_variable = { 195.party_popularity^5 = 0 }
+	set_variable = { 195.party_popularity^6 = 0 }
 	
 	#Central Russia
 	add_to_array = { SLO.subdivision_states = 219 }
@@ -1160,6 +1738,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 219.subdivision_states = 258 }
 	add_to_array = { 219.subdivision_states = 240 }
 	add_to_array = { 219.subdivision_states = 220 }
+	clear_array = 219.party_popularity
+	resize_array = { array = 219.party_popularity value = 0 size = 7 }
+	set_variable = { 219.party_popularity^0 = 0 }
+	set_variable = { 219.party_popularity^1 = 0 }
+	set_variable = { 219.party_popularity^2 = 0 }
+	set_variable = { 219.party_popularity^3 = 0 }
+	set_variable = { 219.party_popularity^4 = 0 }
+	set_variable = { 219.party_popularity^5 = 0 }
+	set_variable = { 219.party_popularity^6 = 0 }
 	
 	#Don Basin Region
 	add_to_array = { SLO.subdivision_states = 218 }
@@ -1172,6 +1759,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 218.subdivision_states = 233 }
 	add_to_array = { 218.subdivision_states = 260 }
 	add_to_array = { 218.subdivision_states = 265 }
+	clear_array = 218.party_popularity
+	resize_array = { array = 218.party_popularity value = 0 size = 7 }
+	set_variable = { 218.party_popularity^0 = 0 }
+	set_variable = { 218.party_popularity^1 = 0 }
+	set_variable = { 218.party_popularity^2 = 0 }
+	set_variable = { 218.party_popularity^3 = 0 }
+	set_variable = { 218.party_popularity^4 = 0 }
+	set_variable = { 218.party_popularity^5 = 0 }
+	set_variable = { 218.party_popularity^6 = 0 }
 	
 	#South Caucuses
 	add_to_array = { SLO.subdivision_states = 229 }
@@ -1180,6 +1776,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 229.subdivision_states = 230 }
 	add_to_array = { 229.subdivision_states = 231 }
 	add_to_array = { 229.subdivision_states = 826 }
+	clear_array = 229.party_popularity
+	resize_array = { array = 229.party_popularity value = 0 size = 7 }
+	set_variable = { 229.party_popularity^0 = 0 }
+	set_variable = { 229.party_popularity^1 = 0 }
+	set_variable = { 229.party_popularity^2 = 0 }
+	set_variable = { 229.party_popularity^3 = 0 }
+	set_variable = { 229.party_popularity^4 = 0 }
+	set_variable = { 229.party_popularity^5 = 0 }
+	set_variable = { 229.party_popularity^6 = 0 }
 	
 	#North Caucuses
 	add_to_array = { SLO.subdivision_states = 232 }
@@ -1189,6 +1794,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 232.subdivision_states = 828 }
 	add_to_array = { 232.subdivision_states = 827 }
 	add_to_array = { 232.subdivision_states = 235 }
+	clear_array = 232.party_popularity
+	resize_array = { array = 232.party_popularity value = 0 size = 7 }
+	set_variable = { 232.party_popularity^0 = 0 }
+	set_variable = { 232.party_popularity^1 = 0 }
+	set_variable = { 232.party_popularity^2 = 0 }
+	set_variable = { 232.party_popularity^3 = 0 }
+	set_variable = { 232.party_popularity^4 = 0 }
+	set_variable = { 232.party_popularity^5 = 0 }
+	set_variable = { 232.party_popularity^6 = 0 }
 	
 	#Volga Basin Region
 	add_to_array = { SLO.subdivision_states = 217 }
@@ -1197,6 +1811,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 217.subdivision_states = 236 }
 	add_to_array = { 217.subdivision_states = 237 }
 	add_to_array = { 217.subdivision_states = 238 }
+	clear_array = 217.party_popularity
+	resize_array = { array = 217.party_popularity value = 0 size = 7 }
+	set_variable = { 217.party_popularity^0 = 0 }
+	set_variable = { 217.party_popularity^1 = 0 }
+	set_variable = { 217.party_popularity^2 = 0 }
+	set_variable = { 217.party_popularity^3 = 0 }
+	set_variable = { 217.party_popularity^4 = 0 }
+	set_variable = { 217.party_popularity^5 = 0 }
+	set_variable = { 217.party_popularity^6 = 0 }
 	
 	#Volga Region
 	add_to_array = { SLO.subdivision_states = 252 }
@@ -1212,6 +1835,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 252.subdivision_states = 239 }
 	add_to_array = { 252.subdivision_states = 829 }
 	add_to_array = { 252.subdivision_states = 401 }	
+	clear_array = 252.party_popularity
+	resize_array = { array = 252.party_popularity value = 0 size = 7 }
+	set_variable = { 252.party_popularity^0 = 0 }
+	set_variable = { 252.party_popularity^1 = 0 }
+	set_variable = { 252.party_popularity^2 = 0 }
+	set_variable = { 252.party_popularity^3 = 0 }
+	set_variable = { 252.party_popularity^4 = 0 }
+	set_variable = { 252.party_popularity^5 = 0 }
+	set_variable = { 252.party_popularity^6 = 0 }
 	
 	#Urals
 	add_to_array = { SLO.subdivision_states = 651 }
@@ -1223,6 +1855,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 651.subdivision_states = 652 }
 	add_to_array = { 651.subdivision_states = 399 }
 	add_to_array = { 651.subdivision_states = 400 }
+	clear_array = 651.party_popularity
+	resize_array = { array = 651.party_popularity value = 0 size = 7 }
+	set_variable = { 651.party_popularity^0 = 0 }
+	set_variable = { 651.party_popularity^1 = 0 }
+	set_variable = { 651.party_popularity^2 = 0 }
+	set_variable = { 651.party_popularity^3 = 0 }
+	set_variable = { 651.party_popularity^4 = 0 }
+	set_variable = { 651.party_popularity^5 = 0 }
+	set_variable = { 651.party_popularity^6 = 0 }
 	
 	#Barents Region
 	add_to_array = { SLO.subdivision_states = 214 }
@@ -1232,6 +1873,15 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 214.subdivision_states = 879 }
 	add_to_array = { 214.subdivision_states = 351 }
 	add_to_array = { 214.subdivision_states = 880 }
+	clear_array = 214.party_popularity
+	resize_array = { array = 214.party_popularity value = 0 size = 7 }
+	set_variable = { 214.party_popularity^0 = 0 }
+	set_variable = { 214.party_popularity^1 = 0 }
+	set_variable = { 214.party_popularity^2 = 0 }
+	set_variable = { 214.party_popularity^3 = 0 }
+	set_variable = { 214.party_popularity^4 = 0 }
+	set_variable = { 214.party_popularity^5 = 0 }
+	set_variable = { 214.party_popularity^6 = 0 }
 }
 
 

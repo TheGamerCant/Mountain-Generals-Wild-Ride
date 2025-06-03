@@ -1,4 +1,6 @@
 ﻿l_english:
+ state_overlay_entry_button_tt:0 "[?v:name_token.GetTokenLocalizedKey]"
+
  SLO_GFX_elections_slovakia_70_OVERLAY_idea:0 "GFX_slovakia_70_OVERLAY"
  SLO_GFX_elections_slovakia_70_PROGESSBAR_idea:0 "GFX_slovakia_70_PROGRESSBAR"
  SLO_NAME_elections_slovakia_70_idea:0 "Západné Slovensko"
@@ -14,7 +16,6 @@
  SLO_GFX_elections_slovakia_664_OVERLAY_idea:0 "GFX_slovakia_664_OVERLAY"
  SLO_GFX_elections_slovakia_664_PROGESSBAR_idea:0 "GFX_slovakia_664_PROGRESSBAR"
  SLO_NAME_elections_slovakia_664_idea:0 "Južné Slovensko"
- 
  
  
  SLO_GFX_elections_europe_100_OVERLAY_idea:0 "GFX_europe_100_OVERLAY"

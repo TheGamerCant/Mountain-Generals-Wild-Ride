@@ -6,39 +6,36 @@ spriteTypes = {
 #		transparencecheck = yes
 	}
 	
+	#These need to be pngs, don't ask me why
 	spriteType = {
 		name = "GFX_slovakia_70_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/slovakia_70.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/slovakia_70.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
-		legacy_lazy_load = yes
 	}
 	spriteType = {
 		name = "GFX_slovakia_71_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/slovakia_71.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/slovakia_71.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
-		legacy_lazy_load = yes
 	}
 	spriteType = {
 		name = "GFX_slovakia_73_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/slovakia_73.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/slovakia_73.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
-		legacy_lazy_load = yes
 	}
 	spriteType = {
 		name = "GFX_slovakia_664_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/slovakia_664.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/slovakia_664.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
-		legacy_lazy_load = yes
 	}
 	
 	progressbartype = {
 		name = "GFX_slovakia_70_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/slovakia_70.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/slovakia_70.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/slovakia_70.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/slovakia_70.png"
 		size = {
 			x = 278
 			y = 158
@@ -47,8 +44,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_slovakia_71_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/slovakia_71.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/slovakia_71.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/slovakia_71.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/slovakia_71.png"
 		size = {
 			x = 339
 			y = 148
@@ -57,8 +54,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_slovakia_73_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/slovakia_73.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/slovakia_73.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/slovakia_73.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/slovakia_73.png"
 		size = {
 			x = 224
 			y = 149
@@ -67,8 +64,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_slovakia_664_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/slovakia_664.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/slovakia_664.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/slovakia_664.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/slovakia_664.png"
 		size = {
 			x = 488
 			y = 134
@@ -80,521 +77,477 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_europe_100_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_100.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_100.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_178_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_178.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_178.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_121_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_121.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_121.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_113_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_113.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_113.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_132_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_132.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_132.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_128_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_128.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_128.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_126_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_126.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_126.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_37_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_37.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_37.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_7_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_7.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_7.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_112_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_112.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_112.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_118_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_118.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_118.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_165_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_165.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_165.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_41_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_41.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_41.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_171_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_171.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_171.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_792_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_792.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_792.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_19_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_19.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_19.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_16_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_16.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_16.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_28_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_28.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_28.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_31_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_31.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_31.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_20_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_20.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_20.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_51_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_51.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_51.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_50_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_50.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_50.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_52_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_52.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_52.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_58_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_58.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_58.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_64_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_64.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_64.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_63_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_63.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_63.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_66_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_66.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_66.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_9_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_9.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_9.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_69_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_69.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_69.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_70_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_70.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_70.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_3_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_3.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_3.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_4_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_4.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_4.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_159_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_159.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_159.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_2_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_2.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_2.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_117_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_117.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_117.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_43_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_43.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_43.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_102_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_102.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_102.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_10_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_10.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_10.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_88_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_88.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_88.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_763_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_763.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_763.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_784_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_784.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_784.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_808_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_808.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_808.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_812_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_812.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_812.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_109_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_109.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_109.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_104_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_104.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_104.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_107_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_107.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_107.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_44_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_44.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_44.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_731_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_731.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_731.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_47_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_47.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_47.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_48_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_48.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_48.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_46_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_46.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_46.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_971_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_971.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_971.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_76_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_76.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_76.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_79_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_79.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_79.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_110_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_110.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_110.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_141_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_141.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_141.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_38_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_38.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_38.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_111_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_111.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_111.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_666_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_666.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_666.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_797_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_797.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_797.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_344_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_344.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_344.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_49_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_49.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_49.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_800_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_800.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_800.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_206_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_206.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_206.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_202_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_202.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_202.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_221_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_221.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_221.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_137_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_137.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_137.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_192_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_192.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_192.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_213_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_213.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_213.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_195_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_195.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_195.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_219_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_219.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_219.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_218_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_218.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_218.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_229_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_229.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_229.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_232_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_232.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_232.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_217_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_217.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_217.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_252_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_252.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_252.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_651_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_651.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_651.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	spriteType = {
 		name = "GFX_europe_214_OVERLAY"
-		texturefile = "gfx/interface/SLO_parliament/states/europe_214.dds"
+		texturefile = "gfx/interface/SLO_parliament/states/europe_214.png"
 		transparencecheck = yes
 		effectFile = "gfx/FX/SLO_state_entry_election_map_overlay_button.shader"
 	}
 	
-	
-	progressbartype = {
-		name = "GFX_slovakia_70_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/slovakia_70.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/slovakia_70.dds"
-		size = {
-			x = 272
-			y = 152
-		}
-		effectFile = "gfx/FX/SLO_state_entry_election_map.shader"
-	}
-	progressbartype = {
-		name = "GFX_slovakia_71_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/slovakia_71.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/slovakia_71.dds"
-		size = {
-			x = 336
-			y = 144
-		}
-		effectFile = "gfx/FX/SLO_state_entry_election_map.shader"
-	}
-	progressbartype = {
-		name = "GFX_slovakia_73_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/slovakia_73.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/slovakia_73.dds"
-		size = {
-			x = 219
-			y = 147
-		}
-		effectFile = "gfx/FX/SLO_state_entry_election_map.shader"
-	}
-	progressbartype = {
-		name = "GFX_slovakia_664_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/slovakia_664.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/slovakia_664.dds"
-		size = {
-			x = 480
-			y = 138
-		}
-		effectFile = "gfx/FX/SLO_state_entry_election_map.shader"
-	}
-	
-	
-	
 	progressbartype = {
 		name = "GFX_europe_100_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_100.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_100.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_100.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_100.png"
 		size = {
 			x = 257
 			y = 133
@@ -603,8 +556,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_178_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_178.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_178.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_178.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_178.png"
 		size = {
 			x = 64
 			y = 61
@@ -613,8 +566,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_121_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_121.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_121.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_121.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_121.png"
 		size = {
 			x = 59
 			y = 79
@@ -623,8 +576,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_113_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_113.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_113.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_113.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_113.png"
 		size = {
 			x = 45
 			y = 46
@@ -633,8 +586,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_132_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_132.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_132.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_132.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_132.png"
 		size = {
 			x = 43
 			y = 35
@@ -643,8 +596,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_128_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_128.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_128.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_128.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_128.png"
 		size = {
 			x = 49
 			y = 28
@@ -653,8 +606,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_126_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_126.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_126.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_126.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_126.png"
 		size = {
 			x = 65
 			y = 35
@@ -663,8 +616,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_37_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_37.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_37.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_37.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_37.png"
 		size = {
 			x = 61
 			y = 40
@@ -673,8 +626,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_7_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_7.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_7.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_7.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_7.png"
 		size = {
 			x = 41
 			y = 35
@@ -683,8 +636,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_112_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_112.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_112.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_112.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_112.png"
 		size = {
 			x = 29
 			y = 52
@@ -693,8 +646,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_118_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_118.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_118.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_118.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_118.png"
 		size = {
 			x = 59
 			y = 35
@@ -703,8 +656,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_165_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_165.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_165.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_165.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_165.png"
 		size = {
 			x = 56
 			y = 52
@@ -713,8 +666,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_41_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_41.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_41.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_41.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_41.png"
 		size = {
 			x = 55
 			y = 36
@@ -723,8 +676,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_171_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_171.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_171.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_171.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_171.png"
 		size = {
 			x = 66
 			y = 34
@@ -733,8 +686,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_792_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_792.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_792.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_792.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_792.png"
 		size = {
 			x = 29
 			y = 23
@@ -743,8 +696,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_19_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_19.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_19.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_19.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_19.png"
 		size = {
 			x = 49
 			y = 55
@@ -753,8 +706,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_16_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_16.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_16.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_16.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_16.png"
 		size = {
 			x = 53
 			y = 61
@@ -763,8 +716,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_28_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_28.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_28.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_28.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_28.png"
 		size = {
 			x = 47
 			y = 51
@@ -773,8 +726,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_31_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_31.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_31.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_31.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_31.png"
 		size = {
 			x = 48
 			y = 47
@@ -783,8 +736,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_20_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_20.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_20.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_20.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_20.png"
 		size = {
 			x = 54
 			y = 58
@@ -793,8 +746,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_51_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_51.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_51.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_51.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_51.png"
 		size = {
 			x = 40
 			y = 42
@@ -803,8 +756,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_50_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_50.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_50.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_50.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_50.png"
 		size = {
 			x = 27
 			y = 26
@@ -813,8 +766,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_52_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_52.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_52.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_52.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_52.png"
 		size = {
 			x = 42
 			y = 41
@@ -823,8 +776,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_58_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_58.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_58.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_58.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_58.png"
 		size = {
 			x = 42
 			y = 42
@@ -833,8 +786,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_64_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_64.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_64.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_64.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_64.png"
 		size = {
 			x = 44
 			y = 47
@@ -843,8 +796,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_63_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_63.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_63.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_63.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_63.png"
 		size = {
 			x = 51
 			y = 39
@@ -853,8 +806,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_66_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_66.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_66.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_66.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_66.png"
 		size = {
 			x = 39
 			y = 29
@@ -863,8 +816,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_9_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_9.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_9.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_9.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_9.png"
 		size = {
 			x = 48
 			y = 24
@@ -873,8 +826,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_69_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_69.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_69.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_69.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_69.png"
 		size = {
 			x = 42
 			y = 31
@@ -883,8 +836,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_70_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_70.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_70.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_70.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_70.png"
 		size = {
 			x = 67
 			y = 22
@@ -893,8 +846,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_3_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_3.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_3.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_3.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_3.png"
 		size = {
 			x = 40
 			y = 20
@@ -903,8 +856,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_4_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_4.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_4.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_4.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_4.png"
 		size = {
 			x = 64
 			y = 35
@@ -913,8 +866,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_159_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_159.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_159.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_159.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_159.png"
 		size = {
 			x = 67
 			y = 32
@@ -923,8 +876,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_2_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_2.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_2.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_2.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_2.png"
 		size = {
 			x = 48
 			y = 35
@@ -933,8 +886,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_117_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_117.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_117.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_117.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_117.png"
 		size = {
 			x = 90
 			y = 64
@@ -943,8 +896,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_43_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_43.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_43.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_43.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_43.png"
 		size = {
 			x = 60
 			y = 32
@@ -953,8 +906,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_102_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_102.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_102.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_102.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_102.png"
 		size = {
 			x = 27
 			y = 17
@@ -963,8 +916,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_10_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_10.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_10.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_10.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_10.png"
 		size = {
 			x = 72
 			y = 54
@@ -973,8 +926,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_88_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_88.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_88.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_88.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_88.png"
 		size = {
 			x = 72
 			y = 35
@@ -983,8 +936,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_763_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_763.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_763.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_763.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_763.png"
 		size = {
 			x = 40
 			y = 26
@@ -993,8 +946,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_784_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_784.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_784.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_784.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_784.png"
 		size = {
 			x = 50
 			y = 31
@@ -1003,8 +956,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_808_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_808.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_808.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_808.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_808.png"
 		size = {
 			x = 63
 			y = 32
@@ -1013,8 +966,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_812_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_812.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_812.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_812.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_812.png"
 		size = {
 			x = 54
 			y = 29
@@ -1023,8 +976,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_109_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_109.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_109.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_109.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_109.png"
 		size = {
 			x = 59
 			y = 42
@@ -1033,8 +986,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_104_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_104.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_104.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_104.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_104.png"
 		size = {
 			x = 34
 			y = 26
@@ -1043,8 +996,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_107_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_107.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_107.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_107.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_107.png"
 		size = {
 			x = 41
 			y = 47
@@ -1053,8 +1006,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_44_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_44.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_44.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_44.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_44.png"
 		size = {
 			x = 23
 			y = 37
@@ -1063,8 +1016,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_731_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_731.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_731.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_731.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_731.png"
 		size = {
 			x = 53
 			y = 25
@@ -1073,8 +1026,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_47_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_47.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_47.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_47.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_47.png"
 		size = {
 			x = 130
 			y = 65
@@ -1083,8 +1036,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_48_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_48.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_48.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_48.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_48.png"
 		size = {
 			x = 50
 			y = 31
@@ -1093,8 +1046,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_46_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_46.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_46.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_46.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_46.png"
 		size = {
 			x = 49
 			y = 21
@@ -1103,8 +1056,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_971_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_971.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_971.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_971.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_971.png"
 		size = {
 			x = 29
 			y = 23
@@ -1113,8 +1066,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_76_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_76.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_76.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_76.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_76.png"
 		size = {
 			x = 54
 			y = 39
@@ -1123,8 +1076,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_79_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_79.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_79.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_79.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_79.png"
 		size = {
 			x = 45
 			y = 39
@@ -1133,8 +1086,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_110_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_110.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_110.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_110.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_110.png"
 		size = {
 			x = 91
 			y = 123
@@ -1143,8 +1096,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_141_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_141.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_141.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_141.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_141.png"
 		size = {
 			x = 71
 			y = 74
@@ -1153,8 +1106,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_38_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_38.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_38.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_38.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_38.png"
 		size = {
 			x = 83
 			y = 97
@@ -1163,8 +1116,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_111_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_111.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_111.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_111.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_111.png"
 		size = {
 			x = 114
 			y = 95
@@ -1173,8 +1126,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_666_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_666.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_666.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_666.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_666.png"
 		size = {
 			x = 155
 			y = 87
@@ -1183,8 +1136,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_797_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_797.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_797.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_797.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_797.png"
 		size = {
 			x = 64
 			y = 62
@@ -1193,8 +1146,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_344_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_344.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_344.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_344.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_344.png"
 		size = {
 			x = 77
 			y = 36
@@ -1203,8 +1156,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_49_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_49.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_49.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_49.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_49.png"
 		size = {
 			x = 118
 			y = 40
@@ -1213,8 +1166,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_800_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_800.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_800.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_800.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_800.png"
 		size = {
 			x = 59
 			y = 37
@@ -1223,8 +1176,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_206_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_206.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_206.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_206.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_206.png"
 		size = {
 			x = 81
 			y = 60
@@ -1233,8 +1186,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_202_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_202.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_202.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_202.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_202.png"
 		size = {
 			x = 73
 			y = 40
@@ -1243,8 +1196,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_221_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_221.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_221.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_221.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_221.png"
 		size = {
 			x = 73
 			y = 54
@@ -1253,8 +1206,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_137_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_137.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_137.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_137.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_137.png"
 		size = {
 			x = 49
 			y = 40
@@ -1263,8 +1216,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_192_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_192.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_192.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_192.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_192.png"
 		size = {
 			x = 44
 			y = 37
@@ -1273,8 +1226,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_213_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_213.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_213.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_213.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_213.png"
 		size = {
 			x = 111
 			y = 108
@@ -1283,8 +1236,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_195_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_195.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_195.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_195.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_195.png"
 		size = {
 			x = 92
 			y = 70
@@ -1293,8 +1246,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_219_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_219.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_219.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_219.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_219.png"
 		size = {
 			x = 111
 			y = 110
@@ -1303,8 +1256,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_218_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_218.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_218.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_218.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_218.png"
 		size = {
 			x = 74
 			y = 97
@@ -1313,8 +1266,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_229_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_229.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_229.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_229.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_229.png"
 		size = {
 			x = 88
 			y = 55
@@ -1323,8 +1276,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_232_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_232.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_232.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_232.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_232.png"
 		size = {
 			x = 68
 			y = 51
@@ -1333,8 +1286,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_217_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_217.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_217.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_217.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_217.png"
 		size = {
 			x = 81
 			y = 55
@@ -1343,8 +1296,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_252_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_252.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_252.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_252.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_252.png"
 		size = {
 			x = 122
 			y = 99
@@ -1353,8 +1306,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_651_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_651.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_651.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_651.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_651.png"
 		size = {
 			x = 143
 			y = 146
@@ -1363,8 +1316,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_europe_214_PROGRESSBAR"
-		textureFile1 = "gfx/interface/SLO_parliament/states/europe_214.dds"
-		textureFile2 = "gfx/interface/SLO_parliament/states/europe_214.dds"
+		textureFile1 = "gfx/interface/SLO_parliament/states/europe_214.png"
+		textureFile2 = "gfx/interface/SLO_parliament/states/europe_214.png"
 		size = {
 			x = 133
 			y = 126

@@ -146,7 +146,7 @@ PixelShader =
 				float3 mutedColor = lerp(float3(luminance, luminance, luminance), partyRGBValue, 0.35f);
 				OutColor.rgb  = lerp(mutedColor, partyRGBValue, strength);
 
-				OutColor.rgb *= 1.16f;		//Brighten the map a little bit
+//				OutColor.rgb *= 1.16f;		//Brighten the map a little bit
 			}
 			
 			return OutColor;

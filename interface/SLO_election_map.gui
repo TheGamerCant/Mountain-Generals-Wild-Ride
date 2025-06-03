@@ -30,7 +30,16 @@ guiTypes = {
 #		}
 
 		gridboxtype = {
-			name = "state_button_gridbox"
+			name = "state_progressbar_gridbox"
+			position = { x = 14 y = 14 }
+			size = { width = 828 height = 435 }
+			slotsize = { width = 100% height = 0 }
+			max_slots_horizontal = 1
+			add_horizontal = no
+		}
+
+		gridboxtype = {
+			name = "state_overlay_gridbox"
 			position = { x = 14 y = 14 }
 			size = { width = 828 height = 435 }
 			slotsize = { width = 100% height = 0 }
@@ -52,16 +61,22 @@ guiTypes = {
 	}
 	
 	containerWindowType = {
-		name = "state_button_entry"
+		name = "state_progressbar_entry"
 		position = { x = 0 y = 0 }
 
 		iconType = { 
-			name = "state_button_entry_progressbar"
+			name = "state_progressbar_entry_button"
 			spriteType = ""
 			alwaysTransparent = yes
 		}
+	}
+	
+	containerWindowType = {
+		name = "state_overlay_entry"
+		position = { x = 0 y = 0 }
+
 		buttonType = {
-			name = "state_button_entry_button"
+			name = "state_overlay_entry_button"
 			quadTextureSprite = "GFX_slovakia_70_OVERLAY"
 #			pdx_tooltip_delayed  = "state_button_entry_button_tt"
 		}

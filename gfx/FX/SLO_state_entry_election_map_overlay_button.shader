@@ -51,7 +51,7 @@ PixelShader =
 		{
 			float4 OutColor = tex2D( MapTexture, v.vTexCoord );
 			
-			OutColor.a = 0.0f;
+			OutColor.a *= 0.1;
 			
 			return OutColor;
 		}
@@ -64,10 +64,10 @@ PixelShader =
 		    float4 OutColor = tex2D( MapTexture, v.vTexCoord );
 
 			if (OutColor.a == 1.0f){
-				OutColor.a = 0.48f;
+				OutColor.a = 0.5f;
 			}
-			else if (OutColor.a > 0.0f){
-				OutColor.a *= 2;
+			else if (OutColor.a > 0.2f){
+				OutColor.a *= 1.5;
 			}
 			
 			return OutColor;
@@ -94,9 +94,9 @@ PixelShader =
 		    float4 OutColor = tex2D( MapTexture, v.vTexCoord );
 			
 			if (OutColor.a == 1.0f){
-				OutColor.a = 0.2f;
+				OutColor.a = 0.3f;
 			}
-			else if (OutColor.a > 0.0f){
+			else if (OutColor.a > 0.2f){
 				OutColor.a *= 2;
 			}
 			

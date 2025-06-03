@@ -38,10 +38,15 @@ scripted_gui = {
 		}
 
 		dynamic_lists={
-			state_button_gridbox={
+			state_progressbar_gridbox={
 				array = SLO.election_states
 				change_scope = yes
-				entry_container = state_button_entry
+				entry_container = state_progressbar_entry
+			}
+			state_overlay_gridbox={
+				array = SLO.election_states
+				change_scope = yes
+				entry_container = state_overlay_entry
 			}
 #			
 #			party_national_state_results_gridbox={
@@ -52,13 +57,13 @@ scripted_gui = {
 		}
 		
 		properties={
-			state_button_entry_progressbar={
+			state_progressbar_entry_button={
 				image = "[?THIS.progressbar_token.GetTokenLocalizedKey]"
 				frame = THIS.previous_election_victor_popularity
 				x = THIS.x_pos
 				y = THIS.y_pos
 			}
-			state_button_entry_button={
+			state_overlay_entry_button={
 				image = "[?THIS.overlay_token.GetTokenLocalizedKey]"
 				x = THIS.x_pos
 				y = THIS.y_pos
@@ -69,13 +74,13 @@ scripted_gui = {
 		}
 		
 		effects={
-			state_button_entry_button_click={
+			state_overlay_entry_button_click={
 				if={
-					limit = { check_variable = { POL.POL_electoral_map_selected_state = v } }
-					set_variable = { POL.POL_electoral_map_selected_state = POL }
+					limit = { check_variable = { SLO.SLO_electoral_map_selected_state = v } }
+					set_variable = { SLO.SLO_electoral_map_selected_state = SLO }
 				}
 				else={
-					set_variable = { POL.POL_electoral_map_selected_state = v }
+					set_variable = { SLO.SLO_electoral_map_selected_state = v }
 				}
 			}
 			

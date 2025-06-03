@@ -30,3 +30,8 @@ SLO_initialise_parliament			-> Effect, initialises parliament
 SLO_divide_seats				-> Effect, gets seat counts for each state / subdivision
 SLO_hold_election				-> Effect, holds an election
 SLO_initialise_europe_mechanics			-> Effect, changes election type from Slovakia to Europe
+SLO_get_active_election_states			-> Effect, gets the election_states array if we've formed Europe
+SLO_get_map_positions				-> Effect, gets the x_pos and y_pos variables
+STATE_set_popularities_to_100			-> Effect, sets the state's party popularities to sum to 100
+
+SLO.SLO_electoral_map_selected_state		-> Variable, set to SLO for national results or to <state> for state results in the GUI

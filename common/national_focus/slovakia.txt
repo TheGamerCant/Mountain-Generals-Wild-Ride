@@ -846,7 +846,7 @@ focus_tree = {
 		icon = GFX_goal_SLO_child_soldiers
 		x = 2
 		y = 1
-		cost = 5
+		cost = 4
 		relative_position_id = SLO_expand_the_draft
 		
 		prerequisite = { focus = SLO_expand_the_draft }
@@ -871,6 +871,29 @@ focus_tree = {
 				ideology = ROOT
 				popularity = -0.10
 			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_gypsy_tactics
+		icon = GFX_
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = SLO_child_soldiers
+		
+		prerequisite = { focus = SLO_child_soldiers }
+		
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_army_dm_equipment_capture = 0.05 }
+			custom_effect_tooltip = SLO_gypsy_tactics_tt
 		}
 	}
 	
@@ -907,10 +930,10 @@ focus_tree = {
 		icon = GFX_goal_SLO_fire_of_our_industries
 		x = -1
 		y = 2
-		cost = 10
+		cost = 8
 		relative_position_id = SLO_child_soldiers
 		
-		prerequisite = { focus = SLO_child_soldiers }
+		prerequisite = { focus = SLO_gypsy_tactics }
 		prerequisite = { focus = SLO_mass_mobilisation }
 		prerequisite = { focus = SLO_frontline_officers }
 		
@@ -954,10 +977,10 @@ focus_tree = {
 		icon = GFX_goal_SLO_kamikaze_pilots
 		x = 1
 		y = 2
-		cost = 10
+		cost = 8
 		relative_position_id = SLO_child_soldiers
 		
-		prerequisite = { focus = SLO_child_soldiers }
+		prerequisite = { focus = SLO_gypsy_tactics }
 		prerequisite = { focus = SLO_mass_mobilisation }
 		prerequisite = { focus = SLO_frontline_officers }
 		
@@ -5794,6 +5817,72 @@ focus_tree = {
 	}
 	
 	focus = {	
+		id = SLO_establish_a_constitution
+		icon = GFX_
+		x = -1
+		y = 1
+		cost = 4
+		
+		prerequisite = { focus = SLO_a_shining_city_for_all_to_see }
+		relative_position_id = SLO_a_shining_city_for_all_to_see
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {	
+		id = SLO_emergency_banking_actions
+		icon = GFX_
+		x = 1
+		y = 1
+		cost = 4
+		
+		prerequisite = { focus = SLO_a_shining_city_for_all_to_see }
+		relative_position_id = SLO_a_shining_city_for_all_to_see
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {	
+		id = SLO_hold_an_election
+		icon = GFX_
+		x = 1
+		y = 1
+		cost = 4
+		
+		prerequisite = { focus = SLO_establish_a_constitution focus = SLO_emergency_banking_actions }
+		relative_position_id = SLO_establish_a_constitution
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {	
 		id = SLO_the_workers_paradise
 		icon = GFX_
 		x = 130
@@ -5898,787 +5987,6 @@ focus_tree = {
 			
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SLO_jan_osoha
-		}
-	}
-	
-	
-	
-	
-	
-	
-	focus = {	
-		id = SLO_keynesian_economics
-		icon = GFX_goal_SLO_keynesian_economics
-		x = 118
-		y = 1
-		cost = 5
-		
-		mutually_exclusive = { focus = SLO_the_austrian_school_of_economics }
-		prerequisite = { focus = SLO_a_shining_city_for_all_to_see focus = SLO_the_workers_paradise }
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
-				add_dynamic_modifier = { modifier = SLO_keynsian_economy_dynamic_modifier }
-			}
-			add_to_variable = { SLO_economy_dm_stability_factor = 0.10 }
-			add_to_variable = { SLO_economy_dm_democratic_drift = 0.05 }
-			custom_effect_tooltip = SLO_keynesian_economics_tt
-		}
-	}
-	
-	focus = {	
-		id = SLO_the_austrian_school_of_economics
-		icon = GFX_goal_SLO_the_austrian_school_of_economics
-		x = 112
-		y = 1
-		cost = 5
-		
-		mutually_exclusive = { focus = SLO_keynesian_economics }
-		prerequisite = { focus = SLO_a_shining_city_for_all_to_see }
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
-				add_dynamic_modifier = { modifier = SLO_austrian_economy_dynamic_modifier }
-			}
-			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.05 }
-			add_political_power = 25
-			custom_effect_tooltip = SLO_the_austrian_school_of_economics_tt
-		}
-	}
-	
-	focus = {	
-		id = SLO_government_controlled_central_bank
-		icon = GFX_
-		x = -2
-		y = 3
-		cost = 5
-		
-		relative_position_id = SLO_keynesian_economics
-		prerequisite = { focus = SLO_keynesian_economics focus = SLO_the_austrian_school_of_economics }
-
-		mutually_exclusive = {
-			focus = SLO_an_independent_central_bank
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {	
-		id = SLO_an_independent_central_bank
-		icon = GFX_
-		x = -4
-		y = 3
-		cost = 5
-		
-		relative_position_id = SLO_keynesian_economics
-		prerequisite = {
-			focus = SLO_keynesian_economics
-			focus = SLO_the_austrian_school_of_economics
-		}
-
-		mutually_exclusive = {
-			focus = SLO_government_controlled_central_bank
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {	
-		id = SLO_cut_bureaucratic_red_tape
-		icon = GFX_goal_SLO_cut_bureaucratic_red_tape
-		x = -3
-		y = 2
-		cost = 10
-		
-		relative_position_id = SLO_keynesian_economics
-		prerequisite = {
-			focus = SLO_keynesian_economics
-			focus = SLO_the_austrian_school_of_economics
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-			add_to_variable = { SLO_economy_dm_political_power_cost = -0.20 }
-			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.10 }
-			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.05 }
-			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.05 }
-			custom_effect_tooltip = SLO_cut_bureaucratic_red_tape_tt
-		}
-	}
-	
-	focus = {	
-		id = SLO_strategc_resource_reserves
-		icon = GFX_
-		x = -1
-		y = 1
-		cost = 5
-		
-		relative_position_id = SLO_government_controlled_central_bank
-		prerequisite = {
-			focus = SLO_government_controlled_central_bank
-			focus = SLO_an_independent_central_bank
-		}
-		prerequisite = {
-			focus = SLO_cut_bureaucratic_red_tape
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {	
-		id = SLO_prioritise_domestic_arms_needs
-		icon = GFX_
-		x = 1
-		y = 1
-		cost = 5
-		
-		relative_position_id = SLO_strategc_resource_reserves
-		prerequisite = {
-			focus = SLO_strategc_resource_reserves
-		}
-		mutually_exclusive = {
-			focus = SLO_foreign_contracts
-		}
-		
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {	
-		id = SLO_foreign_contracts
-		icon = GFX_
-		x = -1
-		y = 1
-		cost = 5
-		
-		relative_position_id = SLO_strategc_resource_reserves
-		prerequisite = {
-			focus = SLO_strategc_resource_reserves
-		}
-		mutually_exclusive = {
-			focus = SLO_prioritise_domestic_arms_needs
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {	
-		id = SLO_carpathian_tourism
-		icon = GFX_focus_SMB_a_land_of_mountains
-		x = -5
-		y = 2
-		cost = 5
-		
-		relative_position_id = SLO_keynesian_economics
-		prerequisite = {
-			focus = SLO_keynesian_economics
-			focus = SLO_the_austrian_school_of_economics
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.05 }
-			custom_effect_tooltip = SLO_carpathian_tourism_tt
-			add_political_power = 50
-		}
-	}
-	
-	focus = {	
-		id = SLO_expand_the_university_of_bratislava
-		icon = GFX_focus_research
-		x = -1
-		y = 2
-		cost = 10
-		
-		relative_position_id = SLO_keynesian_economics
-		prerequisite = {
-			focus = SLO_keynesian_economics
-			focus = SLO_the_austrian_school_of_economics
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {	
-		id = SLO_strengthen_the_social_safety_net
-		icon = GFX_
-		x = 0
-		y = 1
-		cost = 5
-		
-		relative_position_id = SLO_keynesian_economics
-		prerequisite = {
-			focus = SLO_keynesian_economics
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {	
-		id = SLO_mining_subsides
-		icon = GFX_
-		x = 2
-		y = 1
-		cost = 5
-		
-		relative_position_id = SLO_keynesian_economics
-		prerequisite = {
-			focus = SLO_keynesian_economics
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {	
-		id = SLO_funding_of_social_services
-		icon = GFX_
-		x = 0
-		y = 2
-		cost = 5
-		
-		relative_position_id = SLO_strengthen_the_social_safety_net
-		prerequisite = {
-			focus = SLO_strengthen_the_social_safety_net
-		}
-
-		prerequisite = {
-			focus = SLO_expand_the_university_of_bratislava
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {	
-		id = SLO_acquiring_investments
-		icon = GFX_
-		x = 3
-		y = 2
-		cost = 5
-		
-		relative_position_id = SLO_keynesian_economics
-		prerequisite = {
-			focus = SLO_keynesian_economics
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {	
-		id = SLO_prioritisation_of_infrastructure
-		icon = GFX_
-		x = -1
-		y = 1
-		cost = 5
-		
-		relative_position_id = SLO_acquiring_investments
-		prerequisite = {
-			focus = SLO_acquiring_investments
-		}
-		mutually_exclusive = {
-			focus = SLO_prioritisation_of_industry
-		}
-		
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {	
-		id = SLO_slovakian_highways
-		icon = GFX_
-		x = 0
-		y = 1
-		cost = 5
-		
-		relative_position_id = SLO_prioritisation_of_infrastructure
-		prerequisite = {
-			focus = SLO_prioritisation_of_infrastructure
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {	
-		id = SLO_prioritisation_of_industry
-		icon = GFX_
-		x = 1
-		y = 1
-		cost = 5
-		
-		relative_position_id = SLO_acquiring_investments
-		prerequisite = {
-			focus = SLO_acquiring_investments
-		}
-		mutually_exclusive = {
-			focus = SLO_prioritisation_of_infrastructure
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {	
-		id = SLO_eastern_factories
-		icon = GFX_
-		x = 0
-		y = 1
-		cost = 5
-		
-		relative_position_id = SLO_prioritisation_of_industry
-		prerequisite = {
-			focus = SLO_prioritisation_of_industry
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-
-	
-	focus = {	
-		id = SLO_tie_the_koruna_to_the_gold_standard
-		icon = GFX_focus_usa_reestablish_the_gold_standard
-		x = 0
-		y = 1
-		cost = 5
-		
-		relative_position_id = SLO_the_austrian_school_of_economics
-		prerequisite = {
-			focus = SLO_the_austrian_school_of_economics
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-			add_to_variable = { SLO_economy_dm_stability_factor = 0.10 }
-			add_to_variable = { SLO_economy_dm_economy_cost_factor = 0.40 }
-			add_to_variable = { SLO_economy_dm_trade_laws_cost_factor = 0.40 }
-			custom_effect_tooltip = SLO_tie_the_koruna_to_the_gold_standard_tt
-		}
-	}
-	
-	focus = {	
-		id = SLO_privatisation_of_government_assets
-		icon = GFX_focus_mex_privatisation
-		x = -4
-		y = 1
-		cost = 10
-		
-		relative_position_id = SLO_the_austrian_school_of_economics
-		prerequisite = {
-			focus = SLO_the_austrian_school_of_economics
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-			every_core_state = {
-				limit = {
-					is_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_timed_idea = { idea = SLO_privatisation_of_government_assets_idea days = 1460 }
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_to_variable = { SLO_economy_dm_stability_factor = -0.10 }
-			add_to_variable = { SLO_economy_dm_min_export = 0.10 }
-			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.03 }
-			custom_effect_tooltip = SLO_privatisation_of_government_assets_tt
-		}
-	}
-	
-	focus = {	
-		id = SLO_promote_union_activities
-		icon = GFX_focus_generic_full_employment
-		x = -3
-		y = 2
-		cost = 5
-		
-		relative_position_id = SLO_the_austrian_school_of_economics
-		prerequisite = {
-			focus = SLO_the_austrian_school_of_economics
-		}
-		mutually_exclusive = {
-			focus = SLO_union_busting
-		}
-		
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-			add_to_variable = { SLO_economy_dm_political_power_cost = 0.2 }
-			add_to_variable = { SLO_economy_dm_democratic_drift = 0.05 }
-			add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.15 }
-			custom_effect_tooltip = SLO_promote_union_activities_tt
-		}
-	}
-	
-	focus = {	
-		id = SLO_union_busting
-		icon = GFX_focus_CZE_german_puppet
-		x = -1
-		y = 1
-		cost = 5
-		
-		relative_position_id = SLO_privatisation_of_government_assets
-		prerequisite = {
-			focus = SLO_privatisation_of_government_assets
-		}
-		mutually_exclusive = {
-			focus = SLO_promote_union_activities
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.15 }
-			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.15 }
-			add_to_variable = { SLO_economy_dm_stability_weekly = -0.001 }
-			add_to_variable = { SLO_economy_dm_stability_factor= -0.10 }
-			custom_effect_tooltip = SLO_union_busting_tt
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_political_power = 100
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.10
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.10
-			}
-			
-		}
-	}
-	
-	focus = {	
-		id = SLO_take_money_out_of_circulation
-		icon = GFX_focus_generic_printing_press
-		x = 0
-		y = 2
-		cost = 5
-		
-		relative_position_id = SLO_tie_the_koruna_to_the_gold_standard
-		prerequisite = {
-			focus = SLO_tie_the_koruna_to_the_gold_standard
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {	
-		id = SLO_reduce_tariffs
-		icon = GFX_focus_generic_treaty
-		x = -1
-		y = 1
-		cost = 5
-		
-		relative_position_id = SLO_tie_the_koruna_to_the_gold_standard
-		prerequisite = {
-			focus = SLO_tie_the_koruna_to_the_gold_standard
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-			add_to_variable = { SLO_economy_dm_resource_trade_cost_bonus_per_factory = 2 }
-			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.10 }
-			add_to_variable = { SLO_economy_dm_stability_factor = -0.05 }
-			add_to_variable = { SLO_economy_dm_trade_opinion_factor = 0.25 }
-			custom_effect_tooltip = SLO_reduce_tariffs_tt
-		}
-	}
-	
-	focus = {	
-		id = SLO_deregulation_of_the_markets
-		icon = GFX_focus_generic_improve_the_administration
-		x = -2
-		y = 1
-		cost = 10
-		
-		relative_position_id = SLO_the_austrian_school_of_economics
-		prerequisite = {
-			focus = SLO_the_austrian_school_of_economics
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-			every_core_state = {
-				limit = {
-					is_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				random_select_amount = 1
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			every_core_state = {
-				limit = {
-					is_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				random_select_amount = 5
-				add_extra_state_shared_building_slots = 1
-			}
-			
-			add_to_variable = { SLO_economy_dm_stability_factor = -0.05 }
-			add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.12 }
-			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.06 }
-			custom_effect_tooltip = SLO_deregulation_of_the_markets_tt
-		}
-	}
-	
-	focus = {	
-		id = SLO_easy_business_permits
-		icon = GFX_
-		x = 0
-		y = 2
-		cost = 5
-		
-		relative_position_id = SLO_deregulation_of_the_markets
-		prerequisite = {
-			focus = SLO_deregulation_of_the_markets
-		}
-		prerequisite = {
-			focus = SLO_reduce_tariffs
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {	
-		id = SLO_reduce_taxes
-		icon = GFX_
-		x = -2
-		y = 1
-		cost = 5
-		
-		relative_position_id = SLO_easy_business_permits
-		prerequisite = {
-			focus = SLO_easy_business_permits
-		}
-		prerequisite = {
-			focus = SLO_promote_union_activities
-			focus = SLO_union_busting
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		completion_reward = {
 		}
 	}
 }

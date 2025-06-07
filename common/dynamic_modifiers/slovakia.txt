@@ -130,6 +130,7 @@ SLO_army_an_army_of_scale_dynamic_modifier = {
 	land_reinforce_rate = SLO_army_dm_land_reinforce_rate
 	army_morale_factor = SLO_army_dm_army_morale_factor
 	army_strength_factor = SLO_army_dm_army_strength_factor
+	equipment_capture = SLO_army_dm_equipment_capture 
 	
 	
 	custom_modifier_tooltip = SLO_army_dynamic_modifier_tooltip

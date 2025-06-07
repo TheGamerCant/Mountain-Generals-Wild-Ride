@@ -104,334 +104,558 @@ ideas ={
 	
 		
 		#Elections
+		SLO_communist_party_long_no_colour_LANG_SLO_idea = {}
+		SLO_communist_party_long_coloured_LANG_SLO_idea = {}
+		SLO_communist_party_short_no_colour_LANG_SLO_idea = {}
+		SLO_communist_party_short_coloured_LANG_SLO_idea = {}
+		
+		SLO_communist_party_long_no_colour_LANG_ENG_idea = {}
+		SLO_communist_party_long_coloured_LANG_ENG_idea = {}
+		SLO_communist_party_short_no_colour_LANG_ENG_idea = {}
+		SLO_communist_party_short_coloured_LANG_ENG_idea = {}
+		
+		EUROPE_communist_party_long_no_colour_LANG_SLO_idea = {}
+		EUROPE_communist_party_long_coloured_LANG_SLO_idea = {}
+		EUROPE_communist_party_short_no_colour_LANG_SLO_idea = {}
+		EUROPE_communist_party_short_coloured_LANG_SLO_idea = {}
+		
+		EUROPE_communist_party_long_no_colour_LANG_ENG_idea = {}
+		EUROPE_communist_party_long_coloured_LANG_ENG_idea = {}
+		EUROPE_communist_party_short_no_colour_LANG_ENG_idea = {}
+		EUROPE_communist_party_short_coloured_LANG_ENG_idea = {}
+		
+		SLO_soc_dem_party_long_no_colour_LANG_SLO_idea = {}
+		SLO_soc_dem_party_long_coloured_LANG_SLO_idea = {}
+		SLO_soc_dem_party_short_no_colour_LANG_SLO_idea = {}
+		SLO_soc_dem_party_short_coloured_LANG_SLO_idea = {}
+		
+		SLO_soc_dem_party_long_no_colour_LANG_ENG_idea = {}
+		SLO_soc_dem_party_long_coloured_LANG_ENG_idea = {}
+		SLO_soc_dem_party_short_no_colour_LANG_ENG_idea = {}
+		SLO_soc_dem_party_short_coloured_LANG_ENG_idea = {}
+		
+		EUROPE_soc_dem_party_long_no_colour_LANG_SLO_idea = {}
+		EUROPE_soc_dem_party_long_coloured_LANG_SLO_idea = {}
+		EUROPE_soc_dem_party_short_no_colour_LANG_SLO_idea = {}
+		EUROPE_soc_dem_party_short_coloured_LANG_SLO_idea = {}
+		
+		EUROPE_soc_dem_party_long_no_colour_LANG_ENG_idea = {}
+		EUROPE_soc_dem_party_long_coloured_LANG_ENG_idea = {}
+		EUROPE_soc_dem_party_short_no_colour_LANG_ENG_idea = {}
+		EUROPE_soc_dem_party_short_coloured_LANG_ENG_idea = {}
+		
+		SLO_liberal_party_long_no_colour_LANG_SLO_idea = {}
+		SLO_liberal_party_long_coloured_LANG_SLO_idea = {}
+		SLO_liberal_party_short_no_colour_LANG_SLO_idea = {}
+		SLO_liberal_party_short_coloured_LANG_SLO_idea = {}
+		
+		SLO_liberal_party_long_no_colour_LANG_ENG_idea = {}
+		SLO_liberal_party_long_coloured_LANG_ENG_idea = {}
+		SLO_liberal_party_short_no_colour_LANG_ENG_idea = {}
+		SLO_liberal_party_short_coloured_LANG_ENG_idea = {}
+		
+		EUROPE_liberal_party_long_no_colour_LANG_SLO_idea = {}
+		EUROPE_liberal_party_long_coloured_LANG_SLO_idea = {}
+		EUROPE_liberal_party_short_no_colour_LANG_SLO_idea = {}
+		EUROPE_liberal_party_short_coloured_LANG_SLO_idea = {}
+		
+		EUROPE_liberal_party_long_no_colour_LANG_ENG_idea = {}
+		EUROPE_liberal_party_long_coloured_LANG_ENG_idea = {}
+		EUROPE_liberal_party_short_no_colour_LANG_ENG_idea = {}
+		EUROPE_liberal_party_short_coloured_LANG_ENG_idea = {}
+		
+		SLO_conservative_party_long_no_colour_LANG_SLO_idea = {}
+		SLO_conservative_party_long_coloured_LANG_SLO_idea = {}
+		SLO_conservative_party_short_no_colour_LANG_SLO_idea = {}
+		SLO_conservative_party_short_coloured_LANG_SLO_idea = {}
+		
+		SLO_conservative_party_long_no_colour_LANG_ENG_idea = {}
+		SLO_conservative_party_long_coloured_LANG_ENG_idea = {}
+		SLO_conservative_party_short_no_colour_LANG_ENG_idea = {}
+		SLO_conservative_party_short_coloured_LANG_ENG_idea = {}
+		
+		EUROPE_conservative_party_long_no_colour_LANG_SLO_idea = {}
+		EUROPE_conservative_party_long_coloured_LANG_SLO_idea = {}
+		EUROPE_conservative_party_short_no_colour_LANG_SLO_idea = {}
+		EUROPE_conservative_party_short_coloured_LANG_SLO_idea = {}
+		
+		EUROPE_conservative_party_long_no_colour_LANG_ENG_idea = {}
+		EUROPE_conservative_party_long_coloured_LANG_ENG_idea = {}
+		EUROPE_conservative_party_short_no_colour_LANG_ENG_idea = {}
+		EUROPE_conservative_party_short_coloured_LANG_ENG_idea = {}
+		
+		SLO_nationalist_party_long_no_colour_LANG_SLO_idea = {}
+		SLO_nationalist_party_long_coloured_LANG_SLO_idea = {}
+		SLO_nationalist_party_short_no_colour_LANG_SLO_idea = {}
+		SLO_nationalist_party_short_coloured_LANG_SLO_idea = {}
+		
+		SLO_nationalist_party_long_no_colour_LANG_ENG_idea = {}
+		SLO_nationalist_party_long_coloured_LANG_ENG_idea = {}
+		SLO_nationalist_party_short_no_colour_LANG_ENG_idea = {}
+		SLO_nationalist_party_short_coloured_LANG_ENG_idea = {}
+		
+		EUROPE_nationalist_party_long_no_colour_LANG_SLO_idea = {}
+		EUROPE_nationalist_party_long_coloured_LANG_SLO_idea = {}
+		EUROPE_nationalist_party_short_no_colour_LANG_SLO_idea = {}
+		EUROPE_nationalist_party_short_coloured_LANG_SLO_idea = {}
+		
+		EUROPE_nationalist_party_long_no_colour_LANG_ENG_idea = {}
+		EUROPE_nationalist_party_long_coloured_LANG_ENG_idea = {}
+		EUROPE_nationalist_party_short_no_colour_LANG_ENG_idea = {}
+		EUROPE_nationalist_party_short_coloured_LANG_ENG_idea = {}
+		
+		SLO_fascist_party_long_no_colour_LANG_SLO_idea = {}
+		SLO_fascist_party_long_coloured_LANG_SLO_idea = {}
+		SLO_fascist_party_short_no_colour_LANG_SLO_idea = {}
+		SLO_fascist_party_short_coloured_LANG_SLO_idea = {}
+		
+		SLO_fascist_party_long_no_colour_LANG_ENG_idea = {}
+		SLO_fascist_party_long_coloured_LANG_ENG_idea = {}
+		SLO_fascist_party_short_no_colour_LANG_ENG_idea = {}
+		SLO_fascist_party_short_coloured_LANG_ENG_idea = {}
+		
+		EUROPE_fascist_party_long_no_colour_LANG_SLO_idea = {}
+		EUROPE_fascist_party_long_coloured_LANG_SLO_idea = {}
+		EUROPE_fascist_party_short_no_colour_LANG_SLO_idea = {}
+		EUROPE_fascist_party_short_coloured_LANG_SLO_idea = {}
+		
+		EUROPE_fascist_party_long_no_colour_LANG_ENG_idea = {}
+		EUROPE_fascist_party_long_coloured_LANG_ENG_idea = {}
+		EUROPE_fascist_party_short_no_colour_LANG_ENG_idea = {}
+		EUROPE_fascist_party_short_coloured_LANG_ENG_idea = {}
+		
+		SLO_non_aligned_other_party_long_no_colour_LANG_SLO_idea = {}
+		SLO_non_aligned_other_party_long_coloured_LANG_SLO_idea = {}
+		SLO_non_aligned_other_party_short_no_colour_LANG_SLO_idea = {}
+		SLO_non_aligned_other_party_short_coloured_LANG_SLO_idea = {}
+		
+		SLO_non_aligned_other_party_long_no_colour_LANG_ENG_idea = {}
+		SLO_non_aligned_other_party_long_coloured_LANG_ENG_idea = {}
+		SLO_non_aligned_other_party_short_no_colour_LANG_ENG_idea = {}
+		SLO_non_aligned_other_party_short_coloured_LANG_ENG_idea = {}
+		
+		EUROPE_non_aligned_other_party_long_no_colour_LANG_SLO_idea = {}
+		EUROPE_non_aligned_other_party_long_coloured_LANG_SLO_idea = {}
+		EUROPE_non_aligned_other_party_short_no_colour_LANG_SLO_idea = {}
+		EUROPE_non_aligned_other_party_short_coloured_LANG_SLO_idea = {}
+		
+		EUROPE_non_aligned_other_party_long_no_colour_LANG_ENG_idea = {}
+		EUROPE_non_aligned_other_party_long_coloured_LANG_ENG_idea = {}
+		EUROPE_non_aligned_other_party_short_no_colour_LANG_ENG_idea = {}
+		EUROPE_non_aligned_other_party_short_coloured_LANG_ENG_idea = {}
+		
+		
+		
 		SLO_GFX_elections_slovakia_70_OVERLAY_idea = {}
-		SLO_GFX_elections_slovakia_70_PROGESSBAR_idea {}
-		SLO_NAME_elections_slovakia_70_idea = {}
+		SLO_GFX_elections_slovakia_70_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_slovakia_70_LANG_SLO_idea = {}
+		SLO_NAME_elections_slovakia_70_LANG_ENG_idea = {}
 		
 		SLO_GFX_elections_slovakia_71_OVERLAY_idea = {}
-		SLO_GFX_elections_slovakia_71_PROGESSBAR_idea {}
-		SLO_NAME_elections_slovakia_71_idea = {}
+		SLO_GFX_elections_slovakia_71_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_slovakia_71_LANG_SLO_idea = {}
+		SLO_NAME_elections_slovakia_71_LANG_ENG_idea = {}
 		
 		SLO_GFX_elections_slovakia_73_OVERLAY_idea = {}
-		SLO_GFX_elections_slovakia_73_PROGESSBAR_idea {}
-		SLO_NAME_elections_slovakia_73_idea = {}
+		SLO_GFX_elections_slovakia_73_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_slovakia_73_LANG_SLO_idea = {}
+		SLO_NAME_elections_slovakia_73_LANG_ENG_idea = {}
 		
 		SLO_GFX_elections_slovakia_664_OVERLAY_idea = {}
-		SLO_GFX_elections_slovakia_664_PROGESSBAR_idea {}
-		SLO_NAME_elections_slovakia_664_idea = {}
+		SLO_GFX_elections_slovakia_664_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_slovakia_664_LANG_SLO_idea = {}
+		SLO_NAME_elections_slovakia_664_LANG_ENG_idea = {}
 		
 		
 		
 		SLO_GFX_elections_europe_100_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_100_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_100_idea = {}
-		
+		SLO_GFX_elections_europe_100_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_100_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_100_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_178_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_178_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_178_idea = {}
-		
+		SLO_GFX_elections_europe_178_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_178_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_178_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_121_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_121_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_121_idea = {}
-		
+		SLO_GFX_elections_europe_121_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_121_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_121_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_113_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_113_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_113_idea = {}
-		
+		SLO_GFX_elections_europe_113_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_113_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_113_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_132_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_132_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_132_idea = {}
-		
+		SLO_GFX_elections_europe_132_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_132_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_132_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_128_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_128_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_128_idea = {}
-		
+		SLO_GFX_elections_europe_128_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_128_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_128_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_126_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_126_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_126_idea = {}
-		
+		SLO_GFX_elections_europe_126_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_126_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_126_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_37_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_37_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_37_idea = {}
-		
+		SLO_GFX_elections_europe_37_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_37_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_37_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_7_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_7_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_7_idea = {}
-		
+		SLO_GFX_elections_europe_7_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_7_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_7_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_112_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_112_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_112_idea = {}
-		
+		SLO_GFX_elections_europe_112_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_112_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_112_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_118_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_118_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_118_idea = {}
-		
+		SLO_GFX_elections_europe_118_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_118_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_118_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_165_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_165_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_165_idea = {}
-		
+		SLO_GFX_elections_europe_165_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_165_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_165_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_41_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_41_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_41_idea = {}
-		
+		SLO_GFX_elections_europe_41_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_41_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_41_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_171_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_171_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_171_idea = {}
-		
+		SLO_GFX_elections_europe_171_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_171_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_171_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_792_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_792_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_792_idea = {}
-		
+		SLO_GFX_elections_europe_792_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_792_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_792_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_19_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_19_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_19_idea = {}
-		
+		SLO_GFX_elections_europe_19_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_19_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_19_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_16_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_16_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_16_idea = {}
-		
+		SLO_GFX_elections_europe_16_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_16_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_16_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_28_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_28_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_28_idea = {}
-		
+		SLO_GFX_elections_europe_28_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_28_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_28_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_31_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_31_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_31_idea = {}
-		
+		SLO_GFX_elections_europe_31_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_31_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_31_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_20_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_20_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_20_idea = {}
-		
+		SLO_GFX_elections_europe_20_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_20_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_20_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_51_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_51_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_51_idea = {}
-		
+		SLO_GFX_elections_europe_51_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_51_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_51_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_50_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_50_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_50_idea = {}
-		
+		SLO_GFX_elections_europe_50_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_50_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_50_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_52_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_52_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_52_idea = {}
-		
+		SLO_GFX_elections_europe_52_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_52_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_52_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_58_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_58_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_58_idea = {}
-		
+		SLO_GFX_elections_europe_58_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_58_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_58_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_64_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_64_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_64_idea = {}
-		
+		SLO_GFX_elections_europe_64_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_64_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_64_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_63_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_63_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_63_idea = {}
-		
+		SLO_GFX_elections_europe_63_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_63_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_63_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_66_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_66_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_66_idea = {}
-		
+		SLO_GFX_elections_europe_66_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_66_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_66_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_9_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_9_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_9_idea = {}
-		
+		SLO_GFX_elections_europe_9_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_9_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_9_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_69_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_69_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_69_idea = {}
-		
+		SLO_GFX_elections_europe_69_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_69_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_69_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_70_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_70_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_70_idea = {}
-		
+		SLO_GFX_elections_europe_70_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_70_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_70_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_3_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_3_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_3_idea = {}
-		
+		SLO_GFX_elections_europe_3_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_3_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_3_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_4_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_4_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_4_idea = {}
-		
+		SLO_GFX_elections_europe_4_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_4_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_4_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_159_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_159_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_159_idea = {}
-		
+		SLO_GFX_elections_europe_159_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_159_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_159_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_2_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_2_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_2_idea = {}
-		
+		SLO_GFX_elections_europe_2_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_2_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_2_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_117_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_117_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_117_idea = {}
-		
+		SLO_GFX_elections_europe_117_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_117_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_117_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_43_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_43_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_43_idea = {}
-		
+		SLO_GFX_elections_europe_43_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_43_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_43_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_102_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_102_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_102_idea = {}
-		
+		SLO_GFX_elections_europe_102_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_102_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_102_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_10_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_10_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_10_idea = {}
-		
+		SLO_GFX_elections_europe_10_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_10_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_10_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_88_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_88_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_88_idea = {}
-		
+		SLO_GFX_elections_europe_88_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_88_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_88_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_763_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_763_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_763_idea = {}
-		
+		SLO_GFX_elections_europe_763_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_763_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_763_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_784_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_784_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_784_idea = {}
-		
+		SLO_GFX_elections_europe_784_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_784_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_784_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_808_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_808_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_808_idea = {}
-		
+		SLO_GFX_elections_europe_808_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_808_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_808_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_812_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_812_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_812_idea = {}
-		
+		SLO_GFX_elections_europe_812_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_812_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_812_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_109_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_109_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_109_idea = {}
-		
+		SLO_GFX_elections_europe_109_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_109_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_109_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_104_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_104_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_104_idea = {}
-		
+		SLO_GFX_elections_europe_104_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_104_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_104_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_107_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_107_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_107_idea = {}
-		
+		SLO_GFX_elections_europe_107_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_107_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_107_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_44_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_44_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_44_idea = {}
-		
+		SLO_GFX_elections_europe_44_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_44_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_44_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_731_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_731_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_731_idea = {}
-		
+		SLO_GFX_elections_europe_731_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_731_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_731_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_47_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_47_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_47_idea = {}
-		
+		SLO_GFX_elections_europe_47_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_47_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_47_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_48_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_48_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_48_idea = {}
-		
+		SLO_GFX_elections_europe_48_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_48_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_48_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_46_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_46_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_46_idea = {}
-		
+		SLO_GFX_elections_europe_46_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_46_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_46_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_971_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_971_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_971_idea = {}
-		
+		SLO_GFX_elections_europe_971_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_971_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_971_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_76_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_76_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_76_idea = {}
-		
+		SLO_GFX_elections_europe_76_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_76_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_76_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_79_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_79_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_79_idea = {}
-		
+		SLO_GFX_elections_europe_79_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_79_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_79_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_110_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_110_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_110_idea = {}
-		
+		SLO_GFX_elections_europe_110_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_110_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_110_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_141_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_141_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_141_idea = {}
-		
+		SLO_GFX_elections_europe_141_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_141_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_141_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_38_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_38_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_38_idea = {}
-		
+		SLO_GFX_elections_europe_38_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_38_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_38_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_111_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_111_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_111_idea = {}
-		
+		SLO_GFX_elections_europe_111_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_111_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_111_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_666_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_666_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_666_idea = {}
-		
+		SLO_GFX_elections_europe_666_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_666_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_666_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_797_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_797_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_797_idea = {}
-		
+		SLO_GFX_elections_europe_797_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_797_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_797_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_344_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_344_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_344_idea = {}
-		
+		SLO_GFX_elections_europe_344_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_344_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_344_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_49_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_49_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_49_idea = {}
-		
+		SLO_GFX_elections_europe_49_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_49_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_49_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_800_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_800_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_800_idea = {}
-		
+		SLO_GFX_elections_europe_800_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_800_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_800_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_206_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_206_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_206_idea = {}
-		
+		SLO_GFX_elections_europe_206_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_206_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_206_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_202_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_202_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_202_idea = {}
-		
+		SLO_GFX_elections_europe_202_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_202_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_202_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_221_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_221_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_221_idea = {}
-		
+		SLO_GFX_elections_europe_221_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_221_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_221_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_137_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_137_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_137_idea = {}
-		
+		SLO_GFX_elections_europe_137_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_137_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_137_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_192_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_192_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_192_idea = {}
-		
+		SLO_GFX_elections_europe_192_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_192_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_192_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_213_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_213_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_213_idea = {}
-		
+		SLO_GFX_elections_europe_213_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_213_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_213_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_195_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_195_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_195_idea = {}
-		
+		SLO_GFX_elections_europe_195_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_195_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_195_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_219_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_219_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_219_idea = {}
-		
+		SLO_GFX_elections_europe_219_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_219_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_219_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_218_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_218_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_218_idea = {}
-		
+		SLO_GFX_elections_europe_218_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_218_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_218_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_229_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_229_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_229_idea = {}
-		
+		SLO_GFX_elections_europe_229_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_229_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_229_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_232_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_232_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_232_idea = {}
-		
+		SLO_GFX_elections_europe_232_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_232_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_232_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_217_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_217_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_217_idea = {}
-		
+		SLO_GFX_elections_europe_217_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_217_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_217_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_252_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_252_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_252_idea = {}
-		
+		SLO_GFX_elections_europe_252_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_252_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_252_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_651_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_651_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_651_idea = {}
-		
+		SLO_GFX_elections_europe_651_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_651_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_651_LANG_ENG_idea = {}
+
 		SLO_GFX_elections_europe_214_OVERLAY_idea = {}
-		SLO_GFX_elections_europe_214_PROGESSBAR_idea {}
-		SLO_NAME_elections_europe_214_idea = {}
+		SLO_GFX_elections_europe_214_PROGRESSBAR_idea = {}
+		SLO_NAME_elections_europe_214_LANG_SLO_idea = {}
+		SLO_NAME_elections_europe_214_LANG_ENG_idea = {}
 	}
 }

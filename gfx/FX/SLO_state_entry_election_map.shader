@@ -93,8 +93,8 @@ PixelShader =
 				int CurrentStateInt = (int)(CurrentState * 100);
 				
 				//Get winning party and margin of victory
-				int victoriousParty = CurrentStateInt / 10;
-				float marginOfVictory = CurrentStateInt % 10;
+				int victoriousParty = CurrentStateInt / 14;
+				float marginOfVictory = CurrentStateInt % 14;
 				
 				float3 partyRGBValue;
 				
@@ -106,23 +106,26 @@ PixelShader =
 						break;
 						
 					case 1: 	//SocDem
-						partyRGBValue = float3(1.0f, 0.235294f, 0.0549f);
-						//RGB: 255, 60, 14
+						partyRGBValue = float3(0.745098f, 0.0f, 0.258824f);
+						//RGB: 190, 0, 66
 						break;
 						
 					case 2: 	//Liberal
-						partyRGBValue = float3(1.0f, 0.933334f, 0.0f);
-						//RGB: 255, 238, 0
+//						partyRGBValue = float3(1.0f, 0.933334f, 0.0f);
+//						//RGB: 255, 238, 0
+						
+						partyRGBValue = float3(0.807843f, 0.74117647f, 0.02745098f);
+						//RGB: 206, 189, 7
 						break;
 						
 					case 3: 	//Agrarian / Conservative
-						partyRGBValue = float3(0.1490196f, 0.7137255f, 0.0f);
-						//RGB: 38, 182, 0
+						partyRGBValue = float3(0.0f, 0.1490196f, 0.7294118f);
+						//RGB: 0, 38, 186
 						break;
 						
 					case 4: 	//Nationalist
-						partyRGBValue = float3(0.0f, 0.1490196f, 0.7294118f);
-						//RGB: 0, 38, 186
+						partyRGBValue = float3(0.1098039f, 0.1098039f, 0.1098039f);
+						//RGB: 28, 28, 28
 						break;
 						
 					case 5: 	//Fascist
@@ -136,17 +139,15 @@ PixelShader =
 						break;
 				}
 				
-				//marginOfVictory -> Between 0-9, representing the scale of victory in 3% increments.
-				//0 = x<3, 1 = 3<x<6, etc.
+				//marginOfVictory -> Between 0-13, representing the scale of victory in 2% increments.
+				//0 = x<2, 1 = 2<x<4, etc.
 				
-				float strength = saturate(marginOfVictory / 9.0f);
-				float luminance = dot(partyRGBValue, float3(0.299f, 0.587f, 0.114f));
+				float strength = saturate(marginOfVictory / 13.0f);
+				float luminance = dot(partyRGBValue, float3(0.8f, 0.8f, 0.8f));
 				
-				//																				Lower value = more grey, higher = more colour 
-				float3 mutedColor = lerp(float3(luminance, luminance, luminance), partyRGBValue, 0.35f);
+				//																		Lower value = more grey, higher = more colour 
+				float3 mutedColor = lerp(float3(luminance, luminance, luminance), partyRGBValue, 0.50f);
 				OutColor.rgb  = lerp(mutedColor, partyRGBValue, strength);
-
-//				OutColor.rgb *= 1.16f;		//Brighten the map a little bit
 			}
 			
 			return OutColor;

@@ -132,3 +132,164 @@ defined_text = {
 		localization_key = ""
 	}
 }
+
+defined_text = {
+	name = ElectionMapTTDelayed
+	text = {
+		localization_key = "ElectionMapTTDelayed_loc"
+	}
+}
+defined_text = {
+	name = ElectionMapGetSelectedName
+	text = {
+		trigger = {
+			check_variable = { SLO.SLO_electoral_map_selected_state = SLO }
+		}
+		localization_key = "[SLO.GetName]"
+	}
+	text = {
+		localization_key = "SLO_election_map_state_selected_loc"
+	}
+}
+defined_text = {
+	name = ElectionMapGetSelectedDesc
+	text = {
+		trigger = {
+			set_temp_variable = { winner = SLO.SLO_electoral_map_selected_state:previous_election_position_party^0 }
+			set_temp_variable = { runner_up = SLO.SLO_electoral_map_selected_state:previous_election_position_party^1 }
+			
+			check_variable = { SLO.SLO_electoral_map_selected_state = SLO }
+		}
+		localization_key = "SLO_election_map_slovakia_selected_desc_loc"
+	}
+	text = {
+
+		localization_key = "SLO_election_map_state_selected_desc_loc"
+	}
+}
+
+defined_text = {
+	name = GetVoteCountLoc
+	text = {
+		trigger = {
+			set_temp_variable = { vote_count = SLO.SLO_electoral_map_selected_state:previous_election_votes^v }
+			
+			set_temp_variable = { votes_r_1 = vote_count }
+			set_temp_variable = { no_dp = vote_count }
+			divide_temp_variable = { no_dp = 1000 }
+			multiply_temp_variable = { no_dp = 1000 }
+			
+			subtract_from_temp_variable = { votes_r_1 = no_dp }
+			multiply_temp_variable = { votes_r_1 = 1000 }
+			modulo_temp_variable = { votes_r_1 = 10 }
+			
+			check_variable = { var = vote_count value = 0.010 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_1_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_2 = vote_count }
+			
+			subtract_from_temp_variable = { votes_r_2 = no_dp }
+			multiply_temp_variable = { votes_r_2 = 100 }
+			modulo_temp_variable = { votes_r_2 = 10 }
+			
+			check_variable = { var = vote_count value = 0.100 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_2_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_3 = vote_count }
+			
+			subtract_from_temp_variable = { votes_r_3 = no_dp }
+			multiply_temp_variable = { votes_r_3 = 10 }
+			modulo_temp_variable = { votes_r_3 = 10 }
+			
+			check_variable = { var = vote_count value = 1.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_3_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_4 = vote_count }
+#			multiply_temp_variable = { votes_r_4 = 1 }
+			modulo_temp_variable = { votes_r_4 = 10 }
+			
+			check_variable = { var = vote_count value = 10.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_4_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_5 = vote_count }
+			multiply_temp_variable = { votes_r_5 = 0.1 }
+			modulo_temp_variable = { votes_r_5 = 10 }
+			
+			check_variable = { var = vote_count value = 100.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_5_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_6 = vote_count }
+			multiply_temp_variable = { votes_r_6 = 0.01 }
+			modulo_temp_variable = { votes_r_6 = 10 }
+			
+			check_variable = { var = vote_count value = 1000.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_6_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_7 = vote_count }
+			multiply_temp_variable = { votes_r_7 = 0.001 }
+			modulo_temp_variable = { votes_r_7 = 10 }
+			
+			check_variable = { var = vote_count value = 10000.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_7_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_8 = vote_count }
+			divide_temp_variable = { votes_r_8 = 10000 }
+			modulo_temp_variable = { votes_r_8 = 10 }
+			
+			check_variable = { var = vote_count value = 100000.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_8_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_9 = vote_count }
+			divide_temp_variable = { votes_r_9 = 100000 }
+			modulo_temp_variable = { votes_r_9 = 10 }
+			
+			check_variable = { var = vote_count value = 1000000.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_9_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_10 = vote_count }
+			divide_temp_variable = { votes_r_10 = 1000000 }
+#			modulo_temp_variable = { votes_r_10 = 10 }
+		}
+		localization_key = "SLO_vote_count_10_digits"
+	}
+}
+
+defined_text = {
+	name = GetMajorityOrMinorityGov
+	text = {
+		trigger = {	
+			check_variable = { var = SLO.government_seat_count value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+		}
+		localization_key = "SLO_majority_loc"
+	}
+	text = {
+		localization_key = "SLO_minority_loc"
+	}
+}

@@ -14,18 +14,30 @@ guiTypes = {
 			spriteType ="GFX_tiled_bg"
 		}
 		
-#		containerWindowType = {
-#			name = "SLO_election_map_bg_window"
-#			size = { width = 856 height = 463 }
-#			position = { x = 0 y = 0 }
-#			background = {
-#				name = "Background"	
-#				spriteType ="GFX_tiled_bg"
-#			}
-#		}
+		containerWindowType = {
+			name = "SLO_election_map_bg_window"
+			size = { width = 856 height = 463 }
+			position = { x = 0 y = 0 }
+			background = {
+				name = "Background"	
+				spriteType ="GFX_tiled_bg"
+				alwaysTransparent = yes
+			}
+		}
+		
+		containerWindowType = {
+			name = "SLO_state_seat_count_bg_window"
+			size = { width = 856 height = 296 }
+			position = { x = 0 y = 454 }
+			background = {
+				name = "Background"	
+				spriteType ="GFX_tiled_bg"
+				alwaysTransparent = yes
+			}
+		}
 		
 #		containerWindowType = {
-#			name = "SLO_election_map"
+#			name = "SLO_election_map_bg"
 #			size = { width = 828 height = 435 }
 #			position = { x = 14 y = 14 }
 #			background = {
@@ -33,10 +45,39 @@ guiTypes = {
 #				spriteType ="GFX_pink_bold_selection_frame"
 #			}
 #		}
+#		
+#		containerWindowType = {
+#			name = "SLO_banner_bg"
+#			size = { width = 334 height = 100 }
+#			position = { x = 852 y = 14 }
+#			background = {
+#				name = "Background"	
+#				spriteType ="GFX_pink_bold_selection_frame"
+#			}
+#		}
+
+		instantTextBoxType = {
+			name = "SLO_election_map_current_selection_header_text_box"
+			position = { x = 857 y = 14 }
+			font = "hoi_24header"
+			text = "SLO_election_map_current_selection_header_text"
+			maxWidth = 294
+			maxHeight = 100
+			format = center
+		}
+		instantTextBoxType = {
+			name = "SLO_election_map_current_selection_desc_text_box"
+			position = { x = 857 y = 66 }
+			font = "cg_16b"
+			text = "SLO_election_map_current_selection_desc_text"
+			maxWidth = 324
+			maxHeight = 100
+			format = left
+		}
 
 		gridboxtype = {
 			name = "state_progressbar_gridbox"
-			position = { x = 14 y = 14 }
+			position = { x = 14 y = 13 }
 			size = { width = 100% height = 100% }
 			slotsize = { width = 100% height = 0 }
 			max_slots_horizontal = 1
@@ -51,12 +92,40 @@ guiTypes = {
 			max_slots_horizontal = 1
 			add_horizontal = no
 		}
+
+
+		@text_entry_width = 324
+		@text_entry_height = 90
+		containerWindowType = {
+			name = "results_gridbox_container"
+			position = { x = 857 y = 186 }
+			size = { width = 334 height = 550 }
+			clipping = yes
+			scroll_wheel_factor = 50
+			smooth_scrolling = yes
+			verticalScrollbar = "right_vertical_slider"
+			
+			background = {
+				name = "Background"	
+				spriteType ="GFX_tiled_window_transparent_transparent"
+#				spriteType ="GFX_pink_bold_selection_frame"
+				alwaysTransparent = yes
+			}
+			
+			gridboxtype = {
+				name = "results_gridbox"
+				position = { x = 0 y = 0 }
+				size = { width = @text_entry_width height = 600 }
+				slotsize = { width = @text_entry_width height = @text_entry_height }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
 				
 		buttonType = {
 			name = "close_button"
 			position = { x = -45 y = 14 }
 			quadTextureSprite ="GFX_closebutton"
-			buttonFont = "hoi_24header"
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_RIGHT"
 			clicksound = click_close
@@ -84,8 +153,24 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 			name = "state_overlay_entry_button"
 			quadTextureSprite = "GFX_slovakia_70_OVERLAY"
-			pdx_tooltip  = "state_overlay_entry_button_tt"
-#			pdx_tooltip_delayed  = "state_button_entry_button_tt"
+			pdx_tooltip = "state_overlay_entry_button_tt"
+#			pdx_tooltip_delayed = "state_overlay_entry_button_tt_delayed"
+		}
+	}
+	
+	containerWindowType = {
+		name = "results_entry"
+		position = { x = 0 y = 0 }
+		size = { width = @text_entry_width height = @text_entry_height }
+
+		instantTextBoxType = {
+			name = "SLO_party_results_entry_text_box"
+			position = { x = 0 y = 0 }
+			font = "cg_16b"
+			text = "SLO_party_results_entry_text"
+			maxWidth = @text_entry_width
+			maxHeight = 100
+			format = left
 		}
 	}
 }

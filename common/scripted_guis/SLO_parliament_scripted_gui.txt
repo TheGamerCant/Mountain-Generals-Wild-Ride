@@ -52,12 +52,11 @@ scripted_gui = {
 				change_scope = yes
 				entry_container = state_overlay_entry
 			}
-			
-#			party_national_state_results_gridbox={
-#				array = POL.POL_electoral_map_selected_state:parties_in_order
-#				change_scope = no
-#				entry_container = party_national_state_results_entry
-#			}
+			results_gridbox={
+				array = SLO.SLO_electoral_map_selected_state:previous_election_position_party
+				change_scope = no
+				entry_container = results_entry
+			}
 		}
 		
 		properties={
@@ -72,9 +71,6 @@ scripted_gui = {
 				x = THIS.x_pos
 				y = THIS.y_pos
 			}
-#			RIGHT_BANNER={
-#				image = "[POL.GetRightBannerImg]"
-#			}
 		}
 		
 		effects={

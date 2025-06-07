@@ -1122,6 +1122,607 @@ country_event = {
 	}
 }
 
+add_namespace = slovakia_elections
+
+#Which party as we campaigning as?
+country_event = {
+	id = slovakia_elections.1
+	title = slovakia_elections.1.title
+	desc = slovakia_elections.1.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_gathering_protest
+
+	#Soc dem
+	option = { 
+		name = slovakia_elections.1.a
+		ai_chance = {
+			base = 10
+		}
+		
+		set_variable = { SLO.party_campaigning_as = 1 }
+		custom_effect_tooltip =  slovakia_elections.1.a_tt
+	}
+	
+	#Liberal
+	option = { 
+		name = slovakia_elections.1.b
+		ai_chance = {
+			base = 10
+		}
+		
+		set_variable = { SLO.party_campaigning_as = 2 }
+		custom_effect_tooltip =  slovakia_elections.1.b_tt
+	}
+	
+	#Conservative
+	option = { 
+		name = slovakia_elections.1.c
+		ai_chance = {
+			base = 10
+		}
+		
+		set_variable = { SLO.party_campaigning_as = 3 }
+		custom_effect_tooltip =  slovakia_elections.1.c_tt
+	}
+	
+	#Nationalist
+	option = { 
+		name = slovakia_elections.1.d
+		ai_chance = {
+			base = 10
+		}
+		
+		set_variable = { SLO.party_campaigning_as = 4 }
+		custom_effect_tooltip =  slovakia_elections.1.d_tt
+	}
+}
+
+#Facsist or Communist majority gov -> End game
+country_event = {
+	id = slovakia_elections.2
+	title = slovakia_elections.2.title
+	desc = slovakia_elections.2.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_iww_demonstration
+
+	option = { 
+		name = slovakia_elections.2.a
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_communist
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+	}
+	
+	option = { 
+		name = slovakia_elections.2.b
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_fascist
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+	}
+}
+
+#Single party majority gov
+country_event = {
+	id = slovakia_elections.3
+	title = slovakia_elections.3.title
+	
+	desc = {
+		text = slovakia_elections.3.desc.a
+		trigger = {
+			has_country_flag = can_form_majority_gov_soc_dem
+		}
+	}
+	desc = {
+		text = slovakia_elections.3.desc.b
+		trigger = {
+			has_country_flag = can_form_majority_gov_liberal
+		}
+	}
+	desc = {
+		text = slovakia_elections.3.desc.c
+		trigger = {
+			has_country_flag = can_form_majority_gov_conservative
+		}
+	}
+	desc = {
+		text = slovakia_elections.3.desc.d
+		trigger = {
+			has_country_flag = can_form_majority_gov_nationalist
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_ITA_democratic_parlament
+
+	option = { 
+		name = slovakia_elections.3.a
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_soc_dem
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 1 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 2 }
+		add_to_array = { SLO.parties_in_opposition = 3 }
+		add_to_array = { SLO.parties_in_opposition = 4 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+
+	option = { 
+		name = slovakia_elections.3.b
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_liberal
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 2 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 1 }
+		add_to_array = { SLO.parties_in_opposition = 3 }
+		add_to_array = { SLO.parties_in_opposition = 4 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+
+	option = { 
+		name = slovakia_elections.3.c
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_conservative
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 3 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 1 }
+		add_to_array = { SLO.parties_in_opposition = 2 }
+		add_to_array = { SLO.parties_in_opposition = 4 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+
+	option = { 
+		name = slovakia_elections.3.d
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_nationalist
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 4 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 1 }
+		add_to_array = { SLO.parties_in_opposition = 2 }
+		add_to_array = { SLO.parties_in_opposition = 3 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+}
+
+#Two party majority gov
+country_event = {
+	id = slovakia_elections.4
+	title = slovakia_elections.4.title
+	desc = slovakia_elections.4.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_ITA_democratic_parlament
+
+	option = { 
+		name = slovakia_elections.4.a
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_soc_dem_liberal
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 1 }
+		add_to_array = { SLO.parties_in_government = 2 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 3 }
+		add_to_array = { SLO.parties_in_opposition = 4 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+
+	option = { 
+		name = slovakia_elections.4.b
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_soc_dem_conservative
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 1 }
+		add_to_array = { SLO.parties_in_government = 3 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 2 }
+		add_to_array = { SLO.parties_in_opposition = 4 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+
+	option = { 
+		name = slovakia_elections.4.c
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_liberal_conservative
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 2 }
+		add_to_array = { SLO.parties_in_government = 3 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 1 }
+		add_to_array = { SLO.parties_in_opposition = 4 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+
+	option = { 
+		name = slovakia_elections.4.d
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_conservative_nationalist
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 3 }
+		add_to_array = { SLO.parties_in_government = 4 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 1 }
+		add_to_array = { SLO.parties_in_opposition = 2 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+}
+
+#Three party majority gov
+country_event = {
+	id = slovakia_elections.5
+	title = slovakia_elections.5.title
+	desc = slovakia_elections.5.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_ITA_democratic_parlament
+
+	option = { 
+		name = slovakia_elections.5.a
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_soc_dem_liberal_conservative
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 1 }
+		add_to_array = { SLO.parties_in_government = 2 }
+		add_to_array = { SLO.parties_in_government = 3 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 4 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+
+	option = { 
+		name = slovakia_elections.5.b
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_liberal_conservative_nationalist
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 2 }
+		add_to_array = { SLO.parties_in_government = 3 }
+		add_to_array = { SLO.parties_in_government = 4 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 1 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+
+	option = { 
+		name = slovakia_elections.5.c
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_communist_soc_dem
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 0 }
+		add_to_array = { SLO.parties_in_government = 1 }
+		
+		add_to_array = { SLO.parties_in_opposition = 2 }
+		add_to_array = { SLO.parties_in_opposition = 3 }
+		add_to_array = { SLO.parties_in_opposition = 4 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+
+	option = { 
+		name = slovakia_elections.5.d
+		
+		trigger = {
+			has_country_flag = can_form_majority_gov_nationalist_fascist
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 4 }
+		add_to_array = { SLO.parties_in_government = 5 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 1 }
+		add_to_array = { SLO.parties_in_opposition = 2 }
+		add_to_array = { SLO.parties_in_opposition = 3 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+}
+
+
+#Minority government
+country_event = {
+	id = slovakia_elections.6
+	title = slovakia_elections.6.title
+	desc = slovakia_elections.6.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_communist_congress
+
+	option = { 
+		name = slovakia_elections.6.a
+		
+		trigger = {
+			has_country_flag = can_form_minority_gov_soc_dem_liberal_conservative
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 1 }
+		add_to_array = { SLO.parties_in_government = 2 }
+		add_to_array = { SLO.parties_in_government = 3 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 4 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+
+	option = { 
+		name = slovakia_elections.6.b
+		
+		trigger = {
+			has_country_flag = can_form_minority_gov_liberal_conservative_nationalist
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 2 }
+		add_to_array = { SLO.parties_in_government = 3 }
+		add_to_array = { SLO.parties_in_government = 4 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 1 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+
+	option = { 
+		name = slovakia_elections.6.c
+		
+		trigger = {
+			has_country_flag = can_form_minority_gov_communist_soc_dem
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 0 }
+		add_to_array = { SLO.parties_in_government = 1 }
+		
+		add_to_array = { SLO.parties_in_opposition = 2 }
+		add_to_array = { SLO.parties_in_opposition = 3 }
+		add_to_array = { SLO.parties_in_opposition = 4 }
+		add_to_array = { SLO.parties_in_opposition = 5 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+
+	option = { 
+		name = slovakia_elections.6.d
+		
+		trigger = {
+			has_country_flag = can_form_minority_gov_nationalist_fascist
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+
+		clear_array = SLO.parties_in_government
+		clear_array = SLO.parties_in_opposition
+		
+		add_to_array = { SLO.parties_in_government = 4 }
+		add_to_array = { SLO.parties_in_government = 5 }
+		
+		add_to_array = { SLO.parties_in_opposition = 0 }
+		add_to_array = { SLO.parties_in_opposition = 1 }
+		add_to_array = { SLO.parties_in_opposition = 2 }
+		add_to_array = { SLO.parties_in_opposition = 3 }
+		add_to_array = { SLO.parties_in_opposition = 6 }
+		
+		SLO_update_government_opposition_seat_counts = yes
+		SLO_update_parliament_position_gfx = yes
+		SLO_clear_government_majority_minority_flags = yes
+	}
+}
+
+
 add_namespace = slovakia_hidden
 
 #Update gfxs

@@ -2,11 +2,11 @@ guiTypes = {
 	containerWindowType = {
         name = "SLO_parliament_gui_container"
         position = { x = 0 y = 0 }
-		size = { width = 500 height = 550 }
+		size = { width = 500 height = 580 }
 
 		instantTextBoxType = {
 			name = "SLO_parliament_government_header_text_box"
-			position = { x = 21 y = -8 }
+			position = { x = 21 y = -4 }
 			font = "hoi_24header"
 			text = "SLO_parliament_government_header_text"
 			maxWidth = 450
@@ -16,7 +16,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "SLO_parliament_opposition_header_text_box"
-			position = { x = 21 y = 302 }
+			position = { x = 21 y = 322 }
 			font = "hoi_24header"
 			text = "SLO_parliament_opposition_header_text"
 			maxWidth = 450
@@ -27,7 +27,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "parliament_container"
 			position = { x = 0 y = 22 }
-			size = { width = 492 height = 276 }
+			size = { width = 492 height = 300 }
 
 			background = {
 				name = "Background"
@@ -46,7 +46,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "SLO_parliament_majority_status_text_box"
-			position = { x = 21 y = 340 }
+			position = { x = 21 y = 364 }
 			font = "hoi_18mbs"
 			text = "SLO_parliament_majority_status_text"
 			maxWidth = 450
@@ -56,7 +56,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "SLO_parliament_government_status_text_box"
-			position = { x = 2 y = 400 }
+			position = { x = 2 y = 424 }
 			font = "hoi_18mbs"
 			text = "SLO_parliament_government_status_text"
 			maxWidth = 200
@@ -66,7 +66,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "SLO_parliament_opposition_status_text_box"
-			position = { x = 290 y = 400 }
+			position = { x = 290 y = 424 }
 			font = "hoi_18mbs"
 			text = "SLO_parliament_opposition_status_text"
 			maxWidth = 200
@@ -78,7 +78,7 @@ guiTypes = {
 	containerWindowType = {
         name = "SLO_parliament_member_entry"
         position = { x = 0 y = 0 }
-		size = { width = 200 height = 18 }
+		size = { width = 18 height = 18 }
 
 		iconType = {
 			name = "parliament_member_icon"

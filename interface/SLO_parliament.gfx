@@ -2,7 +2,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_SLO_parliament_party_icon"
 		texturefile = "gfx/interface/SLO_parliament/SLO_parliament_parties.dds"
-		noOfFrames = 7
+		noOfFrames = 14
 		transparencecheck = yes
 	}
 
@@ -1128,8 +1128,8 @@ spriteTypes = {
 		textureFile1 = "gfx/interface/SLO_parliament/states/europe_666_progressbar.dds"
 		textureFile2 = "gfx/interface/SLO_parliament/states/europe_666_progressbar.dds"
 		size = {
-			x = 155
-			y = 87
+			x = 156
+			y = 88
 		}
 		effectFile = "gfx/FX/SLO_state_entry_election_map.shader"
 	}

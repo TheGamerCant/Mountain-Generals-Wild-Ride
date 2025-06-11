@@ -999,11 +999,12 @@ STATE_get_party_seats = {
 STATE_set_popularities_to_100 = {
 	#Set the results equal to 100%
 	set_variable = { total = 0 }
-	for_each_loop = {
-		array = THIS.party_popularity
+	for_loop_effect = {
+		end = THIS.party_popularity^num
 		value = v
 		
-		add_to_variable = { total = v }
+		clamp_variable = { var = THIS.party_popularity^v min = 0 max = 100 }
+		add_to_variable = { total = THIS.party_popularity^v }
 	}
 	
 	set_variable = { mult = 100 }

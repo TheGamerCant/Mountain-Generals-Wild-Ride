@@ -2048,20 +2048,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.14
 	title = slovakia_elections.14.title
-	
-	desc = {
-		text = slovakia_elections.14.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 1 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.14.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
-		}
-	}
-	
+	desc = slovakia_elections.14.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_communists_cheer
 
@@ -2107,20 +2094,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.15
 	title = slovakia_elections.15.title
-	
-	desc = {
-		text = slovakia_elections.15.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 1 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.15.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
-		}
-	}
-	
+	desc = slovakia_elections.15.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_american_hunger_march
 
@@ -2166,20 +2140,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.16
 	title = slovakia_elections.16.title
-	
-	desc = {
-		text = slovakia_elections.16.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 1 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.16.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
-		}
-	}
-	
+	desc = slovakia_elections.16.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_worker_protests
 
@@ -2225,20 +2186,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.17
 	title = slovakia_elections.17.title
-	
-	desc = {
-		text = slovakia_elections.17.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 1 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.17.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
-		}
-	}
-	
+	desc = slovakia_elections.17.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_worker_protests
 
@@ -2284,20 +2232,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.18
 	title = slovakia_elections.18.title
-	
-	desc = {
-		text = slovakia_elections.18.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 1 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.18.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
-		}
-	}
-	
+	desc = slovakia_elections.18.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_crowd_in_prague
 
@@ -2343,20 +2278,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.19
 	title = slovakia_elections.19.title
-	
-	desc = {
-		text = slovakia_elections.19.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 1 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.19.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
-		}
-	}
-	
+	desc = slovakia_elections.19.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_crowd_in_prague
 
@@ -2402,20 +2324,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.20
 	title = slovakia_elections.20.title
-	
-	desc = {
-		text = slovakia_elections.20.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 2 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.20.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
-		}
-	}
-	
+	desc = slovakia_elections.20.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_communists_cheer
 
@@ -2461,20 +2370,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.21
 	title = slovakia_elections.21.title
-	
-	desc = {
-		text = slovakia_elections.21.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 2 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.21.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
-		}
-	}
-	
+	desc = slovakia_elections.21.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_communists_cheer
 
@@ -2520,20 +2416,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.22
 	title = slovakia_elections.22.title
-	
-	desc = {
-		text = slovakia_elections.22.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 2 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.22.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
-		}
-	}
-	
+	desc = slovakia_elections.22.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_long_march
 
@@ -2579,20 +2462,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.23
 	title = slovakia_elections.23.title
-	
-	desc = {
-		text = slovakia_elections.23.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 2 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.23.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
-		}
-	}
-	
+	desc = slovakia_elections.23.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_long_march
 
@@ -2638,20 +2508,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.24
 	title = slovakia_elections.24.title
-	
-	desc = {
-		text = slovakia_elections.24.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 2 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.24.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
-		}
-	}
-	
+	desc = slovakia_elections.24.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_crowd_in_prague
 
@@ -2697,20 +2554,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.25
 	title = slovakia_elections.25.title
-	
-	desc = {
-		text = slovakia_elections.25.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 2 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.25.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
-		}
-	}
-	
+	desc = slovakia_elections.25.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_crowd_in_prague
 
@@ -2756,20 +2600,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.26
 	title = slovakia_elections.26.title
-	
-	desc = {
-		text = slovakia_elections.26.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 3 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.26.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
-		}
-	}
-	
+	desc = slovakia_elections.26.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_communists_cheer
 
@@ -2815,20 +2646,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.27
 	title = slovakia_elections.27.title
-	
-	desc = {
-		text = slovakia_elections.27.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 3 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.27.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
-		}
-	}
-	
+	desc = slovakia_elections.27.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_bul_muraviev_protest
 
@@ -2874,20 +2692,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.28
 	title = slovakia_elections.28.title
-	
-	desc = {
-		text = slovakia_elections.28.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 3 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.28.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
-		}
-	}
-	
+	desc = slovakia_elections.28.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_gathering_protest
 
@@ -2933,20 +2738,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.29
 	title = slovakia_elections.29.title
-	
-	desc = {
-		text = slovakia_elections.29.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 3 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.29.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
-		}
-	}
-	
+	desc = slovakia_elections.29.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_gathering_protest
 
@@ -2992,20 +2784,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.30
 	title = slovakia_elections.30.title
-	
-	desc = {
-		text = slovakia_elections.30.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 3 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.30.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
-		}
-	}
-	
+	desc = slovakia_elections.30.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_crowd_in_prague
 
@@ -3051,20 +2830,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.31
 	title = slovakia_elections.31.title
-	
-	desc = {
-		text = slovakia_elections.31.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 3 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.31.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
-		}
-	}
-	
+	desc = slovakia_elections.31.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_crowd_in_prague
 
@@ -3110,20 +2876,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.32
 	title = slovakia_elections.32.title
-	
-	desc = {
-		text = slovakia_elections.32.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 4 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.32.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
-		}
-	}
-	
+	desc = slovakia_elections.32.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_communists_cheer
 
@@ -3169,20 +2922,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.33
 	title = slovakia_elections.33.title
-	
-	desc = {
-		text = slovakia_elections.33.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 4 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.33.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
-		}
-	}
-	
+	desc = slovakia_elections.33.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_iww_demonstration
 
@@ -3228,20 +2968,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.34
 	title = slovakia_elections.34.title
-	
-	desc = {
-		text = slovakia_elections.34.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 4 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.34.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
-		}
-	}
-	
+	desc = slovakia_elections.34.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_gre_militaristic_march
 
@@ -3287,20 +3014,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.35
 	title = slovakia_elections.35.title
-	
-	desc = {
-		text = slovakia_elections.35.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 4 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.35.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
-		}
-	}
-	
+	desc = slovakia_elections.35.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_gre_militaristic_march
 
@@ -3346,20 +3060,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.36
 	title = slovakia_elections.36.title
-	
-	desc = {
-		text = slovakia_elections.36.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 4 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.36.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
-		}
-	}
-	
+	desc = slovakia_elections.36.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_crowd_in_prague
 
@@ -3405,20 +3106,7 @@ country_event = {
 country_event = {
 	id = slovakia_elections.37
 	title = slovakia_elections.37.title
-	
-	desc = {
-		text = slovakia_elections.37.desc.a
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 4 }
-		}
-	}
-	desc = {
-		text = slovakia_elections.37.desc.b
-		trigger = {
-			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
-		}
-	}
-	
+	desc = slovakia_elections.37.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_crowd_in_prague
 

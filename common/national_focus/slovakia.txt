@@ -919,7 +919,7 @@ focus_tree = {
 			add_to_variable = { SLO_army_dm_mobilization_speed = 0.50 }
 			add_to_variable = { SLO_army_dm_army_morale_factor = 0.08 }
 			
-			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.12 }
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.04 }
 			custom_effect_tooltip = SLO_mass_mobilisation_tt
 			
 		}
@@ -4241,11 +4241,11 @@ focus_tree = {
 	
 	focus = {
 		id = SLO_prepare_for_war
-		icon = GFX_
+		icon = GFX_focus_generic_public_works
 		x = -3
 		y = 1
 		relative_position_id = SLO_creation_of_the_slovak_occupation_authority
-		cost = 5
+		cost = 8
 		prerequisite = {
 			focus = SLO_creation_of_the_slovak_occupation_authority
 		}
@@ -4258,14 +4258,14 @@ focus_tree = {
 		
 
 		completion_reward = {
-			army_experience = 25
+			army_experience = 50
 			add_political_power = 50
 		}
 	}
 	
 	focus = {
 		id = SLO_expand_surveillance_efforts
-		icon = GFX_
+		icon = GFX_focus_SWI_embrace_rote_drei
 		x = 0
 		y = 1
 		relative_position_id = SLO_prepare_for_war
@@ -4279,7 +4279,30 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_ideas = SLO_eyes_everywhere_fascist_idea
+			add_ideas = SLO_eyes_everywhere_fascist_idea_1
+		}
+	}
+	
+	focus = {
+		id = SLO_expand_the_secret_police
+		icon = GFX_focus_generic_secret_service_agency
+		x = 0
+		y = 1
+		relative_position_id = SLO_expand_surveillance_efforts
+		cost = 5
+		prerequisite = {
+			focus = SLO_expand_surveillance_efforts
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SLO_eyes_everywhere_fascist_idea_1
+				add_idea = SLO_eyes_everywhere_fascist_idea_2
+			}
 		}
 	}
 	
@@ -5789,7 +5812,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_a_shining_city_for_all_to_see
-		icon = GFX_
+		icon = GFX_goal_SLO_a_democratic_slovakia
 		x = 100
 		y = 0
 		cost = 2
@@ -5818,10 +5841,10 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_establish_a_constitution
-		icon = GFX_
+		icon = GFX_goal_SLO_civic_nationalism
 		x = -1
 		y = 1
-		cost = 4
+		cost = 3
 		
 		prerequisite = { focus = SLO_a_shining_city_for_all_to_see }
 		relative_position_id = SLO_a_shining_city_for_all_to_see
@@ -5834,7 +5857,14 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_political_power = 50
 			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
 		}
 	}
 	
@@ -5842,8 +5872,8 @@ focus_tree = {
 		id = SLO_emergency_banking_actions
 		icon = GFX_
 		x = 1
-		y = 1
-		cost = 4
+		y = 1 
+		cost = 3
 		
 		prerequisite = { focus = SLO_a_shining_city_for_all_to_see }
 		relative_position_id = SLO_a_shining_city_for_all_to_see
@@ -5856,19 +5886,30 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.10 }
+			add_to_variable = { SLO_economy_dm_stability_factor = 0.05 }
 			
+			custom_effect_tooltip = SLO_emergency_banking_actions_tt
 		}
 	}
 	
 	focus = {	
 		id = SLO_hold_an_election
-		icon = GFX_
+		icon = GFX_goal_SLO_hold_an_election
 		x = 1
 		y = 1
-		cost = 4
+		cost = 5
 		
-		prerequisite = { focus = SLO_establish_a_constitution focus = SLO_emergency_banking_actions }
+		cancelable = no
+		
+		prerequisite = { focus = SLO_establish_a_constitution }
+		prerequisite = { focus = SLO_emergency_banking_actions }
 		relative_position_id = SLO_establish_a_constitution
+
+		select_effect = {
+			SLO_initialise_parliament = yes
+			country_event = { id = slovakia_elections.7 days = 2 random_days = 7 }
+		}
 
 		available = {
 		}
@@ -5878,7 +5919,7 @@ focus_tree = {
 		
 
 		completion_reward = {
-			
+			country_event = { id = slovakia_elections.1 hours = 4 }
 		}
 	}
 	

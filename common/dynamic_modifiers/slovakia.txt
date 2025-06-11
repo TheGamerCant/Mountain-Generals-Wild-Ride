@@ -14,45 +14,45 @@ SLO_initial_economy_dynamic_modifier = {
 	production_speed_arms_factory_factor = SLO_economy_dm_production_speed_arms_factory_factor
 }
 
-SLO_keynsian_economy_dynamic_modifier = {
-	icon = GFX_idea_ARG_public_works_investment
-	enable = { always = yes }
-	
-	stability_factor = SLO_economy_dm_stability_factor
-	political_power_cost = SLO_economy_dm_political_power_cost
-	consumer_goods_factor = SLO_economy_dm_consumer_goods_factor
-	production_speed_buildings_factor = SLO_economy_dm_production_speed_buildings_factor
-	production_factory_efficiency_gain_factor = SLO_economy_dm_production_factory_efficiency_gain_factor
-	production_factory_max_efficiency_factor = SLO_economy_dm_production_factory_max_efficiency_factor
-	democratic_drift = SLO_economy_dm_democratic_drift
-	industrial_capacity_factory = SLO_economy_dm_industrial_capacity_factory
-	industrial_capacity_dockyard = SLO_economy_dm_industrial_capacity_dockyard
-	research_speed_factor = SLO_economy_dm_research_speed_factor
-	production_speed_arms_factory_factor = SLO_economy_dm_production_speed_arms_factory_factor
-}
-
-SLO_austrian_economy_dynamic_modifier = {
-	icon = GFX_idea_ARG_public_works_investment
-	enable = { always = yes }
-	
-	stability_factor = SLO_economy_dm_stability_factor
-	political_power_cost = SLO_economy_dm_political_power_cost
-	consumer_goods_factor = SLO_economy_dm_consumer_goods_factor
-	production_speed_buildings_factor = SLO_economy_dm_production_speed_buildings_factor
-	production_factory_efficiency_gain_factor = SLO_economy_dm_production_factory_efficiency_gain_factor
-	production_factory_max_efficiency_factor = SLO_economy_dm_production_factory_max_efficiency_factor
-	economy_cost_factor = SLO_economy_dm_economy_cost_factor
-	trade_laws_cost_factor = SLO_economy_dm_trade_laws_cost_factor
-	resource_trade_cost_bonus_per_factory = SLO_economy_dm_resource_trade_cost_bonus_per_factory
-	trade_opinion_factor = SLO_economy_dm_trade_opinion_factor
-	democratic_drift = SLO_economy_dm_democratic_drift
-	industrial_capacity_factory = SLO_economy_dm_industrial_capacity_factory
-	industrial_capacity_dockyard = SLO_economy_dm_industrial_capacity_dockyard
-	min_export = SLO_economy_dm_min_export
-	stability_weekly = SLO_economy_dm_stability_weekly
-	research_speed_factor = SLO_economy_dm_research_speed_factor
-	production_speed_arms_factory_factor = SLO_economy_dm_production_speed_arms_factory_factor
-}
+#SLO_keynsian_economy_dynamic_modifier = {
+#	icon = GFX_idea_ARG_public_works_investment
+#	enable = { always = yes }
+#	
+#	stability_factor = SLO_economy_dm_stability_factor
+#	political_power_cost = SLO_economy_dm_political_power_cost
+#	consumer_goods_factor = SLO_economy_dm_consumer_goods_factor
+#	production_speed_buildings_factor = SLO_economy_dm_production_speed_buildings_factor
+#	production_factory_efficiency_gain_factor = SLO_economy_dm_production_factory_efficiency_gain_factor
+#	production_factory_max_efficiency_factor = SLO_economy_dm_production_factory_max_efficiency_factor
+#	democratic_drift = SLO_economy_dm_democratic_drift
+#	industrial_capacity_factory = SLO_economy_dm_industrial_capacity_factory
+#	industrial_capacity_dockyard = SLO_economy_dm_industrial_capacity_dockyard
+#	research_speed_factor = SLO_economy_dm_research_speed_factor
+#	production_speed_arms_factory_factor = SLO_economy_dm_production_speed_arms_factory_factor
+#}
+#
+#SLO_austrian_economy_dynamic_modifier = {
+#	icon = GFX_idea_ARG_public_works_investment
+#	enable = { always = yes }
+#	
+#	stability_factor = SLO_economy_dm_stability_factor
+#	political_power_cost = SLO_economy_dm_political_power_cost
+#	consumer_goods_factor = SLO_economy_dm_consumer_goods_factor
+#	production_speed_buildings_factor = SLO_economy_dm_production_speed_buildings_factor
+#	production_factory_efficiency_gain_factor = SLO_economy_dm_production_factory_efficiency_gain_factor
+#	production_factory_max_efficiency_factor = SLO_economy_dm_production_factory_max_efficiency_factor
+#	economy_cost_factor = SLO_economy_dm_economy_cost_factor
+#	trade_laws_cost_factor = SLO_economy_dm_trade_laws_cost_factor
+#	resource_trade_cost_bonus_per_factory = SLO_economy_dm_resource_trade_cost_bonus_per_factory
+#	trade_opinion_factor = SLO_economy_dm_trade_opinion_factor
+#	democratic_drift = SLO_economy_dm_democratic_drift
+#	industrial_capacity_factory = SLO_economy_dm_industrial_capacity_factory
+#	industrial_capacity_dockyard = SLO_economy_dm_industrial_capacity_dockyard
+#	min_export = SLO_economy_dm_min_export
+#	stability_weekly = SLO_economy_dm_stability_weekly
+#	research_speed_factor = SLO_economy_dm_research_speed_factor
+#	production_speed_arms_factory_factor = SLO_economy_dm_production_speed_arms_factory_factor
+#}
 
 SLO_autarkic_economy_dyanamic_modifier = {
 	icon = GFX_idea_GER_autarky

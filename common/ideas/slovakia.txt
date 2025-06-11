@@ -496,7 +496,7 @@ ideas = {
 			}
 		}	
 		
-		SLO_eyes_everywhere_fascist_idea = {
+		SLO_eyes_everywhere_fascist_idea_1 = {
 			removal_cost = -1
 
 			picture = SLO_surveillance_state
@@ -512,8 +512,32 @@ ideas = {
 				political_power_cost = 0.05
 				resistance_activity = -0.05
 				resistance_target = -0.10
-				root_out_resistance_effectiveness_factor = 0.20
+				root_out_resistance_effectiveness_factor = 0.15
 				resistance_growth = -0.10
+			}
+		}	
+		
+		SLO_eyes_everywhere_fascist_idea_2 = {
+			removal_cost = -1
+
+			picture = SLO_surveillance_state
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_cost = 0.15
+				resistance_activity = -0.10
+				resistance_target = -0.10
+				root_out_resistance_effectiveness_factor = 0.25
+				resistance_growth = -0.20
+				agency_upgrade_time = -0.10
+				intel_network_gain_factor = 0.20
+				operation_cost = -0.05
 			}
 		}	
 		
@@ -754,6 +778,127 @@ ideas = {
 				attack_bonus_against = 0.14
 				defense_bonus_against = 0.14
 				breakthrough_bonus_against = 0.08
+			}
+		}
+		
+		SLO_skoda_works_1 = {
+			removal_cost = -1
+
+			picture = CZE_skoda_works
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.03
+				artillery = 0.03
+			}
+			
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+#				armor = {
+#					instant = yes
+#					build_cost_ic = -0.05
+#				}
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		
+		SLO_skoda_works_2 = {
+			removal_cost = -1
+
+			picture = CZE_skoda_works
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.08
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory  = 0.05
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.05
+				artillery = 0.05
+			}
+			
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					build_cost_ic = -0.08
+				}
+				armor = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.08
+				}
+			}
+		}
+		
+		SLO_skoda_works_3 = {
+			removal_cost = -1
+
+			picture = CZE_skoda_works
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.08
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.1
+				political_power_gain = 0.05
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.05
+				artillery = 0.05
+			}
+			
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					build_cost_ic = -0.08
+				}
+				armor = {
+					instant = yes
+					build_cost_ic = -0.08
+				}
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.08
+				}
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.03
+				}
 			}
 		}
 	}

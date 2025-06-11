@@ -100,5 +100,14 @@
  SLO_skewer_the_eagle_idea_6:0 "$SLO_skewer_the_eagle_idea_1$"
  SLO_skewer_the_eagle_idea_6_desc:0 "$SLO_skewer_the_eagle_idea_1_desc$"
  
- SLO_eyes_everywhere_fascist_idea:0 "Eyes Everywhere"
- SLO_eyes_everywhere_fascist_idea_desc:0 "We cannot allow people to get ideas such as "freedom" or "dissent" in their minds. They are to see, hear, think, know and love Mountain General and no-one and nothing else!"
+ SLO_eyes_everywhere_fascist_idea_1:0 "Eyes Everywhere"
+ SLO_eyes_everywhere_fascist_idea_1_desc:0 "We cannot allow people to get ideas such as "freedom" or "dissent" in their minds. They are to see, hear, think, know and love Mountain General and no-one and nothing else!"
+ SLO_eyes_everywhere_fascist_idea_2:0 "$SLO_eyes_everywhere_fascist_idea_1$"
+ SLO_eyes_everywhere_fascist_idea_2_desc:0 "$SLO_eyes_everywhere_fascist_idea_1_desc$"
+ 
+ SLO_skoda_works_1:0 "Škoda Works"
+ SLO_skoda_works_1_desc:0 "The Škoda factories of Czechoslovakia were the beating heart of our industry, churning out weapons at such a rate that Czechoslovakia became the third largest exporter of weapons in the world.\n\nYet now, with us divided, our industrial base is not what it could be. It will take time to reach our former heights."
+ SLO_skoda_works_2:0 "$SLO_skoda_works_1$"
+ SLO_skoda_works_2_desc:0 "The Škoda factories of Czechoslovakia were the beating heart of our industry, churning out weapons at such a rate that Czechoslovakia became the third largest exporter of weapons in the world.\n\nWith our unification with Czechia, we are well on our way to restoring our greatness."
+ SLO_skoda_works_3:0 "$SLO_skoda_works_1$"
+ SLO_skoda_works_3_desc:0 "The Škoda factories of Czechoslovakia were the beating heart of our industry, churning out weapons at such a rate that Czechoslovakia became the third largest exporter of weapons in the world. Under Mountain General, we have once again become a global leader in arms exports, giving us an edge over our international adversaries."

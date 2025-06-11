@@ -3,8 +3,6 @@ SLO_debug_hold_slovak_election = {
 		SLO_initialise_parliament = yes
 		
 		SLO_hold_election = yes	
-		
-		set_country_flag = SLO_parliament_is_active_flag
 	}
 }
 SLO_debug_hold_european_election = {
@@ -732,6 +730,8 @@ STATE_randomise_party_popularity_and_get_results = {
 		integer = no
 	}
 	
+	set_variable = { THIS.previous_election_total_votes = 0 }
+	
 	#We have the results as a % -> now get the vote totals as well
 	if = {
 		limit = { check_variable = { SLO.parliament_level = 0 } }		#Slovakia
@@ -753,6 +753,7 @@ STATE_randomise_party_popularity_and_get_results = {
 			multiply_variable = { votes = prcntge }
 			
 			add_to_array = { THIS.previous_election_votes = votes }
+			add_to_variable = { THIS.previous_election_total_votes = votes }
 			
 			clear_variable = votes
 			clear_variable = prcntge
@@ -783,6 +784,7 @@ STATE_randomise_party_popularity_and_get_results = {
 			multiply_variable = { votes = prcntge }
 			
 			add_to_array = { THIS.previous_election_votes = votes }
+			add_to_variable = { THIS.previous_election_total_votes = votes }
 			
 			clear_variable = votes
 			clear_variable = prcntge
@@ -1091,21 +1093,20 @@ SLO_get_national_results = {
 	}
 	
 	#Get turnout
-	set_variable = { SLO.total_votes = 0 }
+	set_variable = { SLO.previous_election_total_votes = 0 }
 	for_each_loop = {
 		array = SLO.previous_election_votes
 		index = i
 		value = v
 		
-		add_to_variable = { SLO.total_votes = v }
+		add_to_variable = { SLO.previous_election_total_votes = v }
 	}
 	
-	set_variable = { SLO.previous_election_turnout = SLO.total_votes }
+	set_variable = { SLO.previous_election_turnout = SLO.previous_election_total_votes }
 	multiply_variable = { SLO.previous_election_turnout = 1.618 }
 	divide_variable = { SLO.previous_election_turnout = SLO.total_pop }
 	
 	clear_variable = SLO.total_pop
-	clear_variable = SLO.total_votes
 	
 	for_loop_effect = {
 		end = SLO.previous_election_results^num
@@ -1500,6 +1501,11 @@ SLO_hold_election = {
 		
 		#Form a government
 		SLO_get_possible_governments = yes
+		
+		if = {
+			limit = { NOT = { has_country_flag = SLO_parliament_is_active_flag } }
+			set_country_flag = SLO_parliament_is_active_flag
+		}
 	}
 }
 
@@ -2256,7 +2262,7 @@ SLO_initialise_europe_mechanics = {
 	set_variable = { 4.party_popularity^5 = 34 }
 	set_variable = { 4.party_popularity^6 = 3 }
 
-	#Po Region
+	#Po Region / Po Valley
 	add_to_array = { SLO.subdivision_states = 159 }
 	clear_array = 159.subdivision_states
 	add_to_array = { 159.subdivision_states = 159 }
@@ -3681,5 +3687,238 @@ SLO_update_GFX_SLO_to_Europe = {
 				debug = yes
 			}
 		}
+	}
+}
+
+SLO_get_states_to_campaign_in = {
+	clear_array = SLO.selected_states_for_campaigns
+	resize_array = { array = SLO.selected_states_for_campaigns size = 7 value = 0 }
+	
+	for_loop_effect = {
+		end = 7
+		value = v
+		
+		#Pick 10 random states from SLO.election_states
+		clear_array = states_array
+		resize_array = { array = states_array size = 10 value = 0 }
+		clear_array = state_weights_array
+		resize_array = { array = state_weights_array size = 10 value = 0 }
+		
+		if = {
+			limit = { check_variable = { var = SLO.election_states^num value = 10 compare = less_than_or_equals } }
+			for_each_loop = {
+				array = SLO.election_states
+				index = i
+				value = v2
+					
+				set_variable = { states_array^i = v2 }
+			}
+		}
+		else = {
+			#More then 10 election states - pick 10 random states
+			
+			set_variable = { index = 0 }
+			
+			for_loop_effect = {
+				end = 10
+				value = v2
+				
+				random_scope_in_array = {
+					array = SLO.election_states
+					
+					limit = {
+						meta_trigger = {
+							text = {
+								NOT = { is_in_array = { array = PREV.states_array value = [STATE_ID] } }
+							}
+							
+							STATE_ID = "[?THIS.GetID]"
+						}
+					}	
+			
+					meta_effect = {
+						text = {
+							set_variable = { PREV.states_array^PREV.index = [STATE_ID] }
+						}
+						
+						STATE_ID = "[?THIS.GetID]"
+					}
+					add_to_variable = { PREV.index = 1 }
+				}
+			}
+			
+			clear_variable = index
+		}
+		
+		#We now have our states - get the weights
+		#Get their populations, divide by x and round to get the weights
+		
+		set_variable = { index = 0 }
+		
+		if = {
+			limit = { check_variable = { SLO.parliament_level = 0 } }
+			
+			for_each_scope_loop = {
+				array = states_array
+					
+				set_variable = { PREV.state_weights_array^PREV.index = THIS.state_population_k }
+				divide_variable = { PREV.state_weights_array^PREV.index = 10 }
+				round_variable = PREV.state_weights_array^PREV.index
+				add_to_variable = { PREV.state_weights_array^PREV.index = 1 }
+				
+				add_to_variable = { PREV.index = 1 }
+			}
+		}
+		else = {	
+			for_each_scope_loop = {
+				array = states_array
+
+				set_variable = { total_pop = 0 }
+								
+				for_each_scope_loop = {
+					array = subdivision_states
+					
+					add_to_variable = { PREV.total_pop = THIS.state_population_k }
+				}
+				
+				set_variable = { PREV.state_weights_array^PREV.index = total_pop }
+				divide_variable = { PREV.state_weights_array^PREV.index = 500 }
+				round_variable = PREV.state_weights_array^PREV.index
+				add_to_variable = { PREV.state_weights_array^PREV.index = 2 }
+				
+				add_to_variable = { PREV.index = 1 }
+				
+				clear_variable = total_pop
+			}
+		}
+		
+		clear_variable = index
+		
+		for_loop_effect = {
+			end = 10
+			value = v2
+			
+			if = {  
+				limit = { check_variable = { states_array^v2 = 0 } }
+				set_variable = { state_weights_array^v2 = 0 }
+			}
+		}
+
+		#We now have our states and our arrays -> Randomly decide which one to campaign in
+
+#		for_loop_effect = {
+#			end = 10
+#			value = v2
+#			
+#			log = "[?SLO.states_array^v2|.0] - [?SLO.state_weights_array^v2|.0]"
+#		}
+#
+#		log = " "
+		
+		random_list = {
+			var:state_weights_array^0 = { set_variable = { SLO.selected_states_for_campaigns^v = states_array^0 } }
+			var:state_weights_array^1 = { set_variable = { SLO.selected_states_for_campaigns^v = states_array^1 } }
+			var:state_weights_array^2 = { set_variable = { SLO.selected_states_for_campaigns^v = states_array^2 } }
+			var:state_weights_array^3 = { set_variable = { SLO.selected_states_for_campaigns^v = states_array^3 } }
+			var:state_weights_array^4 = { set_variable = { SLO.selected_states_for_campaigns^v = states_array^4 } }
+			var:state_weights_array^5 = { set_variable = { SLO.selected_states_for_campaigns^v = states_array^5 } }
+			var:state_weights_array^6 = { set_variable = { SLO.selected_states_for_campaigns^v = states_array^6 } }
+			var:state_weights_array^7 = { set_variable = { SLO.selected_states_for_campaigns^v = states_array^7 } }
+			var:state_weights_array^8 = { set_variable = { SLO.selected_states_for_campaigns^v = states_array^8 } }
+			var:state_weights_array^9 = { set_variable = { SLO.selected_states_for_campaigns^v = states_array^9 } }
+		}
+		
+		clear_array = states_array
+		clear_array = state_weights_array
+	}
+}
+
+#8-10
+THIS_get_increase_var_fantastic_campaign = {
+	random_list = {
+		4   = { set_variable = { incr = 10.00 } }
+		31  = { set_variable = { incr = 9.75 } }
+		109 = { set_variable = { incr = 9.50 } }
+		219 = { set_variable = { incr = 9.25 } }
+		274 = { set_variable = { incr = 9.00 } }
+		219 = { set_variable = { incr = 8.75 } }
+		109 = { set_variable = { incr = 8.50 } }
+		31  = { set_variable = { incr = 8.25 } }
+		4   = { set_variable = { incr = 8.00 } }
+	}
+}
+
+#6-8
+THIS_get_increase_var_great_campaign = {
+	random_list = {
+		4   = { set_variable = { incr = 8.00 } }
+		31  = { set_variable = { incr = 7.75 } }
+		109 = { set_variable = { incr = 7.50 } }
+		219 = { set_variable = { incr = 7.25 } }
+		274 = { set_variable = { incr = 7.00 } }
+		219 = { set_variable = { incr = 6.75 } }
+		109 = { set_variable = { incr = 6.50 } }
+		31  = { set_variable = { incr = 6.25 } }
+		4   = { set_variable = { incr = 6.00 } }
+	}
+}
+
+#4-6
+THIS_get_increase_var_good_campaign = {
+	random_list = {
+		4   = { set_variable = { incr = 6.00 } }
+		31  = { set_variable = { incr = 5.75 } }
+		109 = { set_variable = { incr = 5.50 } }
+		219 = { set_variable = { incr = 5.25 } }
+		274 = { set_variable = { incr = 5.00 } }
+		219 = { set_variable = { incr = 4.75 } }
+		109 = { set_variable = { incr = 4.50 } }
+		31  = { set_variable = { incr = 4.25 } }
+		4   = { set_variable = { incr = 4.00 } }
+	}
+}
+
+#2-4
+THIS_get_increase_var_mediocre_campaign = {
+	random_list = {
+		4   = { set_variable = { incr = 4.00 } }
+		31  = { set_variable = { incr = 3.75 } }
+		109 = { set_variable = { incr = 3.50 } }
+		219 = { set_variable = { incr = 3.25 } }
+		274 = { set_variable = { incr = 3.00 } }
+		219 = { set_variable = { incr = 2.75 } }
+		109 = { set_variable = { incr = 2.50 } }
+		31  = { set_variable = { incr = 2.25 } }
+		4   = { set_variable = { incr = 2.00 } }
+	}
+}
+
+#0-2
+THIS_get_increase_var_disappointing_campaign = {
+	random_list = {
+		4   = { set_variable = { incr = 2.00 } }
+		31  = { set_variable = { incr = 1.75 } }
+		109 = { set_variable = { incr = 1.50 } }
+		219 = { set_variable = { incr = 1.25 } }
+		274 = { set_variable = { incr = 1.00 } }
+		219 = { set_variable = { incr = 0.75 } }
+		109 = { set_variable = { incr = 0.50 } }
+		31  = { set_variable = { incr = 0.25 } }
+		4   = { set_variable = { incr = 0.00 } }
+	}
+}
+
+#-2-0
+THIS_get_increase_var_disastrous_campaign = {
+	random_list = {
+		4   = { set_variable = { incr = 0.00 } }
+		31  = { set_variable = { incr = -0.25 } }
+		109 = { set_variable = { incr = -0.50 } }
+		219 = { set_variable = { incr = -0.75 } }
+		274 = { set_variable = { incr = -1.00 } }
+		219 = { set_variable = { incr = -1.25 } }
+		109 = { set_variable = { incr = -1.50 } }
+		31  = { set_variable = { incr = -1.75 } }
+		4   = { set_variable = { incr = -2.00 } }
 	}
 }

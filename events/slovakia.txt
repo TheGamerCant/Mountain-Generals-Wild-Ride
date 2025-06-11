@@ -779,6 +779,16 @@ country_event = {
 		add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = -0.10 }
 		
 		custom_effect_tooltip = slovakia.20.tt
+		
+		if = {
+			limit = {  
+				NOT = { has_idea = SLO_skoda_works_1 }
+				NOT = { has_idea = SLO_skoda_works_2 }
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_ideas = SLO_skoda_works_1
+		}
 	}
 }
 
@@ -1122,6 +1132,74 @@ country_event = {
 	}
 }
 
+#Take over Czech Skoda factories
+country_event = {
+	id = slovakia.31
+	title = slovakia.31.title
+	desc = slovakia.31.desc
+	picture = GFX_report_event_generic_lend_lease
+	
+	trigger = {
+		tag = SLO
+		has_idea = SLO_skoda_works_1
+		
+		9 = {
+			OWNER = {
+				OR = {
+					original_tag = SLO
+					is_puppet_of = SLO
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 20
+	}
+	
+	fire_only_once = yes
+
+	option = { 
+		name = slovakia.31.a
+		ai_chance = {
+			base = 10
+		}
+		
+		if = {
+			limit = { has_idea = SLO_skoda_works_1 }
+			swap_ideas = {
+				remove_idea = SLO_skoda_works_1
+				add_idea = SLO_skoda_works_2
+			}
+		}
+		
+		hidden_effect = { country_event = { id = slovakia.32 days = 150 random_days = 150 } }
+	}
+}
+
+#Further arms industry improvements
+country_event = {
+	id = slovakia.32
+	title = slovakia.32.title
+	desc = slovakia.32.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_lend_lease
+
+	option = { 
+		name = slovakia.32.a
+		ai_chance = {
+			base = 10
+		}
+		
+		swap_ideas = {
+			remove_idea = SLO_skoda_works_2
+			add_idea = SLO_skoda_works_3
+		}
+		
+		add_political_power = 25
+	}
+}
+
 add_namespace = slovakia_elections
 
 #Which party as we campaigning as?
@@ -1131,6 +1209,15 @@ country_event = {
 	desc = slovakia_elections.1.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_gathering_protest
+	
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = { 
+			set_country_flag = SLO_campaign_season_underway_flag
+			country_event = { id = slovakia_hidden.2 days = 1 }
+		}
+	}
 
 	#Soc dem
 	option = { 
@@ -1177,7 +1264,7 @@ country_event = {
 	}
 }
 
-#Facsist or Communist majority gov -> End game
+#Fascist or Communist majority gov -> End game
 country_event = {
 	id = slovakia_elections.2
 	title = slovakia_elections.2.title
@@ -1600,7 +1687,6 @@ country_event = {
 	}
 }
 
-
 #Minority government
 country_event = {
 	id = slovakia_elections.6
@@ -1721,6 +1807,2030 @@ country_event = {
 		SLO_clear_government_majority_minority_flags = yes
 	}
 }
+#Choose threshold
+country_event = {
+	id = slovakia_elections.7
+	title = slovakia_elections.7.title
+	desc = slovakia_elections.7.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_hungary_parliament
+	
+	timeout_days = 7
+
+	option = { 
+		name = slovakia_elections.7.a
+		ai_chance = {
+			base = 10
+		}
+		
+		set_variable = { SLO.parliament_threshold = 0 }
+		add_stability = -0.02
+	}
+	
+	option = { 
+		name = slovakia_elections.7.b
+		ai_chance = {
+			base = 10
+		}
+		
+		set_variable = { SLO.parliament_threshold = 3 }
+		add_political_power = 5
+	}
+	
+	option = { 
+		name = slovakia_elections.7.c
+		ai_chance = {
+			base = 10
+		}
+		
+		set_variable = { SLO.parliament_threshold = 5 }
+		add_stability = 0.01
+	}
+	
+	option = { 
+		name = slovakia_elections.7.d
+		ai_chance = {
+			base = 10
+		}
+		
+		set_variable = { SLO.parliament_threshold = 7 }
+		add_political_power = -10
+	}
+}
+
+#Communist campaign - Fantastic
+country_event = {
+	id = slovakia_elections.8
+	title = slovakia_elections.8.title
+	desc = slovakia_elections.8.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_fantastic_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^0 = {
+				add_to_variable = { party_popularity^0 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.8.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Communist campaign - Great
+country_event = {
+	id = slovakia_elections.9
+	title = slovakia_elections.9.title
+	desc = slovakia_elections.9.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_great_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^0 = {
+				add_to_variable = { party_popularity^0 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.9.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Communist campaign - Good
+country_event = {
+	id = slovakia_elections.10
+	title = slovakia_elections.10.title
+	desc = slovakia_elections.10.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_in_riga
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_good_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^0 = {
+				add_to_variable = { party_popularity^0 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.10.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Communist campaign - Mediocre
+country_event = {
+	id = slovakia_elections.11
+	title = slovakia_elections.11.title
+	desc = slovakia_elections.11.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_in_riga
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_mediocre_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^0 = {
+				add_to_variable = { party_popularity^0 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.11.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Communist campaign - Disappointing
+country_event = {
+	id = slovakia_elections.12
+	title = slovakia_elections.12.title
+	desc = slovakia_elections.12.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disappointing_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^0 = {
+				add_to_variable = { party_popularity^0 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.12.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Communist campaign - Disastrous
+country_event = {
+	id = slovakia_elections.13
+	title = slovakia_elections.13.title
+	desc = slovakia_elections.13.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disastrous_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^0 = {
+				add_to_variable = { party_popularity^0 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.13.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Soc dem campaign - Fantastic
+country_event = {
+	id = slovakia_elections.14
+	title = slovakia_elections.14.title
+	
+	desc = {
+		text = slovakia_elections.14.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 1 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.14.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_fantastic_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^1 = {
+				add_to_variable = { party_popularity^1 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.14.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 1 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.14.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+		}
+	}
+}
+
+#Soc dem campaign - Great
+country_event = {
+	id = slovakia_elections.15
+	title = slovakia_elections.15.title
+	
+	desc = {
+		text = slovakia_elections.15.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 1 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.15.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_american_hunger_march
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_great_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^1 = {
+				add_to_variable = { party_popularity^1 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.15.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 1 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.15.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+		}
+	}
+}
+
+#Soc dem campaign - Good
+country_event = {
+	id = slovakia_elections.16
+	title = slovakia_elections.16.title
+	
+	desc = {
+		text = slovakia_elections.16.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 1 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.16.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_worker_protests
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_good_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^1 = {
+				add_to_variable = { party_popularity^1 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.16.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 1 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.16.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+		}
+	}
+}
+
+#Soc dem campaign - Mediocre
+country_event = {
+	id = slovakia_elections.17
+	title = slovakia_elections.17.title
+	
+	desc = {
+		text = slovakia_elections.17.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 1 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.17.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_worker_protests
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_mediocre_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^1 = {
+				add_to_variable = { party_popularity^1 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.17.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 1 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.17.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+		}
+	}
+}
+
+#Soc dem campaign - Disappointing
+country_event = {
+	id = slovakia_elections.18
+	title = slovakia_elections.18.title
+	
+	desc = {
+		text = slovakia_elections.18.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 1 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.18.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disappointing_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^1 = {
+				add_to_variable = { party_popularity^1 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.18.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 1 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.18.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+		}
+	}
+}
+
+#Soc dem campaign - Disastrous
+country_event = {
+	id = slovakia_elections.19
+	title = slovakia_elections.19.title
+	
+	desc = {
+		text = slovakia_elections.19.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 1 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.19.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disastrous_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^1 = {
+				add_to_variable = { party_popularity^1 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.19.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 1 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.19.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+		}
+	}
+}
+
+#Liberal campaign - Fantastic
+country_event = {
+	id = slovakia_elections.20
+	title = slovakia_elections.20.title
+	
+	desc = {
+		text = slovakia_elections.20.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 2 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.20.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_fantastic_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^2 = {
+				add_to_variable = { party_popularity^2 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.20.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 2 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.20.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
+		}
+	}
+}
+
+#Liberal campaign - Great
+country_event = {
+	id = slovakia_elections.21
+	title = slovakia_elections.21.title
+	
+	desc = {
+		text = slovakia_elections.21.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 2 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.21.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_great_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^2 = {
+				add_to_variable = { party_popularity^2 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.21.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 2 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.21.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
+		}
+	}
+}
+
+#Liberal campaign - Good
+country_event = {
+	id = slovakia_elections.22
+	title = slovakia_elections.22.title
+	
+	desc = {
+		text = slovakia_elections.22.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 2 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.22.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_long_march
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_good_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^2 = {
+				add_to_variable = { party_popularity^2 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.2.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 2 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.22.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
+		}
+	}
+}
+
+#Liberal campaign - Mediocre
+country_event = {
+	id = slovakia_elections.23
+	title = slovakia_elections.23.title
+	
+	desc = {
+		text = slovakia_elections.23.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 2 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.23.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_long_march
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_mediocre_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^2 = {
+				add_to_variable = { party_popularity^2 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.23.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 2 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.23.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
+		}
+	}
+}
+
+#Liberal campaign - Disappointing
+country_event = {
+	id = slovakia_elections.24
+	title = slovakia_elections.24.title
+	
+	desc = {
+		text = slovakia_elections.24.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 2 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.24.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disappointing_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^2 = {
+				add_to_variable = { party_popularity^2 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.24.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 2 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.24.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
+		}
+	}
+}
+
+#Liberal campaign - Disastrous
+country_event = {
+	id = slovakia_elections.25
+	title = slovakia_elections.25.title
+	
+	desc = {
+		text = slovakia_elections.25.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 2 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.25.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disastrous_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^2 = {
+				add_to_variable = { party_popularity^2 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.25.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 2 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.25.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 2 } }
+		}
+	}
+}
+
+#Conservative campaign - Fantastic
+country_event = {
+	id = slovakia_elections.26
+	title = slovakia_elections.26.title
+	
+	desc = {
+		text = slovakia_elections.26.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 3 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.26.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_fantastic_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^3 = {
+				add_to_variable = { party_popularity^3 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.26.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 3 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.26.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
+		}
+	}
+}
+
+#Conservative campaign - Great
+country_event = {
+	id = slovakia_elections.27
+	title = slovakia_elections.27.title
+	
+	desc = {
+		text = slovakia_elections.27.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 3 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.27.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_bul_muraviev_protest
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_great_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^3 = {
+				add_to_variable = { party_popularity^3 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.27.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 3 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.27.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
+		}
+	}
+}
+
+#Conservative campaign - Good
+country_event = {
+	id = slovakia_elections.28
+	title = slovakia_elections.28.title
+	
+	desc = {
+		text = slovakia_elections.28.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 3 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.28.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_gathering_protest
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_good_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^3 = {
+				add_to_variable = { party_popularity^3 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.28.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 3 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.28.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
+		}
+	}
+}
+
+#Conservative campaign - Mediocre
+country_event = {
+	id = slovakia_elections.29
+	title = slovakia_elections.29.title
+	
+	desc = {
+		text = slovakia_elections.29.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 3 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.29.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_gathering_protest
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_mediocre_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^3 = {
+				add_to_variable = { party_popularity^3 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.29.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 3 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.29.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
+		}
+	}
+}
+
+#Conservative campaign - Disappointing
+country_event = {
+	id = slovakia_elections.30
+	title = slovakia_elections.30.title
+	
+	desc = {
+		text = slovakia_elections.30.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 3 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.30.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disappointing_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^3 = {
+				add_to_variable = { party_popularity^3 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.30.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 3 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.30.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
+		}
+	}
+}
+
+#Conservative campaign - Disastrous
+country_event = {
+	id = slovakia_elections.31
+	title = slovakia_elections.31.title
+	
+	desc = {
+		text = slovakia_elections.31.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 3 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.31.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disastrous_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^3 = {
+				add_to_variable = { party_popularity^3 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.31.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 3 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.31.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 3 } }
+		}
+	}
+}
+
+#Nationalist campaign - Fantastic
+country_event = {
+	id = slovakia_elections.32
+	title = slovakia_elections.32.title
+	
+	desc = {
+		text = slovakia_elections.32.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 4 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.32.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_fantastic_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^4 = {
+				add_to_variable = { party_popularity^4 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.32.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 4 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.32.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
+		}
+	}
+}
+
+#Nationalist campaign - Great
+country_event = {
+	id = slovakia_elections.33
+	title = slovakia_elections.33.title
+	
+	desc = {
+		text = slovakia_elections.33.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 4 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.33.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_iww_demonstration
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_great_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^4 = {
+				add_to_variable = { party_popularity^4 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.33.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 4 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.33.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
+		}
+	}
+}
+
+#Nationalist campaign - Good
+country_event = {
+	id = slovakia_elections.34
+	title = slovakia_elections.34.title
+	
+	desc = {
+		text = slovakia_elections.34.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 4 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.34.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_gre_militaristic_march
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_good_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^4 = {
+				add_to_variable = { party_popularity^4 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.34.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 4 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.34.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
+		}
+	}
+}
+
+#Nationalist campaign - Mediocre
+country_event = {
+	id = slovakia_elections.35
+	title = slovakia_elections.35.title
+	
+	desc = {
+		text = slovakia_elections.35.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 4 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.35.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_gre_militaristic_march
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_mediocre_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^4 = {
+				add_to_variable = { party_popularity^4 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.35.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 4 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.35.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
+		}
+	}
+}
+
+#Nationalist campaign - Disappointing
+country_event = {
+	id = slovakia_elections.36
+	title = slovakia_elections.36.title
+	
+	desc = {
+		text = slovakia_elections.36.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 4 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.36.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disappointing_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^4 = {
+				add_to_variable = { party_popularity^4 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.36.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 4 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.36.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
+		}
+	}
+}
+
+#Nationalist campaign - Disastrous
+country_event = {
+	id = slovakia_elections.37
+	title = slovakia_elections.37.title
+	
+	desc = {
+		text = slovakia_elections.37.desc.a
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 4 }
+		}
+	}
+	desc = {
+		text = slovakia_elections.37.desc.b
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
+		}
+	}
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disastrous_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^4 = {
+				add_to_variable = { party_popularity^4 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.37.a
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 4 }
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.37.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
+		}
+	}
+}
+
+#Fascist campaign - Fantastic
+country_event = {
+	id = slovakia_elections.38
+	title = slovakia_elections.38.title
+	desc = slovakia_elections.38.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_fantastic_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^5 = {
+				add_to_variable = { party_popularity^5 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.38.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Fascist campaign - Great
+country_event = {
+	id = slovakia_elections.39
+	title = slovakia_elections.39.title
+	desc = slovakia_elections.39.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_great_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^5 = {
+				add_to_variable = { party_popularity^5 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.39.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Fascist campaign - Good
+country_event = {
+	id = slovakia_elections.40
+	title = slovakia_elections.40.title
+	desc = slovakia_elections.40.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_fascist_gathering
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_good_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^5 = {
+				add_to_variable = { party_popularity^5 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.40.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Fascist campaign - Mediocre
+country_event = {
+	id = slovakia_elections.41
+	title = slovakia_elections.41.title
+	desc = slovakia_elections.41.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_fascist_gathering
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_mediocre_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^5 = {
+				add_to_variable = { party_popularity^5 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.41.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Fascist campaign - Disappointing
+country_event = {
+	id = slovakia_elections.42
+	title = slovakia_elections.42.title
+	desc = slovakia_elections.42.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disappointing_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^5 = {
+				add_to_variable = { party_popularity^5 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.42.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Fascist campaign - Disastrous
+country_event = {
+	id = slovakia_elections.43
+	title = slovakia_elections.43.title
+	desc = slovakia_elections.43.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disastrous_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^5 = {
+				add_to_variable = { party_popularity^5 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.43.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Non Aligned Other campaign - Fantastic
+country_event = {
+	id = slovakia_elections.44
+	title = slovakia_elections.44.title
+	desc = slovakia_elections.44.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_fantastic_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^6 = {
+				add_to_variable = { party_popularity^6 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.44.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Non Aligned Other campaign - Great
+country_event = {
+	id = slovakia_elections.45
+	title = slovakia_elections.45.title
+	desc = slovakia_elections.45.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_great_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^6 = {
+				add_to_variable = { party_popularity^6 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.45.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Non Aligned Other campaign - Good
+country_event = {
+	id = slovakia_elections.46
+	title = slovakia_elections.46.title
+	desc = slovakia_elections.46.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_rally
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_good_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^6 = {
+				add_to_variable = { party_popularity^6 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.46.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Non Aligned Other campaign - Mediocre
+country_event = {
+	id = slovakia_elections.47
+	title = slovakia_elections.47.title
+	desc = slovakia_elections.47.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_rally
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_mediocre_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^6 = {
+				add_to_variable = { party_popularity^6 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.47.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Non Aligned Other campaign - Disappointing
+country_event = {
+	id = slovakia_elections.48
+	title = slovakia_elections.48.title
+	desc = slovakia_elections.48.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disappointing_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^6 = {
+				add_to_variable = { party_popularity^6 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.48.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Non Aligned Other campaign - Disastrous
+country_event = {
+	id = slovakia_elections.49
+	title = slovakia_elections.49.title
+	desc = slovakia_elections.49.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_crowd_in_prague
+
+	timeout_days = 7
+
+	immediate = {
+		hidden_effect = {
+			THIS_get_increase_var_disastrous_campaign = yes
+			
+			var:SLO.selected_states_for_campaigns^6 = {
+				add_to_variable = { party_popularity^6 = PREV.incr }
+				STATE_set_popularities_to_100 = yes
+			}
+			
+			clear_variable = incr
+		}
+	}
+
+	option = { 
+		name = slovakia_elections.49.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
 
 
 add_namespace = slovakia_hidden
@@ -1768,5 +3878,44 @@ country_event = {
 			}
 		}
 	}
+}
+
+#Election stuff, choose states to campaign in 
+country_event = {
+	id = slovakia_hidden.2
+	hidden = yes
 	
+	is_triggered_only = yes
+
+	immediate = { 
+		if = {
+			limit = { has_country_flag = SLO_campaign_season_underway_flag }
+			
+			SLO_get_states_to_campaign_in = yes
+			
+			activate_mission = SLO_communist_campaign
+			
+			if = {
+				limit = { NOT = { check_variable = { SLO.party_campaigning_as = 1 } } }
+				activate_mission = SLO_soc_dem_campaign
+			}
+			if = {
+				limit = { NOT = { check_variable = { SLO.party_campaigning_as = 2 } } }
+				activate_mission = SLO_liberal_campaign
+			}
+			if = {
+				limit = { NOT = { check_variable = { SLO.party_campaigning_as = 3 } } }
+				activate_mission = SLO_conservative_campaign
+			}
+			if = {
+				limit = { NOT = { check_variable = { SLO.party_campaigning_as = 4 } } }
+				activate_mission = SLO_nationalist_campaign
+			}
+			
+			activate_mission = SLO_fascist_campaign
+			activate_mission = SLO_non_aligned_other_campaign
+			
+			country_event = { id = slovakia_hidden.2 days = 16 }
+		}
+	}
 }

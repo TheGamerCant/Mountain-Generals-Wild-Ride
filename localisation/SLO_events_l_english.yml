@@ -87,7 +87,7 @@
  slovakia.19.a:0 "Glory to Slovakia! Glory to Mountain General! Death to the false Aryans!"
  
  slovakia.20.title:0 "Economic Downturn"
- slovakia.20.desc:0 "Following our rapid victory in our war of independence, we now have the massive task of establishing a functioning Slovak state with a competent and efficient bureaucracy.\n\nWe have taken over many former Czechoslovak ministries, construction sites and army barracks, but transforming and stabilising the country will take time. Time that we might not have..."
+ slovakia.20.desc:0 "Following our rapid victory in our war of independence, we now have the massive task of establishing a functioning Slovak state with a competent and efficient bureaucracy.\n\nWe have taken over many former Czechoslovak ministries, construction sites and army barracks. We have also taken over many of the Slovak Škoda factories, giving us a solid base to grow our arms industry. Despite that however, transforming and stabilising the country will take time, time that we might not have..."
  slovakia.20.a:0 "We should fix this at once!"
  slovakia.20.tt:0 "$SLO_modify_the_slovak_economy_by$$MODIFIER_POLITICAL_POWER_COST$: §R+0.25§!\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y+20.0%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-15.00%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-15.00%§!\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §R-10.00%§!"
  
@@ -134,6 +134,14 @@
  slovakia.30.title:0 "[CZE.GetName] Refuses"
  slovakia.30.desc:0 "Blinded by delusions of their strength and underestimating [SLO.GetLeader]'s brilliance, those pesky Czechs have refused our peaceful attempts at annexing and subjugating them! [SLO.GetLeader] has ordered [SLO.GetLeader.GetHerHis] armies to march to the Czech border and prepare for an assault."
  slovakia.30.a:0 "So be it"
+ 
+ slovakia.31.title:0 "Integration of Czech Škoda"
+ slovakia.31.desc:0 "Following our march into Prague, we have taken over many of the Škoda factories, improving our knowledge and integrating our arms industries. Hopefully, we will be able to return back to the arms exporting giant we once were, and Mountain General has ordered for a swift and effective integration of our arms industries."
+ slovakia.31.a:0 "Great news!"
+ 
+ slovakia.32.title:0 "Arms Exports Rise"
+ slovakia.32.desc:0 "With the integration of the Czech and Slovak arms industries once more, our arms export orders have risen greatly. This has given us a new source of knowledge, influence and revenue."
+ slovakia.32.a:0 "Ura!"
  
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to dictate terms of surrender to the once proud Czechoslovak government in Prague. For the first time ever, Slovakia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."

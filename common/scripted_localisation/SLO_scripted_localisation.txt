@@ -30,8 +30,8 @@ defined_text = {
 		trigger = {
 			OR = {
 				has_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
-				has_dynamic_modifier = { modifier = SLO_keynsian_economy_dynamic_modifier }
-				has_dynamic_modifier = { modifier = SLO_austrian_economy_dynamic_modifier }
+#				has_dynamic_modifier = { modifier = SLO_keynsian_economy_dynamic_modifier }
+#				has_dynamic_modifier = { modifier = SLO_austrian_economy_dynamic_modifier }
 			}
 		}
 		localization_key = "SLO_initial_economy_dynamic_modifier"
@@ -282,6 +282,119 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetTotalVoteCountLoc
+	text = {
+		trigger = {
+			set_temp_variable = { vote_count = SLO.SLO_electoral_map_selected_state:previous_election_total_votes }
+			
+			set_temp_variable = { votes_r_1 = vote_count }
+			set_temp_variable = { no_dp = vote_count }
+			divide_temp_variable = { no_dp = 1000 }
+			multiply_temp_variable = { no_dp = 1000 }
+			
+			subtract_from_temp_variable = { votes_r_1 = no_dp }
+			multiply_temp_variable = { votes_r_1 = 1000 }
+			modulo_temp_variable = { votes_r_1 = 10 }
+			
+			check_variable = { var = vote_count value = 0.010 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_1_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_2 = vote_count }
+			
+			subtract_from_temp_variable = { votes_r_2 = no_dp }
+			multiply_temp_variable = { votes_r_2 = 100 }
+			modulo_temp_variable = { votes_r_2 = 10 }
+			
+			check_variable = { var = vote_count value = 0.100 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_2_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_3 = vote_count }
+			
+			subtract_from_temp_variable = { votes_r_3 = no_dp }
+			multiply_temp_variable = { votes_r_3 = 10 }
+			modulo_temp_variable = { votes_r_3 = 10 }
+			
+			check_variable = { var = vote_count value = 1.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_3_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_4 = vote_count }
+#			multiply_temp_variable = { votes_r_4 = 1 }
+			modulo_temp_variable = { votes_r_4 = 10 }
+			
+			check_variable = { var = vote_count value = 10.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_4_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_5 = vote_count }
+			multiply_temp_variable = { votes_r_5 = 0.1 }
+			modulo_temp_variable = { votes_r_5 = 10 }
+			
+			check_variable = { var = vote_count value = 100.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_5_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_6 = vote_count }
+			multiply_temp_variable = { votes_r_6 = 0.01 }
+			modulo_temp_variable = { votes_r_6 = 10 }
+			
+			check_variable = { var = vote_count value = 1000.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_6_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_7 = vote_count }
+			multiply_temp_variable = { votes_r_7 = 0.001 }
+			modulo_temp_variable = { votes_r_7 = 10 }
+			
+			check_variable = { var = vote_count value = 10000.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_7_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_8 = vote_count }
+			divide_temp_variable = { votes_r_8 = 10000 }
+			modulo_temp_variable = { votes_r_8 = 10 }
+			
+			check_variable = { var = vote_count value = 100000.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_8_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_9 = vote_count }
+			divide_temp_variable = { votes_r_9 = 100000 }
+			modulo_temp_variable = { votes_r_9 = 10 }
+			
+			check_variable = { var = vote_count value = 1000000.000 compare = less_than }
+		}
+		localization_key = "SLO_vote_count_9_digits"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { votes_r_10 = vote_count }
+			divide_temp_variable = { votes_r_10 = 1000000 }
+#			modulo_temp_variable = { votes_r_10 = 10 }
+		}
+		localization_key = "SLO_vote_count_10_digits"
+	}
+}
+
+defined_text = {
 	name = GetMajorityOrMinorityGov
 	text = {
 		trigger = {	
@@ -291,5 +404,69 @@ defined_text = {
 	}
 	text = {
 		localization_key = "SLO_minority_loc"
+	}
+}
+
+defined_text = {
+	name = GetCommunistCampaignStateName
+	text = {
+		trigger = {	
+			set_temp_variable = { campaign_state = SLO.selected_states_for_campaigns^0 }
+		}
+		localization_key = "SLO_communist_campaign_state_name_loc"
+	}
+}
+defined_text = {
+	name = GetSocDemCampaignStateName
+	text = {
+		trigger = {	
+			set_temp_variable = { campaign_state = SLO.selected_states_for_campaigns^1 }
+		}
+		localization_key = "SLO_soc_dem_campaign_state_name_loc"
+	}
+}
+defined_text = {
+	name = GetLiberalCampaignStateName
+	text = {
+		trigger = {	
+			set_temp_variable = { campaign_state = SLO.selected_states_for_campaigns^2 }
+		}
+		localization_key = "SLO_liberal_campaign_state_name_loc"
+	}
+}
+defined_text = {
+	name = GetConservativeCampaignStateName
+	text = {
+		trigger = {	
+			set_temp_variable = { campaign_state = SLO.selected_states_for_campaigns^3 }
+		}
+		localization_key = "SLO_conservative_campaign_state_name_loc"
+	}
+}
+defined_text = {
+	name = GetNationalistCampaignStateName
+	text = {
+		trigger = {	
+			set_temp_variable = { campaign_state = SLO.selected_states_for_campaigns^4 }
+		}
+		localization_key = "SLO_nationalist_campaign_state_name_loc"
+	}
+}
+defined_text = {
+	name = GetFascistCampaignStateName
+	text = {
+		trigger = {	
+			set_temp_variable = { campaign_state = SLO.selected_states_for_campaigns^5 }
+		}
+		localization_key = "SLO_fascist_campaign_state_name_loc"
+	}
+}
+defined_text = {
+	name = GetNonAlignedOtherCampaignStateName
+	text = {
+		trigger = {	
+			set_temp_variable = { campaign_state = SLO.selected_states_for_campaigns^6 }
+		}
+		localization_key = "SLO_non_aligned_other_campaign_state_name_loc"
 	}
 }

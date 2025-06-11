@@ -83,6 +83,8 @@ SLO_stabilising_the_regime_category = {
 SLO_parliament_decision_category = {
 	priority = 998
 	
+	icon = decision_category_generic_political_actions
+	
 	allowed = {
 		original_tag = SLO
 	}
@@ -93,4 +95,20 @@ SLO_parliament_decision_category = {
 	
 	scripted_gui = SLO_parliament_gui
 	visible_when_empty = yes
+}
+
+SLO_campaign_season_category = {
+	priority = 997
+	
+	icon = decision_category_generic_democracy
+	
+	allowed = {
+		original_tag = SLO
+	}
+	
+	visible = {
+		has_country_flag = SLO_campaign_season_underway_flag
+	}
+	
+	visible_when_empty = no
 }

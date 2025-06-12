@@ -499,15 +499,16 @@ SLO_update_government_opposition_seat_counts = {
 }
 
 SLO_initialise_parliament = {
-	set_variable = { SLO.seat_count = 250 }							#250 seats in total
-	set_variable = { SLO.seats_needed_for_majority = 126 }			#How many seats do we need to form a majority
-	set_variable = { SLO.parliament_level = 0 }						#0 is Slovakia, 1 is Europe
-	set_variable = { SLO.parliament_threshold = 0 }					#Threshold needed for entry
-	set_variable = { SLO.SLO_electoral_map_selected_state = SLO }	#What state / country are we looking at in the GUI?
-	set_variable = { SLO.language = 0 }								#Language of our GUI
+	set_variable = { SLO.seat_count = 250 }								#250 seats in total
+	set_variable = { SLO.seats_needed_for_majority = 126 }				#How many seats do we need to form a majority
+	set_variable = { SLO.parliament_level = 0 }							#0 is Slovakia, 1 is Europe
+	set_variable = { SLO.parliament_threshold = 0 }						#Threshold needed for entry
+	set_variable = { SLO.SLO_electoral_map_selected_state = SLO }		#What state / country are we looking at in the GUI?
+	set_variable = { SLO.SLO_electoral_map_gui_selected_results = SLO }	#Should the map show country or party results
+	set_variable = { SLO.language = 0 }									#Language of our GUI
 	
 	set_variable = { SLO.gui_gridbox_width = 468 }
-	set_variable = { SLO.gui_party_dot_entry_size = 18 }			#Can be 12, 13 or 18
+	set_variable = { SLO.gui_party_dot_entry_size = 18 }				#Can be 12, 13 or 18
 	set_variable = { SLO.gui_bottom_y_pos = 258 }
 	
 	clear_array = SLO.election_states
@@ -906,32 +907,58 @@ STATE_get_ordered_results = {
 }
 
 STATE_get_party_popularity_variable = {
-	#Index of the most popular party times 10
-	set_variable = { THIS.previous_election_victor_popularity = THIS.previous_election_position_party^0 }
-	multiply_variable = { THIS.previous_election_victor_popularity = 14 }
-	
-	#Get the margin of victory over the second most popular party
-	set_variable = { indx1 = THIS.previous_election_position_party^0 }
-	set_variable = { most_popular_party_percentage = THIS.previous_election_results^indx1 }
-	
-	set_variable = { indx2 = THIS.previous_election_position_party^1 }
-	set_variable = { second_most_popular_party_percentage = THIS.previous_election_results^indx2 }
-	
-	set_variable = { margin_of_victory = most_popular_party_percentage }
-	subtract_from_variable = { margin_of_victory = second_most_popular_party_percentage }
-	set_variable = { THIS.previous_election_margin_of_victory = margin_of_victory }
-	
-	divide_variable = { margin_of_victory = 2000 }
-	multiply_variable = { margin_of_victory = 1000 }
-	clamp_variable = { var = margin_of_victory min = 0 max = 13 }
-	
-	add_to_variable = { THIS.previous_election_victor_popularity = margin_of_victory }
-	
-	clear_variable = margin_of_victory
-	clear_variable = most_popular_party_percentage
-	clear_variable = second_most_popular_party_percentage
-	clear_variable = indx1
-	clear_variable = indx2
+	if = {
+		limit = { check_variable = { SLO.SLO_electoral_map_gui_selected_results = SLO } }
+		
+		#Index of the most popular party times 10
+		set_variable = { THIS.previous_election_victor_popularity = THIS.previous_election_position_party^0 }
+		multiply_variable = { THIS.previous_election_victor_popularity = 14 }
+		
+		#Get the margin of victory over the second most popular party
+		set_variable = { indx1 = THIS.previous_election_position_party^0 }
+		set_variable = { most_popular_party_percentage = THIS.previous_election_results^indx1 }
+		
+		set_variable = { indx2 = THIS.previous_election_position_party^1 }
+		set_variable = { second_most_popular_party_percentage = THIS.previous_election_results^indx2 }
+		
+		set_variable = { margin_of_victory = most_popular_party_percentage }
+		subtract_from_variable = { margin_of_victory = second_most_popular_party_percentage }
+		set_variable = { THIS.previous_election_margin_of_victory = margin_of_victory }
+		
+		divide_variable = { margin_of_victory = 2000 }				#2% increments
+		multiply_variable = { margin_of_victory = 1000 }
+		clamp_variable = { var = margin_of_victory min = 0 max = 13 }
+		
+		add_to_variable = { THIS.previous_election_victor_popularity = margin_of_victory }
+		
+		clear_variable = margin_of_victory
+		clear_variable = most_popular_party_percentage
+		clear_variable = second_most_popular_party_percentage
+		clear_variable = indx1
+		clear_variable = indx2
+	}
+	else = {
+		set_variable = { party_vote = THIS.previous_election_results^SLO.SLO_electoral_map_gui_selected_results }
+		
+		set_variable = { THIS.previous_election_victor_popularity = SLO.SLO_electoral_map_gui_selected_results }
+		multiply_variable = { THIS.previous_election_victor_popularity = 14 }
+		
+		divide_variable = { party_vote = 4000 }				#4% increments
+		multiply_variable = { party_vote = 1000 }
+		clamp_variable = { var = party_vote min = 0 max = 13 }
+		
+		add_to_variable = { THIS.previous_election_victor_popularity = party_vote }
+		
+		clear_variable = party_vote
+	}
+}
+
+SLO_update_state_colour_map = {
+	for_each_scope_loop = {
+		array = SLO.previous_election_states
+		
+		STATE_get_party_popularity_variable = yes
+	}
 }
 
 STATE_get_party_seats = {
@@ -1446,7 +1473,21 @@ SLO_divide_seats = {
 	}
 }
 
+SLO_start_campaign = {
+	set_country_flag = SLO_campaign_season_underway_flag
+	country_event = { id = slovakia_hidden.2 days = 1 }			#Start oppostion campaigns
+	SLO_get_active_election_states = yes						#States to campaign in 
+	
+	SLO_divide_seats = yes 										#Get the no of seats per election state
+	
+	country_event = { id = slovakia_elections.1 hours = 4 }		#Party to campaign as
+	activate_mission = SLO_countdown_to_election
+}
+
 SLO_hold_election = {
+	clr_country_flag = SLO_campaign_season_underway_flag
+	hold_election = ROOT
+	
 	if = { 
 		limit = { 		#Check to see if last election was Slovakia but this one is Europe
 			check_variable = { SLO.parliament_level = 1 }
@@ -1470,27 +1511,33 @@ SLO_hold_election = {
 		}
 	}
 	
+	#Get the states for this election and their map positions (only has an effect if we are Europe)
+	
+	clear_array = SLO.previous_election_states
+	resize_array = { array = SLO.previous_election_states size = SLO.election_states^num value = 0 }
+	for_each_loop = {
+		array = SLO.election_states
+		value = v
+		index = i
+		
+		set_variable = { SLO.previous_election_states^i = v }
+	}
 	if = {
 		limit = { check_variable = { SLO.parliament_level = 1 } }
-		SLO_get_active_election_states = yes
 		SLO_get_map_positions = yes
 	}
-	
-	#Get the states for this election and their map positions (only has an effect if we are Europe)
-	SLO_get_active_election_states = yes
-	SLO_get_map_positions = yes
-	
-	#Get the no of seats per election state
-	SLO = { SLO_divide_seats = yes }
 	
 	for_each_scope_loop = {
 		array = SLO.election_states
 		
-		#Randomise the results
+		#Randomise the popularities and then get the results
 		STATE_randomise_party_popularity_and_get_results = yes
 		STATE_get_ordered_results = yes
+		
+		#Get seats
 		STATE_get_party_seats = yes
 		STATE_get_party_popularity_variable = yes
+		set_variable = { THIS.previous_election_seat_count = THIS.seat_count }
 	}
 	
 	#Get the national results
@@ -3194,6 +3241,7 @@ SLO_update_GFX_SLO_to_Europe = {
 	clear_variable = 70.name_token
 	
 	clear_variable = 70.seat_count
+	clear_variable = 70.previous_election_seat_count
 	clear_variable = 70.previous_election_turnout
 	clear_variable = 70.previous_election_victor_popularity
 	clear_array = 70.previous_election_results
@@ -3212,6 +3260,7 @@ SLO_update_GFX_SLO_to_Europe = {
 	clear_variable = 71.name_token
 	
 	clear_variable = 71.seat_count
+	clear_variable = 71.previous_election_seat_count
 	clear_variable = 71.previous_election_turnout
 	clear_variable = 71.previous_election_victor_popularity
 	clear_array = 71.previous_election_results
@@ -3231,6 +3280,7 @@ SLO_update_GFX_SLO_to_Europe = {
 	clear_variable = 73.name_token
 	
 	clear_variable = 73.seat_count
+	clear_variable = 73.previous_election_seat_count
 	clear_variable = 73.previous_election_turnout
 	clear_variable = 73.previous_election_victor_popularity
 	clear_array = 73.previous_election_results
@@ -3250,6 +3300,7 @@ SLO_update_GFX_SLO_to_Europe = {
 	clear_variable = 664.name_token
 	
 	clear_variable = 664.seat_count
+	clear_variable = 664.previous_election_seat_count
 	clear_variable = 664.previous_election_turnout
 	clear_variable = 664.previous_election_victor_popularity
 	clear_array = 664.previous_election_results
@@ -3692,6 +3743,11 @@ SLO_update_GFX_SLO_to_Europe = {
 }
 
 SLO_get_states_to_campaign_in = {
+	if = {
+		limit = { check_variable = { var = SLO.selected_states_for_campaigns^SLO.party_campaigning_as value = 0 compare = not_equals } }
+		set_variable = { player_state = SLO.selected_states_for_campaigns^SLO.party_campaigning_as }
+	}
+	
 	clear_array = SLO.selected_states_for_campaigns
 	resize_array = { array = SLO.selected_states_for_campaigns size = 7 value = 0 }
 	
@@ -3752,45 +3808,16 @@ SLO_get_states_to_campaign_in = {
 		}
 		
 		#We now have our states - get the weights
-		#Get their populations, divide by x and round to get the weights
+		#Set the weights to their seat count
 		
 		set_variable = { index = 0 }
 		
-		if = {
-			limit = { check_variable = { SLO.parliament_level = 0 } }
+		for_each_scope_loop = {
+			array = states_array
+				
+			set_variable = { PREV.state_weights_array^PREV.index = THIS.seat_count }
 			
-			for_each_scope_loop = {
-				array = states_array
-					
-				set_variable = { PREV.state_weights_array^PREV.index = THIS.state_population_k }
-				divide_variable = { PREV.state_weights_array^PREV.index = 10 }
-				round_variable = PREV.state_weights_array^PREV.index
-				add_to_variable = { PREV.state_weights_array^PREV.index = 1 }
-				
-				add_to_variable = { PREV.index = 1 }
-			}
-		}
-		else = {	
-			for_each_scope_loop = {
-				array = states_array
-
-				set_variable = { total_pop = 0 }
-								
-				for_each_scope_loop = {
-					array = subdivision_states
-					
-					add_to_variable = { PREV.total_pop = THIS.state_population_k }
-				}
-				
-				set_variable = { PREV.state_weights_array^PREV.index = total_pop }
-				divide_variable = { PREV.state_weights_array^PREV.index = 500 }
-				round_variable = PREV.state_weights_array^PREV.index
-				add_to_variable = { PREV.state_weights_array^PREV.index = 2 }
-				
-				add_to_variable = { PREV.index = 1 }
-				
-				clear_variable = total_pop
-			}
+			add_to_variable = { PREV.index = 1 }
 		}
 		
 		clear_variable = index
@@ -3832,6 +3859,9 @@ SLO_get_states_to_campaign_in = {
 		clear_array = states_array
 		clear_array = state_weights_array
 	}
+	
+	set_variable = { SLO.selected_states_for_campaigns^SLO.party_campaigning_as = player_state }
+	clear_variable = player_state
 }
 
 #8-10

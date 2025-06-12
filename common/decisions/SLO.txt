@@ -2247,6 +2247,72 @@ SLO_parliament_decision_category = {
 }
 
 SLO_campaign_season_category = {
+	SLO_countdown_to_election = {
+
+		icon = SWI_swiss_democratic_tradition_campaign
+
+		available = {
+			hidden_trigger = {
+				NOT = { has_country_flag = SLO_campaign_season_underway_flag }
+			}
+		}
+
+		days_mission_timeout = 60
+
+		activation = {
+#			has_country_flag = SLO_campaign_season_underway_flag
+#			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+
+			always = no
+		}
+
+		visible = {
+			
+		}		
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = yes
+
+		timeout_effect = {
+			country_event = { id = slovakia_elections.50 }
+		}
+	}
+	
+	SLO_switch_languages_campaign_category = { 
+
+		ai_will_do = {
+			base = 0
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			
+		}
+		
+		visible = { 
+			
+		}
+		
+		fire_only_once = no
+
+		cost = 0
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			SLO_change_language = yes
+		}
+
+		remove_effect = {
+		}
+	}
 	
 	SLO_communist_campaign = {
 
@@ -2464,14 +2530,14 @@ SLO_campaign_season_category = {
 
 		timeout_effect = {
 			SLO = {
-				#Binomial with 0.60 chance
+				#Binomial with 0.58 chance
 				random_list = {
-					78 = { country_event = { id = slovakia_elections.20 hours = 1 random_hours = 11 } }		#Fantastic
-					259 = { country_event = { id = slovakia_elections.21 hours = 1 random_hours = 11 } }		#Great
-					346 = { country_event = { id = slovakia_elections.22 hours = 1 random_hours = 11 } }		#Good				
-					230 = { country_event = { id = slovakia_elections.23 hours = 1 random_hours = 11 } }		#Mediocre
-					77 = { country_event = { id = slovakia_elections.24 hours = 1 random_hours = 11 } }		#Disappointing
-					10 = { country_event = { id = slovakia_elections.25 hours = 1 random_hours = 11 } }		#Disastrous
+					66 = { country_event = { id = slovakia_elections.20 hours = 1 random_hours = 11 } }		#Fantastic
+					238 = { country_event = { id = slovakia_elections.21 hours = 1 random_hours = 11 } }		#Great
+					344 = { country_event = { id = slovakia_elections.22 hours = 1 random_hours = 11 } }		#Good				
+					249 = { country_event = { id = slovakia_elections.23 hours = 1 random_hours = 11 } }		#Mediocre
+					90 = { country_event = { id = slovakia_elections.24 hours = 1 random_hours = 11 } }		#Disappointing
+					13 = { country_event = { id = slovakia_elections.25 hours = 1 random_hours = 11 } }		#Disastrous
 				}
 			}
 		}
@@ -2511,14 +2577,14 @@ SLO_campaign_season_category = {
 
 		timeout_effect = {
 			SLO = {
-				#Binomial with 0.60 chance
+				#Binomial with 0.58 chance
 				random_list = {
-					78 = { country_event = { id = slovakia_elections.26 hours = 1 random_hours = 11 } }		#Fantastic
-					259 = { country_event = { id = slovakia_elections.27 hours = 1 random_hours = 11 } }		#Great
-					346 = { country_event = { id = slovakia_elections.28 hours = 1 random_hours = 11 } }		#Good				
-					230 = { country_event = { id = slovakia_elections.29 hours = 1 random_hours = 11 } }		#Mediocre
-					77 = { country_event = { id = slovakia_elections.30 hours = 1 random_hours = 11 } }		#Disappointing
-					10 = { country_event = { id = slovakia_elections.31 hours = 1 random_hours = 11 } }		#Disastrous
+					66 = { country_event = { id = slovakia_elections.26 hours = 1 random_hours = 11 } }		#Fantastic
+					238 = { country_event = { id = slovakia_elections.27 hours = 1 random_hours = 11 } }		#Great
+					344 = { country_event = { id = slovakia_elections.28 hours = 1 random_hours = 11 } }		#Good				
+					249 = { country_event = { id = slovakia_elections.29 hours = 1 random_hours = 11 } }		#Mediocre
+					90 = { country_event = { id = slovakia_elections.30 hours = 1 random_hours = 11 } }		#Disappointing
+					13 = { country_event = { id = slovakia_elections.31 hours = 1 random_hours = 11 } }		#Disastrous
 				}
 			}
 		}
@@ -2672,6 +2738,8 @@ SLO_campaign_season_category = {
 						check_variable = { SLO.selected_states_for_campaigns^5 = 111 }
 						check_variable = { SLO.selected_states_for_campaigns^5 = 666 }
 						check_variable = { SLO.selected_states_for_campaigns^5 = 38 }
+						
+						check_variable = { SLO.parliament_level = 0 }
 					}
 				}	
 				
@@ -2773,6 +2841,113 @@ SLO_campaign_season_category = {
 						42 = { country_event = { id = slovakia_elections.49 hours = 1 random_hours = 11 } }		#Disastrous
 					}
 				}
+			}
+		}
+	}
+	
+	SLO_player_campaign_in_state_slovakia = { 
+
+		icon = generic_political_rally
+		
+		state_target = yes
+#		target_root_trigger = {
+#			has_completed_focus = my_focus
+#		}
+		target_array = SLO.election_states
+#		target_trigger = {
+#			FROM = {
+#				is_owned_by = ROOT
+#			}
+#		}
+		
+		on_map_mode = map_and_decisions_view
+
+		allowed = {
+			original_tag = SLO
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+
+		available = {
+			SLO = {
+				NOT = { has_country_flag = SLO_is_campaigning_in_state_flag }
+			}
+		}
+
+		visible = {
+			has_country_flag = SLO_campaign_season_underway_flag
+		}
+		
+		days_remove = 10
+		days_re_enable = 10
+		
+		fire_only_once = no
+
+		cost = 20
+
+		complete_effect = {	
+			SLO = {
+				set_country_flag = SLO_is_campaigning_in_state_flag
+			}
+			
+			set_variable = { SLO.selected_states_for_campaigns^SLO.party_campaigning_as = FROM }
+		}
+		
+		remove_effect={
+			set_variable = { SLO.selected_states_for_campaigns^SLO.party_campaigning_as = FROM }
+			SLO = {
+				if = {
+					limit = { check_variable = { SLO.party_campaigning_as = 1 } }
+					#Binomial with 0.62 chance
+					random_list = {
+						92 = { country_event = { id = slovakia_elections.14 hours = 1 random_hours = 11 } }		#Fantastic
+						281 = { country_event = { id = slovakia_elections.15 hours = 1 random_hours = 11 } }		#Great
+						344 = { country_event = { id = slovakia_elections.16 hours = 1 random_hours = 11 } }		#Good				
+						211 = { country_event = { id = slovakia_elections.17 hours = 1 random_hours = 11 } }		#Mediocre
+						64 = { country_event = { id = slovakia_elections.18 hours = 1 random_hours = 11 } }		#Disappointing
+						8 = { country_event = { id = slovakia_elections.19 hours = 1 random_hours = 11 } }		#Disastrous
+					}
+				}
+				else_if = {
+					limit = { check_variable = { SLO.party_campaigning_as = 2 } }
+					#Binomial with 0.62 chance
+					random_list = {
+						92 = { country_event = { id = slovakia_elections.20 hours = 1 random_hours = 11 } }		#Fantastic
+						281 = { country_event = { id = slovakia_elections.21 hours = 1 random_hours = 11 } }		#Great
+						344 = { country_event = { id = slovakia_elections.22 hours = 1 random_hours = 11 } }		#Good				
+						211 = { country_event = { id = slovakia_elections.23 hours = 1 random_hours = 11 } }		#Mediocre
+						64 = { country_event = { id = slovakia_elections.24 hours = 1 random_hours = 11 } }		#Disappointing
+						8 = { country_event = { id = slovakia_elections.25 hours = 1 random_hours = 11 } }		#Disastrous
+					}
+				}
+				else_if = {
+					limit = { check_variable = { SLO.party_campaigning_as = 3 } }
+					#Binomial with 0.62 chance
+					random_list = {
+						92 = { country_event = { id = slovakia_elections.26 hours = 1 random_hours = 11 } }		#Fantastic
+						281 = { country_event = { id = slovakia_elections.27 hours = 1 random_hours = 11 } }		#Great
+						344 = { country_event = { id = slovakia_elections.28 hours = 1 random_hours = 11 } }		#Good				
+						211 = { country_event = { id = slovakia_elections.29 hours = 1 random_hours = 11 } }		#Mediocre
+						64 = { country_event = { id = slovakia_elections.30 hours = 1 random_hours = 11 } }		#Disappointing
+						8 = { country_event = { id = slovakia_elections.31 hours = 1 random_hours = 11 } }		#Disastrous
+					}
+				}
+				else_if = {
+					limit = { check_variable = { SLO.party_campaigning_as = 4 } }
+					#Binomial with 0.62 chance
+					random_list = {
+						92 = { country_event = { id = slovakia_elections.32 hours = 1 random_hours = 11 } }		#Fantastic
+						281 = { country_event = { id = slovakia_elections.33 hours = 1 random_hours = 11 } }		#Great
+						344 = { country_event = { id = slovakia_elections.34 hours = 1 random_hours = 11 } }		#Good				
+						211 = { country_event = { id = slovakia_elections.35 hours = 1 random_hours = 11 } }		#Mediocre
+						64 = { country_event = { id = slovakia_elections.36 hours = 1 random_hours = 11 } }		#Disappointing
+						8 = { country_event = { id = slovakia_elections.37 hours = 1 random_hours = 11 } }		#Disastrous
+					}
+				}
+				
+				clr_country_flag = SLO_is_campaigning_in_state_flag
 			}
 		}
 	}

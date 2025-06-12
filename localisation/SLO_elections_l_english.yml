@@ -5,7 +5,7 @@
  SLO_election_map_current_selection_header_text:0 "[ElectionMapGetSelectedName]"
  SLO_election_map_state_selected_loc:0 "[?SLO.SLO_electoral_map_selected_state:name_token.GetTokenLocalizedKey]"
  SLO_election_map_current_selection_desc_text:0 "[ElectionMapGetSelectedDesc]"
- SLO_election_map_state_selected_desc_loc:0 "§Y[ElectionMapGetSelectedName]§! with it's [?SLO.SLO_electoral_map_selected_state:seat_count|.0] seats was won by [?SLO.party_names_short_coloured_array^winner.GetTokenLocalizedKey], beating second-place [?SLO.party_names_short_coloured_array^runner_up.GetTokenLocalizedKey] with a margin of [?SLO.SLO_electoral_map_selected_state:previous_election_margin_of_victory|.2]%. Turnout was [?SLO.SLO_electoral_map_selected_state:previous_election_turnout|%] with a total of [GetTotalVoteCountLoc] votes cast."
+ SLO_election_map_state_selected_desc_loc:0 "§Y[ElectionMapGetSelectedName]§! with it's [?SLO.SLO_electoral_map_selected_state:previous_election_seat_count|.0] seats was won by [?SLO.party_names_short_coloured_array^winner.GetTokenLocalizedKey], beating second-place [?SLO.party_names_short_coloured_array^runner_up.GetTokenLocalizedKey] with a margin of [?SLO.SLO_electoral_map_selected_state:previous_election_margin_of_victory|.2]%. Turnout was [?SLO.SLO_electoral_map_selected_state:previous_election_turnout|%] with a total of [GetTotalVoteCountLoc] votes cast."
  SLO_election_map_slovakia_selected_desc_loc:0 "The national election was won by [?SLO.party_names_short_coloured_array^winner.GetTokenLocalizedKey], beating second-place [?SLO.party_names_short_coloured_array^runner_up.GetTokenLocalizedKey] with a margin of [?SLO.SLO_electoral_map_selected_state:previous_election_margin_of_victory|.2]%. Turnout was [?SLO.SLO_electoral_map_selected_state:previous_election_turnout|%] with a total of [GetTotalVoteCountLoc] votes cast."
  SLO_party_results_entry_text:0 "[?SLO.party_names_long_coloured_array^v.GetTokenLocalizedKey]:\nVote Share: [?SLO.SLO_electoral_map_selected_state:previous_election_results^v|2]%\nVote Count: [GetVoteCountLoc]\nSeats won: [?SLO.SLO_electoral_map_selected_state:previous_election_seat_array^v|0]"
  SLO_vote_count_1_digits:0 "[?votes_r_1|.0]"
@@ -130,8 +130,8 @@
  SLO_fascist_party_short_no_colour_LANG_SLO_idea:0 "SdP"
  SLO_fascist_party_short_coloured_LANG_SLO_idea:0 "§FSdP§!"
 
- SLO_fascist_party_long_no_colour_LANG_ENG_idea:0 "Sudenen German Party"
- SLO_fascist_party_long_coloured_LANG_ENG_idea:0 "§FSudenen German Party§!"
+ SLO_fascist_party_long_no_colour_LANG_ENG_idea:0 "Sudeten German Party"
+ SLO_fascist_party_long_coloured_LANG_ENG_idea:0 "§FSudeten German Party§!"
  SLO_fascist_party_short_no_colour_LANG_ENG_idea:0 "SGP"
  SLO_fascist_party_short_coloured_LANG_ENG_idea:0 "§FSGP§!"
 
@@ -576,6 +576,30 @@
  SLO_NAME_elections_europe_214_LANG_SLO_idea:0 "Barents"
  SLO_NAME_elections_europe_214_LANG_ENG_idea:0 "Barents"
  
+ SLO_countdown_to_election:0 "The [GetYear] Election"
+ SLO_countdown_to_election_desc:0 ""
+ SLO_switch_languages_campaign_category:0 "Switch language to [SLO.SLOGetLanguageToSwitchTo]"
+ SLO_switch_languages_campaign_category_desc:0 ""
+ 
+ SLO_communist_campaign:0 "[?SLO.party_names_short_coloured_array^0.GetTokenLocalizedKey] Campaign"
+ SLO_communist_campaign_desc:0 ""
+ SLO_soc_dem_campaign:0 "[?SLO.party_names_short_coloured_array^1.GetTokenLocalizedKey] Campaign"
+ SLO_soc_dem_campaign_desc:0 ""
+ SLO_liberal_campaign:0 "[?SLO.party_names_short_coloured_array^2.GetTokenLocalizedKey] Campaign"
+ SLO_liberal_campaign_desc:0 ""
+ SLO_conservative_campaign:0 "[?SLO.party_names_short_coloured_array^3.GetTokenLocalizedKey] Campaign"
+ SLO_conservative_campaign_desc:0 ""
+ SLO_nationalist_campaign:0 "[?SLO.party_names_short_coloured_array^4.GetTokenLocalizedKey] Campaign"
+ SLO_nationalist_campaign_desc:0 ""
+ SLO_fascist_campaign:0 "[?SLO.party_names_short_coloured_array^5.GetTokenLocalizedKey] Campaign"
+ SLO_fascist_campaign_desc:0 ""
+ SLO_non_aligned_other_campaign:0 "[?SLO.party_names_short_coloured_array^6.GetTokenLocalizedKey] Campaign"
+ SLO_non_aligned_other_campaign_desc:0 ""
+ 
+ SLO_player_campaign_in_state_slovakia:0 "[?SLO.party_names_short_coloured_array^SLO.party_campaigning_as.GetTokenLocalizedKey] Campaign in [?FROM.name_token.GetTokenLocalizedKey]"
+ SLO_player_campaign_in_state_slovakia_desc:0 "[?FROM.name_token.GetTokenLocalizedKey] has §Y[?FROM.seat_count|.0]§! seats up for grabs. Current polling shows the following results:\n\n[?SLO.party_names_short_coloured_array^0.GetTokenLocalizedKey]§W: [?FROM.party_popularity^0|.1]%§!\n[?SLO.party_names_short_coloured_array^1.GetTokenLocalizedKey]§W: [?FROM.party_popularity^1|.1]%§!\n[?SLO.party_names_short_coloured_array^2.GetTokenLocalizedKey]§W: [?FROM.party_popularity^2|.1]%§!\n[?SLO.party_names_short_coloured_array^3.GetTokenLocalizedKey]§W: [?FROM.party_popularity^3|.1]%§!\n[?SLO.party_names_short_coloured_array^4.GetTokenLocalizedKey]§W: [?FROM.party_popularity^4|.1]%§!\n[?SLO.party_names_short_coloured_array^5.GetTokenLocalizedKey]§W: [?FROM.party_popularity^5|.1]%§!\n[?SLO.party_names_short_coloured_array^6.GetTokenLocalizedKey]§W: [?FROM.party_popularity^6|.1]%§!"
+ SLO_is_campaigning_in_state_flag:0 "A [?SLO.party_names_short_coloured_array^SLO.party_campaigning_as.GetTokenLocalizedKey] campaign in ongoing."
+ 
  slovakia_elections.1.title:0 "The Campaign Season Begins!"
  slovakia_elections.1.desc:0 ""
  slovakia_elections.1.a:0 "Campaign as the §0Social Democrats§!"
@@ -829,3 +853,7 @@
  slovakia_elections.49.title:0 "Disastrous [?SLO.party_names_short_no_colour_array^6.GetTokenLocalizedKey] Campaign in [GetNonAlignedOtherCampaignStateName]"
  slovakia_elections.49.desc:0 "In a disastrous turn of events for [?SLO.party_names_short_no_colour_array^6.GetTokenLocalizedKey], a series of blunders from their local candidates and a disappointing ground game in [GetNonAlignedOtherCampaignStateName] has resulted in them losing a couple points in the polls. Party leaders are scrambling to figure out what went wrong and rectify it as soon as possible."
  slovakia_elections.49.a:0 "AHAHAHAHAHAHAHAHA"
+ 
+ slovakia_elections.50.title:0 "The [GetYear] [SLO.GetAdjective] Elections"
+ slovakia_elections.50.desc:0 "After months of intense campaigning, the people of [SLO.GetName] went to the polls to make their voices heard. The results of the election are coming in now..."
+ slovakia_elections.50.a:0 "[SLO.GetName] holds it's breath"

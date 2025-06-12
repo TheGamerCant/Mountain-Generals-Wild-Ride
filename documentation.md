@@ -35,6 +35,7 @@ SLO.parliament_frame_array			-> Variable
 <state>.subdivision_states			-> Array, which states are part of the subdivision
 
 SLO.previous_election_turnout			-> Variable, turnout in the country. Turnout was mandatory, so between 85-95
+SLO.previous_election_states			-> Array, states that took part in the last election
 SLO.previous_election_results			-> Array, percentage vote of each party at the last election
 SLO.previous_election_votes			-> Array, vote count of each party at the last election
 SLO.previous_election_party_position		-> Array, position of each party at the last election results. Index = party, value = position
@@ -49,10 +50,10 @@ SLO.previous_election_date			-> Variable, date of the last election
 <state>.previous_election_party_position	-> Array, position of each party at the last election results. Index = party, value = position
 <state>.previous_election_position_party	-> Array, position of each party at the last election results. Index = position, value = party
 <state>.previous_election_margin_of_victory	-> Variable, gap between first and second place in a state
-<state>.previous_election_victor_popularity	-> Variable, between 00-97. Floor divide by 14 to get the victor, modulo 14 to get the margin of victory (2% increments)
+<state>.previous_election_victor_popularity	-> Variable, between 00-97. Floor divide by 14 to get the victor, modulo 14 to get the margin of victory
 <state>.previous_election_seat_array		-> Array, how many seats each party got in this state at the last election
 <state>.previous_election_total_votes		-> Variable, total no. of votes cast in this state
-
+<state>.previous_election_seat_count		-> Variable, how many seats did this state have in the last election
 
 SLO_initialise_parliament			-> Effect, initialises parliament
 SLO_divide_seats				-> Effect, gets seat counts for each state / subdivision
@@ -66,6 +67,7 @@ SLO_update_parliament_position_gfx		-> Effect, updates the parliament dots posit
 SLO_update_government_opposition_seat_counts	-> Effect, gets how many parliamentarians are in government vs opposition
 
 SLO.SLO_electoral_map_selected_state		-> Variable, set to SLO for national results or to <state> for state results in the GUI
+SLO.SLO_electoral_map_gui_selected_results	-> Variable, set to SLO for national results or to 0-6 for party results
 
 #Campaigns
 SLO.party_campaigning_as			-> Variable, which party are we campaigning for?

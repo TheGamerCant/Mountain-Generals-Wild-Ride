@@ -36,6 +36,80 @@ guiTypes = {
 			}
 		}
 		
+		
+		@button_x_0 = 28
+		@button_x_1 = 262
+		
+		@button_y_0 = 480
+		@button_y_1 = 525
+		@button_y_2 = 570
+		@button_y_3 = 615
+		
+		
+		buttonType = {
+			name = "national_results_button"
+			position = { x = @button_x_0 y = @button_y_0 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonText = "national_results_button_text"
+			buttonFont = "cg_16b"
+		}
+		
+		buttonType = {
+			name = "party_results_0_button"
+			position = { x = @button_x_0 y = @button_y_1 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonText = "party_results_0_button_text"
+			buttonFont = "cg_16b"
+		}
+		
+		buttonType = {
+			name = "party_results_1_button"
+			position = { x = @button_x_0 y = @button_y_2 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonText = "party_results_1_button_text"
+			buttonFont = "cg_16b"
+		}
+		
+		buttonType = {
+			name = "party_results_2_button"
+			position = { x = @button_x_0 y = @button_y_3 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonText = "party_results_2_button_text"
+			buttonFont = "cg_16b"
+		}
+		
+		buttonType = {
+			name = "party_results_3_button"
+			position = { x = @button_x_1 y = @button_y_0 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonText = "party_results_3_button_text"
+			buttonFont = "cg_16b"
+		}
+		
+		buttonType = {
+			name = "party_results_4_button"
+			position = { x = @button_x_1 y = @button_y_1 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonText = "party_results_4_button_text"
+			buttonFont = "cg_16b"
+		}
+		
+		buttonType = {
+			name = "party_results_5_button"
+			position = { x = @button_x_1 y = @button_y_2 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonText = "party_results_5_button_text"
+			buttonFont = "cg_16b"
+		}
+		
+		buttonType = {
+			name = "party_results_6_button"
+			position = { x = @button_x_1 y = @button_y_3 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonText = "party_results_6_button_text"
+			buttonFont = "cg_16b"
+		}
+		
 #		containerWindowType = {
 #			name = "SLO_election_map_bg"
 #			size = { width = 828 height = 435 }

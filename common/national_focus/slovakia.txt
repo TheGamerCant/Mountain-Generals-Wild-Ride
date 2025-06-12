@@ -5898,7 +5898,7 @@ focus_tree = {
 		icon = GFX_goal_SLO_hold_an_election
 		x = 1
 		y = 1
-		cost = 5
+		cost = 4
 		
 		cancelable = no
 		
@@ -5908,7 +5908,7 @@ focus_tree = {
 
 		select_effect = {
 			SLO_initialise_parliament = yes
-			country_event = { id = slovakia_elections.7 days = 2 random_days = 7 }
+			country_event = { id = slovakia_elections.7 days = 2 random_days = 3 }
 		}
 
 		available = {
@@ -5919,7 +5919,16 @@ focus_tree = {
 		
 
 		completion_reward = {
-			country_event = { id = slovakia_elections.1 hours = 4 }
+			hidden_effect = {
+				SLO_start_campaign = yes
+			}
+			effect_tooltip = {
+				country_event = { id = slovakia_elections.1 hours = 4 }
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = 60
 		}
 	}
 	

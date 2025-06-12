@@ -43,12 +43,12 @@ scripted_gui = {
 
 		dynamic_lists={
 			state_progressbar_gridbox={
-				array = SLO.election_states
+				array = SLO.previous_election_states
 				change_scope = yes
 				entry_container = state_progressbar_entry
 			}
 			state_overlay_gridbox={
-				array = SLO.election_states
+				array = SLO.previous_election_states
 				change_scope = yes
 				entry_container = state_overlay_entry
 			}
@@ -82,6 +82,89 @@ scripted_gui = {
 				else={
 					set_variable = { SLO.SLO_electoral_map_selected_state = v }
 				}
+			}
+			
+			national_results_button_click = {
+				set_variable = { SLO.SLO_electoral_map_gui_selected_results = SLO }
+				
+				SLO_update_state_colour_map = yes
+			}
+			party_results_0_button_click = {
+				if={
+					limit = { check_variable = { SLO.SLO_electoral_map_gui_selected_results = 0 } }
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = SLO }
+				}
+				else={
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = 0 }
+				}
+				
+				SLO_update_state_colour_map = yes
+			}
+			party_results_1_button_click = {
+				if={
+					limit = { check_variable = { SLO.SLO_electoral_map_gui_selected_results = 1 } }
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = SLO }
+				}
+				else={
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = 1 }
+				}
+				
+				SLO_update_state_colour_map = yes
+			}
+			party_results_2_button_click = {
+				if={
+					limit = { check_variable = { SLO.SLO_electoral_map_gui_selected_results = 2 } }
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = SLO }
+				}
+				else={
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = 2 }
+				}
+				
+				SLO_update_state_colour_map = yes
+			}
+			party_results_3_button_click = {
+				if={
+					limit = { check_variable = { SLO.SLO_electoral_map_gui_selected_results = 3 } }
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = SLO }
+				}
+				else={
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = 3 }
+				}
+				
+				SLO_update_state_colour_map = yes
+			}
+			party_results_4_button_click = {
+				if={
+					limit = { check_variable = { SLO.SLO_electoral_map_gui_selected_results = 4 } }
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = SLO }
+				}
+				else={
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = 4 }
+				}
+				
+				SLO_update_state_colour_map = yes
+			}
+			party_results_5_button_click = {
+				if={
+					limit = { check_variable = { SLO.SLO_electoral_map_gui_selected_results = 5 } }
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = SLO }
+				}
+				else={
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = 5 }
+				}
+				
+				SLO_update_state_colour_map = yes
+			}
+			party_results_6_button_click = {
+				if={
+					limit = { check_variable = { SLO.SLO_electoral_map_gui_selected_results = 6 } }
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = SLO }
+				}
+				else={
+					set_variable = { SLO.SLO_electoral_map_gui_selected_results = 6 }
+				}
+				
+				SLO_update_state_colour_map = yes
 			}
 			
 			close_button_click = {

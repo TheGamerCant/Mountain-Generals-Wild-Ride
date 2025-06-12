@@ -470,3 +470,16 @@ defined_text = {
 		localization_key = "SLO_non_aligned_other_campaign_state_name_loc"
 	}
 }
+
+defined_text = {
+	name = SLOGetLanguageToSwitchTo
+	text = {
+		trigger = {	
+			check_variable = { SLO.language = 0 }
+		}
+		localization_key = "English"
+	}
+	text = {
+		localization_key = "Slovak"
+	}
+}

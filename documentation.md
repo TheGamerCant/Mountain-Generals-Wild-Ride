@@ -10,6 +10,8 @@ SLO.seat_array					-> Array, how many seats does each party have?
 SLO.seats_needed_for_majority			-> Variable, how many seats are needed for a majority?
 SLO.parties_in_government			-> Array, which parties are in government?
 SLO.parties_in_opposition			-> Array, which parties are in opposition?
+SLO.parties_in_government_ordered		-> Array, which parties are in government ranked by vote count
+SLO.parties_in_opposition_ordered		-> Array, which parties are in opposition ranked by vote count
 SLO.government_seat_count			-> Variable, total government seat count
 SLO.opposition_seat_count			-> Variable, total opposition seat count
 
@@ -38,8 +40,10 @@ SLO.previous_election_turnout			-> Variable, turnout in the country. Turnout was
 SLO.previous_election_states			-> Array, states that took part in the last election
 SLO.previous_election_results			-> Array, percentage vote of each party at the last election
 SLO.previous_election_votes			-> Array, vote count of each party at the last election
-SLO.previous_election_party_position		-> Array, position of each party at the last election results. Index = party, value = position
-SLO.previous_election_position_party		-> Array, position of each party at the last election results. Index = position, value = party
+SLO.previous_election_party_position		-> Array, position of each party at the last election results by vote count. Index = party, value = position
+SLO.previous_election_position_party		-> Array, position of each party at the last election results by vote count. Index = position, value = party
+SLO.previous_election_party_position_seats	-> Array, position of each party at the last election results by seat count. Index = party, value = position
+SLO.previous_election_position_party_seats	-> Array, position of each party at the last election results by seat count. Index = position, value = party
 SLO.previous_election_margin_of_victory		-> Variable, gap between first and second place nationally
 SLO.previous_election_seat_array		-> Array, how many seats each party got nationally at the last election
 SLO.previous_election_total_votes		-> Variable, total no. of votes cast nationally
@@ -69,7 +73,12 @@ SLO_update_government_opposition_seat_counts	-> Effect, gets how many parliament
 SLO.SLO_electoral_map_selected_state		-> Variable, set to SLO for national results or to <state> for state results in the GUI
 SLO.SLO_electoral_map_gui_selected_results	-> Variable, set to SLO for national results or to 0-6 for party results
 
-#Campaigns
+###Campaigns###
+
 SLO.party_campaigning_as			-> Variable, which party are we campaigning for?
 SLO.selected_states_for_campaigns		-> Array, which state has been selected per party for campaigning
 SLO_campaign_season_underway_flag		-> Flag, are the campaign mechanics active?
+
+###Focuses###
+
+SLO.economy_focuses_array 			-> Array, which economic focuses are available to select

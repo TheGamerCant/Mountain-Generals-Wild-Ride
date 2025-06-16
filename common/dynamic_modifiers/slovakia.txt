@@ -78,6 +78,23 @@ SLO_autarkic_economy_dyanamic_modifier = {
 	global_building_slots  = SLO_economy_dm_global_building_slots
 }
 
+SLO_democratic_economy_dynamic_modifier = {
+	icon = GFX_idea_idea_ARG_public_works_investment
+	enable = { always = yes }
+	
+	stability_factor = SLO_economy_dm_stability_factor
+	political_power_cost = SLO_economy_dm_political_power_cost
+	consumer_goods_factor = SLO_economy_dm_consumer_goods_factor
+	production_speed_buildings_factor = SLO_economy_dm_production_speed_buildings_factor
+	production_factory_efficiency_gain_factor = SLO_economy_dm_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = SLO_economy_dm_production_factory_max_efficiency_factor
+	industrial_capacity_factory = SLO_economy_dm_industrial_capacity_factory
+	industrial_capacity_dockyard = SLO_economy_dm_industrial_capacity_dockyard
+	research_speed_factor = SLO_economy_dm_research_speed_factor
+	production_speed_arms_factory_factor = SLO_economy_dm_production_speed_arms_factory_factor
+}
+
+
 SLO_army_dynamic_modifier = {
 	icon = GFX_idea_SLO_generic_army
 	enable = { always = yes }

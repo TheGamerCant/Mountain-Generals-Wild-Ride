@@ -273,3 +273,170 @@ SLO_remove_skewer_the_eagle_modifier = {
 		remove_ideas = SLO_skewer_the_eagle_idea_1
 	}
 }
+
+SLO_get_valid_economy_focuses = {
+	clear_array = SLO.economy_focuses_array
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_nationalisation_of_critical_industries } 
+			has_completed_focus = SLO_towards_a_socialist_economy
+			
+			OR = {
+				SLO_soc_dem_majority_trigger = yes
+				AND = {
+					SLO_communists_in_government_trigger = yes
+					SLO_soc_dems_in_government_trigger = yes
+				}
+			}
+			SLO_has_a_majority_government_trigger = yes
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 1 }		#SLO_nationalisation_of_critical_industries
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_towards_a_socialist_economy } 
+			
+			OR = {
+				SLO_soc_dem_majority_trigger = yes
+				AND = {
+					SLO_communists_in_government_trigger = yes
+					SLO_soc_dems_in_government_trigger = yes
+				}
+			}
+			SLO_has_a_majority_government_trigger = yes
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 2 }		#SLO_towards_a_socialist_economy
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_loosen_union_restrictions } 
+			OR = {
+				has_completed_focus = SLO_towards_a_socialist_economy
+				has_completed_focus = SLO_improve_working_conditions
+			}
+			
+			OR = {
+				SLO_soc_dems_in_government_trigger = yes
+				SLO_liberals_in_government_trigger = yes
+			}
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 3 }		#SLO_loosen_union_restrictions
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_expand_the_social_safety_net } 
+			has_completed_focus = SLO_improve_working_conditions
+			
+			OR = {
+				SLO_soc_dems_in_government_trigger = yes
+				SLO_liberals_in_government_trigger = yes
+			}
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 4 }		#SLO_expand_the_social_safety_net
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_improve_working_conditions } 
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 5 }		#SLO_improve_working_conditions
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_ease_of_doing_business_reforms } 
+			has_completed_focus = SLO_cut_import_tariffs
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 6 }		#SLO_ease_of_doing_business_reforms
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_cut_import_tariffs } 
+			has_completed_focus = SLO_cut_bureaucratic_red_tape
+			
+			NOT = { SLO_nationalists_in_government_trigger = yes }
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 7 }		#SLO_cut_import_tariffs
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_prioritize_small_businesses } 
+			has_completed_focus = SLO_protectionism
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 8 }		#SLO_prioritize_small_businesses
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_protectionism } 
+			OR = {
+					has_completed_focus = SLO_cut_bureaucratic_red_tape
+					has_completed_focus = SLO_farming_subsidies
+			}
+			
+			NOT = { SLO_liberals_in_government_trigger = yes }
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 9 }		#SLO_protectionism
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_cut_bureaucratic_red_tape } 
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 10 }		#SLO_cut_bureaucratic_red_tape
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_farming_subsidies } 
+			
+			NOT = { SLO_liberals_in_government_trigger = yes }
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 11 }		#SLO_farming_subsidies
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_expand_arms_exports } 
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 12 }		#SLO_expand_arms_exports
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_infrastructure_focus } 
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 13 }		#SLO_infrastructure_focus
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_new_research_grants } 
+			has_completed_focus = SLO_expand_the_university_of_bratislava
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 14 }		#SLO_new_research_grants
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_expand_the_university_of_bratislava } 
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 15 }		#SLO_expand_the_university_of_bratislava
+	}
+}

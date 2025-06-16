@@ -1351,6 +1351,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = { 
@@ -1379,6 +1381,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = { 
@@ -1407,6 +1411,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = { 
@@ -1435,6 +1441,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 
@@ -1472,6 +1480,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = { 
@@ -1500,6 +1510,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = { 
@@ -1528,6 +1540,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = { 
@@ -1556,6 +1570,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 
@@ -1593,6 +1609,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = { 
@@ -1621,6 +1639,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = { 
@@ -1649,6 +1669,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = { 
@@ -1677,6 +1699,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 
@@ -1714,6 +1738,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = { 
@@ -1742,6 +1768,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = { 
@@ -1770,6 +1798,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = { 
@@ -1798,6 +1828,8 @@ country_event = {
 		SLO_update_government_opposition_seat_counts = yes
 		SLO_update_parliament_position_gfx = yes
 		SLO_clear_government_majority_minority_flags = yes
+
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 #Choose threshold
@@ -1866,7 +1898,7 @@ country_event = {
 			THIS_get_increase_var_fantastic_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^0 = {
-				add_to_variable = { party_popularity^0 = PREV.incr }
+				multiply_variable = { party_popularity^0 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -1897,7 +1929,7 @@ country_event = {
 			THIS_get_increase_var_great_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^0 = {
-				add_to_variable = { party_popularity^0 = PREV.incr }
+				multiply_variable = { party_popularity^0 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -1928,7 +1960,7 @@ country_event = {
 			THIS_get_increase_var_good_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^0 = {
-				add_to_variable = { party_popularity^0 = PREV.incr }
+				multiply_variable = { party_popularity^0 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -1959,7 +1991,7 @@ country_event = {
 			THIS_get_increase_var_mediocre_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^0 = {
-				add_to_variable = { party_popularity^0 = PREV.incr }
+				multiply_variable = { party_popularity^0 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -1990,7 +2022,7 @@ country_event = {
 			THIS_get_increase_var_disappointing_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^0 = {
-				add_to_variable = { party_popularity^0 = PREV.incr }
+				multiply_variable = { party_popularity^0 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2021,7 +2053,7 @@ country_event = {
 			THIS_get_increase_var_disastrous_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^0 = {
-				add_to_variable = { party_popularity^0 = PREV.incr }
+				multiply_variable = { party_popularity^0 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2052,7 +2084,7 @@ country_event = {
 			THIS_get_increase_var_fantastic_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^1 = {
-				add_to_variable = { party_popularity^1 = PREV.incr }
+				multiply_variable = { party_popularity^1 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2069,6 +2101,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 1 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2098,7 +2132,7 @@ country_event = {
 			THIS_get_increase_var_great_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^1 = {
-				add_to_variable = { party_popularity^1 = PREV.incr }
+				multiply_variable = { party_popularity^1 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2115,6 +2149,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 1 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2144,7 +2180,7 @@ country_event = {
 			THIS_get_increase_var_good_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^1 = {
-				add_to_variable = { party_popularity^1 = PREV.incr }
+				multiply_variable = { party_popularity^1 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2161,6 +2197,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 1 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2190,7 +2228,7 @@ country_event = {
 			THIS_get_increase_var_mediocre_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^1 = {
-				add_to_variable = { party_popularity^1 = PREV.incr }
+				multiply_variable = { party_popularity^1 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2207,6 +2245,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 1 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2236,7 +2276,7 @@ country_event = {
 			THIS_get_increase_var_disappointing_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^1 = {
-				add_to_variable = { party_popularity^1 = PREV.incr }
+				multiply_variable = { party_popularity^1 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2253,6 +2293,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 1 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2282,7 +2324,7 @@ country_event = {
 			THIS_get_increase_var_disastrous_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^1 = {
-				add_to_variable = { party_popularity^1 = PREV.incr }
+				multiply_variable = { party_popularity^1 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2299,6 +2341,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 1 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2328,7 +2372,7 @@ country_event = {
 			THIS_get_increase_var_fantastic_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^2 = {
-				add_to_variable = { party_popularity^2 = PREV.incr }
+				multiply_variable = { party_popularity^2 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2345,6 +2389,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 2 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2374,7 +2420,7 @@ country_event = {
 			THIS_get_increase_var_great_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^2 = {
-				add_to_variable = { party_popularity^2 = PREV.incr }
+				multiply_variable = { party_popularity^2 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2391,6 +2437,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 2 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2420,7 +2468,7 @@ country_event = {
 			THIS_get_increase_var_good_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^2 = {
-				add_to_variable = { party_popularity^2 = PREV.incr }
+				multiply_variable = { party_popularity^2 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2437,6 +2485,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 2 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2466,7 +2516,7 @@ country_event = {
 			THIS_get_increase_var_mediocre_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^2 = {
-				add_to_variable = { party_popularity^2 = PREV.incr }
+				multiply_variable = { party_popularity^2 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2483,6 +2533,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 2 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2512,7 +2564,7 @@ country_event = {
 			THIS_get_increase_var_disappointing_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^2 = {
-				add_to_variable = { party_popularity^2 = PREV.incr }
+				multiply_variable = { party_popularity^2 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2529,6 +2581,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 2 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2558,7 +2612,7 @@ country_event = {
 			THIS_get_increase_var_disastrous_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^2 = {
-				add_to_variable = { party_popularity^2 = PREV.incr }
+				multiply_variable = { party_popularity^2 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2575,6 +2629,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 2 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2604,7 +2660,7 @@ country_event = {
 			THIS_get_increase_var_fantastic_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^3 = {
-				add_to_variable = { party_popularity^3 = PREV.incr }
+				multiply_variable = { party_popularity^3 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2621,6 +2677,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 3 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2650,7 +2708,7 @@ country_event = {
 			THIS_get_increase_var_great_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^3 = {
-				add_to_variable = { party_popularity^3 = PREV.incr }
+				multiply_variable = { party_popularity^3 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2667,6 +2725,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 3 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2696,7 +2756,7 @@ country_event = {
 			THIS_get_increase_var_good_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^3 = {
-				add_to_variable = { party_popularity^3 = PREV.incr }
+				multiply_variable = { party_popularity^3 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2713,6 +2773,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 3 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2742,7 +2804,7 @@ country_event = {
 			THIS_get_increase_var_mediocre_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^3 = {
-				add_to_variable = { party_popularity^3 = PREV.incr }
+				multiply_variable = { party_popularity^3 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2759,6 +2821,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 3 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2788,7 +2852,7 @@ country_event = {
 			THIS_get_increase_var_disappointing_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^3 = {
-				add_to_variable = { party_popularity^3 = PREV.incr }
+				multiply_variable = { party_popularity^3 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2805,6 +2869,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 3 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2834,7 +2900,7 @@ country_event = {
 			THIS_get_increase_var_disastrous_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^3 = {
-				add_to_variable = { party_popularity^3 = PREV.incr }
+				multiply_variable = { party_popularity^3 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2851,6 +2917,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 3 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2880,7 +2948,7 @@ country_event = {
 			THIS_get_increase_var_fantastic_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^4 = {
-				add_to_variable = { party_popularity^4 = PREV.incr }
+				multiply_variable = { party_popularity^4 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2897,6 +2965,7 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 4 }
 		}
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2926,7 +2995,7 @@ country_event = {
 			THIS_get_increase_var_great_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^4 = {
-				add_to_variable = { party_popularity^4 = PREV.incr }
+				multiply_variable = { party_popularity^4 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2943,6 +3012,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 4 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -2954,6 +3025,8 @@ country_event = {
 		trigger = {
 			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 }
 
@@ -2972,7 +3045,7 @@ country_event = {
 			THIS_get_increase_var_good_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^4 = {
-				add_to_variable = { party_popularity^4 = PREV.incr }
+				multiply_variable = { party_popularity^4 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -2989,6 +3062,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 4 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -3018,7 +3093,7 @@ country_event = {
 			THIS_get_increase_var_mediocre_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^4 = {
-				add_to_variable = { party_popularity^4 = PREV.incr }
+				multiply_variable = { party_popularity^4 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3035,6 +3110,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 4 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -3064,7 +3141,7 @@ country_event = {
 			THIS_get_increase_var_disappointing_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^4 = {
-				add_to_variable = { party_popularity^4 = PREV.incr }
+				multiply_variable = { party_popularity^4 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3081,6 +3158,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 4 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -3110,7 +3189,7 @@ country_event = {
 			THIS_get_increase_var_disastrous_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^4 = {
-				add_to_variable = { party_popularity^4 = PREV.incr }
+				multiply_variable = { party_popularity^4 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3127,6 +3206,8 @@ country_event = {
 		trigger = {
 			check_variable = { SLO.party_campaigning_as = 4 }
 		}
+		
+		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 
 	option = { 
@@ -3156,7 +3237,7 @@ country_event = {
 			THIS_get_increase_var_fantastic_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^5 = {
-				add_to_variable = { party_popularity^5 = PREV.incr }
+				multiply_variable = { party_popularity^5 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3187,7 +3268,7 @@ country_event = {
 			THIS_get_increase_var_great_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^5 = {
-				add_to_variable = { party_popularity^5 = PREV.incr }
+				multiply_variable = { party_popularity^5 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3218,7 +3299,7 @@ country_event = {
 			THIS_get_increase_var_good_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^5 = {
-				add_to_variable = { party_popularity^5 = PREV.incr }
+				multiply_variable = { party_popularity^5 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3249,7 +3330,7 @@ country_event = {
 			THIS_get_increase_var_mediocre_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^5 = {
-				add_to_variable = { party_popularity^5 = PREV.incr }
+				multiply_variable = { party_popularity^5 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3280,7 +3361,7 @@ country_event = {
 			THIS_get_increase_var_disappointing_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^5 = {
-				add_to_variable = { party_popularity^5 = PREV.incr }
+				multiply_variable = { party_popularity^5 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3311,7 +3392,7 @@ country_event = {
 			THIS_get_increase_var_disastrous_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^5 = {
-				add_to_variable = { party_popularity^5 = PREV.incr }
+				multiply_variable = { party_popularity^5 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3342,7 +3423,7 @@ country_event = {
 			THIS_get_increase_var_fantastic_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^6 = {
-				add_to_variable = { party_popularity^6 = PREV.incr }
+				multiply_variable = { party_popularity^6 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3373,7 +3454,7 @@ country_event = {
 			THIS_get_increase_var_great_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^6 = {
-				add_to_variable = { party_popularity^6 = PREV.incr }
+				multiply_variable = { party_popularity^6 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3404,7 +3485,7 @@ country_event = {
 			THIS_get_increase_var_good_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^6 = {
-				add_to_variable = { party_popularity^6 = PREV.incr }
+				multiply_variable = { party_popularity^6 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3435,7 +3516,7 @@ country_event = {
 			THIS_get_increase_var_mediocre_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^6 = {
-				add_to_variable = { party_popularity^6 = PREV.incr }
+				multiply_variable = { party_popularity^6 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3466,7 +3547,7 @@ country_event = {
 			THIS_get_increase_var_disappointing_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^6 = {
-				add_to_variable = { party_popularity^6 = PREV.incr }
+				multiply_variable = { party_popularity^6 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			
@@ -3497,7 +3578,7 @@ country_event = {
 			THIS_get_increase_var_disastrous_campaign = yes
 			
 			var:SLO.selected_states_for_campaigns^6 = {
-				add_to_variable = { party_popularity^6 = PREV.incr }
+				multiply_variable = { party_popularity^6 = PREV.incr }
 				STATE_set_popularities_to_100 = yes
 			}
 			

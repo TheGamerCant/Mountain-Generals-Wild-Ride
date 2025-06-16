@@ -42,6 +42,12 @@ defined_text = {
 		}
 		localization_key = "SLO_autarkic_economy_dyanamic_modifier"
 	}
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = SLO_democratic_economy_dynamic_modifier }
+		}
+		localization_key = "SLO_democratic_economy_dynamic_modifier"
+	}
 }
 
 defined_text = {
@@ -136,7 +142,16 @@ defined_text = {
 defined_text = {
 	name = ElectionMapTTDelayed
 	text = {
-		localization_key = "ElectionMapTTDelayed_loc"
+		trigger = {
+			check_variable = { SLO.SLO_electoral_map_gui_selected_results = SLO }
+		}
+		localization_key = "ElectionMapTTDelayed_loc_SLO"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { party = SLO.SLO_electoral_map_gui_selected_results }
+		}
+		localization_key = "ElectionMapTTDelayed_loc_party"
 	}
 }
 defined_text = {
@@ -398,7 +413,7 @@ defined_text = {
 	name = GetMajorityOrMinorityGov
 	text = {
 		trigger = {	
-			check_variable = { var = SLO.government_seat_count value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+			SLO_has_a_majority_government_trigger = yes
 		}
 		localization_key = "SLO_majority_loc"
 	}
@@ -481,5 +496,17 @@ defined_text = {
 	}
 	text = {
 		localization_key = "Slovak"
+	}
+}
+
+defined_text = {
+	name = SLOGetParliamentDotTT
+
+	text = {
+		trigger = {
+			set_temp_variable = { party = v }
+			subtract_from_temp_variable = { party = 1 }
+		}
+		localization_key = "SLO_parliament_dot_tt"
 	}
 }

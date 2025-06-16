@@ -1,7 +1,9 @@
 ﻿l_english:
  state_overlay_entry_button_tt:0 "[?v:name_token.GetTokenLocalizedKey]"
  state_overlay_entry_button_tt_delayed:0 "[ElectionMapTTDelayed]"
- ElectionMapTTDelayed_loc:0 "State: [?v]\nVictory: [?v:previous_election_victor_popularity]\nTurnout: [?v:previous_election_turnout|.3]"
+ ElectionMapTTDelayed_loc_SLO:0 "[?v:name_token.GetTokenLocalizedKey] was won by [?SLO.party_names_long_coloured_array^v:previous_election_position_party^0.GetTokenLocalizedKey] with a margin of victory of §Y[?v:previous_election_margin_of_victory|.2]%§!."
+ ElectionMapTTDelayed_loc_party:0 "The [?SLO.party_names_long_coloured_array^party.GetTokenLocalizedKey] got §Y[?v:previous_election_results^party|.2]%§! of the vote in [?v:name_token.GetTokenLocalizedKey]."
+ 
  SLO_election_map_current_selection_header_text:0 "[ElectionMapGetSelectedName]"
  SLO_election_map_state_selected_loc:0 "[?SLO.SLO_electoral_map_selected_state:name_token.GetTokenLocalizedKey]"
  SLO_election_map_current_selection_desc_text:0 "[ElectionMapGetSelectedDesc]"
@@ -19,11 +21,29 @@
  SLO_vote_count_9_digits:0 "[?votes_r_9|.0][?votes_r_8|.0][?votes_r_7|.0],[?votes_r_6|.0][?votes_r_5|.0][?votes_r_4|.0],[?votes_r_3|.0][?votes_r_2|.0][?votes_r_1|.0]"
  SLO_vote_count_10_digits:0 "[?votes_r_10|.0],[?votes_r_9|.0][?votes_r_8|.0][?votes_r_7|.0],[?votes_r_6|.0][?votes_r_5|.0][?votes_r_4|.0],[?votes_r_3|.0][?votes_r_2|.0][?votes_r_1|.0]"
  
+ national_results_button_text:0 "National Results"
+ party_results_0_button_text:0 "[?SLO.party_names_short_coloured_array^0.GetTokenLocalizedKey] Results"
+ party_results_1_button_text:0 "[?SLO.party_names_short_coloured_array^1.GetTokenLocalizedKey] Results"
+ party_results_2_button_text:0 "[?SLO.party_names_short_coloured_array^2.GetTokenLocalizedKey] Results"
+ party_results_3_button_text:0 "[?SLO.party_names_short_coloured_array^3.GetTokenLocalizedKey] Results"
+ party_results_4_button_text:0 "[?SLO.party_names_short_coloured_array^4.GetTokenLocalizedKey] Results"
+ party_results_5_button_text:0 "[?SLO.party_names_short_coloured_array^5.GetTokenLocalizedKey] Results"
+ party_results_6_button_text:0 "[?SLO.party_names_short_coloured_array^6.GetTokenLocalizedKey] Results"
+ 
  SLO_parliament_government_header_text:0 "The Government"
  SLO_parliament_opposition_header_text:0 "The Opposition"
  SLO_parliament_majority_status_text:0 "Government Status: [GetMajorityOrMinorityGov] of the needed §Y[?SLO.seats_needed_for_majority|.0]§! seats to form a majority."
  SLO_majority_loc:0 "§GMajority§!\nThe government holds §G[?SLO.government_seat_count|.0]§!"
  SLO_minority_loc:0 "§RMinority§!\nThe government holds §R[?SLO.government_seat_count|.0]§!"
+ SLO_parliament_government_opposition_party_text:0 "[?SLO.party_names_long_coloured_array^v.GetTokenLocalizedKey]: [?SLO.seat_array^v|.0] seats"
+ 
+ SLO_parliament_member_icon_tt:0 "[SLOGetParliamentDotTT]"
+ SLO_parliament_dot_tt:0 "[?SLO.party_names_long_coloured_array^party.GetTokenLocalizedKey]"
+ 
+ SLO_toggle_election_map:0 "Toggle the Election Map"
+ SLO_toggle_election_map_desc:0 ""
+ SLO_switch_languages_parliament_category:0 "$SLO_switch_languages_campaign_category$"
+ SLO_switch_languages_parliament_category_desc:0 "$SLO_switch_languages_campaign_category_desc$"
  
  SLO_communist_party_long_no_colour_LANG_SLO_idea:0 "Komunistická Strana Slovenska"
  SLO_communist_party_long_coloured_LANG_SLO_idea:0 "§RKomunistická Strana Slovenska§!"
@@ -857,3 +877,17 @@
  slovakia_elections.50.title:0 "The [GetYear] [SLO.GetAdjective] Elections"
  slovakia_elections.50.desc:0 "After months of intense campaigning, the people of [SLO.GetName] went to the polls to make their voices heard. The results of the election are coming in now..."
  slovakia_elections.50.a:0 "[SLO.GetName] holds it's breath"
+ 
+ SLO_soc_dem_majority_trigger_tt:0 "The [?SLO.party_names_short_coloured_array^1.GetTokenLocalizedKey] control a majority in the parliament"
+ SLO_soc_dems_in_government_trigger_tt:0 "The [?SLO.party_names_short_coloured_array^1.GetTokenLocalizedKey] are in government and have at least 10% of the seats."
+ SLO_liberal_majority_trigger_tt:0 "The [?SLO.party_names_short_coloured_array^2.GetTokenLocalizedKey] control a majority in the parliament"
+ SLO_liberals_in_government_trigger_tt:0 "The [?SLO.party_names_short_coloured_array^2.GetTokenLocalizedKey] are in government and have at least 10% of the seats."
+ SLO_liberals_in_government_trigger_tt_NOT:0 "The [?SLO.party_names_short_coloured_array^2.GetTokenLocalizedKey] are either not in government or have less than 10% of the seats."
+ SLO_conservative_majority_trigger_tt:0 "The [?SLO.party_names_short_coloured_array^3.GetTokenLocalizedKey] control a majority in the parliament"
+ SLO_conservatives_in_government_trigger_tt:0 "The [?SLO.party_names_short_coloured_array^3.GetTokenLocalizedKey] are in government and have at least 10% of the seats."
+ SLO_nationalist_majority_trigger_tt:0 "The [?SLO.party_names_short_coloured_array^4.GetTokenLocalizedKey] control a majority in the parliament"
+ SLO_nationalists_in_government_trigger_tt:0 "The [?SLO.party_names_short_coloured_array^4.GetTokenLocalizedKey] are in government and have at least 10% of the seats."
+ SLO_nationalists_in_government_trigger_tt_NOT:0 "The [?SLO.party_names_short_coloured_array^4.GetTokenLocalizedKey] are either not in government or have less than 10% of the seats."
+ SLO_communists_in_government_trigger_tt:0 "The [?SLO.party_names_short_coloured_array^0.GetTokenLocalizedKey] are in government and have at least 10% of the seats."
+ SLO_fascists_in_government_trigger_tt:0 "The [?SLO.party_names_short_coloured_array^5.GetTokenLocalizedKey] are in government and have at least 10% of the seats."
+ SLO_has_a_majority_government_trigger_tt:0 "Has a majority government."

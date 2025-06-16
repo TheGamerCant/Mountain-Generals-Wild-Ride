@@ -91,6 +91,7 @@ SLO_parliament_decision_category = {
 	
 	visible = {
 		has_country_flag = SLO_parliament_is_active_flag
+		NOT = { has_country_flag = SLO_campaign_season_underway_flag }
 	}
 	
 	scripted_gui = SLO_parliament_gui

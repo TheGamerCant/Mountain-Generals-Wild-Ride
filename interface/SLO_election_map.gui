@@ -228,7 +228,7 @@ guiTypes = {
 			name = "state_overlay_entry_button"
 			quadTextureSprite = "GFX_slovakia_70_OVERLAY"
 			pdx_tooltip = "state_overlay_entry_button_tt"
-#			pdx_tooltip_delayed = "state_overlay_entry_button_tt_delayed"
+			pdx_tooltip_delayed = "state_overlay_entry_button_tt_delayed"
 		}
 	}
 	

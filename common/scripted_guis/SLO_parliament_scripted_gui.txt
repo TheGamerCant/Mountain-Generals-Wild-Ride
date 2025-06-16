@@ -13,7 +13,17 @@ scripted_gui = {
 				
 				entry_container = SLO_parliament_member_entry
 			}
-
+			
+			SLO_parliament_government_status_gridbox = {
+				array = SLO.parties_in_government_ordered
+				change_scope = no
+				entry_container = SLO_parliament_government_party_entry
+			}
+			SLO_parliament_opposition_status_gridbox = {
+				array = SLO.parties_in_opposition_ordered
+				change_scope = no
+				entry_container = SLO_parliament_opposition_party_entry
+			}
 		}
 
 		effects = {

@@ -5813,7 +5813,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_a_shining_city_for_all_to_see
 		icon = GFX_goal_SLO_a_democratic_slovakia
-		x = 100
+		x = 115
 		y = 0
 		cost = 2
 		
@@ -5835,6 +5835,8 @@ focus_tree = {
 					elections_allowed = yes
 					election_frequency = 48
 				}
+				
+				SLO_initialise_parliament = yes
 			}
 		}
 	}
@@ -5886,6 +5888,11 @@ focus_tree = {
 		
 
 		completion_reward = {
+			hidden_effect = {
+				remove_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
+				add_dynamic_modifier = { modifier = SLO_democratic_economy_dynamic_modifier }
+			}
+			
 			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.10 }
 			add_to_variable = { SLO_economy_dm_stability_factor = 0.05 }
 			
@@ -5907,7 +5914,6 @@ focus_tree = {
 		relative_position_id = SLO_establish_a_constitution
 
 		select_effect = {
-			SLO_initialise_parliament = yes
 			country_event = { id = slovakia_elections.7 days = 2 random_days = 3 }
 		}
 
@@ -5933,9 +5939,649 @@ focus_tree = {
 	}
 	
 	focus = {	
+		id = SLO_towards_a_socialist_economy
+		icon = GFX_goal_SLO_towards_a_socialist_economy
+
+		x = -17
+		y = 1
+		cost = 20
+		
+		relative_position_id = SLO_hold_an_election
+
+		available = {
+			OR = {
+				SLO_soc_dem_majority_trigger = yes
+				AND = {
+					SLO_communists_in_government_trigger = yes
+					SLO_soc_dems_in_government_trigger = yes
+				}
+			}
+			SLO_has_a_majority_government_trigger = yes
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	
+		id = SLO_nationalisation_of_critical_industries
+		icon = GFX_goal_SLO_nationalisation_of_critical_industries
+
+		x = 0
+		y = 2
+		cost = 20
+		
+		prerequisite = { focus = SLO_towards_a_socialist_economy }
+		relative_position_id = SLO_towards_a_socialist_economy
+
+		available = {
+			OR = {
+				SLO_soc_dem_majority_trigger = yes
+				AND = {
+					SLO_communists_in_government_trigger = yes
+					SLO_soc_dems_in_government_trigger = yes
+				}
+			}
+			SLO_has_a_majority_government_trigger = yes
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	
+		id = SLO_improve_working_conditions
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_improve_working_conditions_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_improve_working_conditions_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_improve_working_conditions_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_improve_working_conditions_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_improve_working_conditions
+		}
+		
+		x = -15
+		y = 1
+		cost = 20
+		
+		relative_position_id = SLO_hold_an_election
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SLO_expand_the_social_safety_net
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_expand_the_social_safety_net_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_expand_the_social_safety_net_soc_dem
+		}
+		icon = {
+			value = GFX_goal_SLO_expand_the_social_safety_net
+		}
+		
+		x = 0
+		y = 2
+		cost = 20
+		prerequisite = { focus = SLO_improve_working_conditions }
+		relative_position_id = SLO_improve_working_conditions
+
+		available = {
+			OR = {
+				SLO_soc_dems_in_government_trigger = yes
+				SLO_liberals_in_government_trigger = yes
+			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	
+	focus = {	
+		id = SLO_loosen_union_restrictions
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_loosen_union_restrictions_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_loosen_union_restrictions_soc_dem
+		}
+		icon = {
+			value = GFX_goal_SLO_loosen_union_restrictions
+		}
+
+		x = 1
+		y = 1
+		cost = 20
+		
+		relative_position_id = SLO_towards_a_socialist_economy
+
+		available = {
+			OR = {
+				SLO_soc_dems_in_government_trigger = yes
+				SLO_liberals_in_government_trigger = yes
+			}
+		}
+		
+		prerequisite = { focus = SLO_improve_working_conditions focus = SLO_towards_a_socialist_economy }
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	
+		id = SLO_cut_bureaucratic_red_tape
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_cut_bureaucratic_red_tape_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_cut_bureaucratic_red_tape_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_cut_bureaucratic_red_tape_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_cut_bureaucratic_red_tape_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_cut_bureaucratic_red_tape
+		}
+		
+		x = -12
+		y = 1
+		cost = 20
+		
+		relative_position_id = SLO_hold_an_election
+
+		available = {
+#			OR = {
+#				SLO_liberals_in_government_trigger = yes
+#				SLO_conservatives_in_government_trigger = yes
+#			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	
+		id = SLO_farming_subsidies
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_farming_subsidies_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_farming_subsidies_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_farming_subsidies_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_farming_subsidies
+		}
+		
+		x = -9
+		y = 1
+		cost = 20
+		
+		relative_position_id = SLO_hold_an_election
+
+		available = {
+			NOT = { SLO_liberals_in_government_trigger = yes }
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	
+		id = SLO_cut_import_tariffs
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_cut_import_tariffs_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_cut_import_tariffs_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_cut_import_tariffs_conservative
+		}
+		icon = {
+			value = GFX_goal_SLO_cut_import_tariffs
+		}
+		
+		x = -1
+		y = 1
+		cost = 20
+		prerequisite = { focus = SLO_cut_bureaucratic_red_tape }
+		relative_position_id = SLO_cut_bureaucratic_red_tape
+
+		mutually_exclusive = { focus = SLO_protectionism }
+
+		available = {
+			NOT = { SLO_nationalists_in_government_trigger = yes }
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	
+		id = SLO_ease_of_doing_business_reforms
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_ease_of_doing_business_reforms_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_ease_of_doing_business_reforms_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_ease_of_doing_business_reforms_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_ease_of_doing_business_reforms_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_ease_of_doing_business_reforms
+		}
+		
+		x = 0
+		y = 1
+		cost = 20
+		prerequisite = { focus = SLO_cut_import_tariffs }
+		relative_position_id = SLO_cut_import_tariffs
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	
+		id = SLO_protectionism
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_protectionism_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_protectionism_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_protectionism_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_protectionism
+		}
+		
+		x = 1
+		y = 1
+		cost = 20
+		prerequisite = { focus = SLO_cut_bureaucratic_red_tape focus = SLO_farming_subsidies }
+		relative_position_id = SLO_cut_bureaucratic_red_tape
+
+		mutually_exclusive = { focus = SLO_cut_import_tariffs }
+
+		available = {
+			NOT = { SLO_liberals_in_government_trigger = yes }
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	
+		id = SLO_prioritize_small_businesses
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				
+				if = {
+					limit = { SLO_conservatives_in_government_trigger = yes SLO_nationalists_in_government_trigger = yes }
+					check_variable = { var = SLO.seat_array^3 value = SLO.seat_array^4 compare = greater_than_or_equals }
+				}
+			}
+			value = GFX_
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+			}
+			value = GFX_
+		}
+		icon = {
+			value = GFX_
+		}
+		
+		x = 0
+		y = 1
+		cost = 20
+		prerequisite = { focus = SLO_protectionism }
+		relative_position_id = SLO_protectionism
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+		
+	focus = {	
+		id = SLO_expand_arms_exports
+		icon = GFX_
+		x = -8
+		y = 2
+		cost = 20
+		
+		relative_position_id = SLO_hold_an_election
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+		
+	focus = {	
+		id = SLO_expand_the_university_of_bratislava
+		icon = GFX_
+		x = -1
+		y = 1
+		cost = 20
+		
+		relative_position_id = SLO_expand_arms_exports
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+		
+	focus = {	
+		id = SLO_new_research_grants
+		icon = GFX_
+		x = 0
+		y = 1
+		cost = 20
+		prerequisite = { focus = SLO_expand_the_university_of_bratislava }
+		relative_position_id = SLO_expand_the_university_of_bratislava
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+		
+	focus = {	
+		id = SLO_infrastructure_focus
+		icon = GFX_
+		x = 1
+		y = 1
+		cost = 20
+		relative_position_id = SLO_expand_arms_exports
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+		
+#	focus = {	
+#		id = SLO_urban_infrastrucure_focus
+#		icon = GFX_
+#		x = -7
+#		y = 1
+#		cost = 10
+#		
+#		relative_position_id = SLO_hold_an_election
+#
+#		available = {
+#			OR = {
+#				SLO_soc_dems_in_government_trigger = yes
+#				SLO_liberals_in_government_trigger = yes
+#			}
+#		}
+#		
+#		bypass = {
+#		}
+#		
+#
+#		completion_reward = {
+#		}
+#	}
+	
+	focus = {	
 		id = SLO_the_workers_paradise
 		icon = GFX_
-		x = 130
+		x = 140
 		y = 0
 		cost = 2
 		
@@ -5973,7 +6619,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_the_black_spot_of_europe
 		icon = GFX_
-		x = 140
+		x = 150
 		y = 0
 		cost = 2
 		
@@ -6010,7 +6656,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_socialism_above_all
 		icon = GFX_
-		x = 150
+		x = 160
 		y = 0
 		cost = 2
 		

@@ -2,6 +2,7 @@ SLO_debug_hold_slovak_election = {
 	SLO = {
 		SLO_initialise_parliament = yes
 		
+		SLO_start_campaign = yes
 		SLO_hold_election = yes	
 	}
 }
@@ -9,6 +10,7 @@ SLO_debug_hold_european_election = {
 	SLO = {
 		SLO_initialise_europe_mechanics = yes
 	
+		SLO_start_campaign = yes
 		SLO_hold_election = yes
 	}
 }
@@ -478,6 +480,7 @@ SLO_update_parliament_position_gfx = {
 }
 
 SLO_update_government_opposition_seat_counts = {
+	#Get seat counts
 	set_variable = { SLO.government_seat_count = 0 }
 	set_variable = { SLO.opposition_seat_count = 0 }
 	
@@ -495,6 +498,24 @@ SLO_update_government_opposition_seat_counts = {
 		value = v
 		
 		add_to_variable = { SLO.opposition_seat_count = SLO.seat_array^v }
+	}
+	
+	#Also get parties in order		-> Sort by seat count
+	clear_array = SLO.parties_in_government_ordered
+	clear_array = SLO.parties_in_opposition_ordered
+	
+	for_each_loop = {
+		array = SLO.previous_election_position_party_seats
+		index = i
+		value = v
+		
+		if = {
+			limit = { is_in_array = { array = SLO.parties_in_government value = v } }
+			add_to_array = { SLO.parties_in_government_ordered = v } 
+		}
+		else = {
+			add_to_array = { SLO.parties_in_opposition_ordered = v }
+		}
 	}
 }
 
@@ -1143,8 +1164,35 @@ SLO_get_national_results = {
 		divide_variable = { SLO.previous_election_results^v = 10 }
 	}
 	
-	#We now have the national results - order them
+	#Get national seat count
+	clear_array = SLO.seat_array
+	resize_array = { array = SLO.seat_array value = 0 size = SLO.previous_election_results^num }
+	clear_array = SLO.previous_election_seat_array
+	resize_array = { array = SLO.previous_election_seat_array value = 0 size = SLO.previous_election_results^num }
 	
+	
+	for_each_scope_loop = {
+		array = SLO.election_states
+		
+		for_each_loop = {
+			array = THIS.seat_array			#could be seat_array or previous_election_seat_array, as they are the same right now
+			value = v
+			index = i
+			
+			add_to_variable = { SLO.seat_array^i = v }
+		}
+	}
+	
+	#Quicker to copy it than add the same variable twice
+	for_each_loop = {
+		array = SLO.seat_array
+		value = v
+		index = i
+		
+		set_variable = { SLO.previous_election_seat_array^i = v }
+	}
+	
+	#We now have the national results - order them	
 	clear_array = SLO.previous_election_results_ordered
 	clear_array = SLO.previous_election_party_position
 	clear_array = SLO.previous_election_position_party
@@ -1256,6 +1304,119 @@ SLO_get_national_results = {
 		set_variable = { SLO.previous_election_position_party^v = i }
 	}
 	
+	
+	#Same as before but now do seats instead of votes
+	clear_array = SLO.previous_election_results_ordered
+	clear_array = SLO.previous_election_party_position_seats
+	clear_array = SLO.previous_election_position_party_seats
+	
+	#Boilerplate code for quicksort
+	clear_array = arr
+	resize_array = { array = arr size = SLO.previous_election_results^num value = 0 }
+	
+	for_each_loop = {
+		array = SLO.previous_election_results
+		value = v
+		index = i
+		
+		set_variable = { arr^i = v }
+	}
+
+	set_variable = { high = arr^num }
+	subtract_from_variable = { high = 1 }
+	set_variable = { low = 0 }
+	
+	quicksort = yes
+	
+	#Make a descending array
+	resize_array = { array = SLO.previous_election_results_ordered value = 0 size = arr^num }
+	
+	for_each_loop = {
+		array = arr
+		value = v
+		index = i
+		
+		set_temp_variable = { t = arr^num }
+		subtract_from_temp_variable = { t = i }
+		subtract_from_temp_variable = { t = 1 }
+		
+		set_variable = { SLO.previous_election_results_ordered^t = v }
+	}
+
+	
+	clear_array = arr
+	clear_variable = high
+	clear_variable = low
+	
+	
+	#Get party positions, use binary search on the ordered array
+	resize_array = { array = SLO.previous_election_party_position_seats value = 0 size = SLO.previous_election_results^num }
+	
+	for_each_loop = {
+		array = SLO.previous_election_results
+		value = v
+		index = i
+		break = break
+		
+		#Use variables high and low to get the range of the array we are looking at
+		set_variable = { low = 0 }
+		set_variable = { high = SLO.previous_election_results^num }
+		subtract_from_variable = { high = 1 }
+		
+		set_variable = { current_pos = high }
+		divide_variable = { current_pos = 2 }
+		round_variable = current_pos
+		
+		for_loop_effect = {
+			end = SLO.previous_election_results^num
+			value = v2
+			break = break2
+			
+			#If we have found the position, break the array
+			if = { 
+				limit = { check_variable = { SLO.previous_election_results_ordered^current_pos = v } }
+				set_variable = { SLO.previous_election_party_position_seats^i = current_pos }
+				set_temp_variable = { break2 = 1 }
+			}
+			else = {
+				#Current position is greater than our party -> Look to the right
+				if = {
+					limit = { check_variable = { SLO.previous_election_results_ordered^current_pos > v } }
+					set_variable = { low = current_pos }
+					add_to_variable = { low = 1 }
+				}
+				#Current position is less than our party -> Look to the left
+				else = {
+					set_variable = { high = current_pos }
+					subtract_from_variable = { high = 1 }
+				}
+				
+				set_variable = { current_pos = high }
+				subtract_from_variable = { current_pos = low }
+				divide_variable = { current_pos = 2 }
+				round_variable  = current_pos
+				add_to_variable = { current_pos = low }
+			}
+		}
+		
+		clear_variable = low
+		clear_variable = high
+		clear_variable = current_pos
+	}
+	
+	clear_array = SLO.previous_election_results_ordered
+	
+	resize_array = { array = SLO.previous_election_position_party_seats value = 0 size = SLO.previous_election_results^num }
+	
+	for_each_loop = {
+		array = SLO.previous_election_party_position_seats
+		value = v
+		index = i
+		break = break
+		
+		set_variable = { SLO.previous_election_position_party_seats^v = i }
+	}
+	
 	#Get the national margin of victory
 	set_variable = { indx1 = SLO.previous_election_position_party^0 }
 	set_variable = { most_popular_party_percentage = SLO.previous_election_results^indx1 }
@@ -1272,34 +1433,6 @@ SLO_get_national_results = {
 	clear_variable = second_most_popular_party_percentage
 	clear_variable = indx1
 	clear_variable = indx2
-	
-	#Get national seat count
-	clear_array = SLO.seat_array
-	resize_array = { array = SLO.seat_array value = 0 size = SLO.previous_election_results^num }
-	clear_array = SLO.previous_election_seat_array
-	resize_array = { array = SLO.previous_election_seat_array value = 0 size = SLO.previous_election_results^num }
-	
-	
-	for_each_scope_loop = {
-		array = SLO.election_states
-		
-		for_each_loop = {
-			array = THIS.seat_array			#could be seat_array or previous_election_seat_array, as they are the same right now
-			value = v
-			index = i
-			
-			add_to_variable = { SLO.seat_array^i = v }
-		}
-	}
-	
-	#Quicker to copy it than add the same variable twice
-	for_each_loop = {
-		array = SLO.seat_array
-		value = v
-		index = i
-		
-		set_variable = { SLO.previous_election_seat_array^i = v }
-	}
 }
 
 SLO_get_active_election_states = {
@@ -1474,20 +1607,6 @@ SLO_divide_seats = {
 }
 
 SLO_start_campaign = {
-	set_country_flag = SLO_campaign_season_underway_flag
-	country_event = { id = slovakia_hidden.2 days = 1 }			#Start oppostion campaigns
-	SLO_get_active_election_states = yes						#States to campaign in 
-	
-	SLO_divide_seats = yes 										#Get the no of seats per election state
-	
-	country_event = { id = slovakia_elections.1 hours = 4 }		#Party to campaign as
-	activate_mission = SLO_countdown_to_election
-}
-
-SLO_hold_election = {
-	clr_country_flag = SLO_campaign_season_underway_flag
-	hold_election = ROOT
-	
 	if = { 
 		limit = { 		#Check to see if last election was Slovakia but this one is Europe
 			check_variable = { SLO.parliament_level = 1 }
@@ -1510,6 +1629,20 @@ SLO_hold_election = {
 			set_variable = { SLO.SLO_electoral_map_selected_state = SLO }
 		}
 	}
+	
+	set_country_flag = SLO_campaign_season_underway_flag
+	country_event = { id = slovakia_hidden.2 days = 1 }			#Start oppostion campaigns
+	SLO_get_active_election_states = yes						#States to campaign in 
+	
+	SLO_divide_seats = yes 										#Get the no of seats per election state
+	
+	country_event = { id = slovakia_elections.1 hours = 4 }		#Party to campaign as
+	activate_mission = SLO_countdown_to_election
+}
+
+SLO_hold_election = {
+	clr_country_flag = SLO_campaign_season_underway_flag
+	hold_election = ROOT
 	
 	#Get the states for this election and their map positions (only has an effect if we are Europe)
 	
@@ -3864,92 +3997,181 @@ SLO_get_states_to_campaign_in = {
 	clear_variable = player_state
 }
 
-#8-10
+##8-10
+#THIS_get_increase_var_fantastic_campaign = {
+#	random_list = {
+#		4   = { set_variable = { incr = 10.00 } }
+#		31  = { set_variable = { incr = 9.75 } }
+#		109 = { set_variable = { incr = 9.50 } }
+#		219 = { set_variable = { incr = 9.25 } }
+#		274 = { set_variable = { incr = 9.00 } }
+#		219 = { set_variable = { incr = 8.75 } }
+#		109 = { set_variable = { incr = 8.50 } }
+#		31  = { set_variable = { incr = 8.25 } }
+#		4   = { set_variable = { incr = 8.00 } }
+#	}
+#}
+#
+##6-8
+#THIS_get_increase_var_great_campaign = {
+#	random_list = {
+#		4   = { set_variable = { incr = 8.00 } }
+#		31  = { set_variable = { incr = 7.75 } }
+#		109 = { set_variable = { incr = 7.50 } }
+#		219 = { set_variable = { incr = 7.25 } }
+#		274 = { set_variable = { incr = 7.00 } }
+#		219 = { set_variable = { incr = 6.75 } }
+#		109 = { set_variable = { incr = 6.50 } }
+#		31  = { set_variable = { incr = 6.25 } }
+#		4   = { set_variable = { incr = 6.00 } }
+#	}
+#}
+#
+##4-6
+#THIS_get_increase_var_good_campaign = {
+#	random_list = {
+#		4   = { set_variable = { incr = 6.00 } }
+#		31  = { set_variable = { incr = 5.75 } }
+#		109 = { set_variable = { incr = 5.50 } }
+#		219 = { set_variable = { incr = 5.25 } }
+#		274 = { set_variable = { incr = 5.00 } }
+#		219 = { set_variable = { incr = 4.75 } }
+#		109 = { set_variable = { incr = 4.50 } }
+#		31  = { set_variable = { incr = 4.25 } }
+#		4   = { set_variable = { incr = 4.00 } }
+#	}
+#}
+#
+##2-4
+#THIS_get_increase_var_mediocre_campaign = {
+#	random_list = {
+#		4   = { set_variable = { incr = 4.00 } }
+#		31  = { set_variable = { incr = 3.75 } }
+#		109 = { set_variable = { incr = 3.50 } }
+#		219 = { set_variable = { incr = 3.25 } }
+#		274 = { set_variable = { incr = 3.00 } }
+#		219 = { set_variable = { incr = 2.75 } }
+#		109 = { set_variable = { incr = 2.50 } }
+#		31  = { set_variable = { incr = 2.25 } }
+#		4   = { set_variable = { incr = 2.00 } }
+#	}
+#}
+#
+##0-2
+#THIS_get_increase_var_disappointing_campaign = {
+#	random_list = {
+#		4   = { set_variable = { incr = 2.00 } }
+#		31  = { set_variable = { incr = 1.75 } }
+#		109 = { set_variable = { incr = 1.50 } }
+#		219 = { set_variable = { incr = 1.25 } }
+#		274 = { set_variable = { incr = 1.00 } }
+#		219 = { set_variable = { incr = 0.75 } }
+#		109 = { set_variable = { incr = 0.50 } }
+#		31  = { set_variable = { incr = 0.25 } }
+#		4   = { set_variable = { incr = 0.00 } }
+#	}
+#}
+#
+##-2-0
+#THIS_get_increase_var_disastrous_campaign = {
+#	random_list = {
+#		4   = { set_variable = { incr = 0.00 } }
+#		31  = { set_variable = { incr = -0.25 } }
+#		109 = { set_variable = { incr = -0.50 } }
+#		219 = { set_variable = { incr = -0.75 } }
+#		274 = { set_variable = { incr = -1.00 } }
+#		219 = { set_variable = { incr = -1.25 } }
+#		109 = { set_variable = { incr = -1.50 } }
+#		31  = { set_variable = { incr = -1.75 } }
+#		4   = { set_variable = { incr = -2.00 } }
+#	}
+#}
+
+#Do a multiplier instead of adding
+
+#32-40%
 THIS_get_increase_var_fantastic_campaign = {
 	random_list = {
-		4   = { set_variable = { incr = 10.00 } }
-		31  = { set_variable = { incr = 9.75 } }
-		109 = { set_variable = { incr = 9.50 } }
-		219 = { set_variable = { incr = 9.25 } }
-		274 = { set_variable = { incr = 9.00 } }
-		219 = { set_variable = { incr = 8.75 } }
-		109 = { set_variable = { incr = 8.50 } }
-		31  = { set_variable = { incr = 8.25 } }
-		4   = { set_variable = { incr = 8.00 } }
+		8   = { set_variable = { incr = 1.40 } }
+		55  = { set_variable = { incr = 1.39 } }
+		164 = { set_variable = { incr = 1.38 } }
+		273 = { set_variable = { incr = 1.37 } }
+		273 = { set_variable = { incr = 1.35 } }
+		164 = { set_variable = { incr = 1.34 } }
+		55  = { set_variable = { incr = 1.33 } }
+		8   = { set_variable = { incr = 1.32 } }
 	}
 }
 
-#6-8
+#25-32%
 THIS_get_increase_var_great_campaign = {
 	random_list = {
-		4   = { set_variable = { incr = 8.00 } }
-		31  = { set_variable = { incr = 7.75 } }
-		109 = { set_variable = { incr = 7.50 } }
-		219 = { set_variable = { incr = 7.25 } }
-		274 = { set_variable = { incr = 7.00 } }
-		219 = { set_variable = { incr = 6.75 } }
-		109 = { set_variable = { incr = 6.50 } }
-		31  = { set_variable = { incr = 6.25 } }
-		4   = { set_variable = { incr = 6.00 } }
+		8   = { set_variable = { incr = 1.32 } }
+		55  = { set_variable = { incr = 1.31 } }
+		164 = { set_variable = { incr = 1.30 } }
+		273 = { set_variable = { incr = 1.29 } }
+		273 = { set_variable = { incr = 1.28 } }
+		164 = { set_variable = { incr = 1.27 } }
+		55  = { set_variable = { incr = 1.26 } }
+		8   = { set_variable = { incr = 1.25 } }
 	}
 }
 
-#4-6
+#18-25%
 THIS_get_increase_var_good_campaign = {
 	random_list = {
-		4   = { set_variable = { incr = 6.00 } }
-		31  = { set_variable = { incr = 5.75 } }
-		109 = { set_variable = { incr = 5.50 } }
-		219 = { set_variable = { incr = 5.25 } }
-		274 = { set_variable = { incr = 5.00 } }
-		219 = { set_variable = { incr = 4.75 } }
-		109 = { set_variable = { incr = 4.50 } }
-		31  = { set_variable = { incr = 4.25 } }
-		4   = { set_variable = { incr = 4.00 } }
+		8   = { set_variable = { incr = 1.25 } }
+		55  = { set_variable = { incr = 1.24 } }
+		164 = { set_variable = { incr = 1.23 } }
+		273 = { set_variable = { incr = 1.22 } }
+		273 = { set_variable = { incr = 1.21 } }
+		164 = { set_variable = { incr = 1.20 } }
+		55  = { set_variable = { incr = 1.19 } }
+		8   = { set_variable = { incr = 1.18 } }
 	}
 }
 
-#2-4
+#10-18%
 THIS_get_increase_var_mediocre_campaign = {
 	random_list = {
-		4   = { set_variable = { incr = 4.00 } }
-		31  = { set_variable = { incr = 3.75 } }
-		109 = { set_variable = { incr = 3.50 } }
-		219 = { set_variable = { incr = 3.25 } }
-		274 = { set_variable = { incr = 3.00 } }
-		219 = { set_variable = { incr = 2.75 } }
-		109 = { set_variable = { incr = 2.50 } }
-		31  = { set_variable = { incr = 2.25 } }
-		4   = { set_variable = { incr = 2.00 } }
+		4   = { set_variable = { incr = 1.18 } }
+		31  = { set_variable = { incr = 1.17 } }
+		109 = { set_variable = { incr = 1.16 } }
+		219 = { set_variable = { incr = 1.15 } }
+		274 = { set_variable = { incr = 1.14 } }
+		219 = { set_variable = { incr = 1.13 } }
+		109 = { set_variable = { incr = 1.12 } }
+		31  = { set_variable = { incr = 1.11 } }
+		4   = { set_variable = { incr = 1.10 } }
 	}
 }
 
-#0-2
+#2-10
 THIS_get_increase_var_disappointing_campaign = {
 	random_list = {
-		4   = { set_variable = { incr = 2.00 } }
-		31  = { set_variable = { incr = 1.75 } }
-		109 = { set_variable = { incr = 1.50 } }
-		219 = { set_variable = { incr = 1.25 } }
-		274 = { set_variable = { incr = 1.00 } }
-		219 = { set_variable = { incr = 0.75 } }
-		109 = { set_variable = { incr = 0.50 } }
-		31  = { set_variable = { incr = 0.25 } }
-		4   = { set_variable = { incr = 0.00 } }
+		4   = { set_variable = { incr = 1.10 } }
+		31  = { set_variable = { incr = 1.09 } }
+		109 = { set_variable = { incr = 1.08 } }
+		219 = { set_variable = { incr = 1.07 } }
+		274 = { set_variable = { incr = 1.06 } }
+		219 = { set_variable = { incr = 1.05 } }
+		109 = { set_variable = { incr = 1.04 } }
+		31  = { set_variable = { incr = 1.03 } }
+		4   = { set_variable = { incr = 1.02 } }
 	}
 }
 
-#-2-0
+#-10 - -2%
 THIS_get_increase_var_disastrous_campaign = {
 	random_list = {
-		4   = { set_variable = { incr = 0.00 } }
-		31  = { set_variable = { incr = -0.25 } }
-		109 = { set_variable = { incr = -0.50 } }
-		219 = { set_variable = { incr = -0.75 } }
-		274 = { set_variable = { incr = -1.00 } }
-		219 = { set_variable = { incr = -1.25 } }
-		109 = { set_variable = { incr = -1.50 } }
-		31  = { set_variable = { incr = -1.75 } }
-		4   = { set_variable = { incr = -2.00 } }
+		4   = { set_variable = { incr = 0.98 } }
+		31  = { set_variable = { incr = 0.97 } }
+		109 = { set_variable = { incr = 0.96 } }
+		219 = { set_variable = { incr = 0.95 } }
+		274 = { set_variable = { incr = 0.94 } }
+		219 = { set_variable = { incr = 0.93 } }
+		109 = { set_variable = { incr = 0.92 } }
+		31  = { set_variable = { incr = 0.91 } }
+		4   = { set_variable = { incr = 0.90 } }
 	}
 }

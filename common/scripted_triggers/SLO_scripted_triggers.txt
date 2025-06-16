@@ -5,3 +5,98 @@ SLO_available_propaganda_slot = {
 		check_variable = { var = SLO.ongoing_propaganda_campaigns value = SLO.unlocked_slots compare = less_than }
 	}
 }
+
+SLO_soc_dem_majority_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SLO_soc_dem_majority_trigger_tt
+		
+		check_variable = { var = SLO.seat_array^1 value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+	}
+}
+SLO_soc_dems_in_government_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SLO_soc_dems_in_government_trigger_tt
+		
+		set_temp_variable = { tenth = SLO.seat_count }
+		multiply_temp_variable = { tenth = 0.1 }
+		check_variable = { var = SLO.seat_array^1 value = tenth compare = greater_than_or_equals } 
+	}
+}
+
+SLO_liberal_majority_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SLO_liberal_majority_trigger_tt
+		
+		check_variable = { var = SLO.seat_array^2 value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+	}
+}
+SLO_liberals_in_government_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SLO_liberals_in_government_trigger_tt
+
+		set_temp_variable = { tenth = SLO.seat_count }
+		multiply_temp_variable = { tenth = 0.1 }
+		check_variable = { var = SLO.seat_array^2 value = tenth compare = greater_than_or_equals } 
+	}
+}
+
+SLO_conservative_majority_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SLO_conservative_majority_trigger_tt
+		
+		check_variable = { var = SLO.seat_array^3 value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+	}
+}
+SLO_conservatives_in_government_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SLO_conservatives_in_government_trigger_tt
+		
+		set_temp_variable = { tenth = SLO.seat_count }
+		multiply_temp_variable = { tenth = 0.1 }
+		check_variable = { var = SLO.seat_array^3 value = tenth compare = greater_than_or_equals } 
+	}
+}
+
+SLO_nationalist_majority_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SLO_nationalist_majority_trigger_tt
+		
+		check_variable = { var = SLO.seat_array^4 value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+	}
+}
+SLO_nationalists_in_government_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SLO_nationalists_in_government_trigger_tt
+		
+		set_temp_variable = { tenth = SLO.seat_count }
+		multiply_temp_variable = { tenth = 0.1 }
+		check_variable = { var = SLO.seat_array^4 value = tenth compare = greater_than_or_equals } 
+	}
+}
+
+SLO_communists_in_government_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SLO_communists_in_government_trigger_tt
+		
+		set_temp_variable = { tenth = SLO.seat_count }
+		multiply_temp_variable = { tenth = 0.1 }
+		check_variable = { var = SLO.seat_array^0 value = tenth compare = greater_than_or_equals } 
+	}
+}
+SLO_fascists_in_government_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SLO_fascists_in_government_trigger_tt
+		
+		set_temp_variable = { tenth = SLO.seat_count }
+		multiply_temp_variable = { tenth = 0.1 }
+		check_variable = { var = SLO.seat_array^5 value = tenth compare = greater_than_or_equals } 
+	}
+}
+
+SLO_has_a_majority_government_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SLO_has_a_majority_government_trigger_tt
+		
+		check_variable = { var = SLO.government_seat_count value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+	}
+}

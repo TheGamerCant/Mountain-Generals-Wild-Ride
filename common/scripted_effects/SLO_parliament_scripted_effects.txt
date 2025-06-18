@@ -72,7 +72,7 @@ SLO_get_possible_governments = {
 		set_country_flag = can_form_majority_gov_fascist
 	}
 	else = {
-		#No majority can be formed - try to make a two party government
+		#No majority can be formed - try to make a two or three party government
 		
 		
 		if = {
@@ -112,7 +112,53 @@ SLO_get_possible_governments = {
 			set_country_flag = can_form_majority_gov_conservative_nationalist
 		}
 		
-		#Cannot form a two-party gov, try to form a three-party gov or cooperate with extremists
+		if = {
+			limit = {
+				set_temp_variable = { gov_check = SLO.seat_array^1 }
+				add_to_temp_variable = { gov_check = SLO.seat_array^2 }
+				add_to_temp_variable = { gov_check = SLO.seat_array^3 }
+				check_variable = { var = gov_check value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+				
+				NOT = { has_country_flag = can_form_majority_gov_soc_dem_liberal }
+				NOT = { has_country_flag = can_form_majority_gov_soc_dem_conservative }
+				NOT = { has_country_flag = can_form_majority_gov_liberal_conservative }
+			}
+			
+			set_country_flag = can_form_majority_gov_soc_dem_liberal_conservative
+		}
+		if = {
+			limit = {
+				set_temp_variable = { gov_check = SLO.seat_array^2 }
+				add_to_temp_variable = { gov_check = SLO.seat_array^3 }
+				add_to_temp_variable = { gov_check = SLO.seat_array^4 }
+				check_variable = { var = gov_check value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+				
+				NOT = { has_country_flag = can_form_majority_gov_liberal_conservative }
+				NOT = { has_country_flag = can_form_majority_gov_conservative_nationalist } 
+			}
+			
+			set_country_flag = can_form_majority_gov_liberal_conservative_nationalist
+		}
+		if = {
+			limit = {
+				set_temp_variable = { gov_check = SLO.seat_array^0 }
+				add_to_temp_variable = { gov_check = SLO.seat_array^1 }
+				check_variable = { var = gov_check value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+			}
+			
+			set_country_flag = can_form_majority_gov_communist_soc_dem
+		}
+		if = {
+			limit = {
+				set_temp_variable = { gov_check = SLO.seat_array^4 }
+				add_to_temp_variable = { gov_check = SLO.seat_array^5 }
+				check_variable = { var = gov_check value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+			}
+			
+			set_country_flag = can_form_majority_gov_nationalist_fascist
+		}
+			
+		#Still cannot form a government! Minority it is then
 		if = {
 			limit = {
 				NOT = {
@@ -121,110 +167,60 @@ SLO_get_possible_governments = {
 						has_country_flag = can_form_majority_gov_soc_dem_conservative
 						has_country_flag = can_form_majority_gov_liberal_conservative
 						has_country_flag = can_form_majority_gov_conservative_nationalist
+						has_country_flag = can_form_majority_gov_soc_dem_liberal_conservative
+						has_country_flag = can_form_majority_gov_liberal_conservative_nationalist
+						has_country_flag = can_form_majority_gov_communist_soc_dem
+						has_country_flag = can_form_majority_gov_nationalist_fascist
 					}
 				}
 			}
 			
+			#Find largest possible minority government
+				
+			clear_array = SLO.possible_governments
+			resize_array = { array = SLO.possible_governments value = 0 size = 4 }
+			
+			#Soc dem - Liberal - Conservative
+			set_variable = { SLO.possible_governments^0 = SLO.seat_array^1 }
+			add_to_variable = { SLO.possible_governments^0 = SLO.seat_array^2 }
+			add_to_variable = { SLO.possible_governments^0 = SLO.seat_array^3 }
+			
+			#Liberal - Conservative - Nationalist
+			set_variable = { SLO.possible_governments^1 = SLO.seat_array^2 }
+			add_to_variable = { SLO.possible_governments^1 = SLO.seat_array^3 }
+			add_to_variable = { SLO.possible_governments^1 = SLO.seat_array^4 }
+			
+			#Nationalist - Fascist
+			set_variable = { SLO.possible_governments^2 = SLO.seat_array^4 }
+			add_to_variable = { SLO.possible_governments^2 = SLO.seat_array^5 }
+			
+			#Communist - Soc dem
+			set_variable = { SLO.possible_governments^3 = SLO.seat_array^0 }
+			add_to_variable = { SLO.possible_governments^3 = SLO.seat_array^1 }
+			
+			find_highest_in_array = {
+				array = SLO.possible_governments
+				value = temp_value
+				index = temp_index
+			}
 			
 			if = {
-				limit = {
-					set_temp_variable = { gov_check = SLO.seat_array^1 }
-					add_to_temp_variable = { gov_check = SLO.seat_array^2 }
-					add_to_temp_variable = { gov_check = SLO.seat_array^3 }
-					check_variable = { var = gov_check value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
-				}
-				
-				set_country_flag = can_form_majority_gov_soc_dem_liberal_conservative
+				limit = { check_variable = { temp_index = 0 } }
+				set_country_flag = can_form_minority_gov_soc_dem_liberal_conservative
 			}
-			if = {
-				limit = {
-					set_temp_variable = { gov_check = SLO.seat_array^2 }
-					add_to_temp_variable = { gov_check = SLO.seat_array^3 }
-					add_to_temp_variable = { gov_check = SLO.seat_array^4 }
-					check_variable = { var = gov_check value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
-				}
-				
-				set_country_flag = can_form_majority_gov_liberal_conservative_nationalist
+			else_if = {
+				limit = { check_variable = { temp_index = 1 } }
+				set_country_flag = can_form_minority_gov_liberal_conservative_nationalist
 			}
-			if = {
-				limit = {
-					set_temp_variable = { gov_check = SLO.seat_array^0 }
-					add_to_temp_variable = { gov_check = SLO.seat_array^1 }
-					check_variable = { var = gov_check value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
-				}
-				
-				set_country_flag = can_form_majority_gov_communist_soc_dem
+			else_if = {
+				limit = { check_variable = { temp_index = 2 } }
+				set_country_flag = can_form_minority_gov_nationalist_facsist
 			}
-			if = {
-				limit = {
-					set_temp_variable = { gov_check = SLO.seat_array^4 }
-					add_to_temp_variable = { gov_check = SLO.seat_array^5 }
-					check_variable = { var = gov_check value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
-				}
-				
-				set_country_flag = can_form_majority_gov_nationalist_fascist
+			else = {
+				set_country_flag = can_form_minority_gov_communist_soc_dem
 			}
 			
-			#Still cannot form a government! Minority it is then
-			if = {
-				limit = {
-					NOT = {
-						OR = {
-							has_country_flag = can_form_majority_gov_soc_dem_liberal_conservative
-							has_country_flag = can_form_majority_gov_liberal_conservative_nationalist
-							has_country_flag = can_form_majority_gov_communist_soc_dem
-							has_country_flag = can_form_majority_gov_nationalist_fascist
-						}
-					}
-				}
-				
-				#Find largest possible minority government
-					
-				clear_array = SLO.possible_governments
-				resize_array = { array = SLO.possible_governments value = 0 size = 4 }
-				
-				#Soc dem - Liberal - Conservative
-				set_variable = { SLO.possible_governments^0 = SLO.seat_array^1 }
-				add_to_variable = { SLO.possible_governments^0 = SLO.seat_array^2 }
-				add_to_variable = { SLO.possible_governments^0 = SLO.seat_array^3 }
-				
-				#Liberal - Conservative - Nationalist
-				set_variable = { SLO.possible_governments^1 = SLO.seat_array^2 }
-				add_to_variable = { SLO.possible_governments^1 = SLO.seat_array^3 }
-				add_to_variable = { SLO.possible_governments^1 = SLO.seat_array^4 }
-				
-				#Nationalist - Fascist
-				set_variable = { SLO.possible_governments^2 = SLO.seat_array^4 }
-				add_to_variable = { SLO.possible_governments^2 = SLO.seat_array^5 }
-				
-				#Communist - Soc dem
-				set_variable = { SLO.possible_governments^3 = SLO.seat_array^0 }
-				add_to_variable = { SLO.possible_governments^3 = SLO.seat_array^1 }
-				
-				find_highest_in_array = {
-					array = SLO.possible_governments
-					value = temp_value
-					index = temp_index
-				}
-				
-				if = {
-					limit = { check_variable = { temp_index = 0 } }
-					set_country_flag = can_form_minority_gov_soc_dem_liberal_conservative
-				}
-				else_if = {
-					limit = { check_variable = { temp_index = 1 } }
-					set_country_flag = can_form_minority_gov_liberal_conservative_nationalist
-				}
-				else_if = {
-					limit = { check_variable = { temp_index = 2 } }
-					set_country_flag = can_form_minority_gov_nationalist_facsist
-				}
-				else = {
-					set_country_flag = can_form_minority_gov_communist_soc_dem
-				}
-				
-				clear_array = SLO.possible_governments
-			}
+			clear_array = SLO.possible_governments
 		}
 	}
 	
@@ -272,7 +268,8 @@ SLO_get_possible_governments = {
 			}
 		}
 		
-		country_event = { id = slovakia_elections.5 }
+		country_event = { id = slovakia_elections.4 }
+#		country_event = { id = slovakia_elections.5 }
 	}
 	else_if = {
 		limit = {  

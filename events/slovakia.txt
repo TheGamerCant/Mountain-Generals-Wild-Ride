@@ -1573,18 +1573,9 @@ country_event = {
 
 		mark_focus_tree_layout_dirty = yes
 	}
-}
-
-#Three party majority gov
-country_event = {
-	id = slovakia_elections.5
-	title = slovakia_elections.5.title
-	desc = slovakia_elections.5.desc
-	is_triggered_only = yes
-	picture = GFX_report_event_ITA_democratic_parlament
-
+	
 	option = { 
-		name = slovakia_elections.5.a
+		name = slovakia_elections.4.e
 		
 		trigger = {
 			has_country_flag = can_form_majority_gov_soc_dem_liberal_conservative
@@ -1614,7 +1605,7 @@ country_event = {
 	}
 
 	option = { 
-		name = slovakia_elections.5.b
+		name = slovakia_elections.4.f
 		
 		trigger = {
 			has_country_flag = can_form_majority_gov_liberal_conservative_nationalist
@@ -1644,7 +1635,7 @@ country_event = {
 	}
 
 	option = { 
-		name = slovakia_elections.5.c
+		name = slovakia_elections.4.g
 		
 		trigger = {
 			has_country_flag = can_form_majority_gov_communist_soc_dem
@@ -1674,7 +1665,7 @@ country_event = {
 	}
 
 	option = { 
-		name = slovakia_elections.5.d
+		name = slovakia_elections.4.h
 		
 		trigger = {
 			has_country_flag = can_form_majority_gov_nationalist_fascist

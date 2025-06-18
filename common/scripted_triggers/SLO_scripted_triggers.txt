@@ -11,15 +11,17 @@ SLO_soc_dem_majority_trigger = {
 		tooltip = SLO_soc_dem_majority_trigger_tt
 		
 		check_variable = { var = SLO.seat_array^1 value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+		is_in_array = { array = SLO.parties_in_government value = 1 }
 	}
 }
 SLO_soc_dems_in_government_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = SLO_soc_dems_in_government_trigger_tt
 		
-		set_temp_variable = { tenth = SLO.seat_count }
+		set_temp_variable = { tenth = SLO.government_seat_count }
 		multiply_temp_variable = { tenth = 0.1 }
 		check_variable = { var = SLO.seat_array^1 value = tenth compare = greater_than_or_equals } 
+		is_in_array = { array = SLO.parties_in_government value = 1 }
 	}
 }
 
@@ -28,15 +30,17 @@ SLO_liberal_majority_trigger = {
 		tooltip = SLO_liberal_majority_trigger_tt
 		
 		check_variable = { var = SLO.seat_array^2 value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+		is_in_array = { array = SLO.parties_in_government value = 2 }
 	}
 }
 SLO_liberals_in_government_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = SLO_liberals_in_government_trigger_tt
 
-		set_temp_variable = { tenth = SLO.seat_count }
+		set_temp_variable = { tenth = SLO.government_seat_count }
 		multiply_temp_variable = { tenth = 0.1 }
 		check_variable = { var = SLO.seat_array^2 value = tenth compare = greater_than_or_equals } 
+		is_in_array = { array = SLO.parties_in_government value = 2 }
 	}
 }
 
@@ -45,15 +49,17 @@ SLO_conservative_majority_trigger = {
 		tooltip = SLO_conservative_majority_trigger_tt
 		
 		check_variable = { var = SLO.seat_array^3 value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+		is_in_array = { array = SLO.parties_in_government value = 3 }
 	}
 }
 SLO_conservatives_in_government_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = SLO_conservatives_in_government_trigger_tt
 		
-		set_temp_variable = { tenth = SLO.seat_count }
+		set_temp_variable = { tenth = SLO.government_seat_count }
 		multiply_temp_variable = { tenth = 0.1 }
 		check_variable = { var = SLO.seat_array^3 value = tenth compare = greater_than_or_equals } 
+		is_in_array = { array = SLO.parties_in_government value = 3 }
 	}
 }
 
@@ -62,15 +68,17 @@ SLO_nationalist_majority_trigger = {
 		tooltip = SLO_nationalist_majority_trigger_tt
 		
 		check_variable = { var = SLO.seat_array^4 value = SLO.seats_needed_for_majority compare = greater_than_or_equals }
+		is_in_array = { array = SLO.parties_in_government value = 4 }
 	}
 }
 SLO_nationalists_in_government_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = SLO_nationalists_in_government_trigger_tt
 		
-		set_temp_variable = { tenth = SLO.seat_count }
+		set_temp_variable = { tenth = SLO.government_seat_count }
 		multiply_temp_variable = { tenth = 0.1 }
 		check_variable = { var = SLO.seat_array^4 value = tenth compare = greater_than_or_equals } 
+		is_in_array = { array = SLO.parties_in_government value = 4 }
 	}
 }
 
@@ -78,18 +86,20 @@ SLO_communists_in_government_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = SLO_communists_in_government_trigger_tt
 		
-		set_temp_variable = { tenth = SLO.seat_count }
+		set_temp_variable = { tenth = SLO.government_seat_count }
 		multiply_temp_variable = { tenth = 0.1 }
 		check_variable = { var = SLO.seat_array^0 value = tenth compare = greater_than_or_equals } 
+		is_in_array = { array = SLO.parties_in_government value = 0 }
 	}
 }
 SLO_fascists_in_government_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = SLO_fascists_in_government_trigger_tt
 		
-		set_temp_variable = { tenth = SLO.seat_count }
+		set_temp_variable = { tenth = SLO.government_seat_count }
 		multiply_temp_variable = { tenth = 0.1 }
 		check_variable = { var = SLO.seat_array^5 value = tenth compare = greater_than_or_equals } 
+		is_in_array = { array = SLO.parties_in_government value = 5 }
 	}
 }
 

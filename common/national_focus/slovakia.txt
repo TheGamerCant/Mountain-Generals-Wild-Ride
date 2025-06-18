@@ -377,6 +377,17 @@ focus_tree = {
 		
 
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = SLO_a_based_slovakia
+					has_completed_focus = SLO_strong_leader_strong_slovakia
+					has_completed_focus = SLO_a_democracy_if_you_can_keep_it
+					has_completed_focus = SLO_a_shining_city_for_all_to_see
+					has_completed_focus = SLO_the_workers_paradise
+					has_completed_focus = SLO_the_black_spot_of_europe
+					has_completed_focus = SLO_socialism_above_all
+				}
+			}
 		}
 		
 		bypass = {
@@ -583,10 +594,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = dockyard
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -602,10 +613,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = dockyard
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -622,6 +633,178 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			custom_effect_tooltip = SLO_access_to_the_sea_tt
+		}
+	}
+	
+	focus = {	
+		id = SLO_catching_up
+		icon = GFX_goal_generic_build_navy
+		x = -1
+		y = 1
+		cost = 8
+		relative_position_id = SLO_access_to_the_sea
+		
+		prerequisite = { focus = SLO_access_to_the_sea }
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			navy_experience = 60
+			add_tech_bonus = {
+				name = SLO_catching_up
+				bonus = 0.75
+				uses = 4 
+				category = naval_equipment
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_new_dockyard_facilities
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 1
+		y = 1
+		cost = 8
+		relative_position_id = SLO_access_to_the_sea
+		
+		prerequisite = { focus = SLO_access_to_the_sea }
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			if = {			
+				limit = { any_state = { is_core_of = ROOT is_owned_and_controlled_by = ROOT is_coastal = yes } }
+				
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						is_core_of = ROOT
+						free_building_slots = {
+							building = dockyard
+							size > 4
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = dockyard
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = { any_state = { is_owned_and_controlled_by = ROOT is_coastal = yes } }
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 4
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = dockyard
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+
+		}
+	}
+	
+	focus = {	
+		id = SLO_slovakia_on_the_seven_seas
+		icon = GFX_focus_generic_north_atlantic_fleet
+		x = 0
+		y = 1
+		cost = 6
+		relative_position_id = SLO_catching_up
+		
+		prerequisite = { focus = SLO_new_dockyard_facilities }
+		prerequisite = { focus = SLO_catching_up }
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_navy_dm_navy_max_range_factor = 0.22 }
+			add_to_variable = { SLO_navy_dm_naval_speed_factor = 0.08 }
+			add_to_variable = { SLO_navy_dm_navy_org_factor = 0.08 }
+
+			custom_effect_tooltip = SLO_slovakia_on_the_seven_seas_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			navy_experience = 25
+		}
+	}
+	
+	focus = {	
+		id = SLO_carrier_focus
+		icon = GFX_focus_generic_air_carrier
+		x = 2
+		y = 1
+		cost = 6
+		relative_position_id = SLO_catching_up
+		
+		prerequisite = { focus = SLO_new_dockyard_facilities }
+		prerequisite = { focus = SLO_catching_up }
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_tech_bonus = {
+				name = SLO_carrier_focus
+				bonus = 1.0
+				uses = 2
+				category = cv_tech
+			}
 		}
 	}
 	
@@ -775,10 +958,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SLO_women_in_industry } 
 
 		available = {
-			OR = {
-				has_government = democratic
-				has_government = communism
-			}
+			NOT = { has_government = fascism }
 		}
 		
 		bypass = {
@@ -876,7 +1056,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_gypsy_tactics
-		icon = GFX_
+		icon = GFX_goal_SLO_gypsy_tactics
 		x = 0
 		y = 1
 		cost = 5
@@ -1114,7 +1294,7 @@ focus_tree = {
 		id = SLO_expanded_officer_corps
 		icon = GFX_focus_GER_demonstration_of_military_achievements
 		x = 0
-		y = 1
+		y = 2
 		cost = 10
 		relative_position_id = SLO_military_police
 		
@@ -1140,7 +1320,7 @@ focus_tree = {
 		id = SLO_logistical_focus
 		icon = GFX_focus_generic_reinforcing_the_supply_network
 		x = 0
-		y = 1
+		y = 2
 		cost = 10
 		relative_position_id = SLO_longer_training_programs
 		
@@ -1168,12 +1348,12 @@ focus_tree = {
 	focus = {	
 		id = SLO_the_finest_weapons
 		icon = GFX_goal_generic_small_arms
-		x = -1
-		y = 1
+		x = 0
+		y = 2
 		cost = 5
-		relative_position_id = SLO_logistical_focus
+		relative_position_id = SLO_spartan_professionalism
 		
-		prerequisite = { focus = SLO_logistical_focus }
+		prerequisite = { focus = SLO_spartan_professionalism }
 
 		available = {
 		}
@@ -1185,7 +1365,7 @@ focus_tree = {
 		completion_reward = {			
 			add_tech_bonus = {
 				name = SLO_the_finest_weapons
-				bonus = 1.0
+				bonus = 0.9
 				uses = 2
 				category = infantry_weapons
 			}
@@ -1223,9 +1403,9 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_every_soldier_a_warrior
-		icon = GFX_
+		icon = GFX_goal_SLO_every_soldier_a_warrior
 		x = 0
-		y = 2
+		y = 1
 		cost = 10
 		relative_position_id = SLO_special_operations
 		
@@ -1250,7 +1430,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_mobilisation_timetables
-		icon = GFX_
+		icon = GFX_focus_SOV_mobilization_plan
 		x = -4
 		y = 1
 		cost = 5
@@ -1297,7 +1477,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_military_intelligence
-		icon = GFX_
+		icon = GFX_focus_generic_secret_service_agency
 		x = 0
 		y = 2
 		cost = 5
@@ -1423,7 +1603,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_mission_command
-		icon = GFX_
+		icon = GFX_goal_SLO_mission_command
 		x = 0
 		y = 2
 		cost = 10
@@ -1449,7 +1629,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_localised_counter_attacks
-		icon = GFX_
+		icon = GFX_goal_SLO_localised_counter_attacks
 		x = 0
 		y = 2
 		cost = 10
@@ -1515,6 +1695,29 @@ focus_tree = {
 						province = 6573
 					}
 				}
+				
+				if = {
+					limit = {
+						664 = { 6573 = { supply_node < 1 } }
+					}
+					664 = {
+						add_building_construction = {
+							type = supply_node
+							level = 1
+							instant_build = yes
+							province = 6573
+						}
+					}
+				}
+
+				#Preshov - Koshice
+				build_railway = {
+					level = 2
+					path = { 3581 6573 }
+					start_province = 3581
+					target_province = 6573
+				}
+
 			}
 			else = {
 				add_tech_bonus = {
@@ -1714,7 +1917,7 @@ focus_tree = {
 	
 	focus = {
 		id = SLO_slovak_military_academy
-		icon = GFX_
+		icon = GFX_goal_generic_army_doctrines
 		x = -1
 		y = 2
 		relative_position_id = SLO_new_tank_factories
@@ -3372,11 +3575,11 @@ focus_tree = {
 		}
 
 		available = {
-			controls_state = 664
+#			controls_state = 664
 		}
 		
 		bypass = {
-			NOT = { controls_state = 664 }
+#			NOT = { controls_state = 664 }
 		}
 		
 
@@ -3406,11 +3609,11 @@ focus_tree = {
 		}
 
 		available = {
-			controls_state = 70
+#			controls_state = 70
 		}
 		
 		bypass = {
-			NOT = { controls_state = 70 }
+#			NOT = { controls_state = 70 }
 		}
 
 		completion_reward = {
@@ -5379,7 +5582,7 @@ focus_tree = {
 	
 	focus = {
 		id = SLO_raise_cossack_divisions
-		icon = GFX
+		icon = GFX_goal_SLO_raise_cossack_divisions
 		x = 0
 		y = 2
 		relative_position_id = SLO_hunt_the_bear
@@ -5872,7 +6075,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_emergency_banking_actions
-		icon = GFX_
+		icon = GFX_focus_usa_reestablish_the_gold_standard
 		x = 1
 		y = 1 
 		cost = 3
@@ -5944,7 +6147,7 @@ focus_tree = {
 
 		x = -17
 		y = 1
-		cost = 20
+		cost = 15
 		
 		relative_position_id = SLO_hold_an_election
 
@@ -5964,6 +6167,23 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.06 } 
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.06 } 
+			add_to_variable = { SLO_economy_dm_global_building_slots_factor = 0.08 } 
+			add_to_variable = { SLO_economy_dm_stability_factor = -0.05 } 
+			
+			custom_effect_tooltip = SLO_towards_a_socialist_economy_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = 100
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_popularity = {
+				ideology = communism
+				popularity = 0.075
+			}
 		}
 	}
 	
@@ -5973,7 +6193,7 @@ focus_tree = {
 
 		x = 0
 		y = 2
-		cost = 20
+		cost = 15
 		
 		prerequisite = { focus = SLO_towards_a_socialist_economy }
 		relative_position_id = SLO_towards_a_socialist_economy
@@ -5994,6 +6214,90 @@ focus_tree = {
 		
 
 		completion_reward = {
+			if = {
+				limit = { has_cosmetic_tag = EUR_UNIFIED }
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					
+					random_select_amount = 2
+				}
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					
+					random_select_amount = 2
+				}
+			}
+			else = {
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					
+					random_select_amount = 1
+				}
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					
+					random_select_amount = 1
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_popularity = {
+				ideology = communism
+				popularity = 0.075
+			}
 		}
 	}
 	
@@ -6041,7 +6345,7 @@ focus_tree = {
 		
 		x = -15
 		y = 1
-		cost = 20
+		cost = 15
 		
 		relative_position_id = SLO_hold_an_election
 
@@ -6053,6 +6357,19 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.03 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.03 }
+			add_to_variable = { SLO_economy_dm_stability_factor = 0.075 }
+			add_to_variable = { SLO_economy_dm_democratic_drift = 0.05 }
+			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.05 }
+			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = 0.08 }
+			add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.06 }
+			
+			custom_effect_tooltip = SLO_improve_working_conditions_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = -25
 		}
 	}
 	
@@ -6083,7 +6400,7 @@ focus_tree = {
 		
 		x = 0
 		y = 2
-		cost = 20
+		cost = 15
 		prerequisite = { focus = SLO_improve_working_conditions }
 		relative_position_id = SLO_improve_working_conditions
 
@@ -6099,6 +6416,21 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.06 }
+			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = 0.04 }
+			add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.04 }
+			add_to_variable = { SLO_economy_dm_democratic_drift = 0.05 }
+			add_to_variable = { SLO_economy_dm_stability_factor = 0.10 }
+			add_to_variable = { SLO_economy_dm_political_power_cost = -0.05 }
+			
+			custom_effect_tooltip = SLO_expand_the_social_safety_net_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
 		}
 	}
 	
@@ -6130,7 +6462,7 @@ focus_tree = {
 
 		x = 1
 		y = 1
-		cost = 20
+		cost = 15
 		
 		relative_position_id = SLO_towards_a_socialist_economy
 
@@ -6148,6 +6480,15 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.03 }
+			add_to_variable = { SLO_economy_dm_political_power_cost = 0.10 }
+			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = 0.05 }
+			add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.05 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.05 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.05 }
+			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.05 }
+			
+			custom_effect_tooltip = SLO_loosen_union_restrictions_tt
 		}
 	}
 	
@@ -6195,7 +6536,7 @@ focus_tree = {
 		
 		x = -12
 		y = 1
-		cost = 20
+		cost = 15
 		
 		relative_position_id = SLO_hold_an_election
 
@@ -6211,6 +6552,15 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.15 }
+			add_to_variable = { SLO_economy_dm_political_power_cost = -0.10 }
+			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.08 }
+			
+			custom_effect_tooltip = SLO_cut_bureaucratic_red_tape_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = 50
 		}
 	}
 	
@@ -6251,7 +6601,7 @@ focus_tree = {
 		
 		x = -9
 		y = 1
-		cost = 20
+		cost = 15
 		
 		relative_position_id = SLO_hold_an_election
 
@@ -6264,6 +6614,56 @@ focus_tree = {
 		
 
 		completion_reward = {
+			if = {
+				limit = { has_cosmetic_tag = EUR_UNIFIED }
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					
+					random_select_amount = 3
+				}
+			}
+			else = {
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+					
+					random_select_amount = 1
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_political_power_cost = -0.15 }
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.05 }
+			add_to_variable = { SLO_economy_dm_democratic_drift = 0.05 }
+			add_to_variable = { SLO_economy_dm_global_building_slots = 1 }
+			
+			custom_effect_tooltip = SLO_farming_subsidies_tt
 		}
 	}
 	
@@ -6301,7 +6701,7 @@ focus_tree = {
 		
 		x = -1
 		y = 1
-		cost = 20
+		cost = 15
 		prerequisite = { focus = SLO_cut_bureaucratic_red_tape }
 		relative_position_id = SLO_cut_bureaucratic_red_tape
 
@@ -6316,6 +6716,57 @@ focus_tree = {
 		
 
 		completion_reward = {
+			if = {
+				limit = { has_cosmetic_tag = EUR_UNIFIED }
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					
+					random_select_amount = 3
+				}
+			}
+			else = {
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					
+					random_select_amount = 1
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.06 }
+			add_to_variable = { SLO_economy_dm_stability_factor = -0.03 }
+			add_to_variable = { SLO_economy_dm_resource_trade_cost_bonus_per_factory = 1 }
+			add_to_variable = { SLO_economy_dm_trade_opinion_factor = 0.25 }
+			add_to_variable = { SLO_economy_dm_trade_laws_cost_factor = -0.25 }
+			
+			custom_effect_tooltip = SLO_cut_import_tariffs_tt
 		}
 	}
 	
@@ -6363,7 +6814,7 @@ focus_tree = {
 		
 		x = 0
 		y = 1
-		cost = 20
+		cost = 15
 		prerequisite = { focus = SLO_cut_import_tariffs }
 		relative_position_id = SLO_cut_import_tariffs
 
@@ -6375,6 +6826,75 @@ focus_tree = {
 		
 
 		completion_reward = {
+			if = {
+				limit = { has_cosmetic_tag = EUR_UNIFIED }
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					
+					random_select_amount = 2
+				}
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					
+					random_select_amount = 1
+				}
+			}
+			else = {
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					
+					random_select_amount = 3
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.06 }
+			add_to_variable = { SLO_economy_dm_economy_cost_factor = -0.25 }
+			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.04 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.04 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.04 }
+			
+			custom_effect_tooltip = SLO_ease_of_doing_business_reforms_tt
 		}
 	}
 	
@@ -6415,7 +6935,7 @@ focus_tree = {
 		
 		x = 1
 		y = 1
-		cost = 20
+		cost = 15
 		prerequisite = { focus = SLO_cut_bureaucratic_red_tape focus = SLO_farming_subsidies }
 		relative_position_id = SLO_cut_bureaucratic_red_tape
 
@@ -6430,6 +6950,17 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_to_variable = { SLO_economy_dm_political_power_cost = -0.15 }
+			add_to_variable = { SLO_economy_dm_stability_factor = 0.075 }
+			add_to_variable = { SLO_economy_dm_min_export = -0.10 }
+			add_to_variable = { SLO_economy_dm_trade_opinion_factor = -0.15 }
+			add_to_variable = { SLO_economy_dm_trade_laws_cost_factor = 0.25 }
+			
+			custom_effect_tooltip = SLO_protectionism_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = 75
 		}
 	}
 	
@@ -6439,28 +6970,45 @@ focus_tree = {
 		dynamic = yes 
 		icon = {
 			trigger = {
-				SLO_conservatives_in_government_trigger = yes
-				
-				if = {
-					limit = { SLO_conservatives_in_government_trigger = yes SLO_nationalists_in_government_trigger = yes }
-					check_variable = { var = SLO.seat_array^3 value = SLO.seat_array^4 compare = greater_than_or_equals }
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_prioritize_small_businesses_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
 				}
 			}
-			value = GFX_
+			value = GFX_goal_SLO_prioritize_small_businesses_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_prioritize_small_businesses_conservative
 		}
 		icon = {
 			trigger = {
 				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
 			}
-			value = GFX_
+			value = GFX_goal_SLO_prioritize_small_businesses_nationalist
 		}
 		icon = {
-			value = GFX_
+			value = GFX_goal_SLO_prioritize_small_businesses
 		}
 		
 		x = 0
 		y = 1
-		cost = 20
+		cost = 15
 		prerequisite = { focus = SLO_protectionism }
 		relative_position_id = SLO_protectionism
 
@@ -6472,15 +7020,256 @@ focus_tree = {
 		
 
 		completion_reward = {
+			if = {
+				limit = { has_cosmetic_tag = EUR_UNIFIED }
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					
+					random_select_amount = 2
+				}
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					
+					random_select_amount = 1
+				}
+			}
+			else = {
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					
+					random_select_amount = 3
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.04 }
+			add_to_variable = { SLO_economy_dm_production_speed_industrial_complex_factor = 0.10 }
+			add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.04 }
+			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = 0.07 }
+			
+			custom_effect_tooltip = SLO_prioritize_small_businesses_tt
+		}
+	}
+	
+	focus = {	
+		id = SLO_court_foreign_investments
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_ease_of_doing_business_reforms_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_ease_of_doing_business_reforms_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_ease_of_doing_business_reforms_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_ease_of_doing_business_reforms_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_ease_of_doing_business_reforms
+		}
+		
+		x = 1
+		y = 1
+		cost = 15
+		prerequisite = { focus = SLO_ease_of_doing_business_reforms focus = SLO_prioritize_small_businesses }
+		relative_position_id = SLO_ease_of_doing_business_reforms
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			if = {
+				limit = { has_cosmetic_tag = EUR_UNIFIED }
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					
+					random_select_amount = 3
+				}
+			}
+			else = {
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					
+					random_select_amount = 1
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.10 }
+			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.04 }
+			
+			custom_effect_tooltip = SLO_court_foreign_investments_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_popularity = {
+				ideology = democratic 
+				popularity = 0.10
+			}
 		}
 	}
 		
 	focus = {	
 		id = SLO_expand_arms_exports
-		icon = GFX_
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_expand_arms_exports_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_expand_arms_exports_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_expand_arms_exports_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_expand_arms_exports_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_expand_arms_exports
+		}
+		
 		x = -8
 		y = 2
-		cost = 20
+		cost = 15
 		
 		relative_position_id = SLO_hold_an_election
 
@@ -6492,15 +7281,105 @@ focus_tree = {
 		
 
 		completion_reward = {
+			if = {
+				limit = { has_cosmetic_tag = EUR_UNIFIED }
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					
+					random_select_amount = 4
+				}
+			}
+			else = {
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+					
+					random_select_amount = 1
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.07 }
+			add_to_variable = { SLO_economy_dm_production_speed_arms_factory_factor = 0.15 }
+			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = 0.04 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.12 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.12 }
+			
+			custom_effect_tooltip = SLO_expand_arms_exports_tt
 		}
 	}
 		
 	focus = {	
 		id = SLO_expand_the_university_of_bratislava
-		icon = GFX_
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_expand_the_university_of_bratislava_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_expand_the_university_of_bratislava_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_expand_the_university_of_bratislava_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_expand_the_university_of_bratislava_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_expand_the_university_of_bratislava
+		}
+		
 		x = -1
 		y = 1
-		cost = 20
+		cost = 15
 		
 		relative_position_id = SLO_expand_arms_exports
 
@@ -6512,19 +7391,71 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_research_slot = 1
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_research_speed_factor = 0.10 }
+			add_to_variable = { SLO_economy_dm_stability_factor = 0.05 }
+			
+			custom_effect_tooltip = SLO_expand_the_university_of_bratislava_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = 50
 		}
 	}
 		
 	focus = {	
 		id = SLO_new_research_grants
-		icon = GFX_
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_expand_the_university_of_bratislava_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_expand_the_university_of_bratislava_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_expand_the_university_of_bratislava_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_expand_the_university_of_bratislava_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_expand_the_university_of_bratislava
+		}
+		
 		x = 0
 		y = 1
-		cost = 20
+		cost = 15
 		prerequisite = { focus = SLO_expand_the_university_of_bratislava }
 		relative_position_id = SLO_expand_the_university_of_bratislava
 
 		available = {
+			industrial_complex > 74
 		}
 		
 		bypass = {
@@ -6532,15 +7463,64 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_research_slot = 1
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.02 }
+			add_to_variable = { SLO_economy_dm_research_speed_factor = 0.07 }
+			add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.12 }
+			add_to_variable = { SLO_economy_dm_political_power_cost = -0.10 }
+			
+			custom_effect_tooltip = SLO_new_research_grants_tt
 		}
 	}
 		
 	focus = {	
 		id = SLO_infrastructure_focus
-		icon = GFX_
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_infrastructure_focus_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_infrastructure_focus_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_infrastructure_focus_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_infrastructure_focus_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_infrastructure_focus
+		}
+		
 		x = 1
 		y = 1
-		cost = 20
+		cost = 15
 		relative_position_id = SLO_expand_arms_exports
 
 		available = {
@@ -6551,32 +7531,284 @@ focus_tree = {
 		
 
 		completion_reward = {
+			if = {
+				limit = { has_cosmetic_tag = EUR_UNIFIED }
+				every_owned_state = {
+					limit = {
+						infrastructure < 3
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					random_select_amount = 10
+				}
+			}
+			else = {
+				every_owned_state = {
+					limit = {
+						infrastructure < 3
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					random_select_amount = 3
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_production_speed_infrastructure_factor = 0.25 }
+			add_to_variable = { SLO_economy_dm_production_speed_supply_node_factor = 0.25 }
+			add_to_variable = { SLO_economy_dm_production_speed_rail_way_factor = 0.25 }
+			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.05 }
+			add_to_variable = { SLO_economy_dm_stability_factor = 0.025 }
+			add_to_variable = { SLO_economy_dm_political_power_cost = -0.05 }
+			add_to_variable = { SLO_economy_dm_global_building_slots = 1 }
+			
+			custom_effect_tooltip = SLO_infrastructure_focus_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_popularity = {
+				ideology = democratic 
+				popularity = 0.05
+			}
 		}
 	}
 		
-#	focus = {	
-#		id = SLO_urban_infrastrucure_focus
-#		icon = GFX_
-#		x = -7
-#		y = 1
-#		cost = 10
-#		
-#		relative_position_id = SLO_hold_an_election
-#
-#		available = {
-#			OR = {
-#				SLO_soc_dems_in_government_trigger = yes
-#				SLO_liberals_in_government_trigger = yes
-#			}
-#		}
-#		
-#		bypass = {
-#		}
-#		
-#
-#		completion_reward = {
-#		}
-#	}
+	focus = {	
+		id = SLO_strategic_resource_development
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_strategic_resource_development_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_strategic_resource_development_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_strategic_resource_development_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_strategic_resource_development_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_strategic_resource_development
+		}
+		
+		x = 0
+		y = 1
+		cost = 15
+		prerequisite = { focus = SLO_infrastructure_focus }
+		relative_position_id = SLO_infrastructure_focus
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			if = {
+				limit = { has_cosmetic_tag = EUR_UNIFIED }
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					
+					random_select_amount = 2
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				random_core_state = {		
+					add_resource = {
+						type = steel
+						amount = 48
+					}
+				}
+				random_core_state = {		
+					add_resource = {
+						type = steel
+						amount = 29
+					}
+				}
+				random_core_state = {		
+					add_resource = {
+						type = oil
+						amount = 37
+					}
+				}
+				random_core_state = {	
+					add_resource = {
+						type = aluminium
+						amount = 58
+					}
+				}
+				random_core_state = {	
+					add_resource = {
+						type = aluminium
+						amount = 19
+					}
+				}
+				random_core_state = {	
+					add_resource = {
+						type = tungsten
+						amount = 32
+					}
+				}
+				random_core_state = {	
+					add_resource = {
+						type = chromium
+						amount = 20
+					}
+				}
+			}
+			else = {
+				every_core_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					
+					random_select_amount = 1
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				random_core_state = {
+					prioritize = { 664 }
+					
+					add_resource = {
+						type = steel
+						amount = 29
+					}
+				}
+				random_core_state = {
+					prioritize = { 18 }
+					
+					add_resource = {
+						type = oil
+						amount = 12
+					}
+				}
+				random_core_state = {	
+					add_resource = {
+						type = aluminium
+						amount = 25
+					}
+				}
+				random_core_state = {	
+					add_resource = {
+						type = tungsten
+						amount = 7
+					}
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_tech_bonus = {
+				name = SLO_new_refining_techniques
+				bonus = 0.6
+				uses = 2
+				category = excavation_tech
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_local_resources_factor = 0.15 }
+			
+			custom_effect_tooltip = SLO_strategic_resource_development_tt
+		}
+	}
+		
+	focus = {	
+		id = SLO_corporatist_economics
+		icon = GFX_goal_SLO_corporatist_economics
+		x = -7
+		y = 1
+		cost = 15
+		
+		relative_position_id = SLO_hold_an_election
+
+		available = {
+			OR = {
+				SLO_nationalist_majority_trigger = yes
+				AND = {
+					SLO_fascists_in_government_trigger = yes
+					SLO_nationalists_in_government_trigger = yes
+				}
+			}
+			SLO_has_a_majority_government_trigger = yes
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_economy_dm_political_power_cost = -0.10 }
+			add_to_variable = { SLO_economy_dm_stability_factor = 0.05 }
+			add_to_variable = { SLO_economy_dm_economy_cost_factor = -0.35 }
+			add_to_variable = { SLO_economy_dm_trade_laws_cost_factor = -0.35 }
+			
+			custom_effect_tooltip = SLO_corporatist_economics_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = 100
+		}
+	}
+	
 	
 	focus = {	
 		id = SLO_the_workers_paradise

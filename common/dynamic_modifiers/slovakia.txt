@@ -74,12 +74,12 @@ SLO_autarkic_economy_dyanamic_modifier = {
 	production_speed_rail_way_factor = SLO_economy_dm_production_speed_rail_way_factor
 	production_speed_synthetic_refinery_factor = SLO_economy_dm_production_speed_synthetic_refinery_factor
 	economy_cost_factor = SLO_economy_dm_economy_cost_factor
-	local_resources_factor  = SLO_economy_dm_local_resources_factor
-	global_building_slots  = SLO_economy_dm_global_building_slots
+	local_resources_factor = SLO_economy_dm_local_resources_factor
+	global_building_slots = SLO_economy_dm_global_building_slots
 }
 
 SLO_democratic_economy_dynamic_modifier = {
-	icon = GFX_idea_idea_ARG_public_works_investment
+	icon = GFX_idea_ARG_public_works_investment
 	enable = { always = yes }
 	
 	stability_factor = SLO_economy_dm_stability_factor
@@ -92,6 +92,19 @@ SLO_democratic_economy_dynamic_modifier = {
 	industrial_capacity_dockyard = SLO_economy_dm_industrial_capacity_dockyard
 	research_speed_factor = SLO_economy_dm_research_speed_factor
 	production_speed_arms_factory_factor = SLO_economy_dm_production_speed_arms_factory_factor
+	production_speed_industrial_complex_factor = SLO_economy_dm_production_speed_industrial_complex_factor
+	production_speed_infrastructure_factor = SLO_economy_dm_production_speed_infrastructure_factor
+	production_speed_supply_node_factor = SLO_economy_dm_production_speed_supply_node_factor
+	production_speed_rail_way_factor = SLO_economy_dm_production_speed_rail_way_factor
+	democratic_drift = SLO_economy_dm_democratic_drift
+	global_building_slots = SLO_economy_dm_global_building_slots
+	global_building_slots_factor = SLO_economy_dm_global_building_slots_factor
+	economy_cost_factor = SLO_economy_dm_economy_cost_factor
+	trade_laws_cost_factor = SLO_economy_dm_trade_laws_cost_factor
+	local_resources_factor = SLO_economy_dm_local_resources_factor
+	resource_trade_cost_bonus_per_factory = SLO_economy_dm_resource_trade_cost_bonus_per_factory
+	trade_opinion_factor = SLO_economy_dm_trade_opinion_factor
+	min_export = SLO_economy_dm_min_export
 }
 
 
@@ -269,4 +282,6 @@ SLO_navy_dynamic_modifier = {
 	navy_leader_start_maneuvering_level = SLO_navy_dm_navy_leader_start_maneuvering_level
 	navy_leader_start_coordination_level = SLO_navy_dm_navy_leader_start_coordination_level
 	experience_gain_navy_unit_factor = SLO_navy_dm_experience_gain_navy_unit_factor
+	naval_speed_factor = SLO_navy_dm_naval_speed_factor
+	navy_org_factor = SLO_navy_dm_navy_org_factor
 }

@@ -354,6 +354,7 @@ set_variable = { SLO_economy_dm_production_speed_rail_way_factor = 0 }
 set_variable = { SLO_economy_dm_production_speed_synthetic_refinery_factor = 0 }
 set_variable = { SLO_economy_dm_local_resources_factor = 0 }
 set_variable = { SLO_economy_dm_global_building_slots = 0 }
+set_variable = { SLO_economy_dm_global_building_slots_factor = 0 }
 
 add_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
 
@@ -431,6 +432,8 @@ set_variable = { SLO_navy_dm_naval_torpedo_enemy_critical_chance_factor = 0.20 }
 set_variable = { SLO_navy_dm_navy_leader_start_maneuvering_level = 0 }
 set_variable = { SLO_navy_dm_navy_leader_start_coordination_level = 0 }
 set_variable = { SLO_navy_dm_experience_gain_navy_unit_factor = 0 }
+set_variable = { SLO_navy_dm_naval_speed_factor = 0 }
+set_variable = { SLO_navy_dm_navy_org_factor = 0 }
 
 add_dynamic_modifier = { modifier = SLO_river_fleet_dynamic_modifier }
 

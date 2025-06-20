@@ -901,5 +901,293 @@ ideas = {
 				}
 			}
 		}
+		
+		SLO_church_power_idea_1 = {
+			removal_cost = -1
+
+			picture = SLO_church_power_1
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				democratic_drift = -0.03
+				stability_weekly = -0.001
+				political_power_gain = 0.22
+			}
+		}
+		
+		SLO_church_power_idea_2 = {
+			removal_cost = -1
+
+			picture = SLO_church_power_2
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.12
+			}
+		}
+		
+		SLO_church_power_idea_3 = {
+			removal_cost = -1
+
+			picture = SLO_church_power_3
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.06
+			}
+		}
+		
+		SLO_church_power_idea_4 = {
+			removal_cost = -1
+
+			picture = SLO_church_power_4
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				stability_weekly = 0.001
+				war_support_factor = 0.05
+			}
+		}
+		
+		SLO_church_power_idea_5 = {
+			removal_cost = -1
+
+			picture = SLO_church_power_5
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_cost = 0.10
+				neutrality_drift = 0.02
+				fascism_drift = 0.02
+				war_support_factor = 0.10
+			}
+		}
+		
+		SLO_centralised_government_bureaucracy = {
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_factor = 0.10
+				mobilization_laws_cost_factor = -0.20
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		
+		SLO_promotion_of_slovak_nationalism_idea_1 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+				
+			available = {
+				SLO_is_not_europe = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_factor = 0.04
+				war_support_factor = 0.05
+				conscription_factor = 0.03
+			}
+		}
+		
+		SLO_promotion_of_slovak_nationalism_idea_2 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+				
+			available = {
+				SLO_is_not_europe = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_factor = 0.04
+				war_support_factor = 0.05
+				conscription_factor = 0.08
+				army_core_defence_factor = 0.03
+			}
+		}
+		
+		SLO_promotion_of_slovak_nationalism_idea_3 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+				
+			available = {
+				SLO_is_not_europe = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_factor = 0.06
+				war_support_factor = 0.10
+				conscription_factor = 0.08
+				conscription = 0.005
+				army_core_defence_factor = 0.06
+			}
+		}
+		
+		SLO_promotion_of_slovak_nationalism_idea_4 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+				
+			available = {
+				SLO_is_not_europe = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_factor = 0.06
+				war_support_factor = 0.10
+				conscription_factor = 0.08
+				conscription = 0.005
+				army_core_defence_factor = 0.06
+				agency_upgrade_time = -0.15
+				intel_network_gain_factor = 0.20
+				intelligence_agency_defense = 1.5
+				operative_slot = 1
+			}
+		}
+		
+		SLO_minority_rights_ensured_idea_1 = {
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_cost = 0.10
+				conscription_factor = 0.06
+				stability_factor = 0.05
+			}
+		}
+		
+		SLO_minority_rights_ensured_idea_2 = {
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = 0.12
+				stability_factor = 0.05
+				democratic_drift = 0.05
+			}
+		}
+		
+		SLO_minority_rights_suppressed_idea_1 = {
+			removal_cost = -1
+
+			picture = generic_oppression
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.10
+				compliance_growth = -0.03
+				stability_factor = -0.04
+			}
+		}
+		
+		SLO_minority_rights_suppressed_idea_2 = {
+			removal_cost = -1
+
+			picture = generic_oppression
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.25
+				compliance_growth = -0.05
+				stability_factor = -0.10
+				conscription_factor = -0.03
+			}
+		}
+		
+		SLO_media_standards_idea = {
+			removal_cost = -1
+
+			picture = NOR_optimistic_cabinet_ns
+				
+			available = {
+				SLO_is_not_europe = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = -0.10
+				stability_weekly = 0.001
+				resistance_growth = -0.10
+			}
+		}
 	}
 }

@@ -14,6 +14,7 @@ SLO.parties_in_government_ordered		-> Array, which parties are in government ran
 SLO.parties_in_opposition_ordered		-> Array, which parties are in opposition ranked by vote count
 SLO.government_seat_count			-> Variable, total government seat count
 SLO.opposition_seat_count			-> Variable, total opposition seat count
+SLO.voting_population_multiplier		-> Variable, percentage of the population that can vote
 
 SLO.party_names_long_no_colour_array		-> Array
 SLO.party_names_long_coloured_array		-> Array

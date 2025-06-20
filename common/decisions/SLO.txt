@@ -2915,6 +2915,8 @@ SLO_campaign_season_category = {
 		days_re_enable = 10
 		
 		fire_only_once = no
+		
+		fixed_random_seed = no
 
 		cost = 20
 

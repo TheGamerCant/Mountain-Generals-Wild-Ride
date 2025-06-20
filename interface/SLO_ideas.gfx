@@ -1,5 +1,25 @@
 spriteTypes = {
 	SpriteType = {
+		name = "GFX_idea_SLO_church_power_1"
+		texturefile = "gfx/interface/ideas/idea_SLO_church_power_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SLO_church_power_2"
+		texturefile = "gfx/interface/ideas/idea_SLO_church_power_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SLO_church_power_3"
+		texturefile = "gfx/interface/ideas/idea_SLO_church_power_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SLO_church_power_4"
+		texturefile = "gfx/interface/ideas/idea_SLO_church_power_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SLO_church_power_5"
+		texturefile = "gfx/interface/ideas/idea_SLO_church_power_5.dds"
+	}
+	SpriteType = {
 		name = "GFX_idea_SLO_dynamit_nobel_bratislava"
 		texturefile = "gfx/interface/ideas/SLO_dynamit_nobel_bratislava.dds"
 	}
@@ -26,6 +46,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_SLO_letecke_opravovne_trenchin"
 		texturefile = "gfx/interface/ideas/SLO_letecke_opravovne_trenchin.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SLO_promote_slovak_nationalism"
+		texturefile = "gfx/interface/ideas/SLO_promote_slovak_nationalism.dds"
 	}
 	SpriteType = {
 		name = "GFX_idea_SLO_slovak_fanaticism"

@@ -217,7 +217,7 @@ country_event = { id = slovakia.21 days = 940 random_days = 30 }
 add_manpower = 12800
 
 add_ideas = {
-	limited_conscription
+	volunteer_only
 	low_economic_mobilisation
 	SLO_jozef_tiso
 	SLO_bratislavan_uprising_idea
@@ -355,6 +355,8 @@ set_variable = { SLO_economy_dm_production_speed_synthetic_refinery_factor = 0 }
 set_variable = { SLO_economy_dm_local_resources_factor = 0 }
 set_variable = { SLO_economy_dm_global_building_slots = 0 }
 set_variable = { SLO_economy_dm_global_building_slots_factor = 0 }
+set_variable = { SLO_economy_dm_monthly_population = 0 }
+set_variable = { SLO_economy_dm_conscription_factor = 0 }
 
 add_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
 

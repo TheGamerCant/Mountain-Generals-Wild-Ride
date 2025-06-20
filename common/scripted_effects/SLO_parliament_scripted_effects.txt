@@ -524,6 +524,7 @@ SLO_initialise_parliament = {
 	set_variable = { SLO.SLO_electoral_map_selected_state = SLO }		#What state / country are we looking at in the GUI?
 	set_variable = { SLO.SLO_electoral_map_gui_selected_results = SLO }	#Should the map show country or party results
 	set_variable = { SLO.language = 0 }									#Language of our GUI
+	set_variable = { SLO.voting_population_multiplier = 0.618 }
 	
 	set_variable = { SLO.gui_gridbox_width = 468 }
 	set_variable = { SLO.gui_party_dot_entry_size = 18 }				#Can be 12, 13 or 18
@@ -761,7 +762,7 @@ STATE_randomise_party_popularity_and_get_results = {
 			index = i
 		
 			set_variable = { votes = THIS.state_population_k }
-			multiply_variable = { votes = 0.618 }							#Kids can't vote + no universal sufferage
+			multiply_variable = { votes = SLO.voting_population_multiplier }							#Kids can't vote + no universal sufferage
 			multiply_variable = { votes = THIS.previous_election_turnout }
 			
 			#Need to get a percentage, divide each by 10 to keep as much accuracy as we can
@@ -792,7 +793,7 @@ STATE_randomise_party_popularity_and_get_results = {
 				add_to_variable = { PREV.votes = THIS.state_population_k }
 			}
 	
-			multiply_variable = { votes = 0.618 }							#Kids can't vote + no universal sufferage
+			multiply_variable = { votes = SLO.voting_population_multiplier }							#Kids can't vote + no universal sufferage
 			multiply_variable = { votes = THIS.previous_election_turnout }
 			
 			#Need to get a percentage, divide each by 10 to keep as much accuracy as we can
@@ -1149,7 +1150,10 @@ SLO_get_national_results = {
 	}
 	
 	set_variable = { SLO.previous_election_turnout = SLO.previous_election_total_votes }
-	multiply_variable = { SLO.previous_election_turnout = 1.618 }
+	set_variable = { oneOverVotingPop = 1 }
+	divide_variable = { oneOverVotingPop = SLO.voting_population_multiplier }
+	multiply_variable = { SLO.previous_election_turnout = oneOverVotingPop }
+	clear_variable = oneOverVotingPop
 	divide_variable = { SLO.previous_election_turnout = SLO.total_pop }
 	
 	clear_variable = SLO.total_pop
@@ -4171,4 +4175,13 @@ THIS_get_increase_var_disastrous_campaign = {
 		31  = { set_variable = { incr = 0.91 } }
 		4   = { set_variable = { incr = 0.90 } }
 	}
+}
+
+STATE_add_party_support = {
+	add_to_variable = { THIS.party_popularity^party = val }
+	
+	clear_variable = party
+	clear_variable = val
+	
+	STATE_set_popularities_to_100 = yes
 }

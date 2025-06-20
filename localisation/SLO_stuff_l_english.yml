@@ -27,3 +27,9 @@
  SLO_debrecin:0 "Debrecín"
  SLO_segedin:0 "Segedín"
  SLO_heroes_of_slovakia:0 "Hrdinovia Slovenska"
+ 
+ #Scripted trigger
+# formed_the_european_union:0 "formed the §BE§!§YU§!§BR§!§YO§!§BP§!§YE§!§BA§!§YN§! §BU§!§YN§!§BI§!§YO§!§BN§!"
+ formed_the_european_union:0 "formed the §YEuropean Union§!"
+ SLO_is_europe_tt:0 "Has $formed_the_european_union$"
+ SLO_is_not_europe_tt:0 "Has not $formed_the_european_union$"

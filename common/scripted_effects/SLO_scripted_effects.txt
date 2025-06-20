@@ -283,11 +283,8 @@ SLO_get_valid_economy_focuses = {
 			has_completed_focus = SLO_towards_a_socialist_economy
 			
 			OR = {
-				SLO_soc_dem_majority_trigger = yes
-				AND = {
-					SLO_communists_in_government_trigger = yes
-					SLO_soc_dems_in_government_trigger = yes
-				}
+				SLO_soc_dems_largest_party_trigger = yes
+				SLO_communists_in_government_trigger = yes
 			}
 			SLO_has_a_majority_government_trigger = yes
 		}
@@ -299,11 +296,8 @@ SLO_get_valid_economy_focuses = {
 			NOT = { has_completed_focus = SLO_towards_a_socialist_economy } 
 			
 			OR = {
-				SLO_soc_dem_majority_trigger = yes
-				AND = {
-					SLO_communists_in_government_trigger = yes
-					SLO_soc_dems_in_government_trigger = yes
-				}
+				SLO_soc_dems_largest_party_trigger = yes
+				SLO_communists_in_government_trigger = yes
 			}
 			SLO_has_a_majority_government_trigger = yes
 		}
@@ -320,8 +314,10 @@ SLO_get_valid_economy_focuses = {
 			}
 			
 			OR = {
-				SLO_soc_dems_in_government_trigger = yes
-				SLO_liberals_in_government_trigger = yes
+				SLO_soc_dems_largest_party_trigger = yes
+				SLO_liberals_largest_party_trigger = yes
+				SLO_soc_dems_and_liberals_largest_parties_trigger = yes
+				SLO_communists_in_government_trigger = yes
 			}
 		}
 		
@@ -330,23 +326,37 @@ SLO_get_valid_economy_focuses = {
 	
 	if = {
 		limit = { 
+			NOT = { has_completed_focus = SLO_affordable_urban_housing } 
+			OR = {
+				has_completed_focus = SLO_towards_a_socialist_economy
+				has_completed_focus = SLO_improve_working_conditions
+			}
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 4 }		#SLO_affordable_urban_housing
+	}
+	
+	if = {
+		limit = { 
 			NOT = { has_completed_focus = SLO_expand_the_social_safety_net } 
 			has_completed_focus = SLO_improve_working_conditions
 			
 			OR = {
-				SLO_soc_dems_in_government_trigger = yes
-				SLO_liberals_in_government_trigger = yes
+				SLO_soc_dems_largest_party_trigger = yes
+				SLO_liberals_largest_party_trigger = yes
+				SLO_soc_dems_and_liberals_largest_parties_trigger = yes
+				SLO_communists_in_government_trigger = yes
 			}
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 4 }		#SLO_expand_the_social_safety_net
+		add_to_array = { SLO.economy_focuses_array = 5 }		#SLO_expand_the_social_safety_net
 	}
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_improve_working_conditions } 
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 5 }		#SLO_improve_working_conditions
+		add_to_array = { SLO.economy_focuses_array = 6 }		#SLO_improve_working_conditions
 	}
 	
 	if = {
@@ -355,17 +365,22 @@ SLO_get_valid_economy_focuses = {
 			has_completed_focus = SLO_cut_import_tariffs
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 6 }		#SLO_ease_of_doing_business_reforms
+		add_to_array = { SLO.economy_focuses_array = 7 }		#SLO_ease_of_doing_business_reforms
 	}
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_cut_import_tariffs } 
 			has_completed_focus = SLO_cut_bureaucratic_red_tape
 			
-			NOT = { SLO_nationalists_in_government_trigger = yes }
+			OR = {
+				SLO_soc_dems_largest_party_trigger = yes
+				SLO_liberals_largest_party_trigger = yes
+				SLO_soc_dems_and_liberals_largest_parties_trigger = yes
+			}
+			NOT = { has_completed_focus = SLO_protectionism }
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 7 }		#SLO_cut_import_tariffs
+		add_to_array = { SLO.economy_focuses_array = 8 }		#SLO_cut_import_tariffs
 	}
 	
 	if = {
@@ -374,7 +389,7 @@ SLO_get_valid_economy_focuses = {
 			has_completed_focus = SLO_protectionism
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 8 }		#SLO_prioritize_small_businesses
+		add_to_array = { SLO.economy_focuses_array = 9 }		#SLO_prioritize_small_businesses
 	}
 	else_if = {
 		limit = { 
@@ -385,9 +400,10 @@ SLO_get_valid_economy_focuses = {
 			}
 			
 			NOT = { SLO_liberals_in_government_trigger = yes }
+			NOT = { has_completed_focus = SLO_cut_import_tariffs }
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 9 }		#SLO_protectionism
+		add_to_array = { SLO.economy_focuses_array = 10 }		#SLO_protectionism
 	}
 	
 	if = {
@@ -399,7 +415,7 @@ SLO_get_valid_economy_focuses = {
 			}
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 10 }		#SLO_court_foreign_investments
+		add_to_array = { SLO.economy_focuses_array = 11 }		#SLO_court_foreign_investments
 	}
 	
 	if = {
@@ -407,7 +423,7 @@ SLO_get_valid_economy_focuses = {
 			NOT = { has_completed_focus = SLO_cut_bureaucratic_red_tape } 
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 11 }		#SLO_cut_bureaucratic_red_tape
+		add_to_array = { SLO.economy_focuses_array = 12 }		#SLO_cut_bureaucratic_red_tape
 	}
 	
 	if = {
@@ -417,7 +433,7 @@ SLO_get_valid_economy_focuses = {
 			NOT = { SLO_liberals_in_government_trigger = yes }
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 12 }		#SLO_farming_subsidies
+		add_to_array = { SLO.economy_focuses_array = 13 }		#SLO_farming_subsidies
 	}
 	
 	if = {
@@ -425,7 +441,7 @@ SLO_get_valid_economy_focuses = {
 			NOT = { has_completed_focus = SLO_expand_arms_exports } 
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 13 }		#SLO_expand_arms_exports
+		add_to_array = { SLO.economy_focuses_array = 14 }		#SLO_expand_arms_exports
 	}
 	
 	if = {
@@ -434,14 +450,14 @@ SLO_get_valid_economy_focuses = {
 			has_completed_focus = SLO_infrastructure_focus
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 14 }		#SLO_strategic_resource_development
+		add_to_array = { SLO.economy_focuses_array = 15 }		#SLO_strategic_resource_development
 	}
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_infrastructure_focus } 
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 15 }		#SLO_infrastructure_focus
+		add_to_array = { SLO.economy_focuses_array = 16 }		#SLO_infrastructure_focus
 	}
 	
 	if = {
@@ -452,14 +468,14 @@ SLO_get_valid_economy_focuses = {
 			industrial_complex > 74
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 16 }		#SLO_new_research_grants
+		add_to_array = { SLO.economy_focuses_array = 17 }		#SLO_new_research_grants
 	}
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_expand_the_university_of_bratislava } 
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 17 }		#SLO_expand_the_university_of_bratislava
+		add_to_array = { SLO.economy_focuses_array = 18 }		#SLO_expand_the_university_of_bratislava
 	}
 	
 	if = {
@@ -467,15 +483,105 @@ SLO_get_valid_economy_focuses = {
 			NOT = { has_completed_focus = SLO_corporatist_economics } 
 			
 			OR = {
-				SLO_nationalist_majority_trigger = yes
-				AND = {
-					SLO_fascists_in_government_trigger = yes
-					SLO_nationalists_in_government_trigger = yes
-				}
+				SLO_nationalists_largest_party_trigger = yes
+				SLO_fascists_in_government_trigger = yes
 			}
 			SLO_has_a_majority_government_trigger = yes
 		}
 		
-		add_to_array = { SLO.economy_focuses_array = 18 }		#SLO_corporatist_economics
+		add_to_array = { SLO.economy_focuses_array = 19 }		#SLO_corporatist_economics
+	}
+}
+
+SLO_increase_church_power = {
+	if = { 
+		limit = { SLO_is_not_europe = yes }
+	
+		if = {
+			limit = { has_idea = SLO_church_power_idea_4 }
+			swap_ideas = {
+				remove_idea = SLO_church_power_idea_4
+				add_idea = SLO_church_power_idea_5
+			}
+		}
+		else_if = {
+			limit = { has_idea = SLO_church_power_idea_3 }
+			swap_ideas = {
+				remove_idea = SLO_church_power_idea_3
+				add_idea = SLO_church_power_idea_4
+			}
+		}
+		else_if = {
+			limit = { has_idea = SLO_church_power_idea_2 }
+			swap_ideas = {
+				remove_idea = SLO_church_power_idea_2
+				add_idea = SLO_church_power_idea_3
+			}
+		}
+		else_if = {
+			limit = { has_idea = SLO_church_power_idea_1 }
+			swap_ideas = {
+				remove_idea = SLO_church_power_idea_1
+				add_idea = SLO_church_power_idea_2
+			}
+		}
+	}
+}
+
+SLO_decrease_church_power = {
+	if = { 
+		limit = { SLO_is_not_europe = yes }
+	
+		if = {
+			limit = { has_idea = SLO_church_power_idea_2 }
+			swap_ideas = {
+				remove_idea = SLO_church_power_idea_2
+				add_idea = SLO_church_power_idea_1
+			}
+		}
+		else_if = {
+			limit = { has_idea = SLO_church_power_idea_3 }
+			swap_ideas = {
+				remove_idea = SLO_church_power_idea_3
+				add_idea = SLO_church_power_idea_2
+			}
+		}
+		else_if = {
+			limit = { has_idea = SLO_church_power_idea_4 }
+			swap_ideas = {
+				remove_idea = SLO_church_power_idea_4
+				add_idea = SLO_church_power_idea_3
+			}
+		}
+		else_if = {
+			limit = { has_idea = SLO_church_power_idea_5 }
+			swap_ideas = {
+				remove_idea = SLO_church_power_idea_5
+				add_idea = SLO_church_power_idea_4
+			}
+		}
+	}
+}
+
+SLO_remove_church_power_ideas = {
+	if = {
+		limit = { has_idea = SLO_church_power_idea_1 }
+		remove_ideas = SLO_church_power_idea_1
+	}
+	if = {
+		limit = { has_idea = SLO_church_power_idea_2 }
+		remove_ideas = SLO_church_power_idea_2
+	}
+	if = {
+		limit = { has_idea = SLO_church_power_idea_3 }
+		remove_ideas = SLO_church_power_idea_3
+	}
+	if = {
+		limit = { has_idea = SLO_church_power_idea_4 }
+		remove_ideas = SLO_church_power_idea_4
+	}
+	if = {
+		limit = { has_idea = SLO_church_power_idea_5 }
+		remove_ideas = SLO_church_power_idea_5
 	}
 }

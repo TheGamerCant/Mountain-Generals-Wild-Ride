@@ -3016,8 +3016,6 @@ country_event = {
 		trigger = {
 			NOT = { check_variable = { SLO.party_campaigning_as = 4 } }
 		}
-		
-		clr_country_flag = SLO_is_campaigning_in_state_flag
 	}
 }
 

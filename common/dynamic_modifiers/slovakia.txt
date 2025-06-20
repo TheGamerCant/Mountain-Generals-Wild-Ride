@@ -105,6 +105,8 @@ SLO_democratic_economy_dynamic_modifier = {
 	resource_trade_cost_bonus_per_factory = SLO_economy_dm_resource_trade_cost_bonus_per_factory
 	trade_opinion_factor = SLO_economy_dm_trade_opinion_factor
 	min_export = SLO_economy_dm_min_export
+	monthly_population = SLO_economy_dm_monthly_population
+	conscription_factor = SLO_economy_dm_conscription_factor
 }
 
 

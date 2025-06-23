@@ -128,7 +128,7 @@
  SLO_centralised_government_bureaucracy:0 "Centralised Government Bureaucracy"
  SLO_centralised_government_bureaucracy_desc:0 ""
  
- SLO_promotion_of_slovak_nationalism_idea_1:0 "Promotion of Slovak Nationalism"
+ SLO_promotion_of_slovak_nationalism_idea_1:0 "Promotion of [SLO.GetSlovakOrEuropean] Nationalism"
  SLO_promotion_of_slovak_nationalism_idea_1_desc:0 "Centuries of oppression by the Austrians and Hungarians has left Slovakia's national identity weakened. We need to initiate massive campaigns to promote the Slovak identity for our nation's very survival."
  SLO_promotion_of_slovak_nationalism_idea_2:0 "$SLO_promotion_of_slovak_nationalism_idea_1$"
  SLO_promotion_of_slovak_nationalism_idea_2_desc:0 "$SLO_promotion_of_slovak_nationalism_idea_1_desc$"
@@ -147,3 +147,5 @@
  SLO_minority_rights_ensured_idea_1_desc:0 ""
  SLO_minority_rights_ensured_idea_2:0 "$SLO_minority_rights_ensured_idea_1$"
  SLO_minority_rights_ensured_idea_2_desc:0 "$SLO_minority_rights_ensured_idea_1_desc$"
+ SLO_ministry_of_foreign_affairs_idea:0 "Ministerstvo Zahraničných Vecí"
+ SLO_ministry_of_foreign_affairs_idea_desc:0 ""

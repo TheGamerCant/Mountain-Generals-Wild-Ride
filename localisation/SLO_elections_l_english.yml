@@ -617,7 +617,7 @@
  SLO_non_aligned_other_campaign_desc:0 ""
  
  SLO_player_campaign_in_state_slovakia:0 "[?SLO.party_names_short_coloured_array^SLO.party_campaigning_as.GetTokenLocalizedKey] Campaign in [?FROM.name_token.GetTokenLocalizedKey]"
- SLO_player_campaign_in_state_slovakia_desc:0 "[?FROM.name_token.GetTokenLocalizedKey] has §Y[?FROM.seat_count|.0]§! seats up for grabs. Current polling shows the following results:\n\n[?SLO.party_names_short_coloured_array^0.GetTokenLocalizedKey]§W: [?FROM.party_popularity^0|.1]%§!\n[?SLO.party_names_short_coloured_array^1.GetTokenLocalizedKey]§W: [?FROM.party_popularity^1|.1]%§!\n[?SLO.party_names_short_coloured_array^2.GetTokenLocalizedKey]§W: [?FROM.party_popularity^2|.1]%§!\n[?SLO.party_names_short_coloured_array^3.GetTokenLocalizedKey]§W: [?FROM.party_popularity^3|.1]%§!\n[?SLO.party_names_short_coloured_array^4.GetTokenLocalizedKey]§W: [?FROM.party_popularity^4|.1]%§!\n[?SLO.party_names_short_coloured_array^5.GetTokenLocalizedKey]§W: [?FROM.party_popularity^5|.1]%§!\n[?SLO.party_names_short_coloured_array^6.GetTokenLocalizedKey]§W: [?FROM.party_popularity^6|.1]%§!"
+ SLO_player_campaign_in_state_slovakia_desc:0 "[?FROM.name_token.GetTokenLocalizedKey] has §Y[?FROM.seat_count|.0]§! seats up for grabs. Current polling indicates the following results:\n\n[?SLO.party_names_short_coloured_array^0.GetTokenLocalizedKey]§W: [?FROM.party_popularity^0|.1]%§!\n[?SLO.party_names_short_coloured_array^1.GetTokenLocalizedKey]§W: [?FROM.party_popularity^1|.1]%§!\n[?SLO.party_names_short_coloured_array^2.GetTokenLocalizedKey]§W: [?FROM.party_popularity^2|.1]%§!\n[?SLO.party_names_short_coloured_array^3.GetTokenLocalizedKey]§W: [?FROM.party_popularity^3|.1]%§!\n[?SLO.party_names_short_coloured_array^4.GetTokenLocalizedKey]§W: [?FROM.party_popularity^4|.1]%§!\n[?SLO.party_names_short_coloured_array^5.GetTokenLocalizedKey]§W: [?FROM.party_popularity^5|.1]%§!\n[?SLO.party_names_short_coloured_array^6.GetTokenLocalizedKey]§W: [?FROM.party_popularity^6|.1]%§!"
  SLO_is_campaigning_in_state_flag:0 "A [?SLO.party_names_short_coloured_array^SLO.party_campaigning_as.GetTokenLocalizedKey] campaign in ongoing."
  
  slovakia_elections.1.title:0 "The Campaign Season Begins!"
@@ -915,3 +915,6 @@
  SLO_party_to_add_popularity_to_4_tt:0 "$SLO_party_to_add_popularity_to_nationalists_tt$"
  SLO_party_to_add_popularity_to_5_tt:0 "$SLO_party_to_add_popularity_to_fascists_tt$"
  SLO_party_to_add_popularity_to_6_tt:0 "$SLO_party_to_add_popularity_to_non_aligned_other_tt$"
+ 
+ SLO_focus_is_underway_tt:0 "Progress: §Y[?SLO_focus_underway_flag:days]§!/105 days"
+ SLO_focus_can_only_be_completed_by_legislature_tt:0 "This focus can only be completed by parliament."

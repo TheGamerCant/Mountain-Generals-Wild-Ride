@@ -493,6 +493,344 @@ SLO_get_valid_economy_focuses = {
 	}
 }
 
+SLO_get_valid_political_focuses = {
+	clear_array = SLO.political_focuses_array
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_ensure_the_seperation_of_church_and_state } 
+			
+			OR = {
+				SLO_soc_dems_largest_party_trigger = yes
+				SLO_communists_in_government_trigger = yes
+			}
+			SLO_has_a_majority_government_trigger = yes
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 20 }		#SLO_ensure_the_seperation_of_church_and_state
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_centralisation_of_government_bureaucracy } 
+			
+			OR = {
+				SLO_soc_dems_largest_party_trigger = yes
+				SLO_liberals_largest_party_trigger = yes
+				SLO_soc_dems_and_liberals_largest_parties_trigger = yes
+				SLO_communists_in_government_trigger = yes
+			}
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 21 }		#SLO_centralisation_of_government_bureaucracy
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_equal_workplace_laws } 
+			has_completed_focus = SLO_promote_womens_equality
+			
+			NOT = {
+				SLO_nationalists_in_government_trigger = yes
+				SLO_conservatives_in_government_trigger = yes
+			}
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 22 }		#SLO_equal_workplace_laws
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_promote_womens_equality } 
+			
+			NOT = {
+				SLO_nationalists_in_government_trigger = yes
+				SLO_conservatives_largest_party_trigger = yes
+			}
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 23 }		#SLO_promote_womens_equality
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_expand_the_ministry_of_foreign_affairs } 
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 24 }		#SLO_expand_the_ministry_of_foreign_affairs
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_expand_intelligence_operations } 
+			has_completed_focus = SLO_implement_limited_conscription
+			
+			has_dlc = "La Resistance"
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 25 }		#SLO_expand_intelligence_operations
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_implement_limited_conscription } 
+			has_completed_focus = SLO_slovakia_on_a_war_footing
+			
+			threat > 0.1
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 26 }		#SLO_implement_limited_conscription
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_slovakia_on_a_war_footing } 
+			has_completed_focus = SLO_promotion_of_slovak_nationalism
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 27 }		#SLO_slovakia_on_a_war_footing
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_promotion_of_slovak_nationalism } 
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 28 }		#SLO_promotion_of_slovak_nationalism
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_a_shining_example_of_european_democracy } 
+			has_completed_focus = SLO_allow_for_minority_autonomy
+			
+			NOT = { SLO_nationalists_in_government_trigger = yes }
+			
+			OR = {
+				SLO_liberals_largest_party_trigger = yes
+				SLO_soc_dems_largest_party_trigger = yes
+				SLO_soc_dems_and_liberals_largest_parties_trigger = yes
+			}
+			
+			if = {
+				limit = { SLO_is_not_europe = yes }
+				
+				controls_state = 664
+				controls_state = 73
+			}
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 29 }		#SLO_a_shining_example_of_european_democracy
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_allow_for_minority_autonomy } 
+			has_completed_focus = SLO_promotion_of_slovak_nationalism
+			
+			NOT = { has_completed_focus = SLO_slovakia_for_the_slovaks }
+			NOT = { has_completed_focus = SLO_toe_the_middle_ground }
+			
+			NOT = { SLO_nationalists_in_government_trigger = yes }
+			
+			OR = {
+				SLO_liberals_largest_party_trigger = yes
+				SLO_soc_dems_largest_party_trigger = yes
+				SLO_soc_dems_and_liberals_largest_parties_trigger = yes
+			}
+			
+			if = {
+				limit = { SLO_is_not_europe = yes }
+				
+				controls_state = 664
+				controls_state = 73
+			}
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 30 }		#SLO_allow_for_minority_autonomy
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_secure_our_south } 
+			has_completed_focus = SLO_toe_the_middle_ground
+			
+			is_neighbor_of = HUN
+			SLO_is_not_europe = yes
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 31 }		#SLO_secure_our_south
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_toe_the_middle_ground } 
+			has_completed_focus = SLO_promotion_of_slovak_nationalism
+			
+			NOT = { has_completed_focus = SLO_slovakia_for_the_slovaks }
+			NOT = { has_completed_focus = SLO_allow_for_minority_autonomy }
+			
+			NOT = { SLO_nationalists_in_government_trigger = yes }
+
+			if = {
+				limit = { SLO_is_not_europe = yes }
+				
+				controls_state = 664
+				controls_state = 73
+			}
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 32 }		#SLO_toe_the_middle_ground
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_attack_non_slovak_parties } 
+			has_completed_focus = SLO_slovakia_for_the_slovaks
+			
+			OR = {
+				SLO_nationalists_largest_party_trigger = yes
+				SLO_fascists_in_government_trigger = yes
+			}
+			SLO_has_a_majority_government_trigger = yes
+			
+			if = {
+				limit = { SLO_is_not_europe = yes }
+				
+				controls_state = 664
+				controls_state = 73
+			}
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 33 }		#SLO_attack_non_slovak_parties
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_slovakia_for_the_slovaks } 
+			has_completed_focus = SLO_promotion_of_slovak_nationalism
+			
+			NOT = { has_completed_focus = SLO_allow_for_minority_autonomy }
+			NOT = { has_completed_focus = SLO_toe_the_middle_ground }
+			
+			OR = {
+				SLO_nationalists_largest_party_trigger = yes
+				SLO_fascists_in_government_trigger = yes
+			}
+			SLO_has_a_majority_government_trigger = yes
+			
+			if = {
+				limit = { SLO_is_not_europe = yes }
+				
+				controls_state = 664
+				controls_state = 73
+			}
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 34 }		#SLO_slovakia_for_the_slovaks
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_continue_the_policies_of_land_reform } 
+			
+			SLO_conservatives_in_government_trigger = yes
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 35 }		#SLO_continue_the_policies_of_land_reform
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_form_the_hlinkas_guard } 
+			has_completed_focus = SLO_enforce_cultural_media_standards
+			
+			OR = {
+				SLO_nationalists_largest_party_trigger = yes
+				SLO_fascists_in_government_trigger = yes
+			}
+			SLO_has_a_majority_government_trigger = yes
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 36 }		#SLO_form_the_hlinkas_guard
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_enforce_cultural_media_standards } 
+			has_completed_focus = SLO_mandate_christianity_in_schools
+			
+			OR = {
+				SLO_nationalists_largest_party_trigger = yes
+				SLO_fascists_in_government_trigger = yes
+			}
+			SLO_has_a_majority_government_trigger = yes
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 37 }		#SLO_enforce_cultural_media_standards
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_mandate_christianity_in_schools } 
+			
+			OR = {
+				SLO_nationalists_largest_party_trigger = yes
+				SLO_fascists_in_government_trigger = yes
+			}
+			SLO_has_a_majority_government_trigger = yes
+		}
+		
+		add_to_array = { SLO.political_focuses_array = 38 }		#SLO_mandate_christianity_in_schools
+	}
+}
+
+SLO_select_next_democratic_focus = {
+	SLO_get_valid_economy_focuses = yes
+	SLO_get_valid_political_focuses = yes
+	
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SLO.focus_to_pick > 19 }				#If the last focus was a political focus or if this is the first focus, pick an economic focus
+				NOT = { has_variable = SLO.focus_to_pick }				#Else, pick a political focus
+			}
+			check_variable = { SLO.economy_focuses_array^num > 0 }
+		}
+		
+		#Prioritise research slots
+		if = {
+			limit = { is_in_array = { array = SLO.economy_focuses_array value = 18 } }
+			set_variable = { SLO.focus_to_pick = 18 }
+		}
+		else_if = {
+			limit = { is_in_array = { array = SLO.economy_focuses_array value = 17 } }
+			set_variable = { SLO.focus_to_pick = 17 }
+		}
+		else = {
+			set_temp_variable_to_random = {
+				var = rndm
+				min = 0
+				max = SLO.economy_focuses_array^num		#Strictly less than
+				integer = yes
+			}
+			
+			set_variable = { SLO.focus_to_pick = SLO.economy_focuses_array^rndm }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { SLO.political_focuses_array^num > 0 }
+		}
+		set_temp_variable_to_random = {
+			var = rndm
+			min = 0
+			max = SLO.political_focuses_array^num		#Strictly less than
+			integer = yes
+		}
+			
+		set_variable = { SLO.focus_to_pick = SLO.political_focuses_array^rndm }
+	}
+	else = {		#No focus can be chosen
+		set_variable = { SLO.focus_to_pick = 0 }
+	}
+	
+	#Don't need these anymore
+	clear_array = SLO.economy_focuses_array
+	clear_array = SLO.political_focuses_array
+}
+
 SLO_increase_church_power = {
 	if = { 
 		limit = { SLO_is_not_europe = yes }

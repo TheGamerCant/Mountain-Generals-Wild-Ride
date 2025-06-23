@@ -252,7 +252,7 @@ ideas = {
 			modifier = {
 				war_support_factor = 0.1
 				war_stability_factor = 0.50
-				conscription = 0.012
+				conscription = 0.02
 				army_org_factor = 0.04
 				land_reinforce_rate = 0.03
 				political_power_gain = 0.20
@@ -281,7 +281,7 @@ ideas = {
 			modifier = {
 				war_support_factor = 0.15
 				war_stability_factor = 0.50
-				conscription = 0.012
+				conscription = 0.02
 				army_org_factor = 0.08
 				land_reinforce_rate = 0.03
 				political_power_gain = 0.20
@@ -1115,7 +1115,7 @@ ideas = {
 
 			modifier = {
 				political_power_cost = 0.10
-				conscription_factor = 0.06
+				conscription_factor = 0.04
 				stability_factor = 0.05
 			}
 		}
@@ -1130,9 +1130,10 @@ ideas = {
 			}
 
 			modifier = {
-				conscription_factor = 0.12
+				conscription_factor = 0.08
 				stability_factor = 0.05
 				democratic_drift = 0.05
+				compliance_growth = 0.05
 			}
 		}
 		
@@ -1187,6 +1188,28 @@ ideas = {
 				stability_factor = -0.10
 				stability_weekly = 0.001
 				resistance_growth = -0.10
+			}
+		}
+		
+		SLO_ministry_of_foreign_affairs_idea = {
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+				
+			available = {
+				SLO_is_not_europe = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				enemy_justify_war_goal_time = 0.20
+				opinion_gain_monthly_factor = 0.33
+				resistance_growth = -0.06
+				political_power_gain = 0.10
+				trade_opinion_factor = 0.10
 			}
 		}
 	}

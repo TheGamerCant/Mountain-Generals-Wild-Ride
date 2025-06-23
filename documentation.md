@@ -83,3 +83,5 @@ SLO_campaign_season_underway_flag		-> Flag, are the campaign mechanics active?
 ###Focuses###
 
 SLO.economy_focuses_array 			-> Array, which economic focuses are available to select
+SLO.political_focuses_array			-> Array, which political focuses are available to select
+SLO.focus_to_pick				-> Variable, focus being worked on

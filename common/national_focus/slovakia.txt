@@ -1365,7 +1365,7 @@ focus_tree = {
 		completion_reward = {			
 			add_tech_bonus = {
 				name = SLO_the_finest_weapons
-				bonus = 0.9
+				bonus = 0.75
 				uses = 2
 				category = infantry_weapons
 			}
@@ -3755,7 +3755,7 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_manpower = 50000
+			add_manpower = 20000
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -6151,6 +6151,8 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				SLO_start_campaign = yes
+				
+				country_event = { id = slovakia.33 days = 10 random_days = 20 }
 			}
 			effect_tooltip = {
 				country_event = { id = slovakia_elections.1 hours = 4 }
@@ -6178,6 +6180,22 @@ focus_tree = {
 				SLO_communists_in_government_trigger = yes
 			}
 			SLO_has_a_majority_government_trigger = yes
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 2 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -6215,6 +6233,22 @@ focus_tree = {
 				SLO_communists_in_government_trigger = yes
 			}
 			SLO_has_a_majority_government_trigger = yes
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 1 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -6351,6 +6385,21 @@ focus_tree = {
 		relative_position_id = SLO_hold_an_election
 
 		available = {
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 6 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -6431,6 +6480,22 @@ focus_tree = {
 				SLO_liberals_largest_party_trigger = yes
 				SLO_soc_dems_and_liberals_largest_parties_trigger = yes
 				SLO_communists_in_government_trigger = yes
+			}
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 5 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
 			}
 		}
 		
@@ -6526,6 +6591,22 @@ focus_tree = {
 				SLO_soc_dems_and_liberals_largest_parties_trigger = yes
 				SLO_communists_in_government_trigger = yes
 			}
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 3 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		prerequisite = { focus = SLO_improve_working_conditions focus = SLO_towards_a_socialist_economy }
@@ -6595,6 +6676,21 @@ focus_tree = {
 		relative_position_id = SLO_improve_working_conditions
 
 		available = {
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 4 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		prerequisite = { focus = SLO_improve_working_conditions focus = SLO_towards_a_socialist_economy }
@@ -6721,6 +6817,22 @@ focus_tree = {
 #				SLO_liberals_in_government_trigger = yes
 #				SLO_conservatives_in_government_trigger = yes
 #			}
+
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 12 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -6783,6 +6895,22 @@ focus_tree = {
 
 		available = {
 			NOT = { SLO_liberals_in_government_trigger = yes }
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 13 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -6906,6 +7034,22 @@ focus_tree = {
 				SLO_liberals_largest_party_trigger = yes
 				SLO_soc_dems_and_liberals_largest_parties_trigger = yes
 			}
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 8 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -7016,6 +7160,21 @@ focus_tree = {
 		relative_position_id = SLO_cut_import_tariffs
 
 		available = {
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 7 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -7140,6 +7299,22 @@ focus_tree = {
 
 		available = {
 			NOT = { SLO_liberals_in_government_trigger = yes }
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 10 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -7227,6 +7402,21 @@ focus_tree = {
 		relative_position_id = SLO_protectionism
 
 		available = {
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 9 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -7354,6 +7544,21 @@ focus_tree = {
 		relative_position_id = SLO_ease_of_doing_business_reforms
 
 		available = {
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 11 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -7488,6 +7693,21 @@ focus_tree = {
 		relative_position_id = SLO_hold_an_election
 
 		available = {
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 14 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -7598,6 +7818,21 @@ focus_tree = {
 		relative_position_id = SLO_expand_arms_exports
 
 		available = {
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 18 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -7666,6 +7901,22 @@ focus_tree = {
 
 		available = {
 			industrial_complex > 74
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 17 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -7734,6 +7985,21 @@ focus_tree = {
 		relative_position_id = SLO_expand_arms_exports
 
 		available = {
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 16 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -7856,6 +8122,21 @@ focus_tree = {
 		relative_position_id = SLO_infrastructure_focus
 
 		available = {
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 15 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -8013,6 +8294,22 @@ focus_tree = {
 				SLO_fascists_in_government_trigger = yes
 			}
 			SLO_has_a_majority_government_trigger = yes
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 19 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -8048,6 +8345,22 @@ focus_tree = {
 				SLO_communists_in_government_trigger = yes
 			}
 			SLO_has_a_majority_government_trigger = yes
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 20 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -8180,6 +8493,22 @@ focus_tree = {
 				SLO_soc_dems_and_liberals_largest_parties_trigger = yes
 				SLO_communists_in_government_trigger = yes
 			}
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 21 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -8209,6 +8538,13 @@ focus_tree = {
 		}
 		icon = {
 			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_promote_womens_equality_conservative
+		}
+		icon = {
+			trigger = {
 				SLO_soc_dems_in_government_trigger = yes
 				OR = {
 					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
@@ -8231,6 +8567,22 @@ focus_tree = {
 			NOT = {
 				SLO_nationalists_in_government_trigger = yes
 				SLO_conservatives_largest_party_trigger = yes
+			}
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 23 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
 			}
 		}
 		
@@ -8286,6 +8638,22 @@ focus_tree = {
 				SLO_nationalists_in_government_trigger = yes
 				SLO_conservatives_in_government_trigger = yes
 			}
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 22 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -8315,6 +8683,67 @@ focus_tree = {
 					PARTY_VAR = "3"
 				}
 			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_expand_the_ministry_of_foreign_affairs
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_expand_the_ministry_of_foreign_affairs_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_expand_the_ministry_of_foreign_affairs_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_expand_the_ministry_of_foreign_affairs_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_expand_the_ministry_of_foreign_affairs_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_expand_the_ministry_of_foreign_affairs
+		}
+		
+		x =12
+		y = 1
+		cost = 15
+		
+		relative_position_id = SLO_hold_an_election
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_ideas = SLO_ministry_of_foreign_affairs_idea
 		}
 	}
 	
@@ -8366,18 +8795,26 @@ focus_tree = {
 		relative_position_id = SLO_hold_an_election
 
 		available = {
-			SLO_is_not_europe = yes
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 28 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
-			SLO_is_europe = yes
 		}
 		
-		bypass_effect = { 
-			add_war_support = 0.05
-		}
-		
-
 		completion_reward = {
 			add_ideas = SLO_promotion_of_slovak_nationalism_idea_1
 		}
@@ -8433,7 +8870,21 @@ focus_tree = {
 		prerequisite = { focus = SLO_promotion_of_slovak_nationalism }
 
 		available = {
-			SLO_is_not_europe = yes
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 27 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -8508,9 +8959,23 @@ focus_tree = {
 		prerequisite = { focus = SLO_slovakia_on_a_war_footing }
 
 		available = {
-			SLO_is_not_europe = yes
+			threat > 0.1
 			
-			threat > 10
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 26 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -8595,7 +9060,21 @@ focus_tree = {
 		prerequisite = { focus = SLO_implement_limited_conscription }
 
 		available = {
-			SLO_is_not_europe = yes
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 25 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		allow_branch = { has_dlc = "La Resistance" }
@@ -8627,7 +9106,29 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_allow_for_minority_autonomy
-		icon = GFX_
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_allow_for_minority_autonomy_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_allow_for_minority_autonomy_soc_dem
+		}
+		icon = {
+			value = GFX_goal_SLO_allow_for_minority_autonomy
+		}
+		
 		x = -1
 		y = 1
 		cost = 15
@@ -8649,6 +9150,22 @@ focus_tree = {
 				
 				controls_state = 664
 				controls_state = 73
+			}
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 30 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
 			}
 		}
 		
@@ -8682,7 +9199,7 @@ focus_tree = {
 						}
 						
 						VALUE_VAR = "[?nat_support|3]"
-						PARTY_VAR = "[?PREV.largest_party]"
+						PARTY_VAR = "[?SLO.parties_in_government_ordered^0]"
 					}
 				}
 			}
@@ -8700,7 +9217,7 @@ focus_tree = {
 						}
 						
 						VALUE_VAR = "[?nat_support|3]"
-						PARTY_VAR = "[?PREV.largest_party]"
+						PARTY_VAR = "[?SLO.parties_in_government_ordered^0]"
 					}
 				}
 			}
@@ -8711,7 +9228,29 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_a_shining_example_of_european_democracy
-		icon = GFX_
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_a_shining_example_of_european_democracy_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_a_shining_example_of_european_democracy_soc_dem
+		}
+		icon = {
+			value = GFX_goal_SLO_a_shining_example_of_european_democracy
+		}
+		
 		x = 0
 		y = 1
 		cost = 15
@@ -8733,6 +9272,22 @@ focus_tree = {
 				
 				controls_state = 664
 				controls_state = 73
+			}
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 29 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
 			}
 		}
 		
@@ -8769,7 +9324,7 @@ focus_tree = {
 						}
 						
 						VALUE_VAR = "[?nat_support|3]"
-						PARTY_VAR = "[?PREV.largest_party]"
+						PARTY_VAR = "[?SLO.parties_in_government_ordered^0]"
 					}
 				}
 			}
@@ -8787,7 +9342,7 @@ focus_tree = {
 						}
 						
 						VALUE_VAR = "[?nat_support|3]"
-						PARTY_VAR = "[?PREV.largest_party]"
+						PARTY_VAR = "[?SLO.parties_in_government_ordered^0]"
 					}
 				}
 			}
@@ -8798,7 +9353,36 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_toe_the_middle_ground
-		icon = GFX_
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_toe_the_middle_ground_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_toe_the_middle_ground_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_toe_the_middle_ground_conservative
+		}
+		icon = {
+			value = GFX_goal_SLO_toe_the_middle_ground
+		}
+		
 		x = 1
 		y = 1
 		cost = 15
@@ -8815,6 +9399,22 @@ focus_tree = {
 				controls_state = 664
 				controls_state = 73
 			}
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 32 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -8829,7 +9429,45 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_secure_our_south
-		icon = GFX_
+		
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_secure_our_south_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_secure_our_south_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_secure_our_south_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_secure_our_south_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_secure_our_south
+		}
+		
 		x = 0
 		y = 1
 		cost = 15
@@ -8840,6 +9478,22 @@ focus_tree = {
 		available = {
 			is_neighbor_of = HUN
 			SLO_is_not_europe = yes
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 31 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -8868,7 +9522,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_slovakia_for_the_slovaks
-		icon = GFX_
+		icon = GFX_goal_SLO_slovakia_for_the_slovaks
 		x = 3
 		y = 1
 		cost = 15
@@ -8882,13 +9536,28 @@ focus_tree = {
 				SLO_fascists_in_government_trigger = yes
 			}
 			SLO_has_a_majority_government_trigger = yes
-			SLO_is_not_europe = yes
 			
 			if = {
 				limit = { SLO_is_not_europe = yes }
 				
 				controls_state = 664
 				controls_state = 73
+			}
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 34 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
 			}
 		}
 		
@@ -8899,78 +9568,82 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = SLO_minority_rights_suppressed_idea_1
 			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			set_variable = { largest_party = SLO.parties_in_government_ordered^0 }
-			664 = {
-				set_temp_variable = { nat_support = party_popularity^PREV.largest_party}
-				multiply_temp_variable = { nat_support = -0.45 }
+			if = {
+				limit = { SLO_is_not_europe = yes }
 				
-				meta_effect = {
-					text = {
-						set_variable = { party = [PARTY_VAR] }
-						set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
-						STATE_add_party_support = yes
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				set_variable = { largest_party = SLO.parties_in_government_ordered^0 }
+				664 = {
+					set_temp_variable = { nat_support = party_popularity^PREV.largest_party}
+					multiply_temp_variable = { nat_support = -0.45 }
+					
+					meta_effect = {
+						text = {
+							set_variable = { party = [PARTY_VAR] }
+							set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+							STATE_add_party_support = yes
+						}
+						
+						VALUE_VAR = "[?nat_support|3]"
+						PARTY_VAR = "[?SLO.parties_in_government_ordered^0]"
 					}
 					
-					VALUE_VAR = "[?nat_support|3]"
-					PARTY_VAR = "[?PREV.largest_party]"
+					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = generic_skip_one_line_tt
+					
+					meta_effect = {
+						text = {
+							set_variable = { party = [PARTY_VAR] }
+							set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+							STATE_add_party_support = yes
+						}
+						
+						VALUE_VAR = "10"
+						PARTY_VAR = "6"
+					}
 				}
 				
 				custom_effect_tooltip = generic_skip_one_line_tt
-				custom_effect_tooltip = generic_skip_one_line_tt
 				
-				meta_effect = {
-					text = {
-						set_variable = { party = [PARTY_VAR] }
-						set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
-						STATE_add_party_support = yes
+				73 = {
+					set_temp_variable = { nat_support = party_popularity^PREV.largest_party }
+					multiply_temp_variable = { nat_support = -0.45 }
+					
+					meta_effect = {
+						text = {
+							set_variable = { party = [PARTY_VAR] }
+							set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+							STATE_add_party_support = yes
+						}
+						
+						VALUE_VAR = "[?nat_support|3]"
+						PARTY_VAR = "[?SLO.parties_in_government_ordered^0]"
 					}
 					
-					VALUE_VAR = "10"
-					PARTY_VAR = "6"
+					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = generic_skip_one_line_tt
+					
+					meta_effect = {
+						text = {
+							set_variable = { party = [PARTY_VAR] }
+							set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+							STATE_add_party_support = yes
+						}
+						
+						VALUE_VAR = "10"
+						PARTY_VAR = "0"
+					}
 				}
+				
+				clear_variable = largest_party
 			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			73 = {
-				set_temp_variable = { nat_support = party_popularity^PREV.largest_party }
-				multiply_temp_variable = { nat_support = -0.45 }
-				
-				meta_effect = {
-					text = {
-						set_variable = { party = [PARTY_VAR] }
-						set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
-						STATE_add_party_support = yes
-					}
-					
-					VALUE_VAR = "[?nat_support|3]"
-					PARTY_VAR = "[?PREV.largest_party]"
-				}
-				
-				custom_effect_tooltip = generic_skip_one_line_tt
-				custom_effect_tooltip = generic_skip_one_line_tt
-				
-				meta_effect = {
-					text = {
-						set_variable = { party = [PARTY_VAR] }
-						set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
-						STATE_add_party_support = yes
-					}
-					
-					VALUE_VAR = "10"
-					PARTY_VAR = "0"
-				}
-			}
-			
-			clear_variable = largest_party
 		}
 	}
 	
 	focus = {	
 		id = SLO_attack_non_slovak_parties
-		icon = GFX_
+		icon = GFX_goal_SLO_attack_non_slovak_parties
 		x = 0
 		y = 1
 		cost = 15
@@ -8983,13 +9656,28 @@ focus_tree = {
 				SLO_fascists_in_government_trigger = yes
 			}
 			SLO_has_a_majority_government_trigger = yes
-			SLO_is_not_europe = yes
 			
 			if = {
 				limit = { SLO_is_not_europe = yes }
 				
 				controls_state = 664
 				controls_state = 73
+			}
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 33 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
 			}
 		}
 		
@@ -9003,56 +9691,60 @@ focus_tree = {
 				add_idea = SLO_minority_rights_suppressed_idea_2
 			}
 			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			664 = {
-				set_temp_variable = { nsp_support = party_popularity^6 }
-				multiply_temp_variable = { nsp_support = -0.60 }
+			if = {
+				limit = { SLO_is_not_europe = yes }
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				664 = {
+					set_temp_variable = { nsp_support = party_popularity^6 }
+					multiply_temp_variable = { nsp_support = -0.60 }
 
-				meta_effect = {
-					text = {
-						set_variable = { party = [PARTY_VAR] }
-						set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
-						STATE_add_party_support = yes
+					meta_effect = {
+						text = {
+							set_variable = { party = [PARTY_VAR] }
+							set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+							STATE_add_party_support = yes
+						}
+						
+						VALUE_VAR = "[?nsp_support|3]"
+						PARTY_VAR = "6"
 					}
-					
-					VALUE_VAR = "[?nsp_support|3]"
-					PARTY_VAR = "6"
-				}
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			73 = {
-				set_temp_variable = { nsp_support = party_popularity^0 }
-				multiply_temp_variable = { nsp_support = -0.60 }
-
-				meta_effect = {
-					text = {
-						set_variable = { party = [PARTY_VAR] }
-						set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
-						STATE_add_party_support = yes
-					}
-					
-					VALUE_VAR = "[?nsp_support|3]"
-					PARTY_VAR = "0"
 				}
 				
 				custom_effect_tooltip = generic_skip_one_line_tt
-				custom_effect_tooltip = generic_skip_one_line_tt
 				
-				set_temp_variable = { nsp_support = party_popularity^6 }
-				multiply_temp_variable = { nsp_support = -0.60 }
+				73 = {
+					set_temp_variable = { nsp_support = party_popularity^0 }
+					multiply_temp_variable = { nsp_support = -0.60 }
 
-				meta_effect = {
-					text = {
-						set_variable = { party = [PARTY_VAR] }
-						set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
-						STATE_add_party_support = yes
+					meta_effect = {
+						text = {
+							set_variable = { party = [PARTY_VAR] }
+							set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+							STATE_add_party_support = yes
+						}
+						
+						VALUE_VAR = "[?nsp_support|3]"
+						PARTY_VAR = "0"
 					}
 					
-					VALUE_VAR = "[?nsp_support|3]"
-					PARTY_VAR = "6"
+					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = generic_skip_one_line_tt
+					
+					set_temp_variable = { nsp_support = party_popularity^6 }
+					multiply_temp_variable = { nsp_support = -0.60 }
+
+					meta_effect = {
+						text = {
+							set_variable = { party = [PARTY_VAR] }
+							set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+							STATE_add_party_support = yes
+						}
+						
+						VALUE_VAR = "[?nsp_support|3]"
+						PARTY_VAR = "6"
+					}
 				}
 			}
 		}
@@ -9060,7 +9752,46 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_continue_the_policies_of_land_reform
-		icon = GFX_
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_continue_the_policies_of_land_reform_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_continue_the_policies_of_land_reform_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_continue_the_policies_of_land_reform_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_continue_the_policies_of_land_reform_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_continue_the_policies_of_land_reform
+		}
+		
 		x = 17
 		y = 1
 		cost = 15
@@ -9068,6 +9799,22 @@ focus_tree = {
 
 		available = {
 			SLO_conservatives_in_government_trigger = yes
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 35 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -9145,6 +9892,22 @@ focus_tree = {
 				SLO_fascists_in_government_trigger = yes
 			}
 			SLO_has_a_majority_government_trigger = yes
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 38 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -9181,6 +9944,22 @@ focus_tree = {
 				SLO_fascists_in_government_trigger = yes
 			}
 			SLO_has_a_majority_government_trigger = yes
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 37 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {
@@ -9217,7 +9996,7 @@ focus_tree = {
 					}
 					
 					VALUE_VAR = "[?support|3]"
-					PARTY_VAR = "[?PREV.largest_party]"
+					PARTY_VAR = "[?SLO.parties_in_government_ordered^0]"
 				}
 			}
 			
@@ -9240,6 +10019,22 @@ focus_tree = {
 				SLO_fascists_in_government_trigger = yes
 			}
 			SLO_has_a_majority_government_trigger = yes
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 36 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					always = no
+				}	
+			}
 		}
 		
 		bypass = {

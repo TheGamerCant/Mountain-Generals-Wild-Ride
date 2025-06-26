@@ -136,7 +136,7 @@
  slovakia.30.a:0 "So be it"
  
  slovakia.31.title:0 "Integration of Czech Škoda"
- slovakia.31.desc:0 "Following our march into Prague, we have taken over many of the Škoda factories, improving our knowledge and integrating our arms industries. Hopefully, we will be able to return back to the arms exporting giant we once were, and Mountain General has ordered for a swift and effective integration of our arms industries."
+ slovakia.31.desc:0 "Following the reunification of Slovakia and Czechia, we have taken over many of the Škoda factories, improving our knowledge and integrating our arms industries. Hopefully, we will be able to return back to the arms exporting giant we once were, and Mountain General has ordered for a swift and effective integration of our arms industries."
  slovakia.31.a:0 "Great news!"
  
  slovakia.32.title:0 "Arms Exports Rise"
@@ -147,6 +147,35 @@
  slovakia.33.desc:0 "Horror struck Slovakia today as peaceful demonstrations turned violent, with far-left and far-right groups clashing on the streets. Fortunately no-one died, however several dozen had to be rushed to a nearby hospital. The people of Slovakia look for guidance from their government, and hope that this will not repeat."
  slovakia.33.a:0 "We must condemn this savagery"
  slovakia.33.b:0 "Pin the blame on the leftists"
+ 
+ slovakia.34.title:0 "The Situation in Poland"
+ slovakia.34.desc:0 "After Józef Piłsudski's death in May of 1935, Ignacy Mościcki's centrist clique, the castle, has succeeded in their takeover of the country. However, their position on power is very unstable, and can easily be exploited by us to extablish a truely democratic Poland.\n\nOur first course of action is to meet with the leader of the Polish democratic reformist group, Walery Sławek, in private, and discuss our support for his leadership."
+ slovakia.34.a:0 "Let's find somewhere nice to meet, shall we?"
+
+ slovakia.35.title:0 "The Meeting"
+ slovakia.35.desc:0 "Mountain General's meeting with Sławek has gone simmingly and the two seem to get along quite well, but there is one major problem. Sławek is unsure of the possibility of dethroning Mościcki via political manuevering, and wants our financial and military aid to overthrow Mościcki."
+ slovakia.35.a:0 "No price is too great for democracy"
+
+ slovakia.36.title:0 "The Price of Democracy"
+ slovakia.36.desc:0 "Under the cover of night-time on [?global.date.GetDateStringNoHourLong], undercover Slovakian soldiers smuggled hundreds of arms across the Polish border. Bribes were given to indifferent officials and the Sanation left stands ready to overthrow [POL.GetLeader], eagerly wating for Walery Sławek's word to do so."
+ slovakia.36.a:0 "Poland will be free once more!"
+
+ slovakia.37.title:0 "The Coup Succeeds!"
+ slovakia.37.desc:0 "Earlier today, soldiers loyal to Sławek stormed Warsaw and arrested Ignacy Mościcki. After a couple of hours and minor skirmishes, it would seem as though Walery Sławek has succeeded in his efforts to establish a democratic Poland."
+ slovakia.37.a:0 "Sic Semper Tyrannis"
+
+ slovakia.38.title:0 "[SLO.GetLeader] Requests an Alliance"
+ slovakia.38.desc:0 "Ayo wanna kick Hitler's teeth in? Why they hell are you reading this? This is the fucking Slovakia mod."
+ slovakia.38.a:0 "We must stand united against Fascism"
+ slovakia.38.b:0 "Who does this madman think he is"
+
+ slovakia.39.title:0 "[FROM.GetLeader] Agrees to an Alliance"
+ slovakia.39.desc:0 "[FROM.GetLeader] has agreed to our request for an alliance against Germany. It seems the democracies of Europe are finally waking up and are ready to put the mad man of Berlin in his place."
+ slovakia.39.a:0 "Great news"
+ 
+ slovakia.40.title:0 "[FROM.GetLeader] Refuses an Alliance"
+ slovakia.40.desc:0 "[FROM.GetLeader] has refused to help form an alliance against Germany, arguing it to be 'provocative'. This leaves us weakened, and European democracy in a vulnerable position."
+ slovakia.40.a:0 "Oh well"
  
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to dictate terms of surrender to the once proud Czechoslovak government in Prague. For the first time ever, Slovakia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."
@@ -164,3 +193,8 @@
  slovakia_news.3.a:0 "Gypsies fighting gypsies, what else is new?"
  slovakia_news.3.b:0 "The first of many conquests to come!"
  slovakia_news.3.c:0 "We will take back Northern Hungary!"
+
+ slovakia_news.4.title:0 "Sanation Left Coup In Poland"
+ slovakia_news.4.desc:0 "Following months of preparation, the faction known as the 'Sanation Left' has overthrown the government of Ignacy Mościcki, promising to realise Marshall Piłsudski's original vision of a democratic Poland. Current intelligence suggests [POL.GetLeader] may have had some help from [SLO.GetLeader]'s Slovakia in organising the coup."
+ slovakia_news.4.a:0 "Intersting"
+ slovakia_news.4.b:0 "We stand united"

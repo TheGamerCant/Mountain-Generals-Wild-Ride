@@ -537,3 +537,37 @@ defined_text = {
 		localization_key = "Europe"
 	}
 }
+
+defined_text = {
+	name = GetNameSecureHungaryFocus
+
+	text = {
+		trigger = {
+			HUN = { has_government = democratic }
+		}
+		localization_key = "SLO_secure_hungary_1"
+	}
+	text = {
+		localization_key = "SLO_secure_hungary_2"
+	}
+}
+
+defined_text = {
+	name = GetNameSecurePolandFocus
+
+	text = {
+		trigger = {
+			POL = { has_government = democratic }
+		}
+		localization_key = "SLO_secure_poland_1"
+	}
+	text = {
+		trigger = {
+			POL = { has_completed_focus = POL_complete_april_constitution }
+		}
+		localization_key = "SLO_secure_poland_2"
+	}
+	text = {
+		localization_key = "SLO_secure_poland_3"
+	}
+}

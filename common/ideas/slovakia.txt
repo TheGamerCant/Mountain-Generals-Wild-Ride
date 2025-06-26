@@ -1176,7 +1176,6 @@ ideas = {
 			picture = NOR_optimistic_cabinet_ns
 				
 			available = {
-				SLO_is_not_europe = yes
 			}
 			
 			allowed_civil_war = {
@@ -1197,7 +1196,6 @@ ideas = {
 			picture = generic_pp_unity_bonus
 				
 			available = {
-				SLO_is_not_europe = yes
 			}
 			
 			allowed_civil_war = {
@@ -1210,6 +1208,27 @@ ideas = {
 				resistance_growth = -0.06
 				political_power_gain = 0.10
 				trade_opinion_factor = 0.10
+			}
+		}
+		
+		SLO_to_liberate_europe_idea = {
+			removal_cost = -1
+
+			picture = SLO_to_liberate_europe
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				war_stability_factor = 0.3
+				justify_war_goal_time = -0.2
+				generate_wargoal_tension = -0.5
+				send_volunteers_tension = -0.5
+				guarantee_tension = -0.5
 			}
 		}
 	}

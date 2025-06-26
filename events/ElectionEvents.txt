@@ -2,7 +2,7 @@
 # Election Events
 ###########################
 
-#Make sure election events don't trigger for Slovakia
+#Made sure election events don't trigger for Slovakia
 
 add_namespace = election
 

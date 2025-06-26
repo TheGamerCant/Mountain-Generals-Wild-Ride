@@ -3,6 +3,10 @@
 SLO.seat_count		 			-> Variable, total seat count in parliament
 SLO.parliament_level 				-> Variable, 0 means Slovakia, 1 means Europe
 SLO.parliament_threshold			-> Variable, what % of votes are needed to enter the parliament
+SLO.election_frequency				-> Variable, how many days between elections
+SLO.election_frequency_thirds			-> Variable, SLO.election_frequency divided by 3
+SLO.election_frequency_four_fifths		-> Variable, SLO.election_frequency times by 0.8
+SLO.campaign_duration				-> Variable, how many days does the campaign last?
 SLO.election_states 				-> Array, what states should we perform elections in. Only updates when we hold an election
 SLO.subdivision_states				-> Array, every state that can be an election state when we form Europe
 SLO.language					-> Variable, 0 for Slovakia, 1 for English
@@ -85,3 +89,7 @@ SLO_campaign_season_underway_flag		-> Flag, are the campaign mechanics active?
 SLO.economy_focuses_array 			-> Array, which economic focuses are available to select
 SLO.political_focuses_array			-> Array, which political focuses are available to select
 SLO.focus_to_pick				-> Variable, focus being worked on
+
+###Europe###
+<country>.european_integration			-> Variable, progress towards European integration
+<country>.european_integration_needed		-> Variable, how many European integration points do we need to integrate this country

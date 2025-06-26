@@ -55,7 +55,7 @@
  SLO_privatisation_of_government_assets_idea_desc:0 "$SLO_privatisation_of_government_assets_desc$"
  
  SLO_unclear_ideology_idea:0 "Unclear Ideology"
- SLO_unclear_ideology_idea_desc:0 "Despite his genius, Mountain General has been obfuscative on specific ideological tenants so far. For now he does this to maintain a broad tent of support among the populous, but we will have to figure out our nation's path at some point."
+ SLO_unclear_ideology_idea_desc:0 "Despite his genius, Mountain General has been obfuscative on the specific ideological tenants of 'Mountain Generalism' so far. For now he does this to maintain a broad tent of support among the populous while the new Slovak government stabilises, but we will have to figure out our nation's path at some point."
  
  SLO_unstable_regime_idea_1:0 "Unstable Regime"
  SLO_unstable_regime_idea_1_desc:0 "Mountain General's rapid departure from the previous Czechoslovak norm has not gone unnoticed, many steps will need to be taken to stabilise and centralise the current regime and bring the people in line with Mountain Generalism."
@@ -149,3 +149,6 @@
  SLO_minority_rights_ensured_idea_2_desc:0 "$SLO_minority_rights_ensured_idea_1_desc$"
  SLO_ministry_of_foreign_affairs_idea:0 "Ministerstvo Zahraničných Vecí"
  SLO_ministry_of_foreign_affairs_idea_desc:0 ""
+ 
+ SLO_to_liberate_europe_idea:0 "To Liberate Europe"
+ SLO_to_liberate_europe_idea_desc:0 ""

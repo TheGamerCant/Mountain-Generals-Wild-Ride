@@ -83,9 +83,34 @@ news_event = {
 	}
 	
 	option = {
-		name = slovakia_news.3.b
+		name = slovakia_news.3.c
 		trigger = {
 			tag = HUN
+		}
+	}
+}
+
+news_event = {
+	id = slovakia_news.4
+	title = slovakia_news.4.title
+	desc = slovakia_news.4.desc
+	picture = GFX_news_event_021
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = slovakia_news.4.a
+		trigger = {
+			NOT = { OR = { tag = SLO is_in_faction_with = SLO } }
+		}
+	}
+	
+	option = {
+		name = slovakia_news.4.b
+		trigger = {
+			OR = { tag = SLO is_in_faction_with = SLO }
 		}
 	}
 }

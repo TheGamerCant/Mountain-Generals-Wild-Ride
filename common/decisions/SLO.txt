@@ -294,10 +294,10 @@ SLO_propaganda_decision_category = {
 		}
 		
 		visible = {
-			OR={
-				has_country_flag = SLO_all_propaganda_available_flag
-				has_government = fascism
-			}
+#			OR={
+#				has_country_flag = SLO_all_propaganda_available_flag
+#				has_government = fascism
+#			}
 		}
 
 
@@ -492,6 +492,7 @@ SLO_propaganda_decision_category = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
 				has_completed_focus = SLO_consolidation_of_the_regime
+				has_completed_focus = SLO_pre_emptive_measures
 			}
 		}
 
@@ -549,6 +550,7 @@ SLO_propaganda_decision_category = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
 				has_completed_focus = SLO_consolidation_of_the_regime
+				has_completed_focus = SLO_pre_emptive_measures
 			}
 		}
 
@@ -653,6 +655,7 @@ SLO_propaganda_decision_category = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
 				has_completed_focus = SLO_news_of_our_victories
+				has_completed_focus = SLO_pre_emptive_measures
 			}
 		}
 
@@ -2276,6 +2279,85 @@ SLO_parliament_decision_category = {
 		remove_effect = {
 		}
 	}
+	
+	SLO_call_a_new_election = {
+
+		icon = SWI_swiss_democratic_tradition_campaign
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SLO_can_call_a_new_election_tt
+			 	
+				#Have to use a meta trigger, standard flag trigger doesn't accept variables
+				meta_trigger = {
+					text = {
+						has_country_flag = {
+							flag = SLO_has_held_an_election_flag
+							days > [Days_Value]
+						}
+					}
+					Days_Value = "[?SLO.election_frequency_thirds]"
+				}
+			}
+		}
+
+		days_mission_timeout = var:SLO.election_frequency
+
+		activation = {
+#			has_country_flag = SLO_campaign_season_underway_flag
+#			NOT = { check_variable = { SLO.party_campaigning_as = 1 } }
+
+			has_country_flag = SLO_parliament_is_active_flag
+			NOT = { has_country_flag = SLO_campaign_season_underway_flag }
+		}
+
+		visible = {
+			
+		}		
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = yes
+		
+		selectable_mission = yes
+
+		complete_effect = {		
+			if = {
+				limit = {
+					meta_trigger = {
+						text = {
+							has_country_flag = {
+								flag = SLO_has_held_an_election_flag
+								days < [Days_Value]
+							}
+						}
+						Days_Value = "[?SLO.election_frequency_four_fifths]"
+					}
+				}
+				
+				meta_effect = {
+					text = {
+						set_temp_variable = { fraction = [Days_Value] }
+						divide_temp_variable = { fraction = SLO.election_frequency }
+						set_temp_variable = { stabReduction = 1 }
+						subtract_from_temp_variable = { stabReduction = fraction }
+						multiply_temp_variable = { stabReduction = -0.1 }		#A fraction of -10% stability
+						
+						add_stability = var:stabReduction
+					}
+					Days_Value = "[?SLO_has_held_an_election_flag:days]"
+				}
+			}
+			
+			hidden_effect = { SLO_start_campaign = yes }
+			effect_tooltip = { country_event = { id = slovakia_elections.1 hours = 4 } }
+		}
+		timeout_effect = {
+			hidden_effect = { SLO_start_campaign = yes }
+			effect_tooltip = { country_event = { id = slovakia_elections.1 hours = 4 } }		}
+	}
 }
 
 SLO_campaign_season_category = {
@@ -2289,7 +2371,7 @@ SLO_campaign_season_category = {
 			}
 		}
 
-		days_mission_timeout = 60
+		days_mission_timeout = var:SLO.campaign_duration
 
 		activation = {
 #			has_country_flag = SLO_campaign_season_underway_flag
@@ -2357,7 +2439,11 @@ SLO_campaign_season_category = {
 				}
 			}
 		}
-
+		
+		highlight_states = {
+			highlight_state_targets = { state = var:SLO.selected_states_for_campaigns^0 }
+		}
+		
 		days_mission_timeout = 14
 
 		activation = {
@@ -2493,6 +2579,10 @@ SLO_campaign_season_category = {
 			}
 		}
 
+		highlight_states = {
+			highlight_state_targets = { state = var:SLO.selected_states_for_campaigns^1 }
+		}
+
 		days_mission_timeout = 14
 
 		activation = {
@@ -2538,6 +2628,10 @@ SLO_campaign_season_category = {
 					check_variable = { SLO.party_campaigning_as = 2 }
 				}
 			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { state = var:SLO.selected_states_for_campaigns^2 }
 		}
 
 		days_mission_timeout = 14
@@ -2586,6 +2680,10 @@ SLO_campaign_season_category = {
 				}
 			}
 		}
+		
+		highlight_states = {
+			highlight_state_targets = { state = var:SLO.selected_states_for_campaigns^3 }
+		}
 
 		days_mission_timeout = 14
 
@@ -2633,6 +2731,10 @@ SLO_campaign_season_category = {
 				}
 			}
 		}
+		
+		highlight_states = {
+			highlight_state_targets = { state = var:SLO.selected_states_for_campaigns^4 }
+		}
 
 		days_mission_timeout = 14
 
@@ -2679,6 +2781,10 @@ SLO_campaign_season_category = {
 					check_variable = { SLO.party_campaigning_as = 5 }
 				}
 			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = var:SLO.selected_states_for_campaigns^5 }
 		}
 
 		days_mission_timeout = 14
@@ -2815,6 +2921,10 @@ SLO_campaign_season_category = {
 				}
 			}
 		}
+		
+		highlight_states = {
+			highlight_state_targets = { state = var:SLO.selected_states_for_campaigns^6 }
+		}
 
 		days_mission_timeout = 14
 
@@ -2912,7 +3022,7 @@ SLO_campaign_season_category = {
 		}
 		
 		days_remove = 10
-		days_re_enable = 10
+		days_re_enable = 14
 		
 		fire_only_once = no
 		
@@ -2982,6 +3092,5224 @@ SLO_campaign_season_category = {
 				
 #				clr_country_flag = SLO_is_campaigning_in_state_flag
 			}
+		}
+	}
+}
+
+SLO_towards_a_european_union_decision_category = {
+#	SLO_form_the_european_union = { 
+#
+#		icon = generic_form_nation
+#
+#		ai_will_do = {
+#			base = 100
+#		}
+#		
+#		allowed = { 
+#			original_tag = SLO
+#		}
+#		
+#		available = {
+#			
+#		}
+#		
+#		visible = { 
+#		}
+#		
+#		fire_only_once = yes
+#
+#		cost = 100
+#
+#		modifier = {
+#		}
+#		
+#		complete_effect = {
+#			set_cosmetic_tag = EUR_UNIFIED
+#			
+#			SLO_initialise_europe_mechanics = yes
+#		}
+#
+#		remove_effect = {
+#		}
+#	}
+	
+	SLO_increase_european_integration = {
+
+		icon = generic_political_discourse
+
+		ai_will_do = {
+			base = 5
+		}
+
+		target_trigger = {
+			FROM = {
+#				capital_scope = { is_on_continent = europe }
+				is_in_faction_with = SLO
+				has_variable = european_integration_needed
+				
+				#Only show this decision if we can't integrate them already
+				NOT = {
+					OR = {
+						is_puppet_of = SLO
+						custom_trigger_tooltip = {
+							tooltip = SLO_europe_annex_country_tt
+							
+							has_variable = european_integration_needed
+							check_variable = { var = european_integration value = european_integration_needed compare = greater_than_or_equals }
+						}
+					}
+				}
+			}
+		}
+
+		target_root_trigger = {
+			has_completed_focus = SLO_towards_a_european_union
+			is_subject = no
+		}
+
+		allowed = {
+			original_tag = SLO
+		}
+
+		available = {
+			is_faction_leader = yes
+		}
+
+		visible = {
+		}
+
+		days_remove = 90
+
+		days_re_enable = 90
+
+		cost = 25
+
+		modifier = {
+			political_power_cost = 0.20
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = { 
+				COUNTRY_get_country_integration_level = yes
+				add_to_variable = { european_integration = 1 }
+				custom_effect_tooltip = SLO_increase_european_integration_tt
+			}
+		}
+	}
+	
+	SLO_europe_annex_country = {
+
+		icon = infiltrate_state
+
+		ai_will_do = {
+			base = 5
+		}
+
+		target_array = global.countries
+
+		target_trigger = {
+#			capital_scope = { is_on_continent = europe }
+			
+			FROM = {
+				has_variable = european_integration_needed
+				is_in_faction_with = SLO
+			}
+		}
+
+		target_root_trigger = {
+			has_completed_focus = SLO_towards_a_european_union
+			is_subject = no
+		}
+
+		allowed = {
+			original_tag = SLO
+		}
+
+		available = {
+			FROM = {
+				OR = {
+					is_puppet_of = SLO
+					custom_trigger_tooltip = {
+						tooltip = SLO_europe_annex_country_tt
+						
+						has_variable = european_integration_needed
+						check_variable = { var = european_integration value = european_integration_needed compare = greater_than_or_equals }
+					}
+				}
+			}
+		}
+
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = { 
+				clear_variable = FROM.european_integration
+				clear_variable = FROM.european_integration_needed
+				every_character = {
+					limit = { OR = { is_unit_leader = yes is_army_leader = yes is_navy_leader = yes } }
+					set_nationality = SLO
+				}
+			}
+			annex_country = {
+				target = FROM
+				transfer_troops = yes
+			}
+		}
+	}
+
+	SLO_europe_core_region_100 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 100
+				state = 101
+				state = 914
+				state = 337
+			}
+		}
+		
+		available = {
+			100 = { is_owned_and_controlled_by = PREV }
+			101 = { is_owned_and_controlled_by = PREV }
+			914 = { is_owned_and_controlled_by = PREV }
+			337 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				100 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				101 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				914 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				337 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 100
+					state = 101
+					state = 914
+					state = 337
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_178 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 178
+				state = 697
+				state = 698
+			}
+		}
+		
+		available = {
+			178 = { is_owned_and_controlled_by = PREV }
+			697 = { is_owned_and_controlled_by = PREV }
+			698 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				178 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				697 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				698 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 178
+					state = 697
+					state = 698
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_121 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 121
+				state = 133
+				state = 136
+				state = 120
+				state = 933
+			}
+		}
+		
+		available = {
+			121 = { is_owned_and_controlled_by = PREV }
+			133 = { is_owned_and_controlled_by = PREV }
+			136 = { is_owned_and_controlled_by = PREV }
+			120 = { is_owned_and_controlled_by = PREV }
+			933 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				121 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				133 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				136 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				120 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				933 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 121
+					state = 133
+					state = 136
+					state = 120
+					state = 933
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_113 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 113
+				state = 119
+				state = 135
+				state = 134
+			}
+		}
+		
+		available = {
+			113 = { is_owned_and_controlled_by = PREV }
+			119 = { is_owned_and_controlled_by = PREV }
+			135 = { is_owned_and_controlled_by = PREV }
+			134 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				113 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				119 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				135 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				134 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 113
+					state = 119
+					state = 135
+					state = 134
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_132 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 132
+				state = 130
+				state = 131
+				state = 931
+				state = 932
+			}
+		}
+		
+		available = {
+			132 = { is_owned_and_controlled_by = PREV }
+			130 = { is_owned_and_controlled_by = PREV }
+			131 = { is_owned_and_controlled_by = PREV }
+			931 = { is_owned_and_controlled_by = PREV }
+			932 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				132 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				130 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				131 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				931 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				932 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 132
+					state = 130
+					state = 131
+					state = 931
+					state = 932
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_128 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 128
+				state = 122
+				state = 129
+			}
+		}
+		
+		available = {
+			128 = { is_owned_and_controlled_by = PREV }
+			122 = { is_owned_and_controlled_by = PREV }
+			129 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				128 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				122 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				129 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 128
+					state = 122
+					state = 129
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_126 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 126
+				state = 129
+				state = 127
+				state = 338
+				state = 123
+			}
+		}
+		
+		available = {
+			126 = { is_owned_and_controlled_by = PREV }
+			129 = { is_owned_and_controlled_by = PREV }
+			127 = { is_owned_and_controlled_by = PREV }
+			338 = { is_owned_and_controlled_by = PREV }
+			123 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				126 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				129 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				127 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				338 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				123 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 126
+					state = 129
+					state = 127
+					state = 338
+					state = 123
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_37 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 37
+				state = 910
+				state = 911
+				state = 912
+				state = 99
+			}
+		}
+		
+		available = {
+			37 = { is_owned_and_controlled_by = PREV }
+			910 = { is_owned_and_controlled_by = PREV }
+			911 = { is_owned_and_controlled_by = PREV }
+			912 = { is_owned_and_controlled_by = PREV }
+			99 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				37 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				910 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				911 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				912 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				99 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 37
+					state = 910
+					state = 911
+					state = 912
+					state = 99
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_7 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 7
+				state = 36
+				state = 35
+				state = 977
+				state = 6
+			}
+		}
+		
+		available = {
+			7 = { is_owned_and_controlled_by = PREV }
+			36 = { is_owned_and_controlled_by = PREV }
+			35 = { is_owned_and_controlled_by = PREV }
+			977 = { is_owned_and_controlled_by = PREV }
+			6 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				7 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				36 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				35 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				977 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				6 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 7
+					state = 36
+					state = 35
+					state = 977
+					state = 6
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_112 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 112
+				state = 179
+				state = 795
+				state = 181
+				state = 180
+			}
+		}
+		
+		available = {
+			112 = { is_owned_and_controlled_by = PREV }
+			179 = { is_owned_and_controlled_by = PREV }
+			795 = { is_owned_and_controlled_by = PREV }
+			181 = { is_owned_and_controlled_by = PREV }
+			180 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				112 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				179 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				795 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				181 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				180 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 112
+					state = 179
+					state = 795
+					state = 181
+					state = 180
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_118 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 118
+				state = 169
+				state = 173
+				state = 789
+				state = 168
+			}
+		}
+		
+		available = {
+			118 = { is_owned_and_controlled_by = PREV }
+			169 = { is_owned_and_controlled_by = PREV }
+			173 = { is_owned_and_controlled_by = PREV }
+			789 = { is_owned_and_controlled_by = PREV }
+			168 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				118 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				169 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				173 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				789 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				168 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 118
+					state = 169
+					state = 173
+					state = 789
+					state = 168
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_165 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 165
+				state = 167
+				state = 794
+				state = 166
+			}
+		}
+		
+		available = {
+			165 = { is_owned_and_controlled_by = PREV }
+			167 = { is_owned_and_controlled_by = PREV }
+			794 = { is_owned_and_controlled_by = PREV }
+			166 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				165 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				167 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				794 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				166 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 165
+					state = 167
+					state = 794
+					state = 166
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_41 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 41
+				state = 793
+				state = 175
+				state = 170
+				state = 788
+			}
+		}
+		
+		available = {
+			41 = { is_owned_and_controlled_by = PREV }
+			793 = { is_owned_and_controlled_by = PREV }
+			175 = { is_owned_and_controlled_by = PREV }
+			170 = { is_owned_and_controlled_by = PREV }
+			788 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				41 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				793 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				175 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				170 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				788 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 41
+					state = 793
+					state = 175
+					state = 170
+					state = 788
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_171 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 171
+				state = 174
+				state = 791
+				state = 176
+				state = 790
+			}
+		}
+		
+		available = {
+			171 = { is_owned_and_controlled_by = PREV }
+			174 = { is_owned_and_controlled_by = PREV }
+			791 = { is_owned_and_controlled_by = PREV }
+			176 = { is_owned_and_controlled_by = PREV }
+			790 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				171 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				174 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				791 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				176 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				790 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 171
+					state = 174
+					state = 791
+					state = 176
+					state = 790
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_792 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 792
+				state = 172
+				state = 806
+			}
+		}
+		
+		available = {
+			792 = { is_owned_and_controlled_by = PREV }
+			172 = { is_owned_and_controlled_by = PREV }
+			806 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				792 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				172 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				806 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 792
+					state = 172
+					state = 806
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_19 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 19
+				state = 23
+				state = 30
+				state = 14
+			}
+		}
+		
+		available = {
+			19 = { is_owned_and_controlled_by = PREV }
+			23 = { is_owned_and_controlled_by = PREV }
+			30 = { is_owned_and_controlled_by = PREV }
+			14 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				19 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				23 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				30 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				14 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 19
+					state = 23
+					state = 30
+					state = 14
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_16 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 16
+				state = 15
+				state = 785
+				state = 29
+				state = 24
+				state = 33
+			}
+		}
+		
+		available = {
+			16 = { is_owned_and_controlled_by = PREV }
+			15 = { is_owned_and_controlled_by = PREV }
+			785 = { is_owned_and_controlled_by = PREV }
+			29 = { is_owned_and_controlled_by = PREV }
+			24 = { is_owned_and_controlled_by = PREV }
+			33 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				16 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				15 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				785 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				29 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				24 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				33 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 16
+					state = 15
+					state = 785
+					state = 29
+					state = 24
+					state = 33
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_28 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 28
+				state = 17
+				state = 18
+				state = 980
+				state = 34
+				state = 27
+			}
+		}
+		
+		available = {
+			28 = { is_owned_and_controlled_by = PREV }
+			17 = { is_owned_and_controlled_by = PREV }
+			18 = { is_owned_and_controlled_by = PREV }
+			980 = { is_owned_and_controlled_by = PREV }
+			34 = { is_owned_and_controlled_by = PREV }
+			27 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				28 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				17 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				18 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				980 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				34 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				27 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 28
+					state = 17
+					state = 18
+					state = 980
+					state = 34
+					state = 27
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_31 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 31
+				state = 25
+				state = 26
+				state = 22
+			}
+		}
+		
+		available = {
+			31 = { is_owned_and_controlled_by = PREV }
+			25 = { is_owned_and_controlled_by = PREV }
+			26 = { is_owned_and_controlled_by = PREV }
+			22 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				31 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				25 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				26 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				22 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 31
+					state = 25
+					state = 26
+					state = 22
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_20 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 20
+				state = 851
+				state = 1
+				state = 735
+				state = 32
+				state = 21
+			}
+		}
+		
+		available = {
+			20 = { is_owned_and_controlled_by = PREV }
+			851 = { is_owned_and_controlled_by = PREV }
+			1 = { is_owned_and_controlled_by = PREV }
+			735 = { is_owned_and_controlled_by = PREV }
+			32 = { is_owned_and_controlled_by = PREV }
+			21 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				20 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				851 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				1 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				735 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				32 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				21 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 20
+					state = 851
+					state = 1
+					state = 735
+					state = 32
+					state = 21
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_51 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 51
+				state = 57
+				state = 55
+				state = 42
+				state = 8
+			}
+		}
+		
+		available = {
+			51 = { is_owned_and_controlled_by = PREV }
+			57 = { is_owned_and_controlled_by = PREV }
+			55 = { is_owned_and_controlled_by = PREV }
+			42 = { is_owned_and_controlled_by = PREV }
+			8 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				51 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				57 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				55 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				42 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				8 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 51
+					state = 57
+					state = 55
+					state = 42
+					state = 8
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_50 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 50
+				state = 978
+			}
+		}
+		
+		available = {
+			50 = { is_owned_and_controlled_by = PREV }
+			978 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				50 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				978 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 50
+					state = 978
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_52 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 52
+				state = 54
+				state = 53
+			}
+		}
+		
+		available = {
+			52 = { is_owned_and_controlled_by = PREV }
+			54 = { is_owned_and_controlled_by = PREV }
+			53 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				52 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				54 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				53 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 52
+					state = 54
+					state = 53
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_58 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 58
+				state = 56
+				state = 59
+				state = 909
+			}
+		}
+		
+		available = {
+			58 = { is_owned_and_controlled_by = PREV }
+			56 = { is_owned_and_controlled_by = PREV }
+			59 = { is_owned_and_controlled_by = PREV }
+			909 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				58 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				56 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				59 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				909 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 58
+					state = 56
+					state = 59
+					state = 909
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_64 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 64
+				state = 65
+				state = 60
+				state = 61
+			}
+		}
+		
+		available = {
+			64 = { is_owned_and_controlled_by = PREV }
+			65 = { is_owned_and_controlled_by = PREV }
+			60 = { is_owned_and_controlled_by = PREV }
+			61 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				64 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				65 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				60 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				61 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 64
+					state = 65
+					state = 60
+					state = 61
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_63 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 63
+				state = 68
+				state = 62
+			}
+		}
+		
+		available = {
+			63 = { is_owned_and_controlled_by = PREV }
+			68 = { is_owned_and_controlled_by = PREV }
+			62 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				63 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				68 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				62 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 63
+					state = 68
+					state = 62
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_66 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 66
+				state = 74
+				state = 67
+				state = 762
+			}
+		}
+		
+		available = {
+			66 = { is_owned_and_controlled_by = PREV }
+			74 = { is_owned_and_controlled_by = PREV }
+			67 = { is_owned_and_controlled_by = PREV }
+			762 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				66 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				74 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				67 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				762 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 66
+					state = 74
+					state = 67
+					state = 762
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_9 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 9
+				state = 75
+			}
+		}
+		
+		available = {
+			9 = { is_owned_and_controlled_by = PREV }
+			75 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				9 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				75 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 9
+					state = 75
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_69 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 69
+				state = 972
+			}
+		}
+		
+		available = {
+			69 = { is_owned_and_controlled_by = PREV }
+			972 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				69 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				972 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 69
+					state = 972
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_70 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 70
+				state = 71
+				state = 664
+				state = 73
+			}
+		}
+		
+		available = {
+			70 = { is_owned_and_controlled_by = PREV }
+			71 = { is_owned_and_controlled_by = PREV }
+			664 = { is_owned_and_controlled_by = PREV }
+			73 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				70 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				71 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				664 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				73 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 70
+					state = 71
+					state = 664
+					state = 73
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_3 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 3
+				state = 845
+				state = 847
+				state = 846
+				state = 151
+			}
+		}
+		
+		available = {
+			3 = { is_owned_and_controlled_by = PREV }
+			845 = { is_owned_and_controlled_by = PREV }
+			847 = { is_owned_and_controlled_by = PREV }
+			846 = { is_owned_and_controlled_by = PREV }
+			151 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				3 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				845 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				847 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				846 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				151 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 3
+					state = 845
+					state = 847
+					state = 846
+					state = 151
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_4 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 4
+				state = 976
+				state = 152
+				state = 153
+				state = 848
+				state = 39
+			}
+		}
+		
+		available = {
+			4 = { is_owned_and_controlled_by = PREV }
+			976 = { is_owned_and_controlled_by = PREV }
+			152 = { is_owned_and_controlled_by = PREV }
+			153 = { is_owned_and_controlled_by = PREV }
+			848 = { is_owned_and_controlled_by = PREV }
+			39 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				4 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				976 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				152 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				153 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				848 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				39 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 4
+					state = 976
+					state = 152
+					state = 153
+					state = 848
+					state = 39
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_159 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 159
+				state = 158
+				state = 850
+				state = 160
+				state = 736
+				state = 161
+			}
+		}
+		
+		available = {
+			159 = { is_owned_and_controlled_by = PREV }
+			158 = { is_owned_and_controlled_by = PREV }
+			850 = { is_owned_and_controlled_by = PREV }
+			160 = { is_owned_and_controlled_by = PREV }
+			736 = { is_owned_and_controlled_by = PREV }
+			161 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				159 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				158 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				850 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				160 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				736 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				161 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 159
+					state = 158
+					state = 850
+					state = 160
+					state = 736
+					state = 161
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_2 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 2
+				state = 162
+				state = 157
+			}
+		}
+		
+		available = {
+			2 = { is_owned_and_controlled_by = PREV }
+			162 = { is_owned_and_controlled_by = PREV }
+			157 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				2 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				162 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				157 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 2
+					state = 162
+					state = 157
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_117 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 117
+				state = 849
+				state = 156
+				state = 115
+				state = 114
+				state = 116
+			}
+		}
+		
+		available = {
+			117 = { is_owned_and_controlled_by = PREV }
+			849 = { is_owned_and_controlled_by = PREV }
+			156 = { is_owned_and_controlled_by = PREV }
+			115 = { is_owned_and_controlled_by = PREV }
+			114 = { is_owned_and_controlled_by = PREV }
+			116 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				117 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				849 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				156 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				115 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				114 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				116 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 117
+					state = 849
+					state = 156
+					state = 115
+					state = 114
+					state = 116
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_43 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 43
+				state = 975
+				state = 155
+				state = 974
+				state = 973
+				state = 154
+			}
+		}
+		
+		available = {
+			43 = { is_owned_and_controlled_by = PREV }
+			975 = { is_owned_and_controlled_by = PREV }
+			155 = { is_owned_and_controlled_by = PREV }
+			974 = { is_owned_and_controlled_by = PREV }
+			973 = { is_owned_and_controlled_by = PREV }
+			154 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				43 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				975 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				155 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				974 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				973 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				154 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 43
+					state = 975
+					state = 155
+					state = 974
+					state = 973
+					state = 154
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_102 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 102
+				state = 853
+			}
+		}
+		
+		available = {
+			102 = { is_owned_and_controlled_by = PREV }
+			853 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				102 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				853 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 102
+					state = 853
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_10 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 10
+				state = 92
+				state = 97
+				state = 90
+				state = 98
+				state = 87
+				state = 86
+				state = 807
+			}
+		}
+		
+		available = {
+			10 = { is_owned_and_controlled_by = PREV }
+			92 = { is_owned_and_controlled_by = PREV }
+			97 = { is_owned_and_controlled_by = PREV }
+			90 = { is_owned_and_controlled_by = PREV }
+			98 = { is_owned_and_controlled_by = PREV }
+			87 = { is_owned_and_controlled_by = PREV }
+			86 = { is_owned_and_controlled_by = PREV }
+			807 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				10 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				92 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				97 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				90 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				98 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				87 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				86 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				807 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 10
+					state = 92
+					state = 97
+					state = 90
+					state = 98
+					state = 87
+					state = 86
+					state = 807
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_88 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 88
+				state = 72
+				state = 91
+				state = 89
+			}
+		}
+		
+		available = {
+			88 = { is_owned_and_controlled_by = PREV }
+			72 = { is_owned_and_controlled_by = PREV }
+			91 = { is_owned_and_controlled_by = PREV }
+			89 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				88 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				72 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				91 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				89 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 88
+					state = 72
+					state = 91
+					state = 89
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_763 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 763
+				state = 5
+				state = 85
+			}
+		}
+		
+		available = {
+			763 = { is_owned_and_controlled_by = PREV }
+			5 = { is_owned_and_controlled_by = PREV }
+			85 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				763 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				5 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				85 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 763
+					state = 5
+					state = 85
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_784 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 784
+				state = 11
+				state = 814
+				state = 815
+				state = 189
+				state = 188
+			}
+		}
+		
+		available = {
+			784 = { is_owned_and_controlled_by = PREV }
+			11 = { is_owned_and_controlled_by = PREV }
+			814 = { is_owned_and_controlled_by = PREV }
+			815 = { is_owned_and_controlled_by = PREV }
+			189 = { is_owned_and_controlled_by = PREV }
+			188 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				784 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				11 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				814 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				815 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				189 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				188 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 784
+					state = 11
+					state = 814
+					state = 815
+					state = 189
+					state = 188
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_808 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 808
+				state = 190
+				state = 809
+				state = 12
+				state = 810
+			}
+		}
+		
+		available = {
+			808 = { is_owned_and_controlled_by = PREV }
+			190 = { is_owned_and_controlled_by = PREV }
+			809 = { is_owned_and_controlled_by = PREV }
+			12 = { is_owned_and_controlled_by = PREV }
+			810 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				808 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				190 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				809 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				12 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				810 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 808
+					state = 190
+					state = 809
+					state = 12
+					state = 810
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_812 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 812
+				state = 13
+				state = 811
+				state = 191
+				state = 813
+			}
+		}
+		
+		available = {
+			812 = { is_owned_and_controlled_by = PREV }
+			13 = { is_owned_and_controlled_by = PREV }
+			811 = { is_owned_and_controlled_by = PREV }
+			191 = { is_owned_and_controlled_by = PREV }
+			813 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				812 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				13 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				811 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				191 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				813 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 812
+					state = 13
+					state = 811
+					state = 191
+					state = 813
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_109 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 109
+				state = 103
+				state = 852
+				state = 163
+			}
+		}
+		
+		available = {
+			109 = { is_owned_and_controlled_by = PREV }
+			103 = { is_owned_and_controlled_by = PREV }
+			852 = { is_owned_and_controlled_by = PREV }
+			163 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				109 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				103 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				852 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				163 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 109
+					state = 103
+					state = 852
+					state = 163
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_104 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 104
+				state = 804
+			}
+		}
+		
+		available = {
+			104 = { is_owned_and_controlled_by = PREV }
+			804 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				104 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				804 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 104
+					state = 804
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_107 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 107
+				state = 45
+				state = 764
+				state = 108
+				state = 803
+				state = 105
+			}
+		}
+		
+		available = {
+			107 = { is_owned_and_controlled_by = PREV }
+			45 = { is_owned_and_controlled_by = PREV }
+			764 = { is_owned_and_controlled_by = PREV }
+			108 = { is_owned_and_controlled_by = PREV }
+			803 = { is_owned_and_controlled_by = PREV }
+			105 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				107 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				45 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				764 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				108 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				803 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				105 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 107
+					state = 45
+					state = 764
+					state = 108
+					state = 803
+					state = 105
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_44 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 44
+				state = 805
+				state = 934
+				state = 802
+			}
+		}
+		
+		available = {
+			44 = { is_owned_and_controlled_by = PREV }
+			805 = { is_owned_and_controlled_by = PREV }
+			934 = { is_owned_and_controlled_by = PREV }
+			802 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				44 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				805 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				934 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				802 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 44
+					state = 805
+					state = 934
+					state = 802
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_731 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 731
+				state = 106
+				state = 970
+				state = 184
+			}
+		}
+		
+		available = {
+			731 = { is_owned_and_controlled_by = PREV }
+			106 = { is_owned_and_controlled_by = PREV }
+			970 = { is_owned_and_controlled_by = PREV }
+			184 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				731 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				106 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				970 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				184 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 731
+					state = 106
+					state = 970
+					state = 184
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_47 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 47
+				state = 185
+				state = 186
+				state = 187
+				state = 182
+				state = 164
+				state = 183
+			}
+		}
+		
+		available = {
+			47 = { is_owned_and_controlled_by = PREV }
+			185 = { is_owned_and_controlled_by = PREV }
+			186 = { is_owned_and_controlled_by = PREV }
+			187 = { is_owned_and_controlled_by = PREV }
+			182 = { is_owned_and_controlled_by = PREV }
+			164 = { is_owned_and_controlled_by = PREV }
+			183 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				47 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				185 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				186 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				187 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				182 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				164 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				183 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 47
+					state = 185
+					state = 186
+					state = 187
+					state = 182
+					state = 164
+					state = 183
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_48 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 48
+				state = 801
+				state = 211
+				state = 212
+			}
+		}
+		
+		available = {
+			48 = { is_owned_and_controlled_by = PREV }
+			801 = { is_owned_and_controlled_by = PREV }
+			211 = { is_owned_and_controlled_by = PREV }
+			212 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				48 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				801 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				211 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				212 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 48
+					state = 801
+					state = 211
+					state = 212
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_46 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 46
+				state = 81
+			}
+		}
+		
+		available = {
+			46 = { is_owned_and_controlled_by = PREV }
+			81 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				46 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				81 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 46
+					state = 81
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_971 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 971
+				state = 77
+			}
+		}
+		
+		available = {
+			971 = { is_owned_and_controlled_by = PREV }
+			77 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				971 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				77 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 971
+					state = 77
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_76 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 76
+				state = 83
+				state = 84
+				state = 82
+			}
+		}
+		
+		available = {
+			76 = { is_owned_and_controlled_by = PREV }
+			83 = { is_owned_and_controlled_by = PREV }
+			84 = { is_owned_and_controlled_by = PREV }
+			82 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				76 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				83 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				84 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				82 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 76
+					state = 83
+					state = 84
+					state = 82
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_79 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 79
+				state = 78
+				state = 80
+			}
+		}
+		
+		available = {
+			79 = { is_owned_and_controlled_by = PREV }
+			78 = { is_owned_and_controlled_by = PREV }
+			80 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				79 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				78 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				80 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 79
+					state = 78
+					state = 80
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_110 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 110
+				state = 921
+				state = 922
+				state = 142
+				state = 920
+				state = 143
+				state = 923
+			}
+		}
+		
+		available = {
+			110 = { is_owned_and_controlled_by = PREV }
+			921 = { is_owned_and_controlled_by = PREV }
+			922 = { is_owned_and_controlled_by = PREV }
+			142 = { is_owned_and_controlled_by = PREV }
+			920 = { is_owned_and_controlled_by = PREV }
+			143 = { is_owned_and_controlled_by = PREV }
+			923 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				110 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				921 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				922 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				142 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				920 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				143 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				923 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 110
+					state = 921
+					state = 922
+					state = 142
+					state = 920
+					state = 143
+					state = 923
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_141 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 141
+				state = 919
+				state = 140
+				state = 915
+				state = 913
+				state = 139
+				state = 124
+				state = 138
+			}
+		}
+		
+		available = {
+			141 = { is_owned_and_controlled_by = PREV }
+			919 = { is_owned_and_controlled_by = PREV }
+			140 = { is_owned_and_controlled_by = PREV }
+			915 = { is_owned_and_controlled_by = PREV }
+			913 = { is_owned_and_controlled_by = PREV }
+			139 = { is_owned_and_controlled_by = PREV }
+			124 = { is_owned_and_controlled_by = PREV }
+			138 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				141 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				919 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				140 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				915 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				913 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				139 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				124 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				138 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 141
+					state = 919
+					state = 140
+					state = 915
+					state = 913
+					state = 139
+					state = 124
+					state = 138
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_38 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 38
+				state = 917
+				state = 916
+				state = 918
+			}
+		}
+		
+		available = {
+			38 = { is_owned_and_controlled_by = PREV }
+			917 = { is_owned_and_controlled_by = PREV }
+			916 = { is_owned_and_controlled_by = PREV }
+			918 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				38 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				917 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				916 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				918 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 38
+					state = 917
+					state = 916
+					state = 918
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_111 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 111
+				state = 926
+				state = 145
+				state = 927
+				state = 928
+				state = 930
+				state = 146
+				state = 149
+				state = 150
+				state = 929
+			}
+		}
+		
+		available = {
+			111 = { is_owned_and_controlled_by = PREV }
+			926 = { is_owned_and_controlled_by = PREV }
+			145 = { is_owned_and_controlled_by = PREV }
+			927 = { is_owned_and_controlled_by = PREV }
+			928 = { is_owned_and_controlled_by = PREV }
+			930 = { is_owned_and_controlled_by = PREV }
+			146 = { is_owned_and_controlled_by = PREV }
+			149 = { is_owned_and_controlled_by = PREV }
+			150 = { is_owned_and_controlled_by = PREV }
+			929 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				111 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				926 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				145 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				927 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				928 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				930 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				146 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				149 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				150 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				929 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 111
+					state = 926
+					state = 145
+					state = 927
+					state = 928
+					state = 930
+					state = 146
+					state = 149
+					state = 150
+					state = 929
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_666 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 666
+				state = 925
+				state = 148
+				state = 924
+				state = 144
+			}
+		}
+		
+		available = {
+			666 = { is_owned_and_controlled_by = PREV }
+			925 = { is_owned_and_controlled_by = PREV }
+			148 = { is_owned_and_controlled_by = PREV }
+			924 = { is_owned_and_controlled_by = PREV }
+			144 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				666 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				925 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				148 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				924 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				144 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 666
+					state = 925
+					state = 148
+					state = 924
+					state = 144
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_797 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 797
+				state = 341
+				state = 347
+				state = 340
+				state = 339
+				state = 343
+				state = 342
+			}
+		}
+		
+		available = {
+			797 = { is_owned_and_controlled_by = PREV }
+			341 = { is_owned_and_controlled_by = PREV }
+			347 = { is_owned_and_controlled_by = PREV }
+			340 = { is_owned_and_controlled_by = PREV }
+			339 = { is_owned_and_controlled_by = PREV }
+			343 = { is_owned_and_controlled_by = PREV }
+			342 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				797 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				341 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				347 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				340 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				339 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				343 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				342 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 797
+					state = 341
+					state = 347
+					state = 340
+					state = 339
+					state = 343
+					state = 342
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_344 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 344
+				state = 799
+				state = 348
+				state = 345
+				state = 346
+			}
+		}
+		
+		available = {
+			344 = { is_owned_and_controlled_by = PREV }
+			799 = { is_owned_and_controlled_by = PREV }
+			348 = { is_owned_and_controlled_by = PREV }
+			345 = { is_owned_and_controlled_by = PREV }
+			346 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				344 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				799 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				348 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				345 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				346 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 344
+					state = 799
+					state = 348
+					state = 345
+					state = 346
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_49 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 49
+				state = 356
+				state = 798
+				state = 349
+				state = 355
+				state = 354
+			}
+		}
+		
+		available = {
+			49 = { is_owned_and_controlled_by = PREV }
+			356 = { is_owned_and_controlled_by = PREV }
+			798 = { is_owned_and_controlled_by = PREV }
+			349 = { is_owned_and_controlled_by = PREV }
+			355 = { is_owned_and_controlled_by = PREV }
+			354 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				49 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				356 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				798 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				349 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				355 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				354 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 49
+					state = 356
+					state = 798
+					state = 349
+					state = 355
+					state = 354
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_800 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 800
+				state = 353
+				state = 350
+				state = 352
+			}
+		}
+		
+		available = {
+			800 = { is_owned_and_controlled_by = PREV }
+			353 = { is_owned_and_controlled_by = PREV }
+			350 = { is_owned_and_controlled_by = PREV }
+			352 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				800 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				353 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				350 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				352 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 800
+					state = 353
+					state = 350
+					state = 352
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_206 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 206
+				state = 96
+				state = 95
+				state = 94
+				state = 204
+				state = 194
+				state = 241
+				state = 207
+			}
+		}
+		
+		available = {
+			206 = { is_owned_and_controlled_by = PREV }
+			96 = { is_owned_and_controlled_by = PREV }
+			95 = { is_owned_and_controlled_by = PREV }
+			94 = { is_owned_and_controlled_by = PREV }
+			204 = { is_owned_and_controlled_by = PREV }
+			194 = { is_owned_and_controlled_by = PREV }
+			241 = { is_owned_and_controlled_by = PREV }
+			207 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				206 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				96 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				95 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				94 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				204 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				194 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				241 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				207 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 206
+					state = 96
+					state = 95
+					state = 94
+					state = 204
+					state = 194
+					state = 241
+					state = 207
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_202 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 202
+				state = 201
+				state = 198
+				state = 199
+				state = 93
+			}
+		}
+		
+		available = {
+			202 = { is_owned_and_controlled_by = PREV }
+			201 = { is_owned_and_controlled_by = PREV }
+			198 = { is_owned_and_controlled_by = PREV }
+			199 = { is_owned_and_controlled_by = PREV }
+			93 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				202 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				201 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				198 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				199 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				93 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 202
+					state = 201
+					state = 198
+					state = 199
+					state = 93
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_221 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 221
+				state = 226
+				state = 203
+				state = 259
+				state = 225
+				state = 193
+			}
+		}
+		
+		available = {
+			221 = { is_owned_and_controlled_by = PREV }
+			226 = { is_owned_and_controlled_by = PREV }
+			203 = { is_owned_and_controlled_by = PREV }
+			259 = { is_owned_and_controlled_by = PREV }
+			225 = { is_owned_and_controlled_by = PREV }
+			193 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				221 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				226 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				203 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				259 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				225 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				193 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 221
+					state = 226
+					state = 203
+					state = 259
+					state = 225
+					state = 193
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_137 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 137
+				state = 196
+				state = 200
+			}
+		}
+		
+		available = {
+			137 = { is_owned_and_controlled_by = PREV }
+			196 = { is_owned_and_controlled_by = PREV }
+			200 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				137 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				196 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				200 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 137
+					state = 196
+					state = 200
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_137 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 192
+				state = 834
+				state = 197
+				state = 766
+			}
+		}
+		
+		available = {
+			192 = { is_owned_and_controlled_by = PREV }
+			834 = { is_owned_and_controlled_by = PREV }
+			197 = { is_owned_and_controlled_by = PREV }
+			766 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				192 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				834 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				197 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				766 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 192
+					state = 834
+					state = 197
+					state = 766
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_213 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 213
+				state = 722
+				state = 147
+				state = 215
+			}
+		}
+		
+		available = {
+			213 = { is_owned_and_controlled_by = PREV }
+			722 = { is_owned_and_controlled_by = PREV }
+			147 = { is_owned_and_controlled_by = PREV }
+			215 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				213 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				722 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				147 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				215 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 213
+					state = 722
+					state = 147
+					state = 215
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_195 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 195
+				state = 244
+				state = 264
+				state = 208
+				state = 263
+				state = 209
+				state = 210
+				state = 246
+				state = 247
+			}
+		}
+		
+		available = {
+			195 = { is_owned_and_controlled_by = PREV }
+			244 = { is_owned_and_controlled_by = PREV }
+			264 = { is_owned_and_controlled_by = PREV }
+			208 = { is_owned_and_controlled_by = PREV }
+			263 = { is_owned_and_controlled_by = PREV }
+			209 = { is_owned_and_controlled_by = PREV }
+			210 = { is_owned_and_controlled_by = PREV }
+			246 = { is_owned_and_controlled_by = PREV }
+			247 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				195 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				244 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				264 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				208 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				263 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				209 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				210 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				246 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				247 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 195
+					state = 244
+					state = 264
+					state = 208
+					state = 263
+					state = 209
+					state = 210
+					state = 246
+					state = 247
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_219 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 219
+				state = 248
+				state = 253
+				state = 205
+				state = 223
+				state = 242
+				state = 243
+				state = 224
+				state = 222
+				state = 258
+				state = 240
+				state = 220
+			}
+		}
+		
+		available = {
+			219 = { is_owned_and_controlled_by = PREV }
+			248 = { is_owned_and_controlled_by = PREV }
+			253 = { is_owned_and_controlled_by = PREV }
+			205 = { is_owned_and_controlled_by = PREV }
+			223 = { is_owned_and_controlled_by = PREV }
+			242 = { is_owned_and_controlled_by = PREV }
+			243 = { is_owned_and_controlled_by = PREV }
+			224 = { is_owned_and_controlled_by = PREV }
+			222 = { is_owned_and_controlled_by = PREV }
+			258 = { is_owned_and_controlled_by = PREV }
+			240 = { is_owned_and_controlled_by = PREV }
+			220 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				219 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				248 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				253 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				205 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				223 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				242 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				243 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				224 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				222 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				258 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				240 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				220 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 219
+					state = 248
+					state = 253
+					state = 205
+					state = 223
+					state = 242
+					state = 243
+					state = 224
+					state = 222
+					state = 258
+					state = 240
+					state = 220
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_218 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 218
+				state = 227
+				state = 228
+				state = 234
+				state = 245
+				state = 233
+				state = 260
+				state = 265
+			}
+		}
+		
+		available = {
+			218 = { is_owned_and_controlled_by = PREV }
+			227 = { is_owned_and_controlled_by = PREV }
+			228 = { is_owned_and_controlled_by = PREV }
+			234 = { is_owned_and_controlled_by = PREV }
+			245 = { is_owned_and_controlled_by = PREV }
+			233 = { is_owned_and_controlled_by = PREV }
+			260 = { is_owned_and_controlled_by = PREV }
+			265 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				218 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				227 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				228 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				234 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				245 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				233 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				260 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				265 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 218
+					state = 227
+					state = 228
+					state = 234
+					state = 245
+					state = 233
+					state = 260
+					state = 265
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_229 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 229
+				state = 230
+				state = 231
+				state = 826
+			}
+		}
+		
+		available = {
+			229 = { is_owned_and_controlled_by = PREV }
+			230 = { is_owned_and_controlled_by = PREV }
+			231 = { is_owned_and_controlled_by = PREV }
+			826 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				229 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				230 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				231 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				826 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 229
+					state = 230
+					state = 231
+					state = 826
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_232 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 232
+				state = 821
+				state = 828
+				state = 827
+				state = 235
+			}
+		}
+		
+		available = {
+			232 = { is_owned_and_controlled_by = PREV }
+			821 = { is_owned_and_controlled_by = PREV }
+			828 = { is_owned_and_controlled_by = PREV }
+			827 = { is_owned_and_controlled_by = PREV }
+			235 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				232 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				821 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				828 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				827 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				235 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 232
+					state = 821
+					state = 828
+					state = 827
+					state = 235
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_217 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 217
+				state = 236
+				state = 237
+				state = 238
+			}
+		}
+		
+		available = {
+			217 = { is_owned_and_controlled_by = PREV }
+			236 = { is_owned_and_controlled_by = PREV }
+			237 = { is_owned_and_controlled_by = PREV }
+			238 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				217 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				236 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				237 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				238 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 217
+					state = 236
+					state = 237
+					state = 238
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_252 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 252
+				state = 256
+				state = 833
+				state = 249
+				state = 251
+				state = 250
+				state = 255
+				state = 257
+				state = 239
+				state = 829
+				state = 401
+			}
+		}
+		
+		available = {
+			252 = { is_owned_and_controlled_by = PREV }
+			256 = { is_owned_and_controlled_by = PREV }
+			833 = { is_owned_and_controlled_by = PREV }
+			249 = { is_owned_and_controlled_by = PREV }
+			251 = { is_owned_and_controlled_by = PREV }
+			250 = { is_owned_and_controlled_by = PREV }
+			255 = { is_owned_and_controlled_by = PREV }
+			257 = { is_owned_and_controlled_by = PREV }
+			239 = { is_owned_and_controlled_by = PREV }
+			829 = { is_owned_and_controlled_by = PREV }
+			401 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				252 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				256 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				833 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				249 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				251 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				250 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				255 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				257 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				239 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				829 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				401 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 252
+					state = 256
+					state = 833
+					state = 249
+					state = 251
+					state = 250
+					state = 255
+					state = 257
+					state = 239
+					state = 829
+					state = 401
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_651 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 651
+				state = 398
+				state = 573
+				state = 582
+				state = 652
+				state = 399
+				state = 400
+			}
+		}
+		
+		available = {
+			651 = { is_owned_and_controlled_by = PREV }
+			398 = { is_owned_and_controlled_by = PREV }
+			573 = { is_owned_and_controlled_by = PREV }
+			582 = { is_owned_and_controlled_by = PREV }
+			652 = { is_owned_and_controlled_by = PREV }
+			399 = { is_owned_and_controlled_by = PREV }
+			400 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				651 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				398 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				573 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				582 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				652 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				399 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				400 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 651
+					state = 398
+					state = 573
+					state = 582
+					state = 652
+					state = 399
+					state = 400
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+
+	SLO_europe_core_region_214 = { 
+
+		ai_will_do = {
+			base = 50
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 214
+				state = 216
+				state = 879
+				state = 351
+				state = 880
+			}
+		}
+		
+		available = {
+			214 = { is_owned_and_controlled_by = PREV }
+			216 = { is_owned_and_controlled_by = PREV }
+			879 = { is_owned_and_controlled_by = PREV }
+			351 = { is_owned_and_controlled_by = PREV }
+			880 = { is_owned_and_controlled_by = PREV }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_towards_a_european_union
+			OR = {
+				214 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				216 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				879 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				351 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				880 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 75
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = { OR = { 
+					state = 214
+					state = 216
+					state = 879
+					state = 351
+					state = 880
+				} }
+				add_core_of = PREV
+			}
+		}
+
+		remove_effect = {
 		}
 	}
 }

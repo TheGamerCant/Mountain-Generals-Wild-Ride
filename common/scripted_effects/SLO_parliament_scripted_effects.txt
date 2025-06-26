@@ -521,6 +521,10 @@ SLO_initialise_parliament = {
 	set_variable = { SLO.seats_needed_for_majority = 126 }				#How many seats do we need to form a majority
 	set_variable = { SLO.parliament_level = 0 }							#0 is Slovakia, 1 is Europe
 	set_variable = { SLO.parliament_threshold = 0 }						#Threshold needed for entry
+	set_variable = { SLO.election_frequency	= 1825 }					#Days between elections
+	set_variable = { SLO.election_frequency_thirds = 608 }
+	set_variable = { SLO.election_frequency_four_fifths = 1460 }
+	set_variable = { SLO.campaign_duration = 60 }						#How many days will campaigning last for?
 	set_variable = { SLO.SLO_electoral_map_selected_state = SLO }		#What state / country are we looking at in the GUI?
 	set_variable = { SLO.SLO_electoral_map_gui_selected_results = SLO }	#Should the map show country or party results
 	set_variable = { SLO.language = 0 }									#Language of our GUI
@@ -1645,6 +1649,9 @@ SLO_hold_election = {
 	clr_country_flag = SLO_campaign_season_underway_flag
 	hold_election = ROOT
 	
+	clr_country_flag = SLO_has_held_an_election_flag
+	set_country_flag = SLO_has_held_an_election_flag
+	
 	#Get the states for this election and their map positions (only has an effect if we are Europe)
 	
 	clear_array = SLO.previous_election_states
@@ -1889,6 +1896,7 @@ SLO_change_language = {
 
 SLO_initialise_europe_mechanics = {
 	set_variable = { SLO.parliament_level = 1 }
+	set_variable = { SLO.campaign_duration = 140 }
 	clear_array = SLO.subdivision_states
 	
 	#North-Atlantic
@@ -2332,7 +2340,6 @@ SLO_initialise_europe_mechanics = {
 	add_to_array = { 63.subdivision_states = 63 }
 	add_to_array = { 63.subdivision_states = 68 }
 	add_to_array = { 63.subdivision_states = 62 }
-	add_to_array = { 63.subdivision_states = 61 }
 	clear_array = 63.party_popularity
 	resize_array = { array = 63.party_popularity value = 0 size = 7 }
 	set_variable = { 63.party_popularity^0 = 6 }
@@ -2697,7 +2704,6 @@ SLO_initialise_europe_mechanics = {
 	clear_array = 44.subdivision_states
 	add_to_array = { 44.subdivision_states = 44 }
 	add_to_array = { 44.subdivision_states = 805 }
-	add_to_array = { 44.subdivision_states = 764 }
 	add_to_array = { 44.subdivision_states = 934 }
 	add_to_array = { 44.subdivision_states = 802 }
 	clear_array = 44.party_popularity

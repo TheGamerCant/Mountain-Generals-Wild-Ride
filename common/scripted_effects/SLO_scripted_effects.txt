@@ -664,7 +664,12 @@ SLO_get_valid_political_focuses = {
 			NOT = { has_completed_focus = SLO_slovakia_for_the_slovaks }
 			NOT = { has_completed_focus = SLO_allow_for_minority_autonomy }
 			
-			NOT = { SLO_nationalists_in_government_trigger = yes }
+			NOT = {
+				OR = {
+					SLO_nationalists_largest_party_trigger = yes
+					SLO_fascists_in_government_trigger = yes
+				}
+			}
 
 			if = {
 				limit = { SLO_is_not_europe = yes }
@@ -789,6 +794,15 @@ SLO_select_next_democratic_focus = {
 			check_variable = { SLO.economy_focuses_array^num > 0 }
 		}
 		
+		log = "Possible Economic Focuses:"
+		for_each_loop = {
+			array = SLO.economy_focuses_array
+			value = v
+			index = i
+			
+			log = " - [?v|.0]"
+		}
+		
 		#Prioritise research slots
 		if = {
 			limit = { is_in_array = { array = SLO.economy_focuses_array value = 18 } }
@@ -797,6 +811,14 @@ SLO_select_next_democratic_focus = {
 		else_if = {
 			limit = { is_in_array = { array = SLO.economy_focuses_array value = 17 } }
 			set_variable = { SLO.focus_to_pick = 17 }
+		}#Otherwise prioritise factories
+		else_if = {
+			limit = { is_in_array = { array = SLO.economy_focuses_array value = 13 } }
+			set_variable = { SLO.focus_to_pick = 13 }
+		}
+		else_if = {
+			limit = { is_in_array = { array = SLO.economy_focuses_array value = 14 } }
+			set_variable = { SLO.focus_to_pick = 14 }
 		}
 		else = {
 			set_temp_variable_to_random = {
@@ -813,14 +835,39 @@ SLO_select_next_democratic_focus = {
 		limit = {
 			check_variable = { SLO.political_focuses_array^num > 0 }
 		}
-		set_temp_variable_to_random = {
-			var = rndm
-			min = 0
-			max = SLO.political_focuses_array^num		#Strictly less than
-			integer = yes
-		}
+		
+		log = "Possible Political Focuses:"
+		for_each_loop = {
+			array = SLO.political_focuses_array
+			value = v
+			index = i
 			
-		set_variable = { SLO.focus_to_pick = SLO.political_focuses_array^rndm }
+			log = " - [?v|.0]"
+		}
+		
+		#Prioritise military stuff
+		if = {
+			limit = { is_in_array = { array = SLO.political_focuses_array value = 28 } }
+			set_variable = { SLO.focus_to_pick = 28 }
+		}
+		else_if = {
+			limit = { is_in_array = { array = SLO.political_focuses_array value = 27 } }
+			set_variable = { SLO.focus_to_pick = 27 }
+		}
+		else_if = {
+			limit = { is_in_array = { array = SLO.political_focuses_array value = 26 } }
+			set_variable = { SLO.focus_to_pick = 26 }
+		}
+		else = {
+			set_temp_variable_to_random = {
+				var = rndm
+				min = 0
+				max = SLO.political_focuses_array^num		#Strictly less than
+				integer = yes
+			}
+			
+			set_variable = { SLO.focus_to_pick = SLO.political_focuses_array^rndm }
+		}
 	}
 	else = {		#No focus can be chosen
 		set_variable = { SLO.focus_to_pick = 0 }
@@ -922,4 +969,17 @@ SLO_remove_church_power_ideas = {
 		limit = { has_idea = SLO_church_power_idea_5 }
 		remove_ideas = SLO_church_power_idea_5
 	}
+}
+
+COUNTRY_get_country_integration_level = {
+	set_variable = { THIS.european_integration_needed = THIS.num_of_factories }
+	divide_variable = { THIS.european_integration_needed = 20 }					#20 factories -> 1 european integration point
+	set_variable = { european_integration_needed_manpower = deployed_army_manpower_k }
+	add_to_variable = { european_integration_needed_manpower = deployed_navy_manpower_k }
+	add_to_variable = { european_integration_needed_manpower = deployed_airforce_manpower_k }
+	divide_variable = { european_integration_needed_manpower = 200 }			#200k manpower -> 1 european integration point
+	add_to_variable = { THIS.european_integration_needed = european_integration_needed_manpower }
+	clear_variable = european_integration_needed_manpower
+	round_variable = THIS.european_integration_needed
+	add_to_variable = { THIS.european_integration_needed = 1 }
 }

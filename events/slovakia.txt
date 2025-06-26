@@ -1148,6 +1148,7 @@ country_event = {
 				OR = {
 					original_tag = SLO
 					is_puppet_of = SLO
+					is_in_faction_with = SLO
 				}
 			}
 		}
@@ -1173,7 +1174,7 @@ country_event = {
 			}
 		}
 		
-		hidden_effect = { country_event = { id = slovakia.32 days = 150 random_days = 150 } }
+		hidden_effect = { country_event = { id = slovakia.32 days = 235 random_days = 90 } }
 	}
 }
 
@@ -1232,8 +1233,21 @@ country_event = {
 					STATE_add_party_support = yes
 				}
 				
-				VALUE_VAR = "4.0"
+				VALUE_VAR = "5.0"
 				PARTY_VAR = "[?SLO.party_campaigning_as|0]"
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			meta_effect = {
+				text = {
+					set_variable = { party = [PARTY_VAR] }
+					set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+					STATE_add_party_support = yes
+				}
+				
+				VALUE_VAR = "-2.5"
+				PARTY_VAR = "4"
 			}
 		}
 	}
@@ -1261,10 +1275,222 @@ country_event = {
 					STATE_add_party_support = yes
 				}
 				
-				VALUE_VAR = "3.0"
+				VALUE_VAR = "3.5"
 				PARTY_VAR = "4"
 			}
 		}
+	}
+}
+
+#Initial support the sanation left event
+country_event = {
+	id = slovakia.34
+	title = slovakia.34.title
+	desc = slovakia.34.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_sanation_left_victory
+
+	option = { 
+		name = slovakia.34.a
+		ai_chance = {
+			base = 10
+		}		
+	}
+}
+
+#Meet with Slawek
+country_event = {
+	id = slovakia.35
+	title = slovakia.35.title
+	desc = slovakia.35.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_romania_poland_visit
+
+	option = { 
+		name = slovakia.35.a
+		ai_chance = {
+			base = 10
+		}		
+		add_political_power = 5
+	}
+}
+
+#Fund the coup
+country_event = {
+	id = slovakia.36
+	title = slovakia.36.title
+	desc = slovakia.36.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_romania_poland_visit
+
+	option = { 
+		name = slovakia.36.a
+		ai_chance = {
+			base = 10
+		}		
+		add_political_power = -100
+		add_equipment_to_stockpile = { 
+			type = infantry_equipment_1
+			amount = -1800
+			producer = SLO
+		}
+	}
+}
+
+#Coup succeeds :)
+country_event = {
+	id = slovakia.37
+	title = slovakia.37.title
+	desc = slovakia.37.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_romania_poland_visit
+
+	option = { 
+		name = slovakia.37.a
+		ai_chance = {
+			base = 10
+		}		
+		add_political_power = 125
+		
+		hidden_effect = {
+			SLO = { 
+				add_to_faction = POL 
+				
+				add_ai_strategy = {
+					type = alliance
+					id = POL
+					value = 200
+				}
+			}
+			POL = { 
+				add_ai_strategy = {
+					type = alliance
+					id = SLO
+					value = 200
+				}
+			}
+			
+			news_event = { id = slovakia_news.4 hours = 6 random_hours = 6 }
+		}
+	}
+}
+
+#For major democracy - Form pact with Slovakia?
+country_event = {
+	id = slovakia.38
+	title = slovakia.38.title
+	desc = slovakia.38.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_sign_treaty3
+
+	option = { 
+		name = slovakia.38.a
+		ai_chance = {
+			base = 10
+		}		
+		
+		SLO = { country_event = { id = slovakia.39 hours = 10 random_hours = 6 } }
+	}
+	
+	option = { 
+		name = slovakia.38.a
+		ai_chance = {
+			base = 0
+		}	
+		
+		SLO = { country_event = { id = slovakia.40 hours = 10 random_hours = 6 } }
+	}
+}
+
+#Major democracy says yes
+country_event = {
+	id = slovakia.39
+	title = slovakia.39.title
+	desc = slovakia.39.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { 
+					POL = {
+						OR = {
+							is_in_faction_with = SLO
+							is_puppet_of = SLO
+						}
+					}
+				}
+			}
+			POL={
+				division_template = {
+					name = "National Guard"
+					division_names_group = POL_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						artillery_brigade = { x = 2 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0}
+					}
+				}
+				
+				for_loop_effect = {
+					end = 30
+					random_owned_state = {
+						limit = { POL = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "name = \"Gwardia Narodowa\" division_template = \"National Guard\" start_experience_factor = 0.1" 
+							owner = POL
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = slovakia.39.a
+		ai_chance = {
+			base = 10
+		}		
+
+		every_country = {
+			limit = { OR = { is_in_faction_with = ROOT tag = ROOT } }
+			
+			FROM = { give_guarantee = PREV }
+			give_guarantee = FROM
+		}
+	}
+}
+
+#Major democracy says no
+country_event = {
+	id = slovakia.40
+	title = slovakia.40.title
+	desc = slovakia.40.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_sign_treaty3
+
+	option = { 
+		name = slovakia.40.a
+		ai_chance = {
+			base = 10
+		}	
 	}
 }
 
@@ -1401,7 +1627,7 @@ country_event = {
 			SLO = {
 				if = {
 					limit = { NOT = { has_variable = focus_to_pick } }
-					country_event = { id = slovakia_hidden_focuses.999 days = 10 random_days = 25 }
+					country_event = { id = slovakia_hidden_focuses.999 days = 10 random_days = 10 }
 				}
 			}
 		}
@@ -1526,7 +1752,7 @@ country_event = {
 			SLO = {
 				if = {
 					limit = { NOT = { has_variable = focus_to_pick } }
-					country_event = { id = slovakia_hidden_focuses.999 days = 10 random_days = 25 }
+					country_event = { id = slovakia_hidden_focuses.999 days = 10 random_days = 10 }
 				}
 			}
 		}
@@ -1725,6 +1951,50 @@ country_event = {
 	}
 }
 
+#Choose election frequency
+country_event = {
+	id = slovakia_elections.5
+	title = slovakia_elections.5.title
+	desc = slovakia_elections.5.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_hungary_parliament
+	
+	timeout_days = 7
+
+	option = { 
+		name = slovakia_elections.5.a
+		ai_chance = {
+			base = 10
+		}
+		
+		set_variable = { SLO.election_frequency = 1095 }
+		set_variable = { SLO.election_frequency_thirds = 365 }
+		set_variable = { SLO.election_frequency_four_fifths = 876 }
+	}
+	
+	option = { 
+		name = slovakia_elections.5.b
+		ai_chance = {
+			base = 10
+		}
+		
+		set_variable = { SLO.election_frequency = 1460 }
+		set_variable = { SLO.election_frequency_thirds = 487 }
+		set_variable = { SLO.election_frequency_four_fifths = 1168 }
+	}
+	
+	option = { 
+		name = slovakia_elections.5.c
+		ai_chance = {
+			base = 10
+		}
+		
+		set_variable = { SLO.election_frequency = 1825 }
+		set_variable = { SLO.election_frequency_thirds = 608 }
+		set_variable = { SLO.election_frequency_four_fifths = 1460 }
+	}
+}
+
 #Minority government
 country_event = {
 	id = slovakia_elections.6
@@ -1744,7 +2014,7 @@ country_event = {
 			SLO = {
 				if = {
 					limit = { NOT = { has_variable = focus_to_pick } }
-					country_event = { id = slovakia_hidden_focuses.999 days = 10 random_days = 25 }
+					country_event = { id = slovakia_hidden_focuses.999 days = 10 random_days = 10 }
 				}
 			}
 		}
@@ -2491,7 +2761,7 @@ country_event = {
 	}
 
 	option = { 
-		name = slovakia_elections.2.a
+		name = slovakia_elections.22.a
 		ai_chance = {
 			base = 10
 		}
@@ -5078,12 +5348,10 @@ country_event = {
 				
 				Focus_Chosen_Start = "[?t1|0]"
 				Focus_Chosen_End = "[?t2|0]"
-				
-				debug = yes
 			}
 		}
 		else = { 
-			SLO = { country_event = { id = slovakia_hidden_focuses.999 days = 70 } }	#No focus can be chosen, try again in 70 days
+			SLO = { country_event = { id = slovakia_hidden_focuses.999 days = 35 } }	#No focus can be chosen, try again in 35 days
 		}
 	}
 }

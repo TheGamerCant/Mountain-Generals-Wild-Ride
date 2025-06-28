@@ -51,7 +51,9 @@
  SLO_switch_languages_parliament_category_desc:0 "$SLO_switch_languages_campaign_category_desc$"
  SLO_call_a_new_election:0 "Call a new election"
  SLO_call_a_new_election_desc:0 ""
- SLO_can_call_a_new_election_tt:0 "We can only call a snap election if the current parliament is at least one third of the way through it's term, although calling one before eighty percent of the way through will give us a stability penalty.\n\nDays left: §Y[?SLO_has_held_an_election_flag:days]§!/[?third]"
+ SLO_can_call_a_new_election_tt:0 "We can only call a snap election if the current parliament is at least one third of the way through it's term, although calling one before eighty percent of the way through will give us a stability penalty.\n\nDays left before we can call an election: §Y[?SLO_has_held_an_election_flag:days]§!/[?SLO.election_frequency_thirds|.0]\n\nDays left before we can call an election without losing stability: §Y[?SLO_has_held_an_election_flag:days]§!/[?SLO.election_frequency_four_fifths|.0]"
+ SLO_delay_elections:0 "Delay Elections"
+ SLO_delay_elections_desc:0 "While at war, our constitution allows us to delay elections, although the parliament must agree to delay them every 365 days."
  
  SLO_communist_party_long_no_colour_LANG_SLO_idea:0 "Komunistická Strana Slovenska"
  SLO_communist_party_long_coloured_LANG_SLO_idea:0 "§RKomunistická Strana Slovenska§!"

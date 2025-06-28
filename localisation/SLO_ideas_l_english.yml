@@ -128,14 +128,19 @@
  SLO_centralised_government_bureaucracy:0 "Centralised Government Bureaucracy"
  SLO_centralised_government_bureaucracy_desc:0 ""
  
- SLO_promotion_of_slovak_nationalism_idea_1:0 "Promotion of [SLO.GetSlovakOrEuropean] Nationalism"
- SLO_promotion_of_slovak_nationalism_idea_1_desc:0 "Centuries of oppression by the Austrians and Hungarians has left Slovakia's national identity weakened. We need to initiate massive campaigns to promote the Slovak identity for our nation's very survival."
+ SLO_promotion_of_slovak_nationalism_idea_1:0 "[SLO.GetPromoteSlovakNationalismIdeaName]"
+ SLO_promotion_of_slovak_nationalism_idea_1_desc:0 "[SLO.GetPromoteSlovakNationalismIdeaDesc]"
  SLO_promotion_of_slovak_nationalism_idea_2:0 "$SLO_promotion_of_slovak_nationalism_idea_1$"
  SLO_promotion_of_slovak_nationalism_idea_2_desc:0 "$SLO_promotion_of_slovak_nationalism_idea_1_desc$"
  SLO_promotion_of_slovak_nationalism_idea_3:0 "$SLO_promotion_of_slovak_nationalism_idea_1$"
  SLO_promotion_of_slovak_nationalism_idea_3_desc:0 "$SLO_promotion_of_slovak_nationalism_idea_1_desc$"
  SLO_promotion_of_slovak_nationalism_idea_4:0 "$SLO_promotion_of_slovak_nationalism_idea_1$"
  SLO_promotion_of_slovak_nationalism_idea_4_desc:0 "$SLO_promotion_of_slovak_nationalism_idea_1_desc$"
+ 
+ SLO_promotion_of_slovak_nationalism_name:0 "Promotion of Slovak Nationalism"
+ SLO_promotion_of_slovak_nationalism_desc:0 "Centuries of oppression by the Austrians and Hungarians has left Slovakia's national identity weakened. We need to initiate massive campaigns to promote the Slovak identity for our nation's very survival."
+ SLO_defence_of_europe_name:0 "The Defence of Europe"
+ SLO_defence_of_europe_desc:0 ""
  
  SLO_media_standards_idea:0 "Christian Media Standards"
  SLO_media_standards_idea_desc:0 ""

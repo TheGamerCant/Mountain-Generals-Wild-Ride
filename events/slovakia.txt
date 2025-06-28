@@ -1449,7 +1449,7 @@ country_event = {
 				}
 				
 				for_loop_effect = {
-					end = 30
+					end = 34
 					random_owned_state = {
 						limit = { POL = { has_full_control_of_state = PREV } }
 						create_unit = {
@@ -1491,6 +1491,25 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}	
+	}
+}
+
+#A new dawn in Mountain General Mesto
+country_event = {
+	id = slovakia.41
+	title = slovakia.41.title
+	desc = slovakia.41.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_german_inspect_troops
+
+	option = { 
+		name = slovakia.41.a
+		ai_chance = {
+			base = 10
+		}	
+		
+		add_political_power = 75
 	}
 }
 

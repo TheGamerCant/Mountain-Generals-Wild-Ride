@@ -3731,7 +3731,7 @@ focus_tree = {
 	
 	focus = {
 		id = SLO_the_public_order_decree
-		icon = GFX_
+		icon = GFX_goal_SLO_the_public_order_decree
 		x = 4
 		y = 1
 		relative_position_id = SLO_a_based_slovakia
@@ -4023,7 +4023,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SLO_a_portrait_on_every_wall
-		cost = 7
+		cost = 8
 		prerequisite = {
 			focus = SLO_a_portrait_on_every_wall
 		}
@@ -4062,7 +4062,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SLO_a_portrait_on_every_wall
-		cost = 7
+		cost = 8
 		prerequisite = {
 			focus = SLO_a_portrait_on_every_wall
 		}
@@ -4093,7 +4093,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SLO_great_statesman
-		cost = 7
+		cost = 10
 		prerequisite = {
 			focus = SLO_great_statesman
 			focus = SLO_fearless_commander
@@ -4150,7 +4150,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SLO_great_statesman
-		cost = 7
+		cost = 10
 		prerequisite = {
 			focus = SLO_great_statesman
 			focus = SLO_fearless_commander
@@ -4177,6 +4177,57 @@ focus_tree = {
 				swap_ruler_traits = {
 					remove = mgs_cult_of_personality_3_right
 					add = mgs_cult_of_personality_4_right_left
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_mountain_general_youth
+		icon = GFX_goal_SLO_child_soldiers
+		x = 1
+		y = 1
+		relative_position_id = SLO_impeccable_philosopher
+		cost = 10
+		prerequisite = {
+			focus = SLO_impeccable_philosopher
+			focus = SLO_brilliant_genius
+		}
+
+		available = {
+			has_country_leader = {
+				character = SLO_mountain_general
+				ruling_only = yes
+			}
+		}
+		
+
+		completion_reward = {
+			if = {
+				limit = { has_country_leader_with_trait = mgs_cult_of_personality_4_left_left }
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_4_left_left
+					add = mgs_cult_of_personality_5_left_left
+				}
+			}
+			else_if = {
+				limit = { has_country_leader_with_trait = mgs_cult_of_personality_4_left_right }
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_4_left_right
+					add = mgs_cult_of_personality_5_left_right
+				}
+			}
+			else_if = {
+				limit = { has_country_leader_with_trait = mgs_cult_of_personality_4_right_left }
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_4_right_left
+					add = mgs_cult_of_personality_5_right_left
+				}
+			}
+			else = {
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_4_right_right
+					add = mgs_cult_of_personality_5_right_right
 				}
 			}
 		}
@@ -5788,11 +5839,11 @@ focus_tree = {
 	
 	focus = {
 		id = SLO_the_scandanavian_spirit
-		icon = GFX_
+		icon = GFX_goal_SLO_the_scandanavian_spirit
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = SLO_the_indominatable_slovak_hyberborean_spirit
-		cost = 5
+		cost = 8
 		prerequisite = { focus = SLO_the_indominatable_slovak_hyberborean_spirit } 
 
 
@@ -5800,51 +5851,9 @@ focus_tree = {
 		}
 		
 		bypass = {
-			AND = {
-				OR = {
-					is_in_faction_with = DEN
-					DEN = { is_puppet_of = ROOT }
-					NOT = { country_exists = DEN }
-					has_war_with = DEN
-				}
-				OR = {
-					is_in_faction_with = SWE
-					SWE = { is_puppet_of = ROOT }
-					NOT = { country_exists = SWE }
-					has_war_with = SWE
-				}
-				OR = {
-					is_in_faction_with = FIN
-					FIN = { is_puppet_of = ROOT }
-					NOT = { country_exists = FIN }
-					has_war_with = FIN
-				}
-				OR = {
-					is_in_faction_with = NOR
-					NOR = { is_puppet_of = ROOT }
-					NOT = { country_exists = NOR }
-					has_war_with = NOR
-				}
-				OR = {
-					is_in_faction_with = ICE
-					ICE = { is_puppet_of = ROOT }
-					NOT = { country_exists = ICE }
-					has_war_with = ICE
-				}
-			}
 		}
 		
 		bypass_effect = {
-			every_state = {
-				limit = { OR = { 
-					is_core_of = DEN is_claimed_by = DEN 
-					is_core_of = SWE is_claimed_by = SWE 
-					is_core_of = FIN is_claimed_by = FIN 
-					is_core_of = NOR is_claimed_by = NOR 
-					is_core_of = ICE is_claimed_by = ICE 
-				} }
-				add_claim_by = SLO	
-			}
 		}
 		
 
@@ -5922,11 +5931,11 @@ focus_tree = {
 	
 	focus = {
 		id = SLO_the_great_white_north
-		icon = GFX_
+		icon = GFX_goal_SLO_the_great_white_north
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = SLO_the_indominatable_slovak_hyberborean_spirit
-		cost = 5
+		cost = 8
 		prerequisite = { focus = SLO_the_indominatable_slovak_hyberborean_spirit } 
 
 
@@ -5934,45 +5943,10 @@ focus_tree = {
 		}
 		
 		bypass = {
-			AND = {
-				OR = {
-					is_in_faction_with = DEN
-					DEN = { is_puppet_of = ROOT }
-					NOT = { country_exists = DEN }
-					has_war_with = DEN
-				}
-				OR = {
-					is_in_faction_with = SWE
-					SWE = { is_puppet_of = ROOT }
-					NOT = { country_exists = SWE }
-					has_war_with = SWE
-				}
-				OR = {
-					is_in_faction_with = FIN
-					FIN = { is_puppet_of = ROOT }
-					NOT = { country_exists = FIN }
-					has_war_with = FIN
-				}
-				OR = {
-					is_in_faction_with = NOR
-					NOR = { is_puppet_of = ROOT }
-					NOT = { country_exists = NOR }
-					has_war_with = NOR
-				}
-				OR = {
-					is_in_faction_with = ICE
-					ICE = { is_puppet_of = ROOT }
-					NOT = { country_exists = ICE }
-					has_war_with = ICE
-				}
-			}
+
 		}
 		
 		bypass_effect = {
-			every_state = {
-				limit = { OR = { state = 332 state = 101 state = 331 state = 730 state = 861 state = 466 state = 860 state = 863 state = 862 state = 468 state = 465 state = 464 state = 276 state = 682 state = 357 state = 866 state = 467 state = 867 state = 469 state = 865 state = 470 state = 683 state = 472 state = 864 state = 473 state = 740 state = 471 state = 739 state = 463 state = 650 } }
-				add_claim_by = SLO	
-			}
 		}
 		
 
@@ -5992,6 +5966,89 @@ focus_tree = {
 						}
 					}
 				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_deport_hungarians_to_mongolia
+		icon = GFX_goal_SLO_deport_them_to_mongolia
+		x = 2
+		y = 1
+		relative_position_id = SLO_the_indominatable_slovak_hyberborean_spirit
+		prerequisite = { focus = SLO_the_indominatable_slovak_hyberborean_spirit }
+		cost = 8
+
+
+		available = {
+			any_state = { CONTROLLER = { OR = { tag = SLO is_subject_of = SLO } } is_core_of = MON }
+			any_state = { CONTROLLER = { OR = { tag = SLO is_subject_of = SLO } } OR = { is_core_of = HUN is_claimed_by = HUN } }
+		}
+		
+		bypass = {
+
+		}
+		
+		bypass_effect = {
+
+		}
+		
+
+		completion_reward = {
+			every_controlled_state = { 
+				limit = { OR = { state = 43 state = 154 state = 152 state  = 973 state = 974 state = 45 state = 76 } }
+				
+				set_temp_variable = { pop_to_deport = THIS.state_population_k }
+				multiply_temp_variable = { pop_to_deport = -80 }
+				round_temp_variable = pop_to_deport
+				add_manpower = var:pop_to_deport
+				multiply_temp_variable = { pop_to_deport = -1 }
+				
+				random_state = {
+					limit = { 
+						CONTROLLER = { OR = { tag = SLO is_subject_of = SLO } } 
+						OR = { state = 330 state = 820 state = 818 state = 817 state = 819 }
+					}
+					
+					set_temp_variable = { pop_to_deport = PREV.state_population_k }
+					multiply_temp_variable = { pop_to_deport = 80 }
+					round_temp_variable = pop_to_deport
+					add_manpower = var:pop_to_deport
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			country_event = { id = slovakia.41 hours = 4 random_hours = 8 }
+		}
+	}
+	
+	focus = {
+		id = SLO_god_amongst_men
+		icon = GFX_goal_SLO_god_amongst_men
+		x = -2
+		y = 1
+		relative_position_id = SLO_the_indominatable_slovak_hyberborean_spirit
+		prerequisite = { focus = SLO_the_indominatable_slovak_hyberborean_spirit }
+		cost = 8
+
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+		
+		bypass_effect = {
+
+		}
+		
+
+		completion_reward = {
+			swap_ruler_traits = {
+				remove = the_lion_of_bratislava
+				add = no_god_but_mountain_general
 			}
 		}
 	}

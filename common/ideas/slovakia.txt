@@ -1021,7 +1021,6 @@ ideas = {
 			picture = SLO_promote_slovak_nationalism
 				
 			available = {
-				SLO_is_not_europe = yes
 			}
 			
 			allowed_civil_war = {
@@ -1041,7 +1040,6 @@ ideas = {
 			picture = SLO_promote_slovak_nationalism
 				
 			available = {
-				SLO_is_not_europe = yes
 			}
 			
 			allowed_civil_war = {
@@ -1062,7 +1060,6 @@ ideas = {
 			picture = SLO_promote_slovak_nationalism
 				
 			available = {
-				SLO_is_not_europe = yes
 			}
 			
 			allowed_civil_war = {
@@ -1084,7 +1081,6 @@ ideas = {
 			picture = SLO_promote_slovak_nationalism
 				
 			available = {
-				SLO_is_not_europe = yes
 			}
 			
 			allowed_civil_war = {

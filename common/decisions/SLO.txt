@@ -1612,6 +1612,7 @@ SLO_the_slovak_occupation_authority = {
 			every_state = {
 				limit = { is_core_of = SLH }
 				remove_core_of = HUN
+				add_claim_by = HUN
 				remove_core_of = SLH
 				add_core_of = SLO
 			}		
@@ -1931,6 +1932,7 @@ SLO_the_slovak_occupation_authority = {
 			every_state = {
 				limit = { is_core_of = SLC }
 				remove_core_of = CZE
+				add_claim_by = CZE
 				remove_core_of = SLC
 				add_core_of = SLO
 			}		
@@ -2356,7 +2358,48 @@ SLO_parliament_decision_category = {
 		}
 		timeout_effect = {
 			hidden_effect = { SLO_start_campaign = yes }
-			effect_tooltip = { country_event = { id = slovakia_elections.1 hours = 4 } }		}
+			effect_tooltip = { country_event = { id = slovakia_elections.1 hours = 4 } }	
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = 30
+			add_stability = 0.01
+		}
+	}
+	
+	SLO_delay_elections = { 
+
+		ai_will_do = {
+			base = 100
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			has_war_with_major = yes
+		}
+		
+		visible = { 
+			has_war_with_major = yes
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 365
+
+		cost = 25
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			add_days_mission_timeout = { mission = SLO_call_a_new_election days = 365 }
+		}
+
+		remove_effect = {
+		}
 	}
 }
 
@@ -2433,10 +2476,7 @@ SLO_campaign_season_category = {
 
 		available = {
 			hidden_trigger = {
-				OR = {
-					NOT = { has_country_flag = SLO_campaign_season_underway_flag }
-					check_variable = { SLO.party_campaigning_as = 0 }
-				}
+				NOT = { has_country_flag = SLO_campaign_season_underway_flag }
 			}
 		}
 		
@@ -2776,10 +2816,7 @@ SLO_campaign_season_category = {
 
 		available = {
 			hidden_trigger = {
-				OR = {
-					NOT = { has_country_flag = SLO_campaign_season_underway_flag }
-					check_variable = { SLO.party_campaigning_as = 5 }
-				}
+				NOT = { has_country_flag = SLO_campaign_season_underway_flag }
 			}
 		}
 
@@ -2994,12 +3031,14 @@ SLO_campaign_season_category = {
 #		target_root_trigger = {
 #			has_completed_focus = my_focus
 #		}
+
 		target_array = SLO.election_states
-#		target_trigger = {
-#			FROM = {
-#				is_owned_by = ROOT
-#			}
-#		}
+		
+		target_trigger = {
+			FROM = {
+				has_variable = name_token
+			}
+		}
 		
 		on_map_mode = map_and_decisions_view
 
@@ -3150,7 +3189,7 @@ SLO_towards_a_european_union_decision_category = {
 				#Only show this decision if we can't integrate them already
 				NOT = {
 					OR = {
-						is_puppet_of = SLO
+						is_subject_of = SLO
 						custom_trigger_tooltip = {
 							tooltip = SLO_europe_annex_country_tt
 							
@@ -3231,7 +3270,7 @@ SLO_towards_a_european_union_decision_category = {
 		available = {
 			FROM = {
 				OR = {
-					is_puppet_of = SLO
+					is_subject_of = SLO
 					custom_trigger_tooltip = {
 						tooltip = SLO_europe_annex_country_tt
 						
@@ -7526,7 +7565,7 @@ SLO_towards_a_european_union_decision_category = {
 		}
 	}
 
-	SLO_europe_core_region_137 = { 
+	SLO_europe_core_region_192 = { 
 
 		ai_will_do = {
 			base = 50

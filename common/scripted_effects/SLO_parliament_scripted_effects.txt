@@ -3366,6 +3366,52 @@ SLO_initialise_europe_mechanics = {
 		set_variable = { SLO.party_names_short_coloured_array^5 = token:EUROPE_fascist_party_short_coloured_LANG_ENG_idea }
 		set_variable = { SLO.party_names_short_coloured_array^6 = token:EUROPE_non_aligned_other_party_short_coloured_LANG_ENG_idea }
 	}
+	if = {
+		limit = { check_variable = { SLO.language = 0 } }
+		
+		for_each_loop = {
+			array = SLO.subdivision_states 
+			index = i
+			value = v
+			
+			meta_effect = {
+				text = {
+					[STATE_ID] = {
+#						set_variable = { overlay_token = token:SLO_GFX_elections_europe_[STATE_ID]_OVERLAY_idea }
+#						set_variable = { progressbar_token = token:SLO_GFX_elections_europe_[STATE_ID]_PROGRESSBAR_idea }
+						set_variable = { name_token = token:SLO_NAME_elections_europe_[STATE_ID]_LANG_SLO_idea }
+					}
+				}
+				
+				STATE_ID = "[?v|.0]"
+				debug = yes
+			}
+		}
+		
+		set_variable = { 70.name_token = token:SLO_NAME_elections_slovakia_70_LANG_SLO_idea }
+	}
+	else = {
+		for_each_loop = {
+			array = SLO.subdivision_states 
+			index = i
+			value = v
+			
+			meta_effect = {
+				text = {
+					[STATE_ID] = {
+#						set_variable = { overlay_token = token:SLO_GFX_elections_europe_[STATE_ID]_OVERLAY_idea }
+#						set_variable = { progressbar_token = token:SLO_GFX_elections_europe_[STATE_ID]_PROGRESSBAR_idea }
+						set_variable = { name_token = token:SLO_NAME_elections_europe_[STATE_ID]_LANG_ENG_idea }
+					}
+				}
+				
+				STATE_ID = "[?v|.0]"
+				debug = yes
+			}
+		}
+		
+		set_variable = { 70.name_token = token:SLO_NAME_elections_slovakia_70_LANG_ENG_idea }
+	}
 }
 
 
@@ -3376,9 +3422,9 @@ SLO_update_GFX_SLO_to_Europe = {
 	clear_variable = 70.y1
 	clear_variable = 70.x_pos
 	clear_variable = 70.y_pos
-	clear_variable = 70.overlay_token
-	clear_variable = 70.progressbar_token
-	clear_variable = 70.name_token
+#	clear_variable = 70.overlay_token
+#	clear_variable = 70.progressbar_token
+#	clear_variable = 70.name_token
 	
 	clear_variable = 70.seat_count
 	clear_variable = 70.previous_election_seat_count
@@ -3838,6 +3884,7 @@ SLO_update_GFX_SLO_to_Europe = {
 	set_variable = { 214.y0 = 64 }
 	set_variable = { 214.x1 = 709 }
 	set_variable = { 214.y1 = 190 }
+	
 	if = {
 		limit = { check_variable = { SLO.language = 0 } }
 		
@@ -3851,7 +3898,7 @@ SLO_update_GFX_SLO_to_Europe = {
 					[STATE_ID] = {
 						set_variable = { overlay_token = token:SLO_GFX_elections_europe_[STATE_ID]_OVERLAY_idea }
 						set_variable = { progressbar_token = token:SLO_GFX_elections_europe_[STATE_ID]_PROGRESSBAR_idea }
-						set_variable = { name_token = token:SLO_NAME_elections_europe_[STATE_ID]_LANG_SLO_idea }
+#						set_variable = { name_token = token:SLO_NAME_elections_europe_[STATE_ID]_LANG_SLO_idea }
 					}
 				}
 				
@@ -3859,6 +3906,8 @@ SLO_update_GFX_SLO_to_Europe = {
 				debug = yes
 			}
 		}
+		
+		set_variable = { 70.name_token = token:SLO_NAME_elections_europe_70_LANG_SLO_idea }
 	}
 	else = {
 		for_each_loop = {
@@ -3871,7 +3920,7 @@ SLO_update_GFX_SLO_to_Europe = {
 					[STATE_ID] = {
 						set_variable = { overlay_token = token:SLO_GFX_elections_europe_[STATE_ID]_OVERLAY_idea }
 						set_variable = { progressbar_token = token:SLO_GFX_elections_europe_[STATE_ID]_PROGRESSBAR_idea }
-						set_variable = { name_token = token:SLO_NAME_elections_europe_[STATE_ID]_LANG_ENG_idea }
+#						set_variable = { name_token = token:SLO_NAME_elections_europe_[STATE_ID]_LANG_ENG_idea }
 					}
 				}
 				
@@ -3879,6 +3928,8 @@ SLO_update_GFX_SLO_to_Europe = {
 				debug = yes
 			}
 		}
+		
+		set_variable = { 70.name_token = token:SLO_NAME_elections_europe_70_LANG_ENG_idea }
 	}
 }
 

@@ -177,6 +177,10 @@
  slovakia.40.desc:0 "[FROM.GetLeader] has refused to help form an alliance against Germany, arguing it to be 'provocative'. This leaves us weakened, and European democracy in a vulnerable position."
  slovakia.40.a:0 "Oh well"
  
+ slovakia.41.title:0 "The New Sunrise in [?43.GetCapitalVictoryPointName]"
+ slovakia.41.desc:0 "It had been many eventful years since the start of the Slovakification campaigns in the former Hungary. For the most part it was a smashing success, but there was always resistance. Well, no more.\n\nThe latest rounds of deportations eliminated anyone who might have had some sympathies to Hungarian 'culture'. Now, the people spoke Slovak, worked in Škoda factories, and were indistinguishable from any other aryan Slovak. For many, Hungary was a word they had forgotten, and they had most certainly forgotten the feeling of it. Mountain General walked down the street in the city bearing his name, knowing that he saved the Slovak people, and perhaps the world as a whole, from the demonic entity once known as Hungary."
+ slovakia.41.a:0 "A smile on his face, he shed a single tear"
+ 
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to dictate terms of surrender to the once proud Czechoslovak government in Prague. For the first time ever, Slovakia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."
  slovakia_news.1.a:0 "What the?!!?"

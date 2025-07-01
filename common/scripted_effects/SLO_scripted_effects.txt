@@ -465,7 +465,7 @@ SLO_get_valid_economy_focuses = {
 			NOT = { has_completed_focus = SLO_new_research_grants } 
 			has_completed_focus = SLO_expand_the_university_of_bratislava
 			
-			industrial_complex > 74
+			industrial_complex > 49
 		}
 		
 		add_to_array = { SLO.economy_focuses_array = 17 }		#SLO_new_research_grants

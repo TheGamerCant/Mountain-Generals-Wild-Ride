@@ -297,7 +297,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_manpower = 20000
-			army_experience = 20
+			army_experience = 15
 			add_political_power = 40
 			add_war_support = 0.05
 		}
@@ -2737,6 +2737,7 @@ focus_tree = {
 		}
 
 		available = {
+			has_completed_focus = SLO_trust_in_mountain_general
 		}
 		
 
@@ -3735,7 +3736,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = SLO_a_based_slovakia
-		cost = 4
+		cost = 3
 		prerequisite = {
 			focus = SLO_a_based_slovakia
 			focus = SLO_strong_leader_strong_slovakia
@@ -3746,8 +3747,8 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = -0.06
+			add_political_power = 75
+			add_stability = -0.05
 		}
 	}
 	
@@ -4245,6 +4246,7 @@ focus_tree = {
 		}
 
 		available = {
+			has_completed_focus = SLO_trust_in_mountain_general
 		}
 		
 
@@ -4273,6 +4275,7 @@ focus_tree = {
 		}
 
 		available = {
+			has_completed_focus = SLO_trust_in_mountain_general
 		}
 		
 
@@ -8044,7 +8047,7 @@ focus_tree = {
 		relative_position_id = SLO_expand_the_university_of_bratislava
 
 		available = {
-			industrial_complex > 74
+			industrial_complex > 49
 			
 			if = {
 				limit = { check_variable = { SLO.focus_to_pick = 17 } }
@@ -9018,7 +9021,17 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_ideas = SLO_promotion_of_slovak_nationalism_idea_1
+			if = {
+				limit = { SLO_is_not_europe = yes }
+				add_ideas = SLO_promotion_of_slovak_nationalism_idea_1
+			}
+			else = {
+				add_ideas = SLO_defence_of_europe_idea_1
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = 50
 		}
 	}
 	
@@ -9103,11 +9116,23 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			swap_ideas = {
-				remove_idea = SLO_promotion_of_slovak_nationalism_idea_1
-				add_idea = SLO_promotion_of_slovak_nationalism_idea_2
+			if = {
+				limit = { SLO_is_not_europe = yes }
+				swap_ideas = {
+					remove_idea = SLO_promotion_of_slovak_nationalism_idea_1
+					add_idea = SLO_promotion_of_slovak_nationalism_idea_2
+				}
+			}
+			else_if = {
+				swap_ideas = {
+					remove_idea = SLO_defence_of_europe_idea_1
+					add_idea = SLO_defence_of_europe_idea_2
+				}
 			}
 			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_unlock_new_propaganda_slot = yes
 		}
 	}
 	
@@ -9201,13 +9226,23 @@ focus_tree = {
 			}
 			else = {
 				add_political_power = 75
+				add_manpower = 25000
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			swap_ideas = {
-				remove_idea = SLO_promotion_of_slovak_nationalism_idea_2
-				add_idea = SLO_promotion_of_slovak_nationalism_idea_3
+			if = {
+				limit = { SLO_is_not_europe = yes }
+				swap_ideas = {
+					remove_idea = SLO_promotion_of_slovak_nationalism_idea_2
+					add_idea = SLO_promotion_of_slovak_nationalism_idea_3
+				}
+			}
+			else_if = {
+				swap_ideas = {
+					remove_idea = SLO_defence_of_europe_idea_2
+					add_idea = SLO_defence_of_europe_idea_3
+				}
 			}
 		}
 	}
@@ -9299,9 +9334,18 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			swap_ideas = {
-				remove_idea = SLO_promotion_of_slovak_nationalism_idea_3
-				add_idea = SLO_promotion_of_slovak_nationalism_idea_4
+			if = {
+				limit = { SLO_is_not_europe = yes }
+				swap_ideas = {
+					remove_idea = SLO_promotion_of_slovak_nationalism_idea_3
+					add_idea = SLO_promotion_of_slovak_nationalism_idea_4
+				}
+			}
+			else_if = {
+				swap_ideas = {
+					remove_idea = SLO_defence_of_europe_idea_3
+					add_idea = SLO_defence_of_europe_idea_4
+				}
 			}
 		}
 	}
@@ -9640,7 +9684,24 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 75
-			add_stability = 0.025
+			add_stability = 0.05
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_owned_state = {
+				limit = { has_variable = name_token }
+				
+				meta_effect = {
+					text = {
+						set_variable = { party = [PARTY_VAR] }
+						set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+						STATE_add_party_support = yes
+					}
+					
+					VALUE_VAR = "3.5"
+					PARTY_VAR = "[?SLO.parties_in_government_ordered^0]"
+				}
+			}
 		}
 	}
 	
@@ -10268,7 +10329,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_looking_outwards
-		icon = GFX_
+		icon = GFX_goal_generic_position_armies
 		x = 0
 		y = 2
 		cost = 4
@@ -10329,7 +10390,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_pre_emptive_measures
-		icon = GFX_
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 1
 		cost = 4
@@ -10378,6 +10439,8 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			SLO_unlock_new_propaganda_slot = yes
+			
+			hidden_effect = { SLO_unlock_new_propaganda_slot = yes }		#Give them two off the bat
 		}
 	}
 	
@@ -10555,7 +10618,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_the_formation_of_an_anti_german_pact
-		icon = GFX_
+		icon = GFX_focus_attack_germany
 		x = 1
 		y = 1
 		cost = 4
@@ -10633,12 +10696,16 @@ focus_tree = {
 					country_event = { id = slovakia.38 hours = 10 random_hours = 6 }
 				}
 			}
+			
+			
+			custom_effect_tooltip = unlock_propaganda_campaign_tt
+			unlock_decision_tooltip = SLO_propaganda_campaign_19
 		}
 	}
 	
 	focus = {	
 		id = SLO_to_liberate_europe
-		icon = GFX_
+		icon = GFX_goal_SLO_declare_greater_slovakia
 		x = 0
 		y = 1
 		cost = 10
@@ -10670,8 +10737,8 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_destroy_the_baltic_dictatorships
-		icon = GFX_
-		x = -5
+		icon = GFX_goal_SLO_destroy_the_baltic_dictatorships
+		x = -3
 		y = 1
 		cost = 5
 		
@@ -10745,8 +10812,8 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_topple_the_balkan_monarchies
-		icon = GFX_
-		x = -3
+		icon = GFX_focus_generic_balkans_focus
+		x = -1
 		y = 1
 		cost = 5
 		
@@ -10822,7 +10889,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			every_country = {
+			every_other_country = {
 				limit = { OR = { original_tag = YUG original_tag = ROM original_tag = BUL original_tag = GRE original_tag = ALB original_tag = CRO } }
 				
 				if = {
@@ -10847,8 +10914,8 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_destroy_communist_tyranny
-		icon = GFX_
-		x = 3
+		icon = GFX_focus_GER_end_european_communism
+		x = 1
 		y = 1
 		cost = 5
 		
@@ -10871,7 +10938,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			every_country = {
+			every_other_country = {
 				limit = { original_tag = SOV }
 				
 				if = {
@@ -10896,8 +10963,8 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_topple_european_fascism
-		icon = GFX_
-		x = 5
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 3
 		y = 1
 		cost = 5
 		
@@ -10922,7 +10989,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			every_country = {
+			every_other_country = {
 				limit = { capital_scope = { is_on_continent = europe } has_government = fascism }
 				
 				PREV = {
@@ -10938,12 +11005,12 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_towards_a_european_union
-		icon = GFX_
+		icon = GFX_goal_SLO_towards_a_european_union
 		x = 0
-		y = 1
+		y = 2
 		cost = 5
 		
-		prerequisite = { focus = SLO_to_liberate_europe }
+		prerequisite = { focus = SLO_destroy_the_baltic_dictatorships focus = SLO_topple_the_balkan_monarchies focus = SLO_destroy_communist_tyranny focus = SLO_topple_european_fascism }
 		relative_position_id = SLO_to_liberate_europe
 
 		available = {
@@ -10965,6 +11032,35 @@ focus_tree = {
 				}
 				
 				SLO_initialise_europe_mechanics = yes
+				
+				if = {
+					limit = { has_idea = SLO_promotion_of_slovak_nationalism_idea_1 }
+					swap_ideas = { 
+						remove_idea = SLO_promotion_of_slovak_nationalism_idea_1
+						add_idea = SLO_defence_of_europe_idea_1
+					}
+				}
+				else_if = {
+					limit = { has_idea = SLO_promotion_of_slovak_nationalism_idea_2 }
+					swap_ideas = { 
+						remove_idea = SLO_promotion_of_slovak_nationalism_idea_2
+						add_idea = SLO_defence_of_europe_idea_2
+					}
+				}
+				else_if = {
+					limit = { has_idea = SLO_promotion_of_slovak_nationalism_idea_3 }
+					swap_ideas = { 
+						remove_idea = SLO_promotion_of_slovak_nationalism_idea_3
+						add_idea = SLO_defence_of_europe_idea_3
+					}
+				}
+				else_if = {
+					limit = { has_idea = SLO_promotion_of_slovak_nationalism_idea_4 }
+					swap_ideas = { 
+						remove_idea = SLO_promotion_of_slovak_nationalism_idea_4
+						add_idea = SLO_defence_of_europe_idea_4
+					}
+				}
 			}
 			
 			set_cosmetic_tag = EUR_UNIFIED

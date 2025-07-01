@@ -26,10 +26,10 @@
  SLO_NAME_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea:0 "Real work and struggle for a greater slice of bread"
  SLO_GFX_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea:0 "GFX_propaganda_SLO_real_work_and_struggle_for_a_greater_slice_of_bread"
  
- SLO_NAME_propaganda_mother_slovakia_calls_to_arms_idea:0 "Our mother Slovakia calls to arms!"
+ SLO_NAME_propaganda_mother_slovakia_calls_to_arms_idea:0 "Our mother Slovakia calls to arms"
  SLO_GFX_propaganda_mother_slovakia_calls_to_arms_idea:0 "GFX_propaganda_SLO_mother_slovakia_calls_to_arms"
  
- SLO_NAME_propaganda_germany_will_be_conquered_idea:0 "Germany will be conquered in the shortest possible time!"
+ SLO_NAME_propaganda_germany_will_be_conquered_idea:0 "Germany will be conquered in the shortest possible time"
  SLO_GFX_propaganda_germany_will_be_conquered_idea:0 "GFX_propaganda_SLO_germany_will_be_conquered"
  
  SLO_NAME_propaganda_we_are_united_idea:0 "We are united! Our goal: A new Slovakia!"
@@ -55,14 +55,15 @@
 		
  SLO_NAME_propaganda_salute_the_founder_of_the_empire_idea:0 "Salute the founder of the Empire"
  SLO_GFX_propaganda_salute_the_founder_of_the_empire_idea:0 "GFX_propaganda_SLO_salute_the_founder_of_the_empire"
+		
+ SLO_NAME_propaganda_this_is_what_will_happen_to_the_fascist_beast_idea:0 "This is what will happen to the Fascist beast!"
+ SLO_GFX_propaganda_this_is_what_will_happen_to_the_fascist_beast_idea:0 "GFX_propaganda_SLO_this_is_what_will_happen_to_the_fascist_beast"
  
-
-
-
  
  SLO_propaganda_decision_category:0 "[SLO.GetPropagandaCategoryName]"
  SLO_minitru:0 "Minitru"
  SLO_ministry_of_public_enlightenment:0 "Ministry of Public Enlightenment"
+ SLO_ministry_of_information:0 "Ministry of Information"
  SLO_available_propaganda_slot_tt:0 "Has an available propaganda slot."
  
  SLO_GET_PROPAGANDA_POSTER_NAME:0 "[SLO.GetPropagandaPosterName]"
@@ -106,3 +107,5 @@
  SLO_propaganda_campaign_17_desc:0 ""
  SLO_propaganda_campaign_18:0 "[?SLO.propaganda_NAME_array^18.GetTokenLocalizedKey]"
  SLO_propaganda_campaign_18_desc:0 ""
+ SLO_propaganda_campaign_19:0 "[?SLO.propaganda_NAME_array^19.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_19_desc:0 ""

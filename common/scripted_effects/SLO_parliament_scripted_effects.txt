@@ -1896,7 +1896,7 @@ SLO_change_language = {
 
 SLO_initialise_europe_mechanics = {
 	set_variable = { SLO.parliament_level = 1 }
-	set_variable = { SLO.campaign_duration = 140 }
+	set_variable = { SLO.campaign_duration = 120 }
 	clear_array = SLO.subdivision_states
 	
 	#North-Atlantic

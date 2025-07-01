@@ -731,7 +731,9 @@ country_event = {
 		name = generic.5.a
 		trigger = {
 			if = {
-				limit = { NOT = { FROM = { tag = SLO } } } 		#Countries can join democratic Slovak alliance
+				limit = {
+					NOT = { FROM = { tag = SLO } } 			#Countries can join democratic Slovak alliance
+				} 		
 				has_rule = can_join_factions
 				FROM = { has_rule = can_join_factions }
 			}
@@ -1015,10 +1017,8 @@ country_event = {
 
 			modifier = {
 				factor = 0
-				FROM = {
-					original_tag = SLO
-					has_government = democratic
-				}
+				FROM = { original_tag = SLO has_government = democratic }
+				OR = { original_tag = CZE original_tag = POL original_tag = LIT original_tag = LAT original_tag = EST original_tag = YUG original_tag = ROM original_tag = BUL original_tag = ALB } 	#These countries will always accept
 			}
 
 			modifier = {

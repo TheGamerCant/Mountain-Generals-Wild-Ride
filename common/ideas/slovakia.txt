@@ -1100,6 +1100,91 @@ ideas = {
 			}
 		}
 		
+		SLO_defence_of_europe_idea_1 = {
+			removal_cost = -1
+
+			picture = FRA_matignon_agreements
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_factor = 0.04
+				war_support_factor = 0.05
+				conscription_factor = 0.03
+			}
+		}
+		
+		SLO_defence_of_europe_idea_2 = {
+			removal_cost = -1
+
+			picture = FRA_matignon_agreements
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_factor = 0.04
+				war_support_factor = 0.05
+				conscription_factor = 0.08
+				army_core_defence_factor = 0.03
+			}
+		}
+		
+		SLO_defence_of_europe_idea_3 = {
+			removal_cost = -1
+
+			picture = FRA_matignon_agreements
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_factor = 0.06
+				war_support_factor = 0.10
+				conscription_factor = 0.08
+				conscription = 0.005
+				army_core_defence_factor = 0.06
+			}
+		}
+		
+		SLO_defence_of_europe_idea_4 = {
+			removal_cost = -1
+
+			picture = FRA_matignon_agreements
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_factor = 0.06
+				war_support_factor = 0.10
+				conscription_factor = 0.08
+				conscription = 0.005
+				army_core_defence_factor = 0.06
+				agency_upgrade_time = -0.15
+				intel_network_gain_factor = 0.20
+				intelligence_agency_defense = 1.5
+				operative_slot = 1
+			}
+		}
+		
 		SLO_minority_rights_ensured_idea_1 = {
 			removal_cost = -1
 

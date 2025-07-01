@@ -94,4 +94,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/propaganda/SLO_salute_the_founder_of_the_empire.dds"
 		noOfFrames = 5
 	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_this_is_what_will_happen_to_the_fascist_beast"
+		texturefile = "gfx/interface/propaganda/SLO_this_is_what_will_happen_to_the_fascist_beast.dds"
+		noOfFrames = 5
+	}
 }

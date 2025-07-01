@@ -506,14 +506,14 @@ SLO_propaganda_decision_category = {
 		modifier = {
 			fascism_drift = -0.03
 			war_support_factor = 0.10
-			max_dig_in_factor = 0.30
+			max_dig_in_factor = 0.20
 			army_org_factor = 0.04
 		}
 
 		targeted_modifier = {
 			tag = GER
 			attack_bonus_against = 0.05
-			defense_bonus_against = 0.15
+			defense_bonus_against = 0.10
 		}
 		
 		complete_effect = {
@@ -565,13 +565,13 @@ SLO_propaganda_decision_category = {
 		modifier = {
 			fascism_drift = -0.03
 			war_support_factor = 0.10
-			army_speed_factor = 0.10
+			army_speed_factor = 0.08
 		}
 
 		targeted_modifier = {
 			tag = GER
-			attack_bonus_against = 0.15
-			breakthrough_bonus_against = 0.15
+			attack_bonus_against = 0.08
+			breakthrough_bonus_against = 0.10
 		}
 		
 		complete_effect = {
@@ -975,6 +975,63 @@ SLO_propaganda_decision_category = {
 
 		remove_effect = {
 			set_variable = { SLO.propaganda_campaign_to_end = 18 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	# This is what will happen to the Fascist beast!
+	SLO_propaganda_campaign_19 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+			has_war_with = GER
+			GER = { has_government = fascism }
+		}
+		
+		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_completed_focus = SLO_the_formation_of_an_anti_german_pact
+			}
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^19
+
+		modifier = {
+			fascism_drift = -0.03
+			war_support_factor = 0.10
+			army_morale_factor = 0.05
+		}
+
+		targeted_modifier = {
+			tag = GER
+			attack_bonus_against = 0.12
+			breakthrough_bonus_against = 0.15
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 19 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 19 }
 			SLO_end_propaganda_campaign = yes
 		}
 	}
@@ -2181,6 +2238,8 @@ SLO_the_slovak_occupation_authority = {
 				compliance > 40
 				resistance < 20
 			}
+			
+			custom_trigger_tooltip = { tooltip = SLO_integrate_state_hyperborea_tt always = yes }
 		}
 
 		visible = {
@@ -3217,7 +3276,7 @@ SLO_towards_a_european_union_decision_category = {
 		visible = {
 		}
 
-		days_remove = 90
+		days_remove = 30
 
 		days_re_enable = 90
 
@@ -3306,6 +3365,63 @@ SLO_towards_a_european_union_decision_category = {
 			annex_country = {
 				target = FROM
 				transfer_troops = yes
+			}
+		}
+	}
+	
+	SLO_europe_invite_country_to_alliance = {
+
+		icon = infiltrate_state
+
+		ai_will_do = {
+			base = 1
+		}
+
+		target_array = global.countries
+
+		target_trigger = {
+#			capital_scope = { is_on_continent = europe }
+			
+			FROM = {
+				has_variable = european_integration_needed
+				NOT = { is_in_faction = yes }
+			}
+		}
+
+		target_root_trigger = {
+			has_completed_focus = SLO_towards_a_european_union
+			is_subject = no
+		}
+
+		allowed = {
+			original_tag = SLO
+		}
+
+		available = {
+			FROM = {
+				has_variable = european_integration_needed
+				NOT = { is_in_faction = yes }
+			}
+		}
+
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		cost = 5
+
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			ROOT = { hidden_effect = { save_event_target_as = alliance_inviter } }
+			
+			FROM = { 
+				country_event = { id = generic.5 hours = 12 }
 			}
 		}
 	}

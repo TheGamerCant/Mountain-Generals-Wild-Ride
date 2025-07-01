@@ -840,7 +840,10 @@ characters = {
 			available  = {
 				OR = {
 					has_government = communism	
-					has_defensive_war = yes
+					AND = {
+						has_defensive_war = yes
+						has_government = democratic
+					}
 				}
 			}
 			traits  = {

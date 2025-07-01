@@ -1989,6 +1989,8 @@ country_event = {
 		set_variable = { SLO.election_frequency = 1095 }
 		set_variable = { SLO.election_frequency_thirds = 365 }
 		set_variable = { SLO.election_frequency_four_fifths = 876 }
+		
+		add_political_power = -10
 	}
 	
 	option = { 

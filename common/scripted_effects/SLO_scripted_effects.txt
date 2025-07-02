@@ -280,6 +280,7 @@ SLO_get_valid_economy_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_nationalisation_of_critical_industries } 
+			NOT = { has_shine_effect_on_focus = SLO_nationalisation_of_critical_industries }
 			has_completed_focus = SLO_towards_a_socialist_economy
 			
 			OR = {
@@ -294,6 +295,7 @@ SLO_get_valid_economy_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_towards_a_socialist_economy } 
+			NOT = { has_shine_effect_on_focus = SLO_towards_a_socialist_economy }
 			
 			OR = {
 				SLO_soc_dems_largest_party_trigger = yes
@@ -308,6 +310,7 @@ SLO_get_valid_economy_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_loosen_union_restrictions } 
+			NOT = { has_shine_effect_on_focus = SLO_loosen_union_restrictions }
 			OR = {
 				has_completed_focus = SLO_towards_a_socialist_economy
 				has_completed_focus = SLO_improve_working_conditions
@@ -327,6 +330,7 @@ SLO_get_valid_economy_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_affordable_urban_housing } 
+			NOT = { has_shine_effect_on_focus = SLO_affordable_urban_housing }
 			OR = {
 				has_completed_focus = SLO_towards_a_socialist_economy
 				has_completed_focus = SLO_improve_working_conditions
@@ -339,6 +343,7 @@ SLO_get_valid_economy_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_expand_the_social_safety_net } 
+			NOT = { has_shine_effect_on_focus = SLO_expand_the_social_safety_net }
 			has_completed_focus = SLO_improve_working_conditions
 			
 			OR = {
@@ -354,6 +359,7 @@ SLO_get_valid_economy_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_improve_working_conditions } 
+			NOT = { has_shine_effect_on_focus = SLO_improve_working_conditions }
 		}
 		
 		add_to_array = { SLO.economy_focuses_array = 6 }		#SLO_improve_working_conditions
@@ -362,6 +368,7 @@ SLO_get_valid_economy_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_ease_of_doing_business_reforms } 
+			NOT = { has_shine_effect_on_focus = SLO_ease_of_doing_business_reforms }
 			has_completed_focus = SLO_cut_import_tariffs
 		}
 		
@@ -370,6 +377,7 @@ SLO_get_valid_economy_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_cut_import_tariffs } 
+			NOT = { has_shine_effect_on_focus = SLO_cut_import_tariffs }
 			has_completed_focus = SLO_cut_bureaucratic_red_tape
 			
 			OR = {
@@ -386,6 +394,7 @@ SLO_get_valid_economy_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_prioritize_small_businesses } 
+			NOT = { has_shine_effect_on_focus = SLO_prioritize_small_businesses }
 			has_completed_focus = SLO_protectionism
 		}
 		
@@ -394,6 +403,7 @@ SLO_get_valid_economy_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_protectionism } 
+			NOT = { has_shine_effect_on_focus = SLO_protectionism }
 			OR = {
 					has_completed_focus = SLO_cut_bureaucratic_red_tape
 					has_completed_focus = SLO_farming_subsidies
@@ -408,7 +418,8 @@ SLO_get_valid_economy_focuses = {
 	
 	if = {
 		limit = { 
-			NOT = { has_completed_focus = SLO_court_foreign_investments } 
+			NOT = { has_completed_focus = SLO_court_foreign_investments }
+			NOT = { has_shine_effect_on_focus = SLO_court_foreign_investments }			
 			OR = {
 				has_completed_focus = SLO_ease_of_doing_business_reforms
 				has_completed_focus = SLO_prioritize_small_businesses
@@ -421,6 +432,7 @@ SLO_get_valid_economy_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_cut_bureaucratic_red_tape } 
+			NOT = { has_shine_effect_on_focus = SLO_cut_bureaucratic_red_tape }
 		}
 		
 		add_to_array = { SLO.economy_focuses_array = 12 }		#SLO_cut_bureaucratic_red_tape
@@ -429,6 +441,7 @@ SLO_get_valid_economy_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_farming_subsidies } 
+			NOT = { has_shine_effect_on_focus = SLO_farming_subsidies }
 			
 			NOT = { SLO_liberals_in_government_trigger = yes }
 		}
@@ -439,6 +452,7 @@ SLO_get_valid_economy_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_expand_arms_exports } 
+			NOT = { has_shine_effect_on_focus = SLO_expand_arms_exports }
 		}
 		
 		add_to_array = { SLO.economy_focuses_array = 14 }		#SLO_expand_arms_exports
@@ -447,6 +461,7 @@ SLO_get_valid_economy_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_strategic_resource_development } 
+			NOT = { has_shine_effect_on_focus = SLO_strategic_resource_development }
 			has_completed_focus = SLO_infrastructure_focus
 		}
 		
@@ -455,6 +470,7 @@ SLO_get_valid_economy_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_infrastructure_focus } 
+			NOT = { has_shine_effect_on_focus = SLO_infrastructure_focus }
 		}
 		
 		add_to_array = { SLO.economy_focuses_array = 16 }		#SLO_infrastructure_focus
@@ -463,6 +479,7 @@ SLO_get_valid_economy_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_new_research_grants } 
+			NOT = { has_shine_effect_on_focus = SLO_new_research_grants }
 			has_completed_focus = SLO_expand_the_university_of_bratislava
 			
 			industrial_complex > 49
@@ -473,6 +490,7 @@ SLO_get_valid_economy_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_expand_the_university_of_bratislava } 
+			NOT = { has_shine_effect_on_focus = SLO_expand_the_university_of_bratislava }
 		}
 		
 		add_to_array = { SLO.economy_focuses_array = 18 }		#SLO_expand_the_university_of_bratislava
@@ -481,6 +499,7 @@ SLO_get_valid_economy_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_corporatist_economics } 
+			NOT = { has_shine_effect_on_focus = SLO_corporatist_economics }
 			
 			OR = {
 				SLO_nationalists_largest_party_trigger = yes
@@ -499,6 +518,7 @@ SLO_get_valid_political_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_ensure_the_seperation_of_church_and_state } 
+			NOT = { has_shine_effect_on_focus = SLO_ensure_the_seperation_of_church_and_state }
 			
 			OR = {
 				SLO_soc_dems_largest_party_trigger = yes
@@ -513,6 +533,7 @@ SLO_get_valid_political_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_centralisation_of_government_bureaucracy } 
+			NOT = { has_shine_effect_on_focus = SLO_centralisation_of_government_bureaucracy }
 			
 			OR = {
 				SLO_soc_dems_largest_party_trigger = yes
@@ -528,6 +549,7 @@ SLO_get_valid_political_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_equal_workplace_laws } 
+			NOT = { has_shine_effect_on_focus = SLO_equal_workplace_laws }
 			has_completed_focus = SLO_promote_womens_equality
 			
 			NOT = {
@@ -541,6 +563,7 @@ SLO_get_valid_political_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_promote_womens_equality } 
+			NOT = { has_shine_effect_on_focus = SLO_promote_womens_equality }
 			
 			NOT = {
 				SLO_nationalists_in_government_trigger = yes
@@ -554,6 +577,7 @@ SLO_get_valid_political_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_expand_the_ministry_of_foreign_affairs } 
+			NOT = { has_shine_effect_on_focus = SLO_expand_the_ministry_of_foreign_affairs }
 		}
 		
 		add_to_array = { SLO.political_focuses_array = 24 }		#SLO_expand_the_ministry_of_foreign_affairs
@@ -561,7 +585,8 @@ SLO_get_valid_political_focuses = {
 	
 	if = {
 		limit = { 
-			NOT = { has_completed_focus = SLO_expand_intelligence_operations } 
+			NOT = { has_completed_focus = SLO_expand_intelligence_operations }
+			NOT = { has_shine_effect_on_focus = SLO_expand_intelligence_operations }			
 			has_completed_focus = SLO_implement_limited_conscription
 			
 			has_dlc = "La Resistance"
@@ -572,6 +597,7 @@ SLO_get_valid_political_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_implement_limited_conscription } 
+			NOT = { has_shine_effect_on_focus = SLO_implement_limited_conscription }
 			has_completed_focus = SLO_slovakia_on_a_war_footing
 			
 			threat > 0.1
@@ -582,6 +608,7 @@ SLO_get_valid_political_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_slovakia_on_a_war_footing } 
+			NOT = { has_shine_effect_on_focus = SLO_slovakia_on_a_war_footing }
 			has_completed_focus = SLO_promotion_of_slovak_nationalism
 		}
 		
@@ -590,6 +617,7 @@ SLO_get_valid_political_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_promotion_of_slovak_nationalism } 
+			NOT = { has_shine_effect_on_focus = SLO_promotion_of_slovak_nationalism }
 		}
 		
 		add_to_array = { SLO.political_focuses_array = 28 }		#SLO_promotion_of_slovak_nationalism
@@ -598,6 +626,7 @@ SLO_get_valid_political_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_a_shining_example_of_european_democracy } 
+			NOT = { has_shine_effect_on_focus = SLO_a_shining_example_of_european_democracy }
 			has_completed_focus = SLO_allow_for_minority_autonomy
 			
 			NOT = { SLO_nationalists_in_government_trigger = yes }
@@ -621,6 +650,7 @@ SLO_get_valid_political_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_allow_for_minority_autonomy } 
+			NOT = { has_shine_effect_on_focus = SLO_allow_for_minority_autonomy }
 			has_completed_focus = SLO_promotion_of_slovak_nationalism
 			
 			NOT = { has_completed_focus = SLO_slovakia_for_the_slovaks }
@@ -648,6 +678,7 @@ SLO_get_valid_political_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_secure_our_south } 
+			NOT = { has_shine_effect_on_focus = SLO_secure_our_south }
 			has_completed_focus = SLO_toe_the_middle_ground
 			
 			is_neighbor_of = HUN
@@ -659,6 +690,7 @@ SLO_get_valid_political_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_toe_the_middle_ground } 
+			NOT = { has_shine_effect_on_focus = SLO_toe_the_middle_ground }
 			has_completed_focus = SLO_promotion_of_slovak_nationalism
 			
 			NOT = { has_completed_focus = SLO_slovakia_for_the_slovaks }
@@ -685,6 +717,7 @@ SLO_get_valid_political_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_attack_non_slovak_parties } 
+			NOT = { has_shine_effect_on_focus = SLO_attack_non_slovak_parties }
 			has_completed_focus = SLO_slovakia_for_the_slovaks
 			
 			OR = {
@@ -706,6 +739,7 @@ SLO_get_valid_political_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_slovakia_for_the_slovaks } 
+			NOT = { has_shine_effect_on_focus = SLO_slovakia_for_the_slovaks }
 			has_completed_focus = SLO_promotion_of_slovak_nationalism
 			
 			NOT = { has_completed_focus = SLO_allow_for_minority_autonomy }
@@ -731,6 +765,7 @@ SLO_get_valid_political_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_continue_the_policies_of_land_reform } 
+			NOT = { has_shine_effect_on_focus = SLO_continue_the_policies_of_land_reform }
 			
 			SLO_conservatives_in_government_trigger = yes
 		}
@@ -741,6 +776,7 @@ SLO_get_valid_political_focuses = {
 	if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_form_the_hlinkas_guard } 
+			NOT = { has_shine_effect_on_focus = SLO_form_the_hlinkas_guard }
 			has_completed_focus = SLO_enforce_cultural_media_standards
 			
 			OR = {
@@ -755,6 +791,7 @@ SLO_get_valid_political_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_enforce_cultural_media_standards } 
+			NOT = { has_shine_effect_on_focus = SLO_enforce_cultural_media_standards }
 			has_completed_focus = SLO_mandate_christianity_in_schools
 			
 			OR = {
@@ -769,6 +806,7 @@ SLO_get_valid_political_focuses = {
 	else_if = {
 		limit = { 
 			NOT = { has_completed_focus = SLO_mandate_christianity_in_schools } 
+			NOT = { has_shine_effect_on_focus = SLO_mandate_christianity_in_schools }
 			
 			OR = {
 				SLO_nationalists_largest_party_trigger = yes

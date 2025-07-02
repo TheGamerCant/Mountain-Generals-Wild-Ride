@@ -935,6 +935,6 @@
  SLO_party_to_add_popularity_to_6_tt:0 "$SLO_party_to_add_popularity_to_non_aligned_other_tt$"
  
  SLO_focus_is_underway_tt:0 "Progress: §Y[?SLO_focus_underway_flag:days]§!/105 days"
- SLO_focus_can_only_be_completed_by_legislature_tt:0 "This focus can only be completed by parliament."
+ SLO_focus_can_only_be_completed_by_legislature_tt:0 "This focus can only be selected if the player has not completed another focus within §Y420§! days, otherwise this focus can only be completed by parliament."
  
  SLO_has_held_an_election_flag:0 "Has held an election."

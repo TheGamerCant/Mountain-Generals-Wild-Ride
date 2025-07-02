@@ -621,6 +621,8 @@ country_event = {
 			limit = { has_idea = SLO_unclear_ideology_idea }
 			remove_ideas = SLO_unclear_ideology_idea
 		}
+		
+		hidden_effect = { country_event = { id = slovakia.42 } }
 	}
 }
 
@@ -784,6 +786,7 @@ country_event = {
 			limit = {  
 				NOT = { has_idea = SLO_skoda_works_1 }
 				NOT = { has_idea = SLO_skoda_works_2 }
+				NOT = { has_idea = SLO_skoda_works_3 }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -1510,6 +1513,32 @@ country_event = {
 		}	
 		
 		add_political_power = 75
+	}
+}
+
+#Democracy mechanics explainer
+country_event = {
+	id = slovakia.42
+	title = slovakia.42.title
+	desc = slovakia.42.desc
+	is_triggered_only = yes
+
+	option = { 
+		name = slovakia.42.a
+		ai_chance = {
+			base = 10
+		}	
+		
+		add_political_power = 1
+	}
+	
+	option = { 
+		name = slovakia.42.b
+		ai_chance = {
+			base = 10
+		}	
+		
+		add_political_power = -1
 	}
 }
 

@@ -3276,9 +3276,9 @@ SLO_towards_a_european_union_decision_category = {
 		visible = {
 		}
 
-		days_remove = 30
+		days_remove = 90
 
-		days_re_enable = 90
+		days_re_enable = 30
 
 		cost = 25
 
@@ -3423,6 +3423,120 @@ SLO_towards_a_european_union_decision_category = {
 			FROM = { 
 				country_event = { id = generic.5 hours = 12 }
 			}
+		}
+	}
+	
+	SLO_europe_anti_fascist_raids = {
+
+		ai_will_do = {
+			base = 10
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		state_target = yes
+
+		targets = { 51 50 52 58 64 63 66 69 4 159 2 117 763 }
+		
+		available = {
+			FROM = { is_core_of = SLO }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_crack_down_on_former_regime_officials
+			FROM = { is_core_of = SLO }
+		}
+		
+		fire_only_once = yes
+
+		cost = 50
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			FROM = {
+				if = {
+					limit = { has_variable = name_token }
+					set_temp_variable = { fascist_support = party_popularity^5 }
+					multiply_temp_variable = { fascist_support = -0.20 }
+					
+					meta_effect = {
+						text = {
+							set_variable = { party = [PARTY_VAR] }
+							set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+							STATE_add_party_support = yes
+						}
+						
+						VALUE_VAR = "[?fascist_support|3]"
+						PARTY_VAR = "5"
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+		}
+	}
+	
+	SLO_europe_anti_communist_raids = {
+
+		ai_will_do = {
+			base = 10
+		}
+		
+		icon = generic_form_nation
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		state_target = yes
+
+		targets = { 206 202 221 137 192 213 195 219 218 229 232 217 252 651 214 }
+		
+		available = {
+			FROM = { is_core_of = SLO }
+		}
+		
+		visible = { 
+			has_completed_focus = SLO_crack_down_on_former_regime_officials
+			FROM = { is_core_of = SLO }
+		}
+		
+		fire_only_once = yes
+
+		cost = 50
+
+		modifier = {
+		}
+		
+		complete_effect = {
+			FROM = {
+				if = {
+					limit = { has_variable = name_token }
+					set_temp_variable = { communist_support = party_popularity^0 }
+					multiply_temp_variable = { communist_support = -0.20 }
+					
+					meta_effect = {
+						text = {
+							set_variable = { party = [PARTY_VAR] }
+							set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+							STATE_add_party_support = yes
+						}
+						
+						VALUE_VAR = "[?communist_support|3]"
+						PARTY_VAR = "0"
+					}
+				}
+			}
+		}
+
+		remove_effect = {
 		}
 	}
 

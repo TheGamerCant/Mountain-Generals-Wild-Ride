@@ -58,6 +58,10 @@
  SLO_europe_annex_country_tt:0 "Has sufficiently integrated §Y[FROM.GetName]§! into the European project. Current integration: §Y[?FROM.european_integration|.0]§! / [?FROM.european_integration_needed|.0]"
  SLO_europe_invite_country_to_alliance:0 "Invite [FROM.GetName] to the [SLO.GetFactionName]"
  SLO_europe_invite_country_to_alliance_desc:0 ""
+ SLO_europe_anti_fascist_raids:0 "Anti-Fascist raids in [?FROM.name_token.GetTokenLocalizedKey]"
+ SLO_europe_anti_fascist_raids_desc:0 ""
+ SLO_europe_anti_communist_raids:0 "Anti-Soviet raids in [?FROM.name_token.GetTokenLocalizedKey]"
+ SLO_europe_anti_communist_raids_desc:0 ""
  
  SLO_europe_core_region_100:0 "Integrate §Y[?100.name_token.GetTokenLocalizedKey]§!"
  SLO_europe_core_region_178:0 "Integrate §Y[?178.name_token.GetTokenLocalizedKey]§!"

@@ -1312,5 +1312,194 @@ ideas = {
 				guarantee_tension = -0.5
 			}
 		}
+		
+		SLO_europe_bloated_bureaucracy_idea_1 = {
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_cost = 0.45
+				research_speed_factor = -0.15
+				conscription_factor = -0.30
+				resistance_growth = 0.24
+			}
+		}
+		
+		SLO_europe_bloated_bureaucracy_idea_2 = {
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_cost = 0.30
+				research_speed_factor = -0.10
+				conscription_factor = -0.20
+				resistance_growth = 0.16
+			}
+		}
+		
+		SLO_europe_bloated_bureaucracy_idea_3 = {
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_cost = 0.15
+				research_speed_factor = -0.05
+				conscription_factor = -0.10
+				resistance_growth = 0.08
+			}
+		}
+		
+		SLO_europe_ineffective_military_idea_1 = {
+			removal_cost = -1
+
+			picture = generic_army_problems
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = -0.12
+				army_defence_factor = -0.12
+				army_morale_factor = -0.12
+				max_planning_factor = -0.24
+				experience_gain_army_factor = -0.30
+				experience_gain_navy_factor = -0.30
+				experience_gain_air_factor = -0.30
+			}
+		}
+		
+		SLO_europe_ineffective_military_idea_2 = {
+			removal_cost = -1
+
+			picture = generic_army_problems
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = -0.08
+				army_defence_factor = -0.08
+				army_morale_factor = -0.08
+				max_planning_factor = -0.16
+				experience_gain_army_factor = -0.20
+				experience_gain_navy_factor = -0.20
+				experience_gain_air_factor = -0.20
+			}
+		}
+		
+		SLO_europe_ineffective_military_idea_3 = {
+			removal_cost = -1
+
+			picture = generic_army_problems
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = -0.04
+				army_defence_factor = -0.04
+				army_morale_factor = -0.04
+				max_planning_factor = -0.08
+				experience_gain_army_factor = -0.10
+				experience_gain_navy_factor = -0.10
+				experience_gain_air_factor = -0.10
+			}
+		}
+		
+		SLO_europe_sluggish_economy_idea_1 = {
+			removal_cost = -1
+
+			picture = SPA_recovering_from_the_civil_war
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.45
+				production_speed_buildings_factor = -0.30
+				industrial_capacity_factory = -0.30
+				industrial_capacity_dockyard = -0.30
+			}
+		}
+		
+		SLO_europe_sluggish_economy_idea_2 = {
+			removal_cost = -1
+
+			picture = SPA_recovering_from_the_civil_war
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.30
+				production_speed_buildings_factor = -0.20
+				industrial_capacity_factory = -0.20
+				industrial_capacity_dockyard = -0.20
+			}
+		}
+		
+		SLO_europe_sluggish_economy_idea_3 = {
+			removal_cost = -1
+
+			picture = SPA_recovering_from_the_civil_war
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.10
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.10
+			}
+		}
 	}
 }

@@ -1833,7 +1833,6 @@ SLO_change_language = {
 					}
 					
 					STATE_ID = "[?v|.0]"
-					debug = yes
 				}
 			}
 			
@@ -1885,7 +1884,6 @@ SLO_change_language = {
 					}
 					
 					STATE_ID = "[?v|.0]"
-					debug = yes
 				}
 			}
 			
@@ -3384,7 +3382,6 @@ SLO_initialise_europe_mechanics = {
 				}
 				
 				STATE_ID = "[?v|.0]"
-				debug = yes
 			}
 		}
 		
@@ -3406,7 +3403,6 @@ SLO_initialise_europe_mechanics = {
 				}
 				
 				STATE_ID = "[?v|.0]"
-				debug = yes
 			}
 		}
 		
@@ -3903,7 +3899,6 @@ SLO_update_GFX_SLO_to_Europe = {
 				}
 				
 				STATE_ID = "[?v|.0]"
-				debug = yes
 			}
 		}
 		
@@ -3925,7 +3920,6 @@ SLO_update_GFX_SLO_to_Europe = {
 				}
 				
 				STATE_ID = "[?v|.0]"
-				debug = yes
 			}
 		}
 		
@@ -3942,11 +3936,12 @@ SLO_get_states_to_campaign_in = {
 	clear_array = SLO.selected_states_for_campaigns
 	resize_array = { array = SLO.selected_states_for_campaigns size = 7 value = 0 }
 	
+	#Get states for each party
 	for_loop_effect = {
 		end = 7
 		value = v
 		
-		#Pick 10 random states from SLO.election_states
+		#Pick 10 random states from SLO.election_states, if there aren't 10 states the value will be will be set to 0
 		clear_array = states_array
 		resize_array = { array = states_array size = 10 value = 0 }
 		clear_array = state_weights_array
@@ -3999,7 +3994,7 @@ SLO_get_states_to_campaign_in = {
 		}
 		
 		#We now have our states - get the weights
-		#Set the weights to their seat count
+		#Set the weights to their seat count multiplied by our parties popularity in that state - the larger the party support in a state, the more effective the campaign will be
 		
 		set_variable = { index = 0 }
 		
@@ -4007,6 +4002,11 @@ SLO_get_states_to_campaign_in = {
 			array = states_array
 				
 			set_variable = { PREV.state_weights_array^PREV.index = THIS.seat_count }
+			multiply_variable = { PREV.state_weights_array^PREV.index = THIS.party_popularity^PREV.index }
+			divide_variable = { PREV.state_weights_array^PREV.index = 10 }
+			round_variable = PREV.state_weights_array^PREV.index
+			
+			#log = "[?PREV.state_weights_array^PREV.index]"
 			
 			add_to_variable = { PREV.index = 1 }
 		}

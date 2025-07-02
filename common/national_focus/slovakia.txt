@@ -878,7 +878,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.06 }
 			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = -0.10 }
-			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.10 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.06 }
 			
 			custom_effect_tooltip = SLO_mass_production_tt
 			
@@ -1260,7 +1260,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SLO_army_dm_training_time_army_factor = 0.25 }
 			add_to_variable = { SLO_army_dm_minimum_training_level = 0.10 }
-			add_to_variable = { SLO_army_dm_army_defence_factor = 0.08 }
+			add_to_variable = { SLO_army_dm_army_defence_factor = 0.05 }
 			add_to_variable = { SLO_army_dm_army_attack_factor = 0.05 }
 			add_to_variable = { SLO_army_dm_army_morale_factor = 0.05 }
 			custom_effect_tooltip = SLO_longer_training_programs_tt
@@ -1322,7 +1322,7 @@ focus_tree = {
 		completion_reward = {			
 			add_to_variable = { SLO_army_dm_conscription_factor = -0.07 }
 			add_to_variable = { SLO_army_dm_max_command_power = 60 }
-			add_to_variable = { SLO_army_dm_experience_gain_army_factor = 0.18 }
+			add_to_variable = { SLO_army_dm_experience_gain_army_factor = 0.12 }
 			add_to_variable = { SLO_army_dm_max_planning_factor = 0.25 }
 			custom_effect_tooltip = SLO_expanded_officer_corps_tt
 		}
@@ -11008,7 +11008,7 @@ focus_tree = {
 		icon = GFX_goal_SLO_towards_a_european_union
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 		
 		prerequisite = { focus = SLO_destroy_the_baltic_dictatorships focus = SLO_topple_the_balkan_monarchies focus = SLO_destroy_communist_tyranny focus = SLO_topple_european_fascism }
 		relative_position_id = SLO_to_liberate_europe
@@ -11068,6 +11068,371 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			unlock_decision_category_tooltip = SLO_towards_a_european_union_decision_category
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_ideas = SLO_europe_bloated_bureaucracy_idea_1
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_ideas = SLO_europe_ineffective_military_idea_1
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_ideas = SLO_europe_sluggish_economy_idea_1
+		}
+	}
+	
+	focus = {	
+		id = SLO_create_the_european_central_bank
+		icon = GFX_focus_generic_improve_the_administration
+		x = -2
+		y = 1
+		cost = 8
+		
+		prerequisite = { focus = SLO_towards_a_european_union }
+		relative_position_id = SLO_towards_a_european_union
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SLO_europe_sluggish_economy_idea_1
+					add_idea = SLO_europe_sluggish_economy_idea_2
+				}
+			}
+			hidden_effect = {
+				SLO_decrease_sluggish_economy = yes
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_expand_the_euro
+		icon = GFX_goal_SLO_expand_the_euro
+		x = -1
+		y = 1
+		cost = 8
+		
+		prerequisite = { focus = SLO_create_the_european_central_bank }
+		relative_position_id = SLO_create_the_european_central_bank
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SLO_europe_sluggish_economy_idea_2
+					add_idea = SLO_europe_sluggish_economy_idea_3
+				}
+			}
+			hidden_effect = {
+				SLO_decrease_sluggish_economy = yes
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_country = {
+				limit = { OR = { tag = SLO is_in_faction_with = SLO } }
+				add_political_power = 50
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_invest_in_european_factories
+		icon = GFX_focus_generic_industry_3
+		x = 1
+		y = 1
+		cost = 10
+		
+		prerequisite = { focus = SLO_expand_the_euro }
+		relative_position_id = SLO_expand_the_euro
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				remove_ideas = SLO_europe_sluggish_economy_idea_3
+			}
+			hidden_effect = {
+				SLO_decrease_sluggish_economy = yes
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_european_central_command
+		icon = GFX_focus_GER_demonstration_of_military_achievements
+		x = 2
+		y = 1
+		cost = 8
+		
+		prerequisite = { focus = SLO_towards_a_european_union }
+		relative_position_id = SLO_towards_a_european_union
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SLO_europe_ineffective_military_idea_1
+					add_idea = SLO_europe_ineffective_military_idea_2
+				}
+			}
+			hidden_effect = {
+				SLO_decrease_ineffective_military = yes
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_joint_military_drills
+		icon = GFX_focus_generic_tank_air_support
+		x = 1
+		y = 1
+		cost = 8
+		
+		prerequisite = { focus = SLO_european_central_command }
+		relative_position_id = SLO_european_central_command
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SLO_europe_ineffective_military_idea_2
+					add_idea = SLO_europe_ineffective_military_idea_3
+				}
+			}
+			hidden_effect = {
+				SLO_decrease_ineffective_military = yes
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			army_experience = 20
+			air_experience = 20
+			navy_experience = 20
+		}
+	}
+	
+	focus = {	
+		id = SLO_merge_the_military_industries
+		icon = GFX_focus_SOV_merge_plants
+		x = -1
+		y = 1
+		cost = 10
+		
+		prerequisite = { focus = SLO_joint_military_drills }
+		relative_position_id = SLO_joint_military_drills
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				remove_ideas = SLO_europe_ineffective_military_idea_3
+			}
+			hidden_effect = {
+				SLO_decrease_ineffective_military = yes
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 4
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_crack_down_on_former_regime_officials
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = 0
+		y = 1
+		cost = 6
+		
+		prerequisite = { focus = SLO_towards_a_european_union }
+		relative_position_id = SLO_towards_a_european_union
+
+		available = {
+			OR = {
+				ITA = { has_capitulated = yes }
+				GER = { has_capitulated = yes }
+				SOV = { has_capitulated = yes }
+				
+				2 = { OWNER = { OR = { is_in_faction_with = SLO tag = SLO } } }
+				64 = { OWNER = { OR = { is_in_faction_with = SLO tag = SLO } } }
+				219 = { OWNER = { OR = { is_in_faction_with = SLO tag = SLO } } }
+			}
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = SLO_crack_down_on_former_regime_officials_tt
+			
+			add_political_power = 100
+		}
+	}
+	
+	focus = {	
+		id = SLO_ensure_a_loyal_bureaucracy
+		icon = GFX_focus_generic_court
+		x = -1
+		y = 1
+		cost = 8
+		
+		prerequisite = { focus = SLO_crack_down_on_former_regime_officials }
+		relative_position_id = SLO_crack_down_on_former_regime_officials
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SLO_europe_bloated_bureaucracy_idea_1
+					add_idea = SLO_europe_bloated_bureaucracy_idea_2
+				}
+			}
+			hidden_effect = {
+				SLO_decrease_bloated_bureaucracy = yes
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_standardise_government_insitutions
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 1
+		cost = 8
+		
+		prerequisite = { focus = SLO_crack_down_on_former_regime_officials }
+		relative_position_id = SLO_crack_down_on_former_regime_officials
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SLO_europe_bloated_bureaucracy_idea_1
+					add_idea = SLO_europe_bloated_bureaucracy_idea_2
+				}
+			}
+			hidden_effect = {
+				SLO_decrease_bloated_bureaucracy = yes
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_expand_the_powers_of_the_european_parliament
+		icon = GFX_goal_SLO_expand_the_powers_of_the_european_parliament
+		x = 1
+		y = 1
+		cost = 10
+		
+		prerequisite = { focus = SLO_ensure_a_loyal_bureaucracy }
+		prerequisite = { focus = SLO_standardise_government_insitutions }
+		relative_position_id = SLO_ensure_a_loyal_bureaucracy
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				remove_ideas = SLO_europe_bloated_bureaucracy_idea_3
+			}
+			hidden_effect = {
+				SLO_decrease_bloated_bureaucracy = yes
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = 100
+			add_stability = -0.05
 		}
 	}
 	

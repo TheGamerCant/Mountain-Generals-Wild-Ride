@@ -1882,7 +1882,7 @@ guiTypes = {
 			position = {x = 30 y = 148 }
 			name = "historical_text"
 			font = "hoi_24header"
-			maxWidth = 370
+			maxWidth = 420
 			maxHeight = 16
 			text = "FE_HISTORICAL"
 			pdx_tooltip = "FE_HISTORICAL_TOOLTIP"

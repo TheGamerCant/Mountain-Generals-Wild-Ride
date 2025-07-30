@@ -857,6 +857,10 @@ SLO_select_next_democratic_focus = {
 		else_if = {
 			limit = { is_in_array = { array = SLO.economy_focuses_array value = 14 } }
 			set_variable = { SLO.focus_to_pick = 14 }
+		}#Also do cut bureaucratic red tape
+		else_if = {
+			limit = { is_in_array = { array = SLO.economy_focuses_array value = 12 } }
+			set_variable = { SLO.focus_to_pick = 12 }
 		}
 		else = {
 			set_temp_variable_to_random = {
@@ -1011,13 +1015,14 @@ SLO_remove_church_power_ideas = {
 
 COUNTRY_get_country_integration_level = {
 	set_variable = { THIS.european_integration_needed = THIS.num_of_factories }
-	divide_variable = { THIS.european_integration_needed = 20 }					#20 factories -> 1 european integration point
+	divide_variable = { THIS.european_integration_needed = 20 }					#20 factories -> 1 European integration point
 	set_variable = { european_integration_needed_manpower = deployed_army_manpower_k }
 	add_to_variable = { european_integration_needed_manpower = deployed_navy_manpower_k }
 	add_to_variable = { european_integration_needed_manpower = deployed_airforce_manpower_k }
-	divide_variable = { european_integration_needed_manpower = 200 }			#200k manpower -> 1 european integration point
+	divide_variable = { european_integration_needed_manpower = 200 }			#200k manpower -> 1 European integration point
 	add_to_variable = { THIS.european_integration_needed = european_integration_needed_manpower }
 	clear_variable = european_integration_needed_manpower
+	multiply_variable = { THIS.european_integration_needed = 0.9 }			#Times by 0.9 because I'm nice like that
 	round_variable = THIS.european_integration_needed
 	add_to_variable = { THIS.european_integration_needed = 1 }
 }

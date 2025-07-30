@@ -392,10 +392,10 @@ focus_tree = {
 			hidden_trigger = {
 				OR = {
 					has_completed_focus = SLO_a_based_slovakia
-					has_completed_focus = SLO_strong_leader_strong_slovakia
+#					has_completed_focus = SLO_strong_leader_strong_slovakia
 					has_completed_focus = SLO_a_democracy_if_you_can_keep_it
 					has_completed_focus = SLO_a_shining_city_for_all_to_see
-					has_completed_focus = SLO_the_workers_paradise
+#					has_completed_focus = SLO_the_workers_paradise
 					has_completed_focus = SLO_the_black_spot_of_europe
 					has_completed_focus = SLO_socialism_above_all
 				}
@@ -3739,7 +3739,7 @@ focus_tree = {
 		cost = 3
 		prerequisite = {
 			focus = SLO_a_based_slovakia
-			focus = SLO_strong_leader_strong_slovakia
+#			focus = SLO_strong_leader_strong_slovakia
 		}
 
 		available = {
@@ -6056,33 +6056,33 @@ focus_tree = {
 		}
 	}
 	
-	focus = {	
-		id = SLO_strong_leader_strong_slovakia
-		icon = GFX_
-		x = 80
-		y = 0
-		cost = 2
-		
-
-		available = {
-			hidden_trigger = {
-				always = no
-			}
-		}
-		
-		bypass = {
-		}
-		
-
-		completion_reward = {
-			hidden_effect = {
-				set_politics = {
-					ruling_party = fascism
-					elections_allowed = no
-				}
-			}
-		}
-	}
+#	focus = {	
+#		id = SLO_strong_leader_strong_slovakia
+#		icon = GFX_
+#		x = 80
+#		y = 0
+#		cost = 2
+#		
+#
+#		available = {
+#			hidden_trigger = {
+#				always = no
+#			}
+#		}
+#		
+#		bypass = {
+#		}
+#		
+#
+#		completion_reward = {
+#			hidden_effect = {
+#				set_politics = {
+#					ruling_party = fascism
+#					elections_allowed = no
+#				}
+#			}
+#		}
+#	}
 	
 	focus = {	
 		id = SLO_a_democracy_if_you_can_keep_it
@@ -9293,15 +9293,11 @@ focus_tree = {
 				limit = { NOT = { check_variable = { SLO.focus_to_pick = 28 } } has_shine_effect_on_focus = SLO_promotion_of_slovak_nationalism }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
-				
-				custom_effect_tooltip = generic_skip_one_line_tt
-				
-				add_political_power = -50
 			}
 			else = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				
-				add_political_power = 50
+				add_political_power = 100
 			}
 		}
 	}
@@ -10871,8 +10867,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			SLO_unlock_new_propaganda_slot = yes
-			
-			hidden_effect = { SLO_unlock_new_propaganda_slot = yes }		#Give them two off the bat
 		}
 	}
 	
@@ -11512,6 +11506,10 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			add_ideas = SLO_europe_sluggish_economy_idea_1
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_unlock_new_propaganda_slot = yes
 		}
 	}
 	
@@ -11868,43 +11866,43 @@ focus_tree = {
 		}
 	}
 	
-	focus = {	
-		id = SLO_the_workers_paradise
-		icon = GFX_
-		x = 140
-		y = 0
-		cost = 2
-		
-
-		available = {
-			hidden_trigger = {
-				always = no
-			}
-		}
-		
-		bypass = {
-		}
-		
-
-		completion_reward = {
-			hidden_effect = {
-				add_country_leader_role = {
-					character = SLO_mountain_general
-					promote_leader = yes
-					country_leader = {
-						ideology = anti_revisionism
-						traits = { the_slovakian_napoleon the_man_behind_the_mask warmonger }
-					}
-				}
-				
-				set_politics = {
-					ruling_party = communism
-					elections_allowed = yes
-					election_frequency = 48
-				}
-			}
-		}
-	}
+#	focus = {	
+#		id = SLO_the_workers_paradise
+#		icon = GFX_
+#		x = 140
+#		y = 0
+#		cost = 2
+#		
+#
+#		available = {
+#			hidden_trigger = {
+#				always = no
+#			}
+#		}
+#		
+#		bypass = {
+#		}
+#		
+#
+#		completion_reward = {
+#			hidden_effect = {
+#				add_country_leader_role = {
+#					character = SLO_mountain_general
+#					promote_leader = yes
+#					country_leader = {
+#						ideology = anti_revisionism
+#						traits = { the_slovakian_napoleon the_man_behind_the_mask warmonger }
+#					}
+#				}
+#				
+#				set_politics = {
+#					ruling_party = communism
+#					elections_allowed = yes
+#					election_frequency = 48
+#				}
+#			}
+#		}
+#	}
 	
 	focus = {	
 		id = SLO_the_black_spot_of_europe

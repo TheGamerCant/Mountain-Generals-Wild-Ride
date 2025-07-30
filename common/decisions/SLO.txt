@@ -24,7 +24,7 @@ SLO_propaganda_decision_category = {
 		visible = { 
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
-				NOT = { has_government = fascism } 
+				NOT = { has_completed_focus = SLO_a_based_slovakia } 
 			}
 		}
 
@@ -76,7 +76,8 @@ SLO_propaganda_decision_category = {
 		visible = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
-				has_government = communism
+				has_completed_focus = SLO_the_black_spot_of_europe
+				has_completed_focus = SLO_socialism_above_all
 			}
 		}
 
@@ -126,7 +127,8 @@ SLO_propaganda_decision_category = {
 		visible = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
-				has_government = communism
+				has_completed_focus = SLO_the_black_spot_of_europe
+				has_completed_focus = SLO_socialism_above_all
 			}
 		}
 
@@ -177,7 +179,9 @@ SLO_propaganda_decision_category = {
 		visible = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
-				has_government = fascism
+				has_completed_focus = SLO_a_based_slovakia
+				has_completed_focus = SLO_a_democracy_if_you_can_keep_it
+				has_completed_focus = SLO_socialism_above_all
 			}
 		}
 
@@ -345,8 +349,8 @@ SLO_propaganda_decision_category = {
 		visible = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
-				has_government = fascism
-				has_government = neutrality
+				has_completed_focus = SLO_a_based_slovakia
+				has_completed_focus = SLO_a_democracy_if_you_can_keep_it
 			}
 		}
 
@@ -489,10 +493,12 @@ SLO_propaganda_decision_category = {
 		}
 		
 		visible = {
-			OR={
-				has_country_flag = SLO_all_propaganda_available_flag
-				has_completed_focus = SLO_consolidation_of_the_regime
-				has_completed_focus = SLO_pre_emptive_measures
+			if = {
+				limit = { has_completed_focus = SLO_a_based_slovakia }
+				OR={
+					has_country_flag = SLO_all_propaganda_available_flag
+					has_completed_focus = SLO_consolidation_of_the_regime
+				}
 			}
 		}
 
@@ -547,10 +553,12 @@ SLO_propaganda_decision_category = {
 		}
 		
 		visible = {
-			OR={
-				has_country_flag = SLO_all_propaganda_available_flag
-				has_completed_focus = SLO_consolidation_of_the_regime
-				has_completed_focus = SLO_pre_emptive_measures
+			if = {
+				limit = { has_completed_focus = SLO_a_based_slovakia }
+				OR={
+					has_country_flag = SLO_all_propaganda_available_flag
+					has_completed_focus = SLO_consolidation_of_the_regime
+				}
 			}
 		}
 
@@ -605,8 +613,8 @@ SLO_propaganda_decision_category = {
 		visible = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
-				has_government = neutrality
-				has_government = fascism
+				has_completed_focus = SLO_a_based_slovakia
+				has_completed_focus = SLO_a_democracy_if_you_can_keep_it
 			}
 		}
 
@@ -652,10 +660,12 @@ SLO_propaganda_decision_category = {
 		}
 		
 		visible = {
-			OR={
-				has_country_flag = SLO_all_propaganda_available_flag
-				has_completed_focus = SLO_news_of_our_victories
-				has_completed_focus = SLO_pre_emptive_measures
+			if = {
+				limit = { has_completed_focus = SLO_a_based_slovakia }
+				OR={
+					has_country_flag = SLO_all_propaganda_available_flag
+					has_completed_focus = SLO_news_of_our_victories
+				}
 			}
 		}
 
@@ -706,10 +716,7 @@ SLO_propaganda_decision_category = {
 		visible = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
-				AND = {
-					has_completed_focus = SLO_the_teachings_of_mountain_general
-					has_government = fascism
-				}
+				has_completed_focus = SLO_the_teachings_of_mountain_general
 			}
 		}
 
@@ -1566,7 +1573,7 @@ SLO_the_slovak_occupation_authority = {
 		complete_effect = {
 			hidden_effect = {
 				every_state = {
-					limit = { is_core_of = HUN }
+					limit = { is_core_of = HUN NOT = { is_core_of = SLO } }
 					add_core_of = SLH
 				}
 				
@@ -1889,7 +1896,7 @@ SLO_the_slovak_occupation_authority = {
 		complete_effect = {
 			hidden_effect = {
 				every_state = {
-					limit = { is_core_of = CZE }
+					limit = { is_core_of = CZE NOT = { is_core_of = SLO } }
 					add_core_of = SLC
 				}
 				
@@ -3283,7 +3290,7 @@ SLO_towards_a_european_union_decision_category = {
 		cost = 25
 
 		modifier = {
-			political_power_cost = 0.20
+			political_power_cost = 0.05
 		}
 
 		complete_effect = {
@@ -3380,11 +3387,15 @@ SLO_towards_a_european_union_decision_category = {
 		target_array = global.countries
 
 		target_trigger = {
-#			capital_scope = { is_on_continent = europe }
+#			capital_scope = { is_on_continent = europe }		#Turkey's capital is Ankara
 			
 			FROM = {
 				has_variable = european_integration_needed
 				NOT = { is_in_faction = yes }
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
 			}
 		}
 
@@ -3432,7 +3443,7 @@ SLO_towards_a_european_union_decision_category = {
 			base = 10
 		}
 		
-		icon = generic_form_nation
+		icon = generic_arrest
 		
 		allowed = { 
 			original_tag = SLO
@@ -3453,7 +3464,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 50
+		cost = 25
 
 		modifier = {
 		}
@@ -3489,7 +3500,7 @@ SLO_towards_a_european_union_decision_category = {
 			base = 10
 		}
 		
-		icon = generic_form_nation
+		icon = generic_arrest
 		
 		allowed = { 
 			original_tag = SLO
@@ -3510,7 +3521,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 50
+		cost = 25
 
 		modifier = {
 		}
@@ -3580,7 +3591,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 10
 
 		modifier = {
 		}
@@ -3638,7 +3649,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 10
 
 		modifier = {
 		}
@@ -3701,7 +3712,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 20
 
 		modifier = {
 		}
@@ -3763,7 +3774,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 15
 
 		modifier = {
 		}
@@ -3827,7 +3838,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -3886,7 +3897,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -3949,7 +3960,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 50
 
 		modifier = {
 		}
@@ -4014,7 +4025,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -4079,7 +4090,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 45
 
 		modifier = {
 		}
@@ -4144,7 +4155,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -4209,7 +4220,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -4271,7 +4282,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -4335,7 +4346,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -4400,7 +4411,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -4459,7 +4470,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 20
 
 		modifier = {
 		}
@@ -4519,7 +4530,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 35
 
 		modifier = {
 		}
@@ -4586,7 +4597,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 50
 
 		modifier = {
 		}
@@ -4655,7 +4666,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -4718,7 +4729,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -4785,7 +4796,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -4851,7 +4862,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 45
 
 		modifier = {
 		}
@@ -4907,7 +4918,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -4963,7 +4974,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -5023,7 +5034,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -5084,7 +5095,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 50
 
 		modifier = {
 		}
@@ -5142,7 +5153,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -5202,7 +5213,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -5257,7 +5268,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -5310,7 +5321,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 20
 
 		modifier = {
 		}
@@ -5369,7 +5380,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -5433,7 +5444,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -5501,7 +5512,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -5570,7 +5581,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 45
 
 		modifier = {
 		}
@@ -5630,7 +5641,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 45
 
 		modifier = {
 		}
@@ -5696,7 +5707,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -5765,7 +5776,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -5822,7 +5833,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 20
 
 		modifier = {
 		}
@@ -5893,7 +5904,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 50
 
 		modifier = {
 		}
@@ -5958,7 +5969,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 35
 
 		modifier = {
 		}
@@ -6016,7 +6027,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 25
 
 		modifier = {
 		}
@@ -6082,7 +6093,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -6148,7 +6159,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -6213,7 +6224,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -6275,7 +6286,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -6330,7 +6341,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 25
 
 		modifier = {
 		}
@@ -6395,7 +6406,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 35
 
 		modifier = {
 		}
@@ -6458,7 +6469,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -6519,7 +6530,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 25
 
 		modifier = {
 		}
@@ -6589,7 +6600,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -6653,7 +6664,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 35
 
 		modifier = {
 		}
@@ -6708,7 +6719,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 25
 
 		modifier = {
 		}
@@ -6761,7 +6772,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 10
 
 		modifier = {
 		}
@@ -6820,7 +6831,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 20
 
 		modifier = {
 		}
@@ -6878,7 +6889,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 20
 
 		modifier = {
 		}
@@ -6947,7 +6958,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -7023,7 +7034,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 35
 
 		modifier = {
 		}
@@ -7088,7 +7099,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 15
 
 		modifier = {
 		}
@@ -7167,7 +7178,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -7237,7 +7248,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 20
 
 		modifier = {
 		}
@@ -7308,7 +7319,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -7375,7 +7386,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -7443,7 +7454,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 35
 
 		modifier = {
 		}
@@ -7506,7 +7517,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 25
 
 		modifier = {
 		}
@@ -7579,7 +7590,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 35
 
 		modifier = {
 		}
@@ -7647,7 +7658,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -7715,7 +7726,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -7775,7 +7786,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 20
 
 		modifier = {
 		}
@@ -7835,7 +7846,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 20
 
 		modifier = {
 		}
@@ -7896,7 +7907,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 15
 
 		modifier = {
 		}
@@ -7972,7 +7983,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 50
 
 		modifier = {
 		}
@@ -8062,7 +8073,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 65
 
 		modifier = {
 		}
@@ -8143,7 +8154,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 40
 
 		modifier = {
 		}
@@ -8208,7 +8219,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 35
 
 		modifier = {
 		}
@@ -8272,7 +8283,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -8334,7 +8345,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -8416,7 +8427,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 35
 
 		modifier = {
 		}
@@ -8493,7 +8504,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 30
 
 		modifier = {
 		}
@@ -8560,7 +8571,7 @@ SLO_towards_a_european_union_decision_category = {
 		
 		fire_only_once = yes
 
-		cost = 75
+		cost = 20
 
 		modifier = {
 		}

@@ -875,7 +875,7 @@ characters = {
 				OR = {
 					has_government = democratic
 					has_government = neutrality
-					has_completed_focus = SLO_the_workers_paradise
+#					has_completed_focus = SLO_the_workers_paradise
 				}	
 			}				
 			traits  = {
@@ -910,7 +910,7 @@ characters = {
 				OR = {
 					has_government = democratic
 					has_government = neutrality
-					has_completed_focus = SLO_the_workers_paradise
+#					has_completed_focus = SLO_the_workers_paradise
 				}	
 			}				
 			traits  = {

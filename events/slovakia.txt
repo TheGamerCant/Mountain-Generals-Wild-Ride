@@ -1572,6 +1572,49 @@ country_event = {
 	}
 }
 
+#Daily Ramblings 1
+country_event = {
+	id = slovakia.43
+	title = slovakia.43.title
+	desc = slovakia.43.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_SLO_mg_yapping
+
+	option = { 
+		name = slovakia.43.a
+		ai_chance = {
+			base = 10
+		}	
+		
+		add_political_power = 10
+		
+		hidden_effect = {
+			country_event = { id = slovakia.44 days = 14 }
+		}
+	}
+}
+
+#Daily Ramblings 2
+country_event = {
+	id = slovakia.44
+	title = slovakia.44.title
+	desc = slovakia.44.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_SLO_mg_yapping
+
+	option = { 
+		name = slovakia.44.a
+		ai_chance = {
+			base = 10
+		}	
+		
+		add_political_power = -25
+		add_manpower = -988
+	}
+}
+
 add_namespace = slovakia_elections
 
 #Which party as we campaigning as?

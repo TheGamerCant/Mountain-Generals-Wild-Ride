@@ -3495,6 +3495,8 @@ focus_tree = {
 			
 			add_to_variable = { SLO_army_dm_coordination_bonus = 0.03 }
 			custom_effect_tooltip = SLO_civilian_radios_tt
+			
+			hidden_effect = { country_event = { id = slovakia.43 days = 50 random_days = 20 } }
 		}
 	}
 	

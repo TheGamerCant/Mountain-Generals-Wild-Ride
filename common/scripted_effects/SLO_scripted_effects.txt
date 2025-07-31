@@ -1022,7 +1022,7 @@ COUNTRY_get_country_integration_level = {
 	divide_variable = { european_integration_needed_manpower = 200 }			#200k manpower -> 1 European integration point
 	add_to_variable = { THIS.european_integration_needed = european_integration_needed_manpower }
 	clear_variable = european_integration_needed_manpower
-	multiply_variable = { THIS.european_integration_needed = 0.9 }			#Times by 0.9 because I'm nice like that
+	multiply_variable = { THIS.european_integration_needed = 0.75 }			#Times by 0.75 because I'm nice like that
 	round_variable = THIS.european_integration_needed
 	add_to_variable = { THIS.european_integration_needed = 1 }
 }

@@ -247,7 +247,7 @@ add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_with_n_word_
 add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_cat_idea }
 add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_anime_2_idea }
 add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_hentai_idea }
-add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_tno_idea }
+#add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_tno_idea }
 add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_animated_idea }
 		
 		
@@ -261,7 +261,7 @@ add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_with_n_wor
 add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_cat_idea }
 add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_anime_2_idea }
 add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_hentai_idea }
-add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_tno_idea }
+#add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_tno_idea }
 add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_animated_idea }
 
 
@@ -381,8 +381,8 @@ set_variable = { SLO_army_dm_supply_factor = 0 }
 set_variable = { SLO_army_dm_army_fuel_consumption_factor = 0 }
 set_variable = { SLO_army_dm_production_speed_supply_node_factor = 0 }
 set_variable = { SLO_army_dm_production_speed_rail_way_factor = 0 }
-set_variable = { SLO_army_dm_army_defence_factor = 0 }
-set_variable = { SLO_army_dm_army_attack_factor = 0 }
+set_variable = { SLO_army_dm_army_defence_factor = -0.03 }
+set_variable = { SLO_army_dm_army_attack_factor = -0.03 }
 set_variable = { SLO_army_dm_army_morale_factor = 0 }
 set_variable = { SLO_army_dm_resistance_growth = 0 }
 set_variable = { SLO_army_dm_army_artillery_attack_factor = 0 }
@@ -446,4 +446,5 @@ add_ideas = {
 	SLO_DUMMY_economy_idea
 	SLO_DUMMY_army_idea
 	SLO_DUMMY_air_force_idea
+	SLO_DUMMY_navy_idea
 }

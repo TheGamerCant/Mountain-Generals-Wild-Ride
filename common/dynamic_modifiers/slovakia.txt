@@ -287,3 +287,11 @@ SLO_navy_dynamic_modifier = {
 	naval_speed_factor = SLO_navy_dm_naval_speed_factor
 	navy_org_factor = SLO_navy_dm_navy_org_factor
 }
+
+SLO_new_slovak_state_dynamic_modifier = {
+	icon = GFX_idea_SLO_promote_slovak_nationalism
+	enable = { always = yes }
+	
+	political_power_factor = SLO_nss_dm_political_power_factor
+	political_advisor_cost_factor  = SLO_nss_dm_political_advisor_cost_factor 
+}

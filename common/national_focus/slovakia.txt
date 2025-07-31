@@ -181,15 +181,15 @@ focus_tree = {
 		completion_reward = {
 			70 = {
 				create_unit = {
-					division = "name = \"1. Slovenská Milícia\" division_template = \"Milície\" start_experience_factor = 0.02 start_equipment_factor = 0.4 start_manpower_factor = 1" 
+					division = "name = \"1. Slovenská Milícia\" division_template = \"Milície\" start_experience_factor = 0.02 start_equipment_factor = 0.5 start_manpower_factor = 1" 
 					owner = SLO
 				}
 				create_unit = {
-					division = "name = \"2. Slovenská Milícia\" division_template = \"Milície\" start_experience_factor = 0.02 start_equipment_factor = 0.4 start_manpower_factor = 1" 
+					division = "name = \"2. Slovenská Milícia\" division_template = \"Milície\" start_experience_factor = 0.02 start_equipment_factor = 0.5 start_manpower_factor = 1" 
 					owner = SLO
 				}
 				create_unit = {
-					division = "name = \"3. Slovenská Milícia\" division_template = \"Milície\" start_experience_factor = 0.02 start_equipment_factor = 0.4 start_manpower_factor = 1" 
+					division = "name = \"3. Slovenská Milícia\" division_template = \"Milície\" start_experience_factor = 0.02 start_equipment_factor = 0.5 start_manpower_factor = 1" 
 					owner = SLO
 				}
 			}
@@ -4875,8 +4875,26 @@ focus_tree = {
 		prerequisite = { focus = SLO_news_of_our_victories }
 
 		available = {
-			has_country_flag = SLO_integrated_hungary_flag
-			has_country_flag = SLO_integrated_czechia_flag
+			OR = {
+				has_country_flag = SLO_integrated_hungary_flag
+				has_country_flag = SLO_integrated_czechia_flag
+			}
+			9 = {
+				OWNER = {
+					OR = {
+						original_tag = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+			}
+			43 = {
+				OWNER = {
+					OR = {
+						original_tag = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+			}
 		}
 		
 
@@ -4904,8 +4922,10 @@ focus_tree = {
 		relative_position_id = SLO_slovakia_victorious_on_all_fronts
 		cost = 2
 		prerequisite = {
-			focus = SLO_fearless_commander
-			focus = SLO_great_statesman
+			focus = SLO_the_teachings_of_mountain_general
+		}
+		prerequisite = {
+			focus = SLO_a_portrait_on_every_wall
 		}
 		prerequisite = {
 			focus = SLO_slovakia_victorious_on_all_fronts
@@ -5844,7 +5864,7 @@ focus_tree = {
 		id = SLO_the_scandanavian_spirit
 		icon = GFX_goal_SLO_the_scandanavian_spirit
 		x = 1
-		y = 2
+		y = 4
 		relative_position_id = SLO_the_indominatable_slovak_hyberborean_spirit
 		cost = 8
 		prerequisite = { focus = SLO_the_indominatable_slovak_hyberborean_spirit } 
@@ -5861,6 +5881,11 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_named_threat = {
+				threat = 5
+				name = SLO_the_scandanavian_spirit
+			}
+			
 			if = { 
 				limit = { country_exists = DEN }
 				create_wargoal = {
@@ -5936,7 +5961,7 @@ focus_tree = {
 		id = SLO_the_great_white_north
 		icon = GFX_goal_SLO_the_great_white_north
 		x = -1
-		y = 2
+		y = 4
 		relative_position_id = SLO_the_indominatable_slovak_hyberborean_spirit
 		cost = 8
 		prerequisite = { focus = SLO_the_indominatable_slovak_hyberborean_spirit } 
@@ -5954,6 +5979,11 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_named_threat = {
+				threat = 5
+				name = SLO_the_great_white_north
+			}
+			
 			every_state = {
 				limit = { OR = { state = 332 state = 101 state = 331 state = 730 state = 861 state = 466 state = 860 state = 863 state = 862 state = 468 state = 465 state = 464 state = 276 state = 682 state = 357 state = 866 state = 467 state = 867 state = 469 state = 865 state = 470 state = 683 state = 472 state = 864 state = 473 state = 740 state = 471 state = 739 state = 463 state = 650 } }
 				
@@ -6056,6 +6086,182 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = SLO_destroy_western_degeneracy
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		x = 0
+		y = 1
+		relative_position_id = SLO_the_indominatable_slovak_hyberborean_spirit
+		cost = 8
+		prerequisite = { focus = SLO_the_indominatable_slovak_hyberborean_spirit }
+
+		will_lead_to_war_with = FRA
+		will_lead_to_war_with = ENG
+
+		available = {
+		}
+		
+		bypass = {
+			AND = {
+				OR = {
+					is_in_faction_with = ENG
+					ENG = { is_puppet_of = ROOT }
+					NOT = { country_exists = ENG }
+					has_war_with = ENG
+				}
+				OR = {
+					is_in_faction_with = FRA
+					FRA = { is_puppet_of = ROOT }
+					NOT = { country_exists = FRA }
+					has_war_with = FRA
+				}
+			}
+		}
+
+		completion_reward = {
+			add_named_threat = {
+				threat = 10
+				name = SLO_destroy_western_degeneracy
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			if = { 
+				limit = { NOT = {
+					OR = {
+						is_in_faction_with = ENG
+						ENG = { is_puppet_of = ROOT }
+						NOT = { country_exists = ENG }
+						has_war_with = ENG
+					}
+				} }
+				create_wargoal = {
+					type = take_state_focus
+					target = ENG
+					expire = 0
+					generator = { 126 }
+				}
+			}
+			
+			if = { 
+				limit = { NOT = {
+					OR = {
+						is_in_faction_with = FRA
+						FRA = { is_puppet_of = ROOT }
+						NOT = { country_exists = FRA }
+						has_war_with = FRA
+					}
+				} }
+				create_wargoal = {
+					type = take_state_focus
+					target = FRA
+					expire = 0
+					generator = { 16 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_through_the_benelux
+		icon = GFX_focus_GER_around_maginot
+		x = 0
+		y = 1
+		relative_position_id = SLO_destroy_western_degeneracy
+		cost = 4
+		prerequisite = { focus = SLO_destroy_western_degeneracy }
+
+		will_lead_to_war_with = HOL
+		will_lead_to_war_with = BEL
+		will_lead_to_war_with = LUX
+
+		available = {
+		}
+		
+		bypass = {
+			AND = {
+				OR = {
+					is_in_faction_with = HOL
+					HOL = { is_puppet_of = ROOT }
+					NOT = { country_exists = HOL }
+					has_war_with = HOL
+				}
+				OR = {
+					is_in_faction_with = BEL
+					BEL = { is_puppet_of = ROOT }
+					NOT = { country_exists = BEL }
+					has_war_with = BEL
+				}
+				OR = {
+					is_in_faction_with = LUX
+					LUX = { is_puppet_of = ROOT }
+					NOT = { country_exists = LUX }
+					has_war_with = LUX
+				}
+			}
+		}
+
+		completion_reward = {
+			add_named_threat = {
+				threat = 5
+				name = SLO_through_the_benelux
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			if = { 
+				limit = { NOT = {
+					OR = {
+						is_in_faction_with = HOL
+						HOL = { is_puppet_of = ROOT }
+						NOT = { country_exists = HOL }
+						has_war_with = HOL
+					}
+				} }
+				create_wargoal = {
+					type = take_state_focus
+					target = HOL
+					expire = 0
+					generator = { 7 }
+				}
+			}
+			
+			if = { 
+				limit = { NOT = {
+					OR = {
+						is_in_faction_with = BEL
+						BEL = { is_puppet_of = ROOT }
+						NOT = { country_exists = BEL }
+						has_war_with = BEL
+					}
+				} }
+				create_wargoal = {
+					type = take_state_focus
+					target = HOL
+					expire = 0
+					generator = { 6 }
+				}
+			}
+			
+			if = { 
+				limit = { NOT = {
+					OR = {
+						is_in_faction_with = LUX
+						LUX = { is_puppet_of = ROOT }
+						NOT = { country_exists = LUX }
+						has_war_with = LUX
+					}
+				} }
+				create_wargoal = {
+					type = take_state_focus
+					target = LUX
+					expire = 0
+					generator = { 8 }
+				}
+			}
+		}
+	}
+	
 #	focus = {	
 #		id = SLO_strong_leader_strong_slovakia
 #		icon = GFX_
@@ -6091,7 +6297,6 @@ focus_tree = {
 		y = 0
 		cost = 2
 		
-
 		available = {
 			hidden_trigger = {
 				always = no
@@ -6103,7 +6308,198 @@ focus_tree = {
 		
 
 		completion_reward = {
+			set_variable = { SLO_nss_dm_political_power_factor = 0.05 }
+			set_variable = { SLO_nss_dm_political_advisor_cost_factor = -0.10 }
+		}
+	}
+	
+	focus = {	
+		id = SLO_fire_disloyal_bureaucrats
+		icon = GFX_
+		x = 1
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_a_democracy_if_you_can_keep_it }
+		relative_position_id = SLO_a_democracy_if_you_can_keep_it
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			SLO_stabilise_regime = yes
+		}
+	}
+	
+	focus = {	
+		id = SLO_total_control_over_the_media
+		icon = GFX_
+		x = 1
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_fire_disloyal_bureaucrats }
+		relative_position_id = SLO_fire_disloyal_bureaucrats
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			SLO_stabilise_regime = yes
 			
+			SLO_unlock_new_propaganda_slot = yes
+		}
+	}
+	
+	focus = {	
+		id = SLO_reach_out_to_the_hlinkas_slovak_peoples_party
+		icon = GFX_
+		x = -1
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_a_democracy_if_you_can_keep_it }
+		relative_position_id = SLO_a_democracy_if_you_can_keep_it
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.025
+			}
+		}
+	}
+	
+	
+	focus = {	
+		id = SLO_form_the_mountain_general_guard
+		icon = GFX_
+		x = -1
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_reach_out_to_the_hlinkas_slovak_peoples_party }
+		relative_position_id = SLO_reach_out_to_the_hlinkas_slovak_peoples_party
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_ideas = SLO_mountain_general_guard_idea_1
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_manpower = 15000
+		}
+	}
+	
+	focus = {	
+		id = SLO_bring_the_elites_into_the_fold
+		icon = GFX_
+		x = 0
+		y = 2
+		cost = 5
+		
+		prerequisite = { focus = SLO_a_democracy_if_you_can_keep_it }
+		relative_position_id = SLO_a_democracy_if_you_can_keep_it
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			SLO_stabilise_regime = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {	
+		id = SLO_to_mountain_general
+		icon = GFX_
+		x = 0
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_bring_the_elites_into_the_fold }
+		prerequisite = { focus = SLO_total_control_over_the_media }
+		prerequisite = { focus = SLO_form_the_mountain_general_guard}
+		relative_position_id = SLO_bring_the_elites_into_the_fold
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			hidden_effect = {
+				SLO_stabilise_regime = yes
+				
+				if = {
+					limit = { has_idea = SLO_unclear_ideology_idea_2 }
+					remove_ideas = SLO_unclear_ideology_idea_2
+				}
+				else_if = {
+					limit = { has_idea = SLO_unclear_ideology_idea }
+					remove_ideas = SLO_unclear_ideology_idea
+				}
+			}		
+			effect_tooltip = {
+				remove_ideas = SLO_unstable_regime_idea_4
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				remove_ideas = SLO_unclear_ideology_idea_2
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_the_new_state
+		icon = GFX_
+		x = 0
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_to_mountain_general }
+		relative_position_id = SLO_to_mountain_general
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_dynamic_modifier = { modifier = SLO_new_slovak_state_dynamic_modifier }
 		}
 	}
 	

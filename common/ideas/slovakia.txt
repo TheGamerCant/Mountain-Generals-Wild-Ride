@@ -208,6 +208,7 @@ ideas = {
 				production_speed_buildings_factor = -0.12
 				production_factory_efficiency_gain_factor = -0.15
 				political_power_cost = 0.15
+				research_speed_factor = -0.07
 			}
 		}
 		SLO_DUMMY_army_idea = {
@@ -220,6 +221,8 @@ ideas = {
 				army_org_factor = -0.15
 				training_time_army_factor = 0.25
 				minimum_training_level = -0.08
+				army_attack_factor = -0.03
+				army_defence_factor = -0.03
 			}
 		}
 		SLO_DUMMY_air_force_idea = {
@@ -232,6 +235,18 @@ ideas = {
 				air_ace_generation_chance_factor = 0.20
 				air_manpower_requirement_factor = -0.1
 				air_range_factor = -0.16
+			}
+		}
+		SLO_DUMMY_navy_idea = {
+			removal_cost = -1
+
+			picture = SLO_generic_navy
+			
+			modifier = {
+				industrial_capacity_dockyard = -0.20
+				naval_retreat_chance = 0.25
+				navy_max_range_factor = -0.16
+				naval_torpedo_enemy_critical_chance_factor = 0.20
 			}
 		}
 		
@@ -310,10 +325,10 @@ ideas = {
 			modifier = {
 				coordination_bonus = 0.05
 				army_org_factor = 0.05
-				land_reinforce_rate = 0.02
 				army_armor_attack_factor = 0.10
 				army_armor_defence_factor = 0.05
 				army_attack_factor = 0.06
+				planning_speed = 0.15
 			}
 		}
 		
@@ -353,6 +368,28 @@ ideas = {
 			modifier = {
 				neutrality_drift = -0.03
 				political_power_cost = 0.14
+				stability_factor = -0.05
+			}
+		}	
+		
+		SLO_unclear_ideology_idea_2 = {
+			removal_cost = -1
+
+			picture = SLO_unclear_ideology
+				
+			available = {
+				has_country_leader = {
+					character = SLO_mountain_general
+					ruling_only = yes
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_cost = 0.10
 				stability_factor = -0.05
 			}
 		}	
@@ -1499,6 +1536,25 @@ ideas = {
 				production_speed_buildings_factor = -0.10
 				industrial_capacity_factory = -0.10
 				industrial_capacity_dockyard = -0.10
+			}
+		}
+		
+		SLO_mountain_general_guard_idea_1 = {
+			removal_cost = -1
+
+			picture = SLO_hlinkla_guard
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription = 0.003
+				political_power_gain = 0.05
+				neutrality_drift = 0.03
 			}
 		}
 	}

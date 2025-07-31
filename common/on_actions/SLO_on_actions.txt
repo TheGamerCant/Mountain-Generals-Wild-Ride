@@ -6,6 +6,7 @@ on_actions = {
 					SLO_DUMMY_economy_idea
 					SLO_DUMMY_army_idea
 					SLO_DUMMY_air_force_idea
+					SLO_DUMMY_navy_idea
 				}
 			}
 		}	

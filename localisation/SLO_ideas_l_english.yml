@@ -50,12 +50,16 @@
  SLO_DUMMY_army_idea_desc:0 "$SLO_army_dynamic_modifier_desc$"
  SLO_DUMMY_air_force_idea:0 "$SLO_air_force_dynamic_modifier$"
  SLO_DUMMY_air_force_idea_desc:0 "$SLO_air_force_dynamic_modifier_desc$"
+ SLO_DUMMY_navy_idea:0 "$SLO_river_fleet_dynamic_modifier$"
+ SLO_DUMMY_navy_idea_desc:0 "$SLO_river_fleet_dynamic_modifier_desc$"
  
  SLO_privatisation_of_government_assets_idea:0 "$SLO_privatisation_of_government_assets$"       #From the focus
  SLO_privatisation_of_government_assets_idea_desc:0 "$SLO_privatisation_of_government_assets_desc$"
  
  SLO_unclear_ideology_idea:0 "Unclear Ideology"
  SLO_unclear_ideology_idea_desc:0 "Despite his genius, Mountain General has been obfuscative on the specific ideological tenants of 'Mountain Generalism' so far. For now he does this to maintain a broad tent of support among the populous while the new Slovak government stabilises, but we will have to figure out our nation's path at some point."
+ SLO_unclear_ideology_idea_2:0 "$SLO_unclear_ideology_idea$"
+ SLO_unclear_ideology_idea_2_desc:0 "$SLO_unclear_ideology_idea_desc$"
  
  SLO_unstable_regime_idea_1:0 "Unstable Regime"
  SLO_unstable_regime_idea_1_desc:0 "Mountain General's rapid departure from the previous Czechoslovak norm has not gone unnoticed, many steps will need to be taken to stabilise and centralise the current regime and bring the people in line with Mountain Generalism."
@@ -181,3 +185,9 @@
  SLO_europe_sluggish_economy_idea_2_desc:0 "$SLO_europe_sluggish_economy_idea_1_desc$"
  SLO_europe_sluggish_economy_idea_3:0 "$SLO_europe_sluggish_economy_idea_1$"
  SLO_europe_sluggish_economy_idea_3_desc:0 "$SLO_europe_sluggish_economy_idea_1_desc$"
+
+ SLO_mountain_general_guard_idea_1:0 "Mountain General Guard"
+ SLO_mountain_general_guard_idea_1_desc:0 ""
+ 
+ SLO_new_slovak_state_dynamic_modifier:0 "Nový Slovenský Štát"
+ SLO_new_slovak_state_dynamic_modifier_desc:0 "The birth of the new Slovak state shall go down as one of the greatest achievements of the twentieth century. We have placed the power of state not in the hands of the old stagnant elites or the unwashed masses, but in men of action and men of iron. Where democracies die of exploitation and totalitarian regimes of hubris, we shall set forth a new approach."

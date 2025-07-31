@@ -8035,6 +8035,7 @@ SLO_towards_a_european_union_decision_category = {
 				state = 258
 				state = 240
 				state = 220
+				state = 254
 			}
 		}
 		
@@ -8051,6 +8052,7 @@ SLO_towards_a_european_union_decision_category = {
 			258 = { is_owned_and_controlled_by = PREV }
 			240 = { is_owned_and_controlled_by = PREV }
 			220 = { is_owned_and_controlled_by = PREV }
+			254 = { is_owned_and_controlled_by = PREV }
 		}
 		
 		visible = { 
@@ -8068,6 +8070,7 @@ SLO_towards_a_european_union_decision_category = {
 				258 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
 				240 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
 				220 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
+				254 = { is_owned_and_controlled_by = SLO NOT = { is_core_of = SLO } }
 			}
 		}
 		
@@ -8093,6 +8096,7 @@ SLO_towards_a_european_union_decision_category = {
 					state = 258
 					state = 240
 					state = 220
+					state = 254
 				} }
 				add_core_of = PREV
 			}

@@ -272,46 +272,75 @@ set_variable = { SLO.ongoing_propaganda_campaigns = 0 }
 set_variable = { SLO.propaganda_slots_max = 3 }
 
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_death_to_fascist_bastards_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_mgs_kindness_illuminates_the_future_of_our_children_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_who_is_to_blame_for_the_war_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_telling_a_friend_may_mean_telling_the_enemy_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_you_dont_want_this_buy_war_bonds_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_these_are_the_actions_of_czechobolshevism_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_we_build_our_home_with_our_own_strengh_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_mother_slovakia_calls_to_arms_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_germany_will_be_conquered_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_we_are_united_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_a_better_future_in_free_slovakia_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_the_youth_serve_their_leader_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_such_a_nation_will_not_perish_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_god_blesses_your_harvest_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_the_nation_is_crying_for_help_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_slovakia_at_the_turning_point_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_salute_the_founder_of_the_empire_idea }
-add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_this_is_what_will_happen_to_the_fascist_beast_idea }
-		
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_death_to_fascist_bastards_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mg_is_the_red_sun_in_the_hearts_of_revolutionary_people_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_mgs_kindness_illuminates_the_future_of_our_children_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mgs_kindness_illuminates_the_future_of_our_children_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_who_is_to_blame_for_the_war_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_who_is_to_blame_for_the_war_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_telling_a_friend_may_mean_telling_the_enemy_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_telling_a_friend_may_mean_telling_the_enemy_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_you_dont_want_this_buy_war_bonds_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_you_dont_want_this_buy_war_bonds_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_these_are_the_actions_of_czechobolshevism_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_these_are_the_actions_of_czechobolshevism_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_we_build_our_home_with_our_own_strengh_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_we_build_our_home_with_our_own_strengh_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_real_work_and_struggle_for_a_greater_slice_of_bread_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_mother_slovakia_calls_to_arms_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mother_slovakia_calls_to_arms_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_germany_will_be_conquered_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_germany_will_be_conquered_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_we_are_united_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_we_are_united_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_a_better_future_in_free_slovakia_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_a_better_future_in_free_slovakia_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_the_youth_serve_their_leader_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_the_youth_serve_their_leader_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_such_a_nation_will_not_perish_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_such_a_nation_will_not_perish_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_god_blesses_your_harvest_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_god_blesses_your_harvest_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_the_nation_is_crying_for_help_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_the_nation_is_crying_for_help_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_slovakia_at_the_turning_point_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_slovakia_at_the_turning_point_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_salute_the_founder_of_the_empire_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_salute_the_founder_of_the_empire_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_this_is_what_will_happen_to_the_fascist_beast_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_this_is_what_will_happen_to_the_fascist_beast_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_fight_for_the_nation_and_the_state_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_fight_for_the_nation_and_the_state_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_na_straz_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_na_straz_idea }
+
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_mountain_general_president_of_the_slovak_republic_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mountain_general_president_of_the_slovak_republic_idea }
+
+
 
 resize_array = { array = SLO.propaganda_PP_COST_array size = SLO.propaganda_GFX_array^num value = 15 }
 resize_array = { array = SLO.propaganda_slot_campaign_array size = SLO.propaganda_slots_max value = 0 }

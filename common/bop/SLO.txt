@@ -1,0 +1,215 @@
+SLO_encroaching_german_influence_bop = {
+	initial_value = 0.0
+	left_side = SLO_bop_left_side	
+	right_side = SLO_bop_right_side	
+	decision_category = SLO_encroaching_german_influence_bop_category
+	
+	#Waning Sovereignty
+	range = {
+		id = SLO_weakened_sovereignty
+		min = -0.15
+		max = 0.15
+		modifier = {
+			political_advisor_cost_factor = 0.25
+			justify_war_goal_time = 0.10
+			political_power_cost = 0.05
+			planning_speed = 0.20
+			research_speed_factor = 0.02
+		}
+		on_activate = {
+			
+		}
+		on_deactivate = {
+		}
+	}
+
+	#German Influence side
+	side = {
+		id = SLO_bop_left_side	
+		icon = GFX_bop_SLO_swastika_grey
+		
+		range = {
+			id = SLO_total_reich_domination
+			min = -1
+			max = -0.85
+			modifier = {
+				political_power_cost = 0.40
+				political_advisor_cost_factor = 0.75
+				min_export = 0.25
+				experience_gain_army = 0.25
+				experience_gain_air = 0.15
+				army_armor_attack_factor = 0.15
+				stability_weekly = -0.003
+				war_support_weekly = -0.003
+				planning_speed = 0.65
+				justify_war_goal_time = 1.25
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = SLO_encroaching_german_influence_bop
+					side = SLO_bop_left_side
+					gfx = GFX_bop_SLO_swastika_colour
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = SLO_encroaching_german_influence_bop
+					side = SLO_bop_left_side
+					gfx = GFX_bop_SLO_swastika_grey
+				}
+			}
+		}
+		range = {
+			id = SLO_critical_levels_of_german_influence
+			min = -0.85
+			max = -0.6
+			modifier = {
+				political_power_cost = 0.30
+				political_advisor_cost_factor = 0.55
+				min_export = 0.15
+				experience_gain_army = 0.20
+				experience_gain_air = 0.10
+				army_armor_attack_factor = 0.10
+				stability_weekly = -0.002
+				war_support_weekly = -0.002
+				planning_speed = 0.5
+				justify_war_goal_time = 0.75
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+			
+			}
+		}
+		range = {
+			id = SLO_heavy_german_influence
+			min = -0.6
+			max = -0.35
+			modifier = {
+				political_power_cost = 0.20
+				political_advisor_cost_factor = 0.45
+				min_export = 0.10
+				experience_gain_army = 0.12
+				experience_gain_air = 0.06
+				army_armor_attack_factor = 0.05
+				war_support_weekly = -0.001
+				planning_speed = 0.4
+				production_speed_buildings_factor = 0.10
+				justify_war_goal_time = 0.40
+			}
+			on_activate = {
+			
+			}
+			on_deactivate = {
+			
+			}
+		}
+		range = {
+			id = SLO_creeping_german_influence
+			min = -0.35
+			max = -0.15
+			modifier = {
+				political_power_cost = 0.10
+				political_advisor_cost_factor = 0.35
+				min_export = 0.05
+				experience_gain_army = 0.07
+				planning_speed = 0.25
+				production_speed_buildings_factor = 0.05
+				justify_war_goal_time = 0.25
+			}
+			on_activate = {
+			
+			}
+			on_deactivate = {
+			
+			}
+
+		}
+	}
+	
+	#Slovak Sovereignty side
+	side = {
+		id = SLO_bop_right_side	
+		icon = GFX_bop_SLO_coat_of_arms_grey
+		
+		range = {
+			id = SLO_waning_sovereignty
+			min = 0.15
+			max = 0.4
+			modifier = {
+				political_advisor_cost_factor = 0.10
+				consumer_goods_factor = -0.10
+				research_speed_factor = 0.05
+			}
+			on_activate = {
+			
+			}
+			on_deactivate = {
+			
+			}
+		}
+		
+		range = {
+			id = SLO_large_levels_of_cooperation_with_germany
+			min = 0.4
+			max = 0.6
+			modifier = {
+				political_advisor_cost_factor = 0.05
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.05
+				research_speed_factor = 0.03
+				justify_war_goal_time = -0.10
+			}
+			on_activate = {
+			
+			}
+			on_deactivate = {
+			
+			}
+		}
+		
+		range = {
+			id = SLO_small_levels_of_cooperation_with_germany
+			min = 0.6
+			max = 0.85
+			modifier = {
+				political_power_gain = 0.20
+				justify_war_goal_time = -0.15
+			}
+			on_activate = {
+			
+			}
+			on_deactivate = {
+			
+			}
+		}
+		
+		range = {
+			id = SLO_no_cooperation_with_germany
+			min = 0.85
+			max = 1
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = -0.05
+				justify_war_goal_time = -0.40
+				consumer_goods_factor = 0.15
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = SLO_encroaching_german_influence_bop
+					side = SLO_bop_right_side
+					gfx = GFX_bop_SLO_coat_of_arms_colour
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = SLO_encroaching_german_influence_bop
+					side = SLO_bop_right_side
+					gfx = GFX_bop_SLO_coat_of_arms_grey
+				}
+			}
+		}
+	}
+}
+

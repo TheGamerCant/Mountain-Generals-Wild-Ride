@@ -1,0 +1,74 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_bop_SLO_coat_of_arms_colour"
+		texturefile = "gfx/interface/bop/bop_SLO_coat_of_arms_colour.dds"
+		transparencecheck = yes
+		animation = {
+			animationmaskfile = "gfx/interface/bop/bop_SLO_coat_of_arms_colour.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/bop/bop_SLO_coat_of_arms_colour.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_bop_SLO_coat_of_arms_grey"
+		texturefile = "gfx/interface/bop/bop_SLO_coat_of_arms_grey.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_bop_SLO_swastika_colour"
+		texturefile = "gfx/interface/bop/bop_SLO_swastika_colour.dds"
+		transparencecheck = yes
+		animation = {
+			animationmaskfile = "gfx/interface/bop/bop_SLO_swastika_colour.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/bop/bop_SLO_swastika_colour.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_bop_SLO_swastika_grey"
+		texturefile = "gfx/interface/bop/bop_SLO_swastika_grey.dds"
+		transparencecheck = yes
+	}
+}

@@ -54,6 +54,12 @@ defined_text = {
 		}
 		localization_key = "SLO_democratic_economy_dynamic_modifier"
 	}
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = SLO_corparatist_economy_dynamic_modifier }
+		}
+		localization_key = "SLO_corparatist_economy_dynamic_modifier"
+	}
 }
 
 defined_text = {

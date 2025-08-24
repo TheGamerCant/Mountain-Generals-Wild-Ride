@@ -141,3 +141,23 @@
  SLO_europe_core_region_252:0 "Integrate §Y[?252.name_token.GetTokenLocalizedKey]§!"
  SLO_europe_core_region_651:0 "Integrate §Y[?651.name_token.GetTokenLocalizedKey]§!"
  SLO_europe_core_region_214:0 "Integrate §Y[?214.name_token.GetTokenLocalizedKey]§!"
+ 
+ SLO_encroaching_german_influence_bop:0 "Encroaching German Influence"
+ SLO_encroaching_german_influence_bop_category:0 "$SLO_encroaching_german_influence_bop$"
+ SLO_bop_left_side:0 "[GER.GetNameDefCap]"
+ SLO_bop_right_side:0 "[SLO.GetNameDefCap]"
+ 
+ SLO_total_reich_domination:0 "Total Reich Domination"
+ SLO_critical_levels_of_german_influence:0 "Critical Levels of German Influence"
+ SLO_heavy_german_influence:0 "Heavy German Influence"
+ SLO_creeping_german_influence:0 "Creeping German Influence"
+ SLO_weakened_sovereignty:0 "Weakened Sovereignty"
+ SLO_waning_sovereignty:0 "Waning Sovereignty"
+ SLO_large_levels_of_cooperation_with_germany:0 "Large Levels of Co-Operation With Germany"
+ SLO_small_levels_of_cooperation_with_germany:0 "Small Levels of Co-Operation With Germany"
+ SLO_no_cooperation_with_germany:0 "No Co-Operation With Germany"
+ 
+ SLO_povazska_bystrica_arms_factory:0 "Expand the Zbrojovka Považská Bystrica Arms Factory"
+ SLO_povazska_bystrica_arms_factory_desc:0 "The Zbrojovka Považská Bystrica branch is one of Slovaia's most productive factories, and German companies have been looking to invest and refit it's machines to produce arms for the German Army."
+ SLO_slovenske_rudohorie_iron_ore_processing:0 "Slovenské Rudohorie Iron Ore Processing Plant"
+ SLO_slovenske_rudohorie_iron_ore_processing_desc:0 "Eastern Slovakia is home to significant deposits of iron ore and other valuable minerals, expanding it with German help will boost the local economy while providing Germany with a steady supply of materials."

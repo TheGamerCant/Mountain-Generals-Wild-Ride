@@ -131,3 +131,13 @@ SLO_towards_a_european_union_decision_category = {
 	
 	visible_when_empty = no
 }
+
+SLO_encroaching_german_influence_bop_category = {
+	allowed = {
+		original_tag = SLO
+	}
+	
+	visible = {
+		has_power_balance = { id = SLO_encroaching_german_influence_bop }
+	}
+}

@@ -43,6 +43,7 @@ SLO_propaganda_decision_category = {
 			army_attack_against_major_factor = 0.15
 			army_defence_against_major_factor = 0.10
 			army_org_regain = 0.1
+			war_support_weekly = 0.001
 		}
 		
 		complete_effect = {
@@ -92,7 +93,8 @@ SLO_propaganda_decision_category = {
 			political_power_factor = 0.08
 			foreign_subversive_activites = -0.1
 			subversive_activites_upkeep = -0.1
-			communism_drift = 0.03
+			communism_drift = 0.10
+			agency_upgrade_time = -0.25
 			justify_war_goal_time = -0.15
 		}
 		
@@ -142,9 +144,9 @@ SLO_propaganda_decision_category = {
 
 		modifier = {
 			monthly_population  = 0.2
-			#communism_drift = 0.05
-			political_power_cost = -0.04
-			stability_weekly = 0.001
+			communism_drift = 0.05
+			political_power_cost = -0.10
+			stability_weekly = 0.002
 		}
 		
 		complete_effect = {
@@ -181,7 +183,6 @@ SLO_propaganda_decision_category = {
 				has_country_flag = SLO_all_propaganda_available_flag
 				has_completed_focus = SLO_a_based_slovakia
 				has_completed_focus = SLO_a_democracy_if_you_can_keep_it
-				has_completed_focus = SLO_socialism_above_all
 			}
 		}
 
@@ -363,9 +364,10 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^6
 
 		modifier = {
-			weekly_manpower = 650
+			weekly_manpower = 750
 			army_defence_factor = 0.08
-			political_power_factor = 0.05
+			resistance_growth_on_our_occupied_states = 0.15
+			planning_speed = 0.25
 		}
 		
 		complete_effect = {
@@ -627,8 +629,9 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^11
 
 		modifier = {
-			compliance_growth = 0.15
+			research_speed_factor = 0.05
 			stability_weekly = 0.002
+			resistance_activity = -0.1
 		}
 		
 		complete_effect = {
@@ -780,8 +783,8 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^14
 
 		modifier = {
-			monthly_population = 0.40
-			war_support_weekly = 0.002
+			monthly_population = 0.30
+			war_support_weekly = 0.001	
 			political_power_factor = 0.16
 		}
 		
@@ -857,6 +860,10 @@ SLO_propaganda_decision_category = {
 		
 		available = {
 			SLO_available_propaganda_slot = yes
+			OR = {
+				has_stability < 0.5
+				has_war = yes
+			}
 		}
 		
 		visible = {
@@ -872,9 +879,9 @@ SLO_propaganda_decision_category = {
 
 		modifier = {
 			war_support_weekly = 0.001
-			weekly_manpower = 750
+			weekly_manpower = 600
 			min_export = -0.15
-			political_power_gain = 0.15
+			political_power_factor = 0.10
 		}
 		
 		complete_effect = {
@@ -1039,6 +1046,161 @@ SLO_propaganda_decision_category = {
 
 		remove_effect = {
 			set_variable = { SLO.propaganda_campaign_to_end = 19 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	# Fight for the nation and the state!
+	SLO_propaganda_campaign_20 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+			has_war = yes
+		}
+		
+		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				OR = {
+					has_completed_focus = SLO_a_based_slovakia
+					has_completed_focus = SLO_a_democracy_if_you_can_keep_it
+					AND = {
+						has_completed_focus = SLO_a_shining_city_for_all_to_see
+						SLO_is_not_europe = yes
+					}
+				}
+			}
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^20
+
+		modifier = {
+			weekly_manpower = 700
+			supply_consumption_factor = -0.1
+			army_org_factor = 0.05
+		}
+		
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 20 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 20 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	# Na Straz!
+	SLO_propaganda_campaign_21 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_completed_focus = SLO_to_mountain_general
+			}
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^21
+
+		modifier = {
+			political_power_factor = 0.1
+			neutrality_drift = 0.10
+			stability_weekly = 0.001
+		}
+
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 21 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 21 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	# Mountain General, first President of the Slovak Republic
+	SLO_propaganda_campaign_22 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_completed_focus = SLO_to_mountain_general
+			}
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^21
+
+		modifier = {
+			political_power_factor = 0.1
+			subjects_autonomy_gain = -0.5
+			neutrality_drift = 0.05
+		}
+
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 22 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 22 }
 			SLO_end_propaganda_campaign = yes
 		}
 	}
@@ -3283,7 +3445,7 @@ SLO_towards_a_european_union_decision_category = {
 		visible = {
 		}
 
-		days_remove = 90
+		days_remove = var:SLO.europe_increase_integration_decision_days_remove
 
 		days_re_enable = 30
 
@@ -8594,6 +8756,110 @@ SLO_towards_a_european_union_decision_category = {
 		}
 
 		remove_effect = {
+		}
+	}
+}
+
+SLO_encroaching_german_influence_bop_category = {
+	SLO_povazska_bystrica_arms_factory = {
+
+		icon = ger_military_buildup
+
+		available = {
+			70 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+		}
+
+		modifier = {
+			power_balance_weekly = -0.001
+		}
+	
+		fire_only_once = yes
+		days_remove = 730
+		cost = 75
+		
+		complete_effect = {
+			70 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value = -0.05
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	SLO_slovenske_rudohorie_iron_ore_processing = {
+
+		icon = steel
+
+		available = {
+			71 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+		}
+
+		modifier = {
+			power_balance_weekly = -0.001
+		}
+	
+		fire_only_once = yes
+		days_remove = 730
+		cost = 50
+		
+		complete_effect = {
+			71 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_resource = {
+					type = steel
+					amount = 30
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value = -0.05
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
 		}
 	}
 }

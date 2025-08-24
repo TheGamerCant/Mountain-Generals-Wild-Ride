@@ -57,7 +57,7 @@
  SLO_privatisation_of_government_assets_idea_desc:0 "$SLO_privatisation_of_government_assets_desc$"
  
  SLO_unclear_ideology_idea:0 "Unclear Ideology"
- SLO_unclear_ideology_idea_desc:0 "Despite his genius, Mountain General has been obfuscative on the specific ideological tenants of 'Mountain Generalism' so far. For now he does this to maintain a broad tent of support among the populous while the new Slovak government stabilises, but we will have to figure out our nation's path at some point."
+ SLO_unclear_ideology_idea_desc:0 "Despite his genius, Mountain General has been obfuscative on the specific ideological tenants of 'Mountain Generalism' so far. For now he does this to maintain a broad tent of support among the populous while the new Slovak government tries to stabilise itself, but we will have to figure out our nation's path at some point."
  SLO_unclear_ideology_idea_2:0 "$SLO_unclear_ideology_idea$"
  SLO_unclear_ideology_idea_2_desc:0 "$SLO_unclear_ideology_idea_desc$"
  
@@ -191,3 +191,11 @@
  
  SLO_new_slovak_state_dynamic_modifier:0 "Nový Slovenský Štát"
  SLO_new_slovak_state_dynamic_modifier_desc:0 "The birth of the new Slovak state shall go down as one of the greatest achievements of the twentieth century. We have placed the power of state not in the hands of the old stagnant elites or the unwashed masses, but in men of action and men of iron. Where democracies die of exploitation and totalitarian regimes of hubris, we shall set forth a new approach."
+ SLO_purged_civil_service:0 "Purges in the Civil Service"
+ SLO_purged_civil_service_desc:0 "To ensure that Mountain General's vision is made true, we need our civil service to be unflinching and uncompromising in their loyalty. Unfortunately, this means that some experienced bureaucrats will have to go."
+ SLO_purged_the_military:0 "Purges in the Military"
+ SLO_purged_the_military_desc:0 ""
+ SLO_corparatist_economy_dynamic_modifier:0 "Slovak Corporatism"
+ SLO_corparatist_economy_dynamic_modifier_desc:0 ""
+ SLO_unruly_military:0 "Unruly Military"
+ SLO_unruly_military_desc:0 "Various parts of our military command are uneasy about our country's path ahead, and Mountain General's weakening of their influence has left our military in a vulnerable position."

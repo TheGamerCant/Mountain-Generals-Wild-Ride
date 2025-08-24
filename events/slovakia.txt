@@ -39,10 +39,14 @@ country_event = {
 		if = {
 			limit = { has_idea = SLO_bratislavan_uprising_idea }
 			remove_ideas = SLO_bratislavan_uprising_idea
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 		else_if = {
 			limit = { has_idea = SLO_bratislavan_uprising_idea_2 }
 			remove_ideas = SLO_bratislavan_uprising_idea_2
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 		
 #		if = { 
@@ -64,6 +68,9 @@ country_event = {
 			transfer_state = 664
 			transfer_state = 73 
 		}
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
 		CZE = { 
 			remove_state_core = 70
 			remove_state_core = 71
@@ -84,6 +91,8 @@ country_event = {
 				retire_character = CZE_jozef_tiso
 			}
 		}
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
 		
 		set_division_template_lock = {
 			division_template = "Milície"
@@ -624,6 +633,10 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			add_ideas = SLO_unstable_regime_idea_1
+		}
+		
+		hidden_effect = {
+			country_event = { id = slovakia.51 days = 14 random_days = 14 }
 		}
 	}
 }
@@ -1612,6 +1625,202 @@ country_event = {
 		
 		add_political_power = -25
 		add_manpower = -988
+	}
+}
+
+#Year Zero
+country_event = {
+	id = slovakia.45
+	title = slovakia.45.title
+	desc = slovakia.45.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_SLO_mg_calendar
+
+	option = { 
+		name = slovakia.45.a
+		ai_chance = {
+			base = 10
+		}	
+	}
+}
+
+#Hungary attacks Carpathian Ruthenia
+country_event = {
+	id = slovakia.46
+	title = slovakia.46.title
+	desc = slovakia.46.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_hungarian_soldiers
+
+	immediate = {
+		hidden_effect = { 
+			HUN = {
+				add_ideas = SLO_HUN_seized_initiative
+				
+				#Added an AI strategy for this instead
+				
+#				every_state={
+#					limit={
+#						OR = {
+#							state = 155
+#							state = 974
+#							state = 973
+#							state = 43
+#						}
+#					}
+#					teleport_armies = {
+#						limit = {
+#							tag = HUN
+#						}
+#						to_province = 9706
+#					}
+#				}
+			}
+		
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 154
+					num_provinces = 2
+					on_win = slovakia.49
+					on_lose = slovakia.50
+					on_cancel = slovakia.50
+				}
+
+				defender = {
+					state = 73
+					num_provinces = 2
+					on_win = slovakia.47
+					on_lose = slovakia.48
+					on_cancel = slovakia.47
+				}
+			}
+			set_border_war_data = {
+				attacker = 154
+				defender = 73
+				combat_width = 105
+			}
+		}
+	}
+
+	option = { 
+		name = slovakia.46.a
+		ai_chance = {
+			base = 10
+		}	
+	}
+}
+
+#For SLO - victory in Carpathian Ruthenia
+country_event = {
+	id = slovakia.47
+	title = slovakia.47.title
+	desc = slovakia.47.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_czech_soldiers_02
+
+	option = { 
+		name = slovakia.47.a
+		ai_chance = {
+			base = 10
+		}	
+	}
+}
+
+#For SLO - defeat in Carpathian Ruthenia
+country_event = {
+	id = slovakia.48
+	title = slovakia.48.title
+	desc = slovakia.48.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_HUN_hungary_occupies_area
+
+	option = { 
+		name = slovakia.48.a
+		ai_chance = {
+			base = 10
+		}	
+	}
+}
+
+#For HUN - victory in Carpathian Ruthenia
+country_event = {
+	id = slovakia.49
+	title = slovakia.49.title
+	desc = slovakia.49.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_HUN_hungary_occupies_area
+
+	immediate = {
+		hidden_effect = {
+			HUN = { remove_ideas = SLO_HUN_seized_initiative }
+		}
+	}
+
+	option = { 
+		name = slovakia.49.a
+		ai_chance = {
+			base = 10
+		}	
+		
+		transfer_state = 73
+	}
+}
+
+#For HUN - defeat in Carpathian Ruthenia
+country_event = {
+	id = slovakia.50
+	title = slovakia.50.title
+	desc = slovakia.50.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_dead_soldiers
+	
+	immediate = {
+		hidden_effect = {
+			HUN = { remove_ideas = SLO_HUN_seized_initiative }
+		}
+	}
+
+	option = { 
+		name = slovakia.50.a
+		ai_chance = {
+			base = 10
+		}	
+	}
+}
+
+#Unruly Military
+country_event = {
+	id = slovakia.51
+	title = slovakia.51.title
+	desc = slovakia.51.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_czech_soldiers_01
+	
+	immediate = {
+		hidden_effect = { 
+			add_ideas = SLO_unruly_military 
+			
+			country_event = { id = slovakia.46 days = 14 random_days = 14 }
+		}
+	}
+
+	option = { 
+		name = slovakia.51.a
+		ai_chance = {
+			base = 10
+		}
+		
+		effect_tooltip = {
+			add_ideas = SLO_unruly_military
+		}
 	}
 }
 

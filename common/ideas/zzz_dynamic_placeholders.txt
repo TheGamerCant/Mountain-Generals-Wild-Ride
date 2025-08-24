@@ -103,6 +103,15 @@ ideas ={
 		
 		SLO_GFX_propaganda_this_is_what_will_happen_to_the_fascist_beast_idea = {}
 		SLO_NAME_propaganda_this_is_what_will_happen_to_the_fascist_beast_idea = {}
+		
+		SLO_GFX_propaganda_fight_for_the_nation_and_the_state_idea = {}
+		SLO_NAME_propaganda_fight_for_the_nation_and_the_state_idea = {}
+		
+		SLO_GFX_propaganda_na_straz_idea = {}
+		SLO_NAME_propaganda_na_straz_idea = {}
+		
+		SLO_GFX_propaganda_mountain_general_president_of_the_slovak_republic_idea = {}
+		SLO_NAME_propaganda_mountain_general_president_of_the_slovak_republic_idea = {}
 	
 	
 		

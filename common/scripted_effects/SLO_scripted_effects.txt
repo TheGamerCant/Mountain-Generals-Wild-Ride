@@ -1089,3 +1089,125 @@ SLO_decrease_ineffective_military = {
 		}
 	}
 }
+
+SLO_move_power_balance_right_5 = {
+	SLO = {
+		if = {
+			limit = { has_power_balance = { id = SLO_encroaching_german_influence_bop } }
+			add_power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value = 0.05
+				tooltip_side = SLO_bop_right_side
+			}
+		}
+	}
+}
+SLO_move_power_balance_right_10 = {
+	SLO = {
+		if = {
+			limit = { has_power_balance = { id = SLO_encroaching_german_influence_bop } }
+			add_power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value = 0.10
+				tooltip_side = SLO_bop_right_side
+			}
+		}
+	}
+}
+SLO_move_power_balance_right_15 = {
+	SLO = {
+		if = {
+			limit = { has_power_balance = { id = SLO_encroaching_german_influence_bop } }
+			add_power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value = 0.15
+				tooltip_side = SLO_bop_right_side
+			}
+		}
+	}
+}
+SLO_move_power_balance_right_20 = {
+	SLO = {
+		if = {
+			limit = { has_power_balance = { id = SLO_encroaching_german_influence_bop } }
+			add_power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value = 0.20
+				tooltip_side = SLO_bop_right_side
+			}
+		}
+	}
+}
+SLO_move_power_balance_right_25 = {
+	SLO = {
+		if = {
+			limit = { has_power_balance = { id = SLO_encroaching_german_influence_bop } }
+			add_power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value = 0.25
+				tooltip_side = SLO_bop_right_side
+			}
+		}
+	}
+}
+
+SLO_move_power_balance_left_5 = {
+	SLO = {
+		if = {
+			limit = { has_power_balance = { id = SLO_encroaching_german_influence_bop } }
+			add_power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value = -0.05
+				tooltip_side = SLO_bop_left_side
+			}
+		}
+	}
+}
+SLO_move_power_balance_left_10 = {
+	SLO = {
+		if = {
+			limit = { has_power_balance = { id = SLO_encroaching_german_influence_bop } }
+			add_power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value = -0.10
+				tooltip_side = SLO_bop_left_side
+			}
+		}
+	}
+}
+SLO_move_power_balance_left_15 = {
+	SLO = {
+		if = {
+			limit = { has_power_balance = { id = SLO_encroaching_german_influence_bop } }
+			add_power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value = -0.15
+				tooltip_side = SLO_bop_left_side
+			}
+		}
+	}
+}
+SLO_move_power_balance_left_20 = {
+	SLO = {
+		if = {
+			limit = { has_power_balance = { id = SLO_encroaching_german_influence_bop } }
+			add_power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value = -0.20
+				tooltip_side = SLO_bop_left_side
+			}
+		}
+	}
+}
+SLO_move_power_balance_left_25 = {
+	SLO = {
+		if = {
+			limit = { has_power_balance = { id = SLO_encroaching_german_influence_bop } }
+			add_power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value = -0.25
+				tooltip_side = SLO_bop_left_side
+			}
+		}
+	}
+}

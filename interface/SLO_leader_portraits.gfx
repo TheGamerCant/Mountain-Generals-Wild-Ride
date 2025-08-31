@@ -231,4 +231,28 @@ spriteTypes = {
 		name = "GFX_advisor_SLO_jozef_sivak"
 		texturefile = "gfx/leaders/SLO/advisors/SLO_jozef_sivak.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_advisor_SLO_karol_murgas"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_karol_murgas.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_advisor_SLO_julius_stano"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_julius_stano.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_advisor_SLO_gejza_medricky"
+		texturefile = "gfx/leaders/SLO/advisors/SLO_gejza_medricky.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_GER_carl_heinrich_von_stulpnagel"
+		texturefile = "gfx/leaders/SLO/GER_carl_heinrich_von_stulpnagel.dds"
+	}
+	spriteType = {
+		name = "GFX_advisor_GER_carl_heinrich_von_stulpnagel"
+		texturefile = "gfx/leaders/SLO/advisors/GER_carl_heinrich_von_stulpnagel.dds"
+	}
 }

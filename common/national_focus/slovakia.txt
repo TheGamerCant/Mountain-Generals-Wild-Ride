@@ -3632,7 +3632,7 @@ focus_tree = {
 				
 				add_resource = {
 					type = oil
-					amount = 18
+					amount = 14
 				}
 				
 				add_manpower = 5908
@@ -3849,7 +3849,7 @@ focus_tree = {
 						has_intelligence_agency = no
 					}
 					create_intelligence_agency  = {
-						name = "Slovenská informacná služba"
+						name = "Slovenská Informacná Služba"
 						icon = GFX_intelligence_agency_logo_generic_8
 					}
 				}
@@ -6303,7 +6303,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_a_democracy_if_you_can_keep_it
-		icon = GFX_
+		icon = GFX_focus_spr_crush_the_revolution
 		x = 95
 		y = 0
 		cost = 2
@@ -6326,7 +6326,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_fire_disloyal_bureaucrats
-		icon = GFX_
+		icon = GFX_goal_SLO_slovakia_for_the_slovaks
 		x = 1
 		y = 1
 		cost = 3
@@ -6356,7 +6356,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_total_control_over_the_media
-		icon = GFX_
+		icon = GFX_goal_SLO_enforce_cultural_media_standards
 		x = 1
 		y = 1
 		cost = 4
@@ -6380,7 +6380,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_reach_out_to_the_hlinkas_slovak_peoples_party
-		icon = GFX_
+		icon = GFX_goal_SLO_reach_out_to_the_hlinkas_slovak_peoples_party
 		x = -1
 		y = 1
 		cost = 3
@@ -6396,18 +6396,31 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_political_power = 40
+			add_political_power = 20
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.025
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SLO_andrej_hlinka
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			show_ideas_tooltip = SLO_alexander_mach
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			show_ideas_tooltip = SLO_vojtech_tuka
 		}
 	}
 	
 	
 	focus = {	
 		id = SLO_form_the_mountain_general_guard
-		icon = GFX_
+		icon = GFX_goal_SLO_form_the_mountain_general_guard
 		x = -1
 		y = 1
 		cost = 4
@@ -6433,7 +6446,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_bring_the_elites_into_the_fold
-		icon = GFX_
+		icon = GFX_focus_generic_self_management
 		x = 0
 		y = 2
 		cost = 4
@@ -6451,6 +6464,10 @@ focus_tree = {
 		completion_reward = {
 			SLO_stabilise_regime = yes
 			
+			add_to_variable = { SLO_economy_dm_political_power_cost = -0.15 }
+			
+			custom_effect_tooltip = SLO_bring_the_elites_into_the_fold_tt
+			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			add_political_power = -100
@@ -6460,8 +6477,8 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_secure_military_loyalty
-		icon = GFX_
-		x = 1
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = -1
 		y = 1
 		cost = 4
 		
@@ -6478,6 +6495,10 @@ focus_tree = {
 		
 
 		completion_reward = {
+			country_event = { id = slovakia.54 hours = 4 random_hours = 4 }
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			remove_ideas = SLO_unruly_military
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -6486,13 +6507,20 @@ focus_tree = {
 				idea = SLO_purged_the_military
 				days = 365
 			}
+			
+			hidden_effect = { 
+				if = {
+					limit = { has_completed_focus = SLO_to_mountain_general }
+					country_event = { id = slovakia.52 days = 14 random_days = 21 }
+				}
+			}
 		}
 	}
 	
 	focus = {	
 		id = SLO_to_mountain_general
-		icon = GFX_
-		x = -1
+		icon = GFX_goal_SLO_form_the_mountain_general_guard
+		x = 1
 		y = 1
 		cost = 4
 		
@@ -6517,19 +6545,29 @@ focus_tree = {
 				limit = { has_idea = SLO_unclear_ideology_idea }
 				remove_ideas = SLO_unclear_ideology_idea
 			}
+			else = {
+				effect_tooltip = { remove_ideas = SLO_unclear_ideology_idea_2 }
+			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			custom_effect_tooltip = unlock_propaganda_campaign_tt
 			unlock_decision_tooltip = SLO_propaganda_campaign_21
 			unlock_decision_tooltip = SLO_propaganda_campaign_22
+			
+			hidden_effect = { 
+				if = {
+					limit = { has_completed_focus = SLO_secure_military_loyalty }
+					country_event = { id = slovakia.52 days = 14 random_days = 21 }
+				}
+			}
 		}
 	}
 	
 	focus = {	
 		id = SLO_the_new_state
-		icon = GFX_
-		x = 1
+		icon = GFX_goal_SLO_christian_fascism
+		x = -1
 		y = 1
 		cost = 5
 		
@@ -6555,32 +6593,12 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			add_dynamic_modifier = { modifier = SLO_new_slovak_state_dynamic_modifier }
-			
-			##REMOVE ME LATUR
-			if = {
-				limit = {
-					has_any_power_balance = no
-				}
-				set_power_balance = {
-					id = SLO_encroaching_german_influence_bop
-					left_side = SLO_bop_left_side 
-					right_side = SLO_bop_right_side 
-					set_value = 0.90
-				}
-				
-				#Only do this if it's 0.90
-				set_power_balance_gfx = {
-					id = SLO_encroaching_german_influence_bop
-					side = SLO_bop_right_side
-					gfx = GFX_bop_SLO_coat_of_arms_colour
-				}
-			}
 		}
 	}
 	
 	focus = {	
 		id = SLO_corporatism
-		icon = GFX_
+		icon = GFX_goal_SLO_corporatist_economics
 		x = -6
 		y = 1
 		cost = 5
@@ -6598,7 +6616,7 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = { 
 				remove_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
-				add_dynamic_modifier = { modifier = SLO_autarkic_economy_dyanamic_modifier }
+				add_dynamic_modifier = { modifier = SLO_corparatist_economy_dynamic_modifier }
 			}
 			
 			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.10 }
@@ -6607,6 +6625,341 @@ focus_tree = {
 			custom_effect_tooltip = SLO_corporatism_tt
 		}
 	}
+	
+	focus = {
+		id = SLO_zvolen_railway_factory
+		icon = GFX_focus_generic_railroad
+		x = -2
+		y = 1
+		relative_position_id = SLO_corporatism
+		cost = 8
+		prerequisite = {
+			focus = SLO_corporatism
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				
+				prioritize = { 70 }
+				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			if = {
+				limit = { has_aat = yes }
+				
+				add_tech_bonus = {
+					name = SLO_zvolen_railway_factory
+					bonus = 0.5
+					uses = 2
+					category = train_tech
+					category = artillery
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				mio:SLO_zvolen_railway_factory_organization = {
+					add_mio_size = 1
+					add_mio_research_bonus = 0.05
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = SLO_zvolen_railway_factory
+					bonus = 1
+					uses = 2
+					category = train_tech
+					category = artillery
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.07 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.07 }
+			
+			custom_effect_tooltip = SLO_zvolen_railway_factory_tt
+		}
+	}
+	
+	focus = {
+		id = SLO_found_the_zbrojovka_povazska_byrstrica_arms_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		relative_position_id = SLO_zvolen_railway_factory
+		cost = 8
+		prerequisite = {
+			focus = SLO_zvolen_railway_factory
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				
+				prioritize = { 70 }
+				
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			if = {
+				limit = { has_aat = yes }
+				
+				add_tech_bonus = {
+					name = SLO_found_the_zbrojovka_povazska_byrstrica_arms_factory
+					bonus = 0.6
+					uses = 1
+					category = infantry_weapons
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				mio:SLO_zbrojovka_brno_organization = {
+					add_mio_size = 1
+					add_mio_research_bonus = 0.05
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = SLO_found_the_zbrojovka_povazska_byrstrica_arms_factory
+					bonus = 1
+					uses = 2
+					category = infantry_weapons
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.05 }
+			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = 0.10 }
+			
+			custom_effect_tooltip = SLO_found_the_zbrojovka_povazska_byrstrica_arms_factory_tt
+		}
+	}
+	
+	focus = {
+		id = SLO_stabilise_the_economy
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 1
+		relative_position_id = SLO_corporatism
+		cost = 10
+		prerequisite = {
+			focus = SLO_corporatism
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.10 }
+			add_to_variable = { SLO_economy_dm_stability_factor = 0.10 }
+			
+			custom_effect_tooltip = SLO_stabilise_the_economy_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = -75
+		}
+	}
+	
+	focus = {
+		id = SLO_develop_the_nizna_slana_deposit_2
+		icon = GFX_focus_generic_steel
+		x = 3
+		y = 1
+		relative_position_id = SLO_corporatism
+		cost = 4
+		prerequisite = {
+			focus = SLO_corporatism
+		}
+
+		available = {
+#			controls_state = 664
+		}
+		
+		bypass = {
+#			NOT = { controls_state = 664 }
+		}
+		
+
+		completion_reward = {
+			random_core_state = {
+				prioritize = { 664 }
+				
+				add_resource = {
+					type = steel
+					amount = 29
+				}
+				
+				add_manpower = 4108
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_horna_nitra_coal_mines_2
+		icon = GFX_focus_generic_coal_mining
+		x = 2
+		y = 0
+		relative_position_id = SLO_develop_the_nizna_slana_deposit_2
+		cost = 4
+		prerequisite = {
+			focus = SLO_corporatism
+		}
+
+		available = {
+#			controls_state = 70
+		}
+		
+		bypass = {
+#			NOT = { controls_state = 70 }
+		}
+
+		completion_reward = {
+			random_core_state = {
+				prioritize = { 70 }
+				
+				add_resource = {
+					type = oil
+					amount = 14
+				}
+				
+				add_manpower = 5908
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_expand_the_apollo_oil_refinery
+		icon = GFX_focus_generic_resource_extraction
+		x = -1
+		y = 1
+		relative_position_id = SLO_horna_nitra_coal_mines_2
+		cost = 5
+		prerequisite = {
+			focus = SLO_horna_nitra_coal_mines_2
+		}
+		prerequisite = {
+			focus = SLO_develop_the_nizna_slana_deposit_2
+		}
+
+		available = {
+			has_tech = synth_oil_experiments
+		}
+		
+
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = fuel_silo
+						size > 0
+						include_locked = yes
+					}
+				}
+				
+				prioritize = { 70 }
+				
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			#So we don't get a skipped line in the tt if we don't have the building available to us yet
+			if = { limit = { has_tech = synth_oil_experiments }
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			
+			if = {
+				limit = { has_aat = yes }
+				
+				add_tech_bonus = {
+					name = SLO_expand_the_appolo_oil_refinery
+					bonus = 0.7
+					uses = 2
+					category = synth_resources
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				mio:SLO_dynamit_nobel_bratislava = {
+					add_mio_size = 1
+					add_mio_research_bonus = 0.05
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = SLO_expand_the_appolo_oil_refinery
+					bonus = 1
+					uses = 2
+					category = synth_resources
+				}
+			}
+		}
+	}
+	
 	
 	focus = {	
 		id = SLO_a_shining_city_for_all_to_see
@@ -10121,7 +10474,7 @@ focus_tree = {
 					has_intelligence_agency = no
 				}
 				create_intelligence_agency  = {
-					name = "Slovenská informacná služba"
+					name = "Slovenská Informacná Služba"
 					icon = GFX_intelligence_agency_logo_generic_8
 				}
 			}

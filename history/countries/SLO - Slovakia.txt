@@ -169,18 +169,21 @@ recruit_character = SLO_jozef_lettrich
 recruit_character = SLO_andrej_hlinka
 recruit_character = SLO_karol_sidor
 recruit_character = SLO_alexander_mach
+recruit_character = SLO_karol_murgas
 recruit_character = SLO_vojtech_tuka
 recruit_character = SLO_karol_smidke
 recruit_character = SLO_vavro_srobar
 recruit_character = SLO_ivan_derer
-recruit_character = SLO_jan_osoha
+#recruit_character = SLO_jan_osoha
 recruit_character = SLO_stefan_tiso
 recruit_character = SLO_jozef_sivak
+recruit_character = SLO_julius_stano
+recruit_character = SLO_gejza_medricky
 
 
 set_research_slots = 3
 
-set_stability = 0.47
+set_stability = 0.52
 set_war_support = 0.31
 
 set_politics = {

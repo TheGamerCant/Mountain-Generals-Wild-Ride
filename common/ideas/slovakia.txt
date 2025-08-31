@@ -198,17 +198,17 @@ ideas = {
 		SLO_HUN_seized_initiative = {
 			removal_cost = -1
 			modifier = {
-				land_reinforce_rate = 0.10
-				army_org_factor = 0.25
+				land_reinforce_rate = 0.05
+				army_org_factor = 0.50
 				org_loss_at_low_org_factor = -0.40
 				coordination_bonus = 0.15
 			}
 			
 			targeted_modifier = {
 				tag = SLO
-				attack_bonus_against = 1.0
-				defense_bonus_against = 1.0
-				breakthrough_bonus_against = 1.0
+				attack_bonus_against = 1.5
+				defense_bonus_against = 1.5
+				breakthrough_bonus_against = 1.5
 			}
 		}
 	}
@@ -1603,6 +1603,7 @@ ideas = {
 
 			modifier = {
 				army_org_factor = -0.30
+				land_reinforce_rate = -0.007
 				army_attack_factor = -0.25
 				army_defence_factor = -0.25
 				max_dig_in_factor = -0.50

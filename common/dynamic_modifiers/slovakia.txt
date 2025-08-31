@@ -123,6 +123,7 @@ SLO_corparatist_economy_dynamic_modifier = {
 	industrial_capacity_dockyard = SLO_economy_dm_industrial_capacity_dockyard
 	research_speed_factor = SLO_economy_dm_research_speed_factor
 	production_speed_arms_factory_factor = SLO_economy_dm_production_speed_arms_factory_factor
+	local_resources_factor = SLO_economy_dm_local_resources_factor
 }
 
 SLO_army_dynamic_modifier = {

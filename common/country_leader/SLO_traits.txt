@@ -331,8 +331,7 @@ leader_traits = {
 		
 		political_power_factor = 0.10
 		war_support_factor = 0.10
-		fascism_drift = 0.06
-		neutrality_drift = 0.03
+		neutrality_drift = 0.10
 		communism_acceptance = -80
 		drift_defence_factor  = 0.5
 	}	
@@ -344,7 +343,8 @@ leader_traits = {
 		
 		political_power_factor = 0.10
 		party_popularity_stability_factor = 0.15
-		fascism_drift = 0.10
+		fascism_drift = 0.05
+		neutrality_drift = 0.05
 	}	
 	
 	SLO_fascist_paramilitarist = {
@@ -356,8 +356,8 @@ leader_traits = {
 		resistance_activity = 0.1
 		resistance_damage_to_garrison = -0.15
 		conscription = 0.008
-		political_power_gain = 0.12
-		weekly_manpower = 150
+		political_power_gain = 0.15
+		weekly_manpower = 250
 	}	
 	
 	SLO_prince_of_terror = {
@@ -365,11 +365,12 @@ leader_traits = {
 		
 		random = no
 		
-		resistance_damage_to_garrison = -0.30
+		resistance_damage_to_garrison = -0.10
 		foreign_subversive_activites = -0.3
 		non_core_manpower = 0.05
-		political_power_factor = 0.08
+		political_power_factor = 0.10
 		justify_war_goal_time = -0.30
+		stability_factor = -0.05
 	}	
 	
 	SLO_communist_agitator = {
@@ -383,13 +384,23 @@ leader_traits = {
 		communism_drift = 0.10
 	}	
 	
+	SLO_radical_ideologue = {
+		sprite = 13
+		
+		random = no
+		
+		fascism_drift = 0.10
+		conscription_factor = 0.10
+		justify_war_goal_time = -0.20
+	}	
+	
 	SLO_stalins_man_in_bratislava = {
 		sprite = 12
 		
 		random = no
 		
 		political_power_factor = 0.05
-		communism_acceptance = 200
+		communism_acceptance = 100
 		communism_drift = 0.10
 		research_speed_factor = 0.04
 	}	
@@ -412,5 +423,33 @@ leader_traits = {
 		political_power_factor = 0.10
 		research_speed_factor = 0.03
 		drift_defence_factor  = 0.50
+	}	
+	
+	SLO_minister_of_transport_and_public_works = {
+		sprite = 13
+		
+		random = no
+		
+		production_speed_infrastructure_factor = 0.15
+		production_speed_rail_way_factor = 0.15
+		production_speed_supply_node_factor = 0.15
+		army_speed_factor = 0.07
+		consumer_goods_factor = -0.05
+		equipment_bonus = {
+			train_equipment = {
+				build_cost_ic = -0.10
+				instant = yes
+			}
+		}
+	}	
+	
+	SLO_minister_of_the_economy = {
+		sprite = 13
+		
+		random = no
+		
+		consumer_goods_factor = -0.10
+		production_speed_industrial_complex_factor = 0.12
+		line_change_production_efficiency_factor = 0.10
 	}	
 }

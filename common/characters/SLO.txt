@@ -91,6 +91,10 @@ characters = {
 			traits  = {
 				mg_loyalist
 			}
+			
+			on_add = {
+				SLO_move_power_balance_right_15 = yes
+			}
 		}		
 	}
 	
@@ -120,10 +124,6 @@ characters = {
 #			}
 			available = {
 				NOT = { has_idea = SLO_ferdinand_catlos_political_advisor }
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
 			}
 			traits = {
 				army_chief_morale_2
@@ -131,6 +131,9 @@ characters = {
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
+			}
+			on_add = {
+				SLO_move_power_balance_right_5 = yes
 			}
 		}
 		advisor={
@@ -147,10 +150,6 @@ characters = {
 #			}
 			available = {
 				NOT = { has_idea = SLO_ferdinand_catlos_army_chief }
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
 			}
 			traits = {
 				SLO_minister_of_defence
@@ -159,16 +158,14 @@ characters = {
 			ai_will_do = {
 				factor = 1.000
 			}
+			
+			on_add = {
+				SLO_move_power_balance_right_10 = yes
+			}
 		}
 
 		field_marshal = {
 			traits = { politically_connected infantry_leader }
-			visible = {
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
@@ -224,6 +221,10 @@ characters = {
 			ai_will_do = {
 				factor = 1.000
 			}
+			
+			on_add = {
+				SLO_move_power_balance_right_5 = yes
+			}
 		}
 		advisor={
 			slot = high_command
@@ -238,6 +239,10 @@ characters = {
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
+			}
+			
+			on_add = {
+				SLO_move_power_balance_right_5 = yes
 			}
 		}
 		corps_commander = {
@@ -276,6 +281,10 @@ characters = {
 			ai_will_do = {
 				factor = 1.000
 			}
+			
+			on_add = {
+				SLO_move_power_balance_right_5 = yes
+			}
 		}
 		advisor={
 			slot = air_chief
@@ -290,6 +299,10 @@ characters = {
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
+			}
+			
+			on_add = {
+				SLO_move_power_balance_right_5 = yes
 			}
 		}		
 		corps_commander = {
@@ -324,12 +337,12 @@ characters = {
 #					has_government = fascism
 #				}
 #			}
-			available = {
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}			
+#			available = {
+#				OR = {
+#					has_government = neutrality
+#					has_government = fascism
+#				}
+#			}			
 			
 			allowed = {
 				original_tag = SLO
@@ -341,16 +354,20 @@ characters = {
 			ai_will_do = {
 				factor = 1.000
 			}
+			
+			on_add = {
+				SLO_move_power_balance_left_5 = yes
+			}
 		}
 
 		corps_commander = {
 			traits = { harsh_leader }
-			visible = {
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
+#			visible = {
+#				OR = {
+#					has_government = neutrality
+#					has_government = fascism
+#				}
+#			}
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -378,12 +395,13 @@ characters = {
 			allowed = {
 				original_tag = SLO
 			}
-#			visible = {
-#				NOT = { has_government = fascism }
-#			}
+			visible = {
+				NOT = { has_country_flag = SLO_democratic_officers_imprisoned }
+			}
 			available = {
 				NOT = { has_idea = SLO_rudolf_viest_army_chief }
 				NOT = { has_government = fascism }
+				hidden_trigger = { NOT = { has_country_flag = SLO_democratic_officers_imprisoned } }
 			}
 			
 			traits = {
@@ -393,6 +411,10 @@ characters = {
 			ai_will_do = {
 				factor = 1.000
 			}
+			
+			on_add = {
+				SLO_move_power_balance_right_10 = yes
+			}
 		}
 		
 		advisor={
@@ -401,12 +423,12 @@ characters = {
 			allowed = {
 				original_tag = SLO
 			}
-#			visible = {
-#				NOT = { has_government = fascism }
-#			}
+			visible = {
+				NOT = { has_country_flag = SLO_democratic_officers_imprisoned }
+			}
 			available = {
 				NOT = { has_idea = SLO_rudolf_viest_political_advisor }
-				NOT = { has_government = fascism }
+				hidden_trigger = { NOT = { has_country_flag = SLO_democratic_officers_imprisoned } }
 			}		
 			traits = {
 				army_chief_offensive_3
@@ -415,12 +437,16 @@ characters = {
 			ai_will_do = {
 				factor = 1.000
 			}
+			
+			on_add = {
+				SLO_move_power_balance_right_10 = yes
+			}
 		}
 	
 		field_marshal = {
 			traits = { organizer logistics_wizard infantry_officer }
 			visible = {
-				NOT = { has_government = fascism }
+				NOT = { has_country_flag = SLO_democratic_officers_imprisoned }
 			}
 			skill = 4
 			attack_skill = 4
@@ -484,12 +510,16 @@ characters = {
 #			visible = {
 #				NOT = { has_government = fascism }
 #			}
-			available = {
-				NOT = { has_government = fascism }
-			}
+#			available = {
+#				NOT = { has_government = fascism }
+#			}
 			
 			allowed = {
 				original_tag = SLO
+			}
+			
+			on_add = {
+				SLO_move_power_balance_right_5 = yes
 			}
 			
 			traits = {
@@ -499,9 +529,9 @@ characters = {
 		
 		corps_commander = {
 			traits = { ranger cavalry_officer }
-			visible = {
-				NOT = { has_government = fascism }
-			}
+#			visible = {
+#				NOT = { has_government = fascism }
+#			}
 			skill = 2 
 			attack_skill = 3
 			defense_skill = 1
@@ -571,15 +601,20 @@ characters = {
 			allowed = {
 				original_tag = SLO
 			}
-#			visible = {
-#				NOT = { has_government = fascism }
-#			}
+			visible = {
+				NOT = { has_country_flag = SLO_democratic_officers_imprisoned }
+			}
 			available = {
-				NOT = { has_government = fascism }
+				hidden_trigger = { NOT = { has_country_flag = SLO_democratic_officers_imprisoned } }
 			}		
 			traits = {
 				army_artillery_2
 			}
+			
+			on_add = {
+				SLO_move_power_balance_right_10 = yes
+			}
+			
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
@@ -589,7 +624,7 @@ characters = {
 		corps_commander = {
 			traits = { organizer trait_mountaineer }
 			visible = {
-				NOT = { has_government = fascism }
+				NOT = { has_country_flag = SLO_democratic_officers_imprisoned }
 			}
 			skill = 3
 			attack_skill = 3
@@ -611,23 +646,23 @@ characters = {
 				small="GFX_advisor_SLO_viliam_talsky"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = SLO_viliam_talsky
-			ledger = army
-			allowed = {
-				original_tag = SLO
-			}
-			available = {
-			}			
-			traits = {
-				army_infantry_1
-			}
-			cost = 50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}	
+#		advisor={
+#			slot = high_command
+#			idea_token = SLO_viliam_talsky
+#			ledger = army
+#			allowed = {
+#				original_tag = SLO
+#			}
+#			available = {
+#			}			
+#			traits = {
+#				army_infantry_1
+#			}
+#			cost = 50
+#			ai_will_do = {
+#				factor = 1.000
+#			}
+#		}	
 		
 		corps_commander = {
 			traits = { trait_engineer }
@@ -662,9 +697,9 @@ characters = {
 			available = {
 			}			
 			traits = {
-				army_regrouping_3
+				army_regrouping_2
 			}
-			cost = 200
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -673,11 +708,11 @@ characters = {
 		corps_commander = {
 			traits = { trait_mountaineer cavalry_officer commando paratrooper }
 
-			skill =3
+			skill = 2
 			attack_skill = 2
-			defense_skill = 5
-			planning_skill = 4
-			logistics_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
 		}
 	}
 	
@@ -710,7 +745,6 @@ characters = {
 		}		
 	}
 	
-	
 	SLO_andrej_hlinka={
 		name=SLO_andrej_hlinka
 		portraits={
@@ -728,10 +762,19 @@ characters = {
 				original_tag = SLO
 			}
 			available  = {
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}					
+				if = {
+					limit = { has_government = democratic }
+					AND = {
+						SLO_nationalists_largest_party_trigger = yes
+						SLO_nationalists_in_government_trigger = yes
+					}
+				}
+				else = {
+					OR = {
+						has_government = fascism
+						has_completed_focus = SLO_reach_out_to_the_hlinkas_slovak_peoples_party
+					}	
+				}				
 			}
 			traits  = {
 				SLO_nationalist_priest
@@ -739,6 +782,10 @@ characters = {
 
 			ai_will_do = {
 				factor = 1.000
+			}
+			
+			on_add = {
+				SLO_move_power_balance_right_5 = yes
 			}
 		}		
 	}
@@ -768,6 +815,46 @@ characters = {
 			traits  = {
 				SLO_nationalist_editor 
 			}
+			
+			on_add = {
+				SLO_move_power_balance_right_5 = yes
+			}
+		}		
+	}
+	
+	SLO_karol_murgas={
+		name=SLO_karol_murgas
+		portraits={
+			civilian={
+				small="GFX_advisor_SLO_karol_murgas"
+			}
+			army={
+				small="GFX_advisor_SLO_karol_murgas"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_karol_murgas
+			allowed  = {
+				original_tag = SLO
+			}
+			available  = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}					
+			}
+			traits  = {
+				SLO_radical_ideologue 
+			}
+
+			ai_will_do = {
+				factor = 1.000
+			}
+			
+			on_add = {
+				SLO_move_power_balance_left_10 = yes
+			}
 		}		
 	}
 	
@@ -788,10 +875,26 @@ characters = {
 				original_tag = SLO
 			}
 			available = { 
-				has_government = fascism	
+				if = {
+					limit = { has_government = democratic }
+					AND = {
+						SLO_nationalists_largest_party_trigger = yes
+						SLO_nationalists_in_government_trigger = yes
+					}
+				}
+				else = {
+					OR = {
+						has_government = fascism
+						has_completed_focus = SLO_reach_out_to_the_hlinkas_slovak_peoples_party
+					}	
+				}	
 			}				
 			traits  = {
 				SLO_fascist_paramilitarist
+			}
+			
+			on_add = {
+				SLO_move_power_balance_left_10 = yes
 			}
 		}		
 	}	
@@ -813,10 +916,26 @@ characters = {
 				original_tag = SLO
 			}
 			available = { 
-				has_government = fascism	
+				if = {
+					limit = { has_government = democratic }
+					AND = {
+						SLO_nationalists_largest_party_trigger = yes
+						SLO_nationalists_in_government_trigger = yes
+					}
+				}
+				else = {
+					OR = {
+						has_government = fascism
+						has_completed_focus = SLO_reach_out_to_the_hlinkas_slovak_peoples_party
+					}	
+				}	
 			}				
 			traits  = {
 				SLO_prince_of_terror
+			}
+			
+			on_add = {
+				SLO_move_power_balance_left_10 = yes
 			}
 		}		
 	}	
@@ -874,7 +993,7 @@ characters = {
 			available = { 
 				OR = {
 					has_government = democratic
-					has_government = neutrality
+#					has_government = neutrality
 #					has_completed_focus = SLO_the_workers_paradise
 				}	
 			}				
@@ -909,7 +1028,7 @@ characters = {
 			available = { 
 				OR = {
 					has_government = democratic
-					has_government = neutrality
+#					has_government = neutrality
 #					has_completed_focus = SLO_the_workers_paradise
 				}	
 			}				
@@ -961,10 +1080,17 @@ characters = {
 				original_tag = SLO
 			}
 			available = { 
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 			}				
 			traits  = {
 				SLO_fascist_judge 
+			}
+			
+			on_add = {
+				SLO_move_power_balance_right_5 = yes
 			}
 		}		
 	}
@@ -997,7 +1123,83 @@ characters = {
 			}
 			ai_will_do = {
 				factor = 1.0
-			}	
+			}
+			
+			on_add = {
+				SLO_move_power_balance_right_5 = yes
+			}
+		}	
+	}
+	
+	SLO_julius_stano = { 
+		name = SLO_julius_stano
+
+		portraits={
+			civilian={
+				small="GFX_advisor_SLO_julius_stano"
+			}
+			army={
+				small="GFX_advisor_SLO_julius_stano"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_julius_stano
+			allowed = {
+				original_tag = SLO
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			traits = {
+				SLO_minister_of_transport_and_public_works
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+			
+			on_add = {
+				SLO_move_power_balance_left_5 = yes
+			}
+		}	
+	}
+	
+	SLO_gejza_medricky = { 
+		name = SLO_gejza_medricky
+
+		portraits={
+			civilian={
+				small="GFX_advisor_SLO_gejza_medricky"
+			}
+			army={
+				small="GFX_advisor_SLO_gejza_medricky"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_gejza_medricky
+			allowed = {
+				original_tag = SLO
+			}
+			available = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}	
+			}
+			traits = {
+				SLO_minister_of_the_economy
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+			
+			on_add = {
+				SLO_move_power_balance_right_5 = yes
+			}
 		}	
 	}
 }

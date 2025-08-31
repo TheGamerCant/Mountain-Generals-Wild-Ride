@@ -47,6 +47,15 @@ SLO_skoda_armor_organization = {
 	}
 }
 
+SLO_zvolen_railway_factory_organization = {
+	include = generic_tank_refurbishment_plant_organization
+	icon = GFX_idea_SLO_company_zvolen_railway_factory
+	
+	allowed = {	
+		tag = SLO
+	}
+}
+
 SLO_letecke_opravovne_trenchin = {
 	include = generic_high_agility_fighter_aircraft_organization
 	icon = GFX_idea_SLO_letecke_opravovne_trenchin

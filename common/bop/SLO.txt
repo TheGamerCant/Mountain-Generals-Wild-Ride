@@ -39,24 +39,16 @@ SLO_encroaching_german_influence_bop = {
 				experience_gain_army = 0.25
 				experience_gain_air = 0.15
 				army_armor_attack_factor = 0.15
-				stability_weekly = -0.003
-				war_support_weekly = -0.003
+				stability_weekly = -0.002
+				war_support_weekly = -0.002
 				planning_speed = 0.65
 				justify_war_goal_time = 1.25
 			}
 			on_activate = {
-				set_power_balance_gfx = {
-					id = SLO_encroaching_german_influence_bop
-					side = SLO_bop_left_side
-					gfx = GFX_bop_SLO_swastika_colour
-				}
+			
 			}
 			on_deactivate = {
-				set_power_balance_gfx = {
-					id = SLO_encroaching_german_influence_bop
-					side = SLO_bop_left_side
-					gfx = GFX_bop_SLO_swastika_grey
-				}
+			
 			}
 		}
 		range = {
@@ -70,16 +62,24 @@ SLO_encroaching_german_influence_bop = {
 				experience_gain_army = 0.20
 				experience_gain_air = 0.10
 				army_armor_attack_factor = 0.10
-				stability_weekly = -0.002
-				war_support_weekly = -0.002
+				stability_weekly = -0.001
+				war_support_weekly = -0.001
 				planning_speed = 0.5
 				justify_war_goal_time = 0.75
 			}
 			on_activate = {
-				
+				set_power_balance_gfx = {
+					id = SLO_encroaching_german_influence_bop
+					side = SLO_bop_right_side
+					gfx = GFX_bop_SLO_coat_of_arms_colour
+				}
 			}
 			on_deactivate = {
-			
+				set_power_balance_gfx = {
+					id = SLO_encroaching_german_influence_bop
+					side = SLO_bop_right_side
+					gfx = GFX_bop_SLO_coat_of_arms_grey
+				}
 			}
 		}
 		range = {
@@ -93,7 +93,6 @@ SLO_encroaching_german_influence_bop = {
 				experience_gain_army = 0.12
 				experience_gain_air = 0.06
 				army_armor_attack_factor = 0.05
-				war_support_weekly = -0.001
 				planning_speed = 0.4
 				production_speed_buildings_factor = 0.10
 				justify_war_goal_time = 0.40
@@ -178,10 +177,18 @@ SLO_encroaching_german_influence_bop = {
 				justify_war_goal_time = -0.15
 			}
 			on_activate = {
-			
+				set_power_balance_gfx = {
+					id = SLO_encroaching_german_influence_bop
+					side = SLO_bop_right_side
+					gfx = GFX_bop_SLO_coat_of_arms_colour
+				}
 			}
 			on_deactivate = {
-			
+				set_power_balance_gfx = {
+					id = SLO_encroaching_german_influence_bop
+					side = SLO_bop_right_side
+					gfx = GFX_bop_SLO_coat_of_arms_grey
+				}
 			}
 		}
 		
@@ -196,18 +203,10 @@ SLO_encroaching_german_influence_bop = {
 				consumer_goods_factor = 0.15
 			}
 			on_activate = {
-				set_power_balance_gfx = {
-					id = SLO_encroaching_german_influence_bop
-					side = SLO_bop_right_side
-					gfx = GFX_bop_SLO_coat_of_arms_colour
-				}
+			
 			}
 			on_deactivate = {
-				set_power_balance_gfx = {
-					id = SLO_encroaching_german_influence_bop
-					side = SLO_bop_right_side
-					gfx = GFX_bop_SLO_coat_of_arms_grey
-				}
+			
 			}
 		}
 	}

@@ -23,3 +23,31 @@ HUN_we_finna_seize_zakarpattya = {
 		value = 100
 	}
 }
+
+HUN_we_finna_seize_southern_slovakia = {
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		country_exists = SLO
+		SLO = { has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
+		73 = { is_owned_by = HUN }
+		664 = { is_owned_by = SLO }
+		
+		date < 1937.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = SLO
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		
+		state = 664
+
+		value = 100
+	}
+}

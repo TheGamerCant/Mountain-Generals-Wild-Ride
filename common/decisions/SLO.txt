@@ -24,7 +24,7 @@ SLO_propaganda_decision_category = {
 		visible = { 
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
-				NOT = { has_completed_focus = SLO_a_based_slovakia } 
+				NOT = { OR = { has_completed_focus = SLO_a_based_slovakia has_completed_focus = SLO_a_democracy_if_you_can_keep_it } }
 			}
 		}
 
@@ -502,6 +502,10 @@ SLO_propaganda_decision_category = {
 					has_completed_focus = SLO_consolidation_of_the_regime
 				}
 			}
+			else_if = {
+				limit = { has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
+				has_country_flag = SLO_all_propaganda_available_flag
+			}
 		}
 
 		days_remove = var:SLO.propaganda_campaign_days
@@ -561,6 +565,10 @@ SLO_propaganda_decision_category = {
 					has_country_flag = SLO_all_propaganda_available_flag
 					has_completed_focus = SLO_consolidation_of_the_regime
 				}
+			}
+			else_if = {
+				limit = { has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
+				has_country_flag = SLO_all_propaganda_available_flag
 			}
 		}
 
@@ -1142,6 +1150,7 @@ SLO_propaganda_decision_category = {
 		modifier = {
 			political_power_factor = 0.1
 			neutrality_drift = 0.10
+			fascism_drift = 0.05
 			stability_weekly = 0.001
 		}
 
@@ -8769,6 +8778,60 @@ SLO_encroaching_german_influence_bop_category = {
 			70 = {
 				is_owned_and_controlled_by = ROOT
 			}
+			GER = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+			
+			has_completed_focus = SLO_found_the_zbrojovka_povazska_byrstrica_arms_factory
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+		}
+
+		modifier = {
+			power_balance_weekly = -0.001
+		}
+	
+		fire_only_once = yes
+		days_remove = 730
+		cost = 100
+		
+		complete_effect = {
+			70 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_left_5 = yes
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	SLO_slovenske_rudohorie_iron_ore_processing = {
+
+		icon = steel
+
+		available = {
+			71 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			GER = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
 		}
 
 		allowed = { 
@@ -8787,53 +8850,6 @@ SLO_encroaching_german_influence_bop_category = {
 		cost = 75
 		
 		complete_effect = {
-			70 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_power_balance_value = {
-				id = SLO_encroaching_german_influence_bop
-				value = -0.05
-			}
-		}
-		
-		ai_will_do = {
-			base = 10
-		}
-	}
-	SLO_slovenske_rudohorie_iron_ore_processing = {
-
-		icon = steel
-
-		available = {
-			71 = {
-				is_owned_and_controlled_by = ROOT
-			}
-		}
-
-		allowed = { 
-			original_tag = SLO
-		}
-
-		visible = {
-		}
-
-		modifier = {
-			power_balance_weekly = -0.001
-		}
-	
-		fire_only_once = yes
-		days_remove = 730
-		cost = 50
-		
-		complete_effect = {
 			71 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -8846,16 +8862,169 @@ SLO_encroaching_german_influence_bop_category = {
 				
 				add_resource = {
 					type = steel
-					amount = 30
+					amount = 24
+				}
+				add_resource = {
+					type = aluminium
+					amount = 9
+				}
+				add_resource = {
+					type = tungsten
+					amount = 5
 				}
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_power_balance_value = {
-				id = SLO_encroaching_german_influence_bop
-				value = -0.05
+			add_to_variable = { SLO_economy_dm_local_resources_factor = 0.15 }
+			
+			custom_effect_tooltip = SLO_slovenske_rudohorie_iron_ore_processing_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_left_5 = yes
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	SLO_military_exersizes_with_germany = {
+
+		icon = generic_army_support
+
+		available = {
+			GER = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
 			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = no
+		days_remove = 0
+		days_re_enable = 365
+		cost = 50
+		
+		complete_effect = {
+			SLO_move_power_balance_left_15 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+					
+			army_experience = 50
+			air_experience = 50
+			navy_experience = 25
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			GER = {
+				army_experience = 50
+				air_experience = 50
+				navy_experience = 25
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	SLO_military_technological_exchanges_with_germany = {
+
+		icon = generic_merge_plant_tank
+
+		available = {
+			GER = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = yes
+		cost = 75
+		
+		complete_effect = {
+			SLO_move_power_balance_left_10 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+					
+			add_tech_bonus = {
+				name = SLO_military_technological_exchanges_with_germany
+				bonus = 1.0
+				uses = 2
+				category = armor
+				category = air_equipment
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			GER = {
+				add_tech_bonus = {
+					name = SLO_military_technological_exchanges_with_germany
+					bonus = 0.5
+					uses = 2
+					category = armor
+					category = air_equipment
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	SLO_request_german_generals_and_advisors = {
+
+		icon = generic_army_support
+
+		available = {
+			GER = {
+				exists = yes
+				is_in_faction_with = ROOT
+				has_war = yes
+			}
+			has_war = yes
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = yes
+		cost = 50
+		
+		complete_effect = {
+			GER = { country_event = { id = slovakia.56 hours = 4 random_hours = 6 } }
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = if_they_accept
+			event_option_tooltip = slovakia.55.a
 		}
 		
 		ai_will_do = {

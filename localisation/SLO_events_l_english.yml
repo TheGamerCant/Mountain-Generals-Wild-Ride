@@ -198,9 +198,43 @@
  slovakia.45.desc:0 "Mountain General watched over Bratislava from his balcony. It was late at night, and after a long day of ensuring Slovakia's basedness, he liked to relax by getting some fresh air, and observing his loyal citizens.\n\nAfter several months of tough manoeuvring and the administration of bullets to many skulls, the status of the new regime was secure. On this fine Slovak evening, he pondered how to celebrate such a momentous achievement. It was then that a brilliant idea sprung into his head, as one often does.\n\n"The old Gregorian Shmegshmorian calendar is a symbol of Hungolian degeneracy!" Mountain General thundered the following morning, "It cannot represent the new Slovak state and people. What we need is a new system, tied to our glorious regime."\n\n"Henceforth, just as the Gregorian starts with Christ and the Hijri with Muhammed's travels, ours shall start with ME!""
  slovakia.45.a:0 "What?"
  
+ slovakia.46.title:0 "Hungary Launches An Offensive Into [73.GetName]"
+ slovakia.46.desc:0 "With the nascent Slovak State still rebuilding, [HUN.GetLeader] has launched a surprise attack against our forces in [?SLO.border_war_state.GetName], aiming to take the territory before we can react."
+ slovakia.46.a:0 "Ah!"
+ 
+ slovakia.47.title:0 "Victory in [?SLO.border_war_state.GetName]"
+ slovakia.47.desc:0 "Despite their best efforts, the Hungarian dogs have been pushed back from their initial advances into [?SLO.border_war_state.GetName], battered and bruised. Our brave Slovak boys successfully defended their positions against the Hungarians, showing the world the strength of the [SLO.GetNameDef]!"
+ slovakia.47.a:0 "Ura!"
+ 
+ slovakia.48.title:0 "Defeat in [?SLO.border_war_state.GetName]"
+ slovakia.48.desc:0 "Caught on the back foot, our troops have been forced to retreat from their positions in [?SLO.border_war_state.GetName], paving way for Hungary to advance into the region and declare it part of [HUN.GetNameDef]."
+ slovakia.48.a:0 "How could this have happened?"
+ 
  slovakia.51.title:0 "Unease in the Military"
  slovakia.51.desc:0 "With the consolidation of power around Mountain General and his clique, various democratically-minded officers, generals and ordinary soldiers are plotting against Mountain General. Reports indicate massive discontent with our regime, weakening any ability for us to respond to the various vultures circling the new Slovak state."
  slovakia.51.a:0 "We must deal with these traitors at once!"
+ 
+ slovakia.52.title:0 "Encroaching German Influence"
+ slovakia.52.desc:0 "There's an old saying in geopolitics - the strong do what they want, and the weak do what they must.\n\nOur hostile relations with our neighbours has lead many of the more radical members of our government to seek increased co-operation with the regime of [GER.GetLeader], positioning ourselves as a loyal ally of the Reich in exchange for protection. Of course, Mountain General is more reluctant to welcome Hitler to Bratislava with such welcome arms, but politics being what they may, we will have to deal with Germany at some point."
+ slovakia.52.a:0 "Why can't we have Sweden or Canada for a neighbour?"
+ slovakia.52.b:0 "Some co-operation is in both our nations' interests"
+ 
+ slovakia.53.title:0 "Hungary Launches An Offensive Into [664.GetName]"
+ slovakia.53.desc:0 "After their seizure of [73.GetName], many feared that a Hungarian strike against Southern Slovakia was only a matter of time. Today, that has been proven right.\n\nHungarian troops have begin shelling positions around Košice, Lučenec and Komárno, hoping to seize the southern strip of Slovakia."
+ slovakia.53.a:0 "We cannot afford to lose again!"
+ 
+ slovakia.54.title:0 "Fate of the Democratic Officers"
+ slovakia.54.desc:0 "Following a thorough shakedown in the military, we have apprehended and placed in custody several generals and officers whom we suspect harbour loyalties to the old regime. Such filth and traitorous nonsense has no place in the new Slovakia, but there remains some debate about what to do with them.\n\nOne the one hand, executing them would send a clear message about just how far we are willing to go to root out traitors to Mountain General, however doing so might also cause more even discontent in the army, as other officers fear they may be next. After all, when the penalty for harbouring such thoughts and acting on them is the same, why wouldn't rebellious officers go for it?"
+ slovakia.54.a:0 "Take no chances - execute them"
+ slovakia.54.b:0 "Imprison them, they may come in useful"
+ 
+ slovakia.55.title:0 "Germany Agrees to Send Advisors"
+ slovakia.55.desc:0 "Following our request to further integrate German officers into our army, Germany has agreed to send several generals and advisors to help assist us in our joint war efforts."
+ slovakia.55.a:0 "Excellent"
+ 
+ slovakia.56.title:0 "Slovakia Requests German Generals and Advisors"
+ slovakia.56.desc:0 "Why are you playing Germany in the funni Slovakia mod?"
+ slovakia.56.a:0 "Okay"
  
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to dictate terms of surrender to the once proud Czechoslovak government in Prague. For the first time ever, Slovakia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."

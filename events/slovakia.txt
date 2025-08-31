@@ -104,6 +104,10 @@ country_event = {
 			disband = no	#We don't get their manpower of equipment
 		}
 		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_ideas = SLO_unstable_regime_idea_1
+		
 		hidden_effect = { 
 			#News about our success!
 			news_event = { id = slovakia_news.1 hours = 6 random_hours = 4 } 
@@ -555,13 +559,7 @@ country_event = {
 		
 		if = { 
 			limit = { has_idea = SLO_unclear_ideology_idea }
-			swap_ideas = {
-				remove_idea = SLO_unclear_ideology_idea
-				add_idea = SLO_unstable_regime_idea_1
-			}
-		}
-		else = {
-			add_ideas = SLO_unstable_regime_idea_1
+			remove_ideas = SLO_unclear_ideology_idea
 		}
 	}
 }
@@ -579,21 +577,7 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		
-		hidden_effect = { country_event = { id = slovakia.27 days = 5 random_days = 5 } }
-		
-#		complete_national_focus = SLO_strong_leader_strong_slovakia
-		mark_focus_tree_layout_dirty = yes
-		
-		custom_effect_tooltip = generic_skip_one_line_tt
-		
-		if = { 
-			limit = { has_idea = SLO_unclear_ideology_idea }
-			swap_ideas = {
-				remove_idea = SLO_unclear_ideology_idea
-				add_idea = SLO_unstable_regime_idea_1
-			}
-		}
+
 	}
 }
 
@@ -622,17 +606,6 @@ country_event = {
 				remove_idea = SLO_unclear_ideology_idea
 				add_idea = SLO_unclear_ideology_idea_2
 			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_ideas = SLO_unstable_regime_idea_1
-		}
-		else = {
-			add_ideas = SLO_unclear_ideology_idea_2
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_ideas = SLO_unstable_regime_idea_1
 		}
 		
 		hidden_effect = {
@@ -665,6 +638,11 @@ country_event = {
 			remove_ideas = SLO_unclear_ideology_idea
 		}
 		
+		if = { 
+			limit = { has_idea = SLO_unstable_regime_idea_1 }
+			remove_ideas = SLO_unstable_regime_idea_1
+		}
+		
 		hidden_effect = { country_event = { id = slovakia.42 } }
 	}
 }
@@ -690,10 +668,7 @@ country_event = {
 		
 		if = { 
 			limit = { has_idea = SLO_unclear_ideology_idea }
-			swap_ideas = {
-				remove_idea = SLO_unclear_ideology_idea
-				add_idea = SLO_unstable_regime_idea_1
-			}
+			remove_ideas = SLO_unclear_ideology_idea
 		}
 	}
 }
@@ -719,10 +694,7 @@ country_event = {
 		
 		if = { 
 			limit = { has_idea = SLO_unclear_ideology_idea }
-			swap_ideas = {
-				remove_idea = SLO_unclear_ideology_idea
-				add_idea = SLO_unstable_regime_idea_1
-			}
+			remove_ideas = SLO_unclear_ideology_idea
 		}
 	}
 }
@@ -748,10 +720,7 @@ country_event = {
 		
 		if = { 
 			limit = { has_idea = SLO_unclear_ideology_idea }
-			swap_ideas = {
-				remove_idea = SLO_unclear_ideology_idea
-				add_idea = SLO_unstable_regime_idea_1
-			}
+			remove_ideas = SLO_unclear_ideology_idea
 		}
 	}
 }
@@ -1678,6 +1647,8 @@ country_event = {
 #					}
 #				}
 			}
+			
+			set_variable = { SLO.border_war_state = 73 }
 		
 			start_border_war = {
 				change_state_after_war = no
@@ -1726,7 +1697,11 @@ country_event = {
 		name = slovakia.47.a
 		ai_chance = {
 			base = 10
-		}	
+		}
+		
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 50
 	}
 }
 
@@ -1743,7 +1718,7 @@ country_event = {
 		name = slovakia.48.a
 		ai_chance = {
 			base = 10
-		}	
+		}
 	}
 }
 
@@ -1758,7 +1733,12 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			HUN = { remove_ideas = SLO_HUN_seized_initiative }
+			HUN = { 
+				if = { 
+					limit = { has_idea = SLO_HUN_seized_initiative }
+					remove_ideas = SLO_HUN_seized_initiative 
+				}
+			}
 		}
 	}
 
@@ -1768,7 +1748,13 @@ country_event = {
 			base = 10
 		}	
 		
-		transfer_state = 73
+		transfer_state = var:SLO.border_war_state
+		clear_variable = SLO.border_war_state
+		
+		#Take Southern Slovakia soon
+		hidden_effect = {
+			SLO = { country_event = { id = slovakia.53 days = 42 random_days = 28 } }
+		}
 	}
 }
 
@@ -1783,7 +1769,12 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			HUN = { remove_ideas = SLO_HUN_seized_initiative }
+			HUN = { 
+				if = { 
+					limit = { has_idea = SLO_HUN_seized_initiative }
+					remove_ideas = SLO_HUN_seized_initiative 
+				}
+			}
 		}
 	}
 
@@ -1792,6 +1783,7 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}	
+		clear_variable = SLO.border_war_state
 	}
 }
 
@@ -1808,7 +1800,7 @@ country_event = {
 		hidden_effect = { 
 			add_ideas = SLO_unruly_military 
 			
-			country_event = { id = slovakia.46 days = 14 random_days = 14 }
+			country_event = { id = slovakia.46 days = 25 }
 		}
 	}
 
@@ -1821,6 +1813,280 @@ country_event = {
 		effect_tooltip = {
 			add_ideas = SLO_unruly_military
 		}
+	}
+}
+
+#Encoraching German Influence
+country_event = {
+	id = slovakia.52
+	title = slovakia.52.title
+	desc = slovakia.52.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_german_inspect_troops
+
+	option = { 
+		name = slovakia.52.a
+		ai_chance = {
+			base = 10
+		}
+		
+		if = {
+			limit = {
+				has_any_power_balance = no
+			}
+			set_power_balance = {
+				id = SLO_encroaching_german_influence_bop
+				left_side = SLO_bop_left_side 
+				right_side = SLO_bop_right_side 
+				set_value = 0.90
+			}
+			
+			set_power_balance_gfx = {
+				id = SLO_encroaching_german_influence_bop
+				side = SLO_bop_right_side
+				gfx = GFX_bop_SLO_coat_of_arms_colour
+			}
+		}
+	}
+
+	option = { 
+		name = slovakia.52.b
+		ai_chance = {
+			base = 10
+		}
+		
+		if = {
+			limit = {
+				has_any_power_balance = no
+			}
+			set_power_balance = {
+				id = SLO_encroaching_german_influence_bop
+				left_side = SLO_bop_left_side 
+				right_side = SLO_bop_right_side 
+				set_value = 0.75
+			}
+			
+			set_power_balance_gfx = {
+				id = SLO_encroaching_german_influence_bop
+				side = SLO_bop_right_side
+				gfx = GFX_bop_SLO_coat_of_arms_colour
+			}
+		}
+	}
+}
+
+#Hungary attacks Southern Slovakia
+country_event = {
+	id = slovakia.53
+	title = slovakia.53.title
+	desc = slovakia.53.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_hungarian_soldiers
+
+	immediate = {
+		hidden_effect = { 
+			set_variable = { SLO.border_war_state = 664 }
+		
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 43
+					num_provinces = 4
+					on_win = slovakia.49
+					on_lose = slovakia.50
+					on_cancel = slovakia.50
+				}
+
+				defender = {
+					state = 664
+					num_provinces = 4
+					on_win = slovakia.47
+					on_lose = slovakia.48
+					on_cancel = slovakia.47
+				}
+			}
+			set_border_war_data = {
+				attacker = 43
+				defender = 664
+				combat_width = 105
+			}
+		}
+	}
+
+	option = { 
+		name = slovakia.53.a
+		ai_chance = {
+			base = 10
+		}	
+	}
+}
+
+#Fate of democratic officers
+country_event = {
+	id = slovakia.54
+	title = slovakia.54.title
+	desc = slovakia.54.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_SLO_jan_golian
+
+	#Execute them
+	option = { 
+		name = slovakia.54.a
+		ai_chance = {
+			base = 0
+		}	
+		
+		retire_character = SLO_rudolf_viest
+		retire_character = SLO_jan_golian
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_manpower = -2
+		add_stability = -0.01
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_political_power = 50
+	}
+	
+	#Imprison them
+	option = { 
+		name = slovakia.54.b
+		ai_chance = {
+			base = 10
+		}	
+		
+		set_country_flag = SLO_democratic_officers_imprisoned
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		if = {
+			limit = { is_ai = no }
+			add_political_power = -100
+		}
+	}
+}
+
+#Transfer GER_ewald_von_kleist and GER_carl_heinrich_von_stulpnagel to Slovakia
+country_event = {
+	id = slovakia.55
+	title = slovakia.55.title
+	desc = slovakia.55.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_panzer_attack
+
+	option = { 
+		name = slovakia.55.a
+		ai_chance = {
+			base = 10
+		}	
+		
+#		set_nationality = {
+#			set_nationality = {
+#				target_country = SLO
+#				character = GER_ewald_von_kleist
+#			}
+#		}
+		
+		every_possible_country = {
+			limit = { OR = { has_character = GER_ewald_von_kleist has_character = GER_carl_heinrich_von_stulpnagel } }
+			if = {
+				limit = { has_character = GER_ewald_von_kleist has_character = GER_carl_heinrich_von_stulpnagel }
+				GER_ewald_von_kleist = { set_nationality = SLO }
+				GER_carl_heinrich_von_stulpnagel = { set_nationality = SLO }
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				custom_effect_tooltip = available_military_high_command
+				show_ideas_tooltip = GER_ewald_von_kleist 
+				show_ideas_tooltip = GER_carl_heinrich_von_stulpnagel 
+			}
+			else = {
+				if = {
+					limit = { has_character = GER_ewald_von_kleist }
+					GER_ewald_von_kleist = { set_nationality = SLO }
+					
+					custom_effect_tooltip = generic_skip_one_line_tt
+					
+					custom_effect_tooltip = available_military_high_command
+					show_ideas_tooltip = GER_ewald_von_kleist 
+				}
+				if = {
+					limit = { has_character = GER_carl_heinrich_von_stulpnagel }
+					GER_carl_heinrich_von_stulpnagel = { set_nationality = SLO }
+					
+					custom_effect_tooltip = generic_skip_one_line_tt
+					
+					custom_effect_tooltip = available_military_high_command
+					show_ideas_tooltip = GER_carl_heinrich_von_stulpnagel 
+				}
+			}
+		}
+			
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_move_power_balance_left_15 = yes
+	}
+}
+
+country_event = {
+	id = slovakia.56
+	title = slovakia.56.title
+	desc = slovakia.56.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_panzer_attack
+
+	option = { 
+		name = slovakia.56.a
+		ai_chance = {
+			base = 10
+		}	
+		
+		effect_tooltip = {
+			every_possible_country = {
+				limit = { OR = { has_character = GER_ewald_von_kleist has_character = GER_carl_heinrich_von_stulpnagel } }
+				if = {
+					limit = { has_character = GER_ewald_von_kleist has_character = GER_carl_heinrich_von_stulpnagel }
+					GER_ewald_von_kleist = { set_nationality = SLO }
+					GER_carl_heinrich_von_stulpnagel = { set_nationality = SLO }
+					
+					custom_effect_tooltip = generic_skip_one_line_tt
+					
+					custom_effect_tooltip = available_military_high_command
+					show_ideas_tooltip = GER_ewald_von_kleist 
+					show_ideas_tooltip = GER_carl_heinrich_von_stulpnagel 
+				}
+				else = {
+					if = {
+						limit = { has_character = GER_ewald_von_kleist }
+						GER_ewald_von_kleist = { set_nationality = SLO }
+						
+						custom_effect_tooltip = generic_skip_one_line_tt
+						
+						custom_effect_tooltip = available_military_high_command
+						show_ideas_tooltip = GER_ewald_von_kleist 
+					}
+					if = {
+						limit = { has_character = GER_carl_heinrich_von_stulpnagel }
+						GER_carl_heinrich_von_stulpnagel = { set_nationality = SLO }
+						
+						custom_effect_tooltip = generic_skip_one_line_tt
+						
+						custom_effect_tooltip = available_military_high_command
+						show_ideas_tooltip = GER_carl_heinrich_von_stulpnagel 
+					}
+				}
+			}
+		}
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO = { country_event =  { id = slovakia.55 hours = 4 } }
 	}
 }
 

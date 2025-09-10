@@ -114,4 +114,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/propaganda/SLO_mountain_general_president_of_the_slovak_republic.dds"
 		noOfFrames = 5
 	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_our_friendship_is_inseperable"
+		texturefile = "gfx/interface/propaganda/SLO_our_friendship_is_inseperable.dds"
+		noOfFrames = 5
+	}
 }

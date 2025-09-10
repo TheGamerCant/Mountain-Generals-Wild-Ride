@@ -123,7 +123,11 @@ SLO_corparatist_economy_dynamic_modifier = {
 	industrial_capacity_dockyard = SLO_economy_dm_industrial_capacity_dockyard
 	research_speed_factor = SLO_economy_dm_research_speed_factor
 	production_speed_arms_factory_factor = SLO_economy_dm_production_speed_arms_factory_factor
+	production_speed_industrial_complex_factor = SLO_economy_dm_production_speed_industrial_complex_factor
 	local_resources_factor = SLO_economy_dm_local_resources_factor
+	production_speed_infrastructure_factor = SLO_economy_dm_production_speed_infrastructure_factor
+	global_building_slots_factor = SLO_economy_dm_global_building_slots_factor
+	monthly_population = SLO_economy_dm_monthly_population
 }
 
 SLO_army_dynamic_modifier = {
@@ -310,4 +314,6 @@ SLO_new_slovak_state_dynamic_modifier = {
 	
 	political_power_factor = SLO_nss_dm_political_power_factor
 	political_advisor_cost_factor  = SLO_nss_dm_political_advisor_cost_factor 
+	neutrality_drift = SLO_nss_dm_neutrality_drift
+	fascism_drift = SLO_nss_dm_fascism_drift
 }

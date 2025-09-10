@@ -1195,11 +1195,12 @@ SLO_propaganda_decision_category = {
 		
 		fire_only_once = no
 
-		cost = var:SLO.propaganda_PP_COST_array^21
+		cost = var:SLO.propaganda_PP_COST_array^22
 
 		modifier = {
 			political_power_factor = 0.1
 			subjects_autonomy_gain = -0.5
+			autonomy_gain = 0.5
 			neutrality_drift = 0.05
 		}
 
@@ -1211,6 +1212,60 @@ SLO_propaganda_decision_category = {
 		remove_effect = {
 			set_variable = { SLO.propaganda_campaign_to_end = 22 }
 			SLO_end_propaganda_campaign = yes
+			SLO_move_power_balance_right_20 = yes
+		}
+	}
+	
+	# Our friendship is inseparable
+	SLO_propaganda_campaign_23 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_power_balance = { id = SLO_encroaching_german_influence_bop }
+			}
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^23
+
+		modifier = {
+			army_org_factor = 0.10
+			army_morale_factor = 0.10
+			war_support_weekly = 0.002
+			autonomy_gain = -0.2
+			consumer_goods_factor = -0.05
+			master_ideology_drift = 0.10
+		}
+
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 23 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 23 }
+			SLO_end_propaganda_campaign = yes
+			SLO_move_power_balance_left_10 = yes
 		}
 	}
 }
@@ -8814,6 +8869,13 @@ SLO_encroaching_german_influence_bop_category = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			SLO_move_power_balance_left_5 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = 0.05 }
+			add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.05 }
+			
+			custom_effect_tooltip = SLO_povazska_bystrica_arms_factory_tt
 		}
 		
 		ai_will_do = {
@@ -9003,6 +9065,11 @@ SLO_encroaching_german_influence_bop_category = {
 				has_war = yes
 			}
 			has_war = yes
+			
+			power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value < 0.0
+			}
 		}
 
 		allowed = { 

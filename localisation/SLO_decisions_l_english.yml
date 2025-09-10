@@ -159,6 +159,7 @@
  
  SLO_povazska_bystrica_arms_factory:0 "Expand the Zbrojovka Považská Bystrica Arms Factory"
  SLO_povazska_bystrica_arms_factory_desc:0 "The Zbrojovka Považská Bystrica branch is one of Slovaia's most productive factories, and German companies have been looking to invest and refit it's machines to produce arms for the German Army."
+ SLO_povazska_bystrica_arms_factory_tt:0 "$SLO_modify_the_slovak_economy_by$$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §G+5.00%§!\n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+5.00%§!"
  SLO_slovenske_rudohorie_iron_ore_processing:0 "Slovenské Rudohorie Iron Ore Processing Plant"
  SLO_slovenske_rudohorie_iron_ore_processing_desc:0 "Eastern Slovakia is home to significant deposits of iron ore and other valuable minerals, expanding it with German help will boost the local economy while providing Germany with a steady supply of materials."
  SLO_slovenske_rudohorie_iron_ore_processing_tt:0 "$SLO_modify_the_slovak_economy_by$$MODIFIER_LOCAL_RESOURCES_FACTOR$: §G+15.00%§!"

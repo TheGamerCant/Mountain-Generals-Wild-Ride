@@ -15,4 +15,9 @@ opinion_modifiers = {
 	SLO_denounced_by_mountain_general = {
 		value = -25
 	}
+	SLO_strengthened_economic_ties = {
+		value = 30
+		decay = 2
+		months = 24
+	}
 }

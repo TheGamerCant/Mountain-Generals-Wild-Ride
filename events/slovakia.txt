@@ -1699,9 +1699,17 @@ country_event = {
 			base = 10
 		}
 		
-		add_stability = 0.05
-		add_war_support = 0.05
-		add_political_power = 50
+		#Give different bonuses when fighting over Southern Slovakia vs Carpathian Ruthenia
+		if = {
+			limit = { 73 = { is_owned_and_controlled_by = HUN } }
+			add_stability = 0.025
+			add_political_power = 25
+		}
+		else = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 50
+		}
 	}
 }
 
@@ -1847,7 +1855,12 @@ country_event = {
 				side = SLO_bop_right_side
 				gfx = GFX_bop_SLO_coat_of_arms_colour
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
+		
+		custom_effect_tooltip = unlock_propaganda_campaign_tt
+		unlock_decision_tooltip = SLO_propaganda_campaign_23
 	}
 
 	option = { 
@@ -1872,7 +1885,12 @@ country_event = {
 				side = SLO_bop_right_side
 				gfx = GFX_bop_SLO_coat_of_arms_colour
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
+		
+		custom_effect_tooltip = unlock_propaganda_campaign_tt
+		unlock_decision_tooltip = SLO_propaganda_campaign_23
 	}
 }
 
@@ -2033,6 +2051,7 @@ country_event = {
 	}
 }
 
+#For GER - Slovakia wants some generals
 country_event = {
 	id = slovakia.56
 	title = slovakia.56.title
@@ -2087,6 +2106,104 @@ country_event = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
 		SLO = { country_event =  { id = slovakia.55 hours = 4 } }
+	}
+}
+
+#We have become a puppet of Germany
+country_event = {
+	id = slovakia.57
+	title = slovakia.57.title
+	desc = slovakia.57.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_german_inspect_troops
+
+	immediate = {
+		hidden_effect = {
+			GER = {
+				if = {
+					limit = { has_dlc = "Death or Dishonor" has_government = fascism }
+					set_autonomy = {
+						target = SLO
+						autonomous_state = autonomy_reichsprotectorate
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+				else = {
+					set_autonomy = {
+						target = SLO
+						autonomous_state = autonomy_puppet
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = slovakia.57.a
+		ai_chance = {
+			base = 10
+		}	
+		
+		effect_tooltip = {
+			GER = {
+				if = {
+					limit = { has_dlc = "Death or Dishonor" has_government = fascism }
+					set_autonomy = {
+						target = SLO
+						autonomous_state = autonomy_reichsprotectorate
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+				else = {
+					set_autonomy = {
+						target = SLO
+						autonomous_state = autonomy_puppet
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+			}
+		}
+	}
+}
+
+#Appoint political advisor - space free
+country_event = {
+	id = slovakia.58
+	title = slovakia.58.title
+	desc = slovakia.58.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_german_inspect_troops
+
+	after = {
+		hidden_effect = {
+			SLO_clear_political_advisor_flags = yes
+			SLO_clear_high_command_flags = yes
+		}
+	}
+
+	#Accept
+	option = { 
+		name = slovakia.58.a
+		ai_chance = {
+			base = 10
+		}	
+		
+#		every_character = {
+#			limit = { has_character_flag = SLO_political_advisor_selected_flag }
+#			
+#			add_advisor_role = {
+#				activate = yes
+#			}
+#		}
+
+		add_ideas = SLO_julius_stano
 	}
 }
 

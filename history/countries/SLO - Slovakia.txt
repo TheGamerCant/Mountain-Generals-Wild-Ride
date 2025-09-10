@@ -343,6 +343,9 @@ add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_na_straz_
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_mountain_general_president_of_the_slovak_republic_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mountain_general_president_of_the_slovak_republic_idea }
 
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_our_friendship_is_inseperable_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_our_friendship_is_inseperable_idea }
+
 
 
 resize_array = { array = SLO.propaganda_PP_COST_array size = SLO.propaganda_GFX_array^num value = 15 }

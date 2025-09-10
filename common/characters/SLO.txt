@@ -123,7 +123,7 @@ characters = {
 #				}
 #			}
 			available = {
-				NOT = { has_idea = SLO_ferdinand_catlos_political_advisor }
+				NOT = { has_idea = SLO_ferdinand_catlos }
 			}
 			traits = {
 				army_chief_morale_2
@@ -138,7 +138,7 @@ characters = {
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = SLO_ferdinand_catlos_political_advisor
+			idea_token = SLO_ferdinand_catlos
 			allowed = {
 				original_tag = SLO
 			}
@@ -210,7 +210,7 @@ characters = {
 		advisor={
 			slot = army_chief
 			idea_token = SLO_augustin_malar_army_chief
-			available = { NOT = { has_idea = SLO_augustin_malar_high_command } }
+			available = { NOT = { has_idea = SLO_augustin_malar } }
 			allowed = {
 				original_tag = SLO
 			}
@@ -228,7 +228,7 @@ characters = {
 		}
 		advisor={
 			slot = high_command
-			idea_token = SLO_augustin_malar_high_command
+			idea_token = SLO_augustin_malar
 			available = { NOT = { has_idea = SLO_augustin_malar_army_chief } }
 			allowed = {
 				original_tag = SLO
@@ -391,7 +391,7 @@ characters = {
 		
 		advisor={
 			slot = political_advisor
-			idea_token = SLO_rudolf_viest_political_advisor
+			idea_token = SLO_rudolf_viest
 			allowed = {
 				original_tag = SLO
 			}
@@ -427,7 +427,7 @@ characters = {
 				NOT = { has_country_flag = SLO_democratic_officers_imprisoned }
 			}
 			available = {
-				NOT = { has_idea = SLO_rudolf_viest_political_advisor }
+				NOT = { has_idea = SLO_rudolf_viest }
 				hidden_trigger = { NOT = { has_country_flag = SLO_democratic_officers_imprisoned } }
 			}		
 			traits = {
@@ -554,7 +554,7 @@ characters = {
 			
 			slot = theorist
 			idea_token = SLO_juraj_puskar_theorist
-			available = { NOT = { has_idea = SLO_juraj_puskar_high_command } }
+			available = { NOT = { has_idea = SLO_juraj_puskar } }
 			ledger = air
 			allowed = {
 				original_tag = SLO
@@ -566,7 +566,7 @@ characters = {
 		}
 		advisor={
 			slot = high_command
-			idea_token = SLO_juraj_puskar_high_command
+			idea_token = SLO_juraj_puskar
 			ledger = air
 			available = { NOT = { has_idea = SLO_juraj_puskar_theorist } }
 			allowed = {

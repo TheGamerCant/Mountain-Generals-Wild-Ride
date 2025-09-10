@@ -112,6 +112,9 @@ ideas ={
 		
 		SLO_GFX_propaganda_mountain_general_president_of_the_slovak_republic_idea = {}
 		SLO_NAME_propaganda_mountain_general_president_of_the_slovak_republic_idea = {}
+		
+		SLO_GFX_propaganda_our_friendship_is_inseperable_idea = {}
+		SLO_NAME_propaganda_our_friendship_is_inseperable_idea = {}
 	
 	
 		

@@ -68,6 +68,8 @@
  SLO_NAME_propaganda_mountain_general_president_of_the_slovak_republic_idea:0 "Mountain General, first President of the Slovak Republic"
  SLO_GFX_propaganda_mountain_general_president_of_the_slovak_republic_idea:0 "GFX_propaganda_SLO_mountain_general_president_of_the_slovak_republic"
  
+ SLO_NAME_propaganda_our_friendship_is_inseperable_idea:0 "Our friendship is inseparable!"
+ SLO_GFX_propaganda_our_friendship_is_inseperable_idea:0 "GFX_propaganda_SLO_our_friendship_is_inseperable"
  
  SLO_propaganda_decision_category:0 "[SLO.GetPropagandaCategoryName]"
  SLO_minitru:0 "Minitru"
@@ -124,3 +126,5 @@
  SLO_propaganda_campaign_21_desc:0 ""
  SLO_propaganda_campaign_22:0 "[?SLO.propaganda_NAME_array^22.GetTokenLocalizedKey]"
  SLO_propaganda_campaign_22_desc:0 ""
+ SLO_propaganda_campaign_23:0 "[?SLO.propaganda_NAME_array^23.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_23_desc:0 ""

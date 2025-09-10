@@ -43,9 +43,13 @@ SLO_encroaching_german_influence_bop = {
 				war_support_weekly = -0.002
 				planning_speed = 0.65
 				justify_war_goal_time = 1.25
+				consumer_goods_factor = 0.25
 			}
 			on_activate = {
-			
+				if = {
+					limit = { is_subject = no }
+					country_event = { id = slovakia.57 hours = 4 random_hours = 4 }
+				}
 			}
 			on_deactivate = {
 			
@@ -66,12 +70,18 @@ SLO_encroaching_german_influence_bop = {
 				war_support_weekly = -0.001
 				planning_speed = 0.5
 				justify_war_goal_time = 0.75
+				consumer_goods_factor = 0.15
 			}
 			on_activate = {
 				set_power_balance_gfx = {
 					id = SLO_encroaching_german_influence_bop
 					side = SLO_bop_right_side
 					gfx = GFX_bop_SLO_coat_of_arms_colour
+				}
+				
+				if = {
+					limit = { is_subject = no }
+					country_event = { id = slovakia.57 hours = 4 random_hours = 4 }
 				}
 			}
 			on_deactivate = {
@@ -96,9 +106,13 @@ SLO_encroaching_german_influence_bop = {
 				planning_speed = 0.4
 				production_speed_buildings_factor = 0.10
 				justify_war_goal_time = 0.40
+				consumer_goods_factor = 0.07
 			}
 			on_activate = {
-			
+				if = {
+					limit = { is_subject = no }
+					country_event = { id = slovakia.57 hours = 4 random_hours = 4 }
+				}
 			}
 			on_deactivate = {
 			

@@ -1211,3 +1211,141 @@ SLO_move_power_balance_left_25 = {
 		}
 	}
 }
+
+SLO_get_current_political_advisors = {
+	set_variable = { SLO.idx = 1 }
+	every_character = {
+		limit = {
+			is_political_advisor = yes
+			advisor_can_be_fired = yes
+		}
+		
+		meta_effect = {
+			text = { 
+				set_character_flag = SLO_political_advisor_to_remove_flag_[INDEX]
+			}
+			
+			INDEX = "[?SLO.idx|0]"
+		}
+		add_to_variable = { SLO.idx = 1 }
+	}
+	clear_variable = SLO.idx
+}
+
+SLO_clear_political_advisor_flags = {
+	every_character = {
+		clr_character_flag = SLO_political_advisor_to_remove_flag_1
+		clr_character_flag = SLO_political_advisor_to_remove_flag_2
+		clr_character_flag = SLO_political_advisor_to_remove_flag_3
+		clr_character_flag = SLO_political_advisor_selected_flag
+	}
+}
+
+SLO_get_german_pick_for_political_advisor = {
+	random_character = {
+		limit = {
+			OR = { is_character = SLO_karol_murgas is_character = SLO_vojtech_tuka is_character = SLO_alexander_mach is_character = SLO_julius_stano }
+		}
+		set_character_flag = SLO_political_advisor_selected_flag
+	}
+}
+
+SLO_get_current_high_command = {
+	set_variable = { SLO.idx = 1 }
+	every_character = {
+		limit = {
+			is_high_command = yes
+			advisor_can_be_fired = yes
+		}
+		
+		meta_effect = {
+			text = { 
+				set_character_flag = SLO_high_command_to_remove_flag_[INDEX]
+			}
+			
+			INDEX = "[?SLO.idx|0]"
+		}
+		add_to_variable = { SLO.idx = 1 }
+	}
+	clear_variable = SLO.idx
+}
+
+SLO_clear_high_command_flags = {
+	every_character = {
+		clr_character_flag = SLO_high_command_to_remove_flag_1
+		clr_character_flag = SLO_high_command_to_remove_flag_2
+		clr_character_flag = SLO_high_command_to_remove_flag_3
+		clr_character_flag = SLO_high_command_selected_flag
+	}
+}
+
+SLO_get_german_pick_for_high_command = {
+	random_character = {
+		limit = {
+			OR = { is_character = GER_ewald_von_kleist is_character = GER_carl_heinrich_von_stulpnagel is_character = SLO_rudolf_pilfousek }
+		}
+		set_character_flag = SLO_high_command_selected_flag
+	}
+}
+
+
+SLO_fire_event_to_pick_advisor = {
+	SLO_get_current_political_advisors = yes
+	SLO_get_german_pick_for_political_advisor = yes
+	SLO_get_current_high_command = yes
+	SLO_get_german_pick_for_high_command = yes
+	
+	#We have both political advisor and high command characters available to choose
+	if = {
+		limit = { 
+			any_character = { has_character_flag = SLO_political_advisor_selected_flag }
+			any_character = { has_character_flag = SLO_high_command_selected_flag }
+		}
+		
+		#60% chance for political advisor, 40% chance for high command
+		random_list = {
+			60 = {
+				
+			}
+			40 = {
+				
+			}
+		}
+		
+		set_country_flag = { flag = SLO_germany_appointed_a_new_advisor_flag days = 180 value = 1 }
+	}
+	#We only have political advisors available
+	else_if = {
+		limit = { 
+			any_character = { has_character_flag = SLO_political_advisor_selected_flag }
+			NOT = { any_character = { has_character_flag = SLO_high_command_selected_flag } }
+		}
+		
+		set_country_flag = { flag = SLO_germany_appointed_a_new_advisor_flag days = 180 value = 1 }
+	}
+	#We only have high command available
+	else_if = {
+		limit = { 
+			NOT = { any_character = { has_character_flag = SLO_political_advisor_selected_flag } }
+			any_character = { has_character_flag = SLO_high_command_selected_flag }
+		}
+		
+		set_country_flag = { flag = SLO_germany_appointed_a_new_advisor_flag days = 180 value = 1 }
+	}
+}
+
+SLO_debug_characters_test = {
+	SLO_vojtech_tuka = {
+		set_variable = { SLO.char_selected = THIS }
+		
+		
+		meta_effect = {
+			text = { 
+				Char: [CHARACTER]
+			}
+			
+			debug = yes
+			CHARACTER = "[?THIS] [?SLO.char_selected] [?ROOT]"
+		}
+	}
+}

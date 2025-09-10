@@ -140,7 +140,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.69
 		efficiency = 100
-		industrial_manufacturer = mio:SLO_dynamit_nobel_bratislava
+		industrial_manufacturer = mio:SLO_dynamit_nobel_bratislava_organization
 	}
 	add_equipment_production = {
 		equipment = {

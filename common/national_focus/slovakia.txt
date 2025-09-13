@@ -1237,6 +1237,19 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			add_war_support = 0.025
+			
+			if = {
+				limit = { 
+					OR = {
+						has_idea = service_by_requirement
+						has_idea = all_adults_serve
+						has_idea = scraping_the_barrel
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_ideas = extensive_conscription
+			}
 		}
 	}
 	
@@ -1445,6 +1458,8 @@ focus_tree = {
 			add_to_variable = { SLO_army_dm_army_strength_factor = 0.06 }
 			add_to_variable = { SLO_army_dm_land_reinforce_rate = 0.03 }
 			add_to_variable = { SLO_army_dm_army_attack_factor = 0.07 }
+			add_to_variable = { SLO_army_dm_conscription_factor = -0.08 }
+			
 			custom_effect_tooltip = SLO_every_soldier_a_warrior_tt
 		}
 	}
@@ -6425,6 +6440,11 @@ focus_tree = {
 		completion_reward = {
 			SLO_stabilise_regime = yes
 			
+			if = {
+				limit = { has_idea = SLO_unstable_regime_idea_4 }
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			
 			SLO_unlock_new_propaganda_slot = yes
 		}
 	}
@@ -6491,7 +6511,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_manpower = 15000
+			add_manpower = 10000
 		}
 	}
 	
@@ -6514,6 +6534,11 @@ focus_tree = {
 
 		completion_reward = {
 			SLO_stabilise_regime = yes
+			
+			if = {
+				limit = { has_idea = SLO_unstable_regime_idea_4 }
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
 			
 			add_to_variable = { SLO_economy_dm_political_power_cost = -0.15 }
 			
@@ -6978,6 +7003,7 @@ focus_tree = {
 			add_to_variable = { SLO_economy_dm_production_speed_arms_factory_factor = 0.10 }
 			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.10 }
 			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.05 }
+			add_to_variable = { SLO_economy_dm_min_export = 0.05 }
 			
 			custom_effect_tooltip = SLO_sign_a_treaty_with_germany_tt
 		}

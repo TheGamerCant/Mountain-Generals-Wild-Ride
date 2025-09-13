@@ -8872,8 +8872,8 @@ SLO_encroaching_german_influence_bop_category = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = 0.05 }
-			add_to_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0.05 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.05 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.05 }
 			
 			custom_effect_tooltip = SLO_povazska_bystrica_arms_factory_tt
 		}
@@ -8924,11 +8924,11 @@ SLO_encroaching_german_influence_bop_category = {
 				
 				add_resource = {
 					type = steel
-					amount = 24
+					amount = 17
 				}
 				add_resource = {
 					type = aluminium
-					amount = 9
+					amount = 8
 				}
 				add_resource = {
 					type = tungsten
@@ -8938,6 +8938,7 @@ SLO_encroaching_german_influence_bop_category = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
+			add_to_variable = { SLO_economy_dm_min_export = 0.05 }
 			add_to_variable = { SLO_economy_dm_local_resources_factor = 0.15 }
 			
 			custom_effect_tooltip = SLO_slovenske_rudohorie_iron_ore_processing_tt

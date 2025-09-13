@@ -128,6 +128,7 @@ SLO_corparatist_economy_dynamic_modifier = {
 	production_speed_infrastructure_factor = SLO_economy_dm_production_speed_infrastructure_factor
 	global_building_slots_factor = SLO_economy_dm_global_building_slots_factor
 	monthly_population = SLO_economy_dm_monthly_population
+	min_export = SLO_economy_dm_min_export
 }
 
 SLO_army_dynamic_modifier = {

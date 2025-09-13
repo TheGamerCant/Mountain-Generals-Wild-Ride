@@ -76,7 +76,7 @@
  
  slovakia.17.title:0 "The Triumph of Socialism"
  slovakia.17.desc:0 "Moutain General took the stage after weeks of debating, ready to announce the future of the country. In his speech, he announced the introduction of Democratic Socialism to Slovakia. Slovakia was to be a worker's paradise, a shining light for all the oppressed of the world. Slovakia was not to make the mistakes of prior Communist and Socialist movements!"
- slovakia.17.a:0 "Been spendin' most their lives, livin' in a workers' paradise."
+ slovakia.17.a:0 "Been spendin' most our lives, livin' in a workers' paradise."
  
  slovakia.18.title:0 "Mountain General denounces Hungary"
  slovakia.18.desc:0 "'...and we must root out the Hungarian sympathisers among us. Those who claim that we should treat the southern curs with empathy either do not understand the true gravity of the situation, or are outright aiding the enemy! They speak of their so called 'human rights', but how can one reasonably argue that those inbred, Mongolian heathens, even qualify as such! We must deal to the Hungarian race a killing blow, so that...'\n\nMountain General rambled on for hours. His words captivated many Slovaks, but needless to say, the Hungarians didn't much like them."
@@ -87,7 +87,7 @@
  slovakia.19.a:0 "Glory to Slovakia! Glory to Mountain General! Death to the false Aryans!"
  
  slovakia.20.title:0 "Economic Downturn"
- slovakia.20.desc:0 "Following our rapid victory in our war of independence, we now have the massive task of establishing a functioning Slovak state with a competent and efficient bureaucracy.\n\nWe have taken over many former Czechoslovak ministries, construction sites and army barracks. We have also taken over many of the Slovak Škoda factories, giving us a solid base to grow our arms industry. Despite that however, transforming and stabilising the country will take time, time that we might not have..."
+ slovakia.20.desc:0 "Following our rapid victory in our war of independence, we now have the massive task of establishing a functioning Slovak state with a competent and efficient bureaucracy.\n\nWe have taken over many former Czechoslovak ministries, construction sites and army barracks, as well as many old arms factories, giving us a solid base to grow our arms industry. Despite that however, transforming and stabilising the country will take time, time that we might not have..."
  slovakia.20.a:0 "We should fix this at once!"
  slovakia.20.tt:0 "$SLO_modify_the_slovak_economy_by$$MODIFIER_POLITICAL_POWER_COST$: §R+0.25§!\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y+20.0%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-15.00%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-15.00%§!\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §R-10.00%§!"
  
@@ -224,7 +224,7 @@
  slovakia.53.a:0 "We cannot afford to lose again!"
  
  slovakia.54.title:0 "Fate of the Democratic Officers"
- slovakia.54.desc:0 "Following a thorough shakedown in the military, we have apprehended and placed in custody several generals and officers whom we suspect harbour loyalties to the old regime. Such filth and traitorous nonsense has no place in the new Slovakia, but there remains some debate about what to do with them.\n\nOne the one hand, executing them would send a clear message about just how far we are willing to go to root out traitors to Mountain General, however doing so might also cause more even discontent in the army, as other officers fear they may be next. After all, when the penalty for harbouring such thoughts and acting on them is the same, why wouldn't rebellious officers go for it?"
+ slovakia.54.desc:0 "Following a thorough shakedown in the military, we have apprehended and placed in custody several generals and officers whom we suspect harbour loyalties to the old regime. Such filth and traitorous nonsense has no place in the new Slovakia, but there remains some debate about what to do with them.\n\nOne the one hand, executing them would send a clear message about just how far we are willing to go to root out traitors to Mountain General, however doing so might also cause more even discontent in the army, as other officers fear they may be next. After all, when the penalty for harbouring such thoughts and acting on them is the same, why wouldn't rebellious officers take their chances?"
  slovakia.54.a:0 "Take no chances - execute them"
  slovakia.54.b:0 "Imprison them, they may come in useful"
  

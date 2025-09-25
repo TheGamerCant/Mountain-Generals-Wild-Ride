@@ -4,6 +4,14 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/report_event_military_education.dds"
 	}
 	SpriteType = {
+		name = "GFX_report_event_SLO_clashes_in_bratislava"
+		texturefile = "gfx/event_pictures/report_event_SLO_clashes_in_bratislava.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_SLO_german_industrialists"
+		texturefile = "gfx/event_pictures/report_event_SLO_german_industrialists.dds"
+	}
+	SpriteType = {
 		name = "GFX_report_event_SLO_jan_golian"
 		texturefile = "gfx/event_pictures/report_event_SLO_jan_golian.dds"
 	}

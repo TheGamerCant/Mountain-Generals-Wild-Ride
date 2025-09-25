@@ -2,6 +2,12 @@ defined_text = {
 	name = GetPropagandaCategoryName
 	text = {
 		trigger = {
+			has_completed_focus	= SLO_a_democracy_if_you_can_keep_it
+		}
+		localization_key = SLO_the_propaganda_office
+	}
+	text = {
+		trigger = {
 			has_government = communism
 		}
 		localization_key = SLO_minitru
@@ -589,5 +595,22 @@ defined_text = {
 	}
 	text = {
 		localization_key = "SLO_secure_poland_3"
+	}
+}
+
+defined_text = {
+	name = GetGermanToleranceColour
+
+	text = {
+		trigger = {
+			set_temp_variable =	{ current_bop_val = SLO.power_balance_value }
+			multiply_temp_variable = { current_bop_val = 100 }
+			
+			check_variable = { var = current_bop_val value = SLO.SLO_bop_ger_tolerance compare = less_than_or_equals }
+		}
+		localization_key = "SLO_reich_tolerance_good"
+	}
+	text = {
+		localization_key = "SLO_reich_tolerance_bad"
 	}
 }

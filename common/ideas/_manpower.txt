@@ -597,7 +597,7 @@ ideas = {
 				
 				if = {
 					limit = { original_tag = SLO }
-					has_completed_focus = SLO_spartan_professionalism
+					NOT = { has_completed_focus = SLO_spartan_professionalism }
 				}
 
 				if = {
@@ -838,7 +838,7 @@ ideas = {
 				
 				if = {
 					limit = { original_tag = SLO }
-					has_completed_focus = SLO_spartan_professionalism
+					NOT = { has_completed_focus = SLO_spartan_professionalism }
 				}
 
 				if = {
@@ -1066,7 +1066,7 @@ ideas = {
 				
 				if = {
 					limit = { original_tag = SLO }
-					has_completed_focus = SLO_spartan_professionalism
+					NOT = { has_completed_focus = SLO_spartan_professionalism }
 				}
 				
 				if = {

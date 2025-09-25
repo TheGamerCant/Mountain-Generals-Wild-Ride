@@ -1090,6 +1090,44 @@ SLO_decrease_ineffective_military = {
 	}
 }
 
+SLO_increase_reich_tolerance_by_5 = {
+	add_to_variable = { var = SLO_bop_ger_tolerance value = 5 tooltip = SLO_increase_reich_tolerance_by_5_tt }
+}
+SLO_increase_reich_tolerance_by_10 = {
+	add_to_variable = { var = SLO_bop_ger_tolerance value = 10 tooltip = SLO_increase_reich_tolerance_by_10_tt }
+}
+SLO_increase_reich_tolerance_by_15 = {
+	add_to_variable = { var = SLO_bop_ger_tolerance value = 15 tooltip = SLO_increase_reich_tolerance_by_15_tt }
+}
+SLO_increase_reich_tolerance_by_20 = {
+	add_to_variable = { var = SLO_bop_ger_tolerance value = 20 tooltip = SLO_increase_reich_tolerance_by_20_tt }
+}
+SLO_increase_reich_tolerance_by_25 = {
+	add_to_variable = { var = SLO_bop_ger_tolerance value = 25 tooltip = SLO_increase_reich_tolerance_by_25_tt }
+}
+SLO_increase_reich_tolerance_by_30 = {
+	add_to_variable = { var = SLO_bop_ger_tolerance value = 30 tooltip = SLO_increase_reich_tolerance_by_30_tt }
+}
+
+SLO_decrease_reich_tolerance_by_5 = {
+	add_to_variable = { var = SLO_bop_ger_tolerance value = -5 tooltip = SLO_decrease_reich_tolerance_by_5_tt }
+}
+SLO_decrease_reich_tolerance_by_10 = {
+	add_to_variable = { var = SLO_bop_ger_tolerance value = -10 tooltip = SLO_decrease_reich_tolerance_by_10_tt }
+}
+SLO_decrease_reich_tolerance_by_15 = {
+	add_to_variable = { var = SLO_bop_ger_tolerance value = -15 tooltip = SLO_decrease_reich_tolerance_by_15_tt }
+}
+SLO_decrease_reich_tolerance_by_20 = {
+	add_to_variable = { var = SLO_bop_ger_tolerance value = -20 tooltip = SLO_decrease_reich_tolerance_by_20_tt }
+}
+SLO_decrease_reich_tolerance_by_25 = {
+	add_to_variable = { var = SLO_bop_ger_tolerance value = -25 tooltip = SLO_decrease_reich_tolerance_by_25_tt }
+}
+SLO_decrease_reich_tolerance_by_30 = {
+	add_to_variable = { var = SLO_bop_ger_tolerance value = -30 tooltip = SLO_decrease_reich_tolerance_by_30_tt }
+}
+
 SLO_move_power_balance_right_5 = {
 	SLO = {
 		if = {
@@ -1212,140 +1250,303 @@ SLO_move_power_balance_left_25 = {
 	}
 }
 
-SLO_get_current_political_advisors = {
-	set_variable = { SLO.idx = 1 }
+SLO_get_current_unfireable_political_advisor_count = {
+	set_variable = { SLO.political_advisor_count = 0 }
 	every_character = {
 		limit = {
 			is_political_advisor = yes
-			advisor_can_be_fired = yes
+			advisor_can_be_fired = no
 		}
-		
-		meta_effect = {
-			text = { 
-				set_character_flag = SLO_political_advisor_to_remove_flag_[INDEX]
-			}
-			
-			INDEX = "[?SLO.idx|0]"
-		}
-		add_to_variable = { SLO.idx = 1 }
-	}
-	clear_variable = SLO.idx
-}
-
-SLO_clear_political_advisor_flags = {
-	every_character = {
-		clr_character_flag = SLO_political_advisor_to_remove_flag_1
-		clr_character_flag = SLO_political_advisor_to_remove_flag_2
-		clr_character_flag = SLO_political_advisor_to_remove_flag_3
-		clr_character_flag = SLO_political_advisor_selected_flag
+		add_to_variable = { SLO.political_advisor_count = 1 }
 	}
 }
 
 SLO_get_german_pick_for_political_advisor = {
 	random_character = {
 		limit = {
+			NOT = { is_political_advisor = yes }
 			OR = { is_character = SLO_karol_murgas is_character = SLO_vojtech_tuka is_character = SLO_alexander_mach is_character = SLO_julius_stano }
 		}
-		set_character_flag = SLO_political_advisor_selected_flag
+		
+		if = {
+			limit = { is_character = SLO_karol_murgas }
+			set_variable = { SLO.political_advisor_selected = token:SLO_karol_murgas }
+			set_variable = { SLO.political_advisor_selected_loc = SLO_karol_murgas }
+		}
+		else_if = {
+			limit = { is_character = SLO_vojtech_tuka }
+			set_variable = { SLO.political_advisor_selected = token:SLO_vojtech_tuka }
+			set_variable = { SLO.political_advisor_selected_loc = SLO_vojtech_tuka }
+		}
+		else_if = {
+			limit = { is_character = SLO_alexander_mach }
+			set_variable = { SLO.political_advisor_selected = token:SLO_alexander_mach }
+			set_variable = { SLO.political_advisor_selected_loc = SLO_alexander_mach }
+		}
+		else_if = {
+			limit = { is_character = SLO_julius_stano }
+			set_variable = { SLO.political_advisor_selected = token:SLO_julius_stano }
+			set_variable = { SLO.political_advisor_selected_loc = SLO_julius_stano }
+		}
 	}
 }
 
-SLO_get_current_high_command = {
-	set_variable = { SLO.idx = 1 }
+SLO_get_current_unfireable_high_command_count = {
+	set_variable = { SLO.high_command_count = 0 }
 	every_character = {
 		limit = {
 			is_high_command = yes
-			advisor_can_be_fired = yes
+			advisor_can_be_fired = no
 		}
-		
-		meta_effect = {
-			text = { 
-				set_character_flag = SLO_high_command_to_remove_flag_[INDEX]
-			}
-			
-			INDEX = "[?SLO.idx|0]"
-		}
-		add_to_variable = { SLO.idx = 1 }
-	}
-	clear_variable = SLO.idx
-}
-
-SLO_clear_high_command_flags = {
-	every_character = {
-		clr_character_flag = SLO_high_command_to_remove_flag_1
-		clr_character_flag = SLO_high_command_to_remove_flag_2
-		clr_character_flag = SLO_high_command_to_remove_flag_3
-		clr_character_flag = SLO_high_command_selected_flag
+		add_to_variable = { SLO.high_command_count = 1 }
 	}
 }
 
 SLO_get_german_pick_for_high_command = {
 	random_character = {
 		limit = {
+			NOT = { is_high_command = yes }
 			OR = { is_character = GER_ewald_von_kleist is_character = GER_carl_heinrich_von_stulpnagel is_character = SLO_rudolf_pilfousek }
 		}
-		set_character_flag = SLO_high_command_selected_flag
+		
+		if = {
+			limit = { is_character = GER_ewald_von_kleist }
+			set_variable = { SLO.high_command_selected = token:GER_ewald_von_kleist }
+			set_variable = { SLO.high_command_selected_loc = GER_ewald_von_kleist }
+		}
+		else_if = {
+			limit = { is_character = GER_carl_heinrich_von_stulpnagel }
+			set_variable = { SLO.high_command_selected = token:GER_carl_heinrich_von_stulpnagel }
+			set_variable = { SLO.high_command_selected_loc = GER_carl_heinrich_von_stulpnagel }
+		}
+		else_if = {
+			limit = { is_character = SLO_rudolf_pilfousek }
+			set_variable = { SLO.high_command_selected = token:SLO_rudolf_pilfousek }
+			set_variable = { SLO.high_command_selected_loc = SLO_rudolf_pilfousek }
+		}
 	}
 }
-
 
 SLO_fire_event_to_pick_advisor = {
-	SLO_get_current_political_advisors = yes
+	SLO_get_current_unfireable_political_advisor_count = yes
+	SLO_get_current_unfireable_high_command_count = yes
 	SLO_get_german_pick_for_political_advisor = yes
-	SLO_get_current_high_command = yes
 	SLO_get_german_pick_for_high_command = yes
 	
-	#We have both political advisor and high command characters available to choose
+	#50 - 250 pp depending on the player's bop value
+	set_variable = { SLO.advisor_pp_needed = SLO.power_balance_value }
+	multiply_variable = { SLO.advisor_pp_needed = -100 }
+	add_to_variable = { SLO.advisor_pp_needed = 150 }
+	
+	#We have a spare space to add a new advisor
 	if = {
 		limit = { 
-			any_character = { has_character_flag = SLO_political_advisor_selected_flag }
-			any_character = { has_character_flag = SLO_high_command_selected_flag }
+			check_variable = { var = SLO.political_advisor_count value = 3 compare = less_than } 
+			has_variable = SLO.political_advisor_selected
+			check_variable = { var = SLO.high_command_count value = 3 compare = less_than } 
+			has_variable = SLO.high_command_selected
 		}
 		
-		#60% chance for political advisor, 40% chance for high command
 		random_list = {
 			60 = {
-				
+				country_event = { id = slovakia.58 }
 			}
 			40 = {
-				
+				country_event = { id = slovakia.59 }
 			}
 		}
 		
-		set_country_flag = { flag = SLO_germany_appointed_a_new_advisor_flag days = 180 value = 1 }
+		set_country_flag = { flag = SLO_germany_appointed_a_new_advisor_flag days = 365 value = 1 }
 	}
-	#We only have political advisors available
 	else_if = {
 		limit = { 
-			any_character = { has_character_flag = SLO_political_advisor_selected_flag }
-			NOT = { any_character = { has_character_flag = SLO_high_command_selected_flag } }
+			check_variable = { var = SLO.political_advisor_count value = 3 compare = less_than } 
+			OR = {
+				check_variable = { var = SLO.high_command_count value = 3 compare = greater_than_or_equals } 
+				NOT = { has_variable = SLO.high_command_selected }
+			}
 		}
 		
-		set_country_flag = { flag = SLO_germany_appointed_a_new_advisor_flag days = 180 value = 1 }
+		country_event = { id = slovakia.58 }
+		set_country_flag = { flag = SLO_germany_appointed_a_new_advisor_flag days = 365 value = 1 }
 	}
-	#We only have high command available
 	else_if = {
 		limit = { 
-			NOT = { any_character = { has_character_flag = SLO_political_advisor_selected_flag } }
-			any_character = { has_character_flag = SLO_high_command_selected_flag }
+			OR = {
+				check_variable = { var = SLO.political_advisor_count value = 3 compare = greater_than_or_equals } 
+				NOT = { has_variable = SLO.political_advisor_selected }
+			}
+			check_variable = { var = SLO.high_command_count value = 3 compare = less_than } 
 		}
 		
-		set_country_flag = { flag = SLO_germany_appointed_a_new_advisor_flag days = 180 value = 1 }
+		country_event = { id = slovakia.59 }
+		set_country_flag = { flag = SLO_germany_appointed_a_new_advisor_flag days = 365 value = 1 }
+	}
+	else = {
+		SLO_clear_advisor_appointing_variables = yes
+		set_country_flag = { flag = SLO_germany_appointed_a_new_advisor_flag days = 270 value = 1 }
 	}
 }
 
-SLO_debug_characters_test = {
-	SLO_vojtech_tuka = {
-		set_variable = { SLO.char_selected = THIS }
+SLO_clear_advisor_appointing_variables = {
+	clear_variable = SLO.political_advisor_count
+	clear_variable = SLO.political_advisor_selected
+	clear_variable = SLO.political_advisor_selected_loc
+	clear_variable = SLO.high_command_count
+	clear_variable = SLO.high_command_selected
+	clear_variable = SLO.high_command_selected_loc
+	clear_variable = SLO.advisor_pp_needed
+}
+
+SLO_make_all_advisors_fireable = {
+	every_character = {
+		limit = { advisor_can_be_fired = no is_character_slot = political_advisor }
 		
+		set_can_be_fired_in_advisor_role = {
+			slot = political_advisor
+			value = no
+		}
+	}
+	every_character = {
+		limit = { advisor_can_be_fired = no is_character_slot = high_command }
 		
-		meta_effect = {
-			text = { 
-				Char: [CHARACTER]
+		set_can_be_fired_in_advisor_role = {
+			slot = high_command
+			value = no
+		}
+	}
+}
+
+SLO_nuke_hungary = {
+	launch_nuke = {
+		province = 9660
+		nuke_type = thermonuclear_bomb  
+	}
+	launch_nuke = {
+		province = 6720
+		nuke_type = nuclear_bomb 
+		use_nuke = yes
+	}
+	launch_nuke = {
+		province = 11659
+		nuke_type = nuclear_bomb 
+		use_nuke = yes
+	}
+	launch_nuke = {
+		province = 6700
+		nuke_type = nuclear_bomb 
+		use_nuke = yes
+	}
+	launch_nuke = {
+		province = 11610
+		nuke_type = nuclear_bomb
+		use_nuke = yes		
+	}
+	launch_nuke = {
+		province = 3713
+		nuke_type = nuclear_bomb 
+		use_nuke = yes
+	}
+	launch_nuke = {
+		province = 3683
+		nuke_type = nuclear_bomb 
+	}
+	launch_nuke = {
+		province = 682
+		nuke_type = nuclear_bomb 
+	}
+	launch_nuke = {
+		province = 6703
+		nuke_type = nuclear_bomb 
+	}
+	launch_nuke = {
+		province = 716
+		nuke_type = nuclear_bomb 
+	}
+	
+	every_state = {
+		limit = { OR = { state = 155 state = 43 state = 974 state = 973 state = 154 } }
+		set_temp_variable = { pop_to_subtract = state_population_k }
+		multiply_temp_variable = { pop_to_subtract = -499.4 }
+		
+		add_manpower = pop_to_subtract
+		add_manpower = pop_to_subtract
+	}
+	
+	every_state = {
+		limit = { is_core_of = HUN }
+		remove_core_of = HUN
+	}
+	every_state = {
+		limit = { is_claimed_by = HUN }
+		remove_claim_by = HUN
+	}
+	
+	if = {
+		limit = { country_exists = HUN NOT = { country_exists = SLH } }
+		SLH = {
+			annex_country = {
+				target = HUN
+				transfer_troops = no
 			}
 			
-			debug = yes
-			CHARACTER = "[?THIS] [?SLO.char_selected] [?ROOT]"
+			set_cosmetic_tag = SLH_all_gone
+			add_ideas = SLH_the_apocalypse_idea
+			
+			set_popularities = {
+				neutrality = 100
+			}
+			
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			
+			add_country_leader_role = {
+				character = SLH_all_gone_char
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+					traits = { }
+				}
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = { SLH = { is_puppet_of = SLO } }
+			SLO = { end_puppet = SLH }
+		}
+		
+		SLH = {
+			transfer_state = 155
+			transfer_state = 43
+			transfer_state = 974
+			transfer_state = 973
+			transfer_state = 154
+			
+			set_cosmetic_tag = SLH_all_gone
+			add_ideas = SLH_the_apocalypse_idea
+			
+			set_popularities = {
+				neutrality = 100
+			}
+			
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			
+			add_country_leader_role = {
+				character = SLH_all_gone_char
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+					traits = { }
+				}
+			}
 		}
 	}
 }

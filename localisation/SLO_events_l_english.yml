@@ -4,7 +4,7 @@
  slovakia.1.a:0 "We have no choice..."
  
  slovakia.2.title:0 "Prague Agrees to our Demands"
- slovakia.2.desc:0 "Shock. Disbelief. Anger.\n\nThese were but some of the feelings felt by those in Prague today, as one mysterious man undid the nation-building project they had been working on for decades. They begrudgingly agreed to every, single, one of Mountain General's demands. Czechoslovakia was to be no more, and there was nothing they could do about it.\n\nAcross the table, a masked man with yellow teeth grinned, and thought to himself..."
+ slovakia.2.desc:0 "Shock. Disbelief. Anger.\n\nThese were but some of the feelings felt by those in Prague today, as one mysterious man undid the nation-building project they had been working on for decades. Defeated, tired, and hunched over a singular piece of paper placed in front of them at the table, they begrudgingly agreed to every, single, one, of Mountain General's demands. Czechoslovakia was to be no more, and there was nothing they could do about it.\n\nAcross the table, a masked man with yellow teeth grinned, and thought to himself..."
  slovakia.2.a:0 "This is where the fun begins"
  
  slovakia.3.title:0 "Slovak Soldiers Defect to our Cause"
@@ -88,7 +88,7 @@
  
  slovakia.20.title:0 "Economic Downturn"
  slovakia.20.desc:0 "Following our rapid victory in our war of independence, we now have the massive task of establishing a functioning Slovak state with a competent and efficient bureaucracy.\n\nWe have taken over many former Czechoslovak ministries, construction sites and army barracks, as well as many old arms factories, giving us a solid base to grow our arms industry. Despite that however, transforming and stabilising the country will take time, time that we might not have..."
- slovakia.20.a:0 "We should fix this at once!"
+ slovakia.20.a:0 "We must fix this at once!"
  slovakia.20.tt:0 "$SLO_modify_the_slovak_economy_by$$MODIFIER_POLITICAL_POWER_COST$: §R+0.25§!\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y+20.0%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-15.00%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-15.00%§!\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §R-10.00%§!"
  
  slovakia.21.title:0 "The Death of Andrej Hlinka"
@@ -240,6 +240,51 @@
  slovakia.57.desc:0 "With increased investments and our economy and our army growing ever more dependant on German weapons and training, the claws of the Reich have begun seriously penetrating their way into the day-to-day operations of the Slovak government. Many decisions require de-factor approval from Berlin before anything can be done, and Mountain General's 'rule' of the country seems ever more unstable."
  slovakia.57.a:0 "I think we knew this would happen..."
  
+ slovakia.58.title:0 "[GER.GetNameDefCap] Demands the Appointment of [?SLO.political_advisor_selected_loc.GetName]"
+ slovakia.58.desc:0 "A telegram from Berlin has arrived at Mountain General's desk, "suggesting" the appointment of [?SLO.political_advisor_selected_loc.GetName] to a higher position in cabinet. Although nominally just a recommendation due to his "excellent performance and high degree of competency", it is little more than a thinly-veiled demand that we increase the power and influence of factions deemed loyal to Berlin within our government. Refusal to agree to such demands will not go unnoticed by the Germans, however."
+ slovakia.58.a:0 "It is a reasonable request"
+ slovakia.58.b:0 "These decisions will be made in Bratislava and Bratislava alone"
+ 
+ slovakia.59.title:0 "[GER.GetNameDefCap] Demands the Appointment of [?SLO.high_command_selected_loc.GetName]"
+ slovakia.59.desc_war:0 "With the war raging in the east, an attaché from the Wehrmacht has arrived in Bratislava, voicing frustration within the ranks of our military high command. Nominally, they have arrived to strengthen both of our militaries' fighting capabilities, although it is clear that they are nervous about the political beliefs and loyalties of our officers, fearing them not to be loyal enough to the Reich.\n\nThey have "suggested" the appointment [?SLO.high_command_selected_loc.GetName] within the Slovak high command, and have made clear that we can not expect the same levels of co-operation between our militaries if he is not appointed."
+ slovakia.59.desc:0 "Following joint military exercises with [GER.GetNameDef], German high command claims to have found some "flaws" within our "doctrinal capabilities" and have suggested that we move [?SLO.high_command_selected_loc.GetName] further up the chain of command to remedy this.\n\nThis is all nonsense of course, not least because the Slovak army is flawless in ways their pathetic Teuton brains cannot even comprehend. No, it is clear that this demand is due to what the Reich sees as disloyal elements within our command, and yet, refusal is never an attractive option when in a room with the Germans."
+ slovakia.59.a:0 "It is a reasonable request"
+ slovakia.59.b:0 "These decisions will be made in Bratislava and Bratislava alone"
+ 
+ slovakia.60.title:0 "German Industrialists Present Terms of Investment"
+ slovakia.60.desc:0 "So far, our alliance with the Germans has given us great economic gains. New markets for our farmers, new investments into our arms factories, so far nothing to be too worried about as far as the government is concerned.\n\nToday, a delegation of German industrialists from an assortment of industries including representatives from Krupp, IG Farben and Volkswagen have arrived in Bratislava for a meeting with Mountain General and Minister of the Economy Gejza Medrický to discuss terms of future investments. Their promises are tempting - new jobs, fast growth, and an ever deepening hunger in the German market for Slovak goods and armaments.\n\nHowever, many of the terms they have demanded give the industrialists - and by proxy Berlin - large stakes and preferable treatment in key Slovak sectors and industries. To many, this level of cooperation seems less and less like the equal and mutually beneficial partnership it may have started as, and more like colonisation in all but name.\n\nDo we stand firm, reject their demands, or try to reach a compromise?"
+ slovakia.60.a:0 "Anything for our new German friends"
+ slovakia.60.a.tt:0 "$SLO_modify_the_slovak_economy_by$$MODIFIER_STABILITY_FACTOR$: §R-4.00%§!\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+5.00%§!"
+ slovakia.60.b:0 "Some compromise is acceptable"
+ slovakia.60.c:0 "We will put Slovak businesses and workers first!"
+ 
+ slovakia.61.title:0 "Ethnic Clashes in Bratislava"
+ slovakia.61.desc:0 "Following the collapse of the Austro-Hungarian empire, the capital Bratislava was left with a large Austro-German minority. Throughout the Czechoslovak period, relations between these ethnicities remained largely stable and cordial.\n\nHowever, the growing influence of [GER.GetNameDef] has seen many Slovaks view the German minority of Slovakia as a fifth column hostile to Slovakia. Today, the accused rape of a Slovak woman by an ethnic German man was all that was needed for hordes of angry mobs to begin attacking ethnic Germans in Bratislava, years of tensions boiling over in a wave of violence.\n\nThe situation is tense - our people view us with suspicion as we draw closer to Germany, and the regime of [GER.GetLeader] will not tolerate injustices towards German minorities in foreign countries, leaving us to make the tough choice between prioritising national unity and appeasing the Germans."
+ slovakia.61.a:0 "Publicly denounce the violence as criminal and hooligan"
+ slovakia.61.b:0 "Quietly arrest those involved and increase police presence in the streets"
+ slovakia.61.c:0 "Remain neutral on the issue"
+ slovakia.61.d:0 "Tacitly support the rioters"
+ 
+ slovakia.62.title:0 "[GER.GetNameDefCap] Demands we Realign our Policies"
+ slovakia.62.desc:0 "An envoy from Berlin has arrived in Bratislava today, making [GER.GetLeader]'s frustration at our policies that he says 'needlessly deviate from the joint goals of our nations'. It is clear that they will want to see us realign our policies to be closer to their interests, and are not in the mood for compromise or negotiations."
+ slovakia.62.a:0 "If we must"
+ slovakia.62.b:0 "They can go shove their Sauerkraut up their ass!"
+ slovakia.62.b.tt:0 "\n§Y[GER.GetNameDefCap]§! are likely to try and §Rforcibly§! change our government if we refuse their demands."
+ slovakia.61.d:0 "Tacitly support the rioters"
+ 
+ slovakia.63.title:0 "[SLO.GetName] Refuses to Align with us"
+ slovakia.63.desc:0 ""
+ slovakia.63.a:0 "Who do they think they are?"
+ slovakia.63.b:0 "There is nothing we can do"
+ 
+ slovakia.64.title:0 "The Eagle Watches Closer"
+ slovakia.64.desc:0 "After a chaotic few weeks, German control over Austria is absolute. This has now given us a border with the Reich, allowing them to extend their influence even further into our affairs."
+ slovakia.64.a:0 "What could we possibly we do about it?"
+ 
+ slovakia.65.title:0 "The Eagle Watches Closer"
+ slovakia.65.desc:0 "Following the annexation of the Sudetenland, our position is even more vulnerable. Western democracies have proven themselves weak and unwilling to deal with [GER.GetLeader]'s Germany, seemingly leaving all nations of Central and Eastern Europe to the whims of Hitler and Stalin."
+ slovakia.65.a:0 "What could we possibly we do about it?"
+
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to dictate terms of surrender to the once proud Czechoslovak government in Prague. For the first time ever, Slovakia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."
  slovakia_news.1.a:0 "What the?!!?"

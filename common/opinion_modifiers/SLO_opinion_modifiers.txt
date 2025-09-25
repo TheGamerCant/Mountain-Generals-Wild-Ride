@@ -20,4 +20,19 @@ opinion_modifiers = {
 		decay = 2
 		months = 24
 	}
+	SLO_refused_our_demands = {
+		value = -25
+		decay = 1
+		months = 24
+	}
+	SLO_did_nothing_about_rioters = {
+		value = -50
+		decay = 1
+		months = 36
+	}
+	SLO_condemned_rioters = {
+		value = 40
+		decay = 1
+		months = 24
+	}
 }

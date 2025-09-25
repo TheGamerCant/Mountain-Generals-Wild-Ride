@@ -31,3 +31,6 @@ set_popularities = {
 	communism = 17
 	neutrality = 51
 }
+
+recruit_character = SLH_all_gone_char
+

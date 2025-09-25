@@ -157,6 +157,28 @@
  SLO_small_levels_of_cooperation_with_germany:0 "Small Co-Operation With Germany"
  SLO_no_cooperation_with_germany:0 "No Co-Operation With Germany"
  
+ SLO_increase_reich_tolerance_by_5_tt:0 "§GIncreases§! §YReich Tolerance§! by §G+5§!"
+ SLO_increase_reich_tolerance_by_10_tt:0 "§GIncreases§! §YReich Tolerance§! by §G+10§!"
+ SLO_increase_reich_tolerance_by_15_tt:0 "§GIncreases§! §YReich Tolerance§! by §G+15§!"
+ SLO_increase_reich_tolerance_by_20_tt:0 "§GIncreases§! §YReich Tolerance§! by §G+20§!"
+ SLO_increase_reich_tolerance_by_25_tt:0 "§GIncreases§! §YReich Tolerance§! by §G+25§!"
+ SLO_increase_reich_tolerance_by_30_tt:0 "§GIncreases§! §YReich Tolerance§! by §G+30§!"
+ 
+ SLO_decrease_reich_tolerance_by_5_tt:0 "§RDecreases§! §YReich Tolerance§! by §R-5§!"
+ SLO_decrease_reich_tolerance_by_10_tt:0 "§RDecreases§! §YReich Tolerance§! by §R-10§!"
+ SLO_decrease_reich_tolerance_by_15_tt:0 "§RDecreases§! §YReich Tolerance§! by §R-15§!"
+ SLO_decrease_reich_tolerance_by_20_tt:0 "§RDecreases§! §YReich Tolerance§! by §R-20§!"
+ SLO_decrease_reich_tolerance_by_25_tt:0 "§RDecreases§! §YReich Tolerance§! by §R-25§!"
+ SLO_decrease_reich_tolerance_by_30_tt:0 "§RDecreases§! §YReich Tolerance§! by §R-30§!"
+ 
+ SLO_ger_tolerance_decision:0 "Current Reich Tolerance: [GetGermanToleranceColour]"
+ SLO_ger_tolerance_decision_desc:0 "[GER.GetNameDefCap] is willing to tolerate some level of independence and deviation from the nations of Central and Eastern Europe, but such 'generosity' is not an infinite resource. If our policies are not sufficiently aligned with that of [GER.GetNameDef], serious consequences may arise."
+ SLO_reich_tolerance_good:0 "§G[?current_bop_val|2]§!/§Y[?SLO.SLO_bop_ger_tolerance|2]§!"
+ SLO_reich_tolerance_bad:0 "§R[?current_bop_val|2]§!/§Y[?SLO.SLO_bop_ger_tolerance|2]§!"
+ SLO_german_intervention_in_our_politics:0 "Germany Intervenes"
+ SLO_german_intervention_in_our_politics_desc:0 "Berlin have made it clear to us their displeasure with our policies. We might want to realign ourselves closer to them, lest we seek the consequences."
+ SLO_german_intervention_in_our_politics_cancel_trigger_tt:0 "The §YBalance of Power§! is less than §Y[?SLO.SLO_bop_ger_tolerance|2]§!\n\nCurrent value: §Y[?SLO.power_balance_value|%]§!"
+ 
  SLO_povazska_bystrica_arms_factory:0 "Expand the Zbrojovka Považská Bystrica Arms Factory"
  SLO_povazska_bystrica_arms_factory_desc:0 "The Zbrojovka Považská Bystrica branch is one of Slovaia's most productive factories, and German companies have been looking to invest and refit it's machines to produce arms for the German Army."
  SLO_povazska_bystrica_arms_factory_tt:0 "$SLO_modify_the_slovak_economy_by$$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.00%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+5.00%§!"

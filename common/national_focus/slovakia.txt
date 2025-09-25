@@ -36,7 +36,7 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_manpower = 10000
+			add_manpower = 5000
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -84,17 +84,17 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = { 
 				type = infantry_equipment_1
-				amount = 1600
+				amount = 1400
 				producer = GER
 			}
 			add_equipment_to_stockpile = { 
 				type = support_equipment
-				amount = 400
+				amount = 320
 				producer = GER
 			}
 			add_equipment_to_stockpile = { 
 				type = artillery_equipment_1
-				amount = 400
+				amount = 320
 				producer = GER
 			}
 			
@@ -102,7 +102,7 @@ focus_tree = {
 			
 			add_timed_idea={
 				idea = GRE_paying_off_debt_small
-				days = 120
+				days = 105
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -137,22 +137,22 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = { 
 				type = infantry_equipment_1
-				amount = 1350
+				amount = 1150
 				producer = CZE
 			}
 			add_equipment_to_stockpile = { 
 				type = support_equipment
-				amount = 300
+				amount = 275
 				producer = CZE
 			}
 			add_equipment_to_stockpile = { 
 				type = artillery_equipment_1
-				amount = 300
+				amount = 275
 				producer = CZE
 			}
 			add_equipment_to_stockpile = { 
 				type = motorized_equipment_1
-				amount = 120
+				amount = 100
 				producer = CZE
 			}			
 		}
@@ -297,7 +297,7 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_manpower = 18000
+			add_manpower = 8000
 			add_political_power = 40
 			add_war_support = 0.05
 		}
@@ -923,8 +923,8 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SLO_army_dm_conscription = 0.02 }
 			
-			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = -0.05 }
-			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = -0.05 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = -0.07 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = -0.07 }
 			custom_effect_tooltip = SLO_expand_the_draft_tt
 		}
 	}
@@ -952,7 +952,7 @@ focus_tree = {
 			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.12 }
 			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.12 }
 			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.10 }
-			add_to_variable = { SLO_economy_dm_stability_factor = -0.05 }
+			add_to_variable = { SLO_economy_dm_stability_factor = -0.075 }
 			custom_effect_tooltip = SLO_women_in_industry_tt
 		}
 	}
@@ -987,7 +987,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_stability = -0.075
+			add_stability = -0.10
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -1111,7 +1111,7 @@ focus_tree = {
 			add_to_variable = { SLO_army_dm_mobilization_speed = 0.50 }
 			add_to_variable = { SLO_army_dm_army_morale_factor = 0.08 }
 			
-			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.04 }
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.08 }
 			custom_effect_tooltip = SLO_mass_mobilisation_tt
 			
 		}
@@ -1723,6 +1723,7 @@ focus_tree = {
 						nuclear_facility < 1
 					}
 				}
+				
 				664 = {
 					add_building_construction = {
 						type = land_facility
@@ -1731,11 +1732,11 @@ focus_tree = {
 						province = 6573
 					}
 				}
-				
 				if = {
 					limit = {
 						664 = { 6573 = { supply_node < 1 } }
 					}
+					
 					664 = {
 						add_building_construction = {
 							type = supply_node
@@ -1745,7 +1746,7 @@ focus_tree = {
 						}
 					}
 				}
-
+						
 				#Preshov - Koshice
 				build_railway = {
 					level = 2
@@ -1753,7 +1754,28 @@ focus_tree = {
 					start_province = 3581
 					target_province = 6573
 				}
-
+			}
+			else_if = {
+				limit = {
+					any_controlled_state = {
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+				}
+				
+				random_controlled_state = {
+					limit = { 
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+					construct_building_in_random_province = {
+						land_facility = 1
+					}
+				}
 			}
 			else = {
 				add_tech_bonus = {
@@ -2701,7 +2723,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_a_based_slovakia
 		icon = GFX_goal_support_fascism
-		x = 70
+		x = 69
 		y = 0
 		cost = 2
 		
@@ -2756,7 +2778,7 @@ focus_tree = {
 	focus = {
 		id = SLO_slovak_autarky
 		icon = GFX_focus_GER_autarky_ambitions
-		x = -13
+		x = -14
 		y = 1
 		relative_position_id = SLO_a_based_slovakia
 		cost = 7
@@ -2765,7 +2787,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_completed_focus = SLO_trust_in_mountain_general
+			has_completed_focus = SLO_the_public_order_decree
 		}
 		
 
@@ -2784,7 +2806,49 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_ideas = autarkic_economy
+			if = {
+				limit = {
+					has_idea = free_trade
+				}
+				
+				swap_ideas = {
+					remove_idea = free_trade
+					add_idea = autarkic_economy
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = export_focus
+				}
+				
+				swap_ideas = {
+					remove_idea = export_focus
+					add_idea = autarkic_economy
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = limited_exports
+				}
+				
+				swap_ideas = {
+					remove_idea = limited_exports
+					add_idea = autarkic_economy
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = closed_economy
+				}
+				
+				swap_ideas = {
+					remove_idea = closed_economy
+					add_idea = autarkic_economy
+				}
+			}
+			else = {
+				add_ideas = autarkic_economy
+			}
 		}
 	}
 	
@@ -2794,12 +2858,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SLO_slovak_autarky
-		cost = 7
+		cost = 5
 		prerequisite = {
 			focus = SLO_slovak_autarky
 		}
 
 		available = {
+			has_completed_focus = SLO_trust_in_mountain_general
 		}
 		
 
@@ -2819,7 +2884,7 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = SLO_ministry_of_central_planning
-		cost = 10
+		cost = 9
 		prerequisite = {
 			focus = SLO_ministry_of_central_planning
 		}
@@ -3133,6 +3198,7 @@ focus_tree = {
 			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.04 }
 			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = -0.08 }
 			add_to_variable = { SLO_economy_dm_stability_factor = -0.10 }
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.06 }
 			custom_effect_tooltip = SLO_harsh_quotas_tt
 		}
 	}
@@ -3209,7 +3275,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SLO_ministry_of_central_planning
-		cost = 10
+		cost = 9
 		prerequisite = {
 			focus = SLO_ministry_of_central_planning
 		}
@@ -3399,7 +3465,7 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = SLO_ministry_of_central_planning
-		cost = 10
+		cost = 9
 		prerequisite = {
 			focus = SLO_ministry_of_central_planning
 		}
@@ -3610,7 +3676,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SLO_guns_and_butter
-		cost = 4
+		cost = 3
 		prerequisite = {
 			focus = SLO_blood_and_iron
 			focus = SLO_guns_and_butter
@@ -3632,7 +3698,7 @@ focus_tree = {
 				
 				add_resource = {
 					type = steel
-					amount = 29
+					amount = 18
 				}
 				
 				add_manpower = 4108
@@ -3646,7 +3712,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SLO_develop_the_nizna_slana_deposit
-		cost = 4
+		cost = 3
 		prerequisite = {
 			focus = SLO_develop_the_nizna_slana_deposit
 		}
@@ -3665,7 +3731,7 @@ focus_tree = {
 				
 				add_resource = {
 					type = oil
-					amount = 14
+					amount = 10
 				}
 				
 				add_manpower = 5908
@@ -3763,7 +3829,7 @@ focus_tree = {
 	focus = {
 		id = SLO_the_public_order_decree
 		icon = GFX_goal_SLO_the_public_order_decree
-		x = 4
+		x = 5
 		y = 1
 		relative_position_id = SLO_a_based_slovakia
 		cost = 3
@@ -3798,7 +3864,7 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_manpower = 18000
+			add_manpower = 7500
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -4280,7 +4346,7 @@ focus_tree = {
 	focus = {
 		id = SLO_denounce_hungary
 		icon = GFX_goal_generic_propaganda
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = SLO_a_based_slovakia
 		cost = 3
@@ -4309,7 +4375,7 @@ focus_tree = {
 	focus = {
 		id = SLO_denounce_germany
 		icon = GFX_goal_generic_propaganda
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = SLO_a_based_slovakia
 		cost = 3
@@ -4463,89 +4529,6 @@ focus_tree = {
 		}
 	}
 	
-#	focus = {
-#		id = SLO_annihilate_hungary
-#		icon = GFX_goal_SLO_nuke_hungary
-#		x = 2
-#		y = 1
-#		relative_position_id = SLO_anti_hungarian_racial_laws
-#		cost = 5
-#		prerequisite = {
-#			focus = SLO_anti_hungarian_racial_laws
-#		}
-#		prerequisite = {
-#			focus = SLO_deport_hungarians
-#		}
-#		
-#		mutually_exclusive = { focus = SLO_slovak_tanks_in_budapest }
-#
-#		available = {
-#			country_exists = HUN
-#			OR = {
-#				43 = { is_owned_and_controlled_by = HUN }
-#				155 = { is_owned_and_controlled_by = HUN }
-#				974 = { is_owned_and_controlled_by = HUN }
-#				973 = { is_owned_and_controlled_by = HUN }
-#				154 = { is_owned_and_controlled_by = HUN }
-#				
-#			}
-#		}
-#		
-#
-#		completion_reward = {
-#			hidden_effect = {
-#				if = {
-#					limit = { HUN = { controls_state = 43 } }
-#					launch_nuke = {
-#						state = 43
-#						controller = HUN
-#						use_nuke = yes
-#						nuke_type = thermonuclear_bomb 
-#					}
-#				}
-#				if = {
-#					limit = { HUN = { controls_state = 155 } }
-#					launch_nuke = {
-#						state = 155
-#						controller = HUN
-#						use_nuke = yes
-#						nuke_type = thermonuclear_bomb 
-#					}
-#				}
-#				if = {
-#					limit = { HUN = { controls_state = 974 } }
-#					launch_nuke = {
-#						state = 974
-#						controller = HUN
-#						use_nuke = yes
-#						nuke_type = thermonuclear_bomb 
-#					}
-#				}
-#				if = {
-#					limit = { HUN = { controls_state = 973 } }
-#					launch_nuke = {
-#						state = 973
-#						controller = HUN
-#						use_nuke = yes
-#						nuke_type = thermonuclear_bomb 
-#					}
-#				}
-#				if = {
-#					limit = { HUN = { controls_state = 154 } }
-#					launch_nuke = {
-#						state = 154
-#						controller = HUN
-#						use_nuke = yes
-#						nuke_type = thermonuclear_bomb 
-#					}
-#				}
-#				
-#				news_event = { id= slovakia_news.2 hours = 4 }
-#			}
-#			custom_effect_tooltip = SLO_annihilate_hungary_tt
-#		}
-#	}
-	
 	focus = {
 		id = SLO_creation_of_the_slovak_occupation_authority
 		icon = GFX_focus_generic_fascist_troops
@@ -4567,7 +4550,7 @@ focus_tree = {
 			add_stability = 0.01
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
-			
+		  	
 			custom_effect_tooltip = SLO_creation_of_the_slovak_occupation_authority_tt
 		}
 	}
@@ -4575,10 +4558,10 @@ focus_tree = {
 	focus = {
 		id = SLO_prepare_for_war
 		icon = GFX_focus_generic_public_works
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = SLO_creation_of_the_slovak_occupation_authority
-		cost = 8
+		cost = 4
 		prerequisite = {
 			focus = SLO_creation_of_the_slovak_occupation_authority
 		}
@@ -4591,8 +4574,8 @@ focus_tree = {
 		
 
 		completion_reward = {
-			army_experience = 50
-			add_political_power = 50
+			army_experience = 25
+			add_political_power = 25
 			add_war_support = 0.05
 		}
 	}
@@ -4600,10 +4583,10 @@ focus_tree = {
 	focus = {
 		id = SLO_expand_surveillance_efforts
 		icon = GFX_focus_SWI_embrace_rote_drei
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = SLO_prepare_for_war
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SLO_prepare_for_war
 		}
@@ -4641,6 +4624,167 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = SLO_expand_the_foreign_intelligence_department
+		icon = GFX_focus_ARG_keep_it_in_the_party
+		x = 0
+		y = 1
+		relative_position_id = SLO_expand_the_secret_police
+		cost = 5
+		prerequisite = {
+			focus = SLO_expand_the_secret_police
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SLO_eyes_everywhere_fascist_idea_2
+				add_idea = SLO_eyes_everywhere_fascist_idea_3
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_found_the_slovakatom_program
+		icon = GFX_focus_wonderweapons
+		x = -1
+		y = 1
+		relative_position_id = SLO_prepare_for_war
+		cost = 10
+		prerequisite = {
+			focus = SLO_prepare_for_war
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SLO_found_the_slovakatom_program
+				bonus = 0.66
+				uses = 1
+				category = nuclear
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					73 = {
+						is_controlled_by = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+				}
+				
+				73 = {
+					add_building_construction = {
+						type = nuclear_facility
+						level = 1
+						instant_build = yes
+						province = 11691
+					}
+				}
+				if = {
+					limit = {
+						73 = { 11691 = { supply_node < 1 } }
+					}
+					
+					73 = {
+						add_building_construction = {
+							type = supply_node
+							level = 1
+							instant_build = yes
+							province = 11691
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_controlled_state = {
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+				}
+				
+				random_controlled_state = {
+					limit = { 
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+					construct_building_in_random_province = {
+						nuclear_facility = 1
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_increase_slovakatom_funding
+		icon = GFX_focus_wonderweapons
+		x = 0
+		y = 1
+		relative_position_id = SLO_found_the_slovakatom_program
+		cost = 8
+		prerequisite = {
+			focus = SLO_found_the_slovakatom_program
+		}
+
+		available = {
+		}
+		
+
+		completion_reward = {
+			add_ideas = SLO_the_slovakatom_project
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.5
+			}
+		}
+	}
+	
+	focus = {
+		id = SLO_annihilate_hungary
+		icon = GFX_goal_SLO_annihilate_hungary
+		x = 0
+		y = 1
+		relative_position_id = SLO_increase_slovakatom_funding
+		cost = 1
+		prerequisite = {
+			focus = SLO_increase_slovakatom_funding
+		}
+
+		available = {
+			NOT = { has_completed_focus = SLO_deport_hungarians_to_mongolia }
+			num_of_nukes > 4
+		}
+		
+
+		completion_reward = {
+			hidden_effect = {
+				SLO_nuke_hungary = yes
+				news_event = { id= slovakia_news.2 hours = 4 }
+			}
+			
+			custom_effect_tooltip = SLO_annihilate_hungary_tt
+		}
+	}
+	
+	focus = {
 		id = SLO_slovak_tanks_in_budapest
 		icon = GFX_goal_SLO_slovak_tanks_in_budapest
 		x = 0
@@ -4663,8 +4807,6 @@ focus_tree = {
 				NOT = { country_exists = HUN }
 			}
 		}
-		
-#		mutually_exclusive = { focus = SLO_annihilate_hungary }
 
 		available = {
 			any_country = {
@@ -4745,7 +4887,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SLO_slovak_tanks_in_budapest
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SLO_slovak_tanks_in_budapest
 		}
@@ -4793,7 +4935,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = SLO_slovak_tanks_in_budapest
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = SLO_slovak_tanks_in_budapest
 		}
@@ -4821,7 +4963,7 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 30
 			add_war_support = 0.05
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -4841,7 +4983,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = SLO_slovak_tanks_in_budapest
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = SLO_slovak_tanks_in_budapest
 		}
@@ -4869,7 +5011,7 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 30
 			add_stability = 0.10
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -4931,11 +5073,14 @@ focus_tree = {
 					}
 				}
 			}
-			43 = {
-				OWNER = {
-					OR = {
-						original_tag = ROOT
-						is_puppet_of = ROOT
+			OR = {
+				has_completed_focus = SLO_annihilate_hungary
+				43 = {
+					OWNER = {
+						OR = {
+							original_tag = ROOT
+							is_puppet_of = ROOT
+						}
 					}
 				}
 			}
@@ -4961,16 +5106,10 @@ focus_tree = {
 	focus = {
 		id = SLO_the_dogs_bark
 		icon = GFX_goal_SLO_the_dogs_bark
-		x = 2
+		x = 0		
 		y = 1
 		relative_position_id = SLO_slovakia_victorious_on_all_fronts
 		cost = 2
-		prerequisite = {
-			focus = SLO_the_teachings_of_mountain_general
-		}
-		prerequisite = {
-			focus = SLO_a_portrait_on_every_wall
-		}
 		prerequisite = {
 			focus = SLO_slovakia_victorious_on_all_fronts
 		}
@@ -6058,6 +6197,7 @@ focus_tree = {
 
 
 		available = {
+			NOT = { has_completed_focus = SLO_annihilate_hungary }
 			any_state = { CONTROLLER = { OR = { tag = SLO is_subject_of = SLO } } is_core_of = MON }
 			any_state = { CONTROLLER = { OR = { tag = SLO is_subject_of = SLO } } OR = { is_core_of = HUN is_claimed_by = HUN } }
 		}
@@ -6337,7 +6477,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_a_democracy_if_you_can_keep_it
 		icon = GFX_focus_spr_crush_the_revolution
-		x = 95
+		x = 91
 		y = 0
 		cost = 2
 		
@@ -6367,7 +6507,7 @@ focus_tree = {
 		}
 		
 		offset = {
-			x = -36
+			x = -32
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -6387,6 +6527,11 @@ focus_tree = {
 			set_variable = { SLO_nss_dm_political_advisor_cost_factor = -0.10 }
 			set_variable = { SLO_nss_dm_neutrality_drift = 0 }
 			set_variable = { SLO_nss_dm_fascism_drift = 0 }
+			set_variable = { SLO_nss_dm_conscription_factor = 0 }
+			set_variable = { SLO_nss_dm_war_support_factor = 0 }
+			set_variable = { SLO_nss_dm_stability_factor = 0 }
+			
+			set_variable = { SLO_bop_ger_tolerance = 120 }
 		}
 	}
 	
@@ -6693,6 +6838,8 @@ focus_tree = {
 			hidden_effect = { 
 				remove_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
 				add_dynamic_modifier = { modifier = SLO_corparatist_economy_dynamic_modifier }
+				
+				country_event = { id = slovakia.60 days = 270 random_days = 365 }
 			}
 			
 			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.10 }
@@ -6708,7 +6855,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SLO_corporatism
-		cost = 7
+		cost = 8
 		prerequisite = {
 			focus = SLO_corporatism
 		}
@@ -6788,7 +6935,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SLO_found_the_zbrojovka_povazska_byrstrica_arms_factory
-		cost = 7
+		cost = 8
 		prerequisite = {
 			focus = SLO_found_the_zbrojovka_povazska_byrstrica_arms_factory
 		}
@@ -6979,6 +7126,10 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
+			SLO_decrease_reich_tolerance_by_10 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			every_core_state = {
 				limit = {
 					free_building_slots = {
@@ -7087,6 +7238,10 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
+			SLO_decrease_reich_tolerance_by_15 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_to_variable = { SLO_economy_dm_research_speed_factor = 0.03 }
 			add_to_variable = { SLO_economy_dm_production_speed_industrial_complex_factor = 0.10 }
 			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.05 }
@@ -7122,7 +7277,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_political_power = 40
+			add_political_power = 20
 		}
 	}
 	
@@ -7169,7 +7324,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = SLO_sign_a_treaty_with_germany
-		cost = 7
+		cost = 8
 		prerequisite = {
 			focus = SLO_sign_a_treaty_with_germany
 			focus = SLO_prioritise_trade_with_our_neighbours
@@ -7199,6 +7354,9 @@ focus_tree = {
 			add_to_variable = { SLO_economy_dm_stability_factor = 0.05 }
 			add_to_variable = { SLO_economy_dm_political_power_cost = -0.05 }
 			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.10 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.03 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.03 }
+			
 			custom_effect_tooltip = SLO_public_works_projects_2_tt
 		}
 	}
@@ -7232,10 +7390,19 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
+			SLO_decrease_reich_tolerance_by_10 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			every_core_state = {
 				limit = {
 					free_building_slots = {
 						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = industrial_complex
 						size > 0
 						include_locked = yes
 					}
@@ -7244,7 +7411,12 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 				
@@ -7253,8 +7425,8 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.10 }
-			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.10 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.12 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.12 }
 			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.05 }
 			add_to_variable = { SLO_economy_dm_production_speed_arms_factory_factor = 0.10 }
 			
@@ -7268,7 +7440,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SLO_prioritise_trade_with_our_neighbours
-		cost = 10
+		cost = 12
 		prerequisite = {
 			focus = SLO_sign_a_treaty_with_germany
 			focus = SLO_prioritise_trade_with_our_neighbours
@@ -7280,6 +7452,10 @@ focus_tree = {
 		
 
 		completion_reward = {
+			SLO_decrease_reich_tolerance_by_15 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			every_core_state = {
 				limit = {
 					free_building_slots = {
@@ -7299,18 +7475,8 @@ focus_tree = {
 				random_select_amount = 1
 			}
 			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
 			if = {
 				limit = { has_aat = yes }
-				
-				add_tech_bonus = {
-					name = SLO_zvolen_railway_factory
-					bonus = 0.5
-					uses = 2
-					category = train_tech
-					category = artillery
-				}
 				
 				custom_effect_tooltip = generic_skip_one_line_tt
 				
@@ -7337,7 +7503,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SLO_corporatism
-		cost = 4
+		cost = 3
 		prerequisite = {
 			focus = SLO_corporatism
 		}
@@ -7357,7 +7523,7 @@ focus_tree = {
 				
 				add_resource = {
 					type = steel
-					amount = 29
+					amount = 119
 				}
 				
 				add_manpower = 4108
@@ -7371,7 +7537,7 @@ focus_tree = {
 		x = -2
 		y = 0
 		relative_position_id = SLO_develop_the_nizna_slana_deposit_2
-		cost = 4
+		cost = 3
 		prerequisite = {
 			focus = SLO_corporatism
 		}
@@ -7390,7 +7556,7 @@ focus_tree = {
 				
 				add_resource = {
 					type = oil
-					amount = 14
+					amount = 8
 				}
 				
 				add_manpower = 5908
@@ -7404,7 +7570,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SLO_horna_nitra_coal_mines_2
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SLO_horna_nitra_coal_mines_2
 		}
@@ -7458,7 +7624,7 @@ focus_tree = {
 				
 				add_tech_bonus = {
 					name = SLO_expand_the_appolo_oil_refinery
-					bonus = 0.7
+					bonus = 0.5
 					uses = 2
 					category = synth_resources
 				}
@@ -7473,7 +7639,7 @@ focus_tree = {
 			else = {
 				add_tech_bonus = {
 					name = SLO_expand_the_appolo_oil_refinery
-					bonus = 1
+					bonus = 0.80
 					uses = 2
 					category = synth_resources
 				}
@@ -7481,6 +7647,489 @@ focus_tree = {
 		}
 	}
 	
+	focus = {	
+		id = SLO_the_radicals
+		icon = GFX_goal_SLO_the_radicals
+		x = 0
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_the_new_state }
+		relative_position_id = SLO_the_new_state
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			hidden_effect = {
+				remove_trait = {
+					character = SLO_alexander_mach
+					slot = political_advisor
+					trait = SLO_fascist_paramilitarist_1
+				}
+				add_trait = {
+					character = SLO_alexander_mach
+					slot = political_advisor
+					trait = SLO_fascist_paramilitarist_2
+				}
+				remove_trait = {
+					character = SLO_karol_murgas
+					slot = political_advisor
+					trait = SLO_radical_ideologue_1
+				}
+				add_trait = {
+					character = SLO_karol_murgas
+					slot = political_advisor
+					trait = SLO_radical_ideologue_2
+				}
+				remove_trait = {
+					character = SLO_vojtech_tuka
+					slot = political_advisor
+					trait = SLO_prince_of_terror_1
+				}
+				add_trait = {
+					character = SLO_vojtech_tuka
+					slot = political_advisor
+					trait = SLO_prince_of_terror_2
+				}
+			}
+			
+			custom_effect_tooltip = SLO_the_radicals_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {	
+		id = SLO_the_center
+		icon = GFX_goal_SLO_mountain_generals_cult_of_personality
+		x = 4
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_the_new_state }
+		relative_position_id = SLO_the_new_state
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_political_power = 50
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			hidden_effect = {
+				SLO_mountain_general = {
+					add_country_leader_trait = {
+						trait = mgs_cult_of_personality_despotist_1
+						ideology = fascism_ideology
+					}
+				}
+				SLO_mountain_general = {
+					add_country_leader_trait = {
+						trait = mgs_cult_of_personality_despotist_1
+						ideology = despotism
+					}
+				}
+			}
+			effect_tooltip = {
+				add_country_leader_trait = mgs_cult_of_personality_despotist_1
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_the_moderates
+		icon = GFX_goal_SLO_the_moderates
+		x = 8
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_the_new_state }
+		relative_position_id = SLO_the_new_state
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			hidden_effect = {
+				remove_trait = {
+					character = SLO_jozef_tiso
+					slot = political_advisor
+					trait = SLO_mg_loyalist_1
+				}
+				add_trait = {
+					character = SLO_jozef_tiso
+					slot = political_advisor
+					trait = SLO_mg_loyalist_2
+				}
+				remove_trait = {
+					character = SLO_stefan_tiso
+					slot = political_advisor
+					trait = SLO_fascist_judge_1
+				}
+				add_trait = {
+					character = SLO_stefan_tiso
+					slot = political_advisor
+					trait = SLO_fascist_judge_2
+				}
+				remove_trait = {
+					character = SLO_jozef_sivak
+					slot = political_advisor
+					trait = SLO_nationalist_technocrat_1
+				}
+				add_trait = {
+					character = SLO_jozef_sivak
+					slot = political_advisor
+					trait = SLO_nationalist_technocrat_2
+				}
+			}
+			
+			custom_effect_tooltip = SLO_the_moderates_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {	
+		id = SLO_great_ideologue
+		icon = GFX_goal_SLO_impeccable_philosopher
+		x = -4
+		y = 3
+		cost = 5
+		
+		prerequisite = { focus = SLO_the_center }
+		prerequisite = { focus = SLO_the_radicals }
+		relative_position_id = SLO_the_center
+		
+		mutually_exclusive = { focus = SLO_the_father_of_slovak_independence focus = SLO_pragmatic_statesman }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			hidden_effect = {
+				SLO_mountain_general = {
+					swap_country_leader_traits  = {
+						remove = mgs_cult_of_personality_despotist_1
+						add = mgs_cult_of_personality_despotist_2_left
+						ideology = fascism_ideology
+					}
+				}
+				SLO_mountain_general = {
+					swap_country_leader_traits  = {
+						remove = mgs_cult_of_personality_despotist_1
+						add = mgs_cult_of_personality_despotist_2_left
+						ideology = despotism
+					}
+				}
+			}
+			effect_tooltip = {
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_despotist_1
+					add = mgs_cult_of_personality_despotist_2_left
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_increase_reich_tolerance_by_5 = yes
+			
+#			if = {
+#				limit = { NOT = { has_government = fascism } }
+#				custom_effect_tooltip = generic_skip_one_line_tt
+#				
+#				set_politics = {
+#					ruling_party = fascism
+#					elections_allowed = no
+#					election_frequency = 48
+#				}
+#			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_pragmatic_statesman
+		icon = GFX_goal_generic_major_alliance
+		x = 0
+		y = 3
+		cost = 5
+		
+		prerequisite = { focus = SLO_the_center }
+		relative_position_id = SLO_the_center
+		
+		mutually_exclusive = { focus = SLO_the_father_of_slovak_independence focus = SLO_great_ideologue }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			hidden_effect = {
+				SLO_mountain_general = {
+					swap_country_leader_traits  = {
+						remove = mgs_cult_of_personality_despotist_1
+						add = mgs_cult_of_personality_despotist_2_centre
+						ideology = fascism_ideology
+					}
+				}
+				SLO_mountain_general = {
+					swap_country_leader_traits  = {
+						remove = mgs_cult_of_personality_despotist_1
+						add = mgs_cult_of_personality_despotist_2_centre
+						ideology = despotism
+					}
+				}
+			}
+			effect_tooltip = {
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_despotist_1
+					add = mgs_cult_of_personality_despotist_2_centre
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_increase_reich_tolerance_by_10 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_right_5 = yes
+		}
+	}
+	
+	focus = {	
+		id = SLO_the_father_of_slovak_independence
+		icon = GFX_goal_SLO_declare_greater_slovakia
+		x = 4
+		y = 3
+		cost = 5
+		
+		prerequisite = { focus = SLO_the_center }
+		prerequisite = { focus = SLO_the_moderates }
+		relative_position_id = SLO_the_center
+
+		mutually_exclusive = { focus = SLO_pragmatic_statesman focus = SLO_great_ideologue }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			hidden_effect = {
+				SLO_mountain_general = {
+					swap_country_leader_traits  = {
+						remove = mgs_cult_of_personality_despotist_1
+						add = mgs_cult_of_personality_despotist_2_right
+						ideology = fascism_ideology
+					}
+				}
+				SLO_mountain_general = {
+					swap_country_leader_traits  = {
+						remove = mgs_cult_of_personality_despotist_1
+						add = mgs_cult_of_personality_despotist_2_right
+						ideology = despotism
+					}
+				}
+			}
+			effect_tooltip = {
+				swap_ruler_traits = {
+					remove = mgs_cult_of_personality_despotist_1
+					add = mgs_cult_of_personality_despotist_2_right
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_decrease_reich_tolerance_by_5 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_right_15 = yes
+		}
+	}
+	
+	focus = {	
+		id = SLO_the_partys_eyes_and_ears
+		icon = GFX_goal_SLO_the_partys_eyes_and_ears
+		x = -4
+		y = 3
+		cost = 5
+		
+		prerequisite = { focus = SLO_great_ideologue focus = SLO_pragmatic_statesman focus = SLO_the_father_of_slovak_independence }
+		relative_position_id = SLO_pragmatic_statesman
+
+		mutually_exclusive = { focus = SLO_integrate_the_guard_into_the_army focus = SLO_expand_militia_duties_for_the_guard }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SLO_mountain_general_guard_idea_1
+				add_idea = SLO_mountain_general_guard_idea_2_eyes_and_ears
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_expand_militia_duties_for_the_guard
+		icon = GFX_focus_generic_manpower
+		x = 0
+		y = 3
+		cost = 5
+		
+		prerequisite = { focus = SLO_great_ideologue focus = SLO_pragmatic_statesman focus = SLO_the_father_of_slovak_independence }
+		relative_position_id = SLO_pragmatic_statesman
+
+		mutually_exclusive = { focus = SLO_the_partys_eyes_and_ears focus = SLO_integrate_the_guard_into_the_army }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SLO_mountain_general_guard_idea_1
+				add_idea = SLO_mountain_general_guard_idea_2_militia_duties
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_integrate_the_guard_into_the_army
+		icon = GFX_focus_generic_self_management
+		x = 4
+		y = 3
+		cost = 5
+		
+		prerequisite = { focus = SLO_great_ideologue focus = SLO_pragmatic_statesman focus = SLO_the_father_of_slovak_independence }
+		relative_position_id = SLO_pragmatic_statesman
+
+		mutually_exclusive = { focus = SLO_the_partys_eyes_and_ears focus = SLO_expand_militia_duties_for_the_guard }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SLO_mountain_general_guard_idea_1
+				add_idea = SLO_mountain_general_guard_idea_2_integrate_the_guard
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_ensure_a_nationalist_education
+		icon = GFX_goal_SLO_mandate_christianity_in_schools
+		x = -3
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_the_moderates }
+		relative_position_id = SLO_the_moderates
+		
+		mutually_exclusive = { focus = SLO_a_national_socialist_curriculum }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_nss_dm_neutrality_drift = 0.05 }
+			add_to_variable = { SLO_nss_dm_stability_factor = 0.05 }
+			add_to_variable = { SLO_nss_dm_conscription_factor = 0.03 }
+			
+			custom_effect_tooltip = SLO_ensure_a_nationalist_education_tt
+			
+			custom_effect_tooltip = unlock_propaganda_campaign_tt
+			unlock_decision_tooltip = SLO_propaganda_campaign_13
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_right_5 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_decrease_reich_tolerance_by_5 = yes
+		}
+	}
+	
+	focus = {	
+		id = SLO_a_national_socialist_curriculum
+		icon = GFX_
+		x = 3
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_the_radicals }
+		relative_position_id = SLO_the_radicals
+		
+		mutually_exclusive = { focus = SLO_ensure_a_nationalist_education }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_nss_dm_fascism_drift = 0.05 }
+			add_to_variable = { SLO_nss_dm_war_support_factor = 0.05 }
+			add_to_variable = { SLO_nss_dm_stability_factor = -0.02 }
+			add_to_variable = { SLO_nss_dm_conscription_factor = 0.06 }
+			
+			custom_effect_tooltip = SLO_a_national_socialist_curriculum_tt
+			
+			custom_effect_tooltip = unlock_propaganda_campaign_tt
+			unlock_decision_tooltip = SLO_propaganda_campaign_13
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_left_10 = yes
+		}
+	}
 	
 	focus = {	
 		id = SLO_a_shining_city_for_all_to_see

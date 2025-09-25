@@ -75,6 +75,7 @@
  SLO_minitru:0 "Minitru"
  SLO_ministry_of_public_enlightenment:0 "Ministry of Public Enlightenment"
  SLO_ministry_of_information:0 "Ministry of Information"
+ SLO_the_propaganda_office:0 "The Propaganda Office"
  SLO_available_propaganda_slot_tt:0 "Has an available propaganda slot."
  
  SLO_GET_PROPAGANDA_POSTER_NAME:0 "[SLO.GetPropagandaPosterName]"

@@ -118,6 +118,13 @@ country_event = {
 					hours = 12
 				}
 			}
+			
+			SLO = { 
+				if = {
+					limit = { has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
+					country_event = { id = slovakia.64 days = 7 random_days = 7 } 
+				}
+			}
 		}
 	}
 }
@@ -3326,6 +3333,14 @@ country_event = {
 
 		hidden_effect = {
 			country_event = { hours = 6 id = news.56 }
+			
+			SLO = { 
+				if = {
+					limit = { has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
+					country_event = { id = slovakia.65 days = 7 random_days = 7 }
+				}
+			}
+			
 			if = {
 				limit = {
 					has_dlc = "Death or Dishonor"

@@ -183,7 +183,7 @@ recruit_character = SLO_gejza_medricky
 
 set_research_slots = 3
 
-set_stability = 0.52
+set_stability = 0.545
 set_war_support = 0.31
 
 set_politics = {

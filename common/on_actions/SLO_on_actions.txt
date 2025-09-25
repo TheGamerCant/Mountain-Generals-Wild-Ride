@@ -63,8 +63,8 @@ on_actions = {
 		}
 	}
 	
-	#No capitulating Czechia!!!1`1!!!!!
 	on_weekly_SLO = {
+		#No capitulating Czechia!!!1`1!!!!!
 		effect = {
 			if = {
 				limit = { 
@@ -86,6 +86,71 @@ on_actions = {
 				
 				unlock_national_focus = SLO_peace_with_the_czechs
 				CZE = { country_event = { id = slovakia.1 hours = 8 random_hours = 8 } }
+			}
+		}
+	}
+	
+	#Random advisor events
+	on_weekly_SLO = {
+		effect = {
+			if = {
+				limit = { 
+					has_power_balance = { id = SLO_encroaching_german_influence_bop }
+					NOT = { has_country_flag = SLO_germany_appointed_a_new_advisor_flag }
+				}
+				
+				#2% chance by default
+				random_list = {
+					10 = {
+						#0%
+						modifier = {
+							factor = 0
+							power_balance_value = {
+								id = SLO_encroaching_german_influence_bop
+								value > 0.60
+							}
+						}
+						#0.81%
+						modifier = {
+							factor = 0.4
+							power_balance_value = {
+								id = SLO_encroaching_german_influence_bop
+								value > 0.40
+							}
+						}
+						
+						#2% -0.15 <-> 0.4
+						
+						#3.92%
+						modifier = {
+							factor = 2.0
+							power_balance_value = {
+								id = SLO_encroaching_german_influence_bop
+								value < -0.15
+							}
+						}
+						#5.77%
+						modifier = {
+							factor = 1.5
+							power_balance_value = {
+								id = SLO_encroaching_german_influence_bop
+								value < -0.35
+							}
+						}
+						#8.41%
+						modifier = {
+							factor = 1.5
+							power_balance_value = {
+								id = SLO_encroaching_german_influence_bop
+								value < -0.70
+							}
+						}
+						
+						SLO_fire_event_to_pick_advisor = yes
+					}
+					
+					490 = {}
+				}
 			}
 		}
 	}

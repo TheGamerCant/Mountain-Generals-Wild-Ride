@@ -80,6 +80,12 @@
  SLO_consolidation_of_greater_slovakia_idea:0 "Consolidation of Greater Slovakia"
  SLO_consolidation_of_greater_slovakia_idea_desc:0 "The German threat looms large, and internal dissent simmers. Attention must be given to both of these issues."
  
+ SLO_the_slovakatom_project:0 "The SlovakAtom Project"
+ SLO_the_slovakatom_project_desc:0 ""
+ 
+ SLH_the_apocalypse_idea:0 "End times"
+ SLH_the_apocalypse_idea_desc:0 ""
+ 
  SLO_hunt_the_bear_idea_1:0 "Hunt the Bear"
  SLO_hunt_the_bear_idea_1_desc:0 ""
  SLO_hunt_the_bear_idea_2:0 "$SLO_hunt_the_bear_idea_1$"
@@ -110,6 +116,8 @@
  SLO_eyes_everywhere_fascist_idea_1_desc:0 "We cannot allow people to get ideas such as "freedom" or "dissent" in their minds. They are to see, hear, think, know and love Mountain General and no-one and nothing else!"
  SLO_eyes_everywhere_fascist_idea_2:0 "$SLO_eyes_everywhere_fascist_idea_1$"
  SLO_eyes_everywhere_fascist_idea_2_desc:0 "$SLO_eyes_everywhere_fascist_idea_1_desc$"
+ SLO_eyes_everywhere_fascist_idea_3:0 "$SLO_eyes_everywhere_fascist_idea_1$"
+ SLO_eyes_everywhere_fascist_idea_3_desc:0 "$SLO_eyes_everywhere_fascist_idea_1_desc$"
  
  SLO_skoda_works_1:0 "Škoda Works"
  SLO_skoda_works_1_desc:0 "The Škoda factories of Czechoslovakia were the beating heart of our industry, churning out weapons at such a rate that Czechoslovakia became the third largest exporter of weapons in the world.\n\nYet now, with us divided, our industrial base is not what it could be. It will take time to reach our former heights."
@@ -188,6 +196,12 @@
 
  SLO_mountain_general_guard_idea_1:0 "Mountain General Guard"
  SLO_mountain_general_guard_idea_1_desc:0 ""
+ SLO_mountain_general_guard_idea_2_eyes_and_ears:0 "$SLO_mountain_general_guard_idea_1$"
+ SLO_mountain_general_guard_idea_2_eyes_and_ears_desc:0 "$SLO_mountain_general_guard_idea_1_desc$"
+ SLO_mountain_general_guard_idea_2_integrate_the_guard:0 "$SLO_mountain_general_guard_idea_1$"
+ SLO_mountain_general_guard_idea_2_integrate_the_guard_desc:0 "$SLO_mountain_general_guard_idea_1_desc$"
+ SLO_mountain_general_guard_idea_2_militia_duties:0 "$SLO_mountain_general_guard_idea_1$"
+ SLO_mountain_general_guard_idea_2_militia_duties_desc:0 "$SLO_mountain_general_guard_idea_1_desc$"
  
  SLO_new_slovak_state_dynamic_modifier:0 "Nový Slovenský Štát"
  SLO_new_slovak_state_dynamic_modifier_desc:0 "The birth of the new Slovak state shall go down as one of the greatest achievements of the twentieth century. We have placed the power of state not in the hands of the old stagnant elites or the unwashed masses, but in men of action and men of iron. Where democracies die of stagnation and decadence and totalitarian regimes of hubris, we shall set forth a new approach."

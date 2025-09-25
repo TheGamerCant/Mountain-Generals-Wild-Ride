@@ -89,7 +89,7 @@ characters = {
 				original_tag = SLO
 			}			
 			traits  = {
-				mg_loyalist
+				SLO_mg_loyalist_1
 			}
 			
 			on_add = {
@@ -845,7 +845,7 @@ characters = {
 				}					
 			}
 			traits  = {
-				SLO_radical_ideologue 
+				SLO_radical_ideologue_1
 			}
 
 			ai_will_do = {
@@ -890,7 +890,7 @@ characters = {
 				}	
 			}				
 			traits  = {
-				SLO_fascist_paramilitarist
+				SLO_fascist_paramilitarist_1
 			}
 			
 			on_add = {
@@ -931,7 +931,7 @@ characters = {
 				}	
 			}				
 			traits  = {
-				SLO_prince_of_terror
+				SLO_prince_of_terror_1
 			}
 			
 			on_add = {
@@ -1086,7 +1086,7 @@ characters = {
 				}
 			}				
 			traits  = {
-				SLO_fascist_judge 
+				SLO_fascist_judge_1 
 			}
 			
 			on_add = {
@@ -1119,7 +1119,7 @@ characters = {
 				}	
 			}
 			traits = {
-				SLO_nationalist_technocrat
+				SLO_nationalist_technocrat_1
 			}
 			ai_will_do = {
 				factor = 1.0
@@ -1155,7 +1155,7 @@ characters = {
 				}
 			}
 			traits = {
-				SLO_minister_of_transport_and_public_works
+				SLO_minister_of_transport_and_public_works_1
 			}
 			ai_will_do = {
 				factor = 1.0

@@ -1,0 +1,13 @@
+characters = {
+	SLH_all_gone_char={
+		name=SLH_all_gone_char
+		portraits={
+			civilian={
+				large="GFX_portrait_SLH_all_gone"
+			}
+			army={
+				large="GFX_portrait_SLH_all_gone"
+			}
+		}
+	}
+}

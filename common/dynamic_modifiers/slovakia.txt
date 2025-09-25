@@ -317,4 +317,7 @@ SLO_new_slovak_state_dynamic_modifier = {
 	political_advisor_cost_factor  = SLO_nss_dm_political_advisor_cost_factor 
 	neutrality_drift = SLO_nss_dm_neutrality_drift
 	fascism_drift = SLO_nss_dm_fascism_drift
+	conscription_factor = SLO_nss_dm_conscription_factor
+	war_support_factor = SLO_nss_dm_war_support_factor
+	stability_factor = SLO_nss_dm_stability_factor
 }

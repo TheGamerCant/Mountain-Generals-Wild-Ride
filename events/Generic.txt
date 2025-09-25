@@ -415,6 +415,14 @@ country_event = {
 				}
 			}
 
+#			modifier = { 
+#				factor = 0
+#				FROM = {
+#					original_tag = SLO
+#					has_completed_focus = SLO_join_the_axis
+#				}
+#			}
+
 			modifier = {
 				FROM = {
 					original_tag = RAJ

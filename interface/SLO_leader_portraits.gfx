@@ -1,6 +1,11 @@
 spriteTypes = {
 	
 	spriteType = {
+		name = "GFX_portrait_SLH_all_gone"
+		texturefile = "gfx/leaders/SLO/SLH_all_gone.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_portrait_mg_normal"
 		texturefile = "gfx/leaders/SLO/SLO_mountain_general.dds"
 	}

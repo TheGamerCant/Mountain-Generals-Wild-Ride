@@ -504,6 +504,10 @@ SLO_propaganda_decision_category = {
 			}
 			else_if = {
 				limit = { has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
+#				OR = {
+#					has_country_flag = SLO_all_propaganda_available_flag
+#					has_completed_focus = SLO_armed_neutrality
+#				}
 				has_country_flag = SLO_all_propaganda_available_flag
 			}
 		}
@@ -568,6 +572,10 @@ SLO_propaganda_decision_category = {
 			}
 			else_if = {
 				limit = { has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
+#				OR = {
+#					has_country_flag = SLO_all_propaganda_available_flag
+#					has_completed_focus = SLO_armed_neutrality
+#				}
 				has_country_flag = SLO_all_propaganda_available_flag
 			}
 		}
@@ -728,6 +736,8 @@ SLO_propaganda_decision_category = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
 				has_completed_focus = SLO_the_teachings_of_mountain_general
+				has_completed_focus = SLO_ensure_a_nationalist_education
+				has_completed_focus = SLO_a_national_socialist_curriculum
 			}
 		}
 
@@ -779,6 +789,7 @@ SLO_propaganda_decision_category = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
 				has_completed_focus = SLO_news_of_our_victories
+#				has_completed_focus = SLO_emphasise_slovak_identity
 			}
 		}
 
@@ -1202,6 +1213,7 @@ SLO_propaganda_decision_category = {
 			subjects_autonomy_gain = -0.5
 			autonomy_gain = 0.5
 			neutrality_drift = 0.05
+			power_balance_weekly = 0.010
 		}
 
 		complete_effect = {
@@ -1212,7 +1224,6 @@ SLO_propaganda_decision_category = {
 		remove_effect = {
 			set_variable = { SLO.propaganda_campaign_to_end = 22 }
 			SLO_end_propaganda_campaign = yes
-			SLO_move_power_balance_right_20 = yes
 		}
 	}
 	
@@ -1255,6 +1266,7 @@ SLO_propaganda_decision_category = {
 			autonomy_gain = -0.2
 			consumer_goods_factor = -0.05
 			master_ideology_drift = 0.10
+			power_balance_weekly = -0.010
 		}
 
 		complete_effect = {
@@ -1265,7 +1277,6 @@ SLO_propaganda_decision_category = {
 		remove_effect = {
 			set_variable = { SLO.propaganda_campaign_to_end = 23 }
 			SLO_end_propaganda_campaign = yes
-			SLO_move_power_balance_left_10 = yes
 		}
 	}
 }
@@ -8825,6 +8836,77 @@ SLO_towards_a_european_union_decision_category = {
 }
 
 SLO_encroaching_german_influence_bop_category = {
+	SLO_ger_tolerance_decision = {
+
+		icon = eng_puppet_usa
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+		}
+	
+		fire_only_once = no
+		cost = 0
+		
+		complete_effect = {
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	SLO_german_intervention_in_our_politics = {
+
+		icon = eng_puppet_usa
+
+		activation = {
+			is_neighbor_of = GER
+			
+			date > 1940.3.11
+			
+			set_temp_variable =	{ current_bop_val = SLO.power_balance_value }
+			multiply_temp_variable = { current_bop_val = 100 }
+			
+			check_variable = { var = current_bop_val value = SLO.SLO_bop_ger_tolerance compare = greater_than }
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		selectable_mission = no
+		is_good = no
+
+		visible = {
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				set_temp_variable =	{ current_bop_val = SLO.power_balance_value }
+				multiply_temp_variable = { current_bop_val = 100 }
+				
+				check_variable = { var = current_bop_val value = SLO.SLO_bop_ger_tolerance compare = less_than_or_equals }
+				
+				tooltip = SLO_german_intervention_in_our_politics_cancel_trigger_tt
+			}
+		}
+		
+		days_mission_timeout = 30
+		
+		complete_effect = {
+		}
+		timeout_effect = {
+			country_event = { id = slovakia.62 hours = 8 random_hours = 4 }
+		}
+	}
 	SLO_povazska_bystrica_arms_factory = {
 
 		icon = ger_military_buildup
@@ -8853,7 +8935,7 @@ SLO_encroaching_german_influence_bop_category = {
 		}
 	
 		fire_only_once = yes
-		days_remove = 730
+		days_remove = 1200
 		cost = 100
 		
 		complete_effect = {
@@ -8869,6 +8951,10 @@ SLO_encroaching_german_influence_bop_category = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			SLO_move_power_balance_left_5 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_decrease_reich_tolerance_by_10 = yes
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -8908,7 +8994,7 @@ SLO_encroaching_german_influence_bop_category = {
 		}
 	
 		fire_only_once = yes
-		days_remove = 730
+		days_remove = 1200
 		cost = 75
 		
 		complete_effect = {
@@ -8924,7 +9010,7 @@ SLO_encroaching_german_influence_bop_category = {
 				
 				add_resource = {
 					type = steel
-					amount = 17
+					amount = 15
 				}
 				add_resource = {
 					type = aluminium
@@ -8946,6 +9032,10 @@ SLO_encroaching_german_influence_bop_category = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			SLO_move_power_balance_left_5 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_decrease_reich_tolerance_by_10 = yes
 		}
 		
 		ai_will_do = {
@@ -9026,6 +9116,10 @@ SLO_encroaching_german_influence_bop_category = {
 		
 		complete_effect = {
 			SLO_move_power_balance_left_10 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_decrease_reich_tolerance_by_5 = yes
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 					

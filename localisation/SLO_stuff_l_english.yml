@@ -3,6 +3,9 @@
  SLO_anti_hungarian_campaigns:0 "Anti Hungarian Campaigns"
  SLO_denounced_by_mountain_general:0 "Denounced by Mountain General"
  SLO_strengthened_economic_ties:0 "Strengthened Economic Ties"
+ SLO_refused_our_demands:0 "Refused our Demands"
+ SLO_did_nothing_about_rioters:0 "Did Nothing About Rioters"
+ SLO_condemned_rioters:0 "Condemned Rioters"
  
  # Country Flags
  SLO_partisan_uprising_flag:0 "Partisan activity is ongoing"
@@ -29,6 +32,10 @@
  SLO_debrecin:0 "Debrecín"
  SLO_segedin:0 "Segedín"
  SLO_heroes_of_slovakia:0 "Hrdinovia Slovenska"
+ 
+ #All Gone
+ SLH_all_gone_char:0 ""
+ cannot_engage_with_SLH_all_gone:0 "Cannot engage with this 'country'"
  
  #Scripted trigger
 # formed_the_european_union:0 "formed the §BE§!§YU§!§BR§!§YO§!§BP§!§YE§!§BA§!§YN§! §BU§!§YN§!§BI§!§YO§!§BN§!"

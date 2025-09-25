@@ -394,8 +394,8 @@ country_event = {
 			ideology = democratic
 			popularity = -0.05
 		}
-		add_stability = -0.05
-		add_political_power = 60
+		add_stability = -0.04
+		add_political_power = 50
 
 		add_to_variable = { SLO.mg_fascism_leaning = 8 }
 		subtract_from_variable = { SLO.mg_democratic_leaning = 5 }
@@ -850,7 +850,10 @@ country_event = {
 		
 		trigger = {
 			NOT = {
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_completed_focus = SLO_reach_out_to_the_hlinkas_slovak_peoples_party
+				}
 			}
 		}
 		
@@ -1611,6 +1614,8 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}	
+		
+		add_political_power = 25
 	}
 }
 
@@ -1727,6 +1732,8 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
+		
+		mark_focus_tree_layout_dirty = yes	#To update focus GFX
 	}
 }
 
@@ -1832,6 +1839,12 @@ country_event = {
 	is_triggered_only = yes
 	
 	picture = GFX_report_event_german_inspect_troops
+	
+	after = {
+		hidden_effect = {
+			country_event = { id = slovakia.61 days = 365 random_days = 600 }
+		}
+	}
 
 	option = { 
 		name = slovakia.52.a
@@ -2048,6 +2061,10 @@ country_event = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
 		SLO_move_power_balance_left_15 = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_decrease_reich_tolerance_by_20 = yes
 	}
 }
 
@@ -2139,6 +2156,8 @@ country_event = {
 					}
 				}
 			}
+			
+			SLO_decrease_reich_tolerance_by_10 = yes
 		}
 	}
 
@@ -2168,11 +2187,13 @@ country_event = {
 					}
 				}
 			}
+			
+			SLO_decrease_reich_tolerance_by_10 = yes
 		}
 	}
 }
 
-#Appoint political advisor - space free
+#Appoint political advisor
 country_event = {
 	id = slovakia.58
 	title = slovakia.58.title
@@ -2183,8 +2204,7 @@ country_event = {
 
 	after = {
 		hidden_effect = {
-			SLO_clear_political_advisor_flags = yes
-			SLO_clear_high_command_flags = yes
+			SLO_clear_advisor_appointing_variables = yes
 		}
 	}
 
@@ -2194,18 +2214,489 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}	
-		
-#		every_character = {
-#			limit = { has_character_flag = SLO_political_advisor_selected_flag }
-#			
-#			add_advisor_role = {
-#				activate = yes
-#			}
-#		}
 
-		add_ideas = SLO_julius_stano
+		meta_effect = {
+			text = {
+				activate_advisor = [CHARACTER]
+				set_can_be_fired_in_advisor_role = {
+					character = [CHARACTER]
+					slot = political_advisor
+					value = no
+				}
+			}
+			CHARACTER = "[?SLO.political_advisor_selected.GetTokenKey]"
+		}
+	}
+
+	#Refuse
+	option = { 
+		name = slovakia.58.b
+		ai_chance = {
+			base = 10
+		}	
+
+		trigger = {
+			has_political_power > SLO.advisor_pp_needed
+		}
+		
+		set_temp_variable = { pp_subtract = SLO.advisor_pp_needed }
+		multiply_temp_variable = { pp_subtract = -1 }
+		
+		add_political_power = var:pp_subtract
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		GER = { add_opinion_modifier = { target = SLO modifier = SLO_refused_our_demands } }
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_move_power_balance_right_10 = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_decrease_reich_tolerance_by_10 = yes
 	}
 }
+
+#Appoint high command
+country_event = {
+	id = slovakia.59
+	title = slovakia.59.title
+	desc = {
+		text = slovakia.59.desc_war
+		trigger = {
+			has_war = yes
+			OR = {
+				is_puppet_of = GER
+				is_in_faction_with = GER
+			}
+		}
+	}
+	desc = {
+		text = slovakia.59.desc
+		trigger = {
+			NOT = { 
+				has_war = yes
+				OR = {
+					is_puppet_of = GER
+					is_in_faction_with = GER
+				}
+			}
+		}
+	}
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_danzig_joins_nazis
+
+	after = {
+		hidden_effect = {
+			SLO_clear_advisor_appointing_variables = yes
+		}
+	}
+
+	#Accept
+	option = { 
+		name = slovakia.59.a
+		ai_chance = {
+			base = 10
+		}	
+
+		meta_effect = {
+			text = {
+				activate_advisor = [CHARACTER]
+				set_can_be_fired_in_advisor_role = {
+					character = [CHARACTER]
+					slot = high_command
+					value = no
+				}
+			}
+			CHARACTER = "[?SLO.high_command_selected.GetTokenKey]"
+		}
+	}
+
+	#Refuse
+	option = { 
+		name = slovakia.59.b
+		ai_chance = {
+			base = 10
+		}	
+
+		trigger = {
+			has_political_power > SLO.advisor_pp_needed
+		}
+		
+		set_temp_variable = { pp_subtract = SLO.advisor_pp_needed }
+		multiply_temp_variable = { pp_subtract = -1 }
+		
+		add_political_power = var:pp_subtract
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		GER = { add_opinion_modifier = { target = SLO modifier = SLO_refused_our_demands } }
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_move_power_balance_right_10 = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_decrease_reich_tolerance_by_10 = yes
+	}
+}
+
+#Demands from German industrialists
+country_event = {
+	id = slovakia.60
+	title = slovakia.60.title
+	desc = slovakia.60.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_SLO_german_industrialists
+
+	#Accept fully
+	option = { 
+		name = slovakia.60.a
+		ai_chance = {
+			base = 10
+		}	
+		
+		every_core_state = {
+			limit = {
+				is_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			random_select_amount = 1
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_to_variable = { SLO_economy_dm_stability_factor = -0.04 }
+		add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.05 }
+		custom_effect_tooltip = slovakia.60.a.tt
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_move_power_balance_left_25 = yes
+			
+		custom_effect_tooltip = generic_skip_one_line_tt
+			
+		SLO_decrease_reich_tolerance_by_15 = yes
+	}
+	
+	#Compromise
+	option = { 
+		name = slovakia.60.b
+		ai_chance = {
+			base = 10
+		}	
+		
+		every_core_state = {
+			limit = {
+				is_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			random_select_amount = 1
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_political_power = -50
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_move_power_balance_left_10 = yes
+			
+		custom_effect_tooltip = generic_skip_one_line_tt
+			
+		SLO_decrease_reich_tolerance_by_10 = yes
+	}
+
+	#Refuse
+	option = { 
+		name = slovakia.60.c
+		ai_chance = {
+			base = 10
+		}	
+		
+		add_stability = 0.02
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		GER = { add_opinion_modifier = { target = SLO modifier = SLO_refused_our_demands } }
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		SLO_move_power_balance_right_5 = yes
+			
+		custom_effect_tooltip = generic_skip_one_line_tt
+			
+		SLO_decrease_reich_tolerance_by_5 = yes
+	}
+}
+
+#Ethnic riots
+country_event = {
+	id = slovakia.61
+	title = slovakia.61.title
+	desc = slovakia.61.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_SLO_clashes_in_bratislava
+
+	#Publicly condemn
+	option = { 
+		name = slovakia.61.a
+		ai_chance = {
+			base = 10
+		}	
+		
+		GER = { add_opinion_modifier = { target = SLO modifier = SLO_condemned_rioters } }
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_stability = 0.02
+		add_political_power = 50
+		add_popularity = { ideology = ROOT popularity = -0.025 }
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_move_power_balance_left_15 = yes
+			
+		custom_effect_tooltip = generic_skip_one_line_tt
+			
+		SLO_increase_reich_tolerance_by_5 = yes
+	}
+	
+	#Quietly deal with the rioters
+	option = { 
+		name = slovakia.61.b
+		ai_chance = {
+			base = 10
+		}	
+		
+		add_political_power = 10
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_move_power_balance_left_5 = yes
+	}
+	
+	#Remain neutral
+	option = { 
+		name = slovakia.61.c
+		ai_chance = {
+			base = 10
+		}	
+		
+		add_political_power = 25
+			
+		custom_effect_tooltip = generic_skip_one_line_tt
+			
+		SLO_decrease_reich_tolerance_by_5 = yes
+	}
+	
+	#Support rioters
+	option = { 
+		name = slovakia.61.d
+		ai_chance = {
+			base = 10
+		}	
+		
+		GER = { add_opinion_modifier = { target = SLO modifier = SLO_did_nothing_about_rioters } }
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_stability = -0.05
+		add_political_power = 25
+		add_popularity = { ideology = ROOT popularity = 0.025 }
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_move_power_balance_right_15 = yes
+			
+		custom_effect_tooltip = generic_skip_one_line_tt
+			
+		SLO_decrease_reich_tolerance_by_15 = yes
+	}
+}
+
+#Germany demands we realign our policies
+country_event = {
+	id = slovakia.62
+	title = slovakia.62.title
+	desc = slovakia.62.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_sign_treaty3
+
+	#Accept their demands
+	option = { 
+		name = slovakia.62.a
+		ai_chance = {
+			base = 10
+		}	
+		
+		GER = { add_opinion_modifier = { target = SLO modifier = large_increase } }
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_move_power_balance_left_25 = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		if = {
+			limit = { NOT = { has_government = fascism } }
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+				election_frequency = 48
+			}
+		}
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_stability = -0.10
+	}
+
+	#Refuse
+	option = { 
+		name = slovakia.62.b
+		ai_chance = {
+			base = 0
+		}	
+		
+		GER = { 
+			add_opinion_modifier = { target = SLO modifier = rejected_demands }
+			country_event = { id = slovakia.63 hours = 4 }
+		}
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_political_power = -75
+		add_popularity = { ideology = ROOT popularity = 0.08 }
+		
+		custom_effect_tooltip = slovakia.62.b.tt
+	}
+}
+
+#For GER - Slovakia has rejected our demands
+country_event = {
+	id = slovakia.63
+	title = slovakia.63.title
+	desc = slovakia.63.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_sign_treaty3
+
+	#War!
+	option = { 
+		name = slovakia.63.a
+		ai_chance = {
+			base = 10
+		}	
+		
+		if = {
+			limit = { SLO = { is_puppet_of = GER } }
+			GER = { end_puppet = SLO }
+		}
+		
+		if = {
+			limit = { is_in_faction_with = SLO is_faction_leader = yes }
+			remove_from_faction = SLO
+		}
+		
+		declare_war_on = {
+			target = SLO
+			type = puppet_wargoal_focus
+		}
+	}
+
+	#Let them
+	option = { 
+		name = slovakia.63.b
+		ai_chance = {
+			base = 0
+		}	
+		add_political_power = -100
+	}
+}
+
+#Increased German Pressure - Anschluss
+country_event = {
+	id = slovakia.64
+	title = slovakia.64.title
+	desc = slovakia.64.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_german_politician_speech
+
+	option = { 
+		name = slovakia.64.a
+		ai_chance = {
+			base = 10
+		}	
+		
+		SLO_move_power_balance_left_10 = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_decrease_reich_tolerance_by_20 = yes
+	}
+}
+
+#Increased German Pressure - Sudetenland
+country_event = {
+	id = slovakia.65
+	title = slovakia.65.title
+	desc = slovakia.65.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_german_politician_speech
+
+	option = { 
+		name = slovakia.65.a
+		ai_chance = {
+			base = 10
+		}	
+		
+		SLO_move_power_balance_left_10 = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_decrease_reich_tolerance_by_20 = yes
+	}
+}
+
 
 add_namespace = slovakia_elections
 

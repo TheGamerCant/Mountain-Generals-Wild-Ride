@@ -7531,7 +7531,7 @@ focus_tree = {
 				
 				add_resource = {
 					type = steel
-					amount = 119
+					amount = 19
 				}
 				
 				add_manpower = 4108
@@ -8041,6 +8041,10 @@ focus_tree = {
 				remove_idea = SLO_mountain_general_guard_idea_1
 				add_idea = SLO_mountain_general_guard_idea_2_militia_duties
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_decrease_reich_tolerance_by_5 = yes
 		}
 	}
 	

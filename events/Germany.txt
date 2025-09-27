@@ -3715,6 +3715,20 @@ country_event = {
 	picture = GFX_report_event_german_inspect_troops
 
 	is_triggered_only = yes
+	
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {  
+					SLO = {
+						exists = yes
+						NOT = { is_in_faction_with = ROOT }
+					}
+				}
+			}
+			SLO = { country_event = { id = slovakia.66 days = 2 random_days = 2 } }
+		}
+	}
 
 	option = {
 		name = germany.55.a

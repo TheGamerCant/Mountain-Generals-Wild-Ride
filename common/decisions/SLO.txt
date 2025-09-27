@@ -504,11 +504,10 @@ SLO_propaganda_decision_category = {
 			}
 			else_if = {
 				limit = { has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
-#				OR = {
-#					has_country_flag = SLO_all_propaganda_available_flag
-#					has_completed_focus = SLO_armed_neutrality
-#				}
-				has_country_flag = SLO_all_propaganda_available_flag
+				OR = {
+					has_country_flag = SLO_all_propaganda_available_flag
+					has_completed_focus = SLO_the_father_of_slovak_independence
+				}
 			}
 		}
 
@@ -572,11 +571,10 @@ SLO_propaganda_decision_category = {
 			}
 			else_if = {
 				limit = { has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
-#				OR = {
-#					has_country_flag = SLO_all_propaganda_available_flag
-#					has_completed_focus = SLO_armed_neutrality
-#				}
-				has_country_flag = SLO_all_propaganda_available_flag
+				OR = {
+					has_country_flag = SLO_all_propaganda_available_flag
+					has_completed_focus = SLO_the_father_of_slovak_independence
+				}
 			}
 		}
 
@@ -8931,11 +8929,11 @@ SLO_encroaching_german_influence_bop_category = {
 		}
 
 		modifier = {
-			power_balance_weekly = -0.001
+			power_balance_weekly = -0.002
 		}
 	
 		fire_only_once = yes
-		days_remove = 1200
+		days_remove = 850
 		cost = 100
 		
 		complete_effect = {
@@ -8950,18 +8948,14 @@ SLO_encroaching_german_influence_bop_category = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			SLO_move_power_balance_left_5 = yes
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			SLO_decrease_reich_tolerance_by_10 = yes
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
 			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.05 }
 			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.05 }
 			
 			custom_effect_tooltip = SLO_povazska_bystrica_arms_factory_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_decrease_reich_tolerance_by_10 = yes
 		}
 		
 		ai_will_do = {
@@ -8990,11 +8984,11 @@ SLO_encroaching_german_influence_bop_category = {
 		}
 
 		modifier = {
-			power_balance_weekly = -0.001
+			power_balance_weekly = -0.002
 		}
 	
 		fire_only_once = yes
-		days_remove = 1200
+		days_remove = 700
 		cost = 75
 		
 		complete_effect = {
@@ -9025,17 +9019,102 @@ SLO_encroaching_german_influence_bop_category = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			add_to_variable = { SLO_economy_dm_min_export = 0.05 }
-			add_to_variable = { SLO_economy_dm_local_resources_factor = 0.15 }
+			add_to_variable = { SLO_economy_dm_local_resources_factor = 0.09 }
 			
 			custom_effect_tooltip = SLO_slovenske_rudohorie_iron_ore_processing_tt
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			SLO_move_power_balance_left_5 = yes
+			SLO_decrease_reich_tolerance_by_10 = yes
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	SLO_convert_appolo_oil_refinery_for_synthetic_materiels = {
+
+		icon = rubber
+
+		available = {
+			GER = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+			
+			has_completed_focus = SLO_expand_the_apollo_oil_refinery
+			has_tech = synth_oil_experiments
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+		}
+
+		modifier = {
+			power_balance_weekly = -0.001
+		}
+	
+		fire_only_once = yes
+		days_remove = 960
+		cost = 30
+		
+		complete_effect = {
+			if = {
+				limit = { has_tech = synth_oil_experiments }
+				random_core_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = synthetic_refinery
+							size > 0
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 0
+							include_locked = yes
+						}
+					}
+					
+					prioritize = { 70 }
+					
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = SLO_convert_appolo_oil_refinery_for_synthetic_materiels_no_synth_experiments_tt
+			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			SLO_decrease_reich_tolerance_by_10 = yes
+			add_to_variable = { SLO_economy_dm_production_speed_synthetic_refinery_factor = 0.12 }
+			custom_effect_tooltip = SLO_convert_appolo_oil_refinery_for_synthetic_materiels_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_tech_bonus = {
+				name = SLO_convert_appolo_oil_refinery_for_synthetic_materiels
+				bonus = 0.75
+				uses = 2
+				category = synth_resources
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_decrease_reich_tolerance_by_5 = yes
 		}
 		
 		ai_will_do = {
@@ -9069,7 +9148,7 @@ SLO_encroaching_german_influence_bop_category = {
 		cost = 50
 		
 		complete_effect = {
-			SLO_move_power_balance_left_15 = yes
+			SLO_move_power_balance_left_10 = yes
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 					
@@ -9149,6 +9228,279 @@ SLO_encroaching_german_influence_bop_category = {
 		}
 	}
 	
+	SLO_get_rid_of_german_appointees = {
+
+		icon = oppression
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SLO_get_rid_of_german_appointees_trigger_tt
+				any_character = {
+					is_hired_as_advisor = yes
+					advisor_can_be_fired = no
+				}
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = no
+		cost = 50
+		
+		complete_effect = {
+		set_temp_variable =  { SLO_pp_lost = 0 }
+			
+			if = {
+				limit = { SLO_karol_murgas = { is_political_advisor = yes advisor_can_be_fired = no } }
+				set_can_be_fired_in_advisor_role = {
+					character = SLO_karol_murgas
+					slot = political_advisor
+					value = yes
+				}
+				deactivate_advisor = SLO_karol_murgas
+				
+				add_to_temp_variable = { SLO_pp_lost = -100 }
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			if = {
+				limit = { SLO_vojtech_tuka = { is_political_advisor = yes advisor_can_be_fired = no } }
+				set_can_be_fired_in_advisor_role = {
+					character = SLO_vojtech_tuka
+					slot = political_advisor
+					value = yes
+				}
+				deactivate_advisor = SLO_vojtech_tuka
+				
+				add_to_temp_variable = { SLO_pp_lost = -100 }
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			if = {
+				limit = { SLO_alexander_mach = { is_political_advisor = yes advisor_can_be_fired = no } }
+				set_can_be_fired_in_advisor_role = {
+					character = SLO_alexander_mach
+					slot = political_advisor
+					value = yes
+				}
+				deactivate_advisor = SLO_alexander_mach
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_to_temp_variable = { SLO_pp_lost = -100 }
+			}
+			if = {
+				limit = { SLO_julius_stano = { is_political_advisor = yes advisor_can_be_fired = no } }
+				set_can_be_fired_in_advisor_role = {
+					character = SLO_julius_stano
+					slot = political_advisor
+					value = yes
+				}
+				deactivate_advisor = SLO_julius_stano
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_to_temp_variable = { SLO_pp_lost = -50 }
+			}
+			if = {
+				limit = { has_country_flag = SLO_received_german_generals_flag }			#Avoids the error log having a spasm
+				if = {
+					limit = { GER_ewald_von_kleist = { is_high_command = yes advisor_can_be_fired = no } }
+					set_can_be_fired_in_advisor_role = {
+						character = GER_ewald_von_kleist
+						slot = high_command
+						value = yes
+					}
+					deactivate_advisor = GER_ewald_von_kleist
+					
+					custom_effect_tooltip = generic_skip_one_line_tt
+					
+					add_to_temp_variable = { SLO_pp_lost = -50 }
+				}
+				if = {
+					limit = { GER_carl_heinrich_von_stulpnagel = { is_high_command = yes advisor_can_be_fired = no } }
+					set_can_be_fired_in_advisor_role = {
+						character = GER_carl_heinrich_von_stulpnagel
+						slot = high_command
+						value = yes
+					}
+					deactivate_advisor = GER_carl_heinrich_von_stulpnagel
+					
+					custom_effect_tooltip = generic_skip_one_line_tt
+					
+					add_to_temp_variable = { SLO_pp_lost = -50 }
+				}
+			}
+			if = {
+				limit = { SLO_rudolf_pilfousek = { is_high_command = yes advisor_can_be_fired = no } }
+				set_can_be_fired_in_advisor_role = {
+					character = SLO_rudolf_pilfousek
+					slot = high_command
+					value = yes
+				}
+				deactivate_advisor = SLO_rudolf_pilfousek
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_to_temp_variable = { SLO_pp_lost = -50 }
+			}
+			
+			if = {
+				limit = { check_variable = { var = SLO_pp_lost value = 0 compare = not_equals } }
+				add_political_power = var:SLO_pp_lost
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			if = {
+				limit = { check_variable = { var = SLO_pp_lost value = -250 compare = less_than_or_equals } }
+				SLO_move_power_balance_right_25 = yes
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				SLO_decrease_reich_tolerance_by_35 = yes
+			}
+			else_if = {
+				limit = { check_variable = { var = SLO_pp_lost value = -200 compare = less_than_or_equals } }
+				SLO_move_power_balance_right_20 = yes
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				SLO_decrease_reich_tolerance_by_30 = yes
+			}
+			else_if = {
+				limit = { check_variable = { var = SLO_pp_lost value = -150 compare = less_than_or_equals } }
+				SLO_move_power_balance_right_15 = yes
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				SLO_decrease_reich_tolerance_by_25 = yes
+			}
+			else_if = {
+				limit = { check_variable = { var = SLO_pp_lost value = -100 compare = less_than_or_equals } }
+				SLO_move_power_balance_right_10 = yes
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				SLO_decrease_reich_tolerance_by_20 = yes
+			}
+			else = {
+				SLO_move_power_balance_right_5 = yes
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				SLO_decrease_reich_tolerance_by_15 = yes
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	SLO_form_the_rychla_division = {
+
+		icon = generic_motorized
+
+		available = {
+			is_in_faction_with = GER
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_slovakia_at_war
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = yes
+		ai_hint_pp_cost = 50
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > 49
+			has_army_experience > 14
+		}
+		custom_cost_text = decision_cost_CP_50_pp_50_ArmXP_15
+		
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+				add_political_power = -50
+				army_experience = -15
+			}
+			
+			add_tech_bonus = {
+				name = SLO_military_technological_exchanges_with_germany
+				bonus = 0.5
+				uses = 1
+				category = motorized_equipment
+				category = cat_mechanized_equipment
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_left_10 = yes
+			
+			hidden_effect = {
+				division_template = {
+					name = "Rapid Motorised Division"
+					priority = 2
+					division_names_group = SLO_INF_01
+					regiments = {
+						motorized = { x = 0 y = 0 }
+						motorized = { x = 0 y = 1 }
+						motorized = { x = 0 y = 2 }
+			
+	    	   		 	motorized = { x = 1 y = 0 }
+						motorized = { x = 1 y = 1 }
+						motorized = { x = 1 y = 2 }
+			
+	    	   		 	light_armor = { x = 2 y = 0 }
+						light_armor = { x = 2 y = 1 }
+					}
+					support = {
+						mot_recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+					}
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 70 }
+				create_unit = {
+					division = "name = \"Rýchla Divízia\" division_template = \"Rapid Motorised Division\" start_experience_factor = 1.0" 
+					owner = SLO
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_equipment_to_stockpile = { 
+				type = motorized_equipment_1
+				amount = 300
+				producer = GER
+			}		
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
 	SLO_request_german_generals_and_advisors = {
 
 		icon = generic_army_support
@@ -9172,6 +9524,7 @@ SLO_encroaching_german_influence_bop_category = {
 		}
 
 		visible = {
+			has_completed_focus = SLO_slovakia_at_war
 		}
 
 		modifier = {
@@ -9191,6 +9544,119 @@ SLO_encroaching_german_influence_bop_category = {
 		
 		ai_will_do = {
 			base = 10
+		}
+	}
+	
+	SLO_sign_unequal_treaties_with_germany = {
+
+		icon = generic_consumer_goods
+
+		available = {
+			GER = {
+				exists = yes
+				is_in_faction_with = ROOT
+			}
+			
+			power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value < 0.30
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_slovakia_at_war
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = no
+		days_remove = 0
+		days_re_enable = 60
+		cost = 0
+		
+		complete_effect = {
+			SLO_increase_unfair_trade_with_germany = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = 30
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_left_5 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_increase_reich_tolerance_by_5 = yes
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	SLO_renegotiate_unequal_treaties_with_germany = {
+
+		icon = generic_consumer_goods
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SLO_renegotiate_unequal_treaties_with_germany_trigger_tt
+				
+				OR = {
+					has_idea = SLO_unfair_trade_with_germany_idea_1
+					has_idea = SLO_unfair_trade_with_germany_idea_2
+					has_idea = SLO_unfair_trade_with_germany_idea_3
+					has_idea = SLO_unfair_trade_with_germany_idea_4
+					has_idea = SLO_unfair_trade_with_germany_idea_5
+					has_idea = SLO_unfair_trade_with_germany_idea_6
+					has_idea = SLO_unfair_trade_with_germany_idea_7
+					has_idea = SLO_unfair_trade_with_germany_idea_8
+					has_idea = SLO_unfair_trade_with_germany_idea_9
+					has_idea = SLO_unfair_trade_with_germany_idea_10
+				}
+			}
+			power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value > -0.80
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_slovakia_at_war
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = no
+		days_remove = 0
+		days_re_enable = 60
+		cost = 50
+		
+		complete_effect = {
+			SLO_decrease_unfair_trade_with_germany = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_right_5 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_decrease_reich_tolerance_by_5 = yes
+		}
+		
+		ai_will_do = {
+			base = 0
 		}
 	}
 }

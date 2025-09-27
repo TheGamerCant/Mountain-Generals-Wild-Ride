@@ -316,7 +316,7 @@ leader_traits = {
 		party_popularity_stability_factor = 0.10
 		conscription = 0.007
 		neutrality_drift = 0.05
-		power_balance_weekly = 0.001
+		power_balance_weekly = 0.002
 	}
 
 	SLO_mg_loyalist_1 = {

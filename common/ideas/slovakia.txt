@@ -1941,7 +1941,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.002
-				political_power_gain = 0.10
+				political_power_gain = 0.15
 				neutrality_drift = 0.03
 				army_org_factor = 0.03
 				army_morale_factor = 0.03
@@ -2030,6 +2030,376 @@ ideas = {
 				experience_gain_navy_factor = -0.15
 				experience_gain_air_factor = -0.15
 				max_command_power = -50
+			}
+		}
+		
+		SLO_unfair_trade_with_germany_idea_1 = {
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.08
+			}
+		}
+		
+		SLO_unfair_trade_with_germany_idea_2 = {
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.16
+			}
+		}
+		
+		SLO_unfair_trade_with_germany_idea_3 = {
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.24
+			}
+		}
+		
+		SLO_unfair_trade_with_germany_idea_4 = {
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.32
+			}
+		}
+		
+		SLO_unfair_trade_with_germany_idea_5 = {
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.40
+			}
+		}
+		
+		SLO_unfair_trade_with_germany_idea_6 = {
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.48
+			}
+		}
+		
+		SLO_unfair_trade_with_germany_idea_7 = {
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.56
+			}
+		}
+		
+		SLO_unfair_trade_with_germany_idea_8 = {
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.64
+			}
+		}
+		
+		SLO_unfair_trade_with_germany_idea_9 = {
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.72
+			}
+		}
+		
+		SLO_unfair_trade_with_germany_idea_10 = {
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.80
+			}
+		}
+		
+		GER_trade_with_slovakia_idea_1 = {
+			removal_cost = -1
+
+			picture = ARG_civilian_economy_boost
+				
+			available = {
+				SLO = {
+					has_idea = SLO_unfair_trade_with_germany_idea_1
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.015
+			}
+		}
+		
+		GER_trade_with_slovakia_idea_2 = {
+			removal_cost = -1
+
+			picture = ARG_civilian_economy_boost
+				
+			available = {
+				SLO = {
+					has_idea = SLO_unfair_trade_with_germany_idea_2
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.030
+			}
+		}
+		
+		GER_trade_with_slovakia_idea_3 = {
+			removal_cost = -1
+
+			picture = ARG_civilian_economy_boost
+				
+			available = {
+				SLO = {
+					has_idea = SLO_unfair_trade_with_germany_idea_3
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.045
+			}
+		}
+		
+		GER_trade_with_slovakia_idea_4 = {
+			removal_cost = -1
+
+			picture = ARG_civilian_economy_boost
+				
+			available = {
+				SLO = {
+					has_idea = SLO_unfair_trade_with_germany_idea_4
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.060
+			}
+		}
+		
+		GER_trade_with_slovakia_idea_5 = {
+			removal_cost = -1
+
+			picture = ARG_civilian_economy_boost
+				
+			available = {
+				SLO = {
+					has_idea = SLO_unfair_trade_with_germany_idea_5
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.075
+			}
+		}
+		
+		GER_trade_with_slovakia_idea_6 = {
+			removal_cost = -1
+
+			picture = ARG_civilian_economy_boost
+				
+			available = {
+				SLO = {
+					has_idea = SLO_unfair_trade_with_germany_idea_6
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.090
+			}
+		}
+		
+		GER_trade_with_slovakia_idea_7 = {
+			removal_cost = -1
+
+			picture = ARG_civilian_economy_boost
+				
+			available = {
+				SLO = {
+					has_idea = SLO_unfair_trade_with_germany_idea_7
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.105
+			}
+		}
+		
+		GER_trade_with_slovakia_idea_8 = {
+			removal_cost = -1
+
+			picture = ARG_civilian_economy_boost
+				
+			available = {
+				SLO = {
+					has_idea = SLO_unfair_trade_with_germany_idea_8
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.120
+			}
+		}
+		
+		GER_trade_with_slovakia_idea_9 = {
+			removal_cost = -1
+
+			picture = ARG_civilian_economy_boost
+				
+			available = {
+				SLO = {
+					has_idea = SLO_unfair_trade_with_germany_idea_9
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.135
+			}
+		}
+		
+		GER_trade_with_slovakia_idea_10 = {
+			removal_cost = -1
+
+			picture = ARG_civilian_economy_boost
+				
+			available = {
+				SLO = {
+					has_idea = SLO_unfair_trade_with_germany_idea_10
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.150
 			}
 		}
 	}

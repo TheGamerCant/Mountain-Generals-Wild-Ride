@@ -97,6 +97,7 @@ on_actions = {
 				limit = { 
 					has_power_balance = { id = SLO_encroaching_german_influence_bop }
 					NOT = { has_country_flag = SLO_germany_appointed_a_new_advisor_flag }
+					date > 1939.3.1
 				}
 				
 				#2% chance by default

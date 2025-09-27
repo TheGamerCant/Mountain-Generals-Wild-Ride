@@ -129,6 +129,9 @@ SLO_corparatist_economy_dynamic_modifier = {
 	global_building_slots_factor = SLO_economy_dm_global_building_slots_factor
 	monthly_population = SLO_economy_dm_monthly_population
 	min_export = SLO_economy_dm_min_export
+	economy_cost_factor = SLO_economy_dm_economy_cost_factor
+	trade_laws_cost_factor = SLO_economy_dm_trade_laws_cost_factor
+	production_speed_synthetic_refinery_factor = SLO_economy_dm_production_speed_synthetic_refinery_factor
 }
 
 SLO_army_dynamic_modifier = {
@@ -320,4 +323,6 @@ SLO_new_slovak_state_dynamic_modifier = {
 	conscription_factor = SLO_nss_dm_conscription_factor
 	war_support_factor = SLO_nss_dm_war_support_factor
 	stability_factor = SLO_nss_dm_stability_factor
+	compliance_growth = SLO_nss_dm_compliance_growth
+	war_stability_factor = SLO_nss_dm_war_stability_factor
 }

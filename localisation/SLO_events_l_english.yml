@@ -24,7 +24,7 @@
  
  slovakia.6.title:0 "Bratislava nights"
  slovakia.6.desc:0 "Josef Tiso couldn't sleep. He had been lying awake for hours, trying to force himself to go to sleep, but Mountain General's recent erratic behaviour caused him great distress.\n\n'It's fine,' he thought to himself, 'He knows more than we ever could'. Unable to get to sleep, he took himself for a walk.\n\nWhile walking the streets of Bratislava, Tiso came across Mountain General, intoxicated and pissing in the river.\n\n'What are you doing,' he enquired.\n\n'Pissing in the Danube so it flows down to Budapest,' Mountain General responded.\n\n'Genius - but anyways, why are you also up?'\n\n'You see, I forgot to take my crazy pills yesterday, and as such I have been beside myself and extremely energetic.'"
- slovakia.6.a:0 "'Perhaps I should take them.'"
+ slovakia.6.a:0 "'Alas, perhaps I should take them.'"
  slovakia.6.b:0 "'And I like it!'"
  SLO_mg_goes_crazy_tt:0 "§RMountain General grows madder...§!"
  
@@ -215,7 +215,7 @@
  slovakia.51.a:0 "We must deal with these traitors at once!"
  
  slovakia.52.title:0 "Encroaching German Influence"
- slovakia.52.desc:0 "There's an old saying in geopolitics - the strong do what they want, and the weak do what they must.\n\nOur hostile relations with our neighbours has lead many of the more radical members of our government to seek increased co-operation with the regime of [GER.GetLeader], positioning ourselves as a loyal ally of the Reich in exchange for protection. Of course, Mountain General is more reluctant to welcome Hitler to Bratislava with such welcome arms, but politics being what they may, we will have to deal with Germany at some point."
+ slovakia.52.desc:0 "There's an old saying in geopolitics - the strong do what they want, and the weak do what they must.\n\nOur hostile relations with our neighbours has lead many of the more radical members of our government to seek increased co-operation with the regime of [GER.GetLeader], positioning ourselves as a loyal ally of the Reich in exchange for protection. Of course, Mountain General and many other members of the government are more reluctant to welcome Hitler to Bratislava with such welcome arms, but politics being what they may, we will have to deal with Germany at some point."
  slovakia.52.a:0 "Why can't we have Sweden or Canada for a neighbour?"
  slovakia.52.b:0 "Some co-operation is in both our nations' interests"
  
@@ -284,6 +284,12 @@
  slovakia.65.title:0 "The Eagle Watches Closer"
  slovakia.65.desc:0 "Following the annexation of the Sudetenland, our position is even more vulnerable. Western democracies have proven themselves weak and unwilling to deal with [GER.GetLeader]'s Germany, seemingly leaving all nations of Central and Eastern Europe to the whims of Hitler and Stalin."
  slovakia.65.a:0 "What could we possibly we do about it?"
+ 
+ slovakia.66.t:0 "[GER.GetNameDefCap] Invites us to the [GER.GetFactionName]"
+ slovakia.66.desc:0 "Following their march into the rump Czech state, [GER.GetNameDef] have requested our entry into the tripartite pact. Unlike previous diplomatic interactions with the Reich however, this one seems far more cordial, albeit for some morbid reasons.\n\n[GER.GetLeader]'s ambitions against Poland are well known, and our position would give the Germans a good launch point for a thrust to encircle Kraków. Poland is likely to fall regardless, so the question is - do we do it now and reap the rewards of being a loyal ally, or do we try to maintain the façade of neutrality for a little while longer?"
+ slovakia.66.a:0 "We will sign the pact"
+ slovakia.66.a.tt:0 "§YWe will be UNABLE to leave the [GER.GetFactionName]§!"
+ slovakia.66.b:0 "We will not take part in this war against our Polish brothers"
 
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to dictate terms of surrender to the once proud Czechoslovak government in Prague. For the first time ever, Slovakia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."

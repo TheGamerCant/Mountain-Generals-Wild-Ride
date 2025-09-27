@@ -2857,7 +2857,7 @@ country_event = {
 		
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
-		SLO_move_power_balance_left_5 = yes
+		SLO_move_power_balance_left_10 = yes
 	}
 
 	#Fuck the Krauts

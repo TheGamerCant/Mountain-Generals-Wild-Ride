@@ -285,10 +285,10 @@
  slovakia.65.desc:0 "Following the annexation of the Sudetenland, our position is even more vulnerable. Western democracies have proven themselves weak and unwilling to deal with [GER.GetLeader]'s Germany, seemingly leaving all nations of Central and Eastern Europe to the whims of Hitler and Stalin."
  slovakia.65.a:0 "What could we possibly we do about it?"
  
- slovakia.66.t:0 "[GER.GetNameDefCap] Invites us to the [GER.GetFactionName]"
+ slovakia.66.title:0 "[GER.GetNameDefCap] Invites us to the [GER.GetFactionName]"
  slovakia.66.desc:0 "Following their march into the rump Czech state, [GER.GetNameDef] have requested our entry into the tripartite pact. Unlike previous diplomatic interactions with the Reich however, this one seems far more cordial, albeit for some morbid reasons.\n\n[GER.GetLeader]'s ambitions against Poland are well known, and our position would give the Germans a good launch point for a thrust to encircle Kraków. Poland is likely to fall regardless, so the question is - do we do it now and reap the rewards of being a loyal ally, or do we try to maintain the façade of neutrality for a little while longer?"
  slovakia.66.a:0 "We will sign the pact"
- slovakia.66.a.tt:0 "§YWe will be UNABLE to leave the [GER.GetFactionName]§!"
+ slovakia.66.a.tt:0 "§RWe will be UNABLE to leave the [GER.GetFactionName]§!"
  slovakia.66.b:0 "We will not take part in this war against our Polish brothers"
 
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"

@@ -462,6 +462,7 @@ SLO_propaganda_decision_category = {
 			weekly_bombing_war_support = 0.002
 			industrial_capacity_factory = 0.12
 			industrial_capacity_dockyard = 0.12
+			consumer_goods_factor = 0.05
 		}
 		
 		complete_effect = {
@@ -1090,7 +1091,7 @@ SLO_propaganda_decision_category = {
 				has_country_flag = SLO_all_propaganda_available_flag
 				OR = {
 					has_completed_focus = SLO_a_based_slovakia
-					has_completed_focus = SLO_a_democracy_if_you_can_keep_it
+					has_completed_focus = SLO_expand_the_propaganda_office
 					AND = {
 						has_completed_focus = SLO_a_shining_city_for_all_to_see
 						SLO_is_not_europe = yes
@@ -1210,7 +1211,7 @@ SLO_propaganda_decision_category = {
 			political_power_factor = 0.1
 			subjects_autonomy_gain = -0.5
 			autonomy_gain = 0.5
-			neutrality_drift = 0.05
+			neutrality_drift = 0.10
 			power_balance_weekly = 0.010
 		}
 
@@ -1263,7 +1264,7 @@ SLO_propaganda_decision_category = {
 			war_support_weekly = 0.002
 			autonomy_gain = -0.2
 			consumer_goods_factor = -0.05
-			master_ideology_drift = 0.10
+			fascism_drift = 0.10
 			power_balance_weekly = -0.010
 		}
 
@@ -8871,7 +8872,14 @@ SLO_encroaching_german_influence_bop_category = {
 			date > 1940.3.11
 			
 			set_temp_variable =	{ current_bop_val = SLO.power_balance_value }
-			multiply_temp_variable = { current_bop_val = 100 }
+			
+			if = {
+				limit = { power_balance_value = { id = SLO_encroaching_german_influence_bop value < 0.0 } }
+				multiply_temp_variable = { current_bop_val = -100 }
+			}
+			else = {
+				multiply_temp_variable = { current_bop_val = 100 }
+			}
 			
 			check_variable = { var = current_bop_val value = SLO.SLO_bop_ger_tolerance compare = greater_than }
 		}
@@ -8889,7 +8897,14 @@ SLO_encroaching_german_influence_bop_category = {
 		available = {
 			custom_trigger_tooltip = {
 				set_temp_variable =	{ current_bop_val = SLO.power_balance_value }
-				multiply_temp_variable = { current_bop_val = 100 }
+				
+				if = {
+					limit = { power_balance_value = { id = SLO_encroaching_german_influence_bop value < 0.0 } }
+					multiply_temp_variable = { current_bop_val = -100 }
+				}
+				else = {
+					multiply_temp_variable = { current_bop_val = 100 }
+				}
 				
 				check_variable = { var = current_bop_val value = SLO.SLO_bop_ger_tolerance compare = less_than_or_equals }
 				
@@ -9515,7 +9530,7 @@ SLO_encroaching_german_influence_bop_category = {
 			
 			power_balance_value = {
 				id = SLO_encroaching_german_influence_bop
-				value < 0.0
+				value < 0.15
 			}
 		}
 

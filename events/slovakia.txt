@@ -1166,14 +1166,13 @@ country_event = {
 				OR = {
 					original_tag = SLO
 					is_puppet_of = SLO
-					is_in_faction_with = SLO
 				}
 			}
 		}
 	}
 	
 	mean_time_to_happen = {
-		days = 20
+		days = 40
 	}
 	
 	fire_only_once = yes
@@ -2068,7 +2067,7 @@ country_event = {
 		
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
-		SLO_decrease_reich_tolerance_by_20 = yes
+		SLO_decrease_reich_tolerance_by_15 = yes
 		
 		set_country_flag = SLO_received_german_generals_flag
 	}
@@ -2096,31 +2095,15 @@ country_event = {
 					limit = { has_character = GER_ewald_von_kleist has_character = GER_carl_heinrich_von_stulpnagel }
 					GER_ewald_von_kleist = { set_nationality = SLO }
 					GER_carl_heinrich_von_stulpnagel = { set_nationality = SLO }
-					
-					custom_effect_tooltip = generic_skip_one_line_tt
-					
-					custom_effect_tooltip = available_military_high_command
-					show_ideas_tooltip = GER_ewald_von_kleist 
-					show_ideas_tooltip = GER_carl_heinrich_von_stulpnagel 
 				}
 				else = {
 					if = {
 						limit = { has_character = GER_ewald_von_kleist }
 						GER_ewald_von_kleist = { set_nationality = SLO }
-						
-						custom_effect_tooltip = generic_skip_one_line_tt
-						
-						custom_effect_tooltip = available_military_high_command
-						show_ideas_tooltip = GER_ewald_von_kleist 
 					}
 					if = {
 						limit = { has_character = GER_carl_heinrich_von_stulpnagel }
 						GER_carl_heinrich_von_stulpnagel = { set_nationality = SLO }
-						
-						custom_effect_tooltip = generic_skip_one_line_tt
-						
-						custom_effect_tooltip = available_military_high_command
-						show_ideas_tooltip = GER_carl_heinrich_von_stulpnagel 
 					}
 				}
 			}
@@ -2684,6 +2667,10 @@ country_event = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
 		SLO_decrease_reich_tolerance_by_20 = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_stability = -0.05
 	}
 }
 
@@ -2707,6 +2694,10 @@ country_event = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
 		SLO_decrease_reich_tolerance_by_20 = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_stability = -0.05
 	}
 }
 
@@ -2775,7 +2766,7 @@ country_event = {
 
 	#Rejet
 	option = { 
-		name = slovakia.66.a
+		name = slovakia.66.b
 		ai_chance = {
 			base = 0
 		}	

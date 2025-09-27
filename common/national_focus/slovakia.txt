@@ -8203,7 +8203,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			SLO_move_power_balance_right_5 = yes
+			SLO_move_power_balance_right_10 = yes
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -8233,6 +8233,9 @@ focus_tree = {
 
 		completion_reward = {
 			SLO_unlock_new_propaganda_slot = yes
+			
+			custom_effect_tooltip = unlock_propaganda_campaign_tt
+			unlock_decision_tooltip = SLO_propaganda_campaign_20
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			

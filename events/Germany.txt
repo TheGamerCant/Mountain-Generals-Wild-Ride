@@ -2,6 +2,12 @@
 # German Events
 ###########################
 
+
+#Added slovakia.66 to fire after Germany marches into Czechia
+#Changed Sudetenland for democratic Slovakia
+#germany.1002 is the event where we have to honour the MR pact -> Make germany mad if we don't
+
+
 add_namespace = germany
 add_namespace = AAT_germany
 
@@ -1055,6 +1061,15 @@ country_event = {
 				SOU = { country_event = germany.15 }
 			}
 		}
+		
+		
+		if = {
+			limit = { original_tag = SLO has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_increase_reich_tolerance_by_5 = yes
+		}
 	}
 	option = {
 		name = germany.1002.b
@@ -1252,6 +1267,14 @@ country_event = {
 					target = GER
 				}
 			}
+		}
+		
+		if = {
+			limit = { original_tag = SLO has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_decrease_reich_tolerance_by_15 = yes
 		}
 	}
 }
@@ -3726,7 +3749,7 @@ country_event = {
 					}
 				}
 			}
-			SLO = { country_event = { id = slovakia.66 days = 2 random_days = 2 } }
+			SLO = { country_event = { id = slovakia.66 days = 12 random_days = 18 } }
 		}
 	}
 

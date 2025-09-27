@@ -115,6 +115,9 @@ ideas ={
 		
 		SLO_GFX_propaganda_our_friendship_is_inseperable_idea = {}
 		SLO_NAME_propaganda_our_friendship_is_inseperable_idea = {}
+		
+		SLO_GFX_propaganda_from_the_tatras_to_the_azov_sea_idea = {}
+		SLO_NAME_propaganda_from_the_tatras_to_the_azov_sea_idea = {}
 	
 	
 		

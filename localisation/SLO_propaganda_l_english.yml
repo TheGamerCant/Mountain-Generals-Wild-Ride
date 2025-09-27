@@ -71,6 +71,9 @@
  SLO_NAME_propaganda_our_friendship_is_inseperable_idea:0 "Our friendship is inseparable!"
  SLO_GFX_propaganda_our_friendship_is_inseperable_idea:0 "GFX_propaganda_SLO_our_friendship_is_inseperable"
  
+ SLO_NAME_propaganda_from_the_tatras_to_the_azov_sea_idea:0 "From the Tatras to the Azov Sea"
+ SLO_GFX_propaganda_from_the_tatras_to_the_azov_sea_idea:0 "GFX_propaganda_SLO_from_the_tatras_to_the_azov_sea"
+ 
  SLO_propaganda_decision_category:0 "[SLO.GetPropagandaCategoryName]"
  SLO_minitru:0 "Minitru"
  SLO_ministry_of_public_enlightenment:0 "Ministry of Public Enlightenment"
@@ -129,3 +132,5 @@
  SLO_propaganda_campaign_22_desc:0 ""
  SLO_propaganda_campaign_23:0 "[?SLO.propaganda_NAME_array^23.GetTokenLocalizedKey]"
  SLO_propaganda_campaign_23_desc:0 ""
+ SLO_propaganda_campaign_24:0 "[?SLO.propaganda_NAME_array^24.GetTokenLocalizedKey]"
+ SLO_propaganda_campaign_24_desc:0 ""

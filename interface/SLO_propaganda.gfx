@@ -119,4 +119,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/propaganda/SLO_our_friendship_is_inseperable.dds"
 		noOfFrames = 5
 	}
+	spriteType = {
+		name = "GFX_propaganda_SLO_from_the_tatras_to_the_azov_sea"
+		texturefile = "gfx/interface/propaganda/SLO_from_the_tatras_to_the_azov_sea.dds"
+		noOfFrames = 5
+	}
 }

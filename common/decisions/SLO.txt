@@ -351,7 +351,7 @@ SLO_propaganda_decision_category = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
 				has_completed_focus = SLO_a_based_slovakia
-				has_completed_focus = SLO_a_democracy_if_you_can_keep_it
+				has_completed_focus = SLO_military_propaganda_campaigns
 			}
 		}
 
@@ -458,8 +458,8 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^8
 
 		modifier = {
-			weekly_casualties_war_support = 0.002
-			weekly_bombing_war_support = 0.002
+			weekly_casualties_war_support = 0.001
+			weekly_bombing_war_support = 0.001
 			industrial_capacity_factory = 0.12
 			industrial_capacity_dockyard = 0.12
 			consumer_goods_factor = 0.05
@@ -788,7 +788,7 @@ SLO_propaganda_decision_category = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
 				has_completed_focus = SLO_news_of_our_victories
-#				has_completed_focus = SLO_emphasise_slovak_identity
+				has_completed_focus = SLO_expand_the_propaganda_office
 			}
 		}
 
@@ -981,6 +981,7 @@ SLO_propaganda_decision_category = {
 			OR={
 				has_country_flag = SLO_all_propaganda_available_flag
 				has_completed_focus = SLO_news_of_our_victories
+				has_completed_focus = SLO_military_propaganda_campaigns
 			}
 		}
 
@@ -1275,6 +1276,56 @@ SLO_propaganda_decision_category = {
 
 		remove_effect = {
 			set_variable = { SLO.propaganda_campaign_to_end = 23 }
+			SLO_end_propaganda_campaign = yes
+		}
+	}
+	
+	# From the Tatras to the Avov Sea
+	SLO_propaganda_campaign_24 = { 
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		allowed = { 
+			original_tag = SLO
+		}
+		
+		available = {
+			SLO_available_propaganda_slot = yes
+		}
+		
+		visible = {
+			OR={
+				has_country_flag = SLO_all_propaganda_available_flag
+				has_completed_focus = SLO_military_propaganda_campaigns
+			}
+		}
+
+
+		days_remove = var:SLO.propaganda_campaign_days
+		days_re_enable = var:SLO.propaganda_campaign_days
+		
+		fire_only_once = no
+
+		cost = var:SLO.propaganda_PP_COST_array^24
+
+		modifier = {
+			army_speed_factor = 0.10
+			breakthrough_factor = 0.10
+			army_org_factor = 0.06
+			weekly_casualties_war_support = 0.002
+		}
+
+		complete_effect = {
+			set_variable = { SLO.propaganda_campaign_to_start = 24 }
+			SLO_start_propaganda_campaign = yes
+		}
+
+		remove_effect = {
+			set_variable = { SLO.propaganda_campaign_to_end = 24 }
 			SLO_end_propaganda_campaign = yes
 		}
 	}
@@ -9274,7 +9325,7 @@ SLO_encroaching_german_influence_bop_category = {
 		set_temp_variable =  { SLO_pp_lost = 0 }
 			
 			if = {
-				limit = { SLO_karol_murgas = { is_political_advisor = yes advisor_can_be_fired = no } }
+				limit = { SLO_karol_murgas = { advisor_can_be_fired = no } }
 				set_can_be_fired_in_advisor_role = {
 					character = SLO_karol_murgas
 					slot = political_advisor
@@ -9287,7 +9338,7 @@ SLO_encroaching_german_influence_bop_category = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			if = {
-				limit = { SLO_vojtech_tuka = { is_political_advisor = yes advisor_can_be_fired = no } }
+				limit = { SLO_vojtech_tuka = { advisor_can_be_fired = no } }
 				set_can_be_fired_in_advisor_role = {
 					character = SLO_vojtech_tuka
 					slot = political_advisor
@@ -9300,7 +9351,7 @@ SLO_encroaching_german_influence_bop_category = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			if = {
-				limit = { SLO_alexander_mach = { is_political_advisor = yes advisor_can_be_fired = no } }
+				limit = { SLO_alexander_mach = { advisor_can_be_fired = no } }
 				set_can_be_fired_in_advisor_role = {
 					character = SLO_alexander_mach
 					slot = political_advisor
@@ -9313,7 +9364,7 @@ SLO_encroaching_german_influence_bop_category = {
 				add_to_temp_variable = { SLO_pp_lost = -100 }
 			}
 			if = {
-				limit = { SLO_julius_stano = { is_political_advisor = yes advisor_can_be_fired = no } }
+				limit = { SLO_julius_stano = { advisor_can_be_fired = no } }
 				set_can_be_fired_in_advisor_role = {
 					character = SLO_julius_stano
 					slot = political_advisor
@@ -9328,7 +9379,7 @@ SLO_encroaching_german_influence_bop_category = {
 			if = {
 				limit = { has_country_flag = SLO_received_german_generals_flag }			#Avoids the error log having a spasm
 				if = {
-					limit = { GER_ewald_von_kleist = { is_high_command = yes advisor_can_be_fired = no } }
+					limit = { GER_ewald_von_kleist = { advisor_can_be_fired = no } }
 					set_can_be_fired_in_advisor_role = {
 						character = GER_ewald_von_kleist
 						slot = high_command
@@ -9341,7 +9392,7 @@ SLO_encroaching_german_influence_bop_category = {
 					add_to_temp_variable = { SLO_pp_lost = -50 }
 				}
 				if = {
-					limit = { GER_carl_heinrich_von_stulpnagel = { is_high_command = yes advisor_can_be_fired = no } }
+					limit = { GER_carl_heinrich_von_stulpnagel = { advisor_can_be_fired = no } }
 					set_can_be_fired_in_advisor_role = {
 						character = GER_carl_heinrich_von_stulpnagel
 						slot = high_command
@@ -9355,7 +9406,7 @@ SLO_encroaching_german_influence_bop_category = {
 				}
 			}
 			if = {
-				limit = { SLO_rudolf_pilfousek = { is_high_command = yes advisor_can_be_fired = no } }
+				limit = { SLO_rudolf_pilfousek = { advisor_can_be_fired = no } }
 				set_can_be_fired_in_advisor_role = {
 					character = SLO_rudolf_pilfousek
 					slot = high_command
@@ -9638,7 +9689,7 @@ SLO_encroaching_german_influence_bop_category = {
 			}
 			power_balance_value = {
 				id = SLO_encroaching_german_influence_bop
-				value > -0.80
+				value > -0.70
 			}
 		}
 
@@ -9668,6 +9719,252 @@ SLO_encroaching_german_influence_bop_category = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			SLO_decrease_reich_tolerance_by_5 = yes
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	SLO_supply_guns_for_the_war_effort = {
+
+		icon = generic_industry
+
+		available = {
+			GER = {
+				exists = yes
+				is_in_faction_with = SLO
+				has_war = yes
+			}
+			has_war = yes
+			
+			has_equipment = {
+				infantry_equipment > 5199
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = SLO_can_only_send_6_batches_of_equipment_to_germany_tt
+				always = yes
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_supply_weapons_for_the_war_effort
+			check_variable = { SLO.equipment_we_can_send_to_germany > 0 }
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = no
+		days_re_enable = 90
+		
+		ai_hint_pp_cost = 50
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+		
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -25
+			}
+			
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 5200
+				target = GER
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_right_5 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_increase_reich_tolerance_by_5 = yes
+			
+			add_to_variable = { SLO.equipment_we_can_send_to_germany = -1 }
+			
+			if = {
+				limit = { is_subject = yes }
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_autonomy_score = {
+					value = 50
+					localization = SLO_supply_guns_for_the_war_effort
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	SLO_supply_support_equipment_for_the_war_effort = {
+
+		icon = generic_industry
+
+		available = {
+			GER = {
+				exists = yes
+				is_in_faction_with = SLO
+				has_war = yes
+			}
+			has_war = yes
+			
+			has_equipment = {
+				support_equipment > 599
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = SLO_can_only_send_6_batches_of_equipment_to_germany_tt
+				always = yes
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_supply_weapons_for_the_war_effort
+			check_variable = { SLO.equipment_we_can_send_to_germany > 0 }
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = no
+		days_re_enable = 90
+		
+		ai_hint_pp_cost = 50
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+		
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -25
+			}
+			
+			send_equipment = {
+				equipment = support_equipment
+				amount = 600
+				target = GER
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_right_5 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_increase_reich_tolerance_by_5 = yes
+			
+			add_to_variable = { SLO.equipment_we_can_send_to_germany = -1 }
+			
+			if = {
+				limit = { is_subject = yes }
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_autonomy_score = {
+					value = 50
+					localization = SLO_supply_support_equipment_for_the_war_effort
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	SLO_supply_artillery_for_the_war_effort = {
+
+		icon = generic_industry
+
+		available = {
+			GER = {
+				exists = yes
+				is_in_faction_with = SLO
+				has_war = yes
+			}
+			has_war = yes
+			
+			has_equipment = {
+				artillery_equipment > 549
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = SLO_can_only_send_6_batches_of_equipment_to_germany_tt
+				always = yes
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_supply_weapons_for_the_war_effort
+			check_variable = { SLO.equipment_we_can_send_to_germany > 0 }
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = no
+		days_re_enable = 90
+		
+		ai_hint_pp_cost = 50
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+		
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -25
+			}
+			
+			send_equipment = {
+				equipment = artillery_equipment
+				amount = 550
+				target = GER
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_right_5 = yes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_increase_reich_tolerance_by_5 = yes
+			
+			add_to_variable = { SLO.equipment_we_can_send_to_germany = -1 }
+			
+			if = {
+				limit = { is_subject = yes }
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_autonomy_score = {
+					value = 50
+					localization = SLO_supply_artillery_for_the_war_effort
+				}
+			}
 		}
 		
 		ai_will_do = {

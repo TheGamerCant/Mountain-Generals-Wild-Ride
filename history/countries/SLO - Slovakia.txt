@@ -346,6 +346,9 @@ add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_mountain_
 add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_our_friendship_is_inseperable_idea }
 add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_our_friendship_is_inseperable_idea }
 
+add_to_array = { SLO.propaganda_GFX_array = token:SLO_GFX_propaganda_from_the_tatras_to_the_azov_sea_idea }
+add_to_array = { SLO.propaganda_NAME_array = token:SLO_NAME_propaganda_from_the_tatras_to_the_azov_sea_idea }
+
 
 
 resize_array = { array = SLO.propaganda_PP_COST_array size = SLO.propaganda_GFX_array^num value = 15 }
@@ -438,6 +441,7 @@ set_variable = { SLO_army_dm_special_forces_attack_factor = 0 }
 set_variable = { SLO_army_dm_max_dig_in_factor = 0 }
 set_variable = { SLO_army_dm_breakthrough_factor = 0 }
 set_variable = { SLO_army_dm_equipment_capture = 0 }
+set_variable = { SLO_army_dm_intel_network_gain_factor = 0 }
 
 add_dynamic_modifier = { modifier = SLO_army_dynamic_modifier }
 

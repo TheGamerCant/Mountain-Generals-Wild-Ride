@@ -8,6 +8,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/report_event_SLO_clashes_in_bratislava.dds"
 	}
 	SpriteType = {
+		name = "GFX_report_event_SLO_german_conscription_issues"
+		texturefile = "gfx/event_pictures/report_event_SLO_german_conscription_issues.dds"
+	}
+	SpriteType = {
 		name = "GFX_report_event_SLO_german_industrialists"
 		texturefile = "gfx/event_pictures/report_event_SLO_german_industrialists.dds"
 	}
@@ -46,6 +50,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_report_event_SLO_military_service"
 		texturefile = "gfx/event_pictures/report_event_SLO_military_service.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_SLO_oprava_and_spis"
+		texturefile = "gfx/event_pictures/report_event_SLO_oprava_and_spis.dds"
 	}
 	SpriteType = {
 		name = "GFX_report_event_SLO_tank_training"

@@ -1842,6 +1842,7 @@ country_event = {
 	after = {
 		hidden_effect = {
 			country_event = { id = slovakia.61 days = 365 random_days = 600 }
+			country_event = { id = slovakia.68 days = 700 random_days = 350 }
 		}
 	}
 
@@ -2764,7 +2765,7 @@ country_event = {
 		}
 	}
 
-	#Rejet
+	#Reject
 	option = { 
 		name = slovakia.66.b
 		ai_chance = {
@@ -2775,6 +2776,110 @@ country_event = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
 		SLO_decrease_reich_tolerance_by_10 = yes
+	}
+}
+
+#Protests over national socialist curriculum
+country_event = {
+	id = slovakia.67
+	title = slovakia.67.title
+	desc = slovakia.67.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_gathering_protest
+
+	#Agree to some demands
+	option = { 
+		name = slovakia.67.a
+		ai_chance = {
+			base = 10
+		}
+		GER = { add_opinion_modifier = { target = SLO modifier = small_decrease } }
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_political_power = -80
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_move_power_balance_right_10 = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_decrease_reich_tolerance_by_5 = yes
+	}
+
+	#Forcibly break up the protests
+	option = { 
+		name = slovakia.67.b
+		ai_chance = {
+			base = 10
+		}	
+		GER = { add_opinion_modifier = { target = SLO modifier = medium_increase } }
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_political_power = -25
+		add_stability = -0.03
+		
+		add_popularity = {
+			ideology = ROOT 
+			popularity = -0.05
+		}
+	}
+}
+
+#Ethnic Germans refuse to serve
+country_event = {
+	id = slovakia.68
+	title = slovakia.68.title
+	desc = slovakia.68.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_SLO_german_conscription_issues
+
+	#Agree to their demands
+	option = { 
+		name = slovakia.68.a
+		ai_chance = {
+			base = 10
+		}
+		GER = { add_opinion_modifier = { target = SLO modifier = medium_increase } }
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_political_power = -40
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_to_variable = { SLO_army_dm_conscription = 0.002 }
+		custom_effect_tooltip = slovakia.68.a.tt
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_move_power_balance_left_5 = yes
+	}
+
+	#Fuck the Krauts
+	option = { 
+		name = slovakia.68.b
+		ai_chance = {
+			base = 10
+		}	
+		GER = { add_opinion_modifier = { target = SLO modifier = medium_decrease } }
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_stability = -0.02
+		add_manpower = -6000
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_move_power_balance_right_10 = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		SLO_decrease_reich_tolerance_by_5 = yes
 	}
 }
 

@@ -6532,8 +6532,9 @@ focus_tree = {
 			set_variable = { SLO_nss_dm_stability_factor = 0 }
 			set_variable = { SLO_nss_dm_compliance_growth = 0 }
 			set_variable = { SLO_nss_dm_war_stability_factor = 0 }
+			set_variable = { SLO_nss_dm_party_popularity_stability_factor = 0 }
 			
-			set_variable = { SLO_bop_ger_tolerance = 120 }
+			set_variable = { SLO_bop_ger_tolerance = 110 }
 		}
 	}
 	
@@ -7104,7 +7105,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SLO_stabilise_the_economy
-		cost = 7
+		cost = 8
 		prerequisite = {
 			focus = SLO_stabilise_the_economy
 		}
@@ -7170,7 +7171,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SLO_stabilise_the_economy
-		cost = 7
+		cost = 8
 		prerequisite = {
 			focus = SLO_stabilise_the_economy
 		}
@@ -7312,8 +7313,8 @@ focus_tree = {
 			
 			add_tech_bonus = {
 				name = SLO_focus_on_military_r_and_d
-				bonus = 0.5
-				uses = 4
+				bonus = 0.4
+				uses = 2
 				category = infantry_weapons
 				category = armor
 				category = artillery
@@ -7382,6 +7383,8 @@ focus_tree = {
 				id = SLO_encroaching_german_influence_bop
 				value < 0.15
 			}
+			
+			date > 1939.1.1
 		}
 		
 
@@ -7452,6 +7455,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SLO_welcome_german_giants }
 
 		available = {
+			date > 1939.1.1
 		}
 		
 
@@ -7671,16 +7675,6 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				remove_trait = {
-					character = SLO_alexander_mach
-					slot = political_advisor
-					trait = SLO_fascist_paramilitarist_1
-				}
-				add_trait = {
-					character = SLO_alexander_mach
-					slot = political_advisor
-					trait = SLO_fascist_paramilitarist_2
-				}
-				remove_trait = {
 					character = SLO_karol_murgas
 					slot = political_advisor
 					trait = SLO_radical_ideologue_1
@@ -7791,16 +7785,6 @@ focus_tree = {
 					slot = political_advisor
 					trait = SLO_fascist_judge_2
 				}
-				remove_trait = {
-					character = SLO_jozef_sivak
-					slot = political_advisor
-					trait = SLO_nationalist_technocrat_1
-				}
-				add_trait = {
-					character = SLO_jozef_sivak
-					slot = political_advisor
-					trait = SLO_nationalist_technocrat_2
-				}
 			}
 			
 			custom_effect_tooltip = SLO_the_moderates_tt
@@ -7877,7 +7861,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_alliance
 		x = 0
 		y = 2
-		cost = 5
+		cost = 7
 		
 		prerequisite = { focus = SLO_the_center }
 		relative_position_id = SLO_the_center
@@ -8022,7 +8006,7 @@ focus_tree = {
 		icon = GFX_focus_generic_manpower
 		x = 0
 		y = 2
-		cost = 5
+		cost = 7
 		
 		prerequisite = { focus = SLO_great_ideologue focus = SLO_pragmatic_statesman focus = SLO_the_father_of_slovak_independence }
 		relative_position_id = SLO_pragmatic_statesman
@@ -8041,8 +8025,6 @@ focus_tree = {
 				remove_idea = SLO_mountain_general_guard_idea_1
 				add_idea = SLO_mountain_general_guard_idea_2_militia_duties
 			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			SLO_decrease_reich_tolerance_by_5 = yes
 		}
@@ -8085,7 +8067,7 @@ focus_tree = {
 		icon = GFX_goal_SLO_mandate_christianity_in_schools
 		x = -3
 		y = 1
-		cost = 5
+		cost = 6
 		
 		prerequisite = { focus = SLO_the_moderates }
 		relative_position_id = SLO_the_moderates
@@ -8100,6 +8082,19 @@ focus_tree = {
 		
 
 		completion_reward = {
+			hidden_effect = {
+				remove_trait = {
+					character = SLO_jozef_sivak
+					slot = political_advisor
+					trait = SLO_nationalist_technocrat_1
+				}
+				add_trait = {
+					character = SLO_jozef_sivak
+					slot = political_advisor
+					trait = SLO_nationalist_technocrat_2
+				}
+			}
+			
 			add_to_variable = { SLO_nss_dm_neutrality_drift = 0.05 }
 			add_to_variable = { SLO_nss_dm_stability_factor = 0.05 }
 			add_to_variable = { SLO_nss_dm_conscription_factor = 0.03 }
@@ -8111,7 +8106,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			SLO_move_power_balance_right_5 = yes
+			SLO_move_power_balance_right_10 = yes
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -8124,7 +8119,7 @@ focus_tree = {
 		icon = GFX_
 		x = 3
 		y = 1
-		cost = 5
+		cost = 6
 		
 		prerequisite = { focus = SLO_the_radicals }
 		relative_position_id = SLO_the_radicals
@@ -8151,13 +8146,17 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			SLO_move_power_balance_left_10 = yes
+			SLO_move_power_balance_left_15 = yes
+			
+			hidden_effect = {
+				country_event = { id = slovakia.67 days = 150 random_days = 90 }
+			}
 		}
 	}
 	
 	focus = {	
 		id = SLO_veneration_of_the_guard
-		icon = GFX_
+		icon = GFX_goal_SLO_form_the_hlinkas_guard
 		x = -1
 		y = 1
 		cost = 5
@@ -8219,6 +8218,90 @@ focus_tree = {
 	}
 	
 	focus = {	
+		id = SLO_create_the_usb
+		icon = GFX_goal_
+		x = 1
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_the_radicals }
+		relative_position_id = SLO_the_radicals
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			hidden_effect = {
+				remove_trait = {
+					character = SLO_alexander_mach
+					slot = political_advisor
+					trait = SLO_fascist_paramilitarist_1
+				}
+				add_trait = {
+					character = SLO_alexander_mach
+					slot = political_advisor
+					trait = SLO_fascist_paramilitarist_2
+				}
+			}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				if = {
+					limit = {
+						has_intelligence_agency = no
+					}
+					create_intelligence_agency  = {
+						name = "Ústredňa Štátnej Bezpečnosti"
+						icon = GFX_intelligence_agency_logo_generic_8
+					}
+				}
+				upgrade_intelligence_agency = upgrade_passive_defense 
+				upgrade_intelligence_agency = upgrade_anti_partisan
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = SLO_create_the_usb_tt
+		}
+	}
+	
+	focus = {	
+		id = SLO_draft_a_new_constitution
+		icon = GFX_goal_SLO_civic_nationalism
+		x = -1
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_the_moderates }
+		relative_position_id = SLO_the_moderates
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_political_power = 50
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_nss_dm_political_power_factor = 0.05 }
+			add_to_variable = { SLO_nss_dm_neutrality_drift = 0.05 }
+			add_to_variable = { SLO_nss_dm_party_popularity_stability_factor = 0.05 }
+			custom_effect_tooltip = SLO_draft_a_new_constitution_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_right_5 = yes
+		}
+	}
+	
+	focus = {	
 		id = SLO_expand_the_propaganda_office
 		icon = GFX_goal_SLO_propaganda
 		x = 2
@@ -8239,6 +8322,7 @@ focus_tree = {
 			SLO_unlock_new_propaganda_slot = yes
 			
 			custom_effect_tooltip = unlock_propaganda_campaign_tt
+			unlock_decision_tooltip = SLO_propaganda_campaign_14
 			unlock_decision_tooltip = SLO_propaganda_campaign_20
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8321,14 +8405,89 @@ focus_tree = {
 	}
 	
 	focus = {	
-		id = SLO_lessons_from_the_front
-		icon = GFX_goal_generic_army_doctrines
-		x = 0
+		id = SLO_supply_weapons_for_the_war_effort
+		icon = GFX_
+		x = -1
 		y = 1
-		cost = 8
+		cost = 4
 		
 		prerequisite = { focus = SLO_slovakia_at_war }
 		relative_position_id = SLO_slovakia_at_war
+
+		available = {
+			has_war_with_major = yes
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			set_variable = { SLO.equipment_we_can_send_to_germany = 6 }
+			
+			unlock_decision_tooltip = SLO_supply_guns_for_the_war_effort
+			unlock_decision_tooltip = SLO_supply_support_equipment_for_the_war_effort
+			unlock_decision_tooltip = SLO_supply_artillery_for_the_war_effort
+			
+			custom_effect_tooltip = SLO_supply_weapons_for_the_war_effort_tt
+		}
+	}
+	
+	focus = {	
+		id = SLO_declare_total_war
+		icon = GFX_
+		x = 1
+		y = 1
+		cost = 4
+		
+		prerequisite = { focus = SLO_slovakia_at_war }
+		relative_position_id = SLO_slovakia_at_war
+
+		available = {
+			has_war_with_major = yes
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_manpower = 15000
+		}
+	}
+	
+	focus = {	
+		id = SLO_our_rightful_spoils_of_war
+		icon = GFX_
+		x = -1
+		y = 2
+		cost = 5
+		
+		prerequisite = { focus = SLO_declare_total_war }
+		prerequisite = { focus = SLO_supply_weapons_for_the_war_effort }
+		relative_position_id = SLO_supply_weapons_for_the_war_effort
+
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	
+		id = SLO_lessons_from_the_front
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 2
+		cost = 8
+		
+		prerequisite = { focus = SLO_declare_total_war }
+		prerequisite = { focus = SLO_expand_cooperation_with_the_abwehr }
+		relative_position_id = SLO_declare_total_war
 
 		available = {
 		}
@@ -8343,6 +8502,105 @@ focus_tree = {
 				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_expand_cooperation_with_the_abwehr
+		icon = GFX_focus_generic_secret_service_agency
+		x = 1
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_supply_weapons_for_the_war_effort }
+		relative_position_id = SLO_supply_weapons_for_the_war_effort
+
+		available = {
+			is_in_faction_with = GER
+			has_completed_focus = SLO_military_intelligence
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_army_dm_operative_slot = 1 }
+			add_to_variable = { SLO_army_dm_intel_from_combat_factor = 0.10 }
+			add_to_variable = { SLO_army_dm_intel_network_gain_factor = 0.12 }
+			custom_effect_tooltip = SLO_expand_cooperation_with_the_abwehr_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			SLO_move_power_balance_left_5 = yes
+		}
+	}
+	
+	focus = {	
+		id = SLO_military_propaganda_campaigns
+		icon = GFX_
+		x = 1
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = SLO_declare_total_war }
+		relative_position_id = SLO_declare_total_war
+
+		available = {
+			has_war = yes
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			SLO_unlock_new_propaganda_slot = yes
+			
+			custom_effect_tooltip = unlock_propaganda_campaign_tt
+			unlock_decision_tooltip = SLO_propaganda_campaign_6
+			unlock_decision_tooltip = SLO_propaganda_campaign_18
+			unlock_decision_tooltip = SLO_propaganda_campaign_24
+		}
+	}
+	
+	focus = {	
+		id = SLO_new_equipment_breakthroughs
+		icon = GFX_focus_research
+		x = 0
+		y = 2
+		cost = 10
+		
+		prerequisite = { focus = SLO_military_propaganda_campaigns }
+		prerequisite = { focus = SLO_lessons_from_the_front }
+		relative_position_id = SLO_military_propaganda_campaigns
+
+		available = {
+			is_in_faction_with = GER
+			date > 1941.8.1
+			power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value < 0.15
+			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_research_slot = 1
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_tech_bonus = {
+				name = SLO_new_equipment_breakthroughs
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+				category = armor
+				category = artillery
 			}
 		}
 	}

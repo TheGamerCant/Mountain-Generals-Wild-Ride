@@ -3,8 +3,8 @@
  SLH_DEF:0 "the Slovak Occupation Authority of Hungary"
  SLH_ADJ:0 "Hungarian"
  
- SLH_Schizo_Fascism:0 "Slovenský Komisariát Maďarsko"
- SLH_Schizo_Fascism_DEF:0 "the Slovakian Commissariat of Hungary"
+ SLH_Schizo_Fascism:0 "Slovenský Komisariát Maďarska"
+ SLH_Schizo_Fascism_DEF:0 "the Slovak-Commissariat of Hungary"
  SLH_Schizo_Fascism_ADJ:0 "Hungarian"
  
  SLC:0 "Slovakian Czechia"
@@ -12,7 +12,7 @@
  SLC_ADJ:0 "Hungarian"
  
  SLC_Schizo_Fascism:0 "Slovenský Komisariát Českej"
- SLC_Schizo_Fascism_DEF:0 "the Slovakian Commissariat of Czechia"
+ SLC_Schizo_Fascism_DEF:0 "the Slovak-Commissariat of Czechia"
  SLC_Schizo_Fascism_ADJ:0 "Czech"
  
  SLO_greater_slovakia:0 "Veľké Slovensko"
@@ -26,3 +26,27 @@
  SLH_all_gone:0 "The Hungarian Wastes"
  SLH_all_gone_DEF:0 "the Nuclear Containment Zone of the Former Hungary"
  SLH_all_gone_DEF:0 "Former Hungarian"
+ 
+ SLP:0 "Slovakian Poland"
+ SLP_DEF:0 "the Slovak Occupation Authority of Poland"
+ SLP_ADJ:0 "Polish"
+ 
+ SLT:0 "Slovakian Tavriya"
+ SLT_DEF:0 "the Slovak Occupation Authority of Tavriya"
+ SLT_ADJ:0 "Crimean"
+ 
+ SLP_despotic_occupation:0 "Slovenský Komisariát v Haliči"
+ SLP_despotic_occupation_DEF:0 "the Slovak-Commissariat of Galicia"
+ SLP_despotic_occupation_ADJ:0 "Galician"
+ 
+ SLC_despotic_occupation:0 "Slovenský Komisariát Českej"
+ SLC_despotic_occupation_DEF:0 "the Slovak-Commissariat of Czechia"
+ SLC_despotic_occupation_ADJ:0 "Czech"
+ 
+ SLH_despotic_occupation:0 "Slovenský Komisariát Maďarska"
+ SLH_despotic_occupation_DEF:0 "the Slovak-Commissariat of Hungary"
+ SLH_despotic_occupation_ADJ:0 "Hungarian"
+ 
+ SLT_despotic_occupation:0 "Slovenský Komisariát Tavriya"
+ SLT_despotic_occupation_DEF:0 "the Slovak-Commissariat of Tavriya"
+ SLT_despotic_occupation_ADJ:0 "Crimean"

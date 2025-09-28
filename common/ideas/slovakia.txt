@@ -827,7 +827,7 @@ ideas = {
 				political_power_gain = 0.05
 				production_speed_bunker_factor = 0.25
 				production_speed_coastal_bunker_factor = 0.25
-				stability_weekly = 0.001
+				stability_weekly = 0.002
 			}
 		}	
 		

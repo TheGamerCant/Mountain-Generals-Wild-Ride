@@ -914,6 +914,10 @@ focus_tree = {
 		prerequisite = { focus = SLO_mass_production }
 
 		available = {
+			if = {
+				limit = { has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
+				NOT = { has_completed_focus = SLO_expand_the_draft_2 }
+			}
 		}
 		
 		bypass = {
@@ -923,8 +927,10 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SLO_army_dm_conscription = 0.02 }
 			
-			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = -0.07 }
-			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = -0.07 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = -0.06 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = -0.06 }
+			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = -0.04 }
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.05 }
 			custom_effect_tooltip = SLO_expand_the_draft_tt
 		}
 	}
@@ -1642,7 +1648,7 @@ focus_tree = {
 		icon = GFX_goal_SLO_mission_command
 		x = 0
 		y = 2
-		cost = 8
+		cost = 7
 		relative_position_id = SLO_adaptive_strategy
 		
 		prerequisite = { focus = SLO_adaptive_strategy }
@@ -1668,7 +1674,7 @@ focus_tree = {
 		icon = GFX_goal_SLO_localised_counter_attacks
 		x = 0
 		y = 2
-		cost = 8
+		cost = 7
 		relative_position_id = SLO_mission_command
 		
 		prerequisite = { focus = SLO_mission_command }
@@ -2858,7 +2864,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SLO_slovak_autarky
-		cost = 5
+		cost = 6
 		prerequisite = {
 			focus = SLO_slovak_autarky
 		}
@@ -3044,10 +3050,13 @@ focus_tree = {
 			if = {
 				limit = { NOT = { has_idea = war_economy } }
 				add_ideas = war_economy
-				add_stability = -0.10
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_stability = -0.75
 			}
 			else = {
-				add_stability = -0.04
+				add_stability = -0.025
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -3197,7 +3206,7 @@ focus_tree = {
 			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.15 }
 			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.04 }
 			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = -0.08 }
-			add_to_variable = { SLO_economy_dm_stability_factor = -0.10 }
+			add_to_variable = { SLO_economy_dm_stability_factor = -0.075 }
 			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.06 }
 			custom_effect_tooltip = SLO_harsh_quotas_tt
 		}
@@ -3843,7 +3852,7 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
 			add_stability = -0.05
 		}
 	}
@@ -4349,7 +4358,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SLO_a_based_slovakia
-		cost = 3
+		cost = 2
 		prerequisite = {
 			focus = SLO_a_based_slovakia
 		}
@@ -4366,7 +4375,7 @@ focus_tree = {
 					ideology = fascism
 					popularity = 0.03
 				}
-				add_political_power = 30
+				add_political_power = 25
 				HUN = { add_opinion_modifier = { target = ROOT modifier = SLO_denounced_by_mountain_general } }
 			}
 		}
@@ -4378,7 +4387,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SLO_a_based_slovakia
-		cost = 3
+		cost = 2
 		prerequisite = {
 			focus = SLO_a_based_slovakia
 		}
@@ -4395,7 +4404,7 @@ focus_tree = {
 					ideology = fascism
 					popularity = 0.03
 				}
-				add_political_power = 30
+				add_political_power = 25
 				GER = { add_opinion_modifier = { target = ROOT modifier = SLO_denounced_by_mountain_general } }
 			}			
 		}
@@ -8460,10 +8469,9 @@ focus_tree = {
 		id = SLO_our_rightful_spoils_of_war
 		icon = GFX_
 		x = -1
-		y = 2
-		cost = 5
+		y = 3
+		cost = 7
 		
-		prerequisite = { focus = SLO_declare_total_war }
 		prerequisite = { focus = SLO_supply_weapons_for_the_war_effort }
 		relative_position_id = SLO_supply_weapons_for_the_war_effort
 
@@ -8481,9 +8489,9 @@ focus_tree = {
 	focus = {	
 		id = SLO_lessons_from_the_front
 		icon = GFX_goal_generic_army_doctrines
-		x = 0
+		x = -1
 		y = 2
-		cost = 8
+		cost = 10
 		
 		prerequisite = { focus = SLO_declare_total_war }
 		prerequisite = { focus = SLO_expand_cooperation_with_the_abwehr }
@@ -8503,15 +8511,21 @@ focus_tree = {
 				uses = 2
 				category = land_doctrine
 			}
+			add_doctrine_cost_reduction = {
+				name = SLO_lessons_from_the_front
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
 		}
 	}
 	
 	focus = {	
 		id = SLO_expand_cooperation_with_the_abwehr
 		icon = GFX_focus_generic_secret_service_agency
-		x = 1
+		x = 0
 		y = 1
-		cost = 5
+		cost = 6
 		
 		prerequisite = { focus = SLO_supply_weapons_for_the_war_effort }
 		relative_position_id = SLO_supply_weapons_for_the_war_effort
@@ -8540,7 +8554,7 @@ focus_tree = {
 	focus = {	
 		id = SLO_military_propaganda_campaigns
 		icon = GFX_
-		x = 1
+		x = 0
 		y = 1
 		cost = 5
 		
@@ -8570,7 +8584,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		x = 0
 		y = 2
-		cost = 10
+		cost = 12
 		
 		prerequisite = { focus = SLO_military_propaganda_campaigns }
 		prerequisite = { focus = SLO_lessons_from_the_front }
@@ -8596,12 +8610,41 @@ focus_tree = {
 			
 			add_tech_bonus = {
 				name = SLO_new_equipment_breakthroughs
-				bonus = 0.5
-				uses = 2
+				bonus = 0.45
+				uses = 3
 				category = infantry_weapons
 				category = armor
 				category = artillery
 			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_expand_the_draft_2
+		icon = GFX_focus_generic_limited_social_mobilization
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = SLO_military_propaganda_campaigns
+		
+		prerequisite = { focus = SLO_military_propaganda_campaigns }
+
+		available = {
+			NOT = { has_completed_focus = SLO_expand_the_draft }
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_army_dm_conscription = 0.03 }
+			
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = -0.08 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = -0.08 }
+			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = -0.05 }
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.08 }
+			custom_effect_tooltip = SLO_expand_the_draft_2_tt
 		}
 	}
 	

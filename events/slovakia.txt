@@ -150,17 +150,17 @@ country_event = {
 		}
 		add_manpower = 20000
 		add_equipment_to_stockpile = { 
-			type = infantry_equipment_1
+			type = infantry_equipment
 			amount = 2000
 			producer = CZE
 		}
 		add_equipment_to_stockpile = { 
 			type = support_equipment
-			amount = 500
+			amount = 200
 			producer = CZE
 		}
 		add_equipment_to_stockpile = { 
-			type = artillery_equipment_1
+			type = artillery_equipment
 			amount = 200
 			producer = CZE
 		}
@@ -744,7 +744,7 @@ country_event = {
 			ideology = fascism
 			popularity = 0.03
 		}
-		add_political_power = 30
+		add_political_power = 25
 		HUN = { add_opinion_modifier = { target = ROOT modifier = SLO_denounced_by_mountain_general } }
 	}
 }
@@ -767,7 +767,7 @@ country_event = {
 			ideology = fascism
 			popularity = 0.03
 		}
-		add_political_power = 30
+		add_political_power = 25
 		GER = { add_opinion_modifier = { target = ROOT modifier = SLO_denounced_by_mountain_general } }
 	}
 }
@@ -2880,6 +2880,434 @@ country_event = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
 		SLO_decrease_reich_tolerance_by_5 = yes
+	}
+}
+
+#For Germany - Slovakia sends guns
+country_event = {
+	id = slovakia.69
+	title = slovakia.69.title
+	desc = slovakia.69.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_rifles
+
+	option = { 
+		name = slovakia.69.a
+		ai_chance = {
+			base = 10
+		}
+		
+		effect_tooltip = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5200
+				producer = SLO
+			}
+		}
+	}
+}
+
+#For Germany - Slovakia sends support equipment
+country_event = {
+	id = slovakia.70
+	title = slovakia.70.title
+	desc = slovakia.70.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_rifles
+
+	option = { 
+		name = slovakia.70.a
+		ai_chance = {
+			base = 10
+		}
+		
+		effect_tooltip = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 600
+				producer = SLO
+			}
+		}
+	}
+}
+
+#For Germany - Slovakia sends artillery
+country_event = {
+	id = slovakia.71
+	title = slovakia.71.title
+	desc = slovakia.71.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_rifles
+
+	option = { 
+		name = slovakia.71.a
+		ai_chance = {
+			base = 10
+		}
+		
+		effect_tooltip = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 550
+				producer = SLO
+			}
+		}
+	}
+}
+
+#For Slovakia - Establish Slovak-Commisariat Czechia
+country_event = {
+	id = slovakia.72
+	title = slovakia.72.title
+	desc = slovakia.72.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_german_inspect_troops
+
+	option = { 
+		name = slovakia.72.a
+		ai_chance = {
+			base = 10
+		}
+		
+		SLC = {
+			if = {
+				limit = { 
+					9 = { 
+						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				transfer_state = 9
+				add_state_core = 9
+			}
+			if = {
+				limit = { 
+					75 = { 
+						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				transfer_state = 75
+				add_state_core = 75
+			}
+		}
+		
+		set_autonomy = {
+			target = SLC
+			autonomous_state = autonomy_reichskommissariat
+			end_wars = no
+			end_civil_wars = no
+		}
+		
+		SLC = { 
+			set_cosmetic_tag = SLC_despotic_occupation
+			set_popularities = {
+				neutrality = 45
+				democratic = 15
+				fascism = 35
+				communism = 5
+			}
+		}
+	}
+}
+
+#For Slovakia - Establish Slovak-Commisariat Galicia
+country_event = {
+	id = slovakia.73
+	title = slovakia.73.title
+	desc = slovakia.73.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_german_inspect_troops
+
+	option = { 
+		name = slovakia.73.a
+		ai_chance = {
+			base = 10
+		}
+		
+		SLP = {
+			if = {
+				limit = { 
+					72 = { 
+						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				transfer_state = 72
+				add_state_core = 72
+			}
+			if = {
+				limit = { 
+					88 = { 
+						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				transfer_state = 88
+				add_state_core = 88
+				
+				set_capital = {
+				  state = 88
+				  remember_old_capital = yes
+				}
+			}
+			
+			if = {
+				limit = { 
+					89 = { 
+						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				transfer_state = 89
+				add_state_core = 89
+			}
+			else_if = {
+				limit = { 
+					89 = { 
+						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				add_contested_owner = 89
+				set_state_controller  = 89
+				add_state_claim = 89
+				89 = { add_compliance = 15 }
+			}
+			
+			if = {
+				limit = { 
+					91 = { 
+						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				transfer_state = 91
+				add_state_core = 91
+			}
+			else_if = {
+				limit = { 
+					91 = { 
+						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				add_contested_owner = 91
+				set_state_controller  = 91
+				add_state_claim = 91
+				91 = { add_compliance = 15 }
+			}
+		}
+		
+		set_autonomy = {
+			target = SLP
+			autonomous_state = autonomy_reichskommissariat
+			end_wars = no
+			end_civil_wars = no
+		}
+		
+		SLP = { 
+			set_cosmetic_tag = SLP_despotic_occupation
+			set_popularities = {
+				neutrality = 40
+				democratic = 17
+				fascism = 36
+				communism = 7
+			}
+		}
+	}
+}
+
+#For Slovakia - Establish Slovak-Commisariat Hungary
+country_event = {
+	id = slovakia.74
+	title = slovakia.74.title
+	desc = slovakia.74.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_german_inspect_troops
+
+	option = { 
+		name = slovakia.74.a
+		ai_chance = {
+			base = 10
+		}
+		
+		SLH = {
+			if = {
+				limit = { 
+					43 = { 
+						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				transfer_state = 43
+				add_state_core = 43
+			}
+			
+			if = {
+				limit = { 
+					155 = { 
+						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				transfer_state = 155
+				add_state_core = 155
+			}
+			else_if = {
+				limit = { 
+					155 = { 
+						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				add_contested_owner = 155
+				set_state_controller  = 155
+				add_state_claim = 155
+				155 = { add_compliance = 15 }
+			}
+			
+			if = {
+				limit = { 
+					974 = { 
+						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				transfer_state = 974
+				add_state_core = 974
+			}
+			else_if = {
+				limit = { 
+					974 = { 
+						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				add_contested_owner = 974
+				set_state_controller  = 974
+				add_state_claim = 974
+			}
+			
+			if = {
+				limit = { 
+					973 = { 
+						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				transfer_state = 973
+				add_state_core = 973
+			}
+			else_if = {
+				limit = { 
+					973 = { 
+						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				add_contested_owner = 973
+				set_state_controller  = 973
+				add_state_claim = 973
+				973 = { add_compliance = 15 }
+			}
+			
+			if = {
+				limit = { 
+					154 = { 
+						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				transfer_state = 154
+				add_state_core = 154
+			}
+			else_if = {
+				limit = { 
+					154 = { 
+						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				add_contested_owner = 154
+				set_state_controller  = 154
+				add_state_claim = 154
+				154 = { add_compliance = 15 }
+			}
+		}
+		
+		set_autonomy = {
+			target = SLH
+			autonomous_state = autonomy_reichskommissariat
+			end_wars = no
+			end_civil_wars = no
+		}
+		
+		SLH = { 
+			set_cosmetic_tag = SLH_despotic_occupation
+			set_popularities = {
+				neutrality = 40
+				democratic = 17
+				fascism = 36
+				communism = 7
+			}
+		}
+	}
+}
+
+#For Slovakia - Establish Slovak-Commisariat Tavriya
+country_event = {
+	id = slovakia.75
+	title = slovakia.75.title
+	desc = slovakia.75.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_german_inspect_troops
+
+	option = { 
+		name = slovakia.75.a
+		ai_chance = {
+			base = 10
+		}
+		
+		SLT = {
+			if = {
+				limit = { 
+					137 = { 
+						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				transfer_state = 137
+				add_state_core = 137
+			}
+			
+			if = {
+				limit = { 
+					196 = { 
+						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				transfer_state = 196
+				add_state_core = 196
+			}
+			else_if = {
+				limit = { 
+					196 = { 
+						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
+					} 
+				}
+				add_contested_owner = 196
+				set_state_controller  = 196
+				add_state_claim = 196
+				196 = { add_compliance = 15 }
+			}
+		}
+		
+		set_autonomy = {
+			target = SLT
+			autonomous_state = autonomy_reichskommissariat
+			end_wars = no
+			end_civil_wars = no
+		}
+		
+		SLT = { 
+			set_cosmetic_tag = SLT_despotic_occupation
+			set_popularities = {
+				neutrality = 40
+				democratic = 15
+				fascism = 43
+				communism = 2
+			}
+		}
 	}
 }
 

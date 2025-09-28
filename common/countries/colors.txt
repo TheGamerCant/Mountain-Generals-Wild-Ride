@@ -8,6 +8,14 @@ SLC = {
 	color = rgb { 158  161  188 }
 	color_ui = rgb { 255 255 255 }
 }
+SLP = {
+	color = rgb { 158  161  188 }
+	color_ui = rgb { 255 255 255 }
+}
+SLT = {
+	color = rgb { 158  161  188 }
+	color_ui = rgb { 255 255 255 }
+}
 
 GER = {
 	color = HSV { 0.1 0.15 0.4 }

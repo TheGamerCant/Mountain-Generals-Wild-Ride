@@ -18,7 +18,22 @@ SLH_all_gone = {
 	color = rgb { 0 0 0 }
 	color_ui = rgb { 0 0 0 }
 }
-
+SLC_despotic_occupation = {
+	color = rgb { 158 161 188 }
+	color_ui = rgb { 255 255 255 }
+}
+SLH_despotic_occupation = {
+	color = rgb { 158 161 188 }
+	color_ui = rgb { 255 255 255 }
+}
+SLP_despotic_occupation = {
+	color = rgb { 158 161 188 }
+	color_ui = rgb { 255 255 255 }
+}
+SLT_despotic_occupation = {
+	color = rgb { 158 161 188 }
+	color_ui = rgb { 255 255 255 }
+}
 
 
 MAL_UK = {

@@ -113,7 +113,7 @@
  slovakia.25.a:0 "I fail to see why this is a bad thing..."
  
  slovakia.26.title:0 "Hungarian Assets Seized"
- slovakia.26.desc:0 "Following our expulsion of Hungarians from Southern Slovakia and Ruthenia, we seized their assets as compensation for the HUNDREDS of years of injustice they have done to us. We will put these assets to good use."
+ slovakia.26.desc:0 "Following our expulsion of Hungarians from Southern Slovakia and Ruthenia, we seized their assets as compensation for the HUNDREDS of years of injustice they have done to us. We will put these assets to good use in strengthening the Aryan Slovak nation."
  slovakia.26.a:0 "The first step of many in dealing with the Hungolian menace"
  slovakia.26.tt:0 "$SLO_modify_the_slovak_economy_by$$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y-3.0%§!"
  
@@ -302,6 +302,34 @@
  slovakia.68.a.tt:0 "$SLO_modify_the_slovak_army_by$$MODIFIER_CONSCRIPTION_FACTOR$: §Y+0.20%§!"
  slovakia.68.b:0 "They are lunatics if they think we will yield!"
 
+ slovakia.69.title:0 "Slovakia Sends Us Infantry Equipment"
+ slovakia.69.desc:0 "As part of our ongoing war effort, [SLO.GetNameDef] has agreed to send us a shipment of infantry equipment to help equip our army."
+ slovakia.69.a:0 "A Useful Ally"
+
+ slovakia.70.title:0 "Slovakia Sends Us Support Equipment"
+ slovakia.70.desc:0 "As part of our ongoing war effort, [SLO.GetNameDef] has agreed to send us a shipment of support equipment to help equip our army."
+ slovakia.70.a:0 "A Useful Ally"
+
+ slovakia.71.title:0 "Slovakia Sends Us Artillery Equipment"
+ slovakia.71.desc:0 "As part of our ongoing war effort, [SLO.GetNameDef] has agreed to send us a shipment of artillery pieces to help equip our army."
+ slovakia.71.a:0 "A Useful Ally"
+ 
+ slovakia.72.title:0 "Germany Agrees to Establish SK-Czechia"
+ slovakia.72.desc:0 ""
+ slovakia.72.a:0 "A wise decision"
+ 
+ slovakia.73.title:0 "Germany Agrees to Establish SK-Galicia"
+ slovakia.73.desc:0 ""
+ slovakia.73.a:0 "A wise decision"
+ 
+ slovakia.74.title:0 "Germany Agrees to Establish SK-Hungary"
+ slovakia.74.desc:0 ""
+ slovakia.74.a:0 "A wise decision"
+ 
+ slovakia.75.title:0 "Germany Agrees to Establish SK-Tavriya"
+ slovakia.75.desc:0 ""
+ slovakia.75.a:0 "A wise decision"
+ 
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to dictate terms of surrender to the once proud Czechoslovak government in Prague. For the first time ever, Slovakia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."
  slovakia_news.1.a:0 "What the?!!?"

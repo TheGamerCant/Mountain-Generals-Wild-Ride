@@ -48,3 +48,32 @@
  #VPs
  VICTORY_POINTS_3550:0 "Spišská Nová Ves"
  VICTORY_POINTS_3537:0 "Banská Bystrica"
+ 
+ SLT_STATE_137: "Krym"
+ SLT_VICTORY_POINTS_3686: "Sevastopoľ"
+ SLT_VICTORY_POINTS_705: "Simferopoľ"
+ SLT_VICTORY_POINTS_9680: "Kerč"
+ SLT_VICTORY_POINTS_6704: "Jalta"
+ SLT_STATE_196: "Cherson"
+ SLT_VICTORY_POINTS_721: "Cherson"
+ 
+ SLP_STATE_72: "Tešínsko"
+ SLP_STATE_88: "Krakov"
+ SLP_STATE_91: "Ľvov"
+ SLP_STATE_89: "Stanislavov"
+ SLP_VICTORY_POINTS_9427: "Krakov"
+ SLP_VICTORY_POINTS_442: "Tarnov"
+ SLP_VICTORY_POINTS_11479: "Ľvov"
+ SLP_VICTORY_POINTS_11411: "Stanislavov"
+ 
+ SLC_VICTORY_POINTS_11542: "Praha"
+ SLC_VICTORY_POINTS_11432: "Ústí nad Labem"
+ SLC_VICTORY_POINTS_3585: "Karlovy Vary"
+
+ SLH_STATE_155: "Severné Zadunajsko" 
+ SLH_VICTORY_POINTS_686: "Šoproň"
+ SLH_STATE_43: "Severné Maďarsko"
+ SLH_VICTORY_POINTS_9660: "Budapešť"
+ SLH_STATE_974: "Južné Maďarsko"
+ SLH_VICTORY_POINTS_6700: "Segedín"
+ SLH_VICTORY_POINTS_11659: "Debrecín"

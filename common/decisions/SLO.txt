@@ -1361,7 +1361,7 @@ SLO_stabilising_the_regime_category = {
 			has_equipment = {
 				infantry_equipment > 499
 			}
-			has_manpower > 999
+			has_manpower > 499
 			command_power > 24
 			
 		}
@@ -1377,7 +1377,7 @@ SLO_stabilising_the_regime_category = {
 					type = infantry_equipment
 					amount = -500
 				}
-				add_manpower = -1000
+				add_manpower = -500
 				add_command_power = -25
 			}
 		}
@@ -1424,7 +1424,7 @@ SLO_stabilising_the_regime_category = {
 			has_equipment = {
 				infantry_equipment > 499
 			}
-			has_manpower > 999
+			has_manpower > 499
 			command_power > 24
 			
 		}
@@ -1440,7 +1440,7 @@ SLO_stabilising_the_regime_category = {
 					type = infantry_equipment
 					amount = -500
 				}
-				add_manpower = -1000
+				add_manpower = -500
 				add_command_power = -25
 			}
 		}
@@ -1487,7 +1487,7 @@ SLO_stabilising_the_regime_category = {
 			has_equipment = {
 				infantry_equipment > 499
 			}
-			has_manpower > 999
+			has_manpower > 499
 			command_power > 24
 			
 		}
@@ -1503,7 +1503,7 @@ SLO_stabilising_the_regime_category = {
 					type = infantry_equipment
 					amount = -500
 				}
-				add_manpower = -1000
+				add_manpower = -500
 				add_command_power = -25
 			}
 		}
@@ -1554,7 +1554,7 @@ SLO_stabilising_the_regime_category = {
 			has_equipment = {
 				infantry_equipment > 499
 			}
-			has_manpower > 999
+			has_manpower > 499
 			command_power > 24
 			
 		}
@@ -1570,7 +1570,7 @@ SLO_stabilising_the_regime_category = {
 					type = infantry_equipment
 					amount = -500
 				}
-				add_manpower = -1000
+				add_manpower = -500
 				add_command_power = -25
 			}
 		}
@@ -2020,9 +2020,9 @@ SLO_the_slovak_occupation_authority = {
 			43 = { set_state_name = SLO_mountain_general_kraje }
 			set_province_name = { id = 9660 name = SLO_mountain_general_city }
 			set_province_name = { id = 6720 name = SLO_heroes_of_slovakia }
-			set_province_name = { id = 686 name = SLO_sopron }
-			set_province_name = { id = 11659 name = SLO_debrecin }
-			set_province_name = { id = 6700 name = SLO_segedin }
+#			set_province_name = { id = 686 name = SLO_sopron }
+#			set_province_name = { id = 11659 name = SLO_debrecin }
+#			set_province_name = { id = 6700 name = SLO_segedin }
 		}
 
 		remove_effect = {
@@ -9801,6 +9801,10 @@ SLO_encroaching_german_influence_bop_category = {
 					localization = SLO_supply_guns_for_the_war_effort
 				}
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			GER = { country_event = { id = slovakia.69 days = 2 } add_opinion_modifier = { target = SLO modifier = medium_increase } }
 		}
 		
 		ai_will_do = {
@@ -9883,6 +9887,10 @@ SLO_encroaching_german_influence_bop_category = {
 					localization = SLO_supply_support_equipment_for_the_war_effort
 				}
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			GER = { country_event = { id = slovakia.70 days = 2 } add_opinion_modifier = { target = SLO modifier = medium_increase } }
 		}
 		
 		ai_will_do = {
@@ -9965,6 +9973,10 @@ SLO_encroaching_german_influence_bop_category = {
 					localization = SLO_supply_artillery_for_the_war_effort
 				}
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			GER = { country_event = { id = slovakia.71 days = 2 } add_opinion_modifier = { target = SLO modifier = medium_increase } }
 		}
 		
 		ai_will_do = {

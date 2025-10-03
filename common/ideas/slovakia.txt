@@ -255,171 +255,6 @@ ideas = {
 	}
 	
 	hidden_ideas = {
-		SLO_quantity_as_a_quality_of_its_own_idea = {
-			name = SLO_air_force_dynamic_modifier #Just in case it shows up anywhere
-			removal_cost = -1
-
-			picture = GFX_idea_SLO_generic_air_force
-				
-			allowed = {
-				original_tag = SLO
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-					
-			equipment_bonus = {
-				small_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				cv_small_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				cv_small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				small_plane_naval_bomber_airframe = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				cv_small_plane_naval_bomber_airframe = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				medium_plane_scout_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				large_plane_maritime_patrol_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				transport_plane_equipment = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-			}
-		}
-		SLO_rigorous_testing_idea = {
-			name = SLO_air_force_dynamic_modifier #Just in case it shows up anywhere
-			removal_cost = -1
-
-			picture = GFX_idea_SLO_generic_air_force
-				
-			allowed = {
-				original_tag = SLO
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-					
-			equipment_bonus = {
-				small_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-					reliability = 0.15
-				}
-				cv_small_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-					reliability = 0.15
-				}
-				small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-					reliability = 0.15
-				}
-				cv_small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-					reliability = 0.15
-				}
-				small_plane_naval_bomber_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-					reliability = 0.15
-				}
-				cv_small_plane_naval_bomber_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-					reliability = 0.15
-				}
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-					reliability = 0.15
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-					reliability = 0.15
-				}
-				medium_plane_scout_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-					reliability = 0.15
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-					reliability = 0.15
-				}
-				large_plane_maritime_patrol_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-					reliability = 0.15
-				}
-				transport_plane_equipment = {
-					instant = yes
-					build_cost_ic = 0.05
-					reliability = 0.15
-				}
-			}
-		}
-		
-		SLO_mobile_anti_air_idea = {
-			name = SLO_air_force_dynamic_modifier #Just in case it shows up anywhere
-			removal_cost = -1
-
-			picture = GFX_idea_SLO_generic_air_force
-				
-			allowed = {
-				original_tag = SLO
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-					
-			equipment_bonus = {
-				anti_air_equipment = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-			}
-		}
-		
 		SLO_mechanised_warfare_idea = {
 			name = SLO_army_dynamic_modifier #Just in case it shows up anywhere
 			removal_cost = -1
@@ -509,18 +344,6 @@ ideas = {
 				air_range_factor = -0.16
 			}
 		}
-		SLO_DUMMY_navy_idea = {
-			removal_cost = -1
-
-			picture = SLO_generic_navy
-			
-			modifier = {
-				industrial_capacity_dockyard = -0.20
-				naval_retreat_chance = 0.25
-				navy_max_range_factor = -0.16
-				naval_torpedo_enemy_critical_chance_factor = 0.20
-			}
-		}
 		
 		SLH_the_apocalypse_idea = {
 			removal_cost = -1
@@ -554,6 +377,939 @@ ideas = {
 			}
 		}
 		
+		SLO_navy_idea_0 = {
+			removal_cost = -1
+
+			picture = SLO_generic_navy
+
+			modifier = {
+				naval_torpedo_enemy_critical_chance_factor = 0.20
+				navy_max_range_factor = -0.16
+				naval_retreat_chance = 0.25
+				industrial_capacity_dockyard = -0.20
+			}
+		}
+		SLO_navy_idea_1 = {
+			removal_cost = -1
+
+			picture = SLO_generic_navy
+
+			modifier = {
+				naval_torpedo_enemy_critical_chance_factor = 0.20
+				navy_max_range_factor = -0.16
+				naval_retreat_chance = 0.25
+				industrial_capacity_dockyard = -0.20
+				experience_gain_navy = 0.10
+			}
+		}
+		SLO_navy_idea_2 = {
+			removal_cost = -1
+
+			picture = SLO_generic_navy
+
+			modifier = {
+				naval_torpedo_enemy_critical_chance_factor = 0.20
+				navy_max_range_factor = -0.16
+				naval_retreat_chance = 0.25
+				industrial_capacity_dockyard = -0.125
+				experience_gain_navy = 0.10
+			}
+		}
+		SLO_navy_idea_3 = {
+			removal_cost = -1
+
+			picture = SLO_generic_navy
+
+			modifier = {
+				naval_torpedo_enemy_critical_chance_factor = 0.20
+				navy_max_range_factor = -0.16
+				naval_retreat_chance = 0.25
+				industrial_capacity_dockyard = -0.050
+				experience_gain_navy = 0.10
+			}
+		}
+		SLO_navy_idea_4 = {
+			removal_cost = -1
+
+			picture = SLO_generic_navy
+
+			modifier = {
+				naval_torpedo_enemy_critical_chance_factor = 0.20
+				navy_max_range_factor = -0.16
+				naval_retreat_chance = 0.25
+				industrial_capacity_dockyard = -0.050
+				experience_gain_navy = 0.15
+				navy_leader_start_maneuvering_level = 1.00
+				navy_leader_start_coordination_level = 1.00
+			}
+		}
+		SLO_navy_idea_5 = {
+			removal_cost = -1
+
+			picture = SLO_generic_navy
+
+			modifier = {
+				naval_torpedo_enemy_critical_chance_factor = 0.20
+				navy_max_range_factor = -0.16
+				naval_retreat_chance = 0.25
+				industrial_capacity_dockyard = -0.050
+				experience_gain_navy = 0.20
+				navy_leader_start_maneuvering_level = 1.00
+				navy_leader_start_coordination_level = 1.00
+				experience_gain_navy_unit_factor = 0.10
+			}
+		}
+		SLO_navy_idea_6 = {
+			removal_cost = -1
+
+			picture = SLO_generic_navy
+
+			modifier = {
+				naval_torpedo_enemy_critical_chance_factor = 0.20
+				navy_max_range_factor = 0.06
+				naval_retreat_chance = 0.25
+				industrial_capacity_dockyard = -0.050
+				experience_gain_navy = 0.20
+				navy_leader_start_maneuvering_level = 1.00
+				navy_leader_start_coordination_level = 1.00
+				experience_gain_navy_unit_factor = 0.10
+				naval_speed_factor = 0.08
+				navy_org_factor = 0.08
+			}
+		}
+		SLO_navy_idea_7 = {
+			removal_cost = -1
+
+			picture = SLO_generic_navy
+
+			modifier = {
+				naval_torpedo_enemy_critical_chance_factor = 0.20
+				navy_max_range_factor = -0.16
+				naval_retreat_chance = 0.25
+				industrial_capacity_dockyard = -0.125
+				experience_gain_navy = 0.15
+				navy_leader_start_maneuvering_level = 1.00
+				navy_leader_start_coordination_level = 1.00
+			}
+		}
+		SLO_navy_idea_8 = {
+			removal_cost = -1
+
+			picture = SLO_generic_navy
+
+			modifier = {
+				naval_torpedo_enemy_critical_chance_factor = 0.20
+				navy_max_range_factor = -0.16
+				naval_retreat_chance = 0.25
+				industrial_capacity_dockyard = -0.125
+				experience_gain_navy = 0.10
+			}
+		}
+		SLO_navy_idea_9 = {
+			removal_cost = -1
+
+			picture = SLO_generic_navy
+
+			modifier = {
+				naval_torpedo_enemy_critical_chance_factor = 0.20
+				navy_max_range_factor = -0.16
+				naval_retreat_chance = 0.25
+				industrial_capacity_dockyard = -0.125
+				experience_gain_navy = 0.15
+				navy_leader_start_maneuvering_level = 1.00
+				navy_leader_start_coordination_level = 1.00
+			}
+		}
+		SLO_navy_idea_10 = {
+			removal_cost = -1
+
+			picture = SLO_generic_navy
+
+			modifier = {
+				naval_torpedo_enemy_critical_chance_factor = 0.20
+				navy_max_range_factor = -0.16
+				naval_retreat_chance = 0.25
+				industrial_capacity_dockyard = -0.20
+				experience_gain_navy = 0.15
+				navy_leader_start_maneuvering_level = 1.00
+				navy_leader_start_coordination_level = 1.00
+			}
+		}
+	
+		SLO_air_force_idea_0 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+			}
+		}
+		SLO_air_force_idea_1 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_defence_factor = 0.15
+			}
+		}
+		SLO_air_force_idea_2 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_defence_factor = 0.15
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.08
+			}
+		}
+		SLO_air_force_idea_3 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.15
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_defence_factor = 0.15
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.08
+			}
+		}
+		SLO_air_force_idea_4 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.15
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = 0.04
+				air_defence_factor = 0.15
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.08
+				air_escort_efficiency = 0.15
+			}
+		}
+		SLO_air_force_idea_5 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = -0.10
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = 0.04
+				air_defence_factor = 0.23
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_escort_efficiency = 0.15
+				air_attack_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+			}
+		}
+		SLO_air_force_idea_6 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = -0.10
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = 0.09
+				air_defence_factor = 0.23
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_escort_efficiency = 0.15
+				air_attack_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+				ground_attack_factor = 0.15
+			}
+		}
+		SLO_air_force_idea_7 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = -0.10
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = 0.09
+				air_defence_factor = 0.23
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_escort_efficiency = 0.15
+				air_attack_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+				ground_attack_factor = 0.15
+				air_strategic_bomber_bombing_factor = 0.18
+			}
+		}
+		SLO_air_force_idea_8 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = -0.10
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = 0.09
+				air_defence_factor = 0.23
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_escort_efficiency = 0.15
+				air_attack_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+				ground_attack_factor = 0.15
+				conscription = 0.005
+			}
+		}
+		SLO_air_force_idea_9 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = -0.40
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = 0.09
+				air_defence_factor = 0.33
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_escort_efficiency = 0.15
+				air_attack_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+				ground_attack_factor = 0.15
+			}
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+					reliability = 0.15
+				}
+			}
+		}
+		SLO_air_force_idea_10 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = -0.10
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_defence_factor = 0.23
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_attack_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+			}
+		}
+		SLO_air_force_idea_11 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = 0.04
+				air_defence_factor = 0.15
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.08
+				air_escort_efficiency = 0.15
+			}
+		}
+		SLO_air_force_idea_12 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.15
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = 0.04
+				air_defence_factor = 0.23
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_escort_efficiency = 0.15
+				air_attack_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+			}
+		}
+		SLO_air_force_idea_13 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.15
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_defence_factor = 0.23
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_attack_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+			}
+		}
+		SLO_air_force_idea_14 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = 0.10
+				air_range_factor = -0.16
+				air_defence_factor = 0.15
+			}
+		}
+		SLO_air_force_idea_15 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.15
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = 0.10
+				air_range_factor = -0.16
+				air_defence_factor = 0.15
+			}
+		}
+		SLO_air_force_idea_16 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.15
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = 0.10
+				air_range_factor = 0.04
+				air_defence_factor = 0.15
+				air_escort_efficiency = 0.15
+			}
+		}
+		SLO_air_force_idea_17 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = 0.10
+				air_range_factor = 0.04
+				air_defence_factor = 0.15
+				air_escort_efficiency = 0.15
+			}
+		}
+		SLO_air_force_idea_18 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = 0.04
+				air_defence_factor = 0.15
+				air_escort_efficiency = 0.15
+			}
+		}
+		SLO_air_force_idea_19 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.07
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+			}
+		}
+		SLO_air_force_idea_20 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.07
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.08
+			}
+		}
+		SLO_air_force_idea_21 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.15
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.07
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.08
+			}
+		}
+		SLO_air_force_idea_22 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.15
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.07
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.08
+			}
+
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		SLO_air_force_idea_23 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = -0.10
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.15
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_defence_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+			}
+
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		SLO_air_force_idea_24 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = -0.10
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.11
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.15
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_defence_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+				ground_attack_factor = 0.15
+			}
+
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		SLO_air_force_idea_25 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = -0.10
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.11
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.15
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_defence_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+				ground_attack_factor = 0.15
+			}
+
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		SLO_air_force_idea_26 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = -0.10
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.15
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_defence_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+			}
+		}
+		SLO_air_force_idea_27 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.07
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.08
+			}
+
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		SLO_air_force_idea_28 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.15
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.15
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_defence_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+			}
+
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		SLO_air_force_idea_29 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.15
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.15
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_defence_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+			}
+		}
+		SLO_air_force_idea_30 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = 0.10
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.07
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+			}
+		}
+		SLO_air_force_idea_31 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.15
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = 0.10
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.07
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+			}
+		}
+		SLO_air_force_idea_32 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.15
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = 0.10
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.07
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+			}
+
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		SLO_air_force_idea_33 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = 0.10
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.07
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+			}
+
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		SLO_air_force_idea_34 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				air_intercept_efficiency = 0.10
+				air_attack_factor = 0.07
+				static_anti_air_hit_chance_factor = 0.10
+				cas_damage_reduction = 0.05
+			}
+
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		SLO_air_force_idea_35 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.08
+			}
+		}
+		SLO_air_force_idea_36 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.15
+				air_ace_generation_chance_factor = 0.35
+				air_manpower_requirement_factor = -0.1
+				air_range_factor = -0.16
+				ace_effectiveness_factor = 0.25
+				air_agility_factor = 0.16
+				air_attack_factor = 0.08
+				air_defence_factor = 0.08
+				air_mission_xp_gain_factor = 0.15
+			}
+		}
+		SLO_air_force_idea_37 = {
+			removal_cost = -1
+
+			picture = SLO_generic_air_force
+
+			modifier = {
+				air_accidents_factor = 0.40
+				air_ace_generation_chance_factor = 0.10
+				air_manpower_requirement_factor = 0.10
+				air_range_factor = -0.16
+			}
+		}
 	
 		SLO_bratislavan_uprising_idea = {
 			removal_cost = -1
@@ -1940,7 +2696,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.002
+				conscription = 0.004
 				political_power_gain = 0.15
 				neutrality_drift = 0.03
 				army_org_factor = 0.03
@@ -1963,7 +2719,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.015
+				conscription = 0.017
 				political_power_gain = 0.05
 				neutrality_drift = 0.10
 				mobilization_speed = 0.25
@@ -2400,6 +3156,1215 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.150
+			}
+		}
+		
+		SLO_new_slovak_state_idea_0 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+			}
+		}
+		SLO_new_slovak_state_idea_1 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_2 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_3 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_4 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.05
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_5 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.05
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_6 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_7 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_8 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.05
+				compliance_growth = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_9 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.15
+				compliance_growth = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_10 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.15
+			}
+		}
+		SLO_new_slovak_state_idea_11 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_12 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				neutrality_drift = 0.10
+				party_popularity_stability_factor = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_13 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				neutrality_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_14 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				neutrality_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_15 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				neutrality_drift = 0.10
+				party_popularity_stability_factor = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_16 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				neutrality_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_17 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				neutrality_drift = 0.10
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_18 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				neutrality_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_19 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_20 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_21 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_22 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_23 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_24 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				neutrality_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_25 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_26 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_27 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.05
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_28 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.05
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_29 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_30 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_31 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.05
+				compliance_growth = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_32 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.15
+				compliance_growth = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_33 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.15
+			}
+		}
+		SLO_new_slovak_state_idea_34 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_35 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				neutrality_drift = 0.10
+				party_popularity_stability_factor = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_36 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				neutrality_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_37 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				neutrality_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_38 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				neutrality_drift = 0.10
+				party_popularity_stability_factor = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_39 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				neutrality_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_40 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				neutrality_drift = 0.10
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_41 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				neutrality_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_42 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_43 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_44 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_45 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_46 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_47 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				neutrality_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_48 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_49 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = -0.02
+				fascism_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_50 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = -0.02
+				fascism_drift = 0.05
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_51 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = 0.03
+				fascism_drift = 0.05
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_52 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = 0.03
+				fascism_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_53 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = -0.02
+				fascism_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_54 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = 0.03
+				fascism_drift = 0.05
+				compliance_growth = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_55 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = 0.03
+				fascism_drift = 0.15
+				compliance_growth = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_56 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = -0.02
+				fascism_drift = 0.15
+			}
+		}
+		SLO_new_slovak_state_idea_57 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_58 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				neutrality_drift = 0.10
+				party_popularity_stability_factor = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_59 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				neutrality_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_60 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				neutrality_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_61 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				neutrality_drift = 0.10
+				party_popularity_stability_factor = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_62 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				neutrality_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_63 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				neutrality_drift = 0.10
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_64 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				neutrality_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_65 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_66 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_67 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_68 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				party_popularity_stability_factor = 0.05
+				neutrality_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_69 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				neutrality_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_70 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				neutrality_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_71 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				fascism_drift = 0.10
 			}
 		}
 	}

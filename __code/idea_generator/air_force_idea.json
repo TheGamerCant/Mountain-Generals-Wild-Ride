@@ -1,0 +1,262 @@
+{
+    "idea_id": "SLO_air_force_idea",
+    "localised_name": "Slovak Air Force",
+    "gfx": "SLO_generic_air_force",
+    "base_modifiers": {
+        "modifiers": {
+            "air_accidents_factor" : "0.40",
+			"air_ace_generation_chance_factor" : "0.10",
+			"air_manpower_requirement_factor" : "-0.1",
+			"air_range_factor" : "-0.16"
+        },
+        "equipment_modifiers": {},
+        "research_bonuses": {},
+        "targeted_modifiers": {},
+        "rules": {}
+    },
+    "transformations": [
+        {
+            "transformation_name": "SLO_aerial_dominance_focus",
+            "prerequisite": [[]],
+            "mutually_exclusive": ["SLO_air_parity_focus"],
+            "modifiers": {
+                "air_defence_factor": "0.15"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "transformation_name": "SLO_air_parity_focus",
+            "prerequisite": [[]],
+            "mutually_exclusive": ["SLO_aerial_dominance_focus"],
+            "modifiers": {
+                "air_intercept_efficiency": "0.10",
+                "air_attack_factor": "0.07",
+                "static_anti_air_hit_chance_factor": "0.10",
+                "cas_damage_reduction": "0.05"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "transformation_name": "SLO_cult_of_the_ace_focus",
+            "prerequisite": [[]],
+            "mutually_exclusive": ["SLO_cutting_edge_designs_focus"],
+            "modifiers": {
+                "air_ace_generation_chance_factor": "0.25",
+                "ace_effectiveness_factor": "0.25",
+                "air_agility_factor": "0.08"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "transformation_name": "SLO_cutting_edge_designs_focus",
+            "prerequisite": [[]],
+            "mutually_exclusive": ["SLO_cult_of_the_ace_focus"],
+            "modifiers": {
+                "air_manpower_requirement_factor": "0.20"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "transformation_name": "SLO_new_piloting_schools_focus",
+            "prerequisite": [["SLO_aerial_dominance_focus", "SLO_air_parity_focus"], ["SLO_cult_of_the_ace_focus", "SLO_cutting_edge_designs_focus"]],
+            "mutually_exclusive": [],
+            "modifiers": {
+                "air_accidents_factor": "-0.25"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "transformation_name": "SLO_long_range_missions_focus",
+            "prerequisite": [["SLO_aerial_dominance_focus"]],
+            "mutually_exclusive": [],
+            "modifiers": {
+                "air_range_factor": "0.20",
+				"air_escort_efficiency" : "0.15"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "transformation_name": "SLO_mobile_anti_air_focus",
+            "prerequisite": [["SLO_air_parity_focus"]],
+            "mutually_exclusive": [],
+            "modifiers": {},
+            "equipment_modifiers": {
+				"anti_air_equipment": {
+					"instant" : "yes",
+					"build_cost_ic": "-0.10"
+				}
+			},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "transformation_name": "SLO_tough_training_programs_focus",
+            "prerequisite": [["SLO_cult_of_the_ace_focus"]],
+            "mutually_exclusive": [],
+            "modifiers": {
+                "air_attack_factor": "0.08",
+                "air_agility_factor": "0.08",
+                "air_defence_factor": "0.08",
+                "air_accidents_factor": "-0.25",
+				"air_mission_xp_gain_factor" : "0.15"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "transformation_name": "SLO_death_from_above_focus",
+            "prerequisite": [["SLO_long_range_missions_focus", "SLO_mobile_anti_air_focus"], ["SLO_tough_training_programs_focus"], ["SLO_new_piloting_schools_focus"]],
+            "mutually_exclusive": [],
+            "modifiers": {
+                "ground_attack_factor": "0.15",
+				"air_range_factor" : "0.05"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "transformation_name": "SLO_strategic_bombing_focus",
+            "prerequisite": [["SLO_long_range_missions_focus"], ["SLO_death_from_above_focus"]],
+            "mutually_exclusive": ["SLO_quantity_as_a_quality_of_its_own_focus", "SLO_kamikaze_pilots_focus", "SLO_rigorous_testing_focus"],
+            "modifiers": {
+                "air_strategic_bomber_bombing_factor": "0.18"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "transformation_name": "SLO_quantity_as_a_quality_of_its_own_focus",
+            "prerequisite": [["SLO_mobile_anti_air_focus"], ["SLO_death_from_above_focus"]],
+            "mutually_exclusive": ["SLO_strategic_bombing_focus", "SLO_kamikaze_pilots_focus", "SLO_rigorous_testing_focus"],
+            "modifiers": {},
+            "equipment_modifiers": {
+				"small_plane_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "-0.10"
+				},
+				"cv_small_plane_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "-0.10"
+				},
+				"small_plane_cas_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "-0.10"
+				},
+				"cv_small_plane_cas_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "-0.10"
+				},
+				"small_plane_naval_bomber_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "-0.10"
+				},
+				"cv_small_plane_naval_bomber_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "-0.10"
+				},
+				"medium_plane_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "-0.10"
+				},
+				"large_plane_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "-0.10"
+				}
+			},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "transformation_name": "SLO_kamikaze_pilots_focus",
+            "prerequisite": [["SLO_long_range_missions_focus"], ["SLO_death_from_above_focus"]],
+            "mutually_exclusive": ["SLO_quantity_as_a_quality_of_its_own_focus", "SLO_strategic_bombing_focus", "SLO_rigorous_testing_focus"],
+            "modifiers": {
+                "conscription": "0.005"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "transformation_name": "SLO_rigorous_testing_focus",
+            "prerequisite": [["SLO_long_range_missions_focus"], ["SLO_death_from_above_focus"]],
+            "mutually_exclusive": ["SLO_quantity_as_a_quality_of_its_own_focus", "SLO_kamikaze_pilots_focus", "SLO_strategic_bombing_focus"],
+            "modifiers": {
+                "air_defence_factor": "0.10",
+                "air_accidents_factor": "-0.30"
+            },
+            "equipment_modifiers": {
+				"small_plane_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "0.05",
+					"reliability" : "0.15"
+				},
+				"cv_small_plane_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "0.05",
+					"reliability" : "0.15"
+				},
+				"small_plane_cas_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "0.05",
+					"reliability" : "0.15"
+				},
+				"cv_small_plane_cas_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "0.05",
+					"reliability" : "0.15"
+				},
+				"small_plane_naval_bomber_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "0.05",
+					"reliability" : "0.15"
+				},
+				"cv_small_plane_naval_bomber_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "0.05",
+					"reliability" : "0.15"
+				},
+				"medium_plane_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "0.05",
+					"reliability" : "0.15"
+				},
+				"large_plane_airframe": {
+					"instant" : "yes",
+					"build_cost_ic": "0.05",
+					"reliability" : "0.15"
+				}
+			},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        }
+    ]
+}

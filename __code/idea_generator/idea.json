@@ -1,0 +1,129 @@
+{
+    "id": "SLO_new_slovak_state_idea",
+    "localised_name": "The New Slovak State",
+	"localised_desc": "The birth of the new Slovak state shall go down as one of the greatest achievements of the twentieth century. We have placed the power of state not in the hands of the old stagnant elites or the unwashed masses, but in men of action and men of iron. Where democracies die of stagnation and decadence and totalitarian regimes of hubris, we shall set forth a new approach.",
+    "gfx": "SLO_promote_slovak_nationalism",
+    "base_modifiers": {
+        "modifiers": {
+            "political_power_factor": "0.05",
+            "political_advisor_cost_factor": "-0.1"
+        },
+        "equipment_modifiers": {},
+        "research_bonuses": {},
+        "targeted_modifiers": {},
+        "rules": {}
+    },
+    "transformations": [
+        {
+            "id": "slovakia_at_war_focus",
+            "localised_name": "",
+            "localised_desc": "",
+            "prerequisite": [[]],
+            "mutually_exclusive": [],
+            "modifiers": {
+                "war_support_factor": "0.05",
+                "war_stability_factor": "0.10"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "id": "such_a_nation_shall_not_perish_focus",
+            "localised_name": "",
+            "localised_desc": "",
+            "prerequisite": [["slovakia_at_war_focus"]],
+            "mutually_exclusive": [],
+            "modifiers": {
+                "surrender_limit": "0.08",
+                "army_attack_factor": "0.05",
+                "army_defence_factor": "0.05",
+                "army_core_defence_factor": "0.10"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "id": "national_socialist_curriculum_focus",
+            "localised_name": "",
+            "localised_desc": "",
+            "prerequisite": [[]],
+            "mutually_exclusive": ["ensure_a_nationalist_education_focus"],
+            "modifiers": {
+                "conscription_factor": "0.07",
+                "war_support_factor": "0.05",
+                "stability_factor": "-0.02",
+                "fascism_drift": "0.05"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "id": "ensure_a_nationalist_education_focus",
+            "localised_name": "",
+            "localised_desc": "",
+            "prerequisite": [[]],
+            "mutually_exclusive": ["national_socialist_curriculum_focus"],
+            "modifiers": {
+                "conscription_factor": "0.04",
+                "stability_factor": "0.05",
+                "neutrality_drift": "0.05"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "id": "draft_a_new_constitution_focus",
+            "localised_name": "",
+            "localised_desc": "",
+            "prerequisite": [[]],
+            "mutually_exclusive": [],
+            "modifiers": {
+                "political_power_factor": "0.05",
+                "party_popularity_stability_factor": "0.05",
+                "neutrality_drift": "0.05"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "id": "our_faith_above_all_focus",
+            "localised_name": "",
+            "localised_desc": "",
+            "prerequisite": [[]],
+            "mutually_exclusive": [],
+            "modifiers": {
+                "stability_factor": "0.05",
+                "compliance_growth": "0.05",
+                "neutrality_drift": "0.05"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        },
+        {
+            "id": "expand_the_propaganda_office_focus",
+            "localised_name": "",
+            "localised_desc": "",
+            "prerequisite": [[]],
+            "mutually_exclusive": [],
+            "modifiers": {
+                "fascism_drift": "0.10"
+            },
+            "equipment_modifiers": {},
+            "research_bonuses": {},
+            "targeted_modifiers": {},
+            "rules": {}
+        }
+    ]
+}

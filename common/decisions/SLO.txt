@@ -9983,4 +9983,717 @@ SLO_encroaching_german_influence_bop_category = {
 			base = 0
 		}
 	}
+	
+	SLO_establish_slovak_commissariat_galicia = {
+
+		icon = border_war
+
+		available = {
+			any_state = {
+				OR = { state = 88 state = 72 state = 91 state = 89 }
+				CONTROLLER = {
+					OR = {
+						original_tag = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_our_rightful_spoils_of_war
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = yes
+		
+		cost = 75
+		
+		complete_effect = {
+			SLP = {
+				if = {
+					limit = { 
+						72 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 72
+					add_state_core = 72
+				}
+				if = {
+					limit = { 
+						88 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 88
+					add_state_core = 88
+					
+					set_capital = {
+					  state = 88
+					  remember_old_capital = yes
+					}
+				}
+				
+				if = {
+					limit = { 
+						89 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 89
+					add_state_core = 89
+				}
+				else_if = {
+					limit = { 
+						89 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					add_contested_owner = 89
+					set_state_controller  = 89
+					add_state_claim = 89
+					89 = { add_compliance = 15 }
+				}
+				
+				if = {
+					limit = { 
+						91 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 91
+					add_state_core = 91
+				}
+				else_if = {
+					limit = { 
+						91 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					add_contested_owner = 91
+					set_state_controller  = 91
+					add_state_claim = 91
+					91 = { add_compliance = 15 }
+				}
+			}
+			
+			set_autonomy = {
+				target = SLP
+				autonomous_state = autonomy_reichskommissariat
+				end_wars = no
+				end_civil_wars = no
+			}
+			
+			SLP = { 
+				set_cosmetic_tag = SLP_despotic_occupation
+				set_popularities = {
+					neutrality = 40
+					democratic = 17
+					fascism = 36
+					communism = 7
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	SLO_expand_slovak_commissariat_galicia = {
+
+		icon = border_war
+
+		available = {
+			SLP = {
+				exists = yes
+				has_cosmetic_tag = SLP_despotic_occupation
+			}
+			any_state = {
+				OR = { state = 88 state = 72 state = 91 state = 89 }
+				CONTROLLER = {
+					OR = {
+						original_tag = ROOT
+						is_puppet_of = ROOT
+						is_in_faction_with = ROOT
+					}
+					NOT = { original_tag = SLP }
+				}
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_our_rightful_spoils_of_war
+			SLP = {
+				exists = yes
+				has_cosmetic_tag = SLH_despotic_occupation
+			}
+			any_state = {
+				OR = { state = 88 state = 72 state = 91 state = 89 }
+				CONTROLLER = { NOT = { original_tag = SLP } }
+			}
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = no
+		
+		cost = 25
+		
+		complete_effect = {
+			SLP = {
+				if = {
+					limit = { 
+						72 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 72
+					add_state_core = 72
+				}
+				if = {
+					limit = { 
+						88 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 88
+					add_state_core = 88
+					
+					set_capital = {
+					  state = 88
+					  remember_old_capital = yes
+					}
+				}
+				
+				if = {
+					limit = { 
+						89 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 89
+					add_state_core = 89
+				}
+				else_if = {
+					limit = { 
+						89 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					add_contested_owner = 89
+					set_state_controller  = 89
+					add_state_claim = 89
+					89 = { add_compliance = 15 }
+				}
+				
+				if = {
+					limit = { 
+						91 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 91
+					add_state_core = 91
+				}
+				else_if = {
+					limit = { 
+						91 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					add_contested_owner = 91
+					set_state_controller  = 91
+					add_state_claim = 91
+					91 = { add_compliance = 15 }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	SLO_establish_slovak_commissariat_hungary = {
+
+		icon = border_war
+
+		available = {
+			any_state = {
+				OR = { state = 43 state = 155 state = 154 state = 973 state = 974 }
+				CONTROLLER = {
+					OR = {
+						original_tag = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_our_rightful_spoils_of_war
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = yes
+		
+		cost = 75
+		
+		complete_effect = {
+			SLH = {
+				if = {
+					limit = { 
+						43 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 43
+					add_state_core = 43
+				}
+				
+				if = {
+					limit = { 
+						155 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 155
+					add_state_core = 155
+				}
+				else_if = {
+					limit = { 
+						155 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					add_contested_owner = 155
+					set_state_controller  = 155
+					add_state_claim = 155
+					155 = { add_compliance = 15 }
+				}
+				
+				if = {
+					limit = { 
+						974 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 974
+					add_state_core = 974
+				}
+				else_if = {
+					limit = { 
+						974 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					add_contested_owner = 974
+					set_state_controller  = 974
+					add_state_claim = 974
+				}
+				
+				if = {
+					limit = { 
+						973 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 973
+					add_state_core = 973
+				}
+				else_if = {
+					limit = { 
+						973 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					add_contested_owner = 973
+					set_state_controller  = 973
+					add_state_claim = 973
+					973 = { add_compliance = 15 }
+				}
+				
+				if = {
+					limit = { 
+						154 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 154
+					add_state_core = 154
+				}
+				else_if = {
+					limit = { 
+						154 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					add_contested_owner = 154
+					set_state_controller  = 154
+					add_state_claim = 154
+					154 = { add_compliance = 15 }
+				}
+			}
+			
+			set_autonomy = {
+				target = SLH
+				autonomous_state = autonomy_reichskommissariat
+				end_wars = no
+				end_civil_wars = no
+			}
+			
+			SLH = { 
+				set_cosmetic_tag = SLH_despotic_occupation
+				set_popularities = {
+					neutrality = 40
+					democratic = 17
+					fascism = 36
+					communism = 7
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	SLO_expand_slovak_commissariat_hungary = {
+
+		icon = border_war
+
+		available = {
+			SLH = {
+				exists = yes
+				has_cosmetic_tag = SLH_despotic_occupation
+			}
+			any_state = {
+				OR = { state = 43 state = 155 state = 154 state = 973 state = 974 }
+				CONTROLLER = {
+					OR = {
+						original_tag = ROOT
+						is_puppet_of = ROOT
+						is_in_faction_with = ROOT
+					}
+					NOT = { original_tag = SLH }
+				}
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_our_rightful_spoils_of_war
+			SLH = {
+				exists = yes
+				has_cosmetic_tag = SLH_despotic_occupation
+			}
+			any_state = {
+				OR = { state = 43 state = 155 state = 154 state = 973 state = 974 }
+				CONTROLLER = { NOT = { original_tag = SLH } }
+			}
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = no
+		
+		cost = 25
+		
+		complete_effect = {
+			SLH = {
+				if = {
+					limit = { 
+						43 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 43
+					add_state_core = 43
+				}
+				
+				if = {
+					limit = { 
+						155 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 155
+					add_state_core = 155
+				}
+				else_if = {
+					limit = { 
+						155 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					add_contested_owner = 155
+					set_state_controller  = 155
+					add_state_claim = 155
+					155 = { add_compliance = 15 }
+				}
+				
+				if = {
+					limit = { 
+						974 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 974
+					add_state_core = 974
+				}
+				else_if = {
+					limit = { 
+						974 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					add_contested_owner = 974
+					set_state_controller  = 974
+					add_state_claim = 974
+				}
+				
+				if = {
+					limit = { 
+						973 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 973
+					add_state_core = 973
+				}
+				else_if = {
+					limit = { 
+						973 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					add_contested_owner = 973
+					set_state_controller  = 973
+					add_state_claim = 973
+					973 = { add_compliance = 15 }
+				}
+				
+				if = {
+					limit = { 
+						154 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 154
+					add_state_core = 154
+				}
+				else_if = {
+					limit = { 
+						154 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					add_contested_owner = 154
+					set_state_controller  = 154
+					add_state_claim = 154
+					154 = { add_compliance = 15 }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	SLO_establish_slovak_commissariat_tavriya = {
+
+		icon = border_war
+
+		available = {
+			any_state = {
+				OR = { state = 137 state = 196 }
+				CONTROLLER = {
+					OR = {
+						original_tag = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_our_rightful_spoils_of_war
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = yes
+		
+		cost = 75
+		
+		complete_effect = {
+			SLT = {
+				if = {
+					limit = { 
+						137 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 137
+					add_state_core = 137
+				}
+				
+				if = {
+					limit = { 
+						196 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					transfer_state = 196
+					add_state_core = 196
+				}
+				else_if = {
+					limit = { 
+						196 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+						} 
+					}
+					add_contested_owner = 196
+					set_state_controller  = 196
+					add_state_claim = 196
+					196 = { add_compliance = 15 }
+				}
+			}
+			
+			set_autonomy = {
+				target = SLT
+				autonomous_state = autonomy_reichskommissariat
+				end_wars = no
+				end_civil_wars = no
+			}
+			
+			SLT = { 
+				set_cosmetic_tag = SLT_despotic_occupation
+				set_popularities = {
+					neutrality = 40
+					democratic = 15
+					fascism = 43
+					communism = 2
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	SLO_expand_slovak_commissariat_tavriya = {
+
+		icon = border_war
+
+		available = {
+			SLT = {
+				exists = yes
+				has_cosmetic_tag = SLT_despotic_occupation
+			}
+			any_state = {
+				OR = { state = 137 state = 196 }
+				CONTROLLER = {
+					OR = {
+						original_tag = ROOT
+						is_puppet_of = ROOT
+						is_in_faction_with = ROOT
+					}
+					NOT = { original_tag = SLT }
+				}
+			}
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_our_rightful_spoils_of_war
+			SLT = {
+				exists = yes
+				has_cosmetic_tag = SLT_despotic_occupation
+			}
+			any_state = {
+				OR = { state = 137 state = 196 }
+				CONTROLLER = { NOT = { original_tag = SLT } }
+			}
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = no
+		
+		cost = 25
+		
+		complete_effect = {
+			SLT = {
+				if = {
+					limit = { 
+						137 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } NOT = { original_tag = SLT } } 
+						} 
+					}
+					transfer_state = 137
+					add_state_core = 137
+				}
+				
+				if = {
+					limit = { 
+						196 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } NOT = { original_tag = SLT } } 
+						} 
+					}
+					transfer_state = 196
+					add_state_core = 196
+				}
+				else_if = {
+					limit = { 
+						196 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } NOT = { original_tag = SLT } } 
+						} 
+					}
+					add_contested_owner = 196
+					set_state_controller  = 196
+					add_state_claim = 196
+					196 = { add_compliance = 15 }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
 }

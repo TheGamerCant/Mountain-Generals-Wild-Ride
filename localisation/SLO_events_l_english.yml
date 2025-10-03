@@ -314,21 +314,43 @@
  slovakia.71.desc:0 "As part of our ongoing war effort, [SLO.GetNameDef] has agreed to send us a shipment of artillery pieces to help equip our army."
  slovakia.71.a:0 "A Useful Ally"
  
- slovakia.72.title:0 "Germany Agrees to Establish SK-Czechia"
+ slovakia.72.title:0 "Slovakia Requests Mediation With Hungary"
  slovakia.72.desc:0 ""
- slovakia.72.a:0 "A wise decision"
+ slovakia.72.a:0 "Award them Southern Slovakia and Carpathian Ruthenia"
+ slovakia.72.b:0 "Award them Southern Slovakia"
+ slovakia.72.c:0 "Who do these mountain dwellers think they are!??!"
  
- slovakia.73.title:0 "Germany Agrees to Establish SK-Galicia"
+ slovakia.73.title:0 "The Bratislava Conference"
  slovakia.73.desc:0 ""
- slovakia.73.a:0 "A wise decision"
+ slovakia.73.a:0 "There is nothing we can do"
+ slovakia.73.b:0 "Surely we can find a compromise?"
+ slovakia.73.c:0 "We will not bow to pressure!"
  
- slovakia.74.title:0 "Germany Agrees to Establish SK-Hungary"
+ slovakia.74.title:0 "The Bratislava Conference"
  slovakia.74.desc:0 ""
- slovakia.74.a:0 "A wise decision"
+ slovakia.74.a:0 "There is nothing we can do"
+ slovakia.74.b:0 "We will not bow to pressure!"
  
- slovakia.75.title:0 "Germany Agrees to Establish SK-Tavriya"
- slovakia.75.desc:0 ""
- slovakia.75.a:0 "A wise decision"
+ slovakia.75.title:0 "Germany Refuses to Hear our Complaints"
+ slovakia.75.desc:0 "Despite our best efforts, diplomats from [GER.GetNameDef] have refused to take a stand on our rightful grievances against [HUN.GetNameDef]. Their total disregard for our sovereignty and honour cannot go unresponded to."
+ slovakia.75.a:0 "Oh... ok"
+ slovakia.75.b:0 "We don't need them!"
+ 
+ slovakia.76.title:0 "Hungary Returns Southern Slovakia And Carpathian Ruthenia"
+ slovakia.76.desc:0 "Following pressure from us and our German allies, Hungary has agreed to return our stolen territories in full."
+ slovakia.76.a:0 "Great news!"
+ 
+ slovakia.77.title:0 "Hungary Compromises And Returns Southern Slovakia"
+ slovakia.77.desc:0 ""
+ slovakia.77.a:0 "We can live with this"
+ 
+ slovakia.78.title:0 "Hungary Returns Southern Slovakia"
+ slovakia.78.desc:0 "Hearing our demands and seeking a compromise, Hungary and [GER.GetNameDef] have agreed to transfer us Southern Slovakia. While not what we had fully hoped for, this deal is likely the best we can get while keeping the Germans on side."
+ slovakia.78.a:0 "We can live with this"
+ 
+ slovakia.79.title:0 "Hungary Refuses to Negotiate"
+ slovakia.79.desc:0 ""
+ slovakia.79.a:0 "They know what the consequences are"
  
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to dictate terms of surrender to the once proud Czechoslovak government in Prague. For the first time ever, Slovakia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."

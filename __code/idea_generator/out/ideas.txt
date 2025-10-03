@@ -1,0 +1,1212 @@
+ideas = {
+	country = {
+		SLO_new_slovak_state_idea_0 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+			}
+		}
+		SLO_new_slovak_state_idea_1 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_2 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_3 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_4 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.05
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_5 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.05
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_6 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_7 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_8 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.05
+				compliance_growth = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_9 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.15
+				compliance_growth = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_10 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.15
+			}
+		}
+		SLO_new_slovak_state_idea_11 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_12 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				unaligned_drift = 0.10
+				party_popularity_stability_factor = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_13 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				unaligned_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_14 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				unaligned_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_15 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				unaligned_drift = 0.10
+				party_popularity_stability_factor = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_16 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				unaligned_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_17 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				unaligned_drift = 0.10
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_18 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				unaligned_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_19 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_20 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_21 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_22 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_23 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_24 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				unaligned_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_25 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				surrender_limit = 0.08
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.10
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_26 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_27 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.05
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_28 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.05
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_29 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_30 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_31 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.05
+				compliance_growth = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_32 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = 0.03
+				fascism_drift = 0.15
+				compliance_growth = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_33 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.10
+				war_stability_factor = 0.10
+				conscription_factor = 0.07
+				stability_factor = -0.02
+				fascism_drift = 0.15
+			}
+		}
+		SLO_new_slovak_state_idea_34 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_35 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				unaligned_drift = 0.10
+				party_popularity_stability_factor = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_36 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				unaligned_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_37 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				unaligned_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_38 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				unaligned_drift = 0.10
+				party_popularity_stability_factor = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_39 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				unaligned_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_40 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				unaligned_drift = 0.10
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_41 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				unaligned_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_42 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_43 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_44 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_45 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_46 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_47 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				unaligned_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_48 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.05
+				war_stability_factor = 0.10
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_49 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = -0.02
+				fascism_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_50 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = -0.02
+				fascism_drift = 0.05
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_51 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = 0.03
+				fascism_drift = 0.05
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_52 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = 0.03
+				fascism_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_53 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = -0.02
+				fascism_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_54 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = 0.03
+				fascism_drift = 0.05
+				compliance_growth = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_55 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = 0.03
+				fascism_drift = 0.15
+				compliance_growth = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_56 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = -0.02
+				fascism_drift = 0.15
+			}
+		}
+		SLO_new_slovak_state_idea_57 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_58 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				unaligned_drift = 0.10
+				party_popularity_stability_factor = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_59 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				unaligned_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_60 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				unaligned_drift = 0.15
+				party_popularity_stability_factor = 0.05
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_61 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				unaligned_drift = 0.10
+				party_popularity_stability_factor = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_62 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				unaligned_drift = 0.10
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_63 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.10
+				unaligned_drift = 0.10
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_64 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				conscription_factor = 0.04
+				stability_factor = 0.05
+				unaligned_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_65 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_66 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_67 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.10
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_68 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.1
+				party_popularity_stability_factor = 0.05
+				unaligned_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_69 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		SLO_new_slovak_state_idea_70 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				stability_factor = 0.05
+				compliance_growth = 0.05
+				unaligned_drift = 0.05
+				fascism_drift = 0.10
+			}
+		}
+		SLO_new_slovak_state_idea_71 = {
+			removal_cost = -1
+
+			picture = SLO_promote_slovak_nationalism
+
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				fascism_drift = 0.10
+			}
+		}
+	}
+}

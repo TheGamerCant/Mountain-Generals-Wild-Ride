@@ -2958,355 +2958,375 @@ country_event = {
 	}
 }
 
-#For Slovakia - Establish Slovak-Commisariat Czechia
+#For Germany - Slovakia wants us to mediate with Hungary
 country_event = {
 	id = slovakia.72
 	title = slovakia.72.title
 	desc = slovakia.72.desc
 	is_triggered_only = yes
 	
-	picture = GFX_report_event_german_inspect_troops
+	picture = GFX_report_event_german_italian_pact
 
+	#Pressure Hungary for Southern Slovakia and Carpathian Ruthenia
 	option = { 
 		name = slovakia.72.a
 		ai_chance = {
 			base = 10
-		}
-		
-		SLC = {
-			if = {
-				limit = { 
-					9 = { 
-						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
+			
+			#If Slovakia has a large army, be nice to them
+			modifier = {
+				add = 7
+				
+				SLO = { has_army_manpower = { size > 134999 } }
+			}
+			
+			modifier = {
+				add = 5
+				
+				SLO = { has_army_manpower = { size > 99999 } }
+			}
+			
+			#Mountain General is giving us blowjobs underneath the table
+			modifier = {
+				factor = 1.4
+				
+				has_opinion = {
+					target = SLO
+					value > 90
 				}
-				transfer_state = 9
-				add_state_core = 9
 			}
-			if = {
-				limit = { 
-					75 = { 
-						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
+			modifier = {
+				factor = 1.4
+				
+				SLO = {
+					power_balance_value = {
+						id = SLO_encroaching_german_influence_bop
+						value < -0.50
+					}
 				}
-				transfer_state = 75
-				add_state_core = 75
+			}
+			modifier = {
+				factor = 0.25
+				
+				HUN = { is_in_faction_with = GER }
 			}
 		}
 		
-		set_autonomy = {
-			target = SLC
-			autonomous_state = autonomy_reichskommissariat
-			end_wars = no
-			end_civil_wars = no
+		trigger = {
+			NOT = { 73 = { is_owned_by = SLO } }
+			NOT = { 664 = { is_owned_by = SLO } }
 		}
 		
-		SLC = { 
-			set_cosmetic_tag = SLC_despotic_occupation
-			set_popularities = {
-				neutrality = 45
-				democratic = 15
-				fascism = 35
-				communism = 5
+		every_country = {
+			limit = { OR = { owns_state = 73 owns_state = 664 } NOT = { original_tag = SLO } }
+			country_event = { id = slovakia.73 hours = 16 random_hours = 16 }
+		}
+	}
+
+	#Pressure Hungary for Carpathian Ruthenia
+	option = { 
+		name = slovakia.72.b
+		ai_chance = {
+			base = 15
+			
+			#First option is ignored if 664 is controlled by SLO, so increase the chances of this one
+			modifier = {
+				add = 5
+				
+				664 = { is_owned_by = SLO }
+			}
+			
+			#If they own 73 and 664, try to reach a compromise
+			modifier = {
+				add = 12
+				
+				NOT = { 73 = { is_owned_by = SLO } }
+			}
+			
+			#If Slovakia has a large army, be nice to them
+			modifier = {
+				add = 6.5
+				
+				SLO = { has_army_manpower = { size > 99999 } }
+			}
+			
+			#Slovakia has improved relations with us
+			modifier = {
+				factor = 1.3
+				
+				has_opinion = {
+					target = SLO
+					value > 65
+				}
+			}
+			
+			#Mountain General is giving us blowjobs underneath the table
+			modifier = {
+				factor = 1.3
+				
+				SLO = {
+					power_balance_value = {
+						id = SLO_encroaching_german_influence_bop
+						value < -0.35
+					}
+				}
 			}
 		}
+		
+		trigger = {
+			NOT = { 73 = { is_owned_by = SLO } }
+		}
+		
+		every_country = {
+			limit = { OR = { owns_state = 73 owns_state = 664 } NOT = { original_tag = SLO } }
+			country_event = { id = slovakia.74 hours = 16 random_hours = 16 }
+		}
+	}
+
+	#Who do those Slovaks think they are?
+	option = { 
+		name = slovakia.72.c
+		ai_chance = {
+			base = 10
+			
+			#They're not being loyal, why should we support them?
+			modifier = {
+				add = 6
+				
+				SLO = {
+					power_balance_value = {
+						id = SLO_encroaching_german_influence_bop
+						value > 0.40
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 1.5
+				
+				has_opinion = {
+					target = SLO
+					value < 20
+				}
+			}
+			
+			modifier = {
+				factor = 3
+				
+				NOT = { is_in_faction_with = SLO }
+			}
+			
+			modifier = {
+				add = -10
+				
+				is_in_faction_with = SLO
+				SLO = {
+					OR = {
+						power_balance_value = {
+							id = SLO_encroaching_german_influence_bop
+							value < 0.1
+						}
+						is_puppet_of = ROOT
+					}
+				}
+			}
+		}
+		
+		SLO = { country_event = { id = slovakia.75 hours = 16 random_hours = 16 } }
 	}
 }
 
-#For Slovakia - Establish Slovak-Commisariat Galicia
+#For Hungary - Germany demands we give Slovakia back Southern Slovakia and Carpathian Ruthenia
 country_event = {
 	id = slovakia.73
 	title = slovakia.73.title
 	desc = slovakia.73.desc
 	is_triggered_only = yes
 	
-	picture = GFX_report_event_german_inspect_troops
-
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	#Give in to the pressure
 	option = { 
 		name = slovakia.73.a
 		ai_chance = {
 			base = 10
 		}
 		
-		SLP = {
-			if = {
-				limit = { 
-					72 = { 
-						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				transfer_state = 72
-				add_state_core = 72
-			}
-			if = {
-				limit = { 
-					88 = { 
-						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				transfer_state = 88
-				add_state_core = 88
-				
-				set_capital = {
-				  state = 88
-				  remember_old_capital = yes
-				}
-			}
-			
-			if = {
-				limit = { 
-					89 = { 
-						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				transfer_state = 89
-				add_state_core = 89
-			}
-			else_if = {
-				limit = { 
-					89 = { 
-						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				add_contested_owner = 89
-				set_state_controller  = 89
-				add_state_claim = 89
-				89 = { add_compliance = 15 }
-			}
-			
-			if = {
-				limit = { 
-					91 = { 
-						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				transfer_state = 91
-				add_state_core = 91
-			}
-			else_if = {
-				limit = { 
-					91 = { 
-						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				add_contested_owner = 91
-				set_state_controller  = 91
-				add_state_claim = 91
-				91 = { add_compliance = 15 }
-			}
+		SLO = { country_event = { id = slovakia.76 hours = 4 random_hours = 8 } }
+	}
+
+	#Compromise, give back Southern Slovakia
+	option = { 
+		name = slovakia.73.b
+		ai_chance = {
+			base = 0
 		}
 		
-		set_autonomy = {
-			target = SLP
-			autonomous_state = autonomy_reichskommissariat
-			end_wars = no
-			end_civil_wars = no
+		SLO = { country_event = { id = slovakia.77 hours = 4 random_hours = 8 } }
+	}
+
+	#Not a chance in hell
+	option = { 
+		name = slovakia.73.c
+		ai_chance = {
+			base = 0
 		}
 		
-		SLP = { 
-			set_cosmetic_tag = SLP_despotic_occupation
-			set_popularities = {
-				neutrality = 40
-				democratic = 17
-				fascism = 36
-				communism = 7
-			}
-		}
+		SLO = { country_event = { id = slovakia.79 hours = 6 random_hours = 6 }
 	}
 }
 
-#For Slovakia - Establish Slovak-Commisariat Hungary
+#For Hungary - Germany demands we give Slovakia back Carpathian Ruthenia
 country_event = {
 	id = slovakia.74
 	title = slovakia.74.title
 	desc = slovakia.74.desc
 	is_triggered_only = yes
 	
-	picture = GFX_report_event_german_inspect_troops
-
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	#Give in to the pressure
 	option = { 
 		name = slovakia.74.a
 		ai_chance = {
 			base = 10
 		}
 		
-		SLH = {
-			if = {
-				limit = { 
-					43 = { 
-						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				transfer_state = 43
-				add_state_core = 43
-			}
-			
-			if = {
-				limit = { 
-					155 = { 
-						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				transfer_state = 155
-				add_state_core = 155
-			}
-			else_if = {
-				limit = { 
-					155 = { 
-						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				add_contested_owner = 155
-				set_state_controller  = 155
-				add_state_claim = 155
-				155 = { add_compliance = 15 }
-			}
-			
-			if = {
-				limit = { 
-					974 = { 
-						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				transfer_state = 974
-				add_state_core = 974
-			}
-			else_if = {
-				limit = { 
-					974 = { 
-						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				add_contested_owner = 974
-				set_state_controller  = 974
-				add_state_claim = 974
-			}
-			
-			if = {
-				limit = { 
-					973 = { 
-						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				transfer_state = 973
-				add_state_core = 973
-			}
-			else_if = {
-				limit = { 
-					973 = { 
-						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				add_contested_owner = 973
-				set_state_controller  = 973
-				add_state_claim = 973
-				973 = { add_compliance = 15 }
-			}
-			
-			if = {
-				limit = { 
-					154 = { 
-						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				transfer_state = 154
-				add_state_core = 154
-			}
-			else_if = {
-				limit = { 
-					154 = { 
-						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				add_contested_owner = 154
-				set_state_controller  = 154
-				add_state_claim = 154
-				154 = { add_compliance = 15 }
-			}
+		SLO = { country_event = { id = slovakia.78 hours = 4 random_hours = 8 } }
+	}
+	
+	#Not a chance in hell
+	option = { 
+		name = slovakia.74.b
+		ai_chance = {
+			base = 0
 		}
 		
-		set_autonomy = {
-			target = SLH
-			autonomous_state = autonomy_reichskommissariat
-			end_wars = no
-			end_civil_wars = no
-		}
-		
-		SLH = { 
-			set_cosmetic_tag = SLH_despotic_occupation
-			set_popularities = {
-				neutrality = 40
-				democratic = 17
-				fascism = 36
-				communism = 7
-			}
-		}
+		SLO = { country_event = { id = slovakia.79 hours = 6 random_hours = 6 }
 	}
 }
 
-#For Slovakia - Establish Slovak-Commisariat Tavriya
+#For Slovakia - Germany refuses to do anything
 country_event = {
 	id = slovakia.75
 	title = slovakia.75.title
 	desc = slovakia.75.desc
 	is_triggered_only = yes
 	
-	picture = GFX_report_event_german_inspect_troops
-
+	picture = GFX_report_event_poland_rejects
+	
+	#Oh well
 	option = { 
 		name = slovakia.75.a
 		ai_chance = {
 			base = 10
 		}
 		
-		SLT = {
-			if = {
-				limit = { 
-					137 = { 
-						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				transfer_state = 137
-				add_state_core = 137
-			}
-			
-			if = {
-				limit = { 
-					196 = { 
-						OWNER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				transfer_state = 196
-				add_state_core = 196
-			}
-			else_if = {
-				limit = { 
-					196 = { 
-						CONTROLLER = { OR = { original_tag = GER is_puppet_of = GER original_tag = SLO is_puppet_of = SLO } } 
-					} 
-				}
-				add_contested_owner = 196
-				set_state_controller  = 196
-				add_state_claim = 196
-				196 = { add_compliance = 15 }
-			}
+		add_political_power = -50
+	}
+	
+	#Leave the axis and invade Hungary!
+	option = { 
+		name = slovakia.75.b
+		ai_chance = {
+			base = 10
 		}
 		
-		set_autonomy = {
-			target = SLT
-			autonomous_state = autonomy_reichskommissariat
-			end_wars = no
-			end_civil_wars = no
+		if = {
+			limit = { is_in_faction_with = GER GER = { is_faction_leader = yes } }
+			leave_faction = yes
 		}
 		
-		SLT = { 
-			set_cosmetic_tag = SLT_despotic_occupation
-			set_popularities = {
-				neutrality = 40
-				democratic = 15
-				fascism = 43
-				communism = 2
-			}
+		SLO_decrease_reich_tolerance_by_25 = yes
+		
+		declare_war_on = {
+			target = HUN
+			type = annex_everything
+		}
+	}
+}
+
+#For Slovakia - Hungary yields Southern Slovakia and Carpathian Ruthenia
+country_event = {
+	id = slovakia.76
+	title = slovakia.76.title
+	desc = slovakia.76.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_vienna_award_hungary
+	
+	#Great news!
+	option = { 
+		name = slovakia.76.a
+		ai_chance = {
+			base = 10
+		}
+		
+		transfer_state = 73
+		transfer_state = 664
+	}
+}
+
+#For Slovakia - Hungary compromises and yields Southern Slovakia
+country_event = {
+	id = slovakia.77
+	title = slovakia.77.title
+	desc = slovakia.77.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_vienna_award_hungary
+	
+	#We'll take it
+	option = { 
+		name = slovakia.77.a
+		ai_chance = {
+			base = 10
+		}
+		
+		transfer_state = 664
+	}
+}
+
+#For Slovakia - Hungary yields Southern Slovakia
+country_event = {
+	id = slovakia.78
+	title = slovakia.78.title
+	desc = slovakia.78.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_vienna_award_hungary
+	
+	#We'll take it
+	option = { 
+		name = slovakia.78.a
+		ai_chance = {
+			base = 10
+		}
+		
+		transfer_state = 664
+	}
+}
+
+
+#For Slovakia - Hungary refuses negotiations
+country_event = {
+	id = slovakia.79
+	title = slovakia.79.title
+	desc = slovakia.79.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_soldiers_marching
+	
+	#Then it is war!
+	option = { 
+		name = slovakia.79.a
+		ai_chance = {
+			base = 10
+		}
+		
+		declare_war_on = {
+			target = HUN
+			type = annex_everything
 		}
 	}
 }

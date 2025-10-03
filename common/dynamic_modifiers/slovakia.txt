@@ -257,78 +257,7 @@ SLO_army_a_war_of_intellect_dynamic_modifier = {
 	army_armor_defence_factor = SLO_army_dm_army_armor_defence_factor
 	mechanized_defence_factor = SLO_army_dm_mechanized_defence_factor
 	conscription = SLO_army_dm_conscription
+	ground_attack_factor = SLO_army_dm_ground_attack_factor
 	
 	custom_modifier_tooltip = SLO_army_dynamic_modifier_tooltip
-}
-
-SLO_air_force_dynamic_modifier = {
-	icon = GFX_idea_SLO_generic_air_force
-	enable = { always = yes }
-	
-	air_accidents_factor  = SLO_air_force_dm_air_accidents_factor
-	air_ace_generation_chance_factor  = SLO_air_force_dm_air_ace_generation_chance_factor
-	air_manpower_requirement_factor = SLO_air_force_dm_air_manpower_requirement_factor
-	air_range_factor = SLO_air_force_dm_air_range_factor
-	ace_effectiveness_factor = SLO_air_force_dm_ace_effectiveness_factor
-	air_agility_factor = SLO_air_force_dm_air_agility_factor
-	air_intercept_efficiency = SLO_air_force_dm_air_intercept_efficiency 
-	air_attack_factor = SLO_air_force_dm_air_attack_factor
-#	air_doctrine_cost_factor = SLO_air_force_dm_air_doctrine_cost_factor
-	air_defence_factor = SLO_air_force_dm_air_defence_factor
-	air_mission_xp_gain_factor = SLO_air_force_dm_air_mission_xp_gain_factor
-	air_escort_efficiency = SLO_air_force_dm_air_escort_efficiency
-	air_strategic_bomber_bombing_factor = SLO_air_force_dm_air_strategic_bomber_bombing_factor
-	static_anti_air_hit_chance_factor = SLO_air_force_dm_static_anti_air_hit_chance_factor
-	cas_damage_reduction = SLO_air_force_dm_cas_damage_reduction
-	conscription = SLO_air_force_dm_conscription
-	ground_attack_factor = SLO_air_force_dm_ground_attack_factor
-	
-	custom_modifier_tooltip = SLO_air_force_dynamic_modifier_tooltip
-}
-
-SLO_river_fleet_dynamic_modifier = {
-	icon = GFX_idea_SLO_generic_navy
-	enable = { always = yes }
-	
-	experience_gain_navy = SLO_navy_dm_experience_gain_navy
-	industrial_capacity_dockyard = SLO_navy_dm_industrial_capacity_dockyard
-	naval_retreat_chance = SLO_navy_dm_naval_retreat_chance
-	navy_max_range_factor = SLO_navy_dm_navy_max_range_factor
-	naval_torpedo_enemy_critical_chance_factor = SLO_navy_dm_naval_torpedo_enemy_critical_chance_factor
-	
-	navy_leader_start_maneuvering_level = SLO_navy_dm_navy_leader_start_maneuvering_level
-	navy_leader_start_coordination_level = SLO_navy_dm_navy_leader_start_coordination_level
-}
-
-SLO_navy_dynamic_modifier = {
-	icon = GFX_idea_SLO_generic_navy
-	enable = { always = yes }
-	
-	experience_gain_navy = SLO_navy_dm_experience_gain_navy
-	industrial_capacity_dockyard = SLO_navy_dm_industrial_capacity_dockyard
-	naval_retreat_chance = SLO_navy_dm_naval_retreat_chance
-	navy_max_range_factor = SLO_navy_dm_navy_max_range_factor
-	naval_torpedo_enemy_critical_chance_factor = SLO_navy_dm_naval_torpedo_enemy_critical_chance_factor
-	
-	navy_leader_start_maneuvering_level = SLO_navy_dm_navy_leader_start_maneuvering_level
-	navy_leader_start_coordination_level = SLO_navy_dm_navy_leader_start_coordination_level
-	experience_gain_navy_unit_factor = SLO_navy_dm_experience_gain_navy_unit_factor
-	naval_speed_factor = SLO_navy_dm_naval_speed_factor
-	navy_org_factor = SLO_navy_dm_navy_org_factor
-}
-
-SLO_new_slovak_state_dynamic_modifier = {
-	icon = GFX_idea_SLO_promote_slovak_nationalism
-	enable = { always = yes }
-	
-	political_power_factor = SLO_nss_dm_political_power_factor
-	political_advisor_cost_factor  = SLO_nss_dm_political_advisor_cost_factor 
-	neutrality_drift = SLO_nss_dm_neutrality_drift
-	fascism_drift = SLO_nss_dm_fascism_drift
-	conscription_factor = SLO_nss_dm_conscription_factor
-	war_support_factor = SLO_nss_dm_war_support_factor
-	stability_factor = SLO_nss_dm_stability_factor
-	compliance_growth = SLO_nss_dm_compliance_growth
-	war_stability_factor = SLO_nss_dm_war_stability_factor
-	party_popularity_stability_factor = SLO_nss_dm_party_popularity_stability_factor
 }

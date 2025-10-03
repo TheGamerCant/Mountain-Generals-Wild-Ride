@@ -28,6 +28,9 @@
  mgs_cult_of_personality_despotist_2_left:0 "$mgs_cult_of_personality_1$"
  mgs_cult_of_personality_despotist_2_centre:0 "$mgs_cult_of_personality_1$"
  mgs_cult_of_personality_despotist_2_right:0 "$mgs_cult_of_personality_1$"
+ mgs_cult_of_personality_despotist_3_left:0 "$mgs_cult_of_personality_1$"
+ mgs_cult_of_personality_despotist_3_centre:0 "$mgs_cult_of_personality_1$"
+ mgs_cult_of_personality_despotist_3_right:0 "$mgs_cult_of_personality_1$"
  
 # SLO_jozef_tiso:0 "Jozef Tiso"
  SLO_mg_loyalist_1:0 "Mountain General's Strongest Soldier"

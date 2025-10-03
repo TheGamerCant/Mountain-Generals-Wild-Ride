@@ -225,6 +225,9 @@ add_ideas = {
 	SLO_jozef_tiso
 	SLO_bratislavan_uprising_idea
 	SLO_unclear_ideology_idea
+	
+	SLO_air_force_idea_0
+	SLO_navy_idea_0
 }
 
 #Arrays and shit
@@ -368,40 +371,6 @@ round_variable = SLO.propaganda_days_until_first_change
 round_variable = SLO.propaganda_days_until_second_change
 
 
-#Economy
-set_variable = { SLO_economy_dm_stability_factor = -0.10 }
-set_variable = { SLO_economy_dm_political_power_cost = 0.15 }
-set_variable = { SLO_economy_dm_consumer_goods_factor = 0.20 }
-set_variable = { SLO_economy_dm_production_speed_buildings_factor = -0.12 }
-set_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = -0.15 }
-set_variable = { SLO_economy_dm_research_speed_factor = -0.07 }
-
-set_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0 }
-set_variable = { SLO_economy_dm_economy_cost_factor = 0 }
-set_variable = { SLO_economy_dm_trade_laws_cost_factor = 0 }
-set_variable = { SLO_economy_dm_resource_trade_cost_bonus_per_factory = 0 }
-set_variable = { SLO_economy_dm_democratic_drift = 0 }
-set_variable = { SLO_economy_dm_trade_opinion_factor = 0 }
-set_variable = { SLO_economy_dm_industrial_capacity_factory = 0 }
-set_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0 }
-set_variable = { SLO_economy_dm_min_export = 0 }
-set_variable = { SLO_economy_dm_stability_weekly = 0 }
-set_variable = { SLO_economy_dm_production_speed_arms_factory_factor = 0 }
-set_variable = { SLO_economy_dm_production_speed_industrial_complex_factor = 0 }
-set_variable = { SLO_economy_dm_production_speed_infrastructure_factor = 0 }
-set_variable = { SLO_economy_dm_production_speed_supply_node_factor = 0 }
-set_variable = { SLO_economy_dm_production_speed_rail_way_factor = 0 }
-set_variable = { SLO_economy_dm_production_speed_synthetic_refinery_factor = 0 }
-set_variable = { SLO_economy_dm_local_resources_factor = 0 }
-set_variable = { SLO_economy_dm_global_building_slots = 0 }
-set_variable = { SLO_economy_dm_global_building_slots_factor = 0 }
-set_variable = { SLO_economy_dm_monthly_population = 0 }
-set_variable = { SLO_economy_dm_conscription_factor = 0 }
-
-add_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
-
-
-
 #Army
 set_variable = { SLO_army_dm_experience_gain_army_factor = -0.15 }
 set_variable = { SLO_army_dm_army_org_factor = -0.15 }
@@ -440,50 +409,44 @@ set_variable = { SLO_army_dm_special_forces_cap = 0 }
 set_variable = { SLO_army_dm_special_forces_attack_factor = 0 }
 set_variable = { SLO_army_dm_max_dig_in_factor = 0 }
 set_variable = { SLO_army_dm_breakthrough_factor = 0 }
+set_variable = { SLO_army_dm_ground_attack_factor = 0 }
 set_variable = { SLO_army_dm_equipment_capture = 0 }
 set_variable = { SLO_army_dm_intel_network_gain_factor = 0 }
 
 add_dynamic_modifier = { modifier = SLO_army_dynamic_modifier }
 
+#Economy
+set_variable = { SLO_economy_dm_stability_factor = -0.10 }
+set_variable = { SLO_economy_dm_political_power_cost = 0.15 }
+set_variable = { SLO_economy_dm_consumer_goods_factor = 0.20 }
+set_variable = { SLO_economy_dm_production_speed_buildings_factor = -0.12 }
+set_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = -0.15 }
+set_variable = { SLO_economy_dm_research_speed_factor = -0.07 }
+set_variable = { SLO_economy_dm_production_factory_max_efficiency_factor = 0 }
+set_variable = { SLO_economy_dm_economy_cost_factor = 0 }
+set_variable = { SLO_economy_dm_trade_laws_cost_factor = 0 }
+set_variable = { SLO_economy_dm_resource_trade_cost_bonus_per_factory = 0 }
+set_variable = { SLO_economy_dm_democratic_drift = 0 }
+set_variable = { SLO_economy_dm_trade_opinion_factor = 0 }
+set_variable = { SLO_economy_dm_industrial_capacity_factory = 0 }
+set_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0 }
+set_variable = { SLO_economy_dm_min_export = 0 }
+set_variable = { SLO_economy_dm_stability_weekly = 0 }
+set_variable = { SLO_economy_dm_production_speed_arms_factory_factor = 0 }
+set_variable = { SLO_economy_dm_production_speed_industrial_complex_factor = 0 }
+set_variable = { SLO_economy_dm_production_speed_infrastructure_factor = 0 }
+set_variable = { SLO_economy_dm_production_speed_supply_node_factor = 0 }
+set_variable = { SLO_economy_dm_production_speed_rail_way_factor = 0 }
+set_variable = { SLO_economy_dm_production_speed_synthetic_refinery_factor = 0 }
+set_variable = { SLO_economy_dm_local_resources_factor = 0 }
+set_variable = { SLO_economy_dm_global_building_slots = 0 }
+set_variable = { SLO_economy_dm_global_building_slots_factor = 0 }
+set_variable = { SLO_economy_dm_monthly_population = 0 }
+set_variable = { SLO_economy_dm_conscription_factor = 0 }
 
-#Air Force
-set_variable = { SLO_air_force_dm_air_accidents_factor = 0.40 }
-set_variable = { SLO_air_force_dm_air_ace_generation_chance_factor = 0.10 }
-set_variable = { SLO_air_force_dm_air_manpower_requirement_factor = -0.1 }
-set_variable = { SLO_air_force_dm_air_range_factor = -0.16 }
-set_variable = { SLO_air_force_dm_ace_effectiveness_factor = 0 }
-set_variable = { SLO_air_force_dm_air_agility_factor = 0 }
-set_variable = { SLO_air_force_dm_air_intercept_efficiency = 0 }
-set_variable = { SLO_air_force_dm_air_attack_factor = 0 }
-set_variable = { SLO_air_force_dm_air_doctrine_cost_factor = 0 }
-set_variable = { SLO_air_force_dm_air_defence_factor = 0 }
-set_variable = { SLO_air_force_dm_air_mission_xp_gain_factor = 0 }
-set_variable = { SLO_air_force_dm_air_escort_efficiency = 0 }
-set_variable = { SLO_air_force_dm_static_anti_air_hit_chance_factor = 0 }
-set_variable = { SLO_air_force_dm_cas_damage_reduction = 0 }
-set_variable = { SLO_air_force_dm_conscription = 0 }
-set_variable = { SLO_air_force_dm_ground_attack_factor = 0 }
-
-add_dynamic_modifier = { modifier = SLO_air_force_dynamic_modifier }
-
-#Navy
-set_variable = { SLO_navy_dm_experience_gain_navy = 0 }
-set_variable = { SLO_navy_dm_industrial_capacity_dockyard = -0.20 }
-set_variable = { SLO_navy_dm_naval_retreat_chance = 0.25 }
-set_variable = { SLO_navy_dm_navy_max_range_factor = -0.16 }
-set_variable = { SLO_navy_dm_naval_torpedo_enemy_critical_chance_factor = 0.20 }
-set_variable = { SLO_navy_dm_navy_leader_start_maneuvering_level = 0 }
-set_variable = { SLO_navy_dm_navy_leader_start_coordination_level = 0 }
-set_variable = { SLO_navy_dm_experience_gain_navy_unit_factor = 0 }
-set_variable = { SLO_navy_dm_naval_speed_factor = 0 }
-set_variable = { SLO_navy_dm_navy_org_factor = 0 }
-
-add_dynamic_modifier = { modifier = SLO_river_fleet_dynamic_modifier }
-
+add_dynamic_modifier = { modifier = SLO_initial_economy_dynamic_modifier }
 
 add_ideas = {
-	SLO_DUMMY_economy_idea
 	SLO_DUMMY_army_idea
-	SLO_DUMMY_air_force_idea
-	SLO_DUMMY_navy_idea
+	SLO_DUMMY_economy_idea
 }

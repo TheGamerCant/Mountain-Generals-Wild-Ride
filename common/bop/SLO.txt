@@ -11,11 +11,11 @@ SLO_encroaching_german_influence_bop = {
 		max = 0.15
 		modifier = {
 			political_advisor_cost_factor = 0.30
-			justify_war_goal_time = 0.10
+			justify_war_goal_time = 0.33
 			political_power_cost = 0.33
 			planning_speed = 0.20
 			research_speed_factor = 0.02
-			stability_factor = -0.06
+			stability_factor = -0.11
 		}
 		on_activate = {
 			
@@ -43,9 +43,9 @@ SLO_encroaching_german_influence_bop = {
 				stability_weekly = -0.002
 				war_support_weekly = -0.002
 				planning_speed = 0.65
-				justify_war_goal_time = 1.25
+				justify_war_goal_time = 2.0
 				consumer_goods_factor = 0.25
-				stability_factor = -0.20
+				stability_factor = -0.45
 			}
 			on_activate = {
 				if = {
@@ -71,9 +71,9 @@ SLO_encroaching_german_influence_bop = {
 				stability_weekly = -0.001
 				war_support_weekly = -0.001
 				planning_speed = 0.5
-				justify_war_goal_time = 0.75
+				justify_war_goal_time = 1.20
 				consumer_goods_factor = 0.15
-				stability_factor = -0.15
+				stability_factor = -0.32
 			}
 			on_activate = {
 				set_power_balance_gfx = {
@@ -108,9 +108,9 @@ SLO_encroaching_german_influence_bop = {
 				army_armor_attack_factor = 0.05
 				planning_speed = 0.4
 				production_speed_buildings_factor = 0.10
-				justify_war_goal_time = 0.40
+				justify_war_goal_time = 0.75
 				consumer_goods_factor = 0.07
-				stability_factor = -0.15
+				stability_factor = -0.23
 			}
 			on_activate = {
 				if = {
@@ -133,8 +133,8 @@ SLO_encroaching_german_influence_bop = {
 				experience_gain_army = 0.07
 				planning_speed = 0.25
 				production_speed_buildings_factor = 0.05
-				justify_war_goal_time = 0.25
-				stability_factor = -0.10
+				justify_war_goal_time = 0.55
+				stability_factor = -0.16
 			}
 			on_activate = {
 			
@@ -159,8 +159,9 @@ SLO_encroaching_german_influence_bop = {
 				political_advisor_cost_factor = 0.15
 				consumer_goods_factor = -0.10
 				research_speed_factor = 0.05
-				stability_factor = -0.03
+				stability_factor = -0.075
 				political_power_cost = 0.20
+				justify_war_goal_time = 0.20
 			}
 			on_activate = {
 			
@@ -179,7 +180,8 @@ SLO_encroaching_german_influence_bop = {
 				political_power_cost = 0.10
 				consumer_goods_factor = -0.05
 				research_speed_factor = 0.03
-				justify_war_goal_time = -0.10
+				justify_war_goal_time = 0.10
+				stability_factor = -0.035
 			}
 			on_activate = {
 			

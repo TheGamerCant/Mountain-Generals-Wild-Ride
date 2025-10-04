@@ -1159,10 +1159,11 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^21
 
 		modifier = {
-			political_power_factor = 0.1
+			political_power_factor = 0.10
 			neutrality_drift = 0.10
 			fascism_drift = 0.05
-			stability_weekly = 0.001
+			weekly_manpower = 350
+			war_support_factor = 0.05
 		}
 
 		complete_effect = {
@@ -1209,11 +1210,11 @@ SLO_propaganda_decision_category = {
 		cost = var:SLO.propaganda_PP_COST_array^22
 
 		modifier = {
-			political_power_factor = 0.1
+			political_power_factor = 0.15
 			subjects_autonomy_gain = -0.5
 			autonomy_gain = 0.5
 			neutrality_drift = 0.10
-			power_balance_weekly = 0.010
+			power_balance_weekly = 0.008
 		}
 
 		complete_effect = {
@@ -1266,7 +1267,7 @@ SLO_propaganda_decision_category = {
 			autonomy_gain = -0.2
 			consumer_goods_factor = -0.05
 			fascism_drift = 0.10
-			power_balance_weekly = -0.010
+			power_balance_weekly = -0.008
 		}
 
 		complete_effect = {
@@ -9707,7 +9708,7 @@ SLO_encroaching_german_influence_bop_category = {
 		fire_only_once = no
 		days_remove = 0
 		days_re_enable = 60
-		cost = 50
+		cost = 30
 		
 		complete_effect = {
 			SLO_decrease_unfair_trade_with_germany = yes

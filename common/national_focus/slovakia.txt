@@ -6498,7 +6498,7 @@ focus_tree = {
 		
 
 		completion_reward = {
-			set_variable = { SLO_bop_ger_tolerance = 110 }
+			set_variable = { SLO_bop_ger_tolerance = 100 }
 		}
 	}
 	
@@ -8134,7 +8134,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 50
-			add_manpower = 10000
+			add_manpower = 12000
+			add_war_support = 0.05
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -8400,7 +8401,7 @@ focus_tree = {
 		icon = GFX_focus_generic_agricultural_subsidies
 		x = 3
 		y = 1
-		cost = 8
+		cost = 6
 		
 		prerequisite = { focus = SLO_great_ideologue focus = SLO_pragmatic_statesman focus = SLO_the_father_of_slovak_independence }
 		relative_position_id = SLO_pragmatic_statesman
@@ -8416,14 +8417,21 @@ focus_tree = {
 			if = {
 				limit = { check_variable = { num_owned_states = 1 } }
 				every_owned_state = {
-					add_extra_state_shared_building_slots = 3
+					limit = { is_core_of = ROOT }
+					add_extra_state_shared_building_slots = 4
 					random_select_amount = 1
 				}
 			}
 			else = {
 				every_owned_state = {
+					limit = { is_core_of = ROOT }
 					add_extra_state_shared_building_slots = 2
 					random_select_amount = 2
+				}
+				every_owned_state = {
+					limit = { is_core_of = ROOT }
+					add_extra_state_shared_building_slots = 1
+					random_select_amount = 1
 				}
 			}
 			

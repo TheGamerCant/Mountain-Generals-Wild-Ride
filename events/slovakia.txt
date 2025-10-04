@@ -2731,7 +2731,7 @@ country_event = {
 		
 		custom_effect_tooltip = slovakia.66.a.tt
 		
-		SLO_increase_reich_tolerance_by_15 = yes
+		SLO_increase_reich_tolerance_by_10 = yes
 		
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
@@ -3172,7 +3172,7 @@ country_event = {
 			base = 0
 		}
 		
-		SLO = { country_event = { id = slovakia.79 hours = 6 random_hours = 6 }
+		SLO = { country_event = { id = slovakia.79 hours = 6 random_hours = 6 } }
 	}
 }
 
@@ -3202,7 +3202,7 @@ country_event = {
 			base = 0
 		}
 		
-		SLO = { country_event = { id = slovakia.79 hours = 6 random_hours = 6 }
+		SLO = { country_event = { id = slovakia.79 hours = 6 random_hours = 6 } }
 	}
 }
 

@@ -10138,7 +10138,7 @@ SLO_encroaching_german_influence_bop_category = {
 			has_completed_focus = SLO_our_rightful_spoils_of_war
 			SLP = {
 				exists = yes
-				has_cosmetic_tag = SLH_despotic_occupation
+				has_cosmetic_tag = SLP_despotic_occupation
 			}
 			any_state = {
 				OR = { state = 88 state = 72 state = 91 state = 89 }

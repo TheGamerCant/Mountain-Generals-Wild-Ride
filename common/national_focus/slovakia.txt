@@ -8260,12 +8260,12 @@ focus_tree = {
 	focus = {	
 		id = SLO_expand_the_propaganda_office
 		icon = GFX_goal_SLO_propaganda
-		x = 2
+		x = 1
 		y = 1
 		cost = 6
 		
 		prerequisite = { focus = SLO_great_ideologue focus = SLO_pragmatic_statesman focus = SLO_the_father_of_slovak_independence }
-		relative_position_id = SLO_great_ideologue
+		relative_position_id = SLO_pragmatic_statesman
 
 		available = {
 		}
@@ -8308,14 +8308,15 @@ focus_tree = {
 	focus = {	
 		id = SLO_total_loyalty_to_mountain_general
 		icon = GFX_goal_SLO_a_portrait_on_every_wall
-		x = 1
+		x = 2
 		y = 1
 		cost = 8
 		
 		prerequisite = { focus = SLO_great_ideologue focus = SLO_pragmatic_statesman focus = SLO_the_father_of_slovak_independence }
-		relative_position_id = SLO_pragmatic_statesman
+		relative_position_id = SLO_great_ideologue
 
 		available = {
+			fascism > 0.40
 		}
 		
 		bypass = {
@@ -8386,13 +8387,16 @@ focus_tree = {
 			
 			add_political_power = 75
 			add_popularity = {
-				ideology = ROOT 
-				popularity = 0.05
+				ideology = fascism 
+				popularity = 0.15
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			SLO_move_power_balance_right_10 = yes
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
 		}
 	}
 	
@@ -8915,13 +8919,12 @@ focus_tree = {
 	focus = {	
 		id = SLO_new_equipment_breakthroughs
 		icon = GFX_focus_research
-		x = 0
-		y = 2
+		x = 1
+		y = 1
 		cost = 12
 		
-		prerequisite = { focus = SLO_military_propaganda_campaigns }
 		prerequisite = { focus = SLO_lessons_from_the_front }
-		relative_position_id = SLO_military_propaganda_campaigns
+		relative_position_id = SLO_lessons_from_the_front
 
 		available = {
 			is_in_faction_with = GER

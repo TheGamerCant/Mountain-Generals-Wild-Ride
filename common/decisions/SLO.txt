@@ -9740,7 +9740,7 @@ SLO_encroaching_german_influence_bop_category = {
 			has_war = yes
 			
 			has_equipment = {
-				infantry_equipment > 5199
+				infantry_equipment > 5499
 			}
 			
 			custom_trigger_tooltip = {
@@ -9779,7 +9779,7 @@ SLO_encroaching_german_influence_bop_category = {
 			
 			send_equipment = {
 				equipment = infantry_equipment
-				amount = 5200
+				amount = 5500
 				target = GER
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt

@@ -330,15 +330,18 @@ focus_tree = {
 			OR = {
 				date > 1936.7.1	#This one is in here cause I sent it to a friend and it took him THREE YEARS to beat the Czechs. It takes me around 3 months
 				count_triggers={
-					amount > 3
+					amount > 4
 					
 					controls_province = 3583
 					controls_province = 6573
+					controls_province = 3414
 					controls_province = 3581
 					controls_province = 6562
 					controls_province = 3569
 					controls_province = 11539
 					controls_province = 557
+					controls_province = 3537
+					controls_province = 3550
 				}
 			}
 		}
@@ -7293,7 +7296,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = SLO_sign_a_treaty_with_germany
-		cost = 8
+		cost = 7
 		prerequisite = {
 			focus = SLO_sign_a_treaty_with_germany
 			focus = SLO_prioritise_trade_with_our_neighbours
@@ -8476,7 +8479,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_request_german_mediation
-		icon = GFX_
+		icon = GFX_focus_chi_mission_to_germany
 		x = -3
 		y = 1
 		cost = 4
@@ -8565,7 +8568,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_limited_border_skirmishes
-		icon = GFX_
+		icon = GFX_focus_generic_provoke_border_clashes
 		x = 0
 		y = 1
 		cost = 4
@@ -8581,6 +8584,8 @@ focus_tree = {
 			}
 		}
 		
+		will_lead_to_war_with = HUN
+		
 		bypass = {
 		}
 		
@@ -8588,22 +8593,25 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { 664 = { is_owned_by = ROOT } NOT = { 73 = { is_owned_by = ROOT } } }
+				
+				set_variable = { SLO.border_war_state = 73 }
+				
 				start_border_war = {
 					change_state_after_war = no
 					attacker = {
 						state = 71
 						num_provinces = 2
-#						on_win = slovakia.49
-#						on_lose = slovakia.50
-#						on_cancel = slovakia.50
+						on_win = slovakia.80
+						on_lose = slovakia.81
+						on_cancel = slovakia.81
 					}
 
 					defender = {
 						state = 73
 						num_provinces = 2
-#						on_win = slovakia.47
-#						on_lose = slovakia.48
-#						on_cancel = slovakia.47
+						on_win = slovakia.82
+						on_lose = slovakia.83
+						on_cancel = slovakia.82
 					}
 				}
 				hidden_effect = {
@@ -8613,24 +8621,29 @@ focus_tree = {
 						combat_width = 80
 					}
 				}
+				
+				custom_effect_tooltip = SLO_limited_border_skirmishes_73_tt
 			}
 			else = {
+				
+				set_variable = { SLO.border_war_state = 664 }
+				
 				start_border_war = {
 					change_state_after_war = no
 					attacker = {
 						state = 70
 						num_provinces = 4
-#						on_win = slovakia.49
-#						on_lose = slovakia.50
-#						on_cancel = slovakia.50
+						on_win = slovakia.80
+						on_lose = slovakia.81
+						on_cancel = slovakia.81
 					}
 
 					defender = {
 						state = 664
 						num_provinces = 4
-#						on_win = slovakia.47
-#						on_lose = slovakia.48
-#						on_cancel = slovakia.47
+						on_win = slovakia.82
+						on_lose = slovakia.83
+						on_cancel = slovakia.82
 					}
 				}
 				hidden_effect = {
@@ -8640,6 +8653,8 @@ focus_tree = {
 						combat_width = 150
 					}
 				}
+				
+				custom_effect_tooltip = SLO_limited_border_skirmishes_664_tt
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8667,6 +8682,8 @@ focus_tree = {
 				NOT = { is_in_faction_with = SLO }
 			}
 		}
+		
+		will_lead_to_war_with = HUN
 		
 		bypass = {
 		}
@@ -9003,6 +9020,10 @@ focus_tree = {
 		
 
 		completion_reward = {
+			add_stability = -0.08
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			EFFECT_SLO_new_slovak_state_idea_modify_such_a_nation_shall_not_perish_focus = yes
 		}
 	}
@@ -15709,7 +15730,7 @@ focus_tree = {
 			}
 			
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SLO_jan_osoha
+#			show_ideas_tooltip = SLO_jan_osoha
 		}
 	}
 }

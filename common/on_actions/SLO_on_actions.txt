@@ -153,4 +153,27 @@ on_actions = {
 			}
 		}
 	}
+	
+	#If we are generating a war goal while going despotist, Germany will protest
+	
+	#Fires when we begin the manual justification
+	on_generate_wargoal  = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = SLO
+						has_power_balance = { id = SLO_encroaching_german_influence_bop }
+					}
+
+					NOT = { AND = { 
+						FROM = { original_tag = HUN }
+						ROOT = { has_completed_focus = SLO_deal_with_the_magyar_once_and_for_all } 
+					}}
+				}
+				
+				SLO = { country_event = { id = slovakia.84 days = 4 random_days = 4 } }
+			}
+		}
+	}
 }

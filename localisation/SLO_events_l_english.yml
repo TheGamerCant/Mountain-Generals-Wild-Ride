@@ -352,6 +352,14 @@
  slovakia.79.desc:0 ""
  slovakia.79.a:0 "They know what the consequences are"
  
+ slovakia.80.title:0 "Victory in [?SLO.border_war_state.GetName]"
+ slovakia.80.desc:0 "Following a surprise attack against the Hungarian positions in [?SLO.border_war_state.GetName], we have successfully routed them and driven deep into their territory. Slovak troops established control over military outposts and regional administrations, returning [?SLO.border_war_state.GetName] back into the homeland."
+ slovakia.80.a:0 "Ura!"
+ 
+ slovakia.81.title:0 "Defeat in [?SLO.border_war_state.GetName]"
+ slovakia.81.desc:0 "Despite having the element of surprise on our side, the Hungarians were able to successfully defend their positions in [?SLO.border_war_state.GetName] from our assault, leaving our troops battered and bruised. Hungary has denounced our actions and moved further troops into the region, leaving us unable to try again."
+ slovakia.81.a:0 "Shit"
+ 
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to dictate terms of surrender to the once proud Czechoslovak government in Prague. For the first time ever, Slovakia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."
  slovakia_news.1.a:0 "What the?!!?"

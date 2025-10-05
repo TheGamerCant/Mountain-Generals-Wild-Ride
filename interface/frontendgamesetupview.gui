@@ -136,6 +136,7 @@ guiTypes = {
 			position = { x = 17 y = 22 }
 			scale=0.75
 			clicksound = click_checkbox
+			hide = yes
 		}
 
 		iconType = {
@@ -144,6 +145,7 @@ guiTypes = {
 			position = { x = 34 y = 188 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
+			hide = yes
 		}
 
 		buttonType = {
@@ -650,6 +652,27 @@ guiTypes = {
 			shortcut = "RETURN"
 		}
 
+		iconType = {
+			name = "portrait_schizo"
+			position = { x = 157 y = 67 }
+			quadTextureSprite="GFX_portrait_mg_animated_hyperborea"
+			scale = 0.75
+		}
+
+		iconType = {
+			name = "portrait_despotist"
+			position = { x = 557 y = 67 }
+			quadTextureSprite="GFX_portrait_mg_animated"
+			scale = 0.75
+		}
+
+		iconType = {
+			name = "portrait_democratic"
+			position = { x = 957 y = 67 }
+			quadTextureSprite="GFX_portrait_mg_normal"
+			scale = 0.75
+		}
+
 		containerWindowType = {
 			name ="countries"
 			position = { x = 15 y = 45 }
@@ -657,9 +680,9 @@ guiTypes = {
 
 			gridboxType = {
 				name ="countries_grid"
-				position = { x = 0 y = 0 }
+				position = { x = 125 y = 0 }
 				size = { width = 100% height = 100% }
-				slotsize = { width = 150 height = 0 }
+				slotsize = { width = 400 height = 0 }
 				add_horizontal = yes
 				max_slots_vertical = 1
 				format = "UPPER_LEFT"
@@ -669,7 +692,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name ="countries_medium"
-			position = { x = 15 y = 330 }
+			position = { x = 97 y = 330 }
 			size = { width = -15 height = 120}
 
 			gridboxType = {

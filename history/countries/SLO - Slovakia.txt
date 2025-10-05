@@ -253,7 +253,7 @@ add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_with_n_word_
 add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_cat_idea }
 add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_anime_2_idea }
 add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_hentai_idea }
-#add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_tno_idea }
+add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_tno_idea }
 add_to_array = { SLO.portrait_GFX_array = token:SLO_GFX_portrait_mg_animated_idea }
 		
 		
@@ -267,7 +267,7 @@ add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_with_n_wor
 add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_cat_idea }
 add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_anime_2_idea }
 add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_hentai_idea }
-#add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_tno_idea }
+add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_tno_idea }
 add_to_array = { SLO.portrait_NAME_array = token:SLO_NAME_portrait_mg_animated_idea }
 
 

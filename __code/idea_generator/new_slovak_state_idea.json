@@ -39,7 +39,8 @@
                 "surrender_limit": "0.08",
                 "army_attack_factor": "0.05",
                 "army_defence_factor": "0.05",
-                "army_core_defence_factor": "0.10"
+                "army_core_defence_factor": "0.10",
+                "conscription_factor": "0.10"
             },
             "equipment_modifiers": {},
             "research_bonuses": {},

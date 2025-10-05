@@ -1160,10 +1160,10 @@ SLO_propaganda_decision_category = {
 
 		modifier = {
 			political_power_factor = 0.10
-			neutrality_drift = 0.10
-			fascism_drift = 0.05
-			weekly_manpower = 350
+			fascism_drift = 0.10
+			weekly_manpower = 300
 			war_support_factor = 0.05
+			power_balance_weekly = -0.003
 		}
 
 		complete_effect = {
@@ -1296,6 +1296,7 @@ SLO_propaganda_decision_category = {
 		
 		available = {
 			SLO_available_propaganda_slot = yes
+			has_war_with = SOV
 		}
 		
 		visible = {
@@ -9997,6 +9998,7 @@ SLO_encroaching_german_influence_bop_category = {
 						original_tag = ROOT
 						is_puppet_of = ROOT
 					}
+					PREV = { is_fully_controlled_by = PREV }
 				}
 			}
 		}
@@ -10016,12 +10018,21 @@ SLO_encroaching_german_influence_bop_category = {
 		
 		cost = 75
 		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 72
+				state = 88
+				state = 89
+				state = 91
+			}
+		}
+		
 		complete_effect = {
 			SLP = {
 				if = {
 					limit = { 
 						72 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 72
@@ -10030,7 +10041,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						88 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 88
@@ -10045,7 +10056,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						89 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 89
@@ -10054,7 +10065,7 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						89 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 89
@@ -10066,7 +10077,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						91 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 91
@@ -10075,7 +10086,7 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						91 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 91
@@ -10126,6 +10137,7 @@ SLO_encroaching_german_influence_bop_category = {
 						is_in_faction_with = ROOT
 					}
 					NOT = { original_tag = SLP }
+					PREV = { is_fully_controlled_by = PREV }
 				}
 			}
 		}
@@ -10153,12 +10165,21 @@ SLO_encroaching_german_influence_bop_category = {
 		
 		cost = 25
 		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 72
+				state = 88
+				state = 89
+				state = 91
+			}
+		}
+		
 		complete_effect = {
 			SLP = {
 				if = {
 					limit = { 
 						72 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 72
@@ -10167,7 +10188,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						88 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 88
@@ -10182,7 +10203,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						89 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 89
@@ -10191,7 +10212,7 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						89 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 89
@@ -10203,7 +10224,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						91 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 91
@@ -10212,7 +10233,7 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						91 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 91
@@ -10234,12 +10255,13 @@ SLO_encroaching_german_influence_bop_category = {
 
 		available = {
 			any_state = {
-				OR = { state = 43 state = 155 state = 154 state = 973 state = 974 }
+				OR = { state = 43 state = 155 state = 154 state = 973 state = 974 state = 45 }
 				CONTROLLER = {
 					OR = {
 						original_tag = ROOT
 						is_puppet_of = ROOT
 					}
+					PREV = { is_fully_controlled_by = PREV }
 				}
 			}
 		}
@@ -10257,6 +10279,17 @@ SLO_encroaching_german_influence_bop_category = {
 	
 		fire_only_once = yes
 		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 43
+				state = 155
+				state = 154
+				state = 973
+				state = 974
+				state = 45
+			}
+		}
+		
 		cost = 75
 		
 		complete_effect = {
@@ -10264,7 +10297,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						43 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 43
@@ -10274,7 +10307,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						155 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 155
@@ -10283,7 +10316,7 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						155 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 155
@@ -10295,7 +10328,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						974 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 974
@@ -10304,7 +10337,7 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						974 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 974
@@ -10315,7 +10348,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						973 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 973
@@ -10324,7 +10357,7 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						973 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 973
@@ -10336,7 +10369,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						154 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 154
@@ -10345,13 +10378,34 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						154 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 154
 					set_state_controller  = 154
 					add_state_claim = 154
 					154 = { add_compliance = 15 }
+				}
+				
+				if = {
+					limit = { 
+						45 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
+						} 
+					}
+					transfer_state = 45
+					add_state_core = 45
+				}
+				else_if = {
+					limit = { 
+						45 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
+						} 
+					}
+					add_contested_owner = 45
+					set_state_controller  = 45
+					add_state_claim = 45
+					45 = { add_compliance = 15 }
 				}
 			}
 			
@@ -10388,7 +10442,7 @@ SLO_encroaching_german_influence_bop_category = {
 				has_cosmetic_tag = SLH_despotic_occupation
 			}
 			any_state = {
-				OR = { state = 43 state = 155 state = 154 state = 973 state = 974 }
+				OR = { state = 43 state = 155 state = 154 state = 973 state = 974 state = 45 }
 				CONTROLLER = {
 					OR = {
 						original_tag = ROOT
@@ -10396,6 +10450,7 @@ SLO_encroaching_german_influence_bop_category = {
 						is_in_faction_with = ROOT
 					}
 					NOT = { original_tag = SLH }
+					PREV = { is_fully_controlled_by = PREV }
 				}
 			}
 		}
@@ -10411,7 +10466,7 @@ SLO_encroaching_german_influence_bop_category = {
 				has_cosmetic_tag = SLH_despotic_occupation
 			}
 			any_state = {
-				OR = { state = 43 state = 155 state = 154 state = 973 state = 974 }
+				OR = { state = 43 state = 155 state = 154 state = 973 state = 974 state = 45 }
 				CONTROLLER = { NOT = { original_tag = SLH } }
 			}
 		}
@@ -10423,12 +10478,23 @@ SLO_encroaching_german_influence_bop_category = {
 		
 		cost = 25
 		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 43
+				state = 155
+				state = 154
+				state = 973
+				state = 974
+				state = 45
+			}
+		}
+		
 		complete_effect = {
 			SLH = {
 				if = {
 					limit = { 
 						43 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 43
@@ -10438,7 +10504,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						155 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 155
@@ -10447,7 +10513,7 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						155 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 155
@@ -10459,7 +10525,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						974 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 974
@@ -10468,7 +10534,7 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						974 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 974
@@ -10479,7 +10545,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						973 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 973
@@ -10488,7 +10554,7 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						973 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 973
@@ -10500,7 +10566,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						154 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 154
@@ -10509,13 +10575,34 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						154 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 154
 					set_state_controller  = 154
 					add_state_claim = 154
 					154 = { add_compliance = 15 }
+				}
+				
+				if = {
+					limit = { 
+						45 = { 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
+						} 
+					}
+					transfer_state = 45
+					add_state_core = 45
+				}
+				else_if = {
+					limit = { 
+						45 = { 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
+						} 
+					}
+					add_contested_owner = 45
+					set_state_controller  = 45
+					add_state_claim = 45
+					45 = { add_compliance = 15 }
 				}
 			}
 		}
@@ -10537,6 +10624,7 @@ SLO_encroaching_german_influence_bop_category = {
 						original_tag = ROOT
 						is_puppet_of = ROOT
 					}
+					PREV = { is_fully_controlled_by = PREV }
 				}
 			}
 		}
@@ -10556,12 +10644,19 @@ SLO_encroaching_german_influence_bop_category = {
 		
 		cost = 75
 		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 137
+				state = 196
+			}
+		}
+		
 		complete_effect = {
 			SLT = {
 				if = {
 					limit = { 
 						137 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 137
@@ -10571,7 +10666,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						196 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 196
@@ -10580,7 +10675,7 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						196 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 196
@@ -10631,6 +10726,7 @@ SLO_encroaching_german_influence_bop_category = {
 						is_in_faction_with = ROOT
 					}
 					NOT = { original_tag = SLT }
+					PREV = { is_fully_controlled_by = PREV }
 				}
 			}
 		}
@@ -10658,12 +10754,19 @@ SLO_encroaching_german_influence_bop_category = {
 		
 		cost = 25
 		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 137
+				state = 196
+			}
+		}
+		
 		complete_effect = {
 			SLT = {
 				if = {
 					limit = { 
 						137 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } NOT = { original_tag = SLT } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } NOT = { original_tag = SLT } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 137
@@ -10673,7 +10776,7 @@ SLO_encroaching_german_influence_bop_category = {
 				if = {
 					limit = { 
 						196 = { 
-							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } NOT = { original_tag = SLT } } 
+							OWNER = { OR = { original_tag = SLO is_puppet_of = SLO } NOT = { original_tag = SLT } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					transfer_state = 196
@@ -10682,7 +10785,7 @@ SLO_encroaching_german_influence_bop_category = {
 				else_if = {
 					limit = { 
 						196 = { 
-							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } NOT = { original_tag = SLT } } 
+							CONTROLLER = { OR = { original_tag = SLO is_puppet_of = SLO } NOT = { original_tag = SLT } PREV = { is_fully_controlled_by = PREV } } 
 						} 
 					}
 					add_contested_owner = 196

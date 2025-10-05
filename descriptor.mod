@@ -4,6 +4,6 @@ tags={
 	"Events"
 	"National Focuses"
 }
-name="Mountain General's Wild Ride"
 replace_path="common/bookmarks"
+name="Mountain General's Wild Ride"
 supported_version="1.16.*"

@@ -3430,7 +3430,7 @@ country_event = {
 	}
 }
 
-#Germany protests our foreign policy
+#Germany protests our war goal generation
 country_event = {
 	id = slovakia.84
 	title = slovakia.84.title
@@ -3439,12 +3439,50 @@ country_event = {
 	
 	picture = GFX_report_event_vienna_award_hungary
 	
+	after = {
+		hidden_effect = {
+			clear_array = SLO.countries_generating_against
+		}
+	}
+
+	#We agree to sign an NAP with the country we are generating against
 	option = { 
 		name = slovakia.84.a
 		ai_chance = {
 			base = 10
 		}
 
+		every_country = {
+			limit = { is_in_array = { array = SLO.countries_generating_against value = THIS } NOT = { has_war_with = SLO } }
+			diplomatic_relation = {
+				country = SLO
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+
+	#Ignore them :3
+	option = { 
+		name = slovakia.84.b
+		ai_chance = {
+			base = 0
+		}
+
+		trigger = {
+			has_political_power > 119
+		}
+
+		GER = { add_opinion_modifier = { target = SLO modifier = SLO_refused_our_demands } }
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_political_power = -120
+		add_stability = -0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		SLO_decrease_reich_tolerance_by_30 = yes
 	}
 }
 

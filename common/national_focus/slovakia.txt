@@ -8699,7 +8699,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			SLO_decrease_reich_tolerance_by_25 = yes
+			SLO_decrease_reich_tolerance_by_20 = yes
 		}
 	}
 	

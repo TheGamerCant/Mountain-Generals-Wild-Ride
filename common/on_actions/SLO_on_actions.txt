@@ -172,7 +172,8 @@ on_actions = {
 					}}
 				}
 				
-				SLO = { country_event = { id = slovakia.84 days = 4 random_days = 4 } }
+				add_to_array = { SLO.countries_generating_against = FROM }
+				SLO = { country_event = { id = slovakia.84 days = 6 random_days = 8 } }
 			}
 		}
 	}

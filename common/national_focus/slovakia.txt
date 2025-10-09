@@ -8085,7 +8085,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_a_national_socialist_curriculum
-		icon = GFX_
+		icon = GFX_goal_SLO_a_national_socialist_curriculum
 		x = 3
 		y = 1
 		cost = 6
@@ -8185,7 +8185,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_create_the_usb
-		icon = GFX_goal_
+		icon = GFX_focus_generic_whispers
 		x = 1
 		y = 1
 		cost = 5
@@ -8709,7 +8709,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_slovakia_at_war
-		icon = GFX_
+		icon = GFX_goal_SLO_slovakia_at_war
 		x = 10
 		y = 1
 		cost = 5
@@ -8739,7 +8739,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_supply_weapons_for_the_war_effort
-		icon = GFX_
+		icon = GFX_goal_SLO_new_procurement_contracts
 		x = -1
 		y = 1
 		cost = 4
@@ -8768,7 +8768,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_declare_total_war
-		icon = GFX_
+		icon = GFX_focus_generic_total_war
 		x = 1
 		y = 1
 		cost = 6
@@ -8822,7 +8822,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_our_rightful_spoils_of_war
-		icon = GFX_
+		icon = GFX_focus_generic_fascist_troops
 		x = -1
 		y = 3
 		cost = 10
@@ -8838,6 +8838,10 @@ focus_tree = {
 		
 
 		completion_reward = {
+			unlock_decision_category_tooltip = SLO_the_slovak_commissariats_decision_category
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			unlock_decision_tooltip = SLO_establish_slovak_commissariat_galicia
 			unlock_decision_tooltip = SLO_establish_slovak_commissariat_hungary
 			unlock_decision_tooltip = SLO_establish_slovak_commissariat_tavriya
@@ -8911,7 +8915,7 @@ focus_tree = {
 	
 	focus = {	
 		id = SLO_military_propaganda_campaigns
-		icon = GFX_
+		icon = GFX_goal_SLO_propaganda
 		x = 0
 		y = 1
 		cost = 5
@@ -9048,6 +9052,12 @@ focus_tree = {
 
 		completion_reward = {
 			set_cosmetic_tag = SLO_greater_slovakia
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			unlock_decision_tooltip = SLO_integrate_slovak_commissariat_galicia
+			unlock_decision_tooltip = SLO_integrate_slovak_commissariat_hungary
+			unlock_decision_tooltip = SLO_integrate_slovak_commissariat_tavriya
 		}
 	}
 	

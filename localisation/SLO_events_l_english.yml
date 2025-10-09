@@ -360,7 +360,7 @@
  slovakia.81.desc:0 "Despite having the element of surprise on our side, the Hungarians were able to successfully defend their positions in [?SLO.border_war_state.GetName] from our assault, leaving our troops battered and bruised. Hungary has denounced our actions and moved further troops into the region, leaving us unable to try again."
  slovakia.81.a:0 "Shit"
 
- slovakia.84.title:0 "Germany Demands We Deescalate Tensions With [?SLO.countries_generating_against^0.GetName]"
+ slovakia.84.title:0 "Germany Demands We De-escalate Tensions With [?SLO.countries_generating_against^0.GetName]"
  slovakia.84.desc:0 "After discovering our invasion plans against [?SLO.countries_generating_against^0.GetNameDef], [GER.GetNameDef] has formally summoned the Slovakian ambassador, ensuring us that any action not explicitly approved of by the Reich would be met with the harshest possible consequences.\n\nIt is clear to all involved that there is no way for us to pursue our agressive foreign policy while keeping Berlin onside at the same time."
  slovakia.84.a:0 "Very well then..."
  slovakia.84.b:0 "We do not take orders from Berlin!"

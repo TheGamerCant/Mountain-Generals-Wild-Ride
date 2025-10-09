@@ -9985,7 +9985,9 @@ SLO_encroaching_german_influence_bop_category = {
 			base = 0
 		}
 	}
-	
+}
+
+SLO_the_slovak_commissariats_decision_category = {
 	SLO_establish_slovak_commissariat_galicia = {
 
 		icon = border_war
@@ -10096,26 +10098,28 @@ SLO_encroaching_german_influence_bop_category = {
 				}
 			}
 			
-			set_autonomy = {
-				target = SLP
-				autonomous_state = autonomy_reichskommissariat
-				end_wars = no
-				end_civil_wars = no
-			}
-			
-			SLP = { 
-				set_cosmetic_tag = SLP_despotic_occupation
-				set_popularities = {
-					neutrality = 40
-					democratic = 17
-					fascism = 36
-					communism = 7
+			hidden_effect = {1
+				set_autonomy = {
+					target = SLP
+					autonomous_state = autonomy_reichskommissariat
+					end_wars = no
+					end_civil_wars = no
+				}
+				
+				SLP = { 
+					set_cosmetic_tag = SLP_despotic_occupation
+					set_popularities = {
+						neutrality = 40
+						democratic = 17
+						fascism = 36
+						communism = 7
+					}
 				}
 			}
 		}
 		
 		ai_will_do = {
-			base = 0
+			base = 10
 		}
 	}
 	
@@ -10126,7 +10130,6 @@ SLO_encroaching_german_influence_bop_category = {
 		available = {
 			SLP = {
 				exists = yes
-				has_cosmetic_tag = SLP_despotic_occupation
 			}
 			any_state = {
 				OR = { state = 88 state = 72 state = 91 state = 89 }
@@ -10150,7 +10153,6 @@ SLO_encroaching_german_influence_bop_category = {
 			has_completed_focus = SLO_our_rightful_spoils_of_war
 			SLP = {
 				exists = yes
-				has_cosmetic_tag = SLP_despotic_occupation
 			}
 			any_state = {
 				OR = { state = 88 state = 72 state = 91 state = 89 }
@@ -10409,20 +10411,22 @@ SLO_encroaching_german_influence_bop_category = {
 				}
 			}
 			
-			set_autonomy = {
-				target = SLH
-				autonomous_state = autonomy_reichskommissariat
-				end_wars = no
-				end_civil_wars = no
-			}
-			
-			SLH = { 
-				set_cosmetic_tag = SLH_despotic_occupation
-				set_popularities = {
-					neutrality = 40
-					democratic = 17
-					fascism = 36
-					communism = 7
+			hidden_effect = {
+				set_autonomy = {
+					target = SLH
+					autonomous_state = autonomy_reichskommissariat
+					end_wars = no
+					end_civil_wars = no
+				}
+				
+				SLH = { 
+					set_cosmetic_tag = SLH_despotic_occupation
+					set_popularities = {
+						neutrality = 40
+						democratic = 17
+						fascism = 36
+						communism = 7
+					}
 				}
 			}
 		}
@@ -10439,7 +10443,6 @@ SLO_encroaching_german_influence_bop_category = {
 		available = {
 			SLH = {
 				exists = yes
-				has_cosmetic_tag = SLH_despotic_occupation
 			}
 			any_state = {
 				OR = { state = 43 state = 155 state = 154 state = 973 state = 974 state = 45 }
@@ -10463,7 +10466,6 @@ SLO_encroaching_german_influence_bop_category = {
 			has_completed_focus = SLO_our_rightful_spoils_of_war
 			SLH = {
 				exists = yes
-				has_cosmetic_tag = SLH_despotic_occupation
 			}
 			any_state = {
 				OR = { state = 43 state = 155 state = 154 state = 973 state = 974 state = 45 }
@@ -10685,20 +10687,22 @@ SLO_encroaching_german_influence_bop_category = {
 				}
 			}
 			
-			set_autonomy = {
-				target = SLT
-				autonomous_state = autonomy_reichskommissariat
-				end_wars = no
-				end_civil_wars = no
-			}
-			
-			SLT = { 
-				set_cosmetic_tag = SLT_despotic_occupation
-				set_popularities = {
-					neutrality = 40
-					democratic = 15
-					fascism = 43
-					communism = 2
+			hidden_effect = {
+				set_autonomy = {
+					target = SLT
+					autonomous_state = autonomy_reichskommissariat
+					end_wars = no
+					end_civil_wars = no
+				}
+		
+				SLT = { 
+					set_cosmetic_tag = SLT_despotic_occupation
+					set_popularities = {
+						neutrality = 40
+						democratic = 15
+						fascism = 43
+						communism = 2
+					}
 				}
 			}
 		}
@@ -10715,7 +10719,6 @@ SLO_encroaching_german_influence_bop_category = {
 		available = {
 			SLT = {
 				exists = yes
-				has_cosmetic_tag = SLT_despotic_occupation
 			}
 			any_state = {
 				OR = { state = 137 state = 196 }
@@ -10739,7 +10742,6 @@ SLO_encroaching_german_influence_bop_category = {
 			has_completed_focus = SLO_our_rightful_spoils_of_war
 			SLT = {
 				exists = yes
-				has_cosmetic_tag = SLT_despotic_occupation
 			}
 			any_state = {
 				OR = { state = 137 state = 196 }
@@ -10794,6 +10796,185 @@ SLO_encroaching_german_influence_bop_category = {
 					196 = { add_compliance = 15 }
 				}
 			}
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	SLO_integrate_slovak_commissariat_galicia = {
+
+		icon = decision_generic_form_nation
+
+		available = {
+			SLP = {
+				exists = yes
+				is_puppet_of = ROOT
+			}
+			72 = { is_owned_and_controlled_by = SLP }
+			88 = { is_owned_and_controlled_by = SLP }
+			91 = { is_owned_and_controlled_by = SLP }
+			89 = { is_owned_and_controlled_by = SLP }
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_declare_greater_slovakia
+			SLP = {
+				exists = yes
+				is_puppet_of = ROOT
+			}
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = yes
+		
+		cost = 100
+		
+		complete_effect = {
+			custom_effect_tooltip = SLO_this_decision_can_only_be_taken_once_tt
+			
+			every_state = {
+				limit = { OR = { is_core_of = SLP is_claimed_by = SLP } }
+				if = {
+					limit = { is_core_of = SLP }
+					remove_core_of = SLP
+				}
+				if = {
+					limit = { is_claimed_by = SLP }
+					remove_claim_by = SLP
+				}
+				add_core_of = SLO
+			}
+			annex_country = {
+				target = SLP
+				transfer_troops = yes
+			}			
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	SLO_integrate_slovak_commissariat_hungary = {
+
+		icon = decision_generic_form_nation
+
+		available = {
+			SLH = {
+				exists = yes
+				is_puppet_of = ROOT
+			}
+			43 = { is_owned_and_controlled_by = SLH }
+			155 = { is_owned_and_controlled_by = SLH }
+			974 = { is_owned_and_controlled_by = SLH }
+			973 = { is_owned_and_controlled_by = SLH }
+			154 = { is_owned_and_controlled_by = SLH }
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_declare_greater_slovakia
+			SLH = {
+				exists = yes
+				is_puppet_of = ROOT
+			}
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = yes
+		
+		cost = 100
+		
+		complete_effect = {
+			custom_effect_tooltip = SLO_this_decision_can_only_be_taken_once_tt
+			
+			every_state = {
+				limit = { OR = { is_core_of = SLH is_claimed_by = SLH } }
+				if = {
+					limit = { is_core_of = SLH }
+					remove_core_of = SLH
+				}
+				if = {
+					limit = { is_claimed_by = SLH }
+					remove_claim_by = SLH
+				}
+				add_core_of = SLO
+			}
+			annex_country = {
+				target = SLH
+				transfer_troops = yes
+			}			
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	SLO_integrate_slovak_commissariat_tavriya = {
+
+		icon = decision_generic_form_nation
+
+		available = {
+			SLT = {
+				exists = yes
+				is_puppet_of = ROOT
+			}
+			137 = { is_owned_and_controlled_by = SLT }
+			196 = { is_owned_and_controlled_by = SLT }
+		}
+
+		allowed = { 
+			original_tag = SLO
+		}
+
+		visible = {
+			has_completed_focus = SLO_declare_greater_slovakia
+			SLT = {
+				exists = yes
+				is_puppet_of = ROOT
+			}
+		}
+
+		modifier = {
+		}
+	
+		fire_only_once = yes
+		
+		cost = 100
+		
+		complete_effect = {
+			custom_effect_tooltip = SLO_this_decision_can_only_be_taken_once_tt
+			
+			every_state = {
+				limit = { OR = { is_core_of = SLT is_claimed_by = SLT } }
+				if = {
+					limit = { is_core_of = SLT }
+					remove_core_of = SLT
+				}
+				if = {
+					limit = { is_claimed_by = SLT }
+					remove_claim_by = SLT
+				}
+				add_core_of = SLO
+			}
+			annex_country = {
+				target = SLT
+				transfer_troops = yes
+			}			
 		}
 		
 		ai_will_do = {

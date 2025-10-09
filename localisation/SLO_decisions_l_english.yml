@@ -215,6 +215,9 @@
  SLO_supply_artillery_for_the_war_effort_desc:0 ""
  SLO_can_only_send_6_batches_of_equipment_to_germany_tt:0 "We can only send §Y6§! batches of equipment to Germany - current number of batches remaining: §Y[?SLO.equipment_we_can_send_to_germany|0]§!"
  
+ 
+ SLO_the_slovak_commissariats_decision_category:0 "The Slovak-Commissariats"
+ SLO_the_slovak_commissariats_decision_category_desc:0 "The fruits of victory have tumbled into our mouths, and many new lands have come under our control. Integrating them into the Greater Slovak Republic will take time and effort."
  SLO_establish_slovak_commissariat_galicia:0 "Establish $SLP_despotic_occupation$"
  SLO_establish_slovak_commissariat_galicia_desc:0 ""
  SLO_expand_slovak_commissariat_galicia:0 "Expand $SLP_despotic_occupation$"
@@ -227,3 +230,10 @@
  SLO_establish_slovak_commissariat_tavriya_desc:0 ""
  SLO_expand_slovak_commissariat_tavriya:0 "Expand $SLT_despotic_occupation$"
  SLO_expand_slovak_commissariat_tavriya_desc:0 ""
+ SLO_integrate_slovak_commissariat_galicia:0 "Integrate $SLP_despotic_occupation$"
+ SLO_integrate_slovak_commissariat_galicia_desc:0 ""
+ SLO_integrate_slovak_commissariat_hungary:0 "Integrate $SLH_despotic_occupation$"
+ SLO_integrate_slovak_commissariat_hungary_desc:0 ""
+ SLO_integrate_slovak_commissariat_tavriya:0 "Integrate $SLT_despotic_occupation$"
+ SLO_integrate_slovak_commissariat_tavriya_desc:0 ""
+ SLO_this_decision_can_only_be_taken_once_tt:0 "§RThis decision can only be taken once§!\n\n"

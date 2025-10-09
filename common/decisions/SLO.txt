@@ -10098,7 +10098,7 @@ SLO_the_slovak_commissariats_decision_category = {
 				}
 			}
 			
-			hidden_effect = {1
+			hidden_effect = {
 				set_autonomy = {
 					target = SLP
 					autonomous_state = autonomy_reichskommissariat

@@ -3486,6 +3486,44 @@ country_event = {
 	}
 }
 
+#Start-up event
+country_event = {
+	id = slovakia.85
+	title = slovakia.85.title
+	desc = slovakia.85.desc
+	is_triggered_only = yes
+	
+	option = { 
+		name = slovakia.85.a
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = { 
+		name = slovakia.85.b
+		ai_chance = {
+			base = 10
+		}
+		
+		country_event = { id = slovakia.86 }
+	}
+}
+
+#Start-up event 2
+country_event = {
+	id = slovakia.86
+	title = slovakia.86.title
+	desc = slovakia.86.desc
+	is_triggered_only = yes
+	
+	option = { 
+		name = slovakia.86.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
 
 add_namespace = slovakia_elections
 

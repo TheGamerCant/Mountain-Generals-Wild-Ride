@@ -908,6 +908,10 @@ focus_tree = {
 		}
 		
 		bypass = {
+			if = {
+				limit = { has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
+				has_completed_focus = SLO_expand_the_draft_2
+			}
 		}
 		
 

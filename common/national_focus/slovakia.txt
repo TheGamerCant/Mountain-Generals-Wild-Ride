@@ -6249,6 +6249,10 @@ focus_tree = {
 				remove = the_lion_of_bratislava
 				add = no_god_but_mountain_general
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			country_event = { id = slovakia.87 hours = 4 random_hours = 4 }
 		}
 	}
 	
@@ -8831,6 +8835,10 @@ focus_tree = {
 		relative_position_id = SLO_supply_weapons_for_the_war_effort
 
 		available = {
+			power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value > -0.15
+			}
 		}
 		
 		bypass = {
@@ -8981,43 +8989,14 @@ focus_tree = {
 	}
 	
 	focus = {	
-		id = SLO_expand_the_draft_2
-		icon = GFX_focus_generic_limited_social_mobilization
+		id = SLO_such_a_nation_shall_not_perish
+		icon = GFX_goal_SLO_promotion_of_slovak_nationalism_nationalist
 		x = 2
 		y = 1
 		cost = 10
 		relative_position_id = SLO_declare_total_war
 		
 		prerequisite = { focus = SLO_declare_total_war }
-
-		available = {
-			NOT = { has_completed_focus = SLO_expand_the_draft }
-		}
-		
-		bypass = {
-		}
-		
-
-		completion_reward = {
-			add_to_variable = { SLO_army_dm_conscription = 0.03 }
-			
-			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = -0.08 }
-			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = -0.08 }
-			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = -0.05 }
-			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.08 }
-			custom_effect_tooltip = SLO_expand_the_draft_2_tt
-		}
-	}
-	
-	focus = {	
-		id = SLO_such_a_nation_shall_not_perish
-		icon = GFX_goal_SLO_promotion_of_slovak_nationalism_nationalist
-		x = 1
-		y = 1
-		cost = 10
-		relative_position_id = SLO_military_propaganda_campaigns
-		
-		prerequisite = { focus = SLO_military_propaganda_campaigns }
 
 		available = {
 			has_war_with_major = yes
@@ -9037,6 +9016,37 @@ focus_tree = {
 	}
 	
 	focus = {	
+		id = SLO_expand_the_draft_2
+		icon = GFX_focus_generic_limited_social_mobilization
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = SLO_military_propaganda_campaigns
+		
+		prerequisite = { focus = SLO_such_a_nation_shall_not_perish }
+		prerequisite = { focus = SLO_military_propaganda_campaigns }
+
+		available = {
+			NOT = { has_completed_focus = SLO_expand_the_draft }
+			has_war_with_major = yes
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_army_dm_conscription = 0.03 }
+			
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = -0.08 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = -0.08 }
+			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = -0.05 }
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.08 }
+			custom_effect_tooltip = SLO_expand_the_draft_2_tt
+		}
+	}
+	
+	focus = {	
 		id = SLO_declare_greater_slovakia
 		icon = GFX_goal_SLO_slovakia_victorious_on_all_fronts
 		x = 0
@@ -9049,8 +9059,31 @@ focus_tree = {
 		bypass = {
 		}
 		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SLO_declare_greater_slovakia_trigger_tt
+				OR = {
+					country_exists = SLP
+					country_exists = SLH
+					country_exists = SLT
+				}
+			}
+			power_balance_value = {
+				id = SLO_encroaching_german_influence_bop
+				value > 0.0
+			}
+		}
 
 		completion_reward = {
+			add_political_power = 150
+			add_war_support = 0.10
+			add_popularity = {
+				ideology = ROOT 
+				popularity = 0.20
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			set_cosmetic_tag = SLO_greater_slovakia
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -9212,7 +9245,11 @@ focus_tree = {
 			hidden_effect = {
 				SLO_start_campaign = yes
 				
-				country_event = { id = slovakia.33 days = 10 random_days = 20 }
+				#Political violence
+				country_event = { id = slovakia.33 days = 5 random_days = 30 }
+				
+				#Minority parties
+				country_event = { id = slovakia.88 days = 20 random_days = 20 }
 			}
 			effect_tooltip = {
 				country_event = { id = slovakia_elections.1 hours = 4 }

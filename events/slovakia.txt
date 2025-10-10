@@ -1263,8 +1263,21 @@ country_event = {
 					STATE_add_party_support = yes
 				}
 				
-				VALUE_VAR = "-2.5"
-				PARTY_VAR = "4"
+				VALUE_VAR = "-2.0"
+				PARTY_VAR = "0"
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			meta_effect = {
+				text = {
+					set_variable = { party = [PARTY_VAR] }
+					set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+					STATE_add_party_support = yes
+				}
+				
+				VALUE_VAR = "-2.0"
+				PARTY_VAR = "5"
 			}
 		}
 	}
@@ -1294,6 +1307,32 @@ country_event = {
 				
 				VALUE_VAR = "3.5"
 				PARTY_VAR = "4"
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			meta_effect = {
+				text = {
+					set_variable = { party = [PARTY_VAR] }
+					set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+					STATE_add_party_support = yes
+				}
+				
+				VALUE_VAR = "-2.0"
+				PARTY_VAR = "0"
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			meta_effect = {
+				text = {
+					set_variable = { party = [PARTY_VAR] }
+					set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+					STATE_add_party_support = yes
+				}
+				
+				VALUE_VAR = "-2.0"
+				PARTY_VAR = "1"
 			}
 		}
 	}
@@ -3524,6 +3563,158 @@ country_event = {
 	}
 }
 
+#No God but Mountain General
+country_event = {
+	id = slovakia.87
+	title = slovakia.87.title
+	desc = slovakia.87.desc
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_SLO_mg_gun
+	
+	option = { 
+		name = slovakia.87.a
+		ai_chance = {
+			base = 10
+		}
+		
+		add_stability = -0.05
+	}
+}
+
+#Minority parties in Slovakia
+country_event = {
+	id = slovakia.88
+	title = slovakia.88.title
+	desc = slovakia.88.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_rally_3
+
+	#There's nothing wrong with them
+	option = { 
+		name = slovakia.88.a
+		ai_chance = {
+			base = 10
+		}
+		
+		add_stability = 0.02
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		664 = {
+			meta_effect = {
+				text = {
+					set_variable = { party = [PARTY_VAR] }
+					set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+					STATE_add_party_support = yes
+				}
+				
+				VALUE_VAR = "2.0"
+				PARTY_VAR = "6"
+			}
+			
+			meta_effect = {
+				text = {
+					set_variable = { party = [PARTY_VAR] }
+					set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+					STATE_add_party_support = yes
+				}
+				
+				VALUE_VAR = "2.5"
+				PARTY_VAR = "[?SLO.party_campaigning_as|0]"
+			}
+		}
+		
+		73 = {
+			meta_effect = {
+				text = {
+					set_variable = { party = [PARTY_VAR] }
+					set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+					STATE_add_party_support = yes
+				}
+				
+				VALUE_VAR = "2.0"
+				PARTY_VAR = "0"
+			}
+			
+			meta_effect = {
+				text = {
+					set_variable = { party = [PARTY_VAR] }
+					set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+					STATE_add_party_support = yes
+				}
+				
+				VALUE_VAR = "2.5"
+				PARTY_VAR = "[?SLO.party_campaigning_as|0]"
+			}
+		}
+	}
+
+	#They forget they are part of Slovakia
+	option = { 
+		name = slovakia.88.b
+		ai_chance = {
+			base = 10
+		}
+		
+		trigger = {
+			check_variable = { SLO.party_campaigning_as = 4 }
+		}
+		
+		add_political_power = -25
+		add_stability = -0.02
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		664 = {
+			meta_effect = {
+				text = {
+					set_variable = { party = [PARTY_VAR] }
+					set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+					STATE_add_party_support = yes
+				}
+				
+				VALUE_VAR = "-2.0"
+				PARTY_VAR = "6"
+			}
+			
+			meta_effect = {
+				text = {
+					set_variable = { party = [PARTY_VAR] }
+					set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+					STATE_add_party_support = yes
+				}
+				
+				VALUE_VAR = "3.5"
+				PARTY_VAR = "[?SLO.party_campaigning_as|0]"
+			}
+		}
+		
+		73 = {
+			meta_effect = {
+				text = {
+					set_variable = { party = [PARTY_VAR] }
+					set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+					STATE_add_party_support = yes
+				}
+				
+				VALUE_VAR = "-2.0"
+				PARTY_VAR = "0"
+			}
+			
+			meta_effect = {
+				text = {
+					set_variable = { party = [PARTY_VAR] }
+					set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+					STATE_add_party_support = yes
+				}
+				
+				VALUE_VAR = "3.5"
+				PARTY_VAR = "[?SLO.party_campaigning_as|0]"
+			}
+		}
+	}
+}
 
 add_namespace = slovakia_elections
 

@@ -664,6 +664,7 @@
  SLO_our_rightful_spoils_of_war_desc:0 "We have fought and bled for every inch of land conquered, and we will not have the sacrifices of our countrymen be in vain. It's now time to demand payment."
  SLO_declare_greater_slovakia:0 "Declare Greater Slovakia"
  SLO_declare_greater_slovakia_desc:0 ""
+ SLO_declare_greater_slovakia_trigger_tt:0 "We have established at least one Slovak-Commissariat"
  SLO_deal_with_the_magyar_once_and_for_all:0 "Deal With The Magyar Once And For All"
  SLO_deal_with_the_magyar_once_and_for_all_desc:0 ""
  SLO_limited_border_skirmishes:0 "Limited Incursions"

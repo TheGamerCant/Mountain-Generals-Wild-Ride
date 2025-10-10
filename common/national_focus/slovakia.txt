@@ -11336,7 +11336,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.07 }
-			add_to_variable = { SLO_economy_dm_production_speed_arms_factory_factor = 0.15 }
+			add_to_variable = { SLO_economy_dm_production_speed_arms_factory_factor = 0.05 }
 			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = 0.04 }
 			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.10 }
 			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.10 }
@@ -14631,7 +14631,7 @@ focus_tree = {
 			value = GFX_focus_generic_attack_hungary
 		}
 		
-		x = -1
+		x = -2
 		y = 1
 		cost = 4
 		
@@ -14696,7 +14696,7 @@ focus_tree = {
 		
 		will_lead_to_war_with = POL
 		
-		x = 1
+		x = 2
 		y = 1
 		cost = 8
 		
@@ -14790,13 +14790,11 @@ focus_tree = {
 	focus = {	
 		id = SLO_the_formation_of_an_anti_german_pact
 		icon = GFX_focus_attack_germany
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		cost = 4
 		
-		prerequisite = { focus = SLO_secure_hungary }
-		prerequisite = { focus = SLO_secure_poland }
-		relative_position_id = SLO_secure_hungary
+		relative_position_id = SLO_pre_emptive_measures
 
 		available = {
 			country_exists = GER

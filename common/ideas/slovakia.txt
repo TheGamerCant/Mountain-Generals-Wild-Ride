@@ -1935,6 +1935,7 @@ ideas = {
 
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
 			}
 			
 			research_bonus = {
@@ -1973,7 +1974,8 @@ ideas = {
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.08
 				production_factory_max_efficiency_factor = 0.05
-				industrial_capacity_factory  = 0.05
+				industrial_capacity_factory = 0.05
+				production_speed_arms_factory_factor = 0.10
 			}
 			
 			research_bonus = {
@@ -2013,6 +2015,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.08
 				production_factory_max_efficiency_factor = 0.05
 				industrial_capacity_factory = 0.10
+				production_speed_arms_factory_factor = 0.15
 				consumer_goods_factor = -0.1
 				political_power_gain = 0.05
 			}

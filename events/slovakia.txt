@@ -1414,7 +1414,7 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}		
-		add_political_power = 125
+		add_political_power = 40
 		
 		hidden_effect = {
 			SLO = { 

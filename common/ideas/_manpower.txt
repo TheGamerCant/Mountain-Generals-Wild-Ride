@@ -437,6 +437,11 @@ ideas = {
 						}
 					}
 				}
+				
+				if = {
+					limit = { original_tag = SLO }
+					NOT = { has_completed_focus = SLO_spartan_professionalism }
+				}
 
 				if = {
 					limit = {

@@ -6,14 +6,15 @@ SLO.parliament_threshold			-> Variable, what % of votes are needed to enter the 
 SLO.election_frequency				-> Variable, how many days between elections
 SLO.election_frequency_thirds			-> Variable, SLO.election_frequency divided by 3
 SLO.election_frequency_four_fifths		-> Variable, SLO.election_frequency times by 0.8
-SLO.campaign_duration				-> Variable, how many days does the campaign last?
+SLO.campaign_duration				-> Variable, how many days does the campaign last
 SLO.election_states 				-> Array, what states should we perform elections in. Only updates when we hold an election
 SLO.subdivision_states				-> Array, every state that can be an election state when we form Europe
 SLO.language					-> Variable, 0 for Slovakia, 1 for English
-SLO.seat_array					-> Array, how many seats does each party have?
+SLO.seat_array					-> Array, how many seats does each party have
+SLO.seat_array_prcnt				-> Array, each parties's seats as a percentage of total
 SLO.seats_needed_for_majority			-> Variable, how many seats are needed for a majority?
-SLO.parties_in_government			-> Array, which parties are in government?
-SLO.parties_in_opposition			-> Array, which parties are in opposition?
+SLO.parties_in_government			-> Array, which parties are in government
+SLO.parties_in_opposition			-> Array, which parties are in opposition
 SLO.parties_in_government_ordered		-> Array, which parties are in government ranked by vote count
 SLO.parties_in_opposition_ordered		-> Array, which parties are in opposition ranked by vote count
 SLO.government_seat_count			-> Variable, total government seat count

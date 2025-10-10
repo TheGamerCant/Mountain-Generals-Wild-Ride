@@ -1438,6 +1438,18 @@ SLO_get_national_results = {
 	clear_variable = second_most_popular_party_percentage
 	clear_variable = indx1
 	clear_variable = indx2
+	
+	#Get % in parliament for each party
+	resize_array = { array = SLO.seat_array_prcnt value = 0 size = SLO.seat_array }
+	for_each_loop = {
+		array = SLO.seat_array
+		value = v
+		index = i
+		break = break
+		
+		set_variable = { SLO.seat_array_prcnt^i = v }
+		divide_variable = { SLO.seat_array_prcnt^i = SLO.seat_count }
+	}
 }
 
 SLO_get_active_election_states = {

@@ -1166,6 +1166,10 @@ country_event = {
 				OR = {
 					original_tag = SLO
 					is_puppet_of = SLO
+					AND = {
+						original_tag = CZE
+						is_in_faction_with = SLO
+					}
 				}
 			}
 		}
@@ -1236,7 +1240,7 @@ country_event = {
 		
 		trigger = { NOT = { check_variable = { SLO.party_campaigning_as = 4 } } }
 		
-		add_stability = 0.02
+		add_stability = -0.01
 		
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
@@ -1291,7 +1295,7 @@ country_event = {
 		
 		trigger = { check_variable = { SLO.party_campaigning_as = 4 } }
 		
-		add_stability = -0.02
+		add_stability = -0.04
 		
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
@@ -3613,6 +3617,8 @@ country_event = {
 				PARTY_VAR = "6"
 			}
 			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			meta_effect = {
 				text = {
 					set_variable = { party = [PARTY_VAR] }
@@ -3625,6 +3631,8 @@ country_event = {
 			}
 		}
 		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
 		73 = {
 			meta_effect = {
 				text = {
@@ -3636,6 +3644,8 @@ country_event = {
 				VALUE_VAR = "2.0"
 				PARTY_VAR = "0"
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			meta_effect = {
 				text = {
@@ -3678,6 +3688,8 @@ country_event = {
 				PARTY_VAR = "6"
 			}
 			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			meta_effect = {
 				text = {
 					set_variable = { party = [PARTY_VAR] }
@@ -3690,6 +3702,8 @@ country_event = {
 			}
 		}
 		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
 		73 = {
 			meta_effect = {
 				text = {
@@ -3701,6 +3715,8 @@ country_event = {
 				VALUE_VAR = "-2.0"
 				PARTY_VAR = "0"
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			meta_effect = {
 				text = {

@@ -991,11 +991,12 @@ characters = {
 				original_tag = SLO
 			}
 			available = { 
-				OR = {
-					has_government = democratic
+				has_government = democratic
+#				OR = {
+#					has_government = democratic
 #					has_government = neutrality
 #					has_completed_focus = SLO_the_workers_paradise
-				}	
+#				}	
 			}				
 			traits  = {
 				silent_workhorse 
@@ -1026,11 +1027,12 @@ characters = {
 				original_tag = SLO
 			}
 			available = { 
-				OR = {
-					has_government = democratic
+				has_government = democratic
+#				OR = {
+#					has_government = democratic
 #					has_government = neutrality
 #					has_completed_focus = SLO_the_workers_paradise
-				}	
+#				}	
 			}				
 			traits  = {
 				captain_of_industry 

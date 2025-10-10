@@ -40,7 +40,7 @@
  SLO_parliament_majority_status_text:0 "Government Status: [GetMajorityOrMinorityGov] of the needed §Y[?SLO.seats_needed_for_majority|.0]§! seats to form a majority."
  SLO_majority_loc:0 "§GMajority§!\nThe government holds §G[?SLO.government_seat_count|.0]§!"
  SLO_minority_loc:0 "§RMinority§!\nThe government holds §R[?SLO.government_seat_count|.0]§!"
- SLO_parliament_government_opposition_party_text:0 "[?SLO.party_names_long_coloured_array^v.GetTokenLocalizedKey]: [?SLO.seat_array^v|.0] seats"
+ SLO_parliament_government_opposition_party_text:0 "[?SLO.party_names_long_coloured_array^v.GetTokenLocalizedKey]: [?SLO.seat_array^v|.0] seats ([?SLO.seat_array_prcnt^v|%.1])"
  
  SLO_parliament_member_icon_tt:0 "[SLOGetParliamentDotTT]"
  SLO_parliament_dot_tt:0 "[?SLO.party_names_long_coloured_array^party.GetTokenLocalizedKey]"

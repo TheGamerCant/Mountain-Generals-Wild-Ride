@@ -834,8 +834,20 @@ focus_tree = {
 			}
 			
 			if = {
-				limit = { OR = { has_idea = volunteer_only has_idea = disarmed_nation } }
-				add_ideas = extensive_conscription
+				limit = { has_idea = volunteer_only }
+				swap_ideas = {
+					remove_idea = volunteer_only
+					add_idea = limited_conscription
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			else_if = {
+				limit = { has_idea = disarmed_nation }
+				swap_ideas = {
+					remove_idea = disarmed_nation
+					add_idea = limited_conscription
+				}
 				
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -1214,6 +1226,10 @@ focus_tree = {
 		prerequisite = { focus = SLO_the_slovak_armed_forces }
 
 		available = {
+			if = {
+				limit = { has_completed_focus = SLO_a_democracy_if_you_can_keep_it }
+				NOT = { has_completed_focus = SLO_expand_the_draft_2 }
+			}
 		}
 		
 		bypass = {
@@ -6594,7 +6610,7 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_political_power = 20
+			add_political_power = 30
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.025
@@ -7247,6 +7263,7 @@ focus_tree = {
 		}
 
 		available = {
+			date > 1938.1.1
 		}
 		mutually_exclusive = { focus = SLO_focus_on_military_r_and_d }
 		
@@ -7282,6 +7299,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SLO_expand_the_university_of_bratislava_2 }
 
 		available = {
+			date > 1938.1.1
 		}
 		
 
@@ -8358,7 +8376,7 @@ focus_tree = {
 					}
 				}
 				else_if = {
-					limit = { has_completed_focus = SLO_great_ideologue }
+					limit = { has_completed_focus = SLO_pragmatic_statesman }
 					SLO_mountain_general = {
 						swap_country_leader_traits  = {
 							remove = mgs_cult_of_personality_despotist_2_centre
@@ -9032,6 +9050,7 @@ focus_tree = {
 
 		available = {
 			NOT = { has_completed_focus = SLO_expand_the_draft }
+			NOT = { has_completed_focus = SLO_spartan_professionalism }
 			has_war_with_major = yes
 		}
 		
@@ -9040,12 +9059,12 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_to_variable = { SLO_army_dm_conscription = 0.03 }
+			add_to_variable = { SLO_army_dm_conscription = 0.025 }
 			
 			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = -0.08 }
 			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = -0.08 }
 			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = -0.05 }
-			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.08 }
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.10 }
 			custom_effect_tooltip = SLO_expand_the_draft_2_tt
 		}
 	}

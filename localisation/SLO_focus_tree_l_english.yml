@@ -631,7 +631,7 @@
  SLO_veneration_of_the_guard_desc:0 "The Mountain General Guard is the backbone of the new Slovakia, and the heroes who serve in it should be treated as such. Far more importantly, the even greater heroes at the top should be given a little more respect around here."
  SLO_expand_the_propaganda_office:0 "Expand the Propaganda Office"
  SLO_expand_the_propaganda_office_desc:0 ""
- SLO_expand_the_propaganda_office_tt_2:0 "If we have completed the focus §Y$SLO_the_radicals$§! and have §Y$SLO_karol_murgas$§! hired as an advisor:\n\n"
+ SLO_expand_the_propaganda_office_tt_2:0 "If we have completed the focus §Y$SLO_the_radicals$§! and have §Y$SLO_karol_murgas$§! hired as an advisor, the following effects will happen:\n\n"
  SLO_our_faith_above_all:0 "Our Faith Above All"
  SLO_our_faith_above_all_desc:0 "Our Catholic faith unites us Slovaks, and it should thus be the backbone of our nation. Not any one ideology or man, but reverence for our lord."
  SLO_create_the_usb:0 "Create the ÚŠB"
@@ -659,7 +659,7 @@
  SLO_new_equipment_breakthroughs_desc:0 "It is often said that no plan survives first contact with the enemy, and such i equally true for equipment. Breakdowns, unexpected scenarios and other problems not foreseen during research & development can cause equipment to become outdated far sooner that we'd like. Fortunately, combining our experiences and intellect with that of our allies', we can rapidly introduce new fixes and models into our army."
  SLO_expand_the_draft_2:0 "Increase the Draft"
  SLO_expand_the_draft_2_desc:0 "$SLO_expand_the_draft_2_desc$"
- SLO_expand_the_draft_2_tt:0 "$SLO_modify_the_slovak_army_by$$MODIFIER_CONSCRIPTION_FACTOR$: §Y+3.00%§!\n\n$SLO_modify_the_slovak_economy_by$$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-8.00%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-8.00%§!\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §R-5.00%§!\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y+8.0%§!"#
+ SLO_expand_the_draft_2_tt:0 "$SLO_modify_the_slovak_army_by$$MODIFIER_CONSCRIPTION_FACTOR$: §Y+2.50%§!\n\n$SLO_modify_the_slovak_economy_by$$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-8.00%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-8.00%§!\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §R-5.00%§!\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y+10.0%§!"
  SLO_our_rightful_spoils_of_war:0 "Our Rightful Spoils of War"
  SLO_our_rightful_spoils_of_war_desc:0 "We have fought and bled for every inch of land conquered, and we will not have the sacrifices of our countrymen be in vain. It's now time to demand payment."
  SLO_declare_greater_slovakia:0 "Declare Greater Slovakia"

@@ -9306,7 +9306,16 @@ SLO_encroaching_german_influence_bop_category = {
 				tooltip = SLO_get_rid_of_german_appointees_trigger_tt
 				any_character = {
 					is_hired_as_advisor = yes
-					advisor_can_be_fired = no
+					OR = {
+						AND = {
+							has_advisor_role = political_advisor
+							NOT = { advisor_can_be_fired = { slot = political_advisor } }
+						}
+						AND = {
+							has_advisor_role = high_command
+							NOT = { advisor_can_be_fired = { slot = high_command } }
+						}
+					}
 				}
 			}
 		}

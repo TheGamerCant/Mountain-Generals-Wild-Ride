@@ -2006,6 +2006,7 @@ focus_tree = {
 			add_to_variable = { SLO_army_dm_coordination_bonus = 0.03 }
 			add_to_variable = { SLO_army_dm_army_org_factor = 0.08 }
 			add_to_variable = { SLO_army_dm_ground_attack_factor = 0.05 }
+			add_to_variable = { SLO_army_dm_army_morale_factor = 0.05 }
 			
 			custom_effect_tooltip = SLO_military_radio_integration_tt
 		}
@@ -2038,6 +2039,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			hidden_effect = { add_ideas = SLO_mechanised_warfare_idea }
+			add_to_variable = { SLO_army_dm_army_morale_factor = 0.05 }
 			custom_effect_tooltip = SLO_mechanised_warfare_tt
 		}
 	}
@@ -5884,14 +5886,14 @@ focus_tree = {
 				priority = 1
 				division_names_group = SLO_CAV_01
 				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
-					infantry = { x = 0 y = 3 }
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
-					infantry = { x = 1 y = 2 }
-					infantry = { x = 1 y = 3 }
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 0 y = 2 }
+					cavalry = { x = 0 y = 3 }
+					cavalry = { x = 1 y = 0 }
+					cavalry = { x = 1 y = 1 }
+					cavalry = { x = 1 y = 2 }
+					cavalry = { x = 1 y = 3 }
 				}
 			}
 			random_controlled_state = {

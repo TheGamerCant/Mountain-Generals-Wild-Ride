@@ -3313,6 +3313,8 @@ country_event = {
 		
 		transfer_state = 73
 		transfer_state = 664
+		
+		hidden_effect = { news_event = { id = slovakia_news.8 hours = 6 } }
 	}
 }
 
@@ -3333,6 +3335,8 @@ country_event = {
 		}
 		
 		transfer_state = 664
+		
+		hidden_effect = { news_event = { id = slovakia_news.8 hours = 6 } }
 	}
 }
 
@@ -3353,6 +3357,8 @@ country_event = {
 		}
 		
 		transfer_state = 664
+		
+		hidden_effect = { news_event = { id = slovakia_news.8 hours = 6 } }
 	}
 }
 

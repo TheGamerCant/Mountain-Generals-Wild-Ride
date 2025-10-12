@@ -114,3 +114,157 @@ news_event = {
 		}
 	}
 }
+
+news_event = {
+	id = slovakia_news.5
+	title = slovakia_news.5.title
+	desc = slovakia_news.5.desc
+	picture = GFX_news_event_german_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = slovakia_news.5.a
+		trigger = {
+			NOT = { OR = { tag = SLO is_in_faction_with = SLO } }
+		}
+	}
+	
+	option = {
+		name = slovakia_news.5.b
+		trigger = {
+			OR = { tag = SLO is_in_faction_with = SLO }
+		}
+	}
+}
+
+news_event = {
+	id = slovakia_news.6
+	title = slovakia_news.6.title
+	desc = slovakia_news.6.desc
+	picture = GFX_news_event_047
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = slovakia_news.6.a
+		trigger = {
+			NOT = { OR = { tag = SLO tag = HUN } }
+		}
+	}
+	
+	option = {
+		name = slovakia_news.6.b
+		trigger = {
+			tag = SLO
+		}
+	}
+	
+	option = {
+		name = slovakia_news.6.c
+		trigger = {
+			tag = HUN
+		}
+	}
+}
+
+news_event = {
+	id = slovakia_news.7
+	title = slovakia_news.7.title
+	desc = slovakia_news.7.desc
+	picture = GFX_news_event_047
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = slovakia_news.7.a
+		trigger = {
+			NOT = { OR = { tag = SLO tag = POL } }
+		}
+	}
+	
+	option = {
+		name = slovakia_news.7.b
+		trigger = {
+			tag = SLO
+		}
+	}
+	
+	option = {
+		name = slovakia_news.7.c
+		trigger = {
+			tag = POL
+		}
+	}
+}
+
+news_event = {
+	id = slovakia_news.8
+	title = slovakia_news.8.title
+	desc = slovakia_news.8.desc
+	picture = GFX_news_event_german_inspect_troops
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = slovakia_news.8.a
+		trigger = {
+			NOT = { OR = { tag = SLO tag = HUN tag = GER } }
+		}
+	}
+	
+	option = {
+		name = slovakia_news.8.b
+		trigger = {
+			tag = SLO
+		}
+	}
+	
+	option = {
+		name = slovakia_news.8.c
+		trigger = {
+			tag = HUN
+		}
+	}
+	
+	option = {
+		name = slovakia_news.8.d
+		trigger = {
+			tag = GER
+		}
+	}
+}
+
+news_event = {
+	id = slovakia_news.9
+	title = slovakia_news.9.title
+	desc = slovakia_news.9.desc
+	picture = GFX_news_event_german_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = slovakia_news.9.a
+		trigger = {
+			NOT = { tag = SLO }
+		}
+	}
+	
+	option = {
+		name = slovakia_news.9.b
+		trigger = {
+			tag = SLO
+		}
+	}
+
+}

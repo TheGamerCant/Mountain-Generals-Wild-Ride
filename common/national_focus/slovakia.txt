@@ -1419,6 +1419,7 @@ focus_tree = {
 			add_to_variable = { SLO_army_dm_special_forces_cap = 0.20 }
 			add_to_variable = { SLO_army_dm_special_forces_attack_factor = 0.15 }
 			add_to_variable = { SLO_army_dm_experience_gain_army_factor = 0.05 }
+			add_to_variable = { SLO_army_dm_army_attack_factor = 0.03 }
 			custom_effect_tooltip = SLO_special_operations_tt
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -1454,7 +1455,8 @@ focus_tree = {
 			add_to_variable = { SLO_army_dm_army_org_factor = 0.12 }
 			add_to_variable = { SLO_army_dm_army_strength_factor = 0.06 }
 			add_to_variable = { SLO_army_dm_land_reinforce_rate = 0.03 }
-			add_to_variable = { SLO_army_dm_army_attack_factor = 0.07 }
+			add_to_variable = { SLO_army_dm_army_attack_factor = 0.05 }
+			add_to_variable = { SLO_army_dm_army_defence_factor = 0.10 }
 			add_to_variable = { SLO_army_dm_conscription_factor = -0.08 }
 			
 			custom_effect_tooltip = SLO_every_soldier_a_warrior_tt
@@ -1466,7 +1468,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_mobilization_plan
 		x = -4
 		y = 1
-		cost = 4
+		cost = 3
 		relative_position_id = SLO_spartan_professionalism
 		
 		prerequisite = { focus = SLO_an_army_of_scale focus = SLO_spartan_professionalism focus = SLO_a_war_of_intellect }
@@ -1545,7 +1547,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 0
 		y = 2
-		cost = 5
+		cost = 6
 		relative_position_id = SLO_military_intelligence
 		
 		prerequisite = { focus = SLO_military_intelligence }
@@ -2073,9 +2075,9 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 		
-			add_to_variable = { SLO_army_dm_max_dig_in_factor = 0.50 }
+			add_to_variable = { SLO_army_dm_max_dig_in_factor = 0.40 }
 			add_to_variable = { SLO_army_dm_army_org_factor = 0.10 }
-			add_to_variable = { SLO_army_dm_army_defence_factor = 0.10 }
+			add_to_variable = { SLO_army_dm_army_defence_factor = 0.05 }
 			custom_effect_tooltip = SLO_shovels_only_tt
 		}
 	}
@@ -9091,6 +9093,8 @@ focus_tree = {
 			unlock_decision_tooltip = SLO_integrate_slovak_commissariat_galicia
 			unlock_decision_tooltip = SLO_integrate_slovak_commissariat_hungary
 			unlock_decision_tooltip = SLO_integrate_slovak_commissariat_tavriya
+			
+			hidden_effect = { news_event = { id = slovakia_news.9 hours = 6 } }
 		}
 	}
 	
@@ -9975,6 +9979,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
+					add_extra_state_shared_building_slots = 1
 					random_select_amount = 8
 				}
 			}
@@ -9999,6 +10004,7 @@ focus_tree = {
 							level = 1
 							instant_build = yes
 						}
+						add_extra_state_shared_building_slots = 1
 					}
 				}
 				else = {
@@ -10011,6 +10017,7 @@ focus_tree = {
 							level = 1
 							instant_build = yes
 						}
+						add_extra_state_shared_building_slots = 1
 						random_select_amount = 2
 					}
 				}
@@ -14571,7 +14578,7 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		x = 0
 		y = 1
-		cost = 4
+		cost = 5
 		
 		prerequisite = { focus = SLO_alliance_with_czechia }
 		relative_position_id = SLO_alliance_with_czechia
@@ -14675,6 +14682,8 @@ focus_tree = {
 					target = HUN
 					type = topple_government
 				}
+				
+				hidden_effect = { news_event = { id = slovakia_news.6 hours = 4 random_hours = 4 } }
 			}
 		}
 	}
@@ -14788,6 +14797,8 @@ focus_tree = {
 					target = POL
 					type = topple_government
 				}
+				
+				hidden_effect = { news_event = { id = slovakia_news.7 hours = 4 random_hours = 4 } }
 			}
 		}
 	}
@@ -14797,7 +14808,7 @@ focus_tree = {
 		icon = GFX_focus_attack_germany
 		x = 0
 		y = 2
-		cost = 4
+		cost = 5
 		
 		prerequisite = { focus = SLO_pre_emptive_measures }
 		relative_position_id = SLO_pre_emptive_measures
@@ -14883,7 +14894,7 @@ focus_tree = {
 		icon = GFX_goal_SLO_declare_greater_slovakia
 		x = 0
 		y = 1
-		cost = 8
+		cost = 5
 		
 		prerequisite = { focus = SLO_the_formation_of_an_anti_german_pact }
 		relative_position_id = SLO_the_formation_of_an_anti_german_pact
@@ -15236,6 +15247,8 @@ focus_tree = {
 						add_idea = SLO_defence_of_europe_idea_4
 					}
 				}
+				
+				news_event = { id = slovakia_news.5 hours = 6 }
 			}
 			
 			set_cosmetic_tag = EUR_UNIFIED

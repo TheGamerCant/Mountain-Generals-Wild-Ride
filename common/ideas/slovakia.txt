@@ -2192,7 +2192,7 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.04
 				war_support_factor = 0.05
-				conscription_factor = 0.08
+				conscription_factor = 0.10
 				army_core_defence_factor = 0.03
 			}
 		}
@@ -2212,7 +2212,7 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.06
 				war_support_factor = 0.10
-				conscription_factor = 0.08
+				conscription_factor = 0.10
 				conscription = 0.005
 				army_core_defence_factor = 0.06
 			}
@@ -2233,7 +2233,7 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.06
 				war_support_factor = 0.10
-				conscription_factor = 0.08
+				conscription_factor = 0.10
 				conscription = 0.005
 				army_core_defence_factor = 0.06
 				agency_upgrade_time = -0.15
@@ -2277,7 +2277,7 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.04
 				war_support_factor = 0.05
-				conscription_factor = 0.08
+				conscription_factor = 0.10
 				army_core_defence_factor = 0.03
 			}
 		}
@@ -2297,7 +2297,7 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.06
 				war_support_factor = 0.10
-				conscription_factor = 0.08
+				conscription_factor = 0.10
 				conscription = 0.005
 				army_core_defence_factor = 0.06
 			}
@@ -2318,7 +2318,7 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.06
 				war_support_factor = 0.10
-				conscription_factor = 0.08
+				conscription_factor = 0.10
 				conscription = 0.005
 				army_core_defence_factor = 0.06
 				agency_upgrade_time = -0.15

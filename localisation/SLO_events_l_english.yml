@@ -395,12 +395,41 @@
  slovakia_news.2.b:0 "Based"
 
  slovakia_news.3.title:0 "Slovakia Invades Hungary"
- slovakia_news.3.desc:0 "In a move expected by many, the new Slovak regime has thrust southwards, seeking the conquest of Hungary. This comes after months of anti-Hungarian campaigns and actions by the government of [SLO.GetLeader], and the rapid militarisation of the Slovak state for war.\n\n[SLO.GetLeader] announced that his intentions were to put an end to the "descpicable and degenerate" Hungarian nation "once and for all". International ovservers have raised alarms about what may happen should Budapest come under Slovak control..."
+ slovakia_news.3.desc:0 "In a move expected by many, the new Slovak regime has thrust southwards, seeking the conquest of Hungary. This comes after months of anti-Hungarian campaigns and actions by the government of [SLO.GetLeader], and the rapid militarisation of the Slovak state for war.\n\n[SLO.GetLeader] announced that his intentions were to put an end to the "despicable and degenerate" Hungarian nation "once and for all". International observers have raised alarms about what may happen should Budapest come under Slovak control..."
  slovakia_news.3.a:0 "Gypsies fighting gypsies, what else is new?"
  slovakia_news.3.b:0 "The first of many conquests to come!"
  slovakia_news.3.c:0 "We will take back Northern Hungary!"
 
  slovakia_news.4.title:0 "Sanation Left Coup In Poland"
  slovakia_news.4.desc:0 "Following months of preparation, the leftist factions have overthrown the government of Ignacy Mościcki, promising to realise Marshall Piłsudski's original vision of a more democratic Poland. Current intelligence suggests [POL.GetLeader] may have had some help from [SLO.GetLeader]'s Slovakia in organising the coup."
- slovakia_news.4.a:0 "Intersting"
+ slovakia_news.4.a:0 "Interesting"
  slovakia_news.4.b:0 "We stand united"
+
+ slovakia_news.5.title:0 "Declaration of the European Federation"
+ slovakia_news.5.desc:0 "Following months of organisation and careful legislating, [SLO.GetLeader] has formally declared the reorganisation of the Slovak Republic into a new European Federation. Various allies have shown hesitancy at joining the organisation, but still seek closer military and economic co-operation with the new European Federation."
+ slovakia_news.5.a:0 "To be a friend or foe?"
+ slovakia_news.5.b:0 "Europe conquered the world divided, we'll save it united"
+
+ slovakia_news.6.title:0 "Slovakia Launches an Invasion of Hungary"
+ slovakia_news.6.desc:0 "[SLO.GetNameDefCap] has launched a military invasion of [HUN.GetNameDef] following a breakdown of relations between the two countries, with [SLO.GetLeader] claiming the purpose of the invasion was to "liberate the people of Hungary from the oppressive dictatorship of [HUN.GetLeader]".\n\n[HUN.GetNameDefCap] has requested assistance from the international community, and vowed to fight the invaders and that their soldiers would be "marching on Bratislava"."
+ slovakia_news.6.a:0 "Democratic intervention or rightful conquest, it's all the same"
+ slovakia_news.6.b:0 "We will liberate all of Europe, one country at a time"
+ slovakia_news.6.c:0 "They cannot seriously think they can win"
+
+ slovakia_news.7.title:0 "Slovakia Launches an Invasion of Poland"
+ slovakia_news.7.desc:0 "[SLO.GetNameDefCap] has launched a military invasion of [POL.GetNameDef] following a breakdown of relations between the two countries, with [SLO.GetLeader] claiming the purpose of the invasion was to "liberate the people of Poland from the oppressive dictatorship of [POL.GetLeader]".\n\n[HUN.GetNameDefCap] has requested assistance from the international community, and vowed to fight the invaders and that their soldiers would be "marching on Bratislava"."
+ slovakia_news.7.a:0 "Democratic intervention or rightful conquest, it's all the same"
+ slovakia_news.7.b:0 "We will liberate all of Europe, one country at a time"
+ slovakia_news.7.c:0 "They cannot seriously think they can win"
+
+ slovakia_news.8.title:0 "The Bratislava Agreements"
+ slovakia_news.8.desc:0 "Following months of diplomatic effort and negotiations by [SLO.GetNameDef], [GER.GetNameDef] has pressured [HUN.GetNameDef] into returning lands taken from Slovakia shortly after the state's establishment.\n\n[SLO.GetLeader] gave a speech in Bratislava, hailing the agreements as "righting a historical wrong" and thanking the German leader [GER.GetLeader] for his role in the deal."
+ slovakia_news.8.a:0 "Ok"
+ slovakia_news.8.b:0 "As is right"
+ slovakia_news.8.c:0 "We'll get it back, eventually"
+ slovakia_news.8.d:0 "We awarded what was right"
+
+ slovakia_news.9.title:0 "[SLO.GetLeader] Declares Greater SLovakia"
+ slovakia_news.9.desc:0 "Following the expansion of the Slovak state and the incorporation of new territories, [SLO.GetLeader] has formally declared a so-called "Republic of Greater Slovakia". It is hoped that this declaration will increase support for the nationalist regime within Slovakia and increase Slovak prestige on the world stage."
+ slovakia_news.9.a:0 "He's a bit full of himself"
+ slovakia_news.9.b:0 "Sláva Horskému Generálovi"

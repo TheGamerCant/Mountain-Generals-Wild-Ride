@@ -143,6 +143,7 @@ SLO_encroaching_german_influence_bop_category = {
 }
 
 SLO_the_slovak_commissariats_decision_category = {
+	priority = 998
 	
 	icon = decision_category_generic_fascism
 	

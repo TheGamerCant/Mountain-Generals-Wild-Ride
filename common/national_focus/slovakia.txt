@@ -7429,8 +7429,8 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.12 }
-			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.12 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.09 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.09 }
 			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.05 }
 			add_to_variable = { SLO_economy_dm_production_speed_arms_factory_factor = 0.10 }
 			
@@ -7797,7 +7797,7 @@ focus_tree = {
 		icon = GFX_goal_SLO_impeccable_philosopher
 		x = -4
 		y = 2
-		cost = 7
+		cost = 6
 		
 		prerequisite = { focus = SLO_the_center }
 		prerequisite = { focus = SLO_the_radicals }
@@ -7858,7 +7858,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_alliance
 		x = 0
 		y = 2
-		cost = 8
+		cost = 7
 		
 		prerequisite = { focus = SLO_the_center }
 		relative_position_id = SLO_the_center
@@ -7911,7 +7911,7 @@ focus_tree = {
 		icon = GFX_goal_SLO_declare_greater_slovakia
 		x = 4
 		y = 2
-		cost = 7
+		cost = 6
 		
 		prerequisite = { focus = SLO_the_center }
 		prerequisite = { focus = SLO_the_moderates }
@@ -8003,7 +8003,7 @@ focus_tree = {
 		icon = GFX_focus_generic_manpower
 		x = 0
 		y = 2
-		cost = 9
+		cost = 8
 		
 		prerequisite = { focus = SLO_great_ideologue focus = SLO_pragmatic_statesman focus = SLO_the_father_of_slovak_independence }
 		relative_position_id = SLO_pragmatic_statesman
@@ -8343,7 +8343,7 @@ focus_tree = {
 		icon = GFX_goal_SLO_a_portrait_on_every_wall
 		x = 2
 		y = 1
-		cost = 8
+		cost = 7
 		
 		prerequisite = { focus = SLO_great_ideologue focus = SLO_pragmatic_statesman focus = SLO_the_father_of_slovak_independence }
 		relative_position_id = SLO_great_ideologue

@@ -1,1498 +1,1214 @@
 EFFECT_SLO_new_slovak_state_idea_modify_slovakia_at_war_focus = {
 	if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_0 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_0
-			add_idea = SLO_new_slovak_state_idea_1
+		limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 59.5 compare = greater_than_or_equals } }
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 65.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 68.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 69.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 70.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_71 add_idea = SLO_new_slovak_state_idea_48 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_70 add_idea = SLO_new_slovak_state_idea_47 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_69 add_idea = SLO_new_slovak_state_idea_46 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 66.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 67.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_68 add_idea = SLO_new_slovak_state_idea_45 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_67 add_idea = SLO_new_slovak_state_idea_44 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_66 add_idea = SLO_new_slovak_state_idea_43 }
+				}
+			}
 		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_49 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_49
-			add_idea = SLO_new_slovak_state_idea_26
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_50 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_50
-			add_idea = SLO_new_slovak_state_idea_27
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_51 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_51
-			add_idea = SLO_new_slovak_state_idea_28
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_52 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_52
-			add_idea = SLO_new_slovak_state_idea_29
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_53 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_53
-			add_idea = SLO_new_slovak_state_idea_30
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_54 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_54
-			add_idea = SLO_new_slovak_state_idea_31
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_55 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_55
-			add_idea = SLO_new_slovak_state_idea_32
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_56 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_56
-			add_idea = SLO_new_slovak_state_idea_33
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_57 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_57
-			add_idea = SLO_new_slovak_state_idea_34
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_58 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_58
-			add_idea = SLO_new_slovak_state_idea_35
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_59 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_59
-			add_idea = SLO_new_slovak_state_idea_36
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_60 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_60
-			add_idea = SLO_new_slovak_state_idea_37
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_61 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_61
-			add_idea = SLO_new_slovak_state_idea_38
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_62 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_62
-			add_idea = SLO_new_slovak_state_idea_39
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_63 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_63
-			add_idea = SLO_new_slovak_state_idea_40
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_64 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_64
-			add_idea = SLO_new_slovak_state_idea_41
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_65 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_65
-			add_idea = SLO_new_slovak_state_idea_42
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_66 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_66
-			add_idea = SLO_new_slovak_state_idea_43
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_67 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_67
-			add_idea = SLO_new_slovak_state_idea_44
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_68 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_68
-			add_idea = SLO_new_slovak_state_idea_45
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_69 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_69
-			add_idea = SLO_new_slovak_state_idea_46
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_70 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_70
-			add_idea = SLO_new_slovak_state_idea_47
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_71 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_71
-			add_idea = SLO_new_slovak_state_idea_48
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 62.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 63.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 64.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_65 add_idea = SLO_new_slovak_state_idea_42 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_64 add_idea = SLO_new_slovak_state_idea_41 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_63 add_idea = SLO_new_slovak_state_idea_40 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 60.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 61.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_62 add_idea = SLO_new_slovak_state_idea_39 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_61 add_idea = SLO_new_slovak_state_idea_38 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_60 add_idea = SLO_new_slovak_state_idea_37 }
+				}
+			}
 		}
 	}
 	else = {
-		effect_tooltip = {
-			swap_ideas = {
-				remove_idea = SLO_new_slovak_state_idea_0
-				add_idea = SLO_new_slovak_state_idea_1
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 53.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 56.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 57.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 58.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_59 add_idea = SLO_new_slovak_state_idea_36 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_58 add_idea = SLO_new_slovak_state_idea_35 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_57 add_idea = SLO_new_slovak_state_idea_34 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 54.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 55.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_56 add_idea = SLO_new_slovak_state_idea_33 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_55 add_idea = SLO_new_slovak_state_idea_32 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_54 add_idea = SLO_new_slovak_state_idea_31 }
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 50.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 51.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 52.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_53 add_idea = SLO_new_slovak_state_idea_30 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_52 add_idea = SLO_new_slovak_state_idea_29 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_51 add_idea = SLO_new_slovak_state_idea_28 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 24.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 49.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_50 add_idea = SLO_new_slovak_state_idea_27 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_49 add_idea = SLO_new_slovak_state_idea_26 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_0 add_idea = SLO_new_slovak_state_idea_1 }
+				}
 			}
 		}
 	}
 }
 EFFECT_SLO_new_slovak_state_idea_modify_such_a_nation_shall_not_perish_focus = {
 	if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_1 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_1
-			add_idea = SLO_new_slovak_state_idea_2
+		limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 36.5 compare = greater_than_or_equals } }
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 42.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 45.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 46.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 47.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_48 add_idea = SLO_new_slovak_state_idea_25 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_47 add_idea = SLO_new_slovak_state_idea_24 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_46 add_idea = SLO_new_slovak_state_idea_23 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 43.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 44.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_45 add_idea = SLO_new_slovak_state_idea_22 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_44 add_idea = SLO_new_slovak_state_idea_21 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_43 add_idea = SLO_new_slovak_state_idea_20 }
+				}
+			}
 		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_26 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_26
-			add_idea = SLO_new_slovak_state_idea_3
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_27 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_27
-			add_idea = SLO_new_slovak_state_idea_4
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_28 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_28
-			add_idea = SLO_new_slovak_state_idea_5
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_29 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_29
-			add_idea = SLO_new_slovak_state_idea_6
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_30 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_30
-			add_idea = SLO_new_slovak_state_idea_7
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_31 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_31
-			add_idea = SLO_new_slovak_state_idea_8
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_32 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_32
-			add_idea = SLO_new_slovak_state_idea_9
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_33 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_33
-			add_idea = SLO_new_slovak_state_idea_10
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_34 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_34
-			add_idea = SLO_new_slovak_state_idea_11
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_35 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_35
-			add_idea = SLO_new_slovak_state_idea_12
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_36 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_36
-			add_idea = SLO_new_slovak_state_idea_13
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_37 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_37
-			add_idea = SLO_new_slovak_state_idea_14
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_38 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_38
-			add_idea = SLO_new_slovak_state_idea_15
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_39 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_39
-			add_idea = SLO_new_slovak_state_idea_16
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_40 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_40
-			add_idea = SLO_new_slovak_state_idea_17
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_41 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_41
-			add_idea = SLO_new_slovak_state_idea_18
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_42 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_42
-			add_idea = SLO_new_slovak_state_idea_19
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_43 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_43
-			add_idea = SLO_new_slovak_state_idea_20
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_44 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_44
-			add_idea = SLO_new_slovak_state_idea_21
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_45 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_45
-			add_idea = SLO_new_slovak_state_idea_22
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_46 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_46
-			add_idea = SLO_new_slovak_state_idea_23
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_47 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_47
-			add_idea = SLO_new_slovak_state_idea_24
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_48 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_48
-			add_idea = SLO_new_slovak_state_idea_25
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 39.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 40.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 41.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_42 add_idea = SLO_new_slovak_state_idea_19 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_41 add_idea = SLO_new_slovak_state_idea_18 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_40 add_idea = SLO_new_slovak_state_idea_17 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 37.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 38.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_39 add_idea = SLO_new_slovak_state_idea_16 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_38 add_idea = SLO_new_slovak_state_idea_15 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_37 add_idea = SLO_new_slovak_state_idea_14 }
+				}
+			}
 		}
 	}
 	else = {
-		effect_tooltip = {
-			swap_ideas = {
-				remove_idea = SLO_new_slovak_state_idea_1
-				add_idea = SLO_new_slovak_state_idea_2
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 30.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 33.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 34.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 35.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_36 add_idea = SLO_new_slovak_state_idea_13 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_35 add_idea = SLO_new_slovak_state_idea_12 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_34 add_idea = SLO_new_slovak_state_idea_11 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 31.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 32.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_33 add_idea = SLO_new_slovak_state_idea_10 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_32 add_idea = SLO_new_slovak_state_idea_9 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_31 add_idea = SLO_new_slovak_state_idea_8 }
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 27.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 28.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 29.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_30 add_idea = SLO_new_slovak_state_idea_7 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_29 add_idea = SLO_new_slovak_state_idea_6 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_28 add_idea = SLO_new_slovak_state_idea_5 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 13.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 26.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_27 add_idea = SLO_new_slovak_state_idea_4 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_26 add_idea = SLO_new_slovak_state_idea_3 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_1 add_idea = SLO_new_slovak_state_idea_2 }
+				}
 			}
 		}
 	}
 }
 EFFECT_SLO_new_slovak_state_idea_modify_national_socialist_curriculum_focus = {
 	if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_2 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_2
-			add_idea = SLO_new_slovak_state_idea_3
+		limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 44.5 compare = greater_than_or_equals } }
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 65.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 68.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 69.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 70.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_71 add_idea = SLO_new_slovak_state_idea_56 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_70 add_idea = SLO_new_slovak_state_idea_55 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_69 add_idea = SLO_new_slovak_state_idea_54 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 66.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 67.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_68 add_idea = SLO_new_slovak_state_idea_53 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_67 add_idea = SLO_new_slovak_state_idea_52 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_66 add_idea = SLO_new_slovak_state_idea_51 }
+				}
+			}
 		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_19 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_19
-			add_idea = SLO_new_slovak_state_idea_4
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_20 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_20
-			add_idea = SLO_new_slovak_state_idea_5
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_21 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_21
-			add_idea = SLO_new_slovak_state_idea_6
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_22 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_22
-			add_idea = SLO_new_slovak_state_idea_7
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_23 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_23
-			add_idea = SLO_new_slovak_state_idea_8
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_24 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_24
-			add_idea = SLO_new_slovak_state_idea_9
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_25 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_25
-			add_idea = SLO_new_slovak_state_idea_10
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_1 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_1
-			add_idea = SLO_new_slovak_state_idea_26
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_42 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_42
-			add_idea = SLO_new_slovak_state_idea_27
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_43 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_43
-			add_idea = SLO_new_slovak_state_idea_28
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_44 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_44
-			add_idea = SLO_new_slovak_state_idea_29
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_45 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_45
-			add_idea = SLO_new_slovak_state_idea_30
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_46 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_46
-			add_idea = SLO_new_slovak_state_idea_31
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_47 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_47
-			add_idea = SLO_new_slovak_state_idea_32
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_48 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_48
-			add_idea = SLO_new_slovak_state_idea_33
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_0 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_0
-			add_idea = SLO_new_slovak_state_idea_49
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_65 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_65
-			add_idea = SLO_new_slovak_state_idea_50
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_66 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_66
-			add_idea = SLO_new_slovak_state_idea_51
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_67 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_67
-			add_idea = SLO_new_slovak_state_idea_52
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_68 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_68
-			add_idea = SLO_new_slovak_state_idea_53
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_69 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_69
-			add_idea = SLO_new_slovak_state_idea_54
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_70 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_70
-			add_idea = SLO_new_slovak_state_idea_55
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_71 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_71
-			add_idea = SLO_new_slovak_state_idea_56
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 47.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 24.0 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 32.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_65 add_idea = SLO_new_slovak_state_idea_50 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_0 add_idea = SLO_new_slovak_state_idea_49 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_48 add_idea = SLO_new_slovak_state_idea_33 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 45.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 46.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_47 add_idea = SLO_new_slovak_state_idea_32 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_46 add_idea = SLO_new_slovak_state_idea_31 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_45 add_idea = SLO_new_slovak_state_idea_30 }
+				}
+			}
 		}
 	}
 	else = {
-		effect_tooltip = {
-			swap_ideas = {
-				remove_idea = SLO_new_slovak_state_idea_2
-				add_idea = SLO_new_slovak_state_idea_3
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 23.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 21.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 42.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 43.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_44 add_idea = SLO_new_slovak_state_idea_29 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_43 add_idea = SLO_new_slovak_state_idea_28 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_42 add_idea = SLO_new_slovak_state_idea_27 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 24.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 13.0 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_1 add_idea = SLO_new_slovak_state_idea_26 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_25 add_idea = SLO_new_slovak_state_idea_10 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_24 add_idea = SLO_new_slovak_state_idea_9 }
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 20.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 21.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 22.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_23 add_idea = SLO_new_slovak_state_idea_8 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_22 add_idea = SLO_new_slovak_state_idea_7 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_21 add_idea = SLO_new_slovak_state_idea_6 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 10.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 19.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_20 add_idea = SLO_new_slovak_state_idea_5 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_19 add_idea = SLO_new_slovak_state_idea_4 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_2 add_idea = SLO_new_slovak_state_idea_3 }
+				}
 			}
 		}
 	}
 }
 EFFECT_SLO_new_slovak_state_idea_modify_ensure_a_nationalist_education_focus = {
 	if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_2 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_2
-			add_idea = SLO_new_slovak_state_idea_11
+		limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 44.5 compare = greater_than_or_equals } }
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 65.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 68.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 69.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 70.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_71 add_idea = SLO_new_slovak_state_idea_64 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_70 add_idea = SLO_new_slovak_state_idea_63 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_69 add_idea = SLO_new_slovak_state_idea_62 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 66.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 67.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_68 add_idea = SLO_new_slovak_state_idea_61 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_67 add_idea = SLO_new_slovak_state_idea_60 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_66 add_idea = SLO_new_slovak_state_idea_59 }
+				}
+			}
 		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_19 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_19
-			add_idea = SLO_new_slovak_state_idea_12
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_20 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_20
-			add_idea = SLO_new_slovak_state_idea_13
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_21 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_21
-			add_idea = SLO_new_slovak_state_idea_14
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_22 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_22
-			add_idea = SLO_new_slovak_state_idea_15
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_23 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_23
-			add_idea = SLO_new_slovak_state_idea_16
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_24 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_24
-			add_idea = SLO_new_slovak_state_idea_17
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_25 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_25
-			add_idea = SLO_new_slovak_state_idea_18
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_1 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_1
-			add_idea = SLO_new_slovak_state_idea_34
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_42 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_42
-			add_idea = SLO_new_slovak_state_idea_35
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_43 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_43
-			add_idea = SLO_new_slovak_state_idea_36
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_44 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_44
-			add_idea = SLO_new_slovak_state_idea_37
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_45 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_45
-			add_idea = SLO_new_slovak_state_idea_38
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_46 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_46
-			add_idea = SLO_new_slovak_state_idea_39
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_47 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_47
-			add_idea = SLO_new_slovak_state_idea_40
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_48 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_48
-			add_idea = SLO_new_slovak_state_idea_41
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_0 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_0
-			add_idea = SLO_new_slovak_state_idea_57
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_65 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_65
-			add_idea = SLO_new_slovak_state_idea_58
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_66 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_66
-			add_idea = SLO_new_slovak_state_idea_59
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_67 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_67
-			add_idea = SLO_new_slovak_state_idea_60
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_68 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_68
-			add_idea = SLO_new_slovak_state_idea_61
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_69 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_69
-			add_idea = SLO_new_slovak_state_idea_62
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_70 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_70
-			add_idea = SLO_new_slovak_state_idea_63
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_71 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_71
-			add_idea = SLO_new_slovak_state_idea_64
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 47.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 24.0 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 32.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_65 add_idea = SLO_new_slovak_state_idea_58 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_0 add_idea = SLO_new_slovak_state_idea_57 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_48 add_idea = SLO_new_slovak_state_idea_41 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 45.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 46.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_47 add_idea = SLO_new_slovak_state_idea_40 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_46 add_idea = SLO_new_slovak_state_idea_39 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_45 add_idea = SLO_new_slovak_state_idea_38 }
+				}
+			}
 		}
 	}
 	else = {
-		effect_tooltip = {
-			swap_ideas = {
-				remove_idea = SLO_new_slovak_state_idea_2
-				add_idea = SLO_new_slovak_state_idea_11
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 23.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 21.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 42.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 43.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_44 add_idea = SLO_new_slovak_state_idea_37 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_43 add_idea = SLO_new_slovak_state_idea_36 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_42 add_idea = SLO_new_slovak_state_idea_35 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 24.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 13.0 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_1 add_idea = SLO_new_slovak_state_idea_34 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_25 add_idea = SLO_new_slovak_state_idea_18 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_24 add_idea = SLO_new_slovak_state_idea_17 }
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 20.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 21.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 22.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_23 add_idea = SLO_new_slovak_state_idea_16 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_22 add_idea = SLO_new_slovak_state_idea_15 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_21 add_idea = SLO_new_slovak_state_idea_14 }
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 10.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 19.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_20 add_idea = SLO_new_slovak_state_idea_13 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_19 add_idea = SLO_new_slovak_state_idea_12 }
+					}
+				}
+				else = {
+					swap_ideas = { remove_idea = SLO_new_slovak_state_idea_2 add_idea = SLO_new_slovak_state_idea_11 }
+				}
 			}
 		}
 	}
 }
 EFFECT_SLO_new_slovak_state_idea_modify_draft_a_new_constitution_focus = {
 	if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_3 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_3
-			add_idea = SLO_new_slovak_state_idea_4
+		limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 39.5 compare = greater_than_or_equals } }
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 55.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 63.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 34.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 69.5 compare = greater_than_or_equals } }
+						if = {
+							limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 70.5 compare = greater_than_or_equals } }
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_71 add_idea = SLO_new_slovak_state_idea_68 }
+						}
+						else = {
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_70 add_idea = SLO_new_slovak_state_idea_67 }
+						}
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_69 add_idea = SLO_new_slovak_state_idea_66 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 32.0 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_0 add_idea = SLO_new_slovak_state_idea_65 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_64 add_idea = SLO_new_slovak_state_idea_61 }
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 59.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 62.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_63 add_idea = SLO_new_slovak_state_idea_60 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_62 add_idea = SLO_new_slovak_state_idea_59 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 56.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_57 add_idea = SLO_new_slovak_state_idea_58 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_56 add_idea = SLO_new_slovak_state_idea_53 }
+					}
+				}
+			}
 		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_8 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_8
-			add_idea = SLO_new_slovak_state_idea_5
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_9 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_9
-			add_idea = SLO_new_slovak_state_idea_6
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_10 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_10
-			add_idea = SLO_new_slovak_state_idea_7
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_11 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_11
-			add_idea = SLO_new_slovak_state_idea_12
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_16 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_16
-			add_idea = SLO_new_slovak_state_idea_13
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_17 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_17
-			add_idea = SLO_new_slovak_state_idea_14
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_18 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_18
-			add_idea = SLO_new_slovak_state_idea_15
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_2 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_2
-			add_idea = SLO_new_slovak_state_idea_19
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_23 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_23
-			add_idea = SLO_new_slovak_state_idea_20
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_24 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_24
-			add_idea = SLO_new_slovak_state_idea_21
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_25 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_25
-			add_idea = SLO_new_slovak_state_idea_22
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_26 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_26
-			add_idea = SLO_new_slovak_state_idea_27
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_31 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_31
-			add_idea = SLO_new_slovak_state_idea_28
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_32 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_32
-			add_idea = SLO_new_slovak_state_idea_29
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_33 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_33
-			add_idea = SLO_new_slovak_state_idea_30
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_34 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_34
-			add_idea = SLO_new_slovak_state_idea_35
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_39 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_39
-			add_idea = SLO_new_slovak_state_idea_36
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_40 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_40
-			add_idea = SLO_new_slovak_state_idea_37
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_41 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_41
-			add_idea = SLO_new_slovak_state_idea_38
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_1 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_1
-			add_idea = SLO_new_slovak_state_idea_42
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_46 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_46
-			add_idea = SLO_new_slovak_state_idea_43
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_47 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_47
-			add_idea = SLO_new_slovak_state_idea_44
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_48 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_48
-			add_idea = SLO_new_slovak_state_idea_45
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_49 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_49
-			add_idea = SLO_new_slovak_state_idea_50
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_54 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_54
-			add_idea = SLO_new_slovak_state_idea_51
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_55 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_55
-			add_idea = SLO_new_slovak_state_idea_52
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_56 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_56
-			add_idea = SLO_new_slovak_state_idea_53
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_57 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_57
-			add_idea = SLO_new_slovak_state_idea_58
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_62 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_62
-			add_idea = SLO_new_slovak_state_idea_59
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_63 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_63
-			add_idea = SLO_new_slovak_state_idea_60
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_64 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_64
-			add_idea = SLO_new_slovak_state_idea_61
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_0 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_0
-			add_idea = SLO_new_slovak_state_idea_65
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_69 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_69
-			add_idea = SLO_new_slovak_state_idea_66
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_70 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_70
-			add_idea = SLO_new_slovak_state_idea_67
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_71 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_71
-			add_idea = SLO_new_slovak_state_idea_68
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 46.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 48.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 51.5 compare = greater_than_or_equals } }
+						if = {
+							limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 54.5 compare = greater_than_or_equals } }
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_55 add_idea = SLO_new_slovak_state_idea_52 }
+						}
+						else = {
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_54 add_idea = SLO_new_slovak_state_idea_51 }
+						}
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_49 add_idea = SLO_new_slovak_state_idea_50 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 47.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_48 add_idea = SLO_new_slovak_state_idea_45 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_47 add_idea = SLO_new_slovak_state_idea_44 }
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 21.0 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 23.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_46 add_idea = SLO_new_slovak_state_idea_43 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_1 add_idea = SLO_new_slovak_state_idea_42 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 40.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_41 add_idea = SLO_new_slovak_state_idea_38 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_40 add_idea = SLO_new_slovak_state_idea_37 }
+					}
+				}
+			}
 		}
 	}
 	else = {
-		effect_tooltip = {
-			swap_ideas = {
-				remove_idea = SLO_new_slovak_state_idea_3
-				add_idea = SLO_new_slovak_state_idea_4
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 12.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 28.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 32.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 33.5 compare = greater_than_or_equals } }
+						if = {
+							limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 36.5 compare = greater_than_or_equals } }
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_39 add_idea = SLO_new_slovak_state_idea_36 }
+						}
+						else = {
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_34 add_idea = SLO_new_slovak_state_idea_35 }
+						}
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_33 add_idea = SLO_new_slovak_state_idea_30 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 31.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_32 add_idea = SLO_new_slovak_state_idea_29 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_31 add_idea = SLO_new_slovak_state_idea_28 }
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 24.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 25.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_26 add_idea = SLO_new_slovak_state_idea_27 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_25 add_idea = SLO_new_slovak_state_idea_22 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 23.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_24 add_idea = SLO_new_slovak_state_idea_21 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_23 add_idea = SLO_new_slovak_state_idea_20 }
+					}
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 10.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 16.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 17.5 compare = greater_than_or_equals } }
+						if = {
+							limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 10.0 compare = greater_than_or_equals } }
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_2 add_idea = SLO_new_slovak_state_idea_19 }
+						}
+						else = {
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_18 add_idea = SLO_new_slovak_state_idea_15 }
+						}
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_17 add_idea = SLO_new_slovak_state_idea_14 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 13.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_16 add_idea = SLO_new_slovak_state_idea_13 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_11 add_idea = SLO_new_slovak_state_idea_12 }
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 8.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 9.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_10 add_idea = SLO_new_slovak_state_idea_7 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_9 add_idea = SLO_new_slovak_state_idea_6 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 5.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_8 add_idea = SLO_new_slovak_state_idea_5 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_3 add_idea = SLO_new_slovak_state_idea_4 }
+					}
+				}
 			}
 		}
 	}
 }
 EFFECT_SLO_new_slovak_state_idea_modify_our_faith_above_all_focus = {
 	if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_4 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_4
-			add_idea = SLO_new_slovak_state_idea_5
+		limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 36.0 compare = greater_than_or_equals } }
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 52.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 60.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 66.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 34.0 compare = greater_than_or_equals } }
+						if = {
+							limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 35.5 compare = greater_than_or_equals } }
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_71 add_idea = SLO_new_slovak_state_idea_70 }
+						}
+						else = {
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_0 add_idea = SLO_new_slovak_state_idea_69 }
+						}
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_68 add_idea = SLO_new_slovak_state_idea_67 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 64.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_65 add_idea = SLO_new_slovak_state_idea_66 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_64 add_idea = SLO_new_slovak_state_idea_63 }
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 59.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 59.0 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_57 add_idea = SLO_new_slovak_state_idea_62 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_61 add_idea = SLO_new_slovak_state_idea_60 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 57.0 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_58 add_idea = SLO_new_slovak_state_idea_59 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_56 add_idea = SLO_new_slovak_state_idea_55 }
+					}
+				}
+			}
 		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_7 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_7
-			add_idea = SLO_new_slovak_state_idea_6
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_3 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_3
-			add_idea = SLO_new_slovak_state_idea_8
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_10 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_10
-			add_idea = SLO_new_slovak_state_idea_9
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_12 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_12
-			add_idea = SLO_new_slovak_state_idea_13
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_15 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_15
-			add_idea = SLO_new_slovak_state_idea_14
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_11 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_11
-			add_idea = SLO_new_slovak_state_idea_16
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_18 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_18
-			add_idea = SLO_new_slovak_state_idea_17
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_19 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_19
-			add_idea = SLO_new_slovak_state_idea_20
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_22 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_22
-			add_idea = SLO_new_slovak_state_idea_21
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_2 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_2
-			add_idea = SLO_new_slovak_state_idea_23
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_25 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_25
-			add_idea = SLO_new_slovak_state_idea_24
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_27 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_27
-			add_idea = SLO_new_slovak_state_idea_28
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_30 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_30
-			add_idea = SLO_new_slovak_state_idea_29
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_26 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_26
-			add_idea = SLO_new_slovak_state_idea_31
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_33 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_33
-			add_idea = SLO_new_slovak_state_idea_32
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_35 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_35
-			add_idea = SLO_new_slovak_state_idea_36
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_38 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_38
-			add_idea = SLO_new_slovak_state_idea_37
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_34 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_34
-			add_idea = SLO_new_slovak_state_idea_39
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_41 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_41
-			add_idea = SLO_new_slovak_state_idea_40
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_42 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_42
-			add_idea = SLO_new_slovak_state_idea_43
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_45 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_45
-			add_idea = SLO_new_slovak_state_idea_44
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_1 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_1
-			add_idea = SLO_new_slovak_state_idea_46
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_48 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_48
-			add_idea = SLO_new_slovak_state_idea_47
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_50 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_50
-			add_idea = SLO_new_slovak_state_idea_51
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_53 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_53
-			add_idea = SLO_new_slovak_state_idea_52
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_49 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_49
-			add_idea = SLO_new_slovak_state_idea_54
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_56 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_56
-			add_idea = SLO_new_slovak_state_idea_55
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_58 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_58
-			add_idea = SLO_new_slovak_state_idea_59
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_61 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_61
-			add_idea = SLO_new_slovak_state_idea_60
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_57 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_57
-			add_idea = SLO_new_slovak_state_idea_62
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_64 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_64
-			add_idea = SLO_new_slovak_state_idea_63
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_65 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_65
-			add_idea = SLO_new_slovak_state_idea_66
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_68 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_68
-			add_idea = SLO_new_slovak_state_idea_67
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_0 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_0
-			add_idea = SLO_new_slovak_state_idea_69
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_71 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_71
-			add_idea = SLO_new_slovak_state_idea_70
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 23.0 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 49.0 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 51.5 compare = greater_than_or_equals } }
+						if = {
+							limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 51.0 compare = greater_than_or_equals } }
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_49 add_idea = SLO_new_slovak_state_idea_54 }
+						}
+						else = {
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_53 add_idea = SLO_new_slovak_state_idea_52 }
+						}
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_50 add_idea = SLO_new_slovak_state_idea_51 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 24.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_48 add_idea = SLO_new_slovak_state_idea_47 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_1 add_idea = SLO_new_slovak_state_idea_46 }
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 41.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 43.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_45 add_idea = SLO_new_slovak_state_idea_44 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_42 add_idea = SLO_new_slovak_state_idea_43 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 37.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_41 add_idea = SLO_new_slovak_state_idea_40 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_34 add_idea = SLO_new_slovak_state_idea_39 }
+					}
+				}
+			}
 		}
 	}
 	else = {
-		effect_tooltip = {
-			swap_ideas = {
-				remove_idea = SLO_new_slovak_state_idea_4
-				add_idea = SLO_new_slovak_state_idea_5
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 20.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 28.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 29.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 34.0 compare = greater_than_or_equals } }
+						if = {
+							limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 36.5 compare = greater_than_or_equals } }
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_38 add_idea = SLO_new_slovak_state_idea_37 }
+						}
+						else = {
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_35 add_idea = SLO_new_slovak_state_idea_36 }
+						}
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_33 add_idea = SLO_new_slovak_state_idea_32 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 28.0 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_26 add_idea = SLO_new_slovak_state_idea_31 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_30 add_idea = SLO_new_slovak_state_idea_29 }
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 13.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 26.0 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_27 add_idea = SLO_new_slovak_state_idea_28 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_25 add_idea = SLO_new_slovak_state_idea_24 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 12.0 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_2 add_idea = SLO_new_slovak_state_idea_23 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_22 add_idea = SLO_new_slovak_state_idea_21 }
+					}
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 11.0 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 13.0 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 14.5 compare = greater_than_or_equals } }
+						if = {
+							limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 18.5 compare = greater_than_or_equals } }
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_19 add_idea = SLO_new_slovak_state_idea_20 }
+						}
+						else = {
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_18 add_idea = SLO_new_slovak_state_idea_17 }
+						}
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_11 add_idea = SLO_new_slovak_state_idea_16 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 13.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_15 add_idea = SLO_new_slovak_state_idea_14 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_12 add_idea = SLO_new_slovak_state_idea_13 }
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 5.0 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 6.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_10 add_idea = SLO_new_slovak_state_idea_9 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_3 add_idea = SLO_new_slovak_state_idea_8 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 5.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_7 add_idea = SLO_new_slovak_state_idea_6 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_4 add_idea = SLO_new_slovak_state_idea_5 }
+					}
+				}
 			}
 		}
 	}
 }
 EFFECT_SLO_new_slovak_state_idea_modify_expand_the_propaganda_office_focus = {
 	if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_5 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_5
-			add_idea = SLO_new_slovak_state_idea_6
+		limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 37.0 compare = greater_than_or_equals } }
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 51.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 59.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 65.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 67.0 compare = greater_than_or_equals } }
+						if = {
+							limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 34.5 compare = greater_than_or_equals } }
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_0 add_idea = SLO_new_slovak_state_idea_71 }
+						}
+						else = {
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_69 add_idea = SLO_new_slovak_state_idea_70 }
+						}
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_65 add_idea = SLO_new_slovak_state_idea_68 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 61.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_66 add_idea = SLO_new_slovak_state_idea_67 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_57 add_idea = SLO_new_slovak_state_idea_64 }
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 58.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 60.0 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_62 add_idea = SLO_new_slovak_state_idea_63 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_58 add_idea = SLO_new_slovak_state_idea_61 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 54.0 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_59 add_idea = SLO_new_slovak_state_idea_60 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_49 add_idea = SLO_new_slovak_state_idea_56 }
+					}
+				}
+			}
 		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_4 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_4
-			add_idea = SLO_new_slovak_state_idea_7
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_8 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_8
-			add_idea = SLO_new_slovak_state_idea_9
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_3 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_3
-			add_idea = SLO_new_slovak_state_idea_10
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_13 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_13
-			add_idea = SLO_new_slovak_state_idea_14
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_12 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_12
-			add_idea = SLO_new_slovak_state_idea_15
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_16 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_16
-			add_idea = SLO_new_slovak_state_idea_17
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_11 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_11
-			add_idea = SLO_new_slovak_state_idea_18
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_20 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_20
-			add_idea = SLO_new_slovak_state_idea_21
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_19 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_19
-			add_idea = SLO_new_slovak_state_idea_22
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_23 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_23
-			add_idea = SLO_new_slovak_state_idea_24
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_2 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_2
-			add_idea = SLO_new_slovak_state_idea_25
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_28 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_28
-			add_idea = SLO_new_slovak_state_idea_29
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_27 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_27
-			add_idea = SLO_new_slovak_state_idea_30
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_31 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_31
-			add_idea = SLO_new_slovak_state_idea_32
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_26 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_26
-			add_idea = SLO_new_slovak_state_idea_33
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_36 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_36
-			add_idea = SLO_new_slovak_state_idea_37
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_35 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_35
-			add_idea = SLO_new_slovak_state_idea_38
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_39 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_39
-			add_idea = SLO_new_slovak_state_idea_40
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_34 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_34
-			add_idea = SLO_new_slovak_state_idea_41
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_43 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_43
-			add_idea = SLO_new_slovak_state_idea_44
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_42 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_42
-			add_idea = SLO_new_slovak_state_idea_45
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_46 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_46
-			add_idea = SLO_new_slovak_state_idea_47
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_1 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_1
-			add_idea = SLO_new_slovak_state_idea_48
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_51 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_51
-			add_idea = SLO_new_slovak_state_idea_52
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_50 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_50
-			add_idea = SLO_new_slovak_state_idea_53
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_54 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_54
-			add_idea = SLO_new_slovak_state_idea_55
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_49 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_49
-			add_idea = SLO_new_slovak_state_idea_56
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_59 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_59
-			add_idea = SLO_new_slovak_state_idea_60
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_58 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_58
-			add_idea = SLO_new_slovak_state_idea_61
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_62 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_62
-			add_idea = SLO_new_slovak_state_idea_63
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_57 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_57
-			add_idea = SLO_new_slovak_state_idea_64
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_66 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_66
-			add_idea = SLO_new_slovak_state_idea_67
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_65 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_65
-			add_idea = SLO_new_slovak_state_idea_68
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_69 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_69
-			add_idea = SLO_new_slovak_state_idea_70
-		}
-	}
-	else_if = {
-		limit = { has_idea = SLO_new_slovak_state_idea_0 }
-		swap_ideas = {
-			remove_idea = SLO_new_slovak_state_idea_0
-			add_idea = SLO_new_slovak_state_idea_71
-		}
-	}
-	else = {
-		effect_tooltip = {
-			swap_ideas = {
-				remove_idea = SLO_new_slovak_state_idea_5
-				add_idea = SLO_new_slovak_state_idea_6
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 44.0 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 26.0 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 50.5 compare = greater_than_or_equals } }
+						if = {
+							limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 52.0 compare = greater_than_or_equals } }
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_54 add_idea = SLO_new_slovak_state_idea_55 }
+						}
+						else = {
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_50 add_idea = SLO_new_slovak_state_idea_53 }
+						}
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_51 add_idea = SLO_new_slovak_state_idea_52 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 23.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_1 add_idea = SLO_new_slovak_state_idea_48 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_46 add_idea = SLO_new_slovak_state_idea_47 }
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 38.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 42.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_42 add_idea = SLO_new_slovak_state_idea_45 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_43 add_idea = SLO_new_slovak_state_idea_44 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 36.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_34 add_idea = SLO_new_slovak_state_idea_41 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_39 add_idea = SLO_new_slovak_state_idea_40 }
+					}
+				}
 			}
 		}
 	}
+	else = {
+		if = {
+			limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 19.5 compare = greater_than_or_equals } }
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 27.5 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 28.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 31.0 compare = greater_than_or_equals } }
+						if = {
+							limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 35.5 compare = greater_than_or_equals } }
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_35 add_idea = SLO_new_slovak_state_idea_38 }
+						}
+						else = {
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_36 add_idea = SLO_new_slovak_state_idea_37 }
+						}
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_26 add_idea = SLO_new_slovak_state_idea_33 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 29.0 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_31 add_idea = SLO_new_slovak_state_idea_32 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_27 add_idea = SLO_new_slovak_state_idea_30 }
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 12.5 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 15.0 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_28 add_idea = SLO_new_slovak_state_idea_29 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_2 add_idea = SLO_new_slovak_state_idea_25 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 21.0 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_23 add_idea = SLO_new_slovak_state_idea_24 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_19 add_idea = SLO_new_slovak_state_idea_22 }
+					}
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 8.0 compare = greater_than_or_equals } }
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 14.0 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 13.5 compare = greater_than_or_equals } }
+						if = {
+							limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 15.5 compare = greater_than_or_equals } }
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_20 add_idea = SLO_new_slovak_state_idea_21 }
+						}
+						else = {
+							swap_ideas = { remove_idea = SLO_new_slovak_state_idea_11 add_idea = SLO_new_slovak_state_idea_18 }
+						}
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_16 add_idea = SLO_new_slovak_state_idea_17 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 12.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_12 add_idea = SLO_new_slovak_state_idea_15 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_13 add_idea = SLO_new_slovak_state_idea_14 }
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 6.0 compare = greater_than_or_equals } }
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 5.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_3 add_idea = SLO_new_slovak_state_idea_10 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_8 add_idea = SLO_new_slovak_state_idea_9 }
+					}
+				}
+				else = {
+					if = {
+						limit = { check_variable = { var = SLO_new_slovak_state_idea_idea_index value = 4.5 compare = greater_than_or_equals } }
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_4 add_idea = SLO_new_slovak_state_idea_7 }
+					}
+					else = {
+						swap_ideas = { remove_idea = SLO_new_slovak_state_idea_5 add_idea = SLO_new_slovak_state_idea_6 }
+					}
+				}
+			}
+		}
+	}
+}
+EFFECT_remove_SLO_new_slovak_state_idea = {
+	meta_effect = {
+		text = {
+			remove_ideas = SLO_new_slovak_state_idea_[IDEA_INDEX]
+		}
+
+		IDEA_INDEX = "[?SLO_new_slovak_state_idea_idea_index|0]"
+	}
+
+	clear_variable = SLO_new_slovak_state_idea_idea_index
 }

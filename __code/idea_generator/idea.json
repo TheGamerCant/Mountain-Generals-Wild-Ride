@@ -3,6 +3,7 @@
     "localised_name": "The New Slovak State",
 	"localised_desc": "The birth of the new Slovak state shall go down as one of the greatest achievements of the twentieth century. We have placed the power of state not in the hands of the old stagnant elites or the unwashed masses, but in men of action and men of iron. Where democracies die of stagnation and decadence and totalitarian regimes of hubris, we shall set forth a new approach.",
     "gfx": "SLO_promote_slovak_nationalism",
+    "use_index_variable": true, 
     "base_modifiers": {
         "modifiers": {
             "political_power_factor": "0.05",

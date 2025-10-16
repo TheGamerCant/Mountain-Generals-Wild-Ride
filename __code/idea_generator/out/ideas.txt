@@ -9,6 +9,10 @@ ideas = {
 				political_power_factor = 0.05
 				political_advisor_cost_factor = -0.1
 			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 0 }
+			}
 		}
 		SLO_new_slovak_state_idea_1 = {
 			removal_cost = -1
@@ -20,6 +24,10 @@ ideas = {
 				political_advisor_cost_factor = -0.1
 				war_support_factor = 0.05
 				war_stability_factor = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 1 }
 			}
 		}
 		SLO_new_slovak_state_idea_2 = {
@@ -36,6 +44,11 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
+				conscription_factor = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 2 }
 			}
 		}
 		SLO_new_slovak_state_idea_3 = {
@@ -52,9 +65,13 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.07
+				conscription_factor = 0.17
 				stability_factor = -0.02
 				fascism_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 3 }
 			}
 		}
 		SLO_new_slovak_state_idea_4 = {
@@ -71,11 +88,15 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.07
+				conscription_factor = 0.17
 				stability_factor = -0.02
 				fascism_drift = 0.05
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 4 }
 			}
 		}
 		SLO_new_slovak_state_idea_5 = {
@@ -92,12 +113,16 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.07
+				conscription_factor = 0.17
 				stability_factor = 0.03
 				fascism_drift = 0.05
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 5 }
 			}
 		}
 		SLO_new_slovak_state_idea_6 = {
@@ -114,12 +139,16 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.07
+				conscription_factor = 0.17
 				stability_factor = 0.03
 				fascism_drift = 0.15
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 6 }
 			}
 		}
 		SLO_new_slovak_state_idea_7 = {
@@ -136,11 +165,15 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.07
+				conscription_factor = 0.17
 				stability_factor = -0.02
 				fascism_drift = 0.15
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 7 }
 			}
 		}
 		SLO_new_slovak_state_idea_8 = {
@@ -157,11 +190,15 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.07
+				conscription_factor = 0.17
 				stability_factor = 0.03
 				fascism_drift = 0.05
 				compliance_growth = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 8 }
 			}
 		}
 		SLO_new_slovak_state_idea_9 = {
@@ -178,11 +215,15 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.07
+				conscription_factor = 0.17
 				stability_factor = 0.03
 				fascism_drift = 0.15
 				compliance_growth = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 9 }
 			}
 		}
 		SLO_new_slovak_state_idea_10 = {
@@ -199,9 +240,13 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.07
+				conscription_factor = 0.17
 				stability_factor = -0.02
 				fascism_drift = 0.15
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 10 }
 			}
 		}
 		SLO_new_slovak_state_idea_11 = {
@@ -218,9 +263,13 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.04
+				conscription_factor = 0.14
 				stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 11 }
 			}
 		}
 		SLO_new_slovak_state_idea_12 = {
@@ -237,10 +286,14 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.04
+				conscription_factor = 0.14
 				stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				party_popularity_stability_factor = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 12 }
 			}
 		}
 		SLO_new_slovak_state_idea_13 = {
@@ -257,11 +310,15 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.04
+				conscription_factor = 0.14
 				stability_factor = 0.10
-				unaligned_drift = 0.15
+				neutrality_drift = 0.15
 				party_popularity_stability_factor = 0.05
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 13 }
 			}
 		}
 		SLO_new_slovak_state_idea_14 = {
@@ -278,12 +335,16 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.04
+				conscription_factor = 0.14
 				stability_factor = 0.10
-				unaligned_drift = 0.15
+				neutrality_drift = 0.15
 				party_popularity_stability_factor = 0.05
 				compliance_growth = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 14 }
 			}
 		}
 		SLO_new_slovak_state_idea_15 = {
@@ -300,11 +361,15 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.04
+				conscription_factor = 0.14
 				stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				party_popularity_stability_factor = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 15 }
 			}
 		}
 		SLO_new_slovak_state_idea_16 = {
@@ -321,10 +386,14 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.04
+				conscription_factor = 0.14
 				stability_factor = 0.10
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 16 }
 			}
 		}
 		SLO_new_slovak_state_idea_17 = {
@@ -341,11 +410,15 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.04
+				conscription_factor = 0.14
 				stability_factor = 0.10
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				compliance_growth = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 17 }
 			}
 		}
 		SLO_new_slovak_state_idea_18 = {
@@ -362,10 +435,14 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
-				conscription_factor = 0.04
+				conscription_factor = 0.14
 				stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 18 }
 			}
 		}
 		SLO_new_slovak_state_idea_19 = {
@@ -382,8 +459,13 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
+				conscription_factor = 0.10
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 19 }
 			}
 		}
 		SLO_new_slovak_state_idea_20 = {
@@ -400,10 +482,15 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
+				conscription_factor = 0.10
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				stability_factor = 0.05
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 20 }
 			}
 		}
 		SLO_new_slovak_state_idea_21 = {
@@ -420,11 +507,16 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
+				conscription_factor = 0.10
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				stability_factor = 0.05
 				compliance_growth = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 21 }
 			}
 		}
 		SLO_new_slovak_state_idea_22 = {
@@ -441,9 +533,14 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
+				conscription_factor = 0.10
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 22 }
 			}
 		}
 		SLO_new_slovak_state_idea_23 = {
@@ -460,9 +557,14 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
+				conscription_factor = 0.10
 				stability_factor = 0.05
 				compliance_growth = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 23 }
 			}
 		}
 		SLO_new_slovak_state_idea_24 = {
@@ -479,10 +581,15 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
+				conscription_factor = 0.10
 				stability_factor = 0.05
 				compliance_growth = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 24 }
 			}
 		}
 		SLO_new_slovak_state_idea_25 = {
@@ -499,7 +606,12 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.10
+				conscription_factor = 0.10
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 25 }
 			}
 		}
 		SLO_new_slovak_state_idea_26 = {
@@ -516,6 +628,10 @@ ideas = {
 				stability_factor = -0.02
 				fascism_drift = 0.05
 			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 26 }
+			}
 		}
 		SLO_new_slovak_state_idea_27 = {
 			removal_cost = -1
@@ -531,7 +647,11 @@ ideas = {
 				stability_factor = -0.02
 				fascism_drift = 0.05
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 27 }
 			}
 		}
 		SLO_new_slovak_state_idea_28 = {
@@ -548,8 +668,12 @@ ideas = {
 				stability_factor = 0.03
 				fascism_drift = 0.05
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 28 }
 			}
 		}
 		SLO_new_slovak_state_idea_29 = {
@@ -566,8 +690,12 @@ ideas = {
 				stability_factor = 0.03
 				fascism_drift = 0.15
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 29 }
 			}
 		}
 		SLO_new_slovak_state_idea_30 = {
@@ -584,7 +712,11 @@ ideas = {
 				stability_factor = -0.02
 				fascism_drift = 0.15
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 30 }
 			}
 		}
 		SLO_new_slovak_state_idea_31 = {
@@ -601,7 +733,11 @@ ideas = {
 				stability_factor = 0.03
 				fascism_drift = 0.05
 				compliance_growth = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 31 }
 			}
 		}
 		SLO_new_slovak_state_idea_32 = {
@@ -618,7 +754,11 @@ ideas = {
 				stability_factor = 0.03
 				fascism_drift = 0.15
 				compliance_growth = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 32 }
 			}
 		}
 		SLO_new_slovak_state_idea_33 = {
@@ -635,6 +775,10 @@ ideas = {
 				stability_factor = -0.02
 				fascism_drift = 0.15
 			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 33 }
+			}
 		}
 		SLO_new_slovak_state_idea_34 = {
 			removal_cost = -1
@@ -648,7 +792,11 @@ ideas = {
 				war_stability_factor = 0.10
 				conscription_factor = 0.04
 				stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 34 }
 			}
 		}
 		SLO_new_slovak_state_idea_35 = {
@@ -663,8 +811,12 @@ ideas = {
 				war_stability_factor = 0.10
 				conscription_factor = 0.04
 				stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				party_popularity_stability_factor = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 35 }
 			}
 		}
 		SLO_new_slovak_state_idea_36 = {
@@ -679,9 +831,13 @@ ideas = {
 				war_stability_factor = 0.10
 				conscription_factor = 0.04
 				stability_factor = 0.10
-				unaligned_drift = 0.15
+				neutrality_drift = 0.15
 				party_popularity_stability_factor = 0.05
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 36 }
 			}
 		}
 		SLO_new_slovak_state_idea_37 = {
@@ -696,10 +852,14 @@ ideas = {
 				war_stability_factor = 0.10
 				conscription_factor = 0.04
 				stability_factor = 0.10
-				unaligned_drift = 0.15
+				neutrality_drift = 0.15
 				party_popularity_stability_factor = 0.05
 				compliance_growth = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 37 }
 			}
 		}
 		SLO_new_slovak_state_idea_38 = {
@@ -714,9 +874,13 @@ ideas = {
 				war_stability_factor = 0.10
 				conscription_factor = 0.04
 				stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				party_popularity_stability_factor = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 38 }
 			}
 		}
 		SLO_new_slovak_state_idea_39 = {
@@ -731,8 +895,12 @@ ideas = {
 				war_stability_factor = 0.10
 				conscription_factor = 0.04
 				stability_factor = 0.10
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 39 }
 			}
 		}
 		SLO_new_slovak_state_idea_40 = {
@@ -747,9 +915,13 @@ ideas = {
 				war_stability_factor = 0.10
 				conscription_factor = 0.04
 				stability_factor = 0.10
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				compliance_growth = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 40 }
 			}
 		}
 		SLO_new_slovak_state_idea_41 = {
@@ -764,8 +936,12 @@ ideas = {
 				war_stability_factor = 0.10
 				conscription_factor = 0.04
 				stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 41 }
 			}
 		}
 		SLO_new_slovak_state_idea_42 = {
@@ -779,7 +955,11 @@ ideas = {
 				war_support_factor = 0.05
 				war_stability_factor = 0.10
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 42 }
 			}
 		}
 		SLO_new_slovak_state_idea_43 = {
@@ -793,9 +973,13 @@ ideas = {
 				war_support_factor = 0.05
 				war_stability_factor = 0.10
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				stability_factor = 0.05
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 43 }
 			}
 		}
 		SLO_new_slovak_state_idea_44 = {
@@ -809,10 +993,14 @@ ideas = {
 				war_support_factor = 0.05
 				war_stability_factor = 0.10
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				stability_factor = 0.05
 				compliance_growth = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 44 }
 			}
 		}
 		SLO_new_slovak_state_idea_45 = {
@@ -826,8 +1014,12 @@ ideas = {
 				war_support_factor = 0.05
 				war_stability_factor = 0.10
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 45 }
 			}
 		}
 		SLO_new_slovak_state_idea_46 = {
@@ -842,7 +1034,11 @@ ideas = {
 				war_stability_factor = 0.10
 				stability_factor = 0.05
 				compliance_growth = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 46 }
 			}
 		}
 		SLO_new_slovak_state_idea_47 = {
@@ -857,8 +1053,12 @@ ideas = {
 				war_stability_factor = 0.10
 				stability_factor = 0.05
 				compliance_growth = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 47 }
 			}
 		}
 		SLO_new_slovak_state_idea_48 = {
@@ -872,6 +1072,10 @@ ideas = {
 				war_support_factor = 0.05
 				war_stability_factor = 0.10
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 48 }
 			}
 		}
 		SLO_new_slovak_state_idea_49 = {
@@ -887,6 +1091,10 @@ ideas = {
 				stability_factor = -0.02
 				fascism_drift = 0.05
 			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 49 }
+			}
 		}
 		SLO_new_slovak_state_idea_50 = {
 			removal_cost = -1
@@ -901,7 +1109,11 @@ ideas = {
 				stability_factor = -0.02
 				fascism_drift = 0.05
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 50 }
 			}
 		}
 		SLO_new_slovak_state_idea_51 = {
@@ -917,8 +1129,12 @@ ideas = {
 				stability_factor = 0.03
 				fascism_drift = 0.05
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 51 }
 			}
 		}
 		SLO_new_slovak_state_idea_52 = {
@@ -934,8 +1150,12 @@ ideas = {
 				stability_factor = 0.03
 				fascism_drift = 0.15
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 52 }
 			}
 		}
 		SLO_new_slovak_state_idea_53 = {
@@ -951,7 +1171,11 @@ ideas = {
 				stability_factor = -0.02
 				fascism_drift = 0.15
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 53 }
 			}
 		}
 		SLO_new_slovak_state_idea_54 = {
@@ -967,7 +1191,11 @@ ideas = {
 				stability_factor = 0.03
 				fascism_drift = 0.05
 				compliance_growth = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 54 }
 			}
 		}
 		SLO_new_slovak_state_idea_55 = {
@@ -983,7 +1211,11 @@ ideas = {
 				stability_factor = 0.03
 				fascism_drift = 0.15
 				compliance_growth = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 55 }
 			}
 		}
 		SLO_new_slovak_state_idea_56 = {
@@ -999,6 +1231,10 @@ ideas = {
 				stability_factor = -0.02
 				fascism_drift = 0.15
 			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 56 }
+			}
 		}
 		SLO_new_slovak_state_idea_57 = {
 			removal_cost = -1
@@ -1010,7 +1246,11 @@ ideas = {
 				political_advisor_cost_factor = -0.1
 				conscription_factor = 0.04
 				stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 57 }
 			}
 		}
 		SLO_new_slovak_state_idea_58 = {
@@ -1023,8 +1263,12 @@ ideas = {
 				political_advisor_cost_factor = -0.1
 				conscription_factor = 0.04
 				stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				party_popularity_stability_factor = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 58 }
 			}
 		}
 		SLO_new_slovak_state_idea_59 = {
@@ -1037,9 +1281,13 @@ ideas = {
 				political_advisor_cost_factor = -0.1
 				conscription_factor = 0.04
 				stability_factor = 0.10
-				unaligned_drift = 0.15
+				neutrality_drift = 0.15
 				party_popularity_stability_factor = 0.05
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 59 }
 			}
 		}
 		SLO_new_slovak_state_idea_60 = {
@@ -1052,10 +1300,14 @@ ideas = {
 				political_advisor_cost_factor = -0.1
 				conscription_factor = 0.04
 				stability_factor = 0.10
-				unaligned_drift = 0.15
+				neutrality_drift = 0.15
 				party_popularity_stability_factor = 0.05
 				compliance_growth = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 60 }
 			}
 		}
 		SLO_new_slovak_state_idea_61 = {
@@ -1068,9 +1320,13 @@ ideas = {
 				political_advisor_cost_factor = -0.1
 				conscription_factor = 0.04
 				stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				party_popularity_stability_factor = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 61 }
 			}
 		}
 		SLO_new_slovak_state_idea_62 = {
@@ -1083,8 +1339,12 @@ ideas = {
 				political_advisor_cost_factor = -0.1
 				conscription_factor = 0.04
 				stability_factor = 0.10
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 62 }
 			}
 		}
 		SLO_new_slovak_state_idea_63 = {
@@ -1097,9 +1357,13 @@ ideas = {
 				political_advisor_cost_factor = -0.1
 				conscription_factor = 0.04
 				stability_factor = 0.10
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				compliance_growth = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 63 }
 			}
 		}
 		SLO_new_slovak_state_idea_64 = {
@@ -1112,8 +1376,12 @@ ideas = {
 				political_advisor_cost_factor = -0.1
 				conscription_factor = 0.04
 				stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 64 }
 			}
 		}
 		SLO_new_slovak_state_idea_65 = {
@@ -1125,7 +1393,11 @@ ideas = {
 				political_power_factor = 0.10
 				political_advisor_cost_factor = -0.1
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 65 }
 			}
 		}
 		SLO_new_slovak_state_idea_66 = {
@@ -1137,9 +1409,13 @@ ideas = {
 				political_power_factor = 0.10
 				political_advisor_cost_factor = -0.1
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				stability_factor = 0.05
 				compliance_growth = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 66 }
 			}
 		}
 		SLO_new_slovak_state_idea_67 = {
@@ -1151,10 +1427,14 @@ ideas = {
 				political_power_factor = 0.10
 				political_advisor_cost_factor = -0.1
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.10
+				neutrality_drift = 0.10
 				stability_factor = 0.05
 				compliance_growth = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 67 }
 			}
 		}
 		SLO_new_slovak_state_idea_68 = {
@@ -1166,8 +1446,12 @@ ideas = {
 				political_power_factor = 0.10
 				political_advisor_cost_factor = -0.1
 				party_popularity_stability_factor = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 68 }
 			}
 		}
 		SLO_new_slovak_state_idea_69 = {
@@ -1180,7 +1464,11 @@ ideas = {
 				political_advisor_cost_factor = -0.1
 				stability_factor = 0.05
 				compliance_growth = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 69 }
 			}
 		}
 		SLO_new_slovak_state_idea_70 = {
@@ -1193,8 +1481,12 @@ ideas = {
 				political_advisor_cost_factor = -0.1
 				stability_factor = 0.05
 				compliance_growth = 0.05
-				unaligned_drift = 0.05
+				neutrality_drift = 0.05
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 70 }
 			}
 		}
 		SLO_new_slovak_state_idea_71 = {
@@ -1206,6 +1498,10 @@ ideas = {
 				political_power_factor = 0.05
 				political_advisor_cost_factor = -0.1
 				fascism_drift = 0.10
+			}
+
+			on_add = {
+				set_variable = { SLO_new_slovak_state_idea_idea_index = 71 }
 			}
 		}
 	}

@@ -2520,7 +2520,7 @@ SLO_the_slovak_occupation_authority = {
 			}
 		}
 		state_target = yes
-		on_map_mode = map_only
+		on_map_mode = map_and_decisions_view
 
 		allowed = {
 			original_tag = SLO

@@ -29,9 +29,9 @@ SLO_soc_dems_largest_party_trigger = {
 		tooltip = SLO_soc_dems_largest_party_trigger_tt
 		
 		check_variable = { SLO.parties_in_government_ordered^0 = 1 }
-		set_temp_variable = { twoThirds = SLO.government_seat_count }
-		multiply_temp_variable = { twoThirds = 0.667 }
-		check_variable = { var = SLO.seat_array^1 value = twoThirds compare = greater_than_or_equals } 
+		set_temp_variable = { fiftyFivePc = SLO.government_seat_count }
+		multiply_temp_variable = { fiftyFivePc = 0.550 }
+		check_variable = { var = SLO.seat_array^1 value = fiftyFivePc compare = greater_than_or_equals } 
 	}
 }
 
@@ -58,9 +58,9 @@ SLO_liberals_largest_party_trigger = {
 		tooltip = SLO_liberals_largest_party_trigger_tt
 		
 		check_variable = { SLO.parties_in_government_ordered^0 = 2 }
-		set_temp_variable = { twoThirds = SLO.government_seat_count }
-		multiply_temp_variable = { twoThirds = 0.667 }
-		check_variable = { var = SLO.seat_array^2 value = twoThirds compare = greater_than_or_equals } 
+		set_temp_variable = { fiftyFivePc = SLO.government_seat_count }
+		multiply_temp_variable = { fiftyFivePc = 0.550 }
+		check_variable = { var = SLO.seat_array^2 value = fiftyFivePc compare = greater_than_or_equals } 
 	}
 }
 
@@ -87,9 +87,9 @@ SLO_conservatives_largest_party_trigger = {
 		tooltip = SLO_conservatives_largest_party_trigger_tt
 		
 		check_variable = { SLO.parties_in_government_ordered^0 = 3 }
-		set_temp_variable = { twoThirds = SLO.government_seat_count }
-		multiply_temp_variable = { twoThirds = 0.667 }
-		check_variable = { var = SLO.seat_array^3 value = twoThirds compare = greater_than_or_equals } 
+		set_temp_variable = { fiftyFivePc = SLO.government_seat_count }
+		multiply_temp_variable = { fiftyFivePc = 0.550 }
+		check_variable = { var = SLO.seat_array^3 value = fiftyFivePc compare = greater_than_or_equals } 
 	}
 }
 
@@ -116,9 +116,9 @@ SLO_nationalists_largest_party_trigger = {
 		tooltip = SLO_nationalists_largest_party_trigger_tt
 		
 		check_variable = { SLO.parties_in_government_ordered^0 = 4 }
-		set_temp_variable = { twoThirds = SLO.government_seat_count }
-		multiply_temp_variable = { twoThirds = 0.667 }
-		check_variable = { var = SLO.seat_array^4 value = twoThirds compare = greater_than_or_equals } 
+		set_temp_variable = { fiftyFivePc = SLO.government_seat_count }
+		multiply_temp_variable = { fiftyFivePc = 0.550 }
+		check_variable = { var = SLO.seat_array^4 value = fiftyFivePc compare = greater_than_or_equals } 
 	}
 }
 

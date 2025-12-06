@@ -3734,8 +3734,8 @@ focus_tree = {
 				prioritize = { 70 }
 				
 				add_resource = {
-					type = oil
-					amount = 10
+					type = coal
+					amount = 12
 				}
 				
 				add_manpower = 5908
@@ -7564,8 +7564,8 @@ focus_tree = {
 				prioritize = { 70 }
 				
 				add_resource = {
-					type = oil
-					amount = 8
+					type = coal
+					amount = 12
 				}
 				
 				add_manpower = 5908
@@ -14566,7 +14566,12 @@ focus_tree = {
 				can_create_factions = yes
 				can_join_factions = no
 			}
-			create_faction = "European Bloc"
+			
+			create_faction_from_template = {
+			   template = faction_template_european_unity
+			   name = "European Bloc"
+			   icon = GFX_faction_logo_eu
+			}
 		}
 	}
 	

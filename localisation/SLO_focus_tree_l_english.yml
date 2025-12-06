@@ -639,7 +639,7 @@
  SLO_create_the_usb_tt:0 "§Y$SLO_alexander_mach$§!: Replace trait §Y$SLO_fascist_paramilitarist_1$§! with §Y$SLO_fascist_paramilitarist_2$§!\nEffective change:\n$MODIFIER_POLITICAL_POWER_GAIN$: §G+0.05§!\n$MODIFIER_WEEKLY_MANPOWER$: §G+150§!\n$MODIFIER_RESISTANCE_DAMAGE_TO_GARRISONS$: §G-10.00%§!\n$MODIFIER_RESISTANCE_ACTIVITY_FACTOR$: §G-20.0%§!\n$MODIFIER_STABILITY_FACTOR$: §R-5.00%§!"
  SLO_draft_a_new_constitution:0 "Draft a New Constitution"
  SLO_draft_a_new_constitution_desc:0 "The state of emergency from our violent split from Czechoslovakia is long outdated, we need to draft a new, permanent constitution to guide [SLO.GetNameDef]."
- SLO_whats_ours_is_ours_and_whats_ours_we_want:0 "What's Ours Is Ours, And What's Ours We Want"
+ SLO_whats_ours_is_ours_and_whats_ours_we_want:0 "What's Ours Is Ours, And What's Ours We Want!"
  SLO_whats_ours_is_ours_and_whats_ours_we_want_desc:0 "At the birth of our nascent state, the Hungarian dogs ripped from us our rightful land, it is now time to set past wrongs right."
  SLO_slovakia_at_war:0 "Slovakia at War"
  SLO_slovakia_at_war_desc:0 "War is upon us, and now is the time for heroes to sacrifice their egos for the good of the nations. To arms, Slovaks!"

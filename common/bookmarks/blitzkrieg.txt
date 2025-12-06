@@ -7,7 +7,7 @@ bookmarks = {
 		default_country = "SLO"
 		default = yes
 		
-		"SLO"={
+		SLO={
 			history = "SLO_BOOKMARK_FASCISM_SCHIZO_DESC"
 			ideology = fascism
 			ideas = {
@@ -21,7 +21,7 @@ bookmarks = {
 				SLO_the_indominatable_slovak_hyberborean_spirit
 			}
 		}
-		"SLO"={
+		SLO={
 			history = "SLO_BOOKMARK_DESPOTIST_DESC"
 			ideology = neutrality
 			ideas = {
@@ -35,7 +35,7 @@ bookmarks = {
 				SLO_the_moderates
 			}
 		}
-		"SLO"={
+		SLO={
 			history = "SLO_BOOKMARK_DEMOCRATIC_DESC"
 			ideology = democratic
 			ideas = {
@@ -50,198 +50,116 @@ bookmarks = {
 			}
 		}
 		
-		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
+		FRA = {
+			history = FRA_BLITZKRIEG_DESC
 			ideology = democratic
-			available = { NOT = { has_dlc = "La Resistance" } }
 			minor = yes
-			ideas = {
+			ideas={
 				FRA_victors_of_wwi
 				FRA_disjointed_government
 				FRA_protected_by_the_maginot_line
 			}
 			focuses = {
-				FRA_form_the_popular_front
-				FRA_revive_the_national_bloc
-				FRA_france_leads
+				FRA_strengthen_government_support
+				FRA_arms_purchases_in_the_us
+				FRA_french_union
 			}
 		}
-		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
+		USA = {
+			history = USA_BLITZKRIEG_DESC
 			ideology = democratic
-			available = { has_dlc = "La Resistance" } 
 			minor = yes
-			ideas = {
-				FRA_victors_of_wwi
-				FRA_disjointed_government
-				FRA_protected_by_the_maginot_line
-			}
-			focuses = {
-				FRA_invite_communist_ministers
-				FRA_utilize_the_leagues
-				FRA_je_suis_la_deluge
-			}
-		}
-		"USA"={
-			history = "USA_GATHERING_STORM_DESC"
-			minor = yes
-			ideology = democratic
 			ideas = {
 				home_of_the_free
-				great_depression
-				undisturbed_isolation
+				great_depression_3
+				air_war_plans_division_focus
+				USA_war_department
+				new_deal
 			}
 			focuses = {
 				USA_war_plan_black
-				USA_limited_intervention
-				USA_reestablish_the_gold_standard
+				USA_arsenal_of_democracy
+				USA_selective_training_act
 			}
 		}
-		"ENG"={
-			history = "ENG_GATHERING_STORM_DESC"
-			minor = yes
+		ENG = {
+			history = ENG_BLITZKRIEG_DESC
 			ideology = democratic
-			available = { has_dlc = "Man the Guns" }
+			minor = yes
 			ideas = {
 				stiff_upper_lip
 				ENG_the_war_to_end_all_wars
-				george_v
+				ENG_george_vi
+				british_austerity_idea
+				ENG_colonial_elite
 			}
 			focuses = {
-				ENG_imperial_federation
-				ENG_the_kings_party
-				ENG_organize_the_blackshirts
+				ENG_war_with_japan
+				bomber_command_focus
+				maud_focus
 			}
+			
 		}
-		"ENG"={
-			history = "ENG_GATHERING_STORM_DESC"
-			minor = yes
-			ideology = democratic
-			available = { NOT = { has_dlc = "Man the Guns" } }
-			ideas = {
-				stiff_upper_lip
-				ENG_the_war_to_end_all_wars
-				george_v
-			}
-			focuses = {
-				tizard_mission_focus
-				ENG_war_with_germany
-				ENG_war_with_italy
-			}
-		}
-
 		GER = {
-			history = "GER_GATHERING_STORM_DESC"
-			minor = yes
+			history = GER_BLITZKRIEG_DESC
 			ideology = fascism
-			available = { has_dlc = "Gotterdammerung" }
-			ideas = {
-				GER_mefo_bills_1936_fake_ns
-				GER_army_1936_fake_ns
-				GER_airforce_fake_ns
+			minor = yes
+			ideas = { #TODO_Danne Make sure these spirits display the proper numbers!
+				GER_mefo_bills_1939_fake_ns
+				GER_army_1939_fake_ns
+				GER_wehrwirtschaft_fake_ns
 			}
 			focuses = {
-				GER_fuhrerprinzip
-				GER_the_peoples_victory
-				GER_glory_to_the_imperial_army
+				GER_shatter_usas_hegemony
+				GER_war_with_the_ussr
+				GER_mittelafrika
 			}
 		}
-
-		GER = {
-			history = "GER_GATHERING_STORM_DESC"
-			minor = yes
+		ITA = {
+			history = ITA_BLITZKRIEG_DESC
 			ideology = fascism
-			available = { NOT = { has_dlc = "Gotterdammerung" } }
-			ideas = {
-				GER_mefo_bills_1936_fake_ns
-				GER_army_1936_fake_ns
-				GER_airforce_fake_ns
+			minor = yes
+			ideas={
+				vittorio_emanuele_albania_ethiopia
+				ITA_camicie_nere
+				ITA_pact_of_steel
 			}
 			focuses = {
-				GER_fuhrerprinzip
-				GER_revive_the_kaiserreich
-				GER_reestablish_free_elections
-			}
+				ITA_battaglioni_d_assalto
+				ITA_by_blood_alone
+				ITA_ferrea_mole_ferreo_cuore
+			}			
 		}
-
-		"ITA"={
-			history = "ITA_GATHERING_STORM_DESC"
-			minor = yes
+		JAP = {
+			history = JAP_BLITZKRIEG_DESC
 			ideology = fascism
-			available = { has_dlc = "By Blood Alone" }
-			ideas = {
-				vittorio_emanuele
-				ITA_iri_fake_ns
-				ITA_re_fake_ns
-			}	
-			focuses = {
-				ITA_comandante_diavolo
-				ITA_il_sol_dell_avvenire
-				ITA_a_colonial_empire
-			}		
-		}
-		"ITA"={
-			history = "ITA_GATHERING_STORM_DESC"
 			minor = yes
-			ideology = fascism
-			available = { NOT = { has_dlc = "By Blood Alone" } }
+			override_leader_portrait = JAP_emperor_hirohito
 			ideas = {
-				vittorio_emanuele
-				ITA_iri_fake_ns
-				ITA_re_fake_ns
-			}	
-			focuses = {
-				ITA_comandante_diavolo
-				ITA_to_live_as_a_lion
-				ITA_a_colonial_empire
-			}		
-		}
-		"JAP"={
-			history = "JAP_GATHERING_STORM_DESC"
-			minor = yes
-			ideology = fascism
-			ideas = {
-				state_shintoism
-				JAP_zaibatsus
+				JAP_1939_fake_state_shintoism_idea
+				JAP_central_economic_council_idea
 				JAP_militarism
 			}	
 			focuses = {
-				JAP_the_zero
-				JAP_warrior_spirit
-				JAP_strike_on_the_southern_resource_area
-			}			
+				JAP_imperial_rule_assistance_association
+				JAP_sea_greater_east_asian_co_properity_sphere
+				JAP_the_eternal_kingdom
+			}		
 		}
-		"SOV"={
-			history = "SOV_GATHERING_STORM_DESC"
+		SOV = {
+			history = SOV_BLITZKRIEG_DESC
 			ideology = communism
-			available = { has_dlc = "No Step Back" }
 			minor = yes
 			ideas = {
-				trotskyite_plot_nsb
-				SOV_second_five_year_plan_fake_1936_ns
-				SOV_politicized_military
+				SOV_anti_soviet_military_thinking_banned_navy
+				SOV_second_five_year_plan_fake_1939_ns
+				SOV_purged_junior_army_officers_2
 			}
 			focuses = {
-				SOV_behead_the_snake
-				SOV_the_supreme_soviet
-				SOV_reconvene_the_zemsky_sobor
-			}	
-		}
-		"SOV"={
-			history = "SOV_GATHERING_STORM_DESC"
-			ideology = communism
-			available = { NOT = { has_dlc = "No Step Back" } }
-			minor = yes
-			ideas = {
-				trotskyite_plot_nsb
-				SOV_second_five_year_plan_fake_1936_ns
-				SOV_politicized_military
-			}
-			focuses = {
-				SOV_behead_the_snake
+				SOV_found_the_comecon
 				SOV_father_of_nations
-				SOV_the_supreme_soviet
-			}	
+				SOV_patriarch_of_all_russia
+			}
 		}
 		"---"={
 			minor = yes

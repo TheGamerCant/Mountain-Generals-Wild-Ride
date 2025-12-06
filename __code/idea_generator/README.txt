@@ -10,7 +10,7 @@ To set your idea, edit the idea.json file in any text editor of your choice.
 
 It must have a string name at "id", and can optionally have a localised name at "localised_name", a description at "localised_desc" and a gfx at "gfx" (whatever you put here will appear in the ideas.txt file, so don't prefix it with "GFX" or "GFX_idea" for example)
 
-There is also a boolean "use_index_variable" - this causes the game to store a seperate variable that keeps track of what idea version is active, which makes swapping ideas and deleting ideas significantly faster
+There is also a boolean "use_index_variable" - this causes the game to store a separate variable that keeps track of what idea version is active, which makes swapping ideas and deleting ideas significantly faster, although you may need to be careful with the variable scope. Specifically, idea swapping goes from a time complexity of O(N) to O(log(N)) and idea deletion goes from O(N) to O(1)
 
 You then set the original base idea's modifiers under the "base_modifiers" branch - this should be fairly self-explanatory for anyone who's modded HoI4 before
 

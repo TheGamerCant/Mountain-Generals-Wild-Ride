@@ -293,8 +293,8 @@ SLO_update_parliament_position_gfx = {
 	# How many seats wide is our parliament GUI going to be
 	set_variable = { THIS.seats_per_row = SLO.gui_gridbox_width }						#39
 	divide_variable = { THIS.seats_per_row = SLO.gui_party_dot_entry_size }
-	divide_variable = { THIS.seats_per_row = 1000 }										# Make sure we round down so there's no decimal point.
-	multiply_variable = { THIS.seats_per_row = 1000 }
+	divide_variable = { THIS.seats_per_row = 100000 }										# Make sure we round down so there's no decimal point.
+	multiply_variable = { THIS.seats_per_row = 100000 }
 	
 	
 	### Start with the government ###
@@ -304,8 +304,8 @@ SLO_update_parliament_position_gfx = {
 	
 	set_variable = { THIS.government_height_floor_division = SLO.government_seat_count }
 	divide_variable = { THIS.government_height_floor_division = THIS.seats_per_row }
-	divide_variable = { THIS.government_height_floor_division = 1000 }
-	multiply_variable = { THIS.government_height_floor_division = 1000 }
+	divide_variable = { THIS.government_height_floor_division = 100000 }
+	multiply_variable = { THIS.government_height_floor_division = 100000 }
 	set_variable = { THIS.government_height_modulo_division = SLO.government_seat_count }
 	modulo_variable = { THIS.government_height_modulo_division = THIS.seats_per_row }
 	
@@ -329,8 +329,8 @@ SLO_update_parliament_position_gfx = {
 	
 	set_variable = { THIS.opposition_height_floor_division = SLO.opposition_seat_count }
 	divide_variable = { THIS.opposition_height_floor_division = THIS.seats_per_row }
-	divide_variable = { THIS.opposition_height_floor_division = 1000 }
-	multiply_variable = { THIS.opposition_height_floor_division = 1000 }
+	divide_variable = { THIS.opposition_height_floor_division = 100000 }
+	multiply_variable = { THIS.opposition_height_floor_division = 100000 }
 	set_variable = { THIS.opposition_height_modulo_division = SLO.opposition_seat_count }
 	modulo_variable = { THIS.opposition_height_modulo_division = THIS.seats_per_row }
 	resize_array = {
@@ -768,11 +768,10 @@ STATE_randomise_party_popularity_and_get_results = {
 			set_variable = { votes = THIS.state_population_k }
 			multiply_variable = { votes = SLO.voting_population_multiplier }							#Kids can't vote + no universal sufferage
 			multiply_variable = { votes = THIS.previous_election_turnout }
+			multiply_variable = { votes = 0.01 }
 			
-			#Need to get a percentage, divide each by 10 to keep as much accuracy as we can
 			set_variable = { prcntge = v }
-			divide_variable = { prcntge = 10 }
-			divide_variable = { votes = 10 }
+			multiply_variable = { prcntge = 0.01 }
 			
 			multiply_variable = { votes = prcntge }
 			
@@ -799,11 +798,10 @@ STATE_randomise_party_popularity_and_get_results = {
 	
 			multiply_variable = { votes = SLO.voting_population_multiplier }							#Kids can't vote + no universal sufferage
 			multiply_variable = { votes = THIS.previous_election_turnout }
+			multiply_variable = { votes = 0.01 }
 			
-			#Need to get a percentage, divide each by 10 to keep as much accuracy as we can
 			set_variable = { prcntge = v }
-			divide_variable = { prcntge = 10 }
-			divide_variable = { votes = 10 }
+			multiply_variable = { prcntge = 0.01 }
 			
 			multiply_variable = { votes = prcntge }
 			
@@ -948,8 +946,8 @@ STATE_get_party_popularity_variable = {
 		subtract_from_variable = { margin_of_victory = second_most_popular_party_percentage }
 		set_variable = { THIS.previous_election_margin_of_victory = margin_of_victory }
 		
-		divide_variable = { margin_of_victory = 2000 }				#2% increments
-		multiply_variable = { margin_of_victory = 1000 }
+		divide_variable = { margin_of_victory = 200000 }				#2% increments
+		multiply_variable = { margin_of_victory = 100000 }
 		clamp_variable = { var = margin_of_victory min = 0 max = 13 }
 		
 		add_to_variable = { THIS.previous_election_victor_popularity = margin_of_victory }
@@ -966,8 +964,8 @@ STATE_get_party_popularity_variable = {
 		set_variable = { THIS.previous_election_victor_popularity = SLO.SLO_electoral_map_gui_selected_results }
 		multiply_variable = { THIS.previous_election_victor_popularity = 14 }
 		
-		divide_variable = { party_vote = 4000 }				#4% increments
-		multiply_variable = { party_vote = 1000 }
+		divide_variable = { party_vote = 400000 }				#4% increments
+		multiply_variable = { party_vote = 100000 }
 		clamp_variable = { var = party_vote min = 0 max = 13 }
 		
 		add_to_variable = { THIS.previous_election_victor_popularity = party_vote }
@@ -1097,40 +1095,11 @@ SLO_get_national_results = {
 		}
 	}
 	
-	#Get votes and percentages
+	multiply_variable = { SLO.total_pop = 0.01 }
+	
+	#Get total votes cast for each party nationally
 	for_each_scope_loop = {
 		array = SLO.election_states
-		
-		set_variable = { mult = 0 }
-		
-		if = {
-			limit = { check_variable = { SLO.parliament_level = 0 } }
-			
-			add_to_variable = { mult = THIS.state_population_k }
-		}
-		else = {
-			for_each_scope_loop = {
-				array = THIS.subdivision_states
-				
-				add_to_variable = { PREV.mult = THIS.state_population_k }
-			}
-		}
-		
-		multiply_variable = { mult = 10 }			#More accuracy
-		divide_variable = { mult = SLO.total_pop }
-		
-
-		for_each_loop = {
-			array = THIS.previous_election_results
-			index = i
-			value = v
-			
-			set_variable = { tmp = v }
-			multiply_variable = { tmp = mult }
-			add_to_variable = { SLO.previous_election_results^i = tmp }
-			clear_variable = tmp
-		}
-		
 		
 		for_each_loop = {
 			array = THIS.previous_election_votes
@@ -1139,11 +1108,9 @@ SLO_get_national_results = {
 			
 			add_to_variable = { SLO.previous_election_votes^i = v }
 		}
-		
-		clear_variable = mult
 	}
 	
-	#Get turnout
+	#Get national turnout
 	set_variable = { SLO.previous_election_total_votes = 0 }
 	for_each_loop = {
 		array = SLO.previous_election_votes
@@ -1160,14 +1127,19 @@ SLO_get_national_results = {
 	clear_variable = oneOverVotingPop
 	divide_variable = { SLO.previous_election_turnout = SLO.total_pop }
 	
-	clear_variable = SLO.total_pop
-	
-	for_loop_effect = {
-		end = SLO.previous_election_results^num
+	#Get national party percentages
+	for_each_loop = {
+		array = SLO.previous_election_votes
+		index = i
 		value = v
 		
-		divide_variable = { SLO.previous_election_results^v = 10 }
+		add_to_variable = { SLO.previous_election_results^i = v }
+		multiply_variable = { SLO.previous_election_results^i = 100 }
+		divide_variable = { SLO.previous_election_results^i = SLO.total_pop }
+		divide_variable = { SLO.previous_election_results^i = SLO.voting_population_multiplier }
 	}
+	
+	clear_variable = SLO.total_pop
 	
 	#Get national seat count
 	clear_array = SLO.seat_array

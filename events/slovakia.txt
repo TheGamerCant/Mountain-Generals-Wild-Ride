@@ -3673,10 +3673,6 @@ country_event = {
 			base = 10
 		}
 		
-		trigger = {
-			check_variable = { SLO.party_campaigning_as = 4 }
-		}
-		
 		add_political_power = -25
 		add_stability = -0.02
 		
@@ -3703,7 +3699,7 @@ country_event = {
 					STATE_add_party_support = yes
 				}
 				
-				VALUE_VAR = "3.5"
+				VALUE_VAR = "-2.0"
 				PARTY_VAR = "[?SLO.party_campaigning_as|0]"
 			}
 		}
@@ -3731,7 +3727,27 @@ country_event = {
 					STATE_add_party_support = yes
 				}
 				
-				VALUE_VAR = "3.5"
+				VALUE_VAR = "-2.0"
+				PARTY_VAR = "[?SLO.party_campaigning_as|0]"
+			}
+		}
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		every_owned_state = {
+			limit = { 
+				has_variable = name_token 
+				NOT = { OR = { state = 73 state = 664 } }
+			}
+			
+			meta_effect = {
+				text = {
+					set_variable = { party = [PARTY_VAR] }
+					set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+					STATE_add_party_support = yes
+				}
+				
+				VALUE_VAR = "4.0"
 				PARTY_VAR = "[?SLO.party_campaigning_as|0]"
 			}
 		}

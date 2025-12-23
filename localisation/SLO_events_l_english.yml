@@ -282,11 +282,11 @@
  slovakia.64.a:0 "What could we possibly we do about it?"
  
  slovakia.65.title:0 "The Eagle Watches Closer"
- slovakia.65.desc:0 "Following the annexation of the Sudetenland, our position is even more vulnerable. Western democracies have proven themselves weak and unwilling to deal with [GER.GetLeader]'s Germany, seemingly leaving all nations of Central and Eastern Europe to the whims of Hitler and Stalin."
+ slovakia.65.desc:0 "Following the annexation of the Sudetenland, our position is even more vulnerable. Western democracies have proven themselves weak and unwilling to deal with [GER.GetLeader]'s Germany, all but to leaving all nations of Central and Eastern Europe to the whims of Hitler and Stalin."
  slovakia.65.a:0 "What could we possibly we do about it?"
  
  slovakia.66.title:0 "[GER.GetNameDefCap] Invites us to the [GER.GetFactionName]"
- slovakia.66.desc:0 "Following their march into the rump Czech state, [GER.GetNameDef] have requested our entry into the tripartite pact. Unlike previous diplomatic interactions with the Reich however, this one seems far more cordial, albeit for some morbid reasons.\n\n[GER.GetLeader]'s ambitions against Poland are well known, and our position would give the Germans a good launch point for a thrust towards Kraków and Lwów. Poland is likely to fall regardless, so the question is - do we do it now and reap the rewards of being a loyal ally, or do we try to maintain the façade of neutrality for a little while longer?"
+ slovakia.66.desc:0 "Following their march into the rump Czech state, [GER.GetNameDef] have requested our entry into the tripartite pact. Unlike previous diplomatic interactions with the Reich however, this one seems far more cordial, albeit for some morbid reasons.\n\n[GER.GetLeader]'s ambitions against Poland are well known, and our position would give the Germans a good launch point for a thrust towards Kraków and Lwów. Poland is likely to fall regardless of our choices and the nations of Europe will be forced to pick a side of this struggle, so the question is - do we sign the pact now and reap the rewards of being a loyal ally, or do we try to maintain the façade of neutrality for a little while longer?"
  slovakia.66.a:0 "We will sign the pact"
  slovakia.66.a.tt:0 "§RWe will be UNABLE to leave the [GER.GetFactionName]§!"
  slovakia.66.b:0 "We will not take part in this war against our Polish brothers"
@@ -381,7 +381,7 @@
  slovakia.88.title:0 "Regional Minority Parties Form"
  slovakia.88.desc:0 "During the old Czechoslovak system, the lack of a parliamentary threshold made regional parties extremely common in the national parliament. Not forgetting these traditions, many minorities in Southern Slovakia and Carpathian Ruthenia have begun the process of forming their own political parties too seek representation in parliament.\n\nThese practices have always been controversial, as many accuse them of being fifth columns and of the voters for not being loyal citizens to the republic. However, any serious clampdown would be controversial and go against the fundamental principles of democracy."
  slovakia.88.a:0 "People can vote how they please, as is democracy"
- slovakia.88.a:0 "They forget they are part of Slovakia"
+ slovakia.88.b:0 "They forget they are part of Slovakia"
  
  slovakia_news.1.title:0 "The Slovak Rebellion Succeeds!"
  slovakia_news.1.desc:0 "After months of heavy fighting in Czechoslovakia, a masked man from the future has successfully put his forces in a position to dictate terms of surrender to the once proud Czechoslovak government in Prague. For the first time ever, Slovakia is to be an independent state, although though it's future, and perhaps the future of Europe and the world at large, is known only to one man..."

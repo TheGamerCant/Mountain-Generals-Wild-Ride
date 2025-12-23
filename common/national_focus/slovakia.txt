@@ -933,7 +933,7 @@ focus_tree = {
 			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = -0.06 }
 			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = -0.06 }
 			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = -0.04 }
-			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.05 }
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.16 }
 			custom_effect_tooltip = SLO_expand_the_draft_tt
 		}
 	}
@@ -1120,7 +1120,7 @@ focus_tree = {
 			add_to_variable = { SLO_army_dm_mobilization_speed = 0.50 }
 			add_to_variable = { SLO_army_dm_army_morale_factor = 0.08 }
 			
-			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.08 }
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.06 }
 			custom_effect_tooltip = SLO_mass_mobilisation_tt
 			
 		}
@@ -1648,6 +1648,8 @@ focus_tree = {
 				cost_reduction = 0.4
 				uses = 2
 				category = land_doctrine
+				category = air_doctrine
+				category = naval_doctrine 
 			}
 		}
 	}
@@ -7624,7 +7626,7 @@ focus_tree = {
 				limit = { has_aat = yes }
 				
 				add_tech_bonus = {
-					name = SLO_expand_the_appolo_oil_refinery
+					name = SLO_expand_the_apollo_oil_refinery
 					bonus = 0.5
 					uses = 1
 					category = synth_resources
@@ -7639,7 +7641,7 @@ focus_tree = {
 			}
 			else = {
 				add_tech_bonus = {
-					name = SLO_expand_the_appolo_oil_refinery
+					name = SLO_expand_the_apollo_oil_refinery
 					bonus = 1.0
 					uses = 1
 					category = synth_resources
@@ -8343,7 +8345,7 @@ focus_tree = {
 		icon = GFX_goal_SLO_a_portrait_on_every_wall
 		x = 2
 		y = 1
-		cost = 7
+		cost = 8
 		
 		prerequisite = { focus = SLO_great_ideologue focus = SLO_pragmatic_statesman focus = SLO_the_father_of_slovak_independence }
 		relative_position_id = SLO_great_ideologue
@@ -9064,7 +9066,7 @@ focus_tree = {
 			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = -0.08 }
 			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = -0.08 }
 			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = -0.05 }
-			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.10 }
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = 0.20 }
 			custom_effect_tooltip = SLO_expand_the_draft_2_tt
 		}
 	}

@@ -1359,10 +1359,13 @@ SLO_fire_event_to_pick_advisor = {
 	SLO_get_german_pick_for_political_advisor = yes
 	SLO_get_german_pick_for_high_command = yes
 	
-	#50 - 250 pp depending on the player's bop value
+	#36 - 180 pp depending on the player's bop value
 	set_variable = { SLO.advisor_pp_needed = SLO.power_balance_value }
 	multiply_variable = { SLO.advisor_pp_needed = -100 }
 	add_to_variable = { SLO.advisor_pp_needed = 150 }
+	
+	multiply_variable = { SLO.advisor_pp_needed = 0.72 }
+	round_variable = SLO.advisor_pp_needed
 	
 	#We have a spare space to add a new advisor
 	if = {

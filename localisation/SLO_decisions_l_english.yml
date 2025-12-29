@@ -190,7 +190,7 @@
  SLO_convert_appolo_oil_refinery_for_synthetic_materiels:0 "Convert the Apollo Oil Refinery for Synthetic Materiels"
  SLO_convert_appolo_oil_refinery_for_synthetic_materiels_desc:0 "The Germans have made significant breakthroughs in the chemical synthesisation of rubber and other materiels. We should put the Apollo oil refinery to use in the production of this new technology."
  SLO_convert_appolo_oil_refinery_for_synthetic_materiels_no_synth_experiments_tt:0 "We will gain two §YSynthetic Refineries§! and a §YFuel Silo§! in a random state."
- SLO_convert_appolo_oil_refinery_for_synthetic_materiels_tt:0 "$SLO_modify_the_slovak_economy_by$$modifier_production_speed_synthetic_refinery_factor$: §G+12.00%§!"
+ SLO_convert_appolo_oil_refinery_for_synthetic_materiels_tt:0 "$SLO_modify_the_slovak_economy_by$$modifier_production_speed_synthetic_refinery_factor$: §G+15.00%§!"
  SLO_military_exersizes_with_germany:0 "Military Exercises With [GER.GetNameDef]"
  SLO_military_exersizes_with_germany_desc:0 "Many call Mountain General's Slovakia the Prussia of Eastern Europe. Yes they do! Shut up!\n\nAnyways, German high command has taken an interest in joint exercises, helping to refine both of our nation's military tactics."
  SLO_military_technological_exchanges_with_germany:0 "Military-Technological Exchange With Germany"

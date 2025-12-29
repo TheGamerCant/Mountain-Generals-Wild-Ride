@@ -11614,7 +11614,7 @@ focus_tree = {
 			}
 		}
 	}
-		
+	
 	focus = {	
 		id = SLO_infrastructure_focus
 		
@@ -12138,7 +12138,483 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {	
+		id = SLO_connect_rural_infrastructure
 		
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { 
+					OR = {
+						has_completed_focus = SLO_a_based_slovakia
+						has_completed_focus = SLO_a_democracy_if_you_can_keep_it 
+						has_completed_focus = SLO_the_black_spot_of_europe 
+						has_completed_focus = SLO_socialism_above_all 
+					}
+				}
+			}
+		}
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_infrastructure_focus_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_infrastructure_focus_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_infrastructure_focus_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_infrastructure_focus_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_infrastructure_focus
+		}
+		
+		x = 1
+		y = 6
+		cost = 15
+		relative_position_id = SLO_court_foreign_investments
+
+		available = {
+			collection_size = {
+				input = {
+					input = game:scope
+					operators = {
+						owned_states
+						limit = {
+							is_on_continent = europe		
+							infrastructure < 3
+						}
+					}
+					name = COLLECTION_OWNED_STATES_LOW_INF
+				}
+				value > 14
+			}
+			
+			SLO_is_europe = yes
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 20 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					has_country_flag = SLO_has_held_an_election_flag
+					NOT = { has_country_flag = SLO_player_completed_focus_flag }
+				}	
+			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_on_continent = europe
+					infrastructure < 3
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				random_select_amount = 15
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_popularity = {
+				ideology = democratic 
+				popularity = 0.05
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_owned_state = {
+				limit = { has_variable = name_token }
+				
+				meta_effect = {
+					text = {
+						set_variable = { party = [PARTY_VAR] }
+						set_variable = { var = val value = [VALUE_VAR] tooltip = SLO_party_to_add_popularity_to_[PARTY_VAR]_tt }
+						STATE_add_party_support = yes
+					}
+					
+					VALUE_VAR = "2.5"
+					PARTY_VAR = "[?SLO.parties_in_government_ordered^0]"
+				}
+			}
+			
+			if = {
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 20 } } has_shine_effect_on_focus = SLO_connect_rural_infrastructure }
+				
+				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_political_power = -100
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_streamline_disparate_regulations
+		
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { 
+					OR = {
+						has_completed_focus = SLO_a_based_slovakia
+						has_completed_focus = SLO_a_democracy_if_you_can_keep_it 
+						has_completed_focus = SLO_the_black_spot_of_europe 
+						has_completed_focus = SLO_socialism_above_all 
+					}
+				}
+			}
+		}
+		
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_streamline_disparate_regulations_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_streamline_disparate_regulations_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_streamline_disparate_regulations_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_streamline_disparate_regulations_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_streamline_disparate_regulations
+		}
+		
+		x = -1
+		y = 6
+		cost = 15
+		relative_position_id = SLO_court_foreign_investments
+
+		available = {
+			SLO_is_europe = yes
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 22 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					has_country_flag = SLO_has_held_an_election_flag
+					NOT = { has_country_flag = SLO_player_completed_focus_flag }
+				}	
+			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SLO_economy_dm_consumer_goods_factor = -0.05 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_factory = 0.03 }
+			add_to_variable = { SLO_economy_dm_industrial_capacity_dockyard = 0.03 }
+			add_to_variable = { SLO_economy_dm_production_speed_buildings_factor = 0.05 }
+			add_to_variable = { SLO_economy_dm_production_factory_efficiency_gain_factor = 0.05 }
+			
+			custom_effect_tooltip = SLO_streamline_disparate_regulations_tt
+			
+			if = {
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 22 } } has_shine_effect_on_focus = SLO_streamline_disparate_regulations }
+				
+				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_political_power = -100
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_integrate_r_and_d_facilities
+		
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { 
+					OR = {
+						has_completed_focus = SLO_a_based_slovakia
+						has_completed_focus = SLO_a_democracy_if_you_can_keep_it 
+						has_completed_focus = SLO_the_black_spot_of_europe 
+						has_completed_focus = SLO_socialism_above_all 
+					}
+				}
+			}
+		}
+		
+		icon = GFX_
+		prerequisite = { focus = SLO_streamline_disparate_regulations }
+		
+		x = 0
+		y = 1
+		cost = 15
+		relative_position_id = SLO_streamline_disparate_regulations
+
+		available = {
+			SLO_is_europe = yes
+			
+			has_built = {
+				type = land_facility
+				value > 2
+			}
+			has_built = {
+				type = naval_facility
+				value > 2
+			}
+			has_built = {
+				type = air_facility
+				value > 2
+			}
+			industrial_complex > 124
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 21 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					has_country_flag = SLO_has_held_an_election_flag
+					NOT = { has_country_flag = SLO_player_completed_focus_flag }
+				}	
+			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			add_research_slot = 1
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_tech_bonus = {
+				name = SLO_integrate_r_and_d_facilities
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = SLO_integrate_r_and_d_facilities
+				bonus = 1.0
+				uses = 1
+				category = air_equipment
+			}
+			add_tech_bonus = {
+				name = SLO_integrate_r_and_d_facilities
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+			
+			if = {
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 21 } } has_shine_effect_on_focus = SLO_integrate_r_and_d_facilities }
+				
+				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_political_power = -100
+			}
+		}
+	}
+	
+	focus = {	
+		id = SLO_synthetic_resources_push
+		
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { 
+					OR = {
+						has_completed_focus = SLO_a_based_slovakia
+						has_completed_focus = SLO_a_democracy_if_you_can_keep_it 
+						has_completed_focus = SLO_the_black_spot_of_europe 
+						has_completed_focus = SLO_socialism_above_all 
+					}
+				}
+			}
+		}
+		
+		icon = GFX_
+		
+		x = -3
+		y = 6
+		cost = 15
+		relative_position_id = SLO_court_foreign_investments
+
+		available = {
+			SLO_is_europe = yes
+			has_tech = synth_oil_experiments
+			
+			if = {
+				limit = { check_variable = { SLO.focus_to_pick = 23 } }
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_is_underway_tt
+					
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = SLO_focus_can_only_be_completed_by_legislature_tt
+					
+					has_country_flag = SLO_has_held_an_election_flag
+					NOT = { has_country_flag = SLO_player_completed_focus_flag }
+				}	
+			}
+		}
+		
+		bypass = {
+		}
+		
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 0
+						include_locked = yes
+					}
+				}
+				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+				random_select_amount = 4
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_economy_dm_production_speed_synthetic_refinery_factor = 0.20 }
+			custom_effect_tooltip = SLO_synthetic_resources_push_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_tech_bonus = {
+				name = SLO_synthetic_resources_push
+				bonus = 1.0
+				uses = 2
+				category = synth_resources
+			}
+			
+			if = {
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 23 } } has_shine_effect_on_focus = SLO_synthetic_resources_push }
+				
+				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				add_political_power = -100
+			}
+		}
+	}
+	
 	focus = {	
 		id = SLO_ensure_the_seperation_of_church_and_state
 		icon = GFX_goal_SLO_ensure_the_seperation_of_church_and_state
@@ -12175,7 +12651,7 @@ focus_tree = {
 			SLO_has_a_majority_government_trigger = yes
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 20 } }
+				limit = { check_variable = { SLO.focus_to_pick = 24 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -12279,7 +12755,7 @@ focus_tree = {
 			}
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 20 } } has_shine_effect_on_focus = SLO_ensure_the_seperation_of_church_and_state }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 24 } } has_shine_effect_on_focus = SLO_ensure_the_seperation_of_church_and_state }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -12355,7 +12831,7 @@ focus_tree = {
 			}
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 21 } }
+				limit = { check_variable = { SLO.focus_to_pick = 25 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -12380,7 +12856,7 @@ focus_tree = {
 			add_ideas = SLO_centralised_government_bureaucracy
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 21 } } has_shine_effect_on_focus = SLO_strategic_resource_development }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 25 } } has_shine_effect_on_focus = SLO_centralisation_of_government_bureaucracy }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -12460,7 +12936,7 @@ focus_tree = {
 			}
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 23 } }
+				limit = { check_variable = { SLO.focus_to_pick = 27 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -12483,7 +12959,7 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 23 } } has_shine_effect_on_focus = SLO_strategic_resource_development }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 27 } } has_shine_effect_on_focus = SLO_promote_womens_equality }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -12559,7 +13035,7 @@ focus_tree = {
 			}
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 22 } }
+				limit = { check_variable = { SLO.focus_to_pick = 26 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -12605,7 +13081,7 @@ focus_tree = {
 			}
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 22 } } has_shine_effect_on_focus = SLO_strategic_resource_development }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 26 } } has_shine_effect_on_focus = SLO_equal_workplace_laws }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -12685,7 +13161,7 @@ focus_tree = {
 
 		available = {
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 24 } }
+				limit = { check_variable = { SLO.focus_to_pick = 28 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -12711,7 +13187,7 @@ focus_tree = {
 			
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 24 } } has_shine_effect_on_focus = SLO_expand_the_ministry_of_foreign_affairs }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 28 } } has_shine_effect_on_focus = SLO_expand_the_ministry_of_foreign_affairs }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -12790,7 +13266,7 @@ focus_tree = {
 
 		available = {
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 28 } }
+				limit = { check_variable = { SLO.focus_to_pick = 32 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -12820,7 +13296,7 @@ focus_tree = {
 			}
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 28 } } has_shine_effect_on_focus = SLO_promotion_of_slovak_nationalism }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 32 } } has_shine_effect_on_focus = SLO_promotion_of_slovak_nationalism }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 			}
@@ -12902,7 +13378,7 @@ focus_tree = {
 
 		available = {
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 27 } }
+				limit = { check_variable = { SLO.focus_to_pick = 31 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -12956,7 +13432,7 @@ focus_tree = {
 			
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 27 } } has_shine_effect_on_focus = SLO_slovakia_on_a_war_footing }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 31 } } has_shine_effect_on_focus = SLO_slovakia_on_a_war_footing }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -13039,7 +13515,7 @@ focus_tree = {
 			threat > 0.1
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 26 } }
+				limit = { check_variable = { SLO.focus_to_pick = 30 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -13098,7 +13574,7 @@ focus_tree = {
 			
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 26 } } has_shine_effect_on_focus = SLO_implement_limited_conscription }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 30 } } has_shine_effect_on_focus = SLO_implement_limited_conscription }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -13179,7 +13655,7 @@ focus_tree = {
 
 		available = {
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 25 } }
+				limit = { check_variable = { SLO.focus_to_pick = 29 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -13232,7 +13708,7 @@ focus_tree = {
 			
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 25 } } has_shine_effect_on_focus = SLO_expand_intelligence_operations }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 29 } } has_shine_effect_on_focus = SLO_expand_intelligence_operations }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -13311,7 +13787,7 @@ focus_tree = {
 			}
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 30 } }
+				limit = { check_variable = { SLO.focus_to_pick = 34 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -13385,7 +13861,7 @@ focus_tree = {
 			
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 30 } } has_shine_effect_on_focus = SLO_allow_for_minority_autonomy }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 34 } } has_shine_effect_on_focus = SLO_allow_for_minority_autonomy }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -13464,7 +13940,7 @@ focus_tree = {
 			}
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 29 } }
+				limit = { check_variable = { SLO.focus_to_pick = 33 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -13541,7 +14017,7 @@ focus_tree = {
 			
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 29 } } has_shine_effect_on_focus = SLO_a_shining_example_of_european_democracy }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 33 } } has_shine_effect_on_focus = SLO_a_shining_example_of_european_democracy }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -13636,7 +14112,7 @@ focus_tree = {
 			}
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 32 } }
+				limit = { check_variable = { SLO.focus_to_pick = 36 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -13675,7 +14151,7 @@ focus_tree = {
 			
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 32 } } has_shine_effect_on_focus = SLO_toe_the_middle_ground }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 36 } } has_shine_effect_on_focus = SLO_toe_the_middle_ground }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -13766,7 +14242,7 @@ focus_tree = {
 			SLO_is_not_europe = yes
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 31 } }
+				limit = { check_variable = { SLO.focus_to_pick = 35 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -13802,7 +14278,7 @@ focus_tree = {
 			
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 31 } } has_shine_effect_on_focus = SLO_secure_our_south }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 35 } } has_shine_effect_on_focus = SLO_secure_our_south }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -13866,7 +14342,7 @@ focus_tree = {
 			}
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 34 } }
+				limit = { check_variable = { SLO.focus_to_pick = 38 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -13963,7 +14439,7 @@ focus_tree = {
 			
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 34 } } has_shine_effect_on_focus = SLO_slovakia_for_the_slovaks }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 38 } } has_shine_effect_on_focus = SLO_slovakia_for_the_slovaks }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -14017,7 +14493,7 @@ focus_tree = {
 			}
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 33 } }
+				limit = { check_variable = { SLO.focus_to_pick = 37 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -14103,7 +14579,7 @@ focus_tree = {
 			
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 33 } } has_shine_effect_on_focus = SLO_attack_non_slovak_parties }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 37 } } has_shine_effect_on_focus = SLO_attack_non_slovak_parties }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -14189,7 +14665,7 @@ focus_tree = {
 			SLO_conservatives_in_government_trigger = yes
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 35 } }
+				limit = { check_variable = { SLO.focus_to_pick = 39 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -14263,7 +14739,7 @@ focus_tree = {
 			
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 35 } } has_shine_effect_on_focus = SLO_continue_the_policies_of_land_reform }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 39 } } has_shine_effect_on_focus = SLO_continue_the_policies_of_land_reform }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 			}
@@ -14310,7 +14786,7 @@ focus_tree = {
 			SLO_has_a_majority_government_trigger = yes
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 38 } }
+				limit = { check_variable = { SLO.focus_to_pick = 42 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -14342,7 +14818,7 @@ focus_tree = {
 			
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 38 } } has_shine_effect_on_focus = SLO_mandate_christianity_in_schools }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 42 } } has_shine_effect_on_focus = SLO_mandate_christianity_in_schools }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 			}
@@ -14390,7 +14866,7 @@ focus_tree = {
 			SLO_has_a_majority_government_trigger = yes
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 37 } }
+				limit = { check_variable = { SLO.focus_to_pick = 41 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -14449,7 +14925,7 @@ focus_tree = {
 			
 			
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 37 } } has_shine_effect_on_focus = SLO_enforce_cultural_media_standards }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 41 } } has_shine_effect_on_focus = SLO_enforce_cultural_media_standards }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				
@@ -14496,7 +14972,7 @@ focus_tree = {
 			SLO_has_a_majority_government_trigger = yes
 			
 			if = {
-				limit = { check_variable = { SLO.focus_to_pick = 36 } }
+				limit = { check_variable = { SLO.focus_to_pick = 40 } }
 				custom_trigger_tooltip = {
 					tooltip = SLO_focus_is_underway_tt
 					
@@ -14519,7 +14995,7 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { NOT = { check_variable = { SLO.focus_to_pick = 36 } } has_shine_effect_on_focus = SLO_form_the_hlinkas_guard }
+				limit = { NOT = { check_variable = { SLO.focus_to_pick = 40 } } has_shine_effect_on_focus = SLO_form_the_hlinkas_guard }
 				
 				set_country_flag = { flag = SLO_player_completed_focus_flag days = 420 value = 1 }
 				

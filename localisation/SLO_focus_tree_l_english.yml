@@ -539,6 +539,18 @@
  SLO_expand_the_powers_of_the_european_parliament_desc:0 "Are you ready for ze new world order? Mwahahahaha!"
  SLO_expand_the_powers_of_the_european_parliament_tt:0 "Reduces the duration of §YIntegrating European Countries§! decisions by half."
  
+ SLO_connect_rural_infrastructure:0 "Connect Rural Infrastructure"
+ SLO_connect_rural_infrastructure_desc:0 "Many regions of Europe have been left underdeveloped by the corruption and neglect of previous administrations, we must unite the continent economically if we are to unite it politically."
+ COLLECTION_OWNED_STATES_LOW_INF:0 "Owned European states with less than §Y3§! infrastructure"
+ SLO_streamline_disparate_regulations:0 "Streamline Disparate Regulations"
+ SLO_streamline_disparate_regulations_desc:0 "Unsurprisingly, the integration of new nations as left businesses with a mountain of paperwork and bureaucracy to sort through, we must spare no time in streamlining and standardising our new regulations."
+ SLO_streamline_disparate_regulations_tt:0 "$SLO_modify_the_slovak_economy_by$$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y-5.0%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+3.00%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+3.00%§!\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+5.00%§!\n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+5.00%§!"
+ SLO_integrate_r_and_d_facilities:0 "Integrate R&D Facilities"
+ SLO_integrate_r_and_d_facilities_desc:0 ""
+ SLO_synthetic_resources_push:0 "Synthetic Resources Push"
+ SLO_synthetic_resources_push_desc:0 ""
+ SLO_synthetic_resources_push_tt:0 "$SLO_modify_the_slovak_economy_by$$modifier_production_speed_synthetic_refinery_factor$: §G+20.00%§!"
+ 
  SLO_a_democracy_if_you_can_keep_it:0 "A Democracy, If You Can Keep It"
  SLO_a_democracy_if_you_can_keep_it_desc:0 "Yeah yeah I promised you losers democracy, but consider the following - you're all retarded."
  SLO_reach_out_to_the_hlinkas_slovak_peoples_party:0 "Reach out to the Slovak People's Party"

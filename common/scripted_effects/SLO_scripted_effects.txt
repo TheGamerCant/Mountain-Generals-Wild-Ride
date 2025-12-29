@@ -513,6 +513,79 @@ SLO_get_valid_economy_focuses = {
 		
 		add_to_array = { SLO.economy_focuses_array = 19 }		#SLO_corporatist_economics
 	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_connect_rural_infrastructure } 
+			NOT = { has_shine_effect_on_focus = SLO_connect_rural_infrastructure }
+			
+			collection_size = {
+				input = {
+					input = game:scope
+					operators = {
+						owned_states
+						limit = {
+							is_on_continent = europe		
+							infrastructure < 3
+						}
+					}
+					name = COLLECTION_OWNED_STATES_LOW_INF
+				}
+				value > 14
+			}
+			
+			SLO_is_europe = yes
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 20 }		#SLO_connect_rural_infrastructure
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_integrate_r_and_d_facilities } 
+			NOT = { has_shine_effect_on_focus = SLO_integrate_r_and_d_facilities }
+			has_completed_focus = SLO_streamline_disparate_regulations
+			
+			SLO_is_europe = yes
+			has_built = {
+				type = land_facility
+				value > 2
+			}
+			has_built = {
+				type = naval_facility
+				value > 2
+			}
+			has_built = {
+				type = air_facility
+				value > 2
+			}
+			industrial_complex > 124
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 21 }		#SLO_integrate_r_and_d_facilities
+	}
+	else_if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_streamline_disparate_regulations } 
+			NOT = { has_shine_effect_on_focus = SLO_streamline_disparate_regulations }
+			
+			SLO_is_europe = yes
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 22 }		#SLO_streamline_disparate_regulations
+	}
+	
+	if = {
+		limit = { 
+			NOT = { has_completed_focus = SLO_synthetic_resources_push } 
+			NOT = { has_shine_effect_on_focus = SLO_synthetic_resources_push }
+
+			has_tech = synth_oil_experiments
+			SLO_is_europe = yes
+		}
+		
+		add_to_array = { SLO.economy_focuses_array = 23 }		#SLO_synthetic_resources_push
+	}
 }
 
 SLO_get_valid_political_focuses = {
@@ -530,7 +603,7 @@ SLO_get_valid_political_focuses = {
 			SLO_has_a_majority_government_trigger = yes
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 20 }		#SLO_ensure_the_seperation_of_church_and_state
+		add_to_array = { SLO.political_focuses_array = 24 }		#SLO_ensure_the_seperation_of_church_and_state
 	}
 	
 	if = {
@@ -546,7 +619,7 @@ SLO_get_valid_political_focuses = {
 			}
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 21 }		#SLO_centralisation_of_government_bureaucracy
+		add_to_array = { SLO.political_focuses_array = 25 }		#SLO_centralisation_of_government_bureaucracy
 	}
 	
 	if = {
@@ -561,7 +634,7 @@ SLO_get_valid_political_focuses = {
 			}
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 22 }		#SLO_equal_workplace_laws
+		add_to_array = { SLO.political_focuses_array = 26 }		#SLO_equal_workplace_laws
 	}
 	else_if = {
 		limit = { 
@@ -574,7 +647,7 @@ SLO_get_valid_political_focuses = {
 			}
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 23 }		#SLO_promote_womens_equality
+		add_to_array = { SLO.political_focuses_array = 27 }		#SLO_promote_womens_equality
 	}
 	
 	if = {
@@ -583,7 +656,7 @@ SLO_get_valid_political_focuses = {
 			NOT = { has_shine_effect_on_focus = SLO_expand_the_ministry_of_foreign_affairs }
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 24 }		#SLO_expand_the_ministry_of_foreign_affairs
+		add_to_array = { SLO.political_focuses_array = 28 }		#SLO_expand_the_ministry_of_foreign_affairs
 	}
 	
 	if = {
@@ -595,7 +668,7 @@ SLO_get_valid_political_focuses = {
 			has_dlc = "La Resistance"
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 25 }		#SLO_expand_intelligence_operations
+		add_to_array = { SLO.political_focuses_array = 29 }		#SLO_expand_intelligence_operations
 	}
 	else_if = {
 		limit = { 
@@ -606,7 +679,7 @@ SLO_get_valid_political_focuses = {
 			threat > 0.1
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 26 }		#SLO_implement_limited_conscription
+		add_to_array = { SLO.political_focuses_array = 30 }		#SLO_implement_limited_conscription
 	}
 	else_if = {
 		limit = { 
@@ -615,7 +688,7 @@ SLO_get_valid_political_focuses = {
 			has_completed_focus = SLO_promotion_of_slovak_nationalism
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 27 }		#SLO_slovakia_on_a_war_footing
+		add_to_array = { SLO.political_focuses_array = 31 }		#SLO_slovakia_on_a_war_footing
 	}
 	else_if = {
 		limit = { 
@@ -623,7 +696,7 @@ SLO_get_valid_political_focuses = {
 			NOT = { has_shine_effect_on_focus = SLO_promotion_of_slovak_nationalism }
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 28 }		#SLO_promotion_of_slovak_nationalism
+		add_to_array = { SLO.political_focuses_array = 32 }		#SLO_promotion_of_slovak_nationalism
 	}
 	
 	if = {
@@ -648,7 +721,7 @@ SLO_get_valid_political_focuses = {
 			}
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 29 }		#SLO_a_shining_example_of_european_democracy
+		add_to_array = { SLO.political_focuses_array = 33 }		#SLO_a_shining_example_of_european_democracy
 	}
 	else_if = {
 		limit = { 
@@ -675,7 +748,7 @@ SLO_get_valid_political_focuses = {
 			}
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 30 }		#SLO_allow_for_minority_autonomy
+		add_to_array = { SLO.political_focuses_array = 34 }		#SLO_allow_for_minority_autonomy
 	}
 	
 	if = {
@@ -688,7 +761,7 @@ SLO_get_valid_political_focuses = {
 			SLO_is_not_europe = yes
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 31 }		#SLO_secure_our_south
+		add_to_array = { SLO.political_focuses_array = 35 }		#SLO_secure_our_south
 	}
 	else_if = {
 		limit = { 
@@ -714,7 +787,7 @@ SLO_get_valid_political_focuses = {
 			}
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 32 }		#SLO_toe_the_middle_ground
+		add_to_array = { SLO.political_focuses_array = 36 }		#SLO_toe_the_middle_ground
 	}
 	
 	if = {
@@ -737,7 +810,7 @@ SLO_get_valid_political_focuses = {
 			}
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 33 }		#SLO_attack_non_slovak_parties
+		add_to_array = { SLO.political_focuses_array = 37 }		#SLO_attack_non_slovak_parties
 	}
 	else_if = {
 		limit = { 
@@ -762,7 +835,7 @@ SLO_get_valid_political_focuses = {
 			}
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 34 }		#SLO_slovakia_for_the_slovaks
+		add_to_array = { SLO.political_focuses_array = 38 }		#SLO_slovakia_for_the_slovaks
 	}
 	
 	if = {
@@ -773,7 +846,7 @@ SLO_get_valid_political_focuses = {
 			SLO_conservatives_in_government_trigger = yes
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 35 }		#SLO_continue_the_policies_of_land_reform
+		add_to_array = { SLO.political_focuses_array = 39 }		#SLO_continue_the_policies_of_land_reform
 	}
 	
 	if = {
@@ -789,7 +862,7 @@ SLO_get_valid_political_focuses = {
 			SLO_has_a_majority_government_trigger = yes
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 36 }		#SLO_form_the_hlinkas_guard
+		add_to_array = { SLO.political_focuses_array = 40 }		#SLO_form_the_hlinkas_guard
 	}
 	else_if = {
 		limit = { 
@@ -804,7 +877,7 @@ SLO_get_valid_political_focuses = {
 			SLO_has_a_majority_government_trigger = yes
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 37 }		#SLO_enforce_cultural_media_standards
+		add_to_array = { SLO.political_focuses_array = 41 }		#SLO_enforce_cultural_media_standards
 	}
 	else_if = {
 		limit = { 
@@ -818,7 +891,7 @@ SLO_get_valid_political_focuses = {
 			SLO_has_a_majority_government_trigger = yes
 		}
 		
-		add_to_array = { SLO.political_focuses_array = 38 }		#SLO_mandate_christianity_in_schools
+		add_to_array = { SLO.political_focuses_array = 42 }		#SLO_mandate_christianity_in_schools
 	}
 }
 
@@ -864,6 +937,14 @@ SLO_select_next_democratic_focus = {
 		else_if = {
 			limit = { is_in_array = { array = SLO.economy_focuses_array value = 12 } }
 			set_variable = { SLO.focus_to_pick = 12 }
+		}#Sixth research slot is available when we become Europe
+		else_if = {
+			limit = { is_in_array = { array = SLO.economy_focuses_array value = 22 } }
+			set_variable = { SLO.focus_to_pick = 22 }
+		}
+		else_if = {
+			limit = { is_in_array = { array = SLO.economy_focuses_array value = 21 } }
+			set_variable = { SLO.focus_to_pick = 21 }
 		}
 		else = {
 			set_temp_variable_to_random = {

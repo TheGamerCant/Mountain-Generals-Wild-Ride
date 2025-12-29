@@ -9169,7 +9169,7 @@ SLO_encroaching_german_influence_bop_category = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_to_variable = { SLO_economy_dm_production_speed_synthetic_refinery_factor = 0.12 }
+			add_to_variable = { SLO_economy_dm_production_speed_synthetic_refinery_factor = 0.15 }
 			custom_effect_tooltip = SLO_convert_appolo_oil_refinery_for_synthetic_materiels_tt
 			
 			custom_effect_tooltip = generic_skip_one_line_tt

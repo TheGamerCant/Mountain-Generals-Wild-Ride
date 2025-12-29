@@ -67,6 +67,7 @@ SLO_democratic_economy_dynamic_modifier = {
 	min_export = SLO_economy_dm_min_export
 	monthly_population = SLO_economy_dm_monthly_population
 	conscription_factor = SLO_economy_dm_conscription_factor
+	production_speed_synthetic_refinery_factor = SLO_economy_dm_production_speed_synthetic_refinery_factor
 }
 
 SLO_corparatist_economy_dynamic_modifier = {

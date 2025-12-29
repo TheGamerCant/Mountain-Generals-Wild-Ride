@@ -8138,6 +8138,10 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
+			add_political_power = 60
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			SLO_move_power_balance_left_15 = yes
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -12429,9 +12433,46 @@ focus_tree = {
 			}
 		}
 		
-		icon = GFX_
-		prerequisite = { focus = SLO_streamline_disparate_regulations }
+		dynamic = yes 
+		icon = {
+			trigger = {
+				SLO_liberals_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 2 }
+			}
+			value = GFX_goal_SLO_integrate_r_and_d_facilities_liberal
+		}
+		icon = {
+			trigger = {
+				SLO_soc_dems_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 0 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 1 }
+				}
+			}
+			value = GFX_goal_SLO_integrate_r_and_d_facilities_soc_dem
+		}
+		icon = {
+			trigger = {
+				SLO_conservatives_in_government_trigger = yes
+				check_variable = { SLO.parties_in_government_ordered^0 = 3 }
+			}
+			value = GFX_goal_SLO_integrate_r_and_d_facilities_conservative
+		}
+		icon = {
+			trigger = {
+				SLO_nationalists_in_government_trigger = yes
+				OR = {
+					check_variable = { SLO.parties_in_government_ordered^0 = 4 }
+					check_variable = { SLO.parties_in_government_ordered^0 = 5 }
+				}
+			}
+			value = GFX_goal_SLO_integrate_r_and_d_facilities_nationalist
+		}
+		icon = {
+			value = GFX_goal_SLO_integrate_r_and_d_facilities
+		}
 		
+		prerequisite = { focus = SLO_streamline_disparate_regulations }
 		x = 0
 		y = 1
 		cost = 15

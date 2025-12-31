@@ -2448,11 +2448,57 @@ ideas = {
 			}
 
 			modifier = {
+				defensive_war_stability_factor = 0.1
 				war_stability_factor = 0.15
 				justify_war_goal_time = -0.2
 				generate_wargoal_tension = -0.5
 				send_volunteers_tension = -0.5
 				guarantee_tension = -0.5
+				faction_influence_contribution_factor = 0.15
+				faction_influence_war_score_factor = 0.15
+			}
+		}
+		
+		SLO_special_research_programs = {
+			removal_cost = -1
+
+			picture = generic_research_bonus
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				specialization_land_speed_factor = 0.1
+				specialization_air_speed_factor = 0.1
+				specialization_naval_speed_factor = 0.1
+				specialization_nuclear_speed_factor = 0.1
+				special_project_facility_supply_consumption_factor = -0.1
+			}
+		}
+		
+		SLO_reconstruction_efforts = {
+			removal_cost = -1
+
+			picture = SPA_recovering_from_the_civil_war
+				
+			available = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_speed_infrastructure_factor = 0.20
+				consumer_goods_factor = -0.10
+				industry_free_repair_factor = 0.25
+				industry_repair_factor = 0.25
+				stability_weekly = 0.001
 			}
 		}
 		

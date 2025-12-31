@@ -12,44 +12,44 @@ characters = {
 		country_leader={
 			desc = "mountain_general_leader_desc"
 			ideology=stalinism
-			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
+			traits={ the_slovakian_napoleon the_man_behind_the_mask twitter_user warmonger }
 			id=-1
 		}
 		country_leader={
 			desc = "mountain_general_leader_desc"
 			ideology=conservatism
-			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
+			traits={ the_slovakian_napoleon the_man_behind_the_mask twitter_user warmonger }
 			id=-1
 		}
 		country_leader={
 			desc = "mountain_general_leader_desc"
 			ideology=fascism_ideology
-			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
+			traits={ the_slovakian_napoleon the_man_behind_the_mask twitter_user warmonger }
 			id=-1
 		}
 		country_leader={
 			desc = "mountain_general_leader_desc"
 			ideology=despotism
-			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
+			traits={ the_slovakian_napoleon the_man_behind_the_mask twitter_user warmonger }
 			id=-1
 		}
 		
 #		country_leader={
 #			desc = "mountain_general_leader_desc"
 #			ideology=anarchism
-#			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
+#			traits={ the_slovakian_napoleon the_man_behind_the_mask twitter_user warmonger }
 #			id=-1
 #		}
 #		country_leader={
 #			desc = "mountain_general_leader_desc"
 #			ideology=nazism
-#			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
+#			traits={ the_slovakian_napoleon the_man_behind_the_mask twitter_user warmonger }
 #			id=-1
 #		}
 #		country_leader={
 #			desc = "mountain_general_leader_desc"
 #			ideology=anti_revisionism
-#			traits={ the_slovakian_napoleon the_man_behind_the_mask warmonger }
+#			traits={ the_slovakian_napoleon the_man_behind_the_mask twitter_user warmonger }
 #			id=-1
 #		}
 		

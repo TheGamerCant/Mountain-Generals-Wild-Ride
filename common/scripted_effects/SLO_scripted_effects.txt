@@ -973,16 +973,16 @@ SLO_select_next_democratic_focus = {
 		
 		#Prioritise military stuff
 		if = {
-			limit = { is_in_array = { array = SLO.political_focuses_array value = 28 } }
-			set_variable = { SLO.focus_to_pick = 28 }
+			limit = { is_in_array = { array = SLO.political_focuses_array value = 32 } }
+			set_variable = { SLO.focus_to_pick = 32 }
 		}
 		else_if = {
-			limit = { is_in_array = { array = SLO.political_focuses_array value = 27 } }
-			set_variable = { SLO.focus_to_pick = 27 }
+			limit = { is_in_array = { array = SLO.political_focuses_array value = 31 } }
+			set_variable = { SLO.focus_to_pick = 31 }
 		}
 		else_if = {
-			limit = { is_in_array = { array = SLO.political_focuses_array value = 26 } }
-			set_variable = { SLO.focus_to_pick = 26 }
+			limit = { is_in_array = { array = SLO.political_focuses_array value = 30 } }
+			set_variable = { SLO.focus_to_pick = 30 }
 		}
 		else = {
 			set_temp_variable_to_random = {

@@ -136,7 +136,9 @@
  slovakia.30.a:0 "So be it"
  
  slovakia.31.title:0 "Integration of Czech Škoda"
- slovakia.31.desc:0 "Following the reunification of Slovakia and Czechia, we have taken over many of the Škoda factories, improving our knowledge and integrating our arms industries. Hopefully, we will be able to return back to the arms exporting giant we once were, and Mountain General has ordered for a swift and effective integration of our arms industries."
+ slovakia.31.desc:0 "[SLO.GetSkodaEventDesc]"
+ slovakia.31.desc_a:0 "Following the integration of the formerly Czech lands, we have taken over many of the Škoda factories, improving our knowledge and reintegrating our arms industries once more."
+ slovakia.31.desc_b:0 "With our newfound alliance with Czechia, the our industrial base has managed to reintegrate to a significant extent, to both our nations' benefit."
  slovakia.31.a:0 "Great news!"
  
  slovakia.32.title:0 "Arms Exports Rise"
@@ -408,7 +410,7 @@
  slovakia_news.5.title:0 "Declaration of the European Federation"
  slovakia_news.5.desc:0 "Following months of organisation and careful legislating, [SLO.GetLeader] has formally declared the reorganisation of the Slovak Republic into a new European Federation. Various allies have shown hesitancy at joining the organisation, but still seek closer military and economic co-operation with the new European Federation."
  slovakia_news.5.a:0 "To be a friend or foe?"
- slovakia_news.5.b:0 "Europe conquered the world divided, we'll save it united"
+ slovakia_news.5.b:0 "If Europe conquered the world divided, we'll make a utopia united"
 
  slovakia_news.6.title:0 "Slovakia Launches an Invasion of Hungary"
  slovakia_news.6.desc:0 "[SLO.GetNameDefCap] has launched a military invasion of [HUN.GetNameDef] following a breakdown of relations between the two countries, with [SLO.GetLeader] claiming the purpose of the invasion was to "liberate the people of Hungary from the oppressive dictatorship of [HUN.GetLeader]".\n\n[HUN.GetNameDefCap] has requested assistance from the international community, and vowed to fight the invaders and that their soldiers would be "marching on Bratislava"."
@@ -429,7 +431,7 @@
  slovakia_news.8.c:0 "We'll get it back, eventually"
  slovakia_news.8.d:0 "We awarded what was right"
 
- slovakia_news.9.title:0 "[SLO.GetLeader] Declares Greater SLovakia"
+ slovakia_news.9.title:0 "[SLO.GetLeader] Declares Greater Slovakia"
  slovakia_news.9.desc:0 "Following the expansion of the Slovak state and the incorporation of new territories, [SLO.GetLeader] has formally declared a so-called "Republic of Greater Slovakia". It is hoped that this declaration will increase support for the nationalist regime within Slovakia and increase Slovak prestige on the world stage."
  slovakia_news.9.a:0 "He's a bit full of himself"
  slovakia_news.9.b:0 "Sláva Horskému Generálovi"

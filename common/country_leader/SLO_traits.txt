@@ -72,9 +72,17 @@ leader_traits = {
 		random = no
 		stability_factor = -0.15
 		political_power_factor = -0.10
-		resistance_activity = -0.07
+		resistance_activity = -0.08
 
 		custom_modifier_tooltip = the_man_behind_the_mask_desc
+	}
+	
+	twitter_user = {
+		random = no
+		country_resource_coal = 30
+		local_resources_coal_factor = 0.10
+
+		custom_modifier_tooltip = twitter_user_desc
 	}
 	
 	mgs_cult_of_personality_1 = {

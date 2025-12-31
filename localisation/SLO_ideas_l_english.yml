@@ -243,6 +243,10 @@
  SLO_defence_of_europe_idea_4:0 "$SLO_defence_of_europe_idea_1$"
  SLO_defence_of_europe_idea_4_desc:0 "$SLO_defence_of_europe_idea_1_desc$"
  
+ SLO_special_research_programs:0 "Special Research Programs"
+ SLO_special_research_programs_desc:0 ""
+ SLO_reconstruction_efforts:0 "Reconstruction Efforts"
+ SLO_reconstruction_efforts_desc:0 ""
  
  SLO_media_standards_idea:0 "Christian Media Standards"
  SLO_media_standards_idea_desc:0 ""

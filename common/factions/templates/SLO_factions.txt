@@ -1,0 +1,33 @@
+# European Bloc
+SLO_faction_european_bloc = {
+	name = "European Bloc"
+	manifest = faction_manifest_strength_in_unity
+	can_leader_join_other_factions = yes
+	icon = GFX_faction_logo_eu
+	visible = {
+		capital_scope = {
+			is_on_continent = europe
+		}
+	}
+	available = {
+		NOT = {
+			OR = {
+				has_government = fascism
+				has_government = communism
+			}
+		}
+	}
+	
+	goals = {
+		faction_goal_defeat_of_fascism
+		faction_goal_aggressive_defense
+	}
+
+	default_rules = {
+		guarantee_threat_reduction_15
+		government_in_exile_allowed
+		joining_rule_same_continent_only
+		joining_rule_democratic_non_aligned
+#		change_leader_rule_never
+	}
+}

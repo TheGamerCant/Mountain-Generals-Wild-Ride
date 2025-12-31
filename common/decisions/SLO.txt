@@ -2734,11 +2734,14 @@ SLO_parliament_decision_category = {
 		}
 		
 		available = {
-			has_war_with_major = yes
+			OR = { 
+				has_war_with_major = yes
+				surrender_progress > 0.05
+			}
 		}
 		
 		visible = { 
-			has_war_with_major = yes
+			has_war = yes
 		}
 		
 		fire_only_once = no

@@ -6916,6 +6916,146 @@ country_event = {
 }
 
 country_event = {
+	id = slovakia_hidden_focuses.39
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		SLO = { set_country_flag = { flag = SLO_focus_underway_flag days = 105 value = 1 }  activate_shine_on_focus = SLO_connect_rural_infrastructure }
+	}
+}
+country_event = {
+	id = slovakia_hidden_focuses.40
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_country_flag = SLO_focus_underway_flag
+		set_temp_variable = { largestParty = SLO.parties_in_government_ordered^0 }
+		meta_effect = {
+			text = {
+				SLO = {
+					complete_national_focus = {
+						focus = SLO_connect_rural_infrastructure 
+						use_side_message = yes
+						originator_name = [Originator]
+					}
+				}
+			}
+			
+			Originator = "[?SLO.party_names_short_no_colour_array^largestParty.GetTokenLocalizedKey]"
+		}
+	}
+}
+
+country_event = {
+	id = slovakia_hidden_focuses.41
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		SLO = { set_country_flag = { flag = SLO_focus_underway_flag days = 105 value = 1 }  activate_shine_on_focus = SLO_integrate_r_and_d_facilities }
+	}
+}
+country_event = {
+	id = slovakia_hidden_focuses.42
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_country_flag = SLO_focus_underway_flag
+		set_temp_variable = { largestParty = SLO.parties_in_government_ordered^0 }
+		meta_effect = {
+			text = {
+				SLO = {
+					complete_national_focus = {
+						focus = SLO_integrate_r_and_d_facilities
+						use_side_message = yes
+						originator_name = [Originator]
+					}
+				}
+			}
+			
+			Originator = "[?SLO.party_names_short_no_colour_array^largestParty.GetTokenLocalizedKey]"
+		}
+	}
+}
+
+country_event = {
+	id = slovakia_hidden_focuses.43
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		SLO = { set_country_flag = { flag = SLO_focus_underway_flag days = 105 value = 1 }  activate_shine_on_focus = SLO_streamline_disparate_regulations }
+	}
+}
+country_event = {
+	id = slovakia_hidden_focuses.44
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_country_flag = SLO_focus_underway_flag
+		set_temp_variable = { largestParty = SLO.parties_in_government_ordered^0 }
+		meta_effect = {
+			text = {
+				SLO = {
+					complete_national_focus = {
+						focus = SLO_streamline_disparate_regulations
+						use_side_message = yes
+						originator_name = [Originator]
+					}
+				}
+			}
+			
+			Originator = "[?SLO.party_names_short_no_colour_array^largestParty.GetTokenLocalizedKey]"
+		}
+	}
+}
+
+country_event = {
+	id = slovakia_hidden_focuses.45
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		SLO = { set_country_flag = { flag = SLO_focus_underway_flag days = 105 value = 1 }  activate_shine_on_focus = SLO_synthetic_resources_push }
+	}
+}
+country_event = {
+	id = slovakia_hidden_focuses.46
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_country_flag = SLO_focus_underway_flag
+		set_temp_variable = { largestParty = SLO.parties_in_government_ordered^0 }
+		meta_effect = {
+			text = {
+				SLO = {
+					complete_national_focus = {
+						focus = SLO_synthetic_resources_push
+						use_side_message = yes
+						originator_name = [Originator]
+					}
+				}
+			}
+			
+			Originator = "[?SLO.party_names_short_no_colour_array^largestParty.GetTokenLocalizedKey]"
+		}
+	}
+}
+
+country_event = {
 	id = slovakia_hidden_focuses.47
 	hidden = yes
 	
@@ -7602,8 +7742,8 @@ country_event = {
 			meta_effect = {
 				text = {
 					SLO = {
-						country_event = { id = slovakia_hidden_focuses.[Focus_Chosen_Start]_0 }					#Start focus
-						country_event = { id = slovakia_hidden_focuses.[Focus_Chosen_End]_1 days = 105 }		#End focus
+						country_event = { id = slovakia_hidden_focuses.[Focus_Chosen_Start] }					#Start focus
+						country_event = { id = slovakia_hidden_focuses.[Focus_Chosen_End] days = 105 }			#End focus
 						country_event = { id = slovakia_hidden_focuses.999 days = 115 random_days = 25 }		#Choose next focus
 					}
 				}

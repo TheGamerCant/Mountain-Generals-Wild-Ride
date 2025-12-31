@@ -37,6 +37,19 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetSkodaEventDesc
+	text = {
+		trigger = {
+			9 = { is_owned_and_controlled_by = SLO }
+		}
+		localization_key = "slovakia.31.desc_a"
+	}
+	text = {
+		localization_key = "slovakia.31.desc_b"
+	}
+}
+
+defined_text = {
 	name = GetEconomyDMName
 	text = {
 		trigger = {

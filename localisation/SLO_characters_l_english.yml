@@ -1,6 +1,6 @@
 ﻿l_english:
  SLO_mountain_general:0 "Mountain General"
- mountain_general_leader_desc:0 "To many of his friends, he was a recluse, would spend most of his time indoors, playing HoI4. This is only partly true. Mountain General spent his days in his room, building a time machine in order to go back and wipe out the ancestors to the modern Hungarian people. However, it all went terribly wrong, as one fatal miscalculation meant he landed in 1936 AD, as opposed to 1936 BC.\n\n Despite this unfortunate setback, Mountain General is not one to be deterred and has seized control of Bratislava, from where plans to bring his Hungarian-free utopian vision to life..."
+ mountain_general_leader_desc:0 "To many of his friends, he was a recluse who would spend most of his time indoors playing HoI4 - this is only partly true. Mountain General spent his days in his room, building a time machine to go back and wipe out the ancestors of the Hungarian people. However, it all went terribly wrong, as one fatal miscalculation meant he landed in 1936 AD, as opposed to 1936 BC.\n\nDespite this unfortunate setback, Mountain General is no less determined to fulfil his mission. He has ignited the sparks of revolution in Bratislava from where plans to bring his vision of a Hungarian-free utopia to life..."
  the_slovakian_napoleon:0 "The Slovakian Napoleon"
  the_slovakian_napoleon_desc:0 "§LMountain General's 4000 hours in Hoi4 and immense knowledge of niche European military history gives him an unfair advantage against his opponents in battle.§!"
  the_lion_of_bratislava:0 "The Lion of Bratislava"
@@ -9,6 +9,8 @@
  the_man_behind_the_mask:0 "The Man Behind the Mask"
  the_man_behind_the_mask_desc:0 "§LNobody knows who Mountain General is, and the mask doesn't help. His closest confidants claim that he wears it in the shower, to sleep, and even during sex. Nobody knows what lies behind that mask, perhaps Mountain General doesn't even know himself.§!"
  the_man_behind_the_mask_less_resistance:0 "$the_man_behind_the_mask$"
+ twitter_user:0 "Twitter User"
+ twitter_user_desc:0 "§LCountless hours sat behind a screen on Twitter does things to a man. Unspeakable things, things not comprehensible to prior generations. Stare into the coal, and the coal stares back at you...§!"
  mgs_cult_of_personality_1:0 "Cult of Personality"
  mgs_cult_of_personality_2_left:0 "$mgs_cult_of_personality_1$"
  mgs_cult_of_personality_2_right:0 "$mgs_cult_of_personality_1$"

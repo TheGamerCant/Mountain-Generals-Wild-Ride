@@ -3107,7 +3107,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SLO_blood_and_iron
-		cost = 10
+		cost = 8
 		prerequisite = {
 			focus = SLO_blood_and_iron
 		}
@@ -3375,7 +3375,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SLO_guns_and_butter
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = SLO_guns_and_butter
 			focus = SLO_bread_and_circuses
@@ -3419,7 +3419,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_to_variable = { SLO_economy_dm_production_speed_infrastructure_factor = 0.20 }
+			add_to_variable = { SLO_economy_dm_production_speed_infrastructure_factor = 0.15 }
 			add_to_variable = { SLO_economy_dm_stability_factor = 0.05 }
 			custom_effect_tooltip = SLO_public_works_projects_tt
 		}
@@ -3431,7 +3431,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = SLO_guns_and_butter
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = SLO_guns_and_butter
 			focus = SLO_bread_and_circuses
@@ -6577,7 +6577,7 @@ focus_tree = {
 		icon = GFX_goal_SLO_enforce_cultural_media_standards
 		x = 1
 		y = 1
-		cost = 4
+		cost = 3
 		
 		prerequisite = { focus = SLO_fire_disloyal_bureaucrats }
 		relative_position_id = SLO_fire_disloyal_bureaucrats
@@ -6646,7 +6646,7 @@ focus_tree = {
 		icon = GFX_goal_SLO_form_the_mountain_general_guard
 		x = -1
 		y = 1
-		cost = 4
+		cost = 3
 		
 		prerequisite = { focus = SLO_reach_out_to_the_hlinkas_slovak_peoples_party }
 		relative_position_id = SLO_reach_out_to_the_hlinkas_slovak_peoples_party

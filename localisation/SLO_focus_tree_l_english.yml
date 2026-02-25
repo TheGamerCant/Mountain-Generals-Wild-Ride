@@ -239,7 +239,7 @@
  SLO_focus_on_military_infrastructure_tt:0 "$SLO_modify_the_slovak_economy_by$$modifier_production_speed_infrastructure_factor$: §G+10.00%§!\n$modifier_production_speed_supply_node_factor$: §G+25.00%§!\n$modifier_production_speed_rail_way_factor$: §G+25.00%§!\n\n$SLO_modify_the_slovak_army_by$$MODIFIER_ARMY_SPEED_FACTOR$: §G+5.00%§!"
  SLO_public_works_projects:0 "Public Works Projects"
  SLO_public_works_projects_desc:0 "Putting our people to work on new infrastructure projects will reduce unemployment and greatly increase long-term economic growth."
- SLO_public_works_projects_tt:0 "$SLO_modify_the_slovak_economy_by$$modifier_production_speed_infrastructure_factor$: §G+20.00%§!\n$MODIFIER_STABILITY_FACTOR$: §G+5.00%§!"
+ SLO_public_works_projects_tt:0 "$SLO_modify_the_slovak_economy_by$$modifier_production_speed_infrastructure_factor$: §G+15.00%§!\n$MODIFIER_STABILITY_FACTOR$: §G+5.00%§!"
  SLO_production_quotas:0 "Production Quotas"
  SLO_production_quotas_desc:0 "WORK HARDER YOU LAZY SODS!"
  SLO_production_quotas_tt:0 "$SLO_modify_the_slovak_economy_by$$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.00%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+5.00%§!\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y-5.0%§!"

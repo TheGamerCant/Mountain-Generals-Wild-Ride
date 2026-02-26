@@ -413,6 +413,8 @@ set_variable = { SLO_army_dm_breakthrough_factor = 0 }
 set_variable = { SLO_army_dm_ground_attack_factor = 0 }
 set_variable = { SLO_army_dm_equipment_capture = 0 }
 set_variable = { SLO_army_dm_intel_network_gain_factor = 0 }
+set_variable = { SLO_army_dm_command_power_gain_mult = 0 }
+set_variable = { SLO_army_dm_max_command_power = 0 }
 
 add_dynamic_modifier = { modifier = SLO_army_dynamic_modifier }
 

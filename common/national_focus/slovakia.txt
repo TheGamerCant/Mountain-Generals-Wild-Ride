@@ -1993,7 +1993,14 @@ focus_tree = {
 				cost_reduction = 0.60
 				uses = 2
 				category = land_doctrine
+				category = air_doctrine
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { SLO_army_dm_command_power_gain_mult = 0.20 }
+			add_to_variable = { SLO_army_dm_max_command_power = 40 }
+			custom_effect_tooltip = SLO_slovak_military_academy_tt
 		}
 	}
 	
@@ -15178,10 +15185,14 @@ focus_tree = {
 				OR = {
 					threat > 0.2
 					GER = { has_completed_focus = GER_anschluss }
+					date > 1938.3.1
 				}
 			}
 			else = {
-				threat > 0.2
+				OR = {
+					threat > 0.2
+					date > 1938.3.1
+				}
 			}
 		}
 		

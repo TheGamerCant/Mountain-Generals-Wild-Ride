@@ -219,6 +219,8 @@ SLO_army_a_war_of_intellect_dynamic_modifier = {
 	mechanized_defence_factor = SLO_army_dm_mechanized_defence_factor
 	conscription = SLO_army_dm_conscription
 	ground_attack_factor = SLO_army_dm_ground_attack_factor
+	command_power_gain_mult = SLO_army_dm_command_power_gain_mult
+	max_command_power = SLO_army_dm_max_command_power
 	
 	custom_modifier_tooltip = SLO_army_dynamic_modifier_tooltip
 }

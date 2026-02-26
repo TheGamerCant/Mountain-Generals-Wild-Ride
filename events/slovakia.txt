@@ -853,6 +853,13 @@ country_event = {
 				OR = {
 					has_government = fascism
 					has_completed_focus = SLO_reach_out_to_the_hlinkas_slovak_peoples_party
+					if = {
+						limit = { has_government = democratic }
+						OR = {
+							SLO_nationalists_largest_party_trigger = yes
+							SLO_fascists_in_government_trigger = yes
+						}
+					}
 				}
 			}
 		}
